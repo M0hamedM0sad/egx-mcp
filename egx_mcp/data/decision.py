@@ -20,7 +20,7 @@ from datetime import datetime
 from typing import Any
 
 from . import calendar as cal_mod
-from . import peers, scoring, sizing
+from . import model_params, peers, scoring, sizing
 from .universe import resolve_ticker
 
 log = logging.getLogger("egx-mcp.decision")
@@ -32,19 +32,21 @@ def _verdict_from_score(score: float, blocking: bool, peer_relative: str | None)
     Blocking catalysts (earnings within 7 days) downgrade BUY → HOLD.
     Best-in-sector adds conviction; worst-in-sector removes it.
     """
-    if blocking and score >= 50:
+    th = model_params.thresholds()  # learnable, human-approved (see scripts/learn.py)
+
+    if blocking and score >= th["HOLD"]:
         return "HOLD", "low"
 
-    if score >= 75:
+    if score >= th["BUY"]:
         verdict = "BUY"
         conviction = "high" if peer_relative in ("best_in_sector", "above_sector_average") else "medium"
-    elif score >= 65:
+    elif score >= th["ACCUMULATE"]:
         verdict = "ACCUMULATE"
         conviction = "medium"
-    elif score >= 50:
+    elif score >= th["HOLD"]:
         verdict = "HOLD"
         conviction = "low" if peer_relative == "worst_in_sector" else "medium"
-    elif score >= 35:
+    elif score >= th["REDUCE"]:
         verdict = "REDUCE"
         conviction = "medium"
     else:
