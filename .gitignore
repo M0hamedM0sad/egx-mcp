@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+build/
+dist/
+
+# Secrets — NEVER commit (Gmail App Password lives here)
+scripts/configure_smtp.bat
+
+# Bulky / machine-local artifacts
+ir_data/*/documents/        # archived IR PDFs — large binaries
+*.log                       # raw briefing logs (noise)
+logs/briefing_*.log
+
+# Keep the evidence base tracked (do NOT ignore these):
+#   logs/graded_verdicts.jsonl, logs/graded_verdicts.csv
+#   briefings/*.json, ir_data/ir_registry.json, egx_fundamentals_audited.csv
+!logs/graded_verdicts.jsonl
+!logs/graded_verdicts.csv
+
+# scratch/temp artifacts
+_probe.txt
+_tmgh.png
+_*.png

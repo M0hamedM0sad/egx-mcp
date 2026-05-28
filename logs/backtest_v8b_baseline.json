@@ -1,0 +1,79 @@
+{
+  "as_of": "2026-05-02T19:03:19.603660Z",
+  "start": "2024-01-01",
+  "end": "2026-05-02",
+  "universe": "curated",
+  "universe_size": 24,
+  "top_n": 5,
+  "rebalance_days": 21,
+  "n_rebalances": 26,
+  "total_return_pct": 118.31,
+  "annualized_return_pct": 43.38,
+  "annualized_volatility_pct": 31.17,
+  "annualized_sharpe": 0.6,
+  "max_drawdown_pct": -31.81,
+  "hit_rate_pct": 73.1,
+  "benchmark_total_return_pct": 68.72,
+  "benchmark_annualized_return_pct": 27.3,
+  "alpha_vs_benchmark_pct": 49.59,
+  "information_ratio": -0.23,
+  "equity_curve_final": 2.1831,
+  "holdings_history_sample": [
+    {
+      "rebalance_date": "2025-11-02",
+      "picks": [
+        "ETEL",
+        "CLHO",
+        "FWRY",
+        "HDBK",
+        "COMI"
+      ],
+      "top_score": 30.89
+    },
+    {
+      "rebalance_date": "2025-12-01",
+      "picks": [
+        "HDBK",
+        "CLHO",
+        "ETEL",
+        "TMGH",
+        "COMI"
+      ],
+      "top_score": 30.9
+    },
+    {
+      "rebalance_date": "2025-12-30",
+      "picks": [
+        "EFID",
+        "ETEL",
+        "CLHO",
+        "HDBK",
+        "TMGH"
+      ],
+      "top_score": 42.63
+    },
+    {
+      "rebalance_date": "2026-02-02",
+      "picks": [
+        "EFID",
+        "EFIH",
+        "CLHO",
+        "ETEL",
+        "HDBK"
+      ],
+      "top_score": 34.42
+    },
+    {
+      "rebalance_date": "2026-03-03",
+      "picks": [
+        "HDBK",
+        "ADIB",
+        "EFID",
+        "TMGH",
+        "EFIH"
+      ],
+      "top_score": 33.54
+    }
+  ],
+  "method": "Walk-forward monthly rebalance. Score = 0.5\u00d76M_return + 0.2\u00d7(-1M_return) + 5(if above MA200, else -5) - 0.5\u00d7max(0, vol_pct-30). Picks top_n equal-weight, holds rebalance_days, repeats. Excess Sharpe uses live EGP T-bill rate."
+}

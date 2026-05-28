@@ -1,0 +1,414 @@
+{
+  "as_of_utc": "2026-04-30T08:47:06.827140Z",
+  "cairo_local": "Thursday 2026-04-30 10:47",
+  "is_trading_day": true,
+  "macro": {
+    "as_of": "2026-04-30T08:47:09.849169Z",
+    "egp_usd": {
+      "value": 53.65,
+      "change_pct": 1.28
+    },
+    "brent_usd": {
+      "value": 104.46,
+      "change_pct": -7.46
+    },
+    "gold_usd": {
+      "value": 4627.7002,
+      "change_pct": 1.31
+    },
+    "cbe_rates": {
+      "deposit_rate_pct": null,
+      "lending_rate_pct": null,
+      "midpoint_pct": null,
+      "source": "https://www.cbe.org.eg/en/economic-research/statistics/cbe-rates"
+    },
+    "regime_flags": [
+      "EGP weakening \u2014 favors exporters (chemicals, steel), hurts importers"
+    ],
+    "note": "EGP/USD and Brent from Yahoo (delayed). CBE rates scraped \u2014 verify against cbe.org.eg before acting on rate-sensitive trades."
+  },
+  "regime": {
+    "regime": "BULL",
+    "description": "Trending higher with manageable vol \u2014 momentum names lead.",
+    "weight_override": {
+      "valuation": 0.8,
+      "quality": 0.9,
+      "momentum": 1.4,
+      "risk": 0.9
+    },
+    "metrics": {
+      "egx30_last": 168.84,
+      "ret_60d_pct": 19.47,
+      "annualized_vol_pct": 19.76,
+      "sma_200": 126.97,
+      "above_ma200": true,
+      "drawdown_1y_pct": -0.1
+    },
+    "source_symbol": "synthetic_basket(13_names)",
+    "as_of": "2026-04-30T08:47:14.828988Z"
+  },
+  "rf_rate": {
+    "rate_pct": 25.0,
+    "source": "fallback:hardcoded_stale",
+    "is_stale": true,
+    "daily_rate_pct": 0.08859,
+    "as_of": "2026-04-30T08:47:16.877839Z",
+    "note": "Used as the baseline for excess-return calculations across the scoring engine, decision tool, and backtest harness. Override with EGX_TBILL_RATE_PCT env var when CBE source is stale."
+  },
+  "w1_picks": {
+    "as_of": "2026-04-30",
+    "horizon_days": 5,
+    "n_universe": 68,
+    "n_with_features": 68,
+    "n_passes_quality": 54,
+    "n_eligible": 31,
+    "config": {
+      "w_mom5": 1.5,
+      "w_mom20": 0.0,
+      "w_mr1": 0.5,
+      "w_breakout": 3.0,
+      "w_trend": 3.0,
+      "min_roe_pct": 10.0,
+      "top_n": 5
+    },
+    "top_picks": [
+      {
+        "ticker": "CCAP",
+        "score": 29.17,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 2.2,
+        "mom_1d_pct": 3.02,
+        "mom_5d_pct": 18.07,
+        "mom_20d_pct": 23.58,
+        "above_ma20": true,
+        "vol_ratio_today": 0.88,
+        "breakout_signal": 1.0,
+        "high_20d": 4.77,
+        "low_20d": 3.81,
+        "adjusted_close_egp": 4.77,
+        "split_warning": "Live tape 2.2 differs from adjusted close 4.77 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "RAYA",
+        "score": 19.29,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 2.08,
+        "mom_1d_pct": 8.89,
+        "mom_5d_pct": 12.27,
+        "mom_20d_pct": 33.46,
+        "above_ma20": true,
+        "vol_ratio_today": 0.81,
+        "breakout_signal": 1.0,
+        "high_20d": 6.86,
+        "low_20d": 5.08,
+        "adjusted_close_egp": 6.86,
+        "split_warning": "Live tape 2.08 differs from adjusted close 6.86 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "ZMID",
+        "score": 17.72,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 7.55,
+        "mom_1d_pct": 1.2,
+        "mom_5d_pct": 8.21,
+        "mom_20d_pct": 16.19,
+        "above_ma20": true,
+        "vol_ratio_today": 0.87,
+        "breakout_signal": 1.0,
+        "high_20d": 5.89,
+        "low_20d": 5.0117,
+        "adjusted_close_egp": 5.89,
+        "split_warning": "Live tape 7.55 differs from adjusted close 5.89 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "SKPC",
+        "score": 17.19,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 27.29,
+        "mom_1d_pct": -1.51,
+        "mom_5d_pct": 8.96,
+        "mom_20d_pct": 1.67,
+        "above_ma20": true,
+        "vol_ratio_today": 1.55,
+        "breakout_signal": 0.0,
+        "high_20d": 18.53,
+        "low_20d": 16.65,
+        "adjusted_close_egp": 18.25,
+        "split_warning": "Live tape 27.29 differs from adjusted close 18.25 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "EGCH",
+        "score": 15.95,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 8.11,
+        "mom_1d_pct": -1.62,
+        "mom_5d_pct": 8.1,
+        "mom_20d_pct": 8.77,
+        "above_ma20": true,
+        "vol_ratio_today": 1.4,
+        "breakout_signal": 0.0,
+        "high_20d": 12.35,
+        "low_20d": 11.2,
+        "adjusted_close_egp": 12.15,
+        "split_warning": "Live tape 8.11 differs from adjusted close 12.15 \u2014 likely recent split. Use trade plan."
+      }
+    ],
+    "runners_up": [
+      {
+        "ticker": "CLHO",
+        "score": 15.89,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 14.33,
+        "mom_1d_pct": 9.39,
+        "mom_5d_pct": 9.72,
+        "mom_20d_pct": 19.02,
+        "above_ma20": true,
+        "vol_ratio_today": 4.12,
+        "breakout_signal": 1.0,
+        "high_20d": 14.33,
+        "low_20d": 12.0
+      },
+      {
+        "ticker": "POUL",
+        "score": 15.34,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 35.75,
+        "mom_1d_pct": 0.7,
+        "mom_5d_pct": 6.46,
+        "mom_20d_pct": 14.58,
+        "above_ma20": true,
+        "vol_ratio_today": 1.06,
+        "breakout_signal": 1.0,
+        "high_20d": 35.75,
+        "low_20d": 31.0636
+      },
+      {
+        "ticker": "MTIE",
+        "score": 14.47,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 8.42,
+        "mom_1d_pct": 1.2,
+        "mom_5d_pct": 6.05,
+        "mom_20d_pct": 15.82,
+        "above_ma20": true,
+        "vol_ratio_today": 0.91,
+        "breakout_signal": 1.0,
+        "high_20d": 8.42,
+        "low_20d": 7.1
+      },
+      {
+        "ticker": "AMOC",
+        "score": 12.73,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 8.31,
+        "mom_1d_pct": -1.07,
+        "mom_5d_pct": 6.13,
+        "mom_20d_pct": 5.25,
+        "above_ma20": true,
+        "vol_ratio_today": 0.79,
+        "breakout_signal": 0.0,
+        "high_20d": 8.4,
+        "low_20d": 7.72
+      },
+      {
+        "ticker": "SWDY",
+        "score": 12.04,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 86.7,
+        "mom_1d_pct": -0.69,
+        "mom_5d_pct": 5.8,
+        "mom_20d_pct": 11.15,
+        "above_ma20": true,
+        "vol_ratio_today": 0.88,
+        "breakout_signal": 0.0,
+        "high_20d": 87.3,
+        "low_20d": 78.0
+      }
+    ],
+    "skipped_count": 0,
+    "validation_summary": "Backtested 28 months. Full window: +107.8% CAGR, Sharpe 1.64, -24.9% MaxDD vs market +40.8% / 0.65 / -23.5%. Holdout 10mo OOS: +131% CAGR, Sharpe 2.78, -8.9% MaxDD vs market +50% / 1.32 / -5.6%.",
+    "disclaimer": "Algorithmic ranking for the next ~5 trading days. Not investment advice. The model has positive expected alpha vs a passive EGX weekly buy-hold; individual weeks can still lose. Verify against the EGX official tape before acting."
+  },
+  "v8b_verdicts": [
+    {
+      "ticker": "CCAP",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 54.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": []
+    },
+    {
+      "ticker": "RAYA",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 42.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": []
+    },
+    {
+      "ticker": "ZMID",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": []
+    },
+    {
+      "ticker": "SKPC",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 48.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": []
+    },
+    {
+      "ticker": "EGCH",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 49.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": []
+    }
+  ],
+  "trade_plans": {
+    "CCAP": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 2.21,
+      "last_close_egp": 2.2,
+      "atr_14": 0.18,
+      "stop_loss_egp": 1.84,
+      "stop_distance_egp": 0.36,
+      "target_egp": 2.92,
+      "shares": 13888,
+      "position_cost_egp": 30553.6,
+      "position_pct_of_nav": 6.11,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 2.0,
+      "time_stop_date": "2026-05-07",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Target 2.92 EGP hit \u2014 take full profit",
+        "Stop 1.84 EGP hit \u2014 exit immediately",
+        "By 2026-05-07 (after 5 sessions) \u2014 close regardless of P&L",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": false
+    },
+    "RAYA": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 2.09,
+      "last_close_egp": 2.08,
+      "atr_14": 0.2936,
+      "stop_loss_egp": 1.49,
+      "stop_distance_egp": 0.59,
+      "target_egp": 3.25,
+      "shares": 8514,
+      "position_cost_egp": 17709.12,
+      "position_pct_of_nav": 3.54,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 2.0,
+      "time_stop_date": "2026-05-07",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Target 3.25 EGP hit \u2014 take full profit",
+        "Stop 1.49 EGP hit \u2014 exit immediately",
+        "By 2026-05-07 (after 5 sessions) \u2014 close regardless of P&L",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": false
+    },
+    "ZMID": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 7.59,
+      "last_close_egp": 7.55,
+      "atr_14": 0.16,
+      "stop_loss_egp": 7.23,
+      "stop_distance_egp": 0.32,
+      "target_egp": 8.19,
+      "shares": 6622,
+      "position_cost_egp": 49996.1,
+      "position_pct_of_nav": 10.0,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 2.0,
+      "time_stop_date": "2026-05-07",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Target 8.19 EGP hit \u2014 take full profit",
+        "Stop 7.23 EGP hit \u2014 exit immediately",
+        "By 2026-05-07 (after 5 sessions) \u2014 close regardless of P&L",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": true
+    },
+    "SKPC": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 27.43,
+      "last_close_egp": 27.29,
+      "atr_14": 0.4757,
+      "stop_loss_egp": 26.34,
+      "stop_distance_egp": 0.95,
+      "target_egp": 29.19,
+      "shares": 1832,
+      "position_cost_egp": 49995.28,
+      "position_pct_of_nav": 10.0,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 2.0,
+      "time_stop_date": "2026-05-07",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Target 29.19 EGP hit \u2014 take full profit",
+        "Stop 26.34 EGP hit \u2014 exit immediately",
+        "By 2026-05-07 (after 5 sessions) \u2014 close regardless of P&L",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": true
+    },
+    "EGCH": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 8.15,
+      "last_close_egp": 8.11,
+      "atr_14": 0.2514,
+      "stop_loss_egp": 7.61,
+      "stop_distance_egp": 0.5,
+      "target_egp": 9.12,
+      "shares": 6165,
+      "position_cost_egp": 49998.15,
+      "position_pct_of_nav": 10.0,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 2.0,
+      "time_stop_date": "2026-05-07",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Target 9.12 EGP hit \u2014 take full profit",
+        "Stop 7.61 EGP hit \u2014 exit immediately",
+        "By 2026-05-07 (after 5 sessions) \u2014 close regardless of P&L",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": true
+    }
+  },
+  "trade_plan_params": {
+    "portfolio_nav_egp": 500000.0,
+    "risk_pct_per_trade": 1.0,
+    "atr_stop_multiple": 2.0,
+    "expected_hold_days": 5
+  },
+  "catalysts": [],
+  "portfolio": {
+    "error": "Portfolio CSV not found at C:\\Users\\HP\\egx_portfolio.csv.",
+    "hint": "Create a CSV with columns ticker,shares,cost_basis at C:\\Users\\HP\\egx_portfolio.csv, set $EGX_PORTFOLIO_CSV, or pass csv_path explicitly. Example row: CIRA,500,12.50"
+  },
+  "market_ytd_pct": 32.473000792470074,
+  "market_label": "Market YTD (13-name liquid basket EW): +32.47%"
+}

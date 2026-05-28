@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "egx": {
+      "command": "REPLACE_WITH_FULL_PYTHON_PATH",
+      "args": [
+        "-m",
+        "egx_mcp.server"
+      ],
+      "cwd": "REPLACE_WITH_FULL_REPO_PATH",
+      "env": {
+        "EGX_PORTFOLIO_CSV": "REPLACE_WITH_FULL_CSV_PATH",
+        "PYTHONPATH": "REPLACE_WITH_FULL_REPO_PATH"
+      }
+    }
+  }
+}

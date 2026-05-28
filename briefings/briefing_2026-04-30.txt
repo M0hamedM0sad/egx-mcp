@@ -1,0 +1,24 @@
+=== EGX PRE-MARKET BRIEFING — Thursday 2026-04-30 10:47 ===
+
+--- MACRO ---
+  USD/EGP: 53.65 (+1.28%)
+  Brent:   $104.46 (-7.46%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 31) ---
+  1. CCAP   score=29.17  price=2.2  5d=+18.1%  trend=^
+  2. RAYA   score=19.29  price=2.08  5d=+12.3%  trend=^
+  3. ZMID   score=17.72  price=7.55  5d=+8.2%  trend=^
+  4. SKPC   score=17.19  price=27.29  5d=+9.0%  trend=^
+  5. EGCH   score=15.95  price=8.11  5d=+8.1%  trend=^
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  CCAP: ENTRY 2.21 | STOP 1.84 | TARGET 2.92 | 13888 shares (6.11% NAV) | R:R 1:2.0 | time stop 2026-05-07
+  RAYA: ENTRY 2.09 | STOP 1.49 | TARGET 3.25 | 8514 shares (3.54% NAV) | R:R 1:2.0 | time stop 2026-05-07
+  ZMID: ENTRY 7.59 | STOP 7.23 | TARGET 8.19 | 6622 shares (10.0% NAV) | R:R 1:2.0 | time stop 2026-05-07
+  SKPC: ENTRY 27.43 | STOP 26.34 | TARGET 29.19 | 1832 shares (10.0% NAV) | R:R 1:2.0 | time stop 2026-05-07
+  EGCH: ENTRY 8.15 | STOP 7.61 | TARGET 9.12 | 6165 shares (10.0% NAV) | R:R 1:2.0 | time stop 2026-05-07
+  EXIT RULES: target hit → sell | stop hit → sell | time stop → close all
+
+Disclaimer: Research only, not investment advice.

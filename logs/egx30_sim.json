@@ -1,0 +1,69 @@
+{
+  "as_of": "2026-05-28",
+  "forecast_week": "2026-05-31 (Sun) to 2026-06-04 (Thu)",
+  "current_index_level": 52658.8,
+  "constituents_used": 25,
+  "lookback_days": 243,
+  "top_weights": [
+    {
+      "ticker": "COMI",
+      "weight_pct": 21.4
+    },
+    {
+      "ticker": "TMGH",
+      "weight_pct": 9.9
+    },
+    {
+      "ticker": "SWDY",
+      "weight_pct": 9.4
+    },
+    {
+      "ticker": "ETEL",
+      "weight_pct": 8.1
+    },
+    {
+      "ticker": "MFPC",
+      "weight_pct": 6.9
+    },
+    {
+      "ticker": "EAST",
+      "weight_pct": 6.1
+    },
+    {
+      "ticker": "ABUK",
+      "weight_pct": 5.7
+    },
+    {
+      "ticker": "HDBK",
+      "weight_pct": 4.1
+    }
+  ],
+  "hist_daily_mean_pct": 0.214,
+  "hist_daily_std_pct": 1.186,
+  "annualized_vol_pct": 18.8,
+  "recent_20d_cum_pct": 0.83,
+  "mc": {
+    "n_paths": 20000,
+    "horizon_trading_days": 5,
+    "expected_level": 53223.9,
+    "expected_return_pct": 1.07,
+    "prob_week_up_pct": 65.9,
+    "prob_up_ge_1pct": 49.9,
+    "prob_up_ge_2pct": 34.2,
+    "prob_up_ge_3pct": 21.5,
+    "prob_down_ge_1pct": 21.0,
+    "prob_down_ge_2pct": 11.4,
+    "prob_down_ge_3pct": 5.5,
+    "p05_level": 51015.9,
+    "p05_return_pct": -3.12,
+    "p25_level": 52312.2,
+    "p25_return_pct": -0.66,
+    "p50_level": 53180.5,
+    "p50_return_pct": 0.99,
+    "p75_level": 54073.5,
+    "p75_return_pct": 2.69,
+    "p95_level": 55606.4,
+    "p95_return_pct": 5.6,
+    "var_95_1week_pct": -3.12
+  }
+}

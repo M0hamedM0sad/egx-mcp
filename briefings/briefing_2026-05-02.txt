@@ -1,0 +1,86 @@
+=== EGX PRE-MARKET BRIEFING — Saturday 2026-05-02 23:57 ===
+
+--- MACRO ---
+  EGX 30:  51,761 pts (—)
+  USD/EGP: 53.47 (—)
+  Brent:   $108.17 (-2.87%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 44) ---
+  1. CLHO   score=25.31  price=14.8100004196167  5d=+15.0%  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CLHO/
+  2. MTIE   score=18.69  price=8.699999809265137  5d=+9.6%  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MTIE/
+  3. RAYA   score=16.67  price=6.570000171661377  5d=+7.7%  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-RAYA/
+  4. POUL   score=15.41  price=36.7400016784668  5d=+7.2%  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-POUL/
+  5. CCAP   score=15.04  price=4.730000019073486  5d=+7.7%  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CCAP/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  CLHO: ENTRY 14.88 | STOP 13.75 | TARGET 16.94 | 3376 shares (10.0% NAV) | R:R 1:2.0 | time stop 2026-05-09
+  MTIE: ENTRY 8.74 | STOP 8.29 | TARGET 9.52 | 5747 shares (10.0% NAV) | R:R 1:2.0 | time stop 2026-05-09
+  RAYA: ENTRY 6.6 | STOP 5.96 | TARGET 7.8 | 7610 shares (10.0% NAV) | R:R 1:2.0 | time stop 2026-05-09
+  POUL: ENTRY 36.92 | STOP 34.09 | TARGET 42.03 | 1360 shares (9.99% NAV) | R:R 1:2.0 | time stop 2026-05-09
+  CCAP: ENTRY 4.75 | STOP 4.37 | TARGET 5.44 | 10570 shares (10.0% NAV) | R:R 1:2.0 | time stop 2026-05-09
+  EXIT RULES: target hit → sell | stop hit → sell | time stop → close all
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  CLHO   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: bullish
+  MTIE   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  RAYA   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  POUL   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CCAP   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon):
+    CLHO: V8b says HOLD but chairman says REDUCE — Bear case has the edge; lighten exposure if held.
+    RAYA: V8b says REDUCE but chairman says AVOID — Bear case dominates and composite score confirms weakness.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  CLHO:
+    Technicals:    RSI 84 — overbought; MACD bullish (+0.233); Riding upper Bollinger — extended; ATR 0.53 (3.6% of px) — sizing input
+    Fundamentals:  P/E 14.4 — fair; P/B 2.65
+    News tone:     bullish (+1.00, 3 hdl)
+      - عمومية مستشفى كليوباترا تقر توزيع 84 مليون جنيه للعاملين دون المساهمين [Mubasher]
+      - أرباح "مستشفى كليوباترا" ترتفع 18.5% لـ967.8 مليون جنيه خلال 2025 [Mubasher]
+  MTIE:
+    Technicals:    RSI 88 — overbought; MACD bullish (+0.120); Riding upper Bollinger — extended; ATR 0.21 (2.4% of px) — sizing input
+    Fundamentals:  P/E 16.2 — premium; P/B 3.39
+    News tone:     bullish (+1.00, 3 hdl)
+      - الرقابة المالية تقر إفصاح زيادة رأسمال "إم إم جروب" عبر أسهم مجانية [Mubasher]
+      - سهم "إم تي أي" يختبر مستوى فنياً هاماً سيحدد وجهة السهم القادمة [Mubasher]
+  RAYA:
+    Technicals:    RSI 73 — overbought; MACD bullish (+0.113); ATR 0.31 (4.7% of px) — sizing input
+    Fundamentals:  P/E 3.4 — cheap; P/B 1.52
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم راية للاتصالات بين استمرار الصعود واختبار مقاومة محورية [Mubasher]
+      - شركة تابعة لـ"راية" والعاصمة الإدارية تدشنان مركزاً للابتكار في العاصمة الجديدة [Mubasher]
+  POUL:
+    Technicals:    RSI 72 — overbought; MACD bullish (+0.174); Riding upper Bollinger — extended; ATR 1.32 (3.6% of px) — sizing input
+    Fundamentals:  P/E 1.6 — cheap; P/B 0.58
+    News tone:     bullish (+1.00, 3 hdl)
+      - اليوم.. نهاية الحق في توزيع كوبون 4 شركات [Mubasher]
+      - بورصة مصر تعلن نهاية حق وموعد توزيع كوبون القاهرة للدواجن [Mubasher]
+  CCAP:
+    Technicals:    RSI 80 — overbought; MACD bullish (+0.070); Riding upper Bollinger — extended; ATR 0.18 (3.8% of px) — sizing input
+    Fundamentals:  
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم القلعة بين استمرار الصعود واختبار مقاومة قوية [Mubasher]
+      - القلعة تكشف تحول "المصرية للتكرير" للربحية في ظل التوترات الجيوسياسية [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: CLHO, MTIE, RAYA, POUL, CCAP
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.

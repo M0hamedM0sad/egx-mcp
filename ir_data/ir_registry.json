@@ -1,0 +1,258 @@
+{
+  "ABUK": {
+    "ticker": "ABUK",
+    "name": "Abou Kir Fertilizers",
+    "ir_url": "https://abuqir.net/investor-relations/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "ADIB": {
+    "ticker": "ADIB",
+    "name": "Abu Dhabi Islamic Bank Egypt",
+    "ir_url": "https://www.adib.eg/investor-relations",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "CCAP": {
+    "ticker": "CCAP",
+    "name": "Qalaa Holdings",
+    "ir_url": "https://ir.qalaaholdings.com/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "CIEB": {
+    "ticker": "CIEB",
+    "name": "Crédit Agricole Egypt",
+    "ir_url": "https://www.ca-egypt.com/en/investor-relation/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "CIRA": {
+    "ticker": "CIRA",
+    "name": "Cairo for Investment & Real Estate",
+    "ir_url": "https://cira.com.eg/en",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "CLHO": {
+    "ticker": "CLHO",
+    "name": "Cleopatra Hospital",
+    "ir_url": "https://cleopatrahospitals.com/en/investors/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "COMI": {
+    "ticker": "COMI",
+    "name": "Commercial International Bank",
+    "ir_url": "https://www.cibeg.com/en/investor-relations",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "DOMT": {
+    "ticker": "DOMT",
+    "name": "Domty",
+    "ir_url": "https://www.domty.org/en/content/investor-relations",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "EAST": {
+    "ticker": "EAST",
+    "name": "Eastern Company",
+    "ir_url": "https://www.easternegypt.com/investment-2/?lang=en",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "EFID": {
+    "ticker": "EFID",
+    "name": "Edita Food Industries",
+    "ir_url": "https://ir.edita.com.eg/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "EFIH": {
+    "ticker": "EFIH",
+    "name": "EFG Holding",
+    "ir_url": "https://efgholding.com/en/investor-relations",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "EGTS": {
+    "ticker": "EGTS",
+    "name": "Egyptian Resorts Company",
+    "ir_url": "http://ir.erc-egypt.com/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "EIPI": {
+    "ticker": "EIPI",
+    "name": "EIPICO",
+    "ir_url": "https://www.eipico.com.eg/HTML.aspx?name=Eipico3_InvestorRelations",
+    "confidence": "medium",
+    "verified": false,
+    "method": "web-research"
+  },
+  "EMFD": {
+    "ticker": "EMFD",
+    "name": "Emaar Misr for Development",
+    "ir_url": "https://www.emaarmisr.com/about-emaar/investor-relations/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "ESRS": {
+    "ticker": "ESRS",
+    "name": "Ezz Steel",
+    "ir_url": "https://www.ezzsteel.com/investor-relations/ezz-steel-co-s-a-e",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "ETEL": {
+    "ticker": "ETEL",
+    "name": "Telecom Egypt",
+    "ir_url": "https://ir.te.eg/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "FAIT": {
+    "ticker": "FAIT",
+    "name": "Faisal Islamic Bank of Egypt",
+    "ir_url": "https://www.faisalbank.com.eg/en/Investor-Relations",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "FWRY": {
+    "ticker": "FWRY",
+    "name": "Fawry for Banking Technology",
+    "ir_url": "https://www.fawry.com/investor-relations/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "HDBK": {
+    "ticker": "HDBK",
+    "name": "Housing & Development Bank",
+    "ir_url": "https://ir.hdb-egy.com/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "HELI": {
+    "ticker": "HELI",
+    "name": "Heliopolis Housing",
+    "ir_url": "https://hhd.com.eg/",
+    "confidence": "medium",
+    "verified": false,
+    "method": "web-research"
+  },
+  "HRHO": {
+    "ticker": "HRHO",
+    "name": "EFG Hermes Holding",
+    "ir_url": "https://efgholding.com/en/investor-relations",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "IDHC": {
+    "ticker": "IDHC",
+    "name": "Integrated Diagnostics Holdings",
+    "ir_url": "https://investors.idhcorp.com/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "JUFO": {
+    "ticker": "JUFO",
+    "name": "Juhayna Food Industries",
+    "ir_url": "https://www.juhayna.com/investor-home/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "MFPC": {
+    "ticker": "MFPC",
+    "name": "Misr Fertilizers Production (MOPCO)",
+    "ir_url": "https://www.mopco-eg.com/en/investor-relation",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "MNHD": {
+    "ticker": "MNHD",
+    "name": "Madinet Nasr Housing & Development",
+    "ir_url": "https://ir.madinetmasr.com/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "MTIE": {
+    "ticker": "MTIE",
+    "name": "MM Group for Industry & Trade",
+    "ir_url": "https://www.mti-mmgroup.com/investor/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "ORHD": {
+    "ticker": "ORHD",
+    "name": "Orascom Development Egypt",
+    "ir_url": "https://www.orascomde.com/investor-relations",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "ORWE": {
+    "ticker": "ORWE",
+    "name": "Oriental Weavers",
+    "ir_url": "https://ir.orientalweavers.com/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "PHDC": {
+    "ticker": "PHDC",
+    "name": "Palm Hills Developments",
+    "ir_url": "https://ir.palmhillsdevelopments.com/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "SODIC": {
+    "ticker": "SODIC",
+    "name": "Sixth of October Development (SODIC)",
+    "ir_url": "https://ir.sodic.com/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "SWDY": {
+    "ticker": "SWDY",
+    "name": "Elsewedy Electric",
+    "ir_url": "https://ir.elsewedyelectric.com/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  },
+  "TMGH": {
+    "ticker": "TMGH",
+    "name": "Talaat Moustafa Group",
+    "ir_url": "https://talaatmoustafa.com/investor-relations/",
+    "confidence": "high",
+    "verified": true,
+    "method": "web-research"
+  }
+}

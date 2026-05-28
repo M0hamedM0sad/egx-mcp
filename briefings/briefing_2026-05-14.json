@@ -1,0 +1,118 @@
+{
+  "as_of_utc": "2026-05-14T23:10:33.804207Z",
+  "cairo_local": "Friday 2026-05-15 01:10",
+  "is_trading_day": false,
+  "macro": {
+    "as_of": "2026-05-14T23:10:41.443961Z",
+    "egp_usd": {
+      "value": null,
+      "change_pct": null,
+      "error": "'PriceHistory' object has no attribute '_dividends'"
+    },
+    "brent_usd": {
+      "value": null,
+      "change_pct": null,
+      "error": "'PriceHistory' object has no attribute '_dividends'"
+    },
+    "gold_usd": {
+      "value": null,
+      "change_pct": null,
+      "error": "'PriceHistory' object has no attribute '_dividends'"
+    },
+    "cbe_rates": {
+      "deposit_rate_pct": null,
+      "lending_rate_pct": null,
+      "midpoint_pct": null,
+      "error": "CBE page unreachable: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+      "source": "https://www.cbe.org.eg/en/economic-research/statistics/cbe-rates"
+    },
+    "regime_flags": [],
+    "note": "EGP/USD and Brent from Yahoo (delayed). CBE rates scraped \u2014 verify against cbe.org.eg before acting on rate-sensitive trades."
+  },
+  "egx30_spot": {
+    "error": "Failed to perform, curl: (60) SSL certificate problem: unable to get local issuer certificate. See h",
+    "source": "yfinance"
+  },
+  "egx70_spot": {
+    "value": 2688069667.0,
+    "change_pct": null,
+    "source": "egx.com.eg"
+  },
+  "egx_index_sources": [
+    "egx.com.eg (6 indices)"
+  ],
+  "gold_egp": {
+    "error": "Gold or USDEGP unavailable from Yahoo right now.",
+    "gold_oz_usd": null,
+    "usdegp": null
+  },
+  "regime": {
+    "regime": "UNKNOWN",
+    "error": "no EGX 30 source returned \u226560 bars"
+  },
+  "rf_rate": {
+    "rate_pct": 25.0,
+    "source": "fallback:hardcoded_stale",
+    "is_stale": true,
+    "daily_rate_pct": 0.08859,
+    "as_of": "2026-05-14T23:11:17.344443Z",
+    "note": "Used as the baseline for excess-return calculations across the scoring engine, decision tool, and backtest harness. Override with EGX_TBILL_RATE_PCT env var when CBE source is stale."
+  },
+  "w1_picks": {
+    "as_of": "2026-05-14",
+    "horizon_days": 5,
+    "n_universe": 0,
+    "n_with_features": 0,
+    "n_passes_quality": 0,
+    "n_eligible": 0,
+    "config": {
+      "w_mom5": 1.5,
+      "w_mom20": 0.0,
+      "w_mr1": 0.5,
+      "w_breakout": 3.0,
+      "w_trend": 3.0,
+      "min_roe_pct": 10.0,
+      "top_n": 5
+    },
+    "top_picks": [],
+    "runners_up": [],
+    "skipped_count": 0,
+    "validation_summary": "Backtested 28 months. Full window: +107.8% CAGR, Sharpe 1.64, -24.9% MaxDD vs market +40.8% / 0.65 / -23.5%. Holdout 10mo OOS: +131% CAGR, Sharpe 2.78, -8.9% MaxDD vs market +50% / 1.32 / -5.6%.",
+    "disclaimer": "Algorithmic ranking for the next ~5 trading days. Not investment advice. The model has positive expected alpha vs a passive EGX weekly buy-hold; individual weeks can still lose. Verify against the EGX official tape before acting."
+  },
+  "exdiv_filtered": [],
+  "v8b_verdicts": [],
+  "chairman_per_pick": {},
+  "divergences": [],
+  "trade_plans": {},
+  "technicals_per_pick": {},
+  "fundamentals_per_pick": {},
+  "news_per_pick": {},
+  "market_news": {
+    "headlines": [],
+    "raw_headline_count": 0,
+    "filtered_headline_count": 0,
+    "filter_basis": "unfiltered (no portfolio, no watchlist)",
+    "filter_target_tickers": [],
+    "sentiment": {
+      "label": "neutral",
+      "aggregate_score": 0.0,
+      "headline_count": 0,
+      "method": "lexicon scored over portfolio-filtered headlines"
+    },
+    "filter_method": "Direct ticker-name match wins. Sector keyword match falls back to 'sector' impact level. Macro headlines (CBE, EGP, rates) are not included by default \u2014 they affect everyone."
+  },
+  "trade_plan_params": {
+    "portfolio_nav_egp": 500000.0,
+    "risk_pct_per_trade": 1.0,
+    "atr_stop_multiple": 2.0,
+    "expected_hold_days": 5
+  },
+  "catalysts": [],
+  "portfolio": {
+    "error": "Portfolio CSV not found at C:\\Users\\HP\\egx_portfolio.csv.",
+    "hint": "Create a CSV with columns ticker,shares,cost_basis at C:\\Users\\HP\\egx_portfolio.csv, set $EGX_PORTFOLIO_CSV, or pass csv_path explicitly. Example row: CIRA,500,12.50"
+  },
+  "market_ytd_pct": null,
+  "market_label": "Market YTD: insufficient data"
+}

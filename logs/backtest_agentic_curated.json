@@ -1,0 +1,173 @@
+{
+  "as_of": "2026-05-02T19:03:23.089022Z",
+  "start": "2024-01-01",
+  "end": "2026-05-02",
+  "universe": "curated",
+  "universe_size": 32,
+  "rebalance_days": 21,
+  "n_rebalances": 26,
+  "by_verdict": {
+    "BUY": {
+      "n": 99,
+      "mean_return_pct": 3.352,
+      "median_return_pct": 1.337,
+      "hit_rate_pct": 54.5,
+      "stdev_pct": 19.654
+    },
+    "ACCUMULATE": {
+      "n": 99,
+      "mean_return_pct": 2.442,
+      "median_return_pct": 1.667,
+      "hit_rate_pct": 52.5,
+      "stdev_pct": 9.529
+    },
+    "HOLD": {
+      "n": 387,
+      "mean_return_pct": 2.947,
+      "median_return_pct": 1.347,
+      "hit_rate_pct": 56.1,
+      "stdev_pct": 15.988
+    },
+    "REDUCE": {
+      "n": 130,
+      "mean_return_pct": 3.602,
+      "median_return_pct": 2.632,
+      "hit_rate_pct": 56.2,
+      "stdev_pct": 13.56
+    },
+    "AVOID": {
+      "n": 52,
+      "mean_return_pct": 3.413,
+      "median_return_pct": 2.146,
+      "hit_rate_pct": 53.8,
+      "stdev_pct": 14.691
+    }
+  },
+  "monotonicity_check": {
+    "checked": true,
+    "ordered_means": [
+      [
+        "BUY",
+        3.352
+      ],
+      [
+        "ACCUMULATE",
+        2.442
+      ],
+      [
+        "HOLD",
+        2.947
+      ],
+      [
+        "REDUCE",
+        3.602
+      ],
+      [
+        "AVOID",
+        3.413
+      ]
+    ],
+    "monotone_decreasing": false,
+    "buy_minus_avoid_pct": -0.061,
+    "interpretation": "Spread > 0 means BUY band outperforms AVOID band on average. monotone_decreasing=True is the gold-standard signal that the verdict mapping is meaningful, not noise."
+  },
+  "buy_portfolio": {
+    "side": "BUY+ACCUMULATE",
+    "top_n_cap": 5,
+    "total_return_pct": 114.65,
+    "annualized_return_pct": 42.27,
+    "annualized_volatility_pct": 31.75,
+    "annualized_sharpe": 0.57,
+    "max_drawdown_pct": -31.81,
+    "hit_rate_pct": 73.1
+  },
+  "benchmark_egx30": {
+    "total_return_pct": null,
+    "annualized_return_pct": null,
+    "alpha_pct": null,
+    "information_ratio": null
+  },
+  "bands_used": {
+    "BUY": [
+      0.9,
+      1.0
+    ],
+    "ACCUMULATE": [
+      0.75,
+      0.9
+    ],
+    "HOLD": [
+      0.25,
+      0.75
+    ],
+    "REDUCE": [
+      0.1,
+      0.25
+    ],
+    "AVOID": [
+      0.0,
+      0.1
+    ]
+  },
+  "period_samples_recent": [
+    {
+      "date": "2025-12-30",
+      "n_scored": 30,
+      "counts": {
+        "BUY": 4,
+        "ACCUMULATE": 4,
+        "HOLD": 14,
+        "REDUCE": 5,
+        "AVOID": 2
+      },
+      "buy_picks": [
+        "EFID",
+        "ETEL",
+        "CLHO",
+        "EIPI",
+        "HDBK"
+      ],
+      "buy_return_pct": 7.58
+    },
+    {
+      "date": "2026-02-02",
+      "n_scored": 30,
+      "counts": {
+        "BUY": 4,
+        "ACCUMULATE": 4,
+        "HOLD": 14,
+        "REDUCE": 5,
+        "AVOID": 2
+      },
+      "buy_picks": [
+        "EFID",
+        "EFIH",
+        "CLHO",
+        "ETEL",
+        "HDBK"
+      ],
+      "buy_return_pct": 1.37
+    },
+    {
+      "date": "2026-03-03",
+      "n_scored": 30,
+      "counts": {
+        "BUY": 4,
+        "ACCUMULATE": 4,
+        "HOLD": 14,
+        "REDUCE": 5,
+        "AVOID": 2
+      },
+      "buy_picks": [
+        "HDBK",
+        "ADIB",
+        "EFID",
+        "TMGH",
+        "EIPI"
+      ],
+      "buy_return_pct": 6.94
+    }
+  ],
+  "method": "Within each rebalance period, score every name in the universe with the V3 price-only score (point-in-time clean), rank to percentile, map to chairman bands. For each (name, period, verdict) record forward return. Aggregate by band to test the monotonicity assumption (BUY > ACCUMULATE > HOLD > REDUCE > AVOID). Separately, simulate a BUY-side equal-weight portfolio with `buy_only_top_n` cap and compare to EGX 30.",
+  "caveat": "Fundamentals, sentiment, calendar, and macro inputs of the live chairman are NOT replayed here \u2014 only the price-momentum half is point-in-time clean. The full live system has more filters; this isolates the verdict-mapping edge."
+}
