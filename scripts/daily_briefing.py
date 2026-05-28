@@ -626,6 +626,9 @@ def build_briefing(force: bool = False) -> dict:
                     "v8b_score": d.get("composite_score"),
                     "v8b_conviction": d.get("conviction"),
                     "blocking_catalysts": d.get("blocking_catalysts", []),
+                    # Per-decision sub-scores — recorded so the learning loop can
+                    # later analyze which factors actually drive forward excess.
+                    "v8b_subscores": d.get("subscores"),
                 })
             except Exception as e:
                 verdicts.append({"ticker": tk, "error": str(e)[:80]})

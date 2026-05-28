@@ -49,9 +49,11 @@ _DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2})")
 _BUY_SIDE = {"BUY", "ACCUMULATE", "WEEKLY_BUY"}
 _SELL_SIDE = {"REDUCE", "AVOID", "SELL"}
 
+_SUBSCORES = ["sub_valuation", "sub_quality", "sub_momentum", "sub_risk"]
 _FIELDS = ["briefing_date", "ticker", "source", "verdict", "conviction", "score",
            "horizon_days", "entry_date", "entry_price", "exit_date", "exit_price",
-           "fwd_return_pct", "bench_return_pct", "excess_pct", "outcome", "correct"]
+           "fwd_return_pct", "bench_return_pct", "excess_pct", "outcome", "correct",
+           *_SUBSCORES]
 
 
 def _briefing_date(path: Path, payload: dict) -> str | None:
@@ -67,12 +69,19 @@ def _extract_verdicts(payload: dict) -> list[dict]:
     """Pull (ticker, source, verdict, conviction, score) tuples from a briefing."""
     out: list[dict] = []
     for v in payload.get("v8b_verdicts", []) or []:
+        sub = v.get("v8b_subscores") or {}
         out.append({
             "ticker": v.get("ticker"),
             "source": "v8b",
             "verdict": (v.get("v8b_verdict") or "").upper(),
             "conviction": v.get("v8b_conviction"),
             "score": v.get("v8b_score"),
+            # Flatten sub-scores into evidence columns (None when not recorded,
+            # e.g. older briefings predating this field).
+            "sub_valuation": sub.get("valuation"),
+            "sub_quality": sub.get("quality"),
+            "sub_momentum": sub.get("momentum"),
+            "sub_risk": sub.get("risk"),
         })
     # Weekly picks are an explicit BUY list (5-day horizon model).
     for p in (payload.get("w1_picks", {}) or {}).get("top_picks", []) or []:

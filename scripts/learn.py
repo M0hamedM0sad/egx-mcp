@@ -72,6 +72,41 @@ def _sel_stats(rows: list[dict], thr: float) -> dict:
             "beat_bench_pct": round(sum(1 for e in exc if e > 0) / len(exc) * 100, 1) if exc else None}
 
 
+def _corr(xs: list[float], ys: list[float]) -> float | None:
+    """Pearson correlation, no numpy dependency."""
+    n = len(xs)
+    if n < 8:
+        return None
+    mx, my = sum(xs) / n, sum(ys) / n
+    cov = sum((x - mx) * (y - my) for x, y in zip(xs, ys))
+    vx = sum((x - mx) ** 2 for x in xs)
+    vy = sum((y - my) ** 2 for y in ys)
+    if vx <= 0 or vy <= 0:
+        return None
+    return round(cov / (vx ** 0.5 * vy ** 0.5), 3)
+
+
+def _subscore_signal(rows: list[dict]) -> dict:
+    """Correlation of each sub-score with realized forward excess.
+
+    Informational groundwork for weight-learning: a factor that correlates
+    positively with excess deserves more weight, one near zero or negative
+    less. NOT auto-applied — the scoring weights aren't tunable yet, and
+    reweighting needs its own OOS validation to avoid overfitting."""
+    fields = ["sub_valuation", "sub_quality", "sub_momentum", "sub_risk"]
+    usable = [r for r in rows if all(isinstance(r.get(f), (int, float)) for f in fields)
+              and isinstance(r.get("excess_pct"), (int, float))]
+    if len(usable) < 8:
+        return {"n": len(usable), "note": "need >=8 decisions with recorded sub-scores"}
+    exc = [r["excess_pct"] for r in usable]
+    return {"n": len(usable),
+            "corr_with_excess": {f.replace("sub_", ""): _corr([r[f] for r in usable], exc)
+                                 for f in fields},
+            "note": ("Higher positive correlation = the factor predicted out-performance "
+                     "and arguably deserves more weight. Groundwork only — weights are "
+                     "not auto-tuned.")}
+
+
 def _conviction_reliability(rows: list[dict]) -> dict:
     out = {}
     for c in ("high", "medium", "low", "weekly"):
@@ -131,6 +166,7 @@ def _build_proposal() -> dict:
         "oos_current": oos_cur,
         "oos_candidate": oos_cand,
         "conviction_reliability": _conviction_reliability(rows),
+        "subscore_signal": _subscore_signal(rows),
         "recommendation": "APPLY" if improves else "KEEP_CURRENT",
         "proposed_params": proposed if improves else None,
         "message": (
