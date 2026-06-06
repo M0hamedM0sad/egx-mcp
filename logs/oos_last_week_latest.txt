@@ -1,0 +1,52 @@
+
+================================================================================
+OUT-OF-SAMPLE WALK-FORWARD
+  Training cutoff: 2026-05-28 (Thu)   — model sees only data ≤ this date
+  Test window:     2026-05-28+1 → 2026-06-04  (last week's 5 EGX sessions)
+================================================================================
+
+Loading price history for validated EGX universe...
+Universe size: 68
+
+Model would have picked these top 5 on 2026-05-28:
+
+Rank Tic    Score   Forecast    Actual    P(>2%)   In 90% CI
+------------------------------------------------------------------------
+1    RAYA   68.6      +2.70%     +0.94%  49%      ✓
+2    OBRI   53.5      +0.88%     -0.37%  40%      ✓
+3    ADIB   41.7      +1.51%     -0.48%  45%      ✓
+4    HELI   41.5      +3.20%     +2.83%  53%      ✓
+5    EGTS   41.4      +9.20%     +1.22%  67%      ✓
+
+========================================================================
+AGGREGATE RESULTS — week of 2026-05-28 → 2026-06-04
+========================================================================
+  Top-5 portfolio return:    +0.83%
+  EGX synthetic basket (n=68):  +2.22%
+  EGP T-bill weekly:           +0.444%
+  Active vs basket:            -1.40 pp
+  Active vs T-bills:           +0.38 pp
+
+  Picks that beat basket: 1 / 5
+  Picks with positive return: 3 / 5
+
+  Bootstrap MC across 68 names:
+    Mean absolute error: 3.02pp (predicted vs actual)
+    Mean error (bias):   +0.71pp
+    Actual within 90% CI: 91% of names
+    (Calibrated would be 80%; below = overconfident, above = underconfident)
+
+Model would have AVOIDED these bottom 5 on 2026-05-28:
+
+Rank   Tic    Score   Forecast    Actual    
+--------------------------------------------------
+64     HRHO   -5.2      -0.01%     +1.05%
+65     DSCW   -9.1      +0.69%     +6.29%
+66     IRON   -12.3     +0.02%     +1.26%
+67     SKPC   -13.2     +0.51%     -0.29%
+68     ELEC   -14.9     +0.16%     +2.84%
+
+  Bottom-5 actual return: +2.23%
+  Long top / short bottom spread: -1.40 pp
+
+(Week 2026-05-28 already in oos_weekly_log.jsonl — not duplicated)
