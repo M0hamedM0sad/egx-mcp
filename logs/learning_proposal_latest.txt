@@ -1,0 +1,8 @@
+{
+  "status": "insufficient_evidence",
+  "graded_v8b_calls": 0,
+  "need": 40,
+  "message": "Only 0 graded decide() calls (need 40). Let the daily grading accumulate — no proposal made."
+}
+
+Proposal written -> /home/runner/work/egx-mcp/egx-mcp/logs/learning_proposal.json
