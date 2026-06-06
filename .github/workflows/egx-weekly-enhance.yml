@@ -1,0 +1,238 @@
+name: EGX weekly enhancement loop
+
+# Runs every Sunday at 06:00 UTC (08:00 Cairo, before EGX opens).
+# Three jobs in sequence:
+#
+#   1. oos-test    — walk-forward OOS test on the W1 weekly model for last
+#                    week. Appends one row to logs/oos_weekly_log.jsonl so
+#                    performance accumulates week-by-week.
+#
+#   2. learn       — re-grades all briefing verdicts against realized prices
+#                    (A1), then runs the learning loop to propose a V8b BUY-
+#                    threshold update if OOS-validated evidence supports it.
+#                    Nothing is applied without the --apply flag (human gate).
+#
+#   3. summarise   — emits a reliability scorecard into the run summary and
+#                    commits all new artifacts (cache, log, proposals) back to
+#                    the repo so evidence compounds automatically.
+#
+# Prerequisites (one-time repo setup):
+#   • Push the egx-mcp folder (containing pyproject.toml) to GitHub.
+#   • Settings → Actions → General → Workflow permissions → "Read and write".
+#   • Optional: add SMTP_USER / SMTP_PASS secrets if you also want the daily
+#     briefing to email (used by egx-daily-grade, not this workflow).
+
+on:
+  schedule:
+    - cron: "0 6 * * 0"   # 06:00 UTC every Sunday
+  workflow_dispatch: {}    # allow "Run workflow" from the Actions tab
+
+permissions:
+  contents: write          # needed to commit evidence back to the repo
+
+concurrency:
+  group: egx-weekly-enhance
+  cancel-in-progress: false  # never cancel mid-run; evidence must fully commit
+
+jobs:
+
+  # ── Job 1: W1 out-of-sample walk-forward ──────────────────────────────────
+  oos-test:
+    name: "W1 OOS walk-forward (last week)"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Refresh EGX symbols cache
+        # Force-refresh so dead tickers are pruned weekly and new listings
+        # are picked up. Runs before the OOS test so the universe is current.
+        run: |
+          python - <<'EOF'
+          import sys; sys.path.insert(0, ".")
+          from egx_mcp.data import egx_listing
+          r = egx_listing.validate_and_cache(force=True)
+          print(f"Cache refreshed: {r['count']} live tickers, {len(r['dead'])} dead")
+          EOF
+
+      - name: OOS walk-forward — last week
+        # Dates are computed dynamically inside the script; nothing to set here.
+        # continue-on-error so a data hiccup never blocks the commit step.
+        continue-on-error: true
+        run: |
+          mkdir -p logs
+          python -m tests.oos_last_week 2>&1 | tee logs/oos_last_week_latest.txt
+
+      - name: Write OOS results to step summary
+        if: always()
+        run: |
+          echo "## W1 OOS Walk-Forward — Last Week" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f logs/oos_last_week_latest.txt ]; then
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            cat logs/oos_last_week_latest.txt >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "_OOS test did not produce output._" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Commit OOS artifacts
+        run: |
+          git config user.name  "egx-enhancer[bot]"
+          git config user.email "egx-enhancer@users.noreply.github.com"
+          git add logs/oos_weekly_log.jsonl \
+                  logs/oos_last_week_latest.txt \
+                  egx_mcp/data/egx_symbols_cache.json \
+                  2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No OOS artifacts to commit."
+          else
+            git commit -m "chore(oos): weekly walk-forward result [skip ci]"
+            git push
+          fi
+
+  # ── Job 2: Learning loop ───────────────────────────────────────────────────
+  learn:
+    name: "Grade verdicts + propose V8b update"
+    runs-on: ubuntu-latest
+    needs: oos-test   # run after OOS so the push order is clean
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Pull the latest commit so we get the cache committed by job 1
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Grade briefing verdicts (A1)
+        # Re-grades all briefings/*.json with fresh realized prices.
+        # Pending rows from prior runs get graded as their horizons elapse.
+        continue-on-error: true
+        run: |
+          python -m tests.grade_briefings 2>&1 \
+            || echo "grade_briefings: no briefings yet or price fetch failed (non-fatal)"
+
+      - name: Learning loop — analyze & propose
+        # Reads graded_verdicts.jsonl, fits a BUY threshold on the IS slice,
+        # validates OOS. Writes logs/learning_proposal.json. Does NOT apply.
+        continue-on-error: true
+        run: |
+          python -m scripts.learn 2>&1 | tee logs/learning_proposal_latest.txt
+
+      - name: Write learning results to step summary
+        if: always()
+        run: |
+          echo "## V8b Learning Loop — Threshold Proposal" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f logs/learning_proposal_latest.txt ]; then
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            cat logs/learning_proposal_latest.txt >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "_Learning loop did not produce output._" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Commit learning artifacts
+        run: |
+          git config user.name  "egx-enhancer[bot]"
+          git config user.email "egx-enhancer@users.noreply.github.com"
+          git add logs/graded_verdicts.jsonl \
+                  logs/graded_verdicts.csv \
+                  logs/learning_proposal.json \
+                  logs/learning_proposal_latest.txt \
+                  2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No learning artifacts to commit."
+          else
+            git commit -m "chore(learn): graded verdicts + V8b proposal [skip ci]"
+            git push
+          fi
+
+  # ── Job 3: Reliability scorecard + summary ────────────────────────────────
+  summarise:
+    name: "Reliability scorecard"
+    runs-on: ubuntu-latest
+    needs: learn   # run last so the scorecard sees the freshest graded data
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Reliability scorecard
+        continue-on-error: true
+        run: |
+          python -m scripts.reliability_status 2>&1 | tee logs/reliability_latest.txt
+
+      - name: Write scorecard to step summary
+        if: always()
+        run: |
+          echo "## Model Reliability Scorecard" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f logs/reliability_latest.txt ]; then
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            cat logs/reliability_latest.txt >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "_Scorecard did not produce output._" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Show cumulative OOS log
+        # Print the running week-by-week record so it's visible in the summary.
+        run: |
+          echo "## Cumulative W1 OOS Log" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f logs/oos_weekly_log.jsonl ]; then
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            python - <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          import json; from pathlib import Path
+          rows = [json.loads(l) for l in Path("logs/oos_weekly_log.jsonl").read_text().splitlines() if l.strip()]
+          for r in rows:
+              print(f"{r['cutoff']}  top5={r['top5_return_pct']:+.2f}%  "
+                    f"basket={r['basket_return_pct']:+.2f}%  "
+                    f"alpha={r['alpha_vs_basket']:+.2f}pp  "
+                    f"ls_spread={r['ls_spread_pp']:+.2f}pp  "
+                    f"mae={r['mc_mae_pp']:.2f}pp")
+          print(f"\n{len(rows)} weeks logged.")
+          EOF
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "_No OOS log yet._" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Commit scorecard artifact
+        run: |
+          git config user.name  "egx-enhancer[bot]"
+          git config user.email "egx-enhancer@users.noreply.github.com"
+          git add logs/reliability_latest.txt 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No scorecard artifact to commit."
+          else
+            git commit -m "chore(score): reliability scorecard [skip ci]"
+            git push
+          fi

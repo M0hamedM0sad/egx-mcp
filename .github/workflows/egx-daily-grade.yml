@@ -1,0 +1,76 @@
+name: EGX daily decision test
+
+# Cloud-hosted decision testing. Runs on GitHub's servers each EGX trading
+# day (Sun–Thu), independent of any local machine:
+#   1. generate the day's briefing (records decide() verdicts + weekly picks)
+#   2. grade all prior verdicts forward against realized prices
+#   3. print the reliability scorecard into the run summary
+#   4. commit the updated briefings + graded evidence back to the repo
+#
+# This makes the model test its own decisions automatically and accumulates
+# the evidence base (Gate #1) in the cloud. It MEASURES — it does not retrain.
+#
+# Prerequisites:
+#   - This repo (the folder containing pyproject.toml) pushed to GitHub.
+#   - Actions enabled with write permission (Settings → Actions → General →
+#     Workflow permissions → "Read and write").
+#   - Optional email: set repo secrets SMTP_USER / SMTP_PASS and the daily
+#     briefing will email; without them it just writes files.
+
+on:
+  schedule:
+    # 07:00 UTC ≈ 09:00 Cairo (UTC+2). Sun–Thu only (cron dow: 0=Sun … 4=Thu).
+    - cron: "0 7 * * 0-4"
+  workflow_dispatch: {}   # allow manual "Run workflow" from the Actions tab
+
+permissions:
+  contents: write          # needed to commit the updated evidence back
+
+concurrency:
+  group: egx-daily-grade
+  cancel-in-progress: false
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Generate today's briefing (records decisions)
+        # Non-fatal: a bad data day must not block grading of past verdicts.
+        continue-on-error: true
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+        run: python -m scripts.daily_briefing || echo "briefing step failed (non-fatal)"
+
+      - name: Grade decisions against realized prices (Gate #1)
+        run: python -m tests.grade_briefings || echo "grading produced nothing yet"
+
+      - name: Reliability scorecard → run summary
+        run: |
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          python -m scripts.reliability_status >> "$GITHUB_STEP_SUMMARY" 2>&1 || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit updated evidence
+        run: |
+          git config user.name  "egx-grader[bot]"
+          git config user.email "egx-grader@users.noreply.github.com"
+          git add briefings logs 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No new evidence to commit."
+          else
+            git commit -m "chore(evidence): daily briefing + graded verdicts [skip ci]"
+            git push
+          fi
