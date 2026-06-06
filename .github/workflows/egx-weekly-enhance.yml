@@ -97,6 +97,7 @@ jobs:
             echo "No OOS artifacts to commit."
           else
             git commit -m "chore(oos): weekly walk-forward result [skip ci]"
+            git pull --rebase origin main
             git push
           fi
 
@@ -162,6 +163,7 @@ jobs:
             echo "No learning artifacts to commit."
           else
             git commit -m "chore(learn): graded verdicts + V8b proposal [skip ci]"
+            git pull --rebase origin main
             git push
           fi
 
@@ -234,5 +236,6 @@ jobs:
             echo "No scorecard artifact to commit."
           else
             git commit -m "chore(score): reliability scorecard [skip ci]"
+            git pull --rebase origin main
             git push
           fi
