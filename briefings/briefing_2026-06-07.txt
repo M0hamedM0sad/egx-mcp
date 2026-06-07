@@ -1,0 +1,92 @@
+=== EGX PRE-MARKET BRIEFING — Sunday 2026-06-07 11:55 ===
+
+--- MACRO ---
+  EGX 30:  52,652 pts (—)
+  USD/EGP: 51.72 (-0.10%)
+  Brent:   $93.09 (-2.42%)
+  Gold 24K: 7,258.78 EGP/g  |  21K: 6,351.43  |  18K: 5,444.09
+  Egyptian gold pound: 50,811 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 39) ---
+  1. ASCM   score=26.77  price=40.68  5d=+15.8% RSI=66  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ASCM/
+  2. OFH    score=16.74  price=0.336  5d=+7.3% RSI=58  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OFH/
+  3. EGCH   score=14.48  price=8.11  5d=+6.4% RSI=55  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EGCH/
+  4. JUFO   score=14.29  price=18.71  5d=+6.4% RSI=55  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-JUFO/
+  5. ARCC   score=11.53  price=10.5  5d=+5.3% RSI=57  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ARCC/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  ASCM: ENTRY 40.88 | STOP 36.6 | SCALE-OUT 44.76 (612 sh) | TARGET 46.81 (612 sh) | 1224 total (9.96% NAV) | R:R 1:1.5 | time stop 2026-06-14
+  OFH: ENTRY 0.34 | STOP 0.31 | SCALE-OUT 0.37 (74404 sh) | TARGET 0.38 (74405 sh) | 148809 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-14
+  EGCH: ENTRY 8.15 | STOP 7.2 | SCALE-OUT 9.02 (2734 sh) | TARGET 9.48 (2735 sh) | 5469 total (8.87% NAV) | R:R 1:1.5 | time stop 2026-06-14
+  JUFO: ENTRY 18.8 | STOP 17.35 | SCALE-OUT 20.07 (1336 sh) | TARGET 20.75 (1336 sh) | 2672 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-14
+  ARCC: ENTRY 10.55 | STOP 7.72 | SCALE-OUT 13.28 (900 sh) | TARGET 14.66 (901 sh) | 1801 total (3.78% NAV) | R:R 1:1.5 | time stop 2026-06-14
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  ASCM   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bearish
+  OFH    FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: mildly_bullish
+  EGCH   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  JUFO   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  ARCC   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: mildly_bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    ASCM: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    OFH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    JUFO: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    ARCC: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  ASCM:
+    Technicals:    RSI 66 — healthy uptrend; MACD bullish (+0.632); Riding upper Bollinger — extended; ATR 2.04 (3.7% of px) — sizing input
+    Fundamentals:  P/E 3.0 — cheap; P/B 0.77; ROE 25.5% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - الرقابة المالية توافق على إجراءات تخفيض رأسمال "أسيك للتعدين" [Mubasher]
+      - "أسكوم" تعتمد القيمة العادلة وتقرر شراء 90% من "أسطول للنقل" بـ641 مليون جنيه [Mubasher]
+  OFH:
+    Technicals:    RSI 58 — healthy uptrend; MACD bullish (+0.001); ATR 0.01 (2.3% of px) — sizing input
+    Fundamentals:  P/B 0.53; ROE 80.6% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - "أو بي المالية القابضة" تتحول للربحية بـ 106.7 مليون جنيه خلال الربع الأول [Mubasher]
+      - سهم أوراسكوم المالية القابضة يقترب من تأكيد اختراق نموذج إيجابي [Mubasher]
+  EGCH:
+    Technicals:    RSI 55 — healthy uptrend; MACD bullish (+0.047); ATR 0.46 (3.1% of px) — sizing input
+    Fundamentals:  P/E 5.2 — cheap; P/B 1.08; ROE 20.7% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أين أنفقت "كيما" 2.59 مليار جنيه من متحصلات زيادة رأس المال؟ [Mubasher]
+      - بسبب فروق العملة.. أرباح "كيما" تتراجع 34.5% خلال 9 أشهر [Mubasher]
+  JUFO:
+    Technicals:    RSI 55 — healthy uptrend; MACD bullish (+0.104); ATR 0.68 (2.3% of px) — sizing input
+    Fundamentals:  P/E 9.2 — fair; P/B 2.37; ROE 25.8% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - تجاوز المستويات الحالية لسهم "جهينة" قد يدعم إعادة اختبار القمة التاريخية [Mubasher]
+      - مبيعات "جهينة" تتجاوز 8.5 مليار جنيه وأرباحها تقفز 123% في الربع الأول [Mubasher]
+  ARCC:
+    Technicals:    RSI 57 — healthy uptrend; MACD bullish (+0.280); ATR 1.39 (2.4% of px) — sizing input
+    Fundamentals:  P/E 1.2 — cheap; P/B 1.08; ROE 88.3% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "العربية للأسمنت" المجمعة تقفز 60% خلال الربع الأول من 2026 [Mubasher]
+      - اليوم.. نهاية الحق في توزيع كوبون 5 شركات بالبورصة المصرية [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: ASCM, OFH, EGCH, JUFO, ARCC
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
