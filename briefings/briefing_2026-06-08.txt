@@ -1,0 +1,90 @@
+=== EGX PRE-MARKET BRIEFING — Monday 2026-06-08 13:48 ===
+
+--- MACRO ---
+  EGX 30:  52,165 pts (—)
+  USD/EGP: 52.1 (+0.73%)
+  Brent:   $94.54 (-1.93%)
+  Gold 24K: 7,289.00 EGP/g  |  21K: 6,377.87  |  18K: 5,466.75
+  Egyptian gold pound: 51,023 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 36) ---
+  1. ASCM   score=26.8  price=40.68  5d=+18.2% RSI=74  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ASCM/
+  2. CCAP   score=19.42  price=2.2  5d=+11.3% RSI=54  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CCAP/
+  3. OFH    score=11.33  price=0.336  5d=+4.8% RSI=43  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OFH/
+  4. ARCC   score=10.81  price=10.5  5d=+5.2% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ARCC/
+  5. DSCW   score=10.66  price=1.386  5d=+4.6% RSI=45  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-DSCW/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  ASCM: ENTRY 40.88 | STOP 36.34 | SCALE-OUT 45.02 (576 sh) | TARGET 47.19 (576 sh) | 1152 total (9.37% NAV) | R:R 1:1.5 | time stop 2026-06-15
+  CCAP: ENTRY 2.21 | STOP 1.85 | SCALE-OUT 2.55 (7058 sh) | TARGET 2.73 (7058 sh) | 14116 total (6.21% NAV) | R:R 1:1.5 | time stop 2026-06-15
+  OFH: ENTRY 0.34 | STOP 0.31 | SCALE-OUT 0.37 (74404 sh) | TARGET 0.38 (74405 sh) | 148809 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-15
+  ARCC: ENTRY 10.55 | STOP 7.85 | SCALE-OUT 13.15 (944 sh) | TARGET 14.47 (944 sh) | 1888 total (3.96% NAV) | R:R 1:1.5 | time stop 2026-06-15
+  DSCW: ENTRY 1.39 | STOP 1.29 | SCALE-OUT 1.49 (18037 sh) | TARGET 1.54 (18038 sh) | 36075 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-15
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  ASCM   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bearish
+  CCAP   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bearish
+  OFH    FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: mildly_bullish
+  ARCC   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: mildly_bullish
+  DSCW   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    OFH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    ARCC: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  ASCM:
+    Technicals:    RSI 74 — overbought; MACD bullish (+0.768); Riding upper Bollinger — extended; ATR 2.17 (3.9% of px) — sizing input
+    Fundamentals:  P/E 3.0 — cheap; P/B 0.77; ROE 25.5% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - الرقابة المالية توافق على إجراءات تخفيض رأسمال "أسيك للتعدين" [Mubasher]
+      - "أسكوم" تعتمد القيمة العادلة وتقرر شراء 90% من "أسطول للنقل" بـ641 مليون جنيه [Mubasher]
+  CCAP:
+    Technicals:    RSI 55 — healthy uptrend; MACD bullish (+0.006); ATR 0.18 (3.1% of px) — sizing input
+    Fundamentals:  P/E 1.9 — cheap; P/B 0.23; ROE 12.1% — adequate
+    News tone:     bearish (-1.00, 3 hdl)
+      - رئيس "القلعة": طرح الوطنية للموانئ النهرية ببورصة مصر خلال سبتمبر أو أكتوبر [Mubasher]
+      - سهم القلعة للاستشارات المالية يسجل قمة تاريخية جديدة [Mubasher]
+  OFH:
+    Technicals:    RSI 43 — soft / mean-revert zone; MACD bullish (+0.001); ATR 0.01 (2.3% of px) — sizing input
+    Fundamentals:  P/B 0.53; ROE 80.6% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - "أو بي المالية القابضة" تتحول للربحية بـ 106.7 مليون جنيه خلال الربع الأول [Mubasher]
+      - سهم أوراسكوم المالية القابضة يقترب من تأكيد اختراق نموذج إيجابي [Mubasher]
+  ARCC:
+    Technicals:    RSI 68 — healthy uptrend; MACD bullish (+0.258); ATR 1.32 (2.3% of px) — sizing input
+    Fundamentals:  P/E 1.2 — cheap; P/B 1.08; ROE 88.3% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "العربية للأسمنت" المجمعة تقفز 60% خلال الربع الأول من 2026 [Mubasher]
+      - اليوم.. نهاية الحق في توزيع كوبون 5 شركات بالبورصة المصرية [Mubasher]
+  DSCW:
+    Technicals:    RSI 45 — soft / mean-revert zone; MACD bullish (+0.007); ATR 0.05 (2.7% of px) — sizing input
+    Fundamentals:  P/E 6.0 — cheap; P/B 1.71; ROE 28.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم دايس يواصل الأداء الإيجابي وسط ترقب لاختبار المقاومة [Mubasher]
+      - رغم نمو المبيعات لـ7 مليارات جنيه.. أرباح "دايس للملابس" تتراجع 59% في 2025 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: ASCM, CCAP, OFH, ARCC, DSCW
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
