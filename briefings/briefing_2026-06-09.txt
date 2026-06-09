@@ -1,0 +1,89 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-06-09 12:26 ===
+
+--- MACRO ---
+  EGX 30:  51,883 pts (—)
+  USD/EGP: 51.68 (-0.62%)
+  Brent:   $92.62 (-0.84%)
+  Gold 24K: 7,242.37 EGP/g  |  21K: 6,337.07  |  18K: 5,431.77
+  Egyptian gold pound: 50,697 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 41) ---
+  1. ASCM   score=25.7  price=40.68  5d=+15.7% RSI=75  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ASCM/
+  2. EAST   score=15.64  price=21.8  5d=+7.3% RSI=62  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EAST/
+  3. JUFO   score=10.34  price=18.71  5d=+3.8% RSI=72  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-JUFO/
+  4. EXPA   score=8.09  price=20.3  5d=+2.2% RSI=55  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EXPA/
+  5. CCAP   score=7.91  price=2.2  5d=+2.6% RSI=61  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CCAP/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  ASCM: ENTRY 40.88 | STOP 36.29 | SCALE-OUT 45.07 (569 sh) | TARGET 47.27 (569 sh) | 1138 total (9.26% NAV) | R:R 1:1.5 | time stop 2026-06-16
+  EAST: ENTRY 21.91 | STOP 19.96 | SCALE-OUT 23.64 (1146 sh) | TARGET 24.55 (1147 sh) | 2293 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-16
+  JUFO: ENTRY 18.8 | STOP 17.31 | SCALE-OUT 20.11 (1336 sh) | TARGET 20.81 (1336 sh) | 2672 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-16
+  EXPA: ENTRY 20.4 | STOP 19.5 | SCALE-OUT 21.1 (1231 sh) | TARGET 21.51 (1232 sh) | 2463 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-16
+  CCAP: ENTRY 2.21 | STOP 1.87 | SCALE-OUT 2.53 (7543 sh) | TARGET 2.7 (7544 sh) | 15087 total (6.64% NAV) | R:R 1:1.5 | time stop 2026-06-16
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  ASCM   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bearish
+  EAST   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  JUFO   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  EXPA   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  CCAP   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bearish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    EXPA: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  ASCM:
+    Technicals:    RSI 75 — overbought; MACD bullish (+0.737); ATR 2.19 (4.0% of px) — sizing input
+    Fundamentals:  P/E 3.0 — cheap; P/B 0.77; ROE 25.5% — strong
+    News tone:     mildly_bearish (-0.33, 3 hdl)
+      - 6 يوليو.. مساهمو أسكوم يناقشون تخفيض رأس المال من خلال إعدام أسهم خزينة [Mubasher]
+      - الرقابة المالية توافق على إجراءات تخفيض رأسمال "أسيك للتعدين" [Mubasher]
+  EAST:
+    Technicals:    RSI 49 — soft / mean-revert zone; MACD bullish (+0.068); ATR 0.92 (2.3% of px) — sizing input
+    Fundamentals:  P/E 10.1 — fair; P/B 4.67; ROE 46.5% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - عمومية "إيسترن كومباني" تقر توزيع كوبون نقدي على دفعتين [Mubasher]
+      - "إيسترن كومباني" تقترح توزيع كوبون نقدي للمساهمين [Mubasher]
+  JUFO:
+    Technicals:    RSI 72 — overbought; MACD bullish (+0.144); ATR 0.70 (2.3% of px) — sizing input
+    Fundamentals:  P/E 9.2 — fair; P/B 2.37; ROE 25.8% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - تجاوز المستويات الحالية لسهم "جهينة" قد يدعم إعادة اختبار القمة التاريخية [Mubasher]
+      - مبيعات "جهينة" تتجاوز 8.5 مليار جنيه وأرباحها تقفز 123% في الربع الأول [Mubasher]
+  EXPA:
+    Technicals:    RSI 55 — healthy uptrend; MACD bearish (-0.019); ATR 0.40 (2.1% of px) — sizing input
+    Fundamentals:  P/E 3.7 — cheap; P/B 1.01; ROE 27.1% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - البنك المصري لتنمية الصادرات يقرر زيادة رأس المال عبر أسهم مجانية [Mubasher]
+      - أرباح البنك المصري لتنمية الصادرات تقفز 111% في الربع الأول من 2026 [Mubasher]
+  CCAP:
+    Technicals:    RSI 61 — healthy uptrend; MACD bullish (+0.006); ATR 0.17 (3.0% of px) — sizing input
+    Fundamentals:  P/E 1.9 — cheap; P/B 0.23; ROE 12.1% — adequate
+    News tone:     bearish (-1.00, 3 hdl)
+      - رئيس "القلعة": طرح الوطنية للموانئ النهرية ببورصة مصر خلال سبتمبر أو أكتوبر [Mubasher]
+      - سهم القلعة للاستشارات المالية يسجل قمة تاريخية جديدة [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: ASCM, EAST, JUFO, EXPA, CCAP
+  Filtered: kept 1 of 23 headlines.
+  Tone: neutral (score +0.00)
+  [sector:Food & Beverage] Madbouly opens industrial expansions in automotive, pharmaceutical, and food sectors — Daily News Egypt
+
+Disclaimer: Research only, not investment advice.
