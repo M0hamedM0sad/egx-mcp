@@ -1,0 +1,91 @@
+=== EGX PRE-MARKET BRIEFING — Sunday 2026-06-14 12:19 ===
+
+--- MACRO ---
+  EGX 30:  50,819 pts (—)
+  USD/EGP: 51.83 (-0.21%)
+  Brent:   $87.33 (-1.66%)
+  Gold 24K: 7,063.42 EGP/g  |  21K: 6,180.49  |  18K: 5,297.57
+  Egyptian gold pound: 49,444 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 43) ---
+  1. GBCO   score=11.92  price=14.05  5d=+6.3% RSI=72  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-GBCO/
+  2. OLFI   score=6.21  price=10.4  5d=+2.6% RSI=76  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OLFI/
+  3. ASCM   score=5.32  price=40.68  5d=+2.4% RSI=76  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ASCM/
+  4. ZMID   score=4.81  price=7.55  5d=+0.7% RSI=60  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ZMID/
+  5. MICH   score=4.48  price=27.61  5d=-0.1% RSI=64  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MICH/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  GBCO: ENTRY 14.12 | STOP 12.69 | SCALE-OUT 15.41 (1779 sh) | TARGET 16.08 (1779 sh) | 3558 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-21
+  OLFI: ENTRY 10.45 | STOP 9.71 | SCALE-OUT 11.09 (2403 sh) | TARGET 11.44 (2404 sh) | 4807 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-21
+  ASCM: ENTRY 40.88 | STOP 35.79 | SCALE-OUT 45.57 (510 sh) | TARGET 48.02 (511 sh) | 1021 total (8.31% NAV) | R:R 1:1.5 | time stop 2026-06-21
+  ZMID: ENTRY 7.59 | STOP 7.19 | SCALE-OUT 7.91 (3311 sh) | TARGET 8.08 (3311 sh) | 6622 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-21
+  MICH: ENTRY 27.75 | STOP 25.65 | SCALE-OUT 29.57 (905 sh) | TARGET 30.54 (905 sh) | 1810 total (9.99% NAV) | R:R 1:1.5 | time stop 2026-06-21
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  GBCO   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  OLFI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  ASCM   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bearish
+  ZMID   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MICH   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    GBCO: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    ASCM: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    MICH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  GBCO:
+    Technicals:    RSI 72 — overbought; MACD bullish (+0.168); ATR 0.68 (2.4% of px) — sizing input
+    Fundamentals:  P/E 5.1 — cheap; P/B 0.56; ROE 11.1% — adequate
+    News tone:     bullish (+1.00, 4 hdl)
+      - Genesis launches sales operations in Egypt [Just Auto]
+      - سهم جي بي كوربوريشن يواجه مقاومة محورية تضع الاتجاه الصاعد تحت الاختبار [Mubasher]
+  OLFI:
+    Technicals:    RSI 76 — overbought; MACD bullish (+0.047); Riding upper Bollinger — extended; ATR 0.35 (1.6% of px) — sizing input
+    Fundamentals:  P/E 3.7 — cheap; P/B 2.48; ROE 66.2% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - بدعم من نمو المبيعات.. أرباح "عبور لاند" ترتفع 13% خلال الربع الأول من 2026 [Mubasher]
+      - عبور لاند تعلن تعديل تاريخ نهاية حق توزيع الكوبون [Mubasher]
+  ASCM:
+    Technicals:    RSI 76 — overbought; MACD bullish (+0.537); ATR 2.45 (4.3% of px) — sizing input
+    Fundamentals:  P/E 3.0 — cheap; P/B 0.77; ROE 25.5% — strong
+    News tone:     mildly_bearish (-0.33, 3 hdl)
+      - 6 يوليو.. مساهمو أسكوم يناقشون تخفيض رأس المال من خلال إعدام أسهم خزينة [Mubasher]
+      - الرقابة المالية توافق على إجراءات تخفيض رأسمال "أسيك للتعدين" [Mubasher]
+  ZMID:
+    Technicals:    RSI 60 — healthy uptrend; MACD bullish (+0.007); ATR 0.18 (2.9% of px) — sizing input
+    Fundamentals:  P/E 9.2 — fair; P/B 3.54; ROE 38.5% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم زهراء المعادي يواصل التحرك ضمن اتجاه صاعد ويترقب تجاوز مستوى فني هام [Mubasher]
+      - سهم زهراء المعادي يتحرك بإيجابية قرب مناطق مقاومة مؤثرة [Mubasher]
+  MICH:
+    Technicals:    RSI 64 — healthy uptrend; MACD bullish (+0.092); ATR 0.98 (2.7% of px) — sizing input
+    Fundamentals:  P/E 5.3 — cheap; P/B 1.92; ROE 35.9% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - مصر لصناعة الكيماويات تطلق مشروعاً لتأهيل 5 وحدات إنتاجية [Mubasher]
+      - أرباح مصر لصناعة الكيماويات تتراجع إلى 465.45 مليون جنيه خلال 10 أشهر [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: GBCO, OLFI, ASCM, ZMID, MICH
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
