@@ -1,0 +1,91 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-06-16 14:02 ===
+
+--- MACRO ---
+  EGX 30:  52,307 pts (—)
+  USD/EGP: 50.13 (-0.34%)
+  Brent:   $80.78 (-2.62%)
+  Gold 24K: 7,027.25 EGP/g  |  21K: 6,148.84  |  18K: 5,270.44
+  Egyptian gold pound: 49,191 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 45) ---
+  1. ASCM   score=21.21  price=40.68  5d=+10.2% RSI=81  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ASCM/
+  2. GBCO   score=17.14  price=14.05  5d=+7.5% RSI=69  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-GBCO/
+  3. OBRI   score=15.99  price=5.82  5d=+7.3% RSI=61  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OBRI/
+  4. PHDC   score=15.15  price=4.72  5d=+6.7% RSI=60  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-PHDC/
+  5. JUFO   score=9.43  price=18.71  5d=+2.8% RSI=71  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-JUFO/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  ASCM: ENTRY 40.88 | STOP 34.73 | SCALE-OUT 46.63 (420 sh) | TARGET 49.6 (420 sh) | 840 total (6.83% NAV) | R:R 1:1.5 | time stop 2026-06-23
+  GBCO: ENTRY 14.12 | STOP 12.69 | SCALE-OUT 15.41 (1779 sh) | TARGET 16.09 (1779 sh) | 3558 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-23
+  OBRI: ENTRY 5.85 | STOP 3.36 | SCALE-OUT 8.28 (1017 sh) | TARGET 9.51 (1017 sh) | 2034 total (2.37% NAV) | R:R 1:1.5 | time stop 2026-06-23
+  PHDC: ENTRY 4.74 | STOP 3.71 | SCALE-OUT 5.73 (2468 sh) | TARGET 6.24 (2468 sh) | 4936 total (4.66% NAV) | R:R 1:1.5 | time stop 2026-06-23
+  JUFO: ENTRY 18.8 | STOP 17.2 | SCALE-OUT 20.22 (1336 sh) | TARGET 20.98 (1336 sh) | 2672 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-23
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  ASCM   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bearish
+  GBCO   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  OBRI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  PHDC   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  JUFO   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    ASCM: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    JUFO: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  ASCM:
+    Technicals:    RSI 81 — overbought; MACD bullish (+0.812); Riding upper Bollinger — extended; ATR 2.97 (4.9% of px) — sizing input
+    Fundamentals:  P/E 3.0 — cheap; P/B 0.77; ROE 25.5% — strong
+    News tone:     bearish (-1.00, 3 hdl)
+      - سهم أسيك للتعدين الزخم الإيجابي يدعم استمرار الاتجاه الصاعد [Mubasher]
+      - 6 يوليو.. مساهمو أسكوم يناقشون تخفيض رأس المال من خلال إعدام أسهم خزينة [Mubasher]
+  GBCO:
+    Technicals:    RSI 69 — healthy uptrend; MACD bullish (+0.246); Riding upper Bollinger — extended; ATR 0.68 (2.4% of px) — sizing input
+    Fundamentals:  P/E 5.1 — cheap; P/B 0.56; ROE 11.1% — adequate
+    News tone:     bullish (+1.00, 4 hdl)
+      - Genesis launches sales operations in Egypt [Just Auto]
+      - سهم جي بي كوربوريشن يواجه مقاومة محورية تضع الاتجاه الصاعد تحت الاختبار [Mubasher]
+  OBRI:
+    Technicals:    RSI 61 — healthy uptrend; MACD bullish (+0.196); Riding upper Bollinger — extended; ATR 1.23 (3.3% of px) — sizing input
+    Fundamentals:  P/E 2.5 — cheap; P/B 0.82; ROE 32.7% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "العبور للاستثمار العقاري" تقفز 237% خلال الربع الأول من 2026 [Mubasher]
+      - مساهم يخفض حصته في أسهم رأسمال العبور للاستثمار العقاري إلى 19.47% [Mubasher]
+  PHDC:
+    Technicals:    RSI 60 — healthy uptrend; MACD bearish (-0.099); ATR 0.51 (3.2% of px) — sizing input
+    Fundamentals:  P/E 3.1 — cheap; P/B 0.80; ROE 26.0% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم بالم هيلز للتعمير يواصل تسجيل قمم تاريخية بدعم من الزخم الشرائي [Mubasher]
+      - "بالم هيلز للتعمير" تشتري 500 ألف سهم خزينة خلال جلسة أمس [Mubasher]
+  JUFO:
+    Technicals:    RSI 71 — overbought; MACD bullish (+0.155); Riding upper Bollinger — extended; ATR 0.76 (2.4% of px) — sizing input
+    Fundamentals:  P/E 9.2 — fair; P/B 2.37; ROE 25.8% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - تجاوز المستويات الحالية لسهم "جهينة" قد يدعم إعادة اختبار القمة التاريخية [Mubasher]
+      - مبيعات "جهينة" تتجاوز 8.5 مليار جنيه وأرباحها تقفز 123% في الربع الأول [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: ASCM, GBCO, OBRI, PHDC, JUFO
+  Filtered: kept 2 of 23 headlines.
+  Tone: neutral (score +0.00)
+  [sector:Real Estate] Finance Minister announces launch of first mobile application for real estate tax services — Daily News Egypt
+  [sector:Real Estate] العنوان : الاولي للاستثمار والتنمية العقارية (FIRE.CA) - (سوق الشركات الصغيرة والمتوسطة)اسم الشركة:  — Mubasher
+
+Disclaimer: Research only, not investment advice.
