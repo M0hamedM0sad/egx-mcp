@@ -1,20 +1,18 @@
 name: EGX weekly enhancement loop
 
 # Runs every Sunday at 06:00 UTC (08:00 Cairo, before EGX opens).
-# Three jobs in sequence:
+# The HEAVY weekly checks; the daily learning loop (grade → propose → PR) lives
+# in egx-daily-grade.yml. Two jobs in sequence:
 #
 #   1. oos-test    — walk-forward OOS test on the W1 weekly model for last
 #                    week. Appends one row to logs/oos_weekly_log.jsonl so
-#                    performance accumulates week-by-week.
+#                    performance accumulates week-by-week. Also force-refreshes
+#                    the EGX symbol cache (prune dead tickers / add listings).
 #
-#   2. learn       — re-grades all briefing verdicts against realized prices
-#                    (A1), then runs the learning loop to propose a V8b BUY-
-#                    threshold update if OOS-validated evidence supports it.
-#                    Nothing is applied without the --apply flag (human gate).
-#
-#   3. summarise   — emits a reliability scorecard into the run summary and
-#                    commits all new artifacts (cache, log, proposals) back to
-#                    the repo so evidence compounds automatically.
+#   2. summarise   — runs the MCP transport health check (validate_mcp_tools —
+#                    a slow full sweep best run weekly), emits the reliability
+#                    scorecard, prints the cumulative OOS log, and commits the
+#                    new artifacts back so evidence compounds automatically.
 #
 # Prerequisites (one-time repo setup):
 #   • Push the egx-mcp folder (containing pyproject.toml) to GitHub.
@@ -101,77 +99,11 @@ jobs:
             git push
           fi
 
-  # ── Job 2: Learning loop ───────────────────────────────────────────────────
-  learn:
-    name: "Grade verdicts + propose V8b update"
-    runs-on: ubuntu-latest
-    needs: oos-test   # run after OOS so the push order is clean
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          # Pull the latest commit so we get the cache committed by job 1
-          ref: ${{ github.ref }}
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-
-      - name: Install
-        run: |
-          python -m pip install --upgrade pip
-          pip install -e .
-
-      - name: Grade briefing verdicts (A1)
-        # Re-grades all briefings/*.json with fresh realized prices.
-        # Pending rows from prior runs get graded as their horizons elapse.
-        continue-on-error: true
-        run: |
-          python -m tests.grade_briefings 2>&1 \
-            || echo "grade_briefings: no briefings yet or price fetch failed (non-fatal)"
-
-      - name: Learning loop — analyze & propose
-        # Reads graded_verdicts.jsonl, fits a BUY threshold on the IS slice,
-        # validates OOS. Writes logs/learning_proposal.json. Does NOT apply.
-        continue-on-error: true
-        run: |
-          python -m scripts.learn 2>&1 | tee logs/learning_proposal_latest.txt
-
-      - name: Write learning results to step summary
-        if: always()
-        run: |
-          echo "## V8b Learning Loop — Threshold Proposal" >> "$GITHUB_STEP_SUMMARY"
-          if [ -f logs/learning_proposal_latest.txt ]; then
-            echo '```' >> "$GITHUB_STEP_SUMMARY"
-            cat logs/learning_proposal_latest.txt >> "$GITHUB_STEP_SUMMARY"
-            echo '```' >> "$GITHUB_STEP_SUMMARY"
-          else
-            echo "_Learning loop did not produce output._" >> "$GITHUB_STEP_SUMMARY"
-          fi
-
-      - name: Commit learning artifacts
-        run: |
-          git config user.name  "egx-enhancer[bot]"
-          git config user.email "egx-enhancer@users.noreply.github.com"
-          git add logs/graded_verdicts.jsonl \
-                  logs/graded_verdicts.csv \
-                  logs/learning_proposal.json \
-                  logs/learning_proposal_latest.txt \
-                  2>/dev/null || true
-          if git diff --cached --quiet; then
-            echo "No learning artifacts to commit."
-          else
-            git commit -m "chore(learn): graded verdicts + V8b proposal [skip ci]"
-            git pull --rebase origin main
-            git push
-          fi
-
-  # ── Job 3: Reliability scorecard + summary ────────────────────────────────
+  # ── Job 2: Transport health + reliability scorecard ───────────────────────
   summarise:
-    name: "Reliability scorecard"
+    name: "Transport health + reliability scorecard"
     runs-on: ubuntu-latest
-    needs: learn   # run last so the scorecard sees the freshest graded data
+    needs: oos-test   # run after OOS so it sees the refreshed symbol cache
 
     steps:
       - uses: actions/checkout@v4
@@ -187,6 +119,17 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -e .
+
+      - name: MCP transport health check (A0)
+        # Slow full sweep (every registered tool) — weekly cadence fits it.
+        # Non-fatal here so a flaky data source never blocks the scorecard;
+        # the verdict and any contract violations land in the summary + artifact.
+        continue-on-error: true
+        run: |
+          echo "## MCP Transport Health (A0)" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          python -m tests.validate_mcp_tools 2>&1 | tee logs/mcp_validation_latest.txt >> "$GITHUB_STEP_SUMMARY" || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
 
       - name: Reliability scorecard
         continue-on-error: true
@@ -231,7 +174,7 @@ jobs:
         run: |
           git config user.name  "egx-enhancer[bot]"
           git config user.email "egx-enhancer@users.noreply.github.com"
-          git add logs/reliability_latest.txt 2>/dev/null || true
+          git add logs/reliability_latest.txt logs/mcp_validation_latest.txt 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No scorecard artifact to commit."
           else

@@ -1,19 +1,29 @@
-name: EGX daily decision test
+name: EGX daily learning loop
 
-# Cloud-hosted decision testing. Runs on GitHub's servers each EGX trading
-# day (Sun–Thu), independent of any local machine:
-#   1. generate the day's briefing (records decide() verdicts + weekly picks)
-#   2. grade all prior verdicts forward against realized prices
-#   3. print the reliability scorecard into the run summary
-#   4. commit the updated briefings + graded evidence back to the repo
+# Cloud-hosted DAILY learning loop. Runs on GitHub's servers each EGX trading
+# day (Sun–Thu), independent of any local machine. Each day it:
+#   1. generates the day's briefing (records decide() verdicts + weekly picks)
+#   2. grades all prior verdicts forward against realized prices            (A1)
+#   3. validates the edge statistically — is it real or luck?              (A4)
+#   4. runs the learning loop: proposes a data-driven, OOS-validated V8b BUY
+#      threshold update — and, only when one is justified, opens a PR
+#   5. prints the reliability scorecard into the run summary
+#   6. commits the updated briefings + graded evidence + proposal back
 #
-# This makes the model test its own decisions automatically and accumulates
-# the evidence base (Gate #1) in the cloud. It MEASURES — it does not retrain.
+# This is the SAFE form of "the model improves every day": it MEASURES and
+# PROPOSES daily, but never changes its own behavior silently. A proposal only
+# alters the decision layer when you MERGE the PR it opens — that merge is the
+# human approval gate. With thin data the learning step reports "insufficient
+# evidence" and opens nothing, by design.
+#
+# The heavier weekly walk-forward (OOS) and symbol-cache pruning live in
+# egx-weekly-enhance.yml.
 #
 # Prerequisites:
 #   - This repo (the folder containing pyproject.toml) pushed to GitHub.
-#   - Actions enabled with write permission (Settings → Actions → General →
-#     Workflow permissions → "Read and write").
+#   - Settings → Actions → General → Workflow permissions → "Read and write".
+#   - Settings → Actions → General → "Allow GitHub Actions to create and
+#     approve pull requests" — required for the auto-PR step.
 #   - Optional email: set repo secrets SMTP_USER / SMTP_PASS and the daily
 #     briefing will email; without them it just writes files.
 
@@ -25,13 +35,14 @@ on:
 
 permissions:
   contents: write          # needed to commit the updated evidence back
+  pull-requests: write     # needed for the auto-PR step to open the proposal PR
 
 concurrency:
-  group: egx-daily-grade
-  cancel-in-progress: false
+  group: egx-daily-learn
+  cancel-in-progress: false  # never cancel mid-run; evidence must fully commit
 
 jobs:
-  grade:
+  learn:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -54,24 +65,115 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
         run: python -m scripts.daily_briefing || echo "briefing step failed (non-fatal)"
 
-      - name: Grade decisions against realized prices (Gate #1)
+      - name: Grade decisions against realized prices (A1)
         run: python -m tests.grade_briefings || echo "grading produced nothing yet"
+
+      - name: Statistical edge validation (A4) → run summary
+        # Honest gate: is the measured edge real or luck? Exits non-zero unless
+        # EDGE_CONFIRMED, so `|| true` keeps the loop running while still
+        # surfacing the verdict in the summary and a committed artifact.
+        run: |
+          echo "## Statistical Edge Validation (A4)" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          python -m tests.validate_edge 2>&1 | tee logs/edge_validation_latest.txt >> "$GITHUB_STEP_SUMMARY" || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Learning loop — analyze & propose (no change applied)
+        # Reads graded_verdicts.jsonl, fits a BUY threshold on the IS slice,
+        # validates OOS. Writes logs/learning_proposal.json. Does NOT apply.
+        continue-on-error: true
+        run: |
+          echo "## V8b Learning Loop — Threshold Proposal" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          python -m scripts.learn 2>&1 | tee logs/learning_proposal_latest.txt >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
 
       - name: Reliability scorecard → run summary
         run: |
+          echo "## Model Reliability Scorecard" >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
-          python -m scripts.reliability_status >> "$GITHUB_STEP_SUMMARY" 2>&1 || true
+          python -m scripts.reliability_status 2>&1 | tee logs/reliability_latest.txt >> "$GITHUB_STEP_SUMMARY" || true
           echo '```' >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit updated evidence
         run: |
-          git config user.name  "egx-grader[bot]"
-          git config user.email "egx-grader@users.noreply.github.com"
+          git config user.name  "egx-learner[bot]"
+          git config user.email "egx-learner@users.noreply.github.com"
           git add briefings logs 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No new evidence to commit."
           else
-            git commit -m "chore(evidence): daily briefing + graded verdicts [skip ci]"
+            git commit -m "chore(evidence): daily briefing + graded verdicts + proposal [skip ci]"
             git pull --rebase origin main
             git push
           fi
+
+      - name: Open PR for OOS-validated proposal
+        # The proposal JSON is already on main (committed above as evidence).
+        # Only when learn.py flagged status=="proposal" do we branch off main,
+        # run `learn --apply` (writes model_params.json), and open a PR. The
+        # decision layer changes behavior ONLY after this PR is merged —
+        # merging is the human approval gate that `--apply` used to be.
+        #
+        # Branch name keys on the candidate threshold so daily re-runs reuse
+        # the same PR instead of spamming new ones; a different candidate opens
+        # a fresh PR. Skips silently if the PR/branch already exists.
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          PROP=logs/learning_proposal.json
+          if [ ! -f "$PROP" ]; then echo "No proposal file — nothing to open."; exit 0; fi
+          STATUS=$(jq -r '.status // "missing"' "$PROP")
+          if [ "$STATUS" != "proposal" ]; then
+            echo "No actionable proposal (status: $STATUS) — nothing to open."
+            exit 0
+          fi
+
+          CUR=$(jq -r '.current_buy_threshold' "$PROP")
+          CAND=$(jq -r '.candidate_buy_threshold' "$PROP")
+          BRANCH="auto-learn/buy-${CAND}"
+
+          # Idempotent: skip if a PR for this candidate is already open or the
+          # branch already exists on the remote (e.g. previously opened/rejected).
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number -q '.[].number')" ]; then
+            echo "PR for $BRANCH already open — skipping."; exit 0
+          fi
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            echo "Branch $BRANCH already exists on remote — skipping."; exit 0
+          fi
+
+          git config user.name  "egx-learner[bot]"
+          git config user.email "egx-learner@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+
+          # Approved-path apply — writes model_params.json at the repo root.
+          python -m scripts.learn --apply
+
+          git add model_params.json
+          if git diff --cached --quiet; then
+            echo "learn --apply produced no diff — nothing to PR."; exit 0
+          fi
+          git commit -m "feat(model): apply OOS-validated BUY threshold ${CUR}->${CAND}"
+          git push -u origin "$BRANCH"
+
+          BODY=$(jq -r '
+            "## Learning loop — OOS-validated BUY-threshold update\n\n"
+            + .message + "\n\n"
+            + "| | current | candidate |\n|---|---|---|\n"
+            + "| BUY threshold | \(.current_buy_threshold) | \(.candidate_buy_threshold) |\n"
+            + "| OOS mean excess | \(.oos_current.mean_excess_pct)% | \(.oos_candidate.mean_excess_pct)% |\n"
+            + "| OOS names | \(.oos_current.n) | \(.oos_candidate.n) |\n\n"
+            + "Learned from \(.graded_v8b_calls) graded v8b calls "
+            + "(\(.in_sample) in-sample / \(.out_of_sample) out-of-sample).\n\n"
+            + "**Merging this PR is the human approval gate** — it applies the new "
+            + "threshold to `model_params.json`, which the decision layer reads on next run. "
+            + "Close without merging to reject the proposal."
+          ' "$PROP")
+
+          gh pr create \
+            --title "Learning loop: BUY threshold ${CUR} → ${CAND} (OOS-validated)" \
+            --body "$BODY" \
+            --base "${GITHUB_REF_NAME}" \
+            --head "$BRANCH"

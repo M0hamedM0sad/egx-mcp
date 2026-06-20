@@ -52,6 +52,30 @@ clean). Reports directional accuracy per verdict band, **in-sample vs
 out-of-sample**, and **bull vs correction**. OOS holding near IS is the trust
 signal; a bull-only edge is the #1 way EGX models blow up.
 
+### A4 · Statistical validation — real edge or luck?
+`python -m tests.validate_edge`
+
+Consumes A1's graded verdicts and renders one honest verdict
+(EDGE_CONFIRMED / INCONCLUSIVE / NEGATIVE_EDGE / INSUFFICIENT_SAMPLE). Fixes
+two traps the flat scorecard misses: (1) the **sign-convention trap** — it
+grades the *direction-aware signed edge*, not raw excess (a wrong sell whose
+stock soars no longer flatters the headline); (2) **false sample size** — rows
+are clustered by briefing date (the same call is graded at 5d *and* 21d, and
+calls share a market day), so the CI is a **cluster bootstrap** over distinct
+dates and the binomial test runs on the real n. Exit code is 0 only when an
+edge is actually confirmed, so it can gate automation.
+
+### A0 · Transport reliability — does the MCP itself behave?
+`python -m tests.validate_mcp_tools`
+
+The prerequisite gate: enumerates every registered MCP tool and checks the
+three contracts a client depends on — **never raises**, **JSON-serializable**,
+**returns a dict** — classifying each as OK / DEGRADED (graceful failure) /
+SLOW (heavy batch tool, valid output but >timeout) / CRASH / NONSERIAL /
+TIMEOUT (genuine hang). Only CRASH/NONSERIAL/NONDICT/TIMEOUT fail the run; SLOW
+and DEGRADED are notes. A verdict you can't reliably deliver is worthless
+regardless of its edge, so run this before trusting any of A1–A4.
+
 ---
 
 ## Track B — Upgrade the signals (Hugging Face)

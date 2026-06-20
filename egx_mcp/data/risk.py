@@ -109,7 +109,7 @@ def portfolio_risk(
 
     # Circuit breaker
     breaker_threshold = -0.08
-    breaker_active = roll_dd <= breaker_threshold
+    breaker_active = bool(roll_dd <= breaker_threshold)  # cast off numpy.bool_ (JSON-unsafe)
     breaker_msg = (
         f"CIRCUIT BREAKER: rolling 20d DD = {roll_dd:.2%} ≤ {breaker_threshold:.0%}. "
         "Cut gross exposure by 50% until drawdown contracts."

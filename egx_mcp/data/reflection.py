@@ -133,10 +133,12 @@ def _realized_return(ticker_yahoo: str, ts_iso: str, hold_days: int) -> dict[str
     h_after = h[h.index.date >= target_dt.date()]
     if h_after.empty:
         exit_price = float(h["Close"].iloc[-1])
-        actual_days = (h.index[-1].to_pydatetime() - decision_dt).days
+        exit_dt = h.index[-1].to_pydatetime().replace(tzinfo=None)
     else:
         exit_price = float(h_after["Close"].iloc[0])
-        actual_days = (h_after.index[0].to_pydatetime() - decision_dt).days
+        exit_dt = h_after.index[0].to_pydatetime().replace(tzinfo=None)
+    # decision_dt is tz-naive; strip tz off the (tz-aware) yfinance index to subtract.
+    actual_days = (exit_dt - decision_dt).days
 
     return {
         "entry_price": round(entry, 4),
