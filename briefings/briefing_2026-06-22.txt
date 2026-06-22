@@ -1,0 +1,82 @@
+=== EGX PRE-MARKET BRIEFING — Monday 2026-06-22 14:42 ===
+
+--- MACRO ---
+  EGX 30:  52,586 pts (—)
+  USD/EGP: 49.74 (-0.26%)
+  Brent:   $78.54 (-1.08%)
+  Gold 24K: 6,753.33 EGP/g  |  21K: 5,909.16  |  18K: 5,065.00
+  Egyptian gold pound: 47,273 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 44) ---
+  1. HDBK   score=20.21  price=45.23  5d=+12.7% RSI=76  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-HDBK/
+  2. OCDI   score=15.33  price=43.51  5d=+8.8% RSI=50  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OCDI/
+  3. MASR   score=14.8  price=4.25  5d=+6.3% RSI=58  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MASR/
+  4. DOMT   score=13.95  price=11.12  5d=+7.6% RSI=59  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-DOMT/
+  5. MICH   score=12.76  price=27.61  5d=+5.6% RSI=74  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MICH/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  HDBK: ENTRY 45.46 | STOP 37.01 | SCALE-OUT 53.45 (304 sh) | TARGET 57.56 (304 sh) | 608 total (5.5% NAV) | R:R 1:1.5 | time stop 2026-06-29
+  OCDI: ENTRY 43.73 | STOP 42.23 | SCALE-OUT 44.79 (574 sh) | TARGET 45.42 (575 sh) | 1149 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-29
+  MASR: ENTRY 4.27 | STOP 3.78 | SCALE-OUT 4.72 (5319 sh) | TARGET 4.96 (5319 sh) | 10638 total (9.04% NAV) | R:R 1:1.5 | time stop 2026-06-29
+  DOMT: ENTRY 11.18 | STOP 9.85 | SCALE-OUT 12.39 (1972 sh) | TARGET 13.02 (1973 sh) | 3945 total (8.77% NAV) | R:R 1:1.5 | time stop 2026-06-29
+  MICH: ENTRY 27.75 | STOP 25.02 | SCALE-OUT 30.2 (905 sh) | TARGET 31.49 (905 sh) | 1810 total (9.99% NAV) | R:R 1:1.5 | time stop 2026-06-29
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  HDBK   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: neutral
+  OCDI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  MASR   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: neutral
+  DOMT   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: neutral
+  MICH   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: neutral
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    HDBK: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    MASR: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    DOMT: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    MICH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  HDBK:
+    Technicals:    RSI 76 — overbought; MACD bullish (+1.500); Riding upper Bollinger — extended; ATR 4.11 (2.6% of px) — sizing input
+    Fundamentals:  P/B 0.72; ROE 651.1% — strong
+    News tone:     neutral (+0.00, 0 hdl)
+  OCDI:
+    Technicals:    RSI 50 — healthy uptrend; MACD bullish (+0.048); Riding upper Bollinger — extended; ATR 0.64 (2.9% of px) — sizing input
+    Fundamentals:  P/E 11.2 — fair; P/B 1.22; ROE 11.0% — adequate
+    News tone:     neutral (+0.00, 0 hdl)
+  MASR:
+    Technicals:    RSI 58 — healthy uptrend; MACD bullish (+0.024); Riding upper Bollinger — extended; ATR 0.23 (3.2% of px) — sizing input
+    Fundamentals:  P/E 4.7 — cheap; P/B 0.91; ROE 19.5% — adequate
+    News tone:     neutral (+0.00, 0 hdl)
+  DOMT:
+    Technicals:    RSI 59 — healthy uptrend; MACD bullish (+0.077); Riding upper Bollinger — extended; ATR 0.63 (2.4% of px) — sizing input
+    Fundamentals:  P/E 8.4 — fair; P/B 1.94; ROE 23.2% — strong
+    News tone:     neutral (+0.00, 0 hdl)
+  MICH:
+    Technicals:    RSI 74 — overbought; MACD bullish (+0.164); Riding upper Bollinger — extended; ATR 1.29 (3.3% of px) — sizing input
+    Fundamentals:  P/E 5.3 — cheap; P/B 1.92; ROE 35.9% — strong
+    News tone:     neutral (+0.00, 0 hdl)
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: HDBK, OCDI, MASR, DOMT, MICH
+  Filtered: kept 1 of 8 headlines.
+  Tone: neutral (score +0.00)
+  [sector:Banks] Banks operating in Egypt adopt international ISO 20022 standard for financial transfers — Daily News Egypt
+
+Disclaimer: Research only, not investment advice.

@@ -1,0 +1,913 @@
+{
+  "as_of_utc": "2026-06-22T12:42:07.832429Z",
+  "cairo_local": "Monday 2026-06-22 14:42",
+  "is_trading_day": true,
+  "macro": {
+    "as_of": "2026-06-22T12:42:09.104545Z",
+    "egp_usd": {
+      "value": 49.74,
+      "change_pct": -0.26
+    },
+    "brent_usd": {
+      "value": 78.54,
+      "change_pct": -1.08
+    },
+    "gold_usd": {
+      "value": 4223.0,
+      "change_pct": 0.8
+    },
+    "cbe_rates": {
+      "deposit_rate_pct": null,
+      "lending_rate_pct": null,
+      "midpoint_pct": null,
+      "source": "https://www.cbe.org.eg/en/economic-research/statistics/cbe-rates"
+    },
+    "regime_flags": [],
+    "note": "EGP/USD and Brent from Yahoo (delayed). CBE rates scraped \u2014 verify against cbe.org.eg before acting on rate-sensitive trades."
+  },
+  "egx30_spot": {
+    "value": 52585.7,
+    "change_pct": null,
+    "source": "tradingview.com",
+    "chart_url": "https://www.tradingview.com/symbols/EGX-EGX30/"
+  },
+  "egx70_spot": {
+    "error": "EGX 70 unavailable from any source today",
+    "source": "yfinance (failed)"
+  },
+  "egx_index_sources": [
+    "tradingview.com (EGX 30)"
+  ],
+  "gold_egp": {
+    "as_of": "2026-06-22T12:42:10.466277Z",
+    "gold_oz_usd": 4223.0,
+    "usdegp": 49.74,
+    "egp_per_gram_24k": 6753.33,
+    "egp_per_gram_21k": 5909.16,
+    "egp_per_gram_18k": 5065.0,
+    "egyptian_gold_pound_egp": 47273.3,
+    "method": "Computed from international spot: (USD/oz \u00d7 USDEGP) / 31.1035 for 24K, then \u00d7 21/24 and 18/24 for the standard alloys. Local dealer prices typically 5-15% above this \u2014 verify against sigma-egy / iSagha before acting.",
+    "note": "Egyptian gold pound (\u0627\u0644\u062c\u0646\u064a\u0647 \u0627\u0644\u0630\u0647\u0628) = 8g of 21K gold by convention \u2014 that's the math here, regardless of any local premium for handmade pieces."
+  },
+  "regime": {
+    "regime": "BULL",
+    "description": "Trending higher with manageable vol \u2014 momentum names lead.",
+    "weight_override": {
+      "valuation": 0.8,
+      "quality": 0.9,
+      "momentum": 1.4,
+      "risk": 0.9
+    },
+    "metrics": {
+      "egx30_last": 184.27,
+      "ret_60d_pct": 14.49,
+      "annualized_vol_pct": 15.66,
+      "sma_200": 149.5,
+      "above_ma200": true,
+      "drawdown_1y_pct": -2.63
+    },
+    "source_symbol": "synthetic_basket(13_names)",
+    "as_of": "2026-06-22T12:42:12.995578Z"
+  },
+  "rf_rate": {
+    "rate_pct": 25.0,
+    "source": "fallback:hardcoded_stale",
+    "is_stale": true,
+    "daily_rate_pct": 0.08859,
+    "as_of": "2026-06-22T12:42:15.061279Z",
+    "note": "Used as the baseline for excess-return calculations across the scoring engine, decision tool, and backtest harness. Override with EGX_TBILL_RATE_PCT env var when CBE source is stale."
+  },
+  "w1_picks": {
+    "as_of": "2026-06-22",
+    "horizon_days": 5,
+    "n_universe": 68,
+    "n_with_features": 68,
+    "n_passes_quality": 53,
+    "n_eligible": 44,
+    "config": {
+      "w_mom5": 1.5,
+      "w_mom20": 0.0,
+      "w_mr1": 0.5,
+      "w_breakout": 3.0,
+      "w_trend": 3.0,
+      "min_roe_pct": 10.0,
+      "top_n": 5
+    },
+    "top_picks": [
+      {
+        "ticker": "HDBK",
+        "score": 20.21,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 45.23,
+        "mom_1d_pct": 8.03,
+        "mom_5d_pct": 12.68,
+        "mom_20d_pct": 12.61,
+        "above_ma20": true,
+        "vol_ratio_today": 5.15,
+        "breakout_signal": 1.0,
+        "high_20d": 160.0,
+        "low_20d": 138.0,
+        "rsi_14": 76.0,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 160.0,
+        "split_warning": "Live tape 45.23 differs from adjusted close 160.0 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "OCDI",
+        "score": 15.33,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 43.51,
+        "mom_1d_pct": 7.68,
+        "mom_5d_pct": 8.78,
+        "mom_20d_pct": 9.05,
+        "above_ma20": true,
+        "vol_ratio_today": 4.55,
+        "breakout_signal": 1.0,
+        "high_20d": 22.3,
+        "low_20d": 20.04,
+        "rsi_14": 50.4,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 22.3,
+        "split_warning": "Live tape 43.51 differs from adjusted close 22.3 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "MASR",
+        "score": 14.8,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 4.25,
+        "mom_1d_pct": 1.37,
+        "mom_5d_pct": 6.32,
+        "mom_20d_pct": 9.63,
+        "above_ma20": true,
+        "vol_ratio_today": 2.34,
+        "breakout_signal": 1.0,
+        "high_20d": 7.4,
+        "low_20d": 6.62,
+        "rsi_14": 58.2,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 7.4,
+        "split_warning": "Live tape 4.25 differs from adjusted close 7.4 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "DOMT",
+        "score": 13.95,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 11.12,
+        "mom_1d_pct": 7.03,
+        "mom_5d_pct": 7.64,
+        "mom_20d_pct": 5.01,
+        "above_ma20": true,
+        "vol_ratio_today": 3.44,
+        "breakout_signal": 1.0,
+        "high_20d": 26.19,
+        "low_20d": 23.91,
+        "rsi_14": 58.6,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 26.19,
+        "split_warning": "Live tape 11.12 differs from adjusted close 26.19 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "MICH",
+        "score": 12.76,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 27.61,
+        "mom_1d_pct": 3.2,
+        "mom_5d_pct": 5.58,
+        "mom_20d_pct": 10.89,
+        "above_ma20": true,
+        "vol_ratio_today": 2.33,
+        "breakout_signal": 1.0,
+        "high_20d": 39.0,
+        "low_20d": 35.27,
+        "rsi_14": 74.1,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 39.0,
+        "split_warning": "Live tape 27.61 differs from adjusted close 39.0 \u2014 likely recent split. Use trade plan."
+      }
+    ],
+    "runners_up": [
+      {
+        "ticker": "CIRA",
+        "score": 11.73,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 28.72,
+        "mom_1d_pct": 9.2,
+        "mom_5d_pct": 6.88,
+        "mom_20d_pct": 5.63,
+        "above_ma20": true,
+        "vol_ratio_today": 9.02,
+        "breakout_signal": 1.0,
+        "high_20d": 28.72,
+        "low_20d": 25.91,
+        "rsi_14": 63.2,
+        "macd_slope_pos": true
+      },
+      {
+        "ticker": "JUFO",
+        "score": 10.87,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 31.8,
+        "mom_1d_pct": 3.25,
+        "mom_5d_pct": 4.33,
+        "mom_20d_pct": 14.88,
+        "above_ma20": true,
+        "vol_ratio_today": 2.45,
+        "breakout_signal": 1.0,
+        "high_20d": 31.8,
+        "low_20d": 27.79,
+        "rsi_14": 69.9,
+        "macd_slope_pos": true
+      },
+      {
+        "ticker": "ORHD",
+        "score": 9.36,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 39.6,
+        "mom_1d_pct": 5.91,
+        "mom_5d_pct": 4.21,
+        "mom_20d_pct": 8.46,
+        "above_ma20": true,
+        "vol_ratio_today": 1.88,
+        "breakout_signal": 1.0,
+        "high_20d": 39.6,
+        "low_20d": 36.11,
+        "rsi_14": 53.8,
+        "macd_slope_pos": true
+      },
+      {
+        "ticker": "HRHO",
+        "score": 8.73,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 27.62,
+        "mom_1d_pct": -1.0,
+        "mom_5d_pct": 3.48,
+        "mom_20d_pct": 3.72,
+        "above_ma20": true,
+        "vol_ratio_today": 1.27,
+        "breakout_signal": 0.0,
+        "high_20d": 27.9,
+        "low_20d": 26.03,
+        "rsi_14": 48.9,
+        "macd_slope_pos": false
+      },
+      {
+        "ticker": "DSCW",
+        "score": 8.02,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 1.83,
+        "mom_1d_pct": -1.61,
+        "mom_5d_pct": 2.81,
+        "mom_20d_pct": 5.78,
+        "above_ma20": true,
+        "vol_ratio_today": 1.08,
+        "breakout_signal": 0.0,
+        "high_20d": 1.86,
+        "low_20d": 1.74,
+        "rsi_14": 56.8,
+        "macd_slope_pos": false
+      }
+    ],
+    "skipped_count": 0,
+    "validation_summary": "Backtested 28 months. Full window: +107.8% CAGR, Sharpe 1.64, -24.9% MaxDD vs market +40.8% / 0.65 / -23.5%. Holdout 10mo OOS: +131% CAGR, Sharpe 2.78, -8.9% MaxDD vs market +50% / 1.32 / -5.6%.",
+    "disclaimer": "Algorithmic ranking for the next ~5 trading days. Not investment advice. The model has positive expected alpha vs a passive EGX weekly buy-hold; individual weeks can still lose. Verify against the EGX official tape before acting."
+  },
+  "exdiv_filtered": [],
+  "v8b_verdicts": [
+    {
+      "ticker": "HDBK",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 60.0,
+        "quality": 80.0,
+        "momentum": 56.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "OCDI",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 57.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 72.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "MASR",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 62.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 75.2,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "DOMT",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 62.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 60.0,
+        "risk": 70.0
+      }
+    },
+    {
+      "ticker": "MICH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 62.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 70.0,
+        "risk": 50.0
+      }
+    }
+  ],
+  "chairman_per_pick": {
+    "HDBK": {
+      "verdict": "ACCUMULATE",
+      "conviction": "medium",
+      "edge": 0.467,
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "deciding_factors": [
+        "scoring.valuation: Valuation is attractive vs sector (w=0.30)",
+        "scoring.quality: Quality fundamentals (ROE / margin / leverage) (w=0.25)",
+        "scoring.risk: Risk profile is elevated (vol / drawdown) (w=0.08)"
+      ],
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0
+    },
+    "OCDI": {
+      "verdict": "HOLD",
+      "conviction": "low",
+      "edge": 0.083,
+      "rationale": "Bull and bear cases are roughly balanced.",
+      "deciding_factors": [
+        "scoring.momentum: Momentum and trend alignment (w=0.25)",
+        "scoring.quality: Quality is weak (low ROE, thin margin, or high leverage) (w=0.08)",
+        "scoring.risk: Risk profile is elevated (vol / drawdown) (w=0.08)"
+      ],
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0
+    },
+    "MASR": {
+      "verdict": "ACCUMULATE",
+      "conviction": "medium",
+      "edge": 0.25,
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "deciding_factors": [
+        "scoring.momentum: Momentum and trend alignment (w=0.25)"
+      ],
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0
+    },
+    "DOMT": {
+      "verdict": "ACCUMULATE",
+      "conviction": "medium",
+      "edge": 0.61,
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "deciding_factors": [
+        "scoring.quality: Quality fundamentals (ROE / margin / leverage) (w=0.25)",
+        "scoring.momentum: Momentum and trend alignment (w=0.24)"
+      ],
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0
+    },
+    "MICH": {
+      "verdict": "ACCUMULATE",
+      "conviction": "medium",
+      "edge": 0.417,
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "deciding_factors": [
+        "scoring.quality: Quality fundamentals (ROE / margin / leverage) (w=0.25)",
+        "scoring.momentum: Momentum and trend alignment (w=0.25)",
+        "scoring.risk: Risk profile is elevated (vol / drawdown) (w=0.08)"
+      ],
+      "sentiment_label": "neutral",
+      "sentiment_score": 0.0
+    }
+  },
+  "divergences": [
+    {
+      "ticker": "HDBK",
+      "v8b": "HOLD",
+      "chairman": "ACCUMULATE",
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "sentiment": "neutral"
+    },
+    {
+      "ticker": "MASR",
+      "v8b": "HOLD",
+      "chairman": "ACCUMULATE",
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "sentiment": "neutral"
+    },
+    {
+      "ticker": "DOMT",
+      "v8b": "HOLD",
+      "chairman": "ACCUMULATE",
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "sentiment": "neutral"
+    },
+    {
+      "ticker": "MICH",
+      "v8b": "HOLD",
+      "chairman": "ACCUMULATE",
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "sentiment": "neutral"
+    }
+  ],
+  "trade_plans": {
+    "HDBK": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 45.46,
+      "last_close_egp": 45.23,
+      "atr_14": 4.1093,
+      "stop_loss_egp": 37.01,
+      "stop_distance_egp": 8.22,
+      "scale_out_egp": 53.45,
+      "scale_out_shares": 304,
+      "target_egp": 57.56,
+      "runner_shares": 304,
+      "shares": 608,
+      "position_cost_egp": 27499.84,
+      "position_pct_of_nav": 5.5,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-06-29",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 53.45 EGP, sell 304 shares (half) and move stop to breakeven on the rest",
+        "Target: at 57.56 EGP, sell the remaining 304 shares \u2014 OR trail by 1\u00d7ATR (4.1093) on new highs to let it run",
+        "Stop 37.01 EGP hit \u2014 exit immediately",
+        "Time stop 2026-06-29: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": false
+    },
+    "OCDI": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 43.73,
+      "last_close_egp": 43.51,
+      "atr_14": 0.6379,
+      "stop_loss_egp": 42.23,
+      "stop_distance_egp": 1.28,
+      "scale_out_egp": 44.79,
+      "scale_out_shares": 574,
+      "target_egp": 45.42,
+      "runner_shares": 575,
+      "shares": 1149,
+      "position_cost_egp": 49992.99,
+      "position_pct_of_nav": 10.0,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-06-29",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 44.79 EGP, sell 574 shares (half) and move stop to breakeven on the rest",
+        "Target: at 45.42 EGP, sell the remaining 575 shares \u2014 OR trail by 1\u00d7ATR (0.6379) on new highs to let it run",
+        "Stop 42.23 EGP hit \u2014 exit immediately",
+        "Time stop 2026-06-29: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": true
+    },
+    "MASR": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 4.27,
+      "last_close_egp": 4.25,
+      "atr_14": 0.235,
+      "stop_loss_egp": 3.78,
+      "stop_distance_egp": 0.47,
+      "scale_out_egp": 4.72,
+      "scale_out_shares": 5319,
+      "target_egp": 4.96,
+      "runner_shares": 5319,
+      "shares": 10638,
+      "position_cost_egp": 45211.5,
+      "position_pct_of_nav": 9.04,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-06-29",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 4.72 EGP, sell 5319 shares (half) and move stop to breakeven on the rest",
+        "Target: at 4.96 EGP, sell the remaining 5319 shares \u2014 OR trail by 1\u00d7ATR (0.235) on new highs to let it run",
+        "Stop 3.78 EGP hit \u2014 exit immediately",
+        "Time stop 2026-06-29: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": false
+    },
+    "DOMT": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 11.18,
+      "last_close_egp": 11.12,
+      "atr_14": 0.6336,
+      "stop_loss_egp": 9.85,
+      "stop_distance_egp": 1.27,
+      "scale_out_egp": 12.39,
+      "scale_out_shares": 1972,
+      "target_egp": 13.02,
+      "runner_shares": 1973,
+      "shares": 3945,
+      "position_cost_egp": 43868.4,
+      "position_pct_of_nav": 8.77,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-06-29",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 12.39 EGP, sell 1972 shares (half) and move stop to breakeven on the rest",
+        "Target: at 13.02 EGP, sell the remaining 1973 shares \u2014 OR trail by 1\u00d7ATR (0.6336) on new highs to let it run",
+        "Stop 9.85 EGP hit \u2014 exit immediately",
+        "Time stop 2026-06-29: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": false
+    },
+    "MICH": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 27.75,
+      "last_close_egp": 27.61,
+      "atr_14": 1.295,
+      "stop_loss_egp": 25.02,
+      "stop_distance_egp": 2.59,
+      "scale_out_egp": 30.2,
+      "scale_out_shares": 905,
+      "target_egp": 31.49,
+      "runner_shares": 905,
+      "shares": 1810,
+      "position_cost_egp": 49974.1,
+      "position_pct_of_nav": 9.99,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-06-29",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 30.2 EGP, sell 905 shares (half) and move stop to breakeven on the rest",
+        "Target: at 31.49 EGP, sell the remaining 905 shares \u2014 OR trail by 1\u00d7ATR (1.295) on new highs to let it run",
+        "Stop 25.02 EGP hit \u2014 exit immediately",
+        "Time stop 2026-06-29: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": true
+    }
+  },
+  "technicals_per_pick": {
+    "HDBK": {
+      "rsi_14": 76.0047,
+      "macd_minus_signal": 1.4998999999999998,
+      "sma_50": 144.6664,
+      "sma_200": null,
+      "atr_14": 4.1093,
+      "atr_pct_of_price": 2.57,
+      "bullets": [
+        "RSI 76 \u2014 overbought",
+        "MACD bullish (+1.500)",
+        "Riding upper Bollinger \u2014 extended",
+        "ATR 4.11 (2.6% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 76.0: overbought",
+        "MACD above signal: bullish momentum",
+        "Price above upper Bollinger Band \u2014 extended"
+      ]
+    },
+    "OCDI": {
+      "rsi_14": 50.3876,
+      "macd_minus_signal": 0.047799999999999995,
+      "sma_50": 21.4374,
+      "sma_200": null,
+      "atr_14": 0.6379,
+      "atr_pct_of_price": 2.86,
+      "bullets": [
+        "RSI 50 \u2014 healthy uptrend",
+        "MACD bullish (+0.048)",
+        "Riding upper Bollinger \u2014 extended",
+        "ATR 0.64 (2.9% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 50.4: neutral",
+        "MACD above signal: bullish momentum"
+      ]
+    },
+    "MASR": {
+      "rsi_14": 58.1818,
+      "macd_minus_signal": 0.02410000000000001,
+      "sma_50": 6.6868,
+      "sma_200": null,
+      "atr_14": 0.235,
+      "atr_pct_of_price": 3.18,
+      "bullets": [
+        "RSI 58 \u2014 healthy uptrend",
+        "MACD bullish (+0.024)",
+        "Riding upper Bollinger \u2014 extended",
+        "ATR 0.23 (3.2% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 58.2: neutral",
+        "MACD above signal: bullish momentum"
+      ]
+    },
+    "DOMT": {
+      "rsi_14": 58.5882,
+      "macd_minus_signal": 0.0768,
+      "sma_50": 24.9822,
+      "sma_200": null,
+      "atr_14": 0.6336,
+      "atr_pct_of_price": 2.42,
+      "bullets": [
+        "RSI 59 \u2014 healthy uptrend",
+        "MACD bullish (+0.077)",
+        "Riding upper Bollinger \u2014 extended",
+        "ATR 0.63 (2.4% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 58.6: neutral",
+        "MACD above signal: bullish momentum",
+        "Price above upper Bollinger Band \u2014 extended"
+      ]
+    },
+    "MICH": {
+      "rsi_14": 74.1353,
+      "macd_minus_signal": 0.1644,
+      "sma_50": 35.8904,
+      "sma_200": null,
+      "atr_14": 1.295,
+      "atr_pct_of_price": 3.32,
+      "bullets": [
+        "RSI 74 \u2014 overbought",
+        "MACD bullish (+0.164)",
+        "Riding upper Bollinger \u2014 extended",
+        "ATR 1.29 (3.3% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 74.1: overbought",
+        "MACD above signal: bullish momentum",
+        "Price above upper Bollinger Band \u2014 extended"
+      ]
+    }
+  },
+  "fundamentals_per_pick": {
+    "HDBK": {
+      "pe_ratio": null,
+      "pb_ratio": 0.72,
+      "roe_pct": 651.15,
+      "profit_margin_pct": null,
+      "debt_to_equity": null,
+      "dividend_yield_pct": null,
+      "bullets": [
+        "P/B 0.72",
+        "ROE 651.1% \u2014 strong"
+      ],
+      "pe_was_corrected": false
+    },
+    "OCDI": {
+      "pe_ratio": 11.16,
+      "pb_ratio": 1.22,
+      "roe_pct": 10.97,
+      "profit_margin_pct": null,
+      "debt_to_equity": null,
+      "dividend_yield_pct": null,
+      "bullets": [
+        "P/E 11.2 \u2014 fair",
+        "P/B 1.22",
+        "ROE 11.0% \u2014 adequate"
+      ],
+      "pe_was_corrected": false
+    },
+    "MASR": {
+      "pe_ratio": 4.67,
+      "pb_ratio": 0.91,
+      "roe_pct": 19.46,
+      "profit_margin_pct": null,
+      "debt_to_equity": null,
+      "dividend_yield_pct": null,
+      "bullets": [
+        "P/E 4.7 \u2014 cheap",
+        "P/B 0.91",
+        "ROE 19.5% \u2014 adequate"
+      ],
+      "pe_was_corrected": false
+    },
+    "DOMT": {
+      "pe_ratio": 8.42,
+      "pb_ratio": 1.94,
+      "roe_pct": 23.16,
+      "profit_margin_pct": null,
+      "debt_to_equity": null,
+      "dividend_yield_pct": null,
+      "bullets": [
+        "P/E 8.4 \u2014 fair",
+        "P/B 1.94",
+        "ROE 23.2% \u2014 strong"
+      ],
+      "pe_was_corrected": false
+    },
+    "MICH": {
+      "pe_ratio": 5.35,
+      "pb_ratio": 1.92,
+      "roe_pct": 35.89,
+      "profit_margin_pct": null,
+      "debt_to_equity": null,
+      "dividend_yield_pct": null,
+      "bullets": [
+        "P/E 5.3 \u2014 cheap",
+        "P/B 1.92",
+        "ROE 35.9% \u2014 strong"
+      ],
+      "pe_was_corrected": false
+    }
+  },
+  "news_per_pick": {
+    "HDBK": {
+      "headlines": [],
+      "sentiment": {
+        "ticker": "HDBK",
+        "as_of": "2026-06-22T12:45:40.177009Z",
+        "lang_requested": "both",
+        "headline_count": 0,
+        "scored_count": 0,
+        "coverage_pct": 0.0,
+        "aggregate_score": 0.0,
+        "label": "neutral",
+        "bull_signals": [],
+        "bear_signals": [],
+        "headlines": [],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    },
+    "OCDI": {
+      "headlines": [],
+      "sentiment": {
+        "ticker": "OCDI",
+        "as_of": "2026-06-22T12:46:10.558280Z",
+        "lang_requested": "both",
+        "headline_count": 0,
+        "scored_count": 0,
+        "coverage_pct": 0.0,
+        "aggregate_score": 0.0,
+        "label": "neutral",
+        "bull_signals": [],
+        "bear_signals": [],
+        "headlines": [],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    },
+    "MASR": {
+      "headlines": [],
+      "sentiment": {
+        "ticker": "MASR",
+        "as_of": "2026-06-22T12:46:40.947476Z",
+        "lang_requested": "both",
+        "headline_count": 0,
+        "scored_count": 0,
+        "coverage_pct": 0.0,
+        "aggregate_score": 0.0,
+        "label": "neutral",
+        "bull_signals": [],
+        "bear_signals": [],
+        "headlines": [],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    },
+    "DOMT": {
+      "headlines": [],
+      "sentiment": {
+        "ticker": "DOMT",
+        "as_of": "2026-06-22T12:47:11.338898Z",
+        "lang_requested": "both",
+        "headline_count": 0,
+        "scored_count": 0,
+        "coverage_pct": 0.0,
+        "aggregate_score": 0.0,
+        "label": "neutral",
+        "bull_signals": [],
+        "bear_signals": [],
+        "headlines": [],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    },
+    "MICH": {
+      "headlines": [],
+      "sentiment": {
+        "ticker": "MICH",
+        "as_of": "2026-06-22T12:47:41.736488Z",
+        "lang_requested": "both",
+        "headline_count": 0,
+        "scored_count": 0,
+        "coverage_pct": 0.0,
+        "aggregate_score": 0.0,
+        "label": "neutral",
+        "bull_signals": [],
+        "bear_signals": [],
+        "headlines": [],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    }
+  },
+  "market_news": {
+    "headlines": [
+      {
+        "date": null,
+        "source": "Daily News Egypt",
+        "title": "Banks operating in Egypt adopt international ISO 20022 standard for financial transfers",
+        "url": "https://www.dailynewsegypt.com/2026/06/21/banks-operating-in-egypt-adopt-international-iso-20022-standard-for-financial-transfers/",
+        "summary": null,
+        "lang": "en",
+        "matched_tickers": [],
+        "matched_sectors": [
+          "Banks"
+        ],
+        "impact_level": "sector"
+      }
+    ],
+    "raw_headline_count": 8,
+    "filtered_headline_count": 1,
+    "filter_basis": "watchlist",
+    "filter_target_tickers": [
+      "HDBK",
+      "OCDI",
+      "MASR",
+      "DOMT",
+      "MICH"
+    ],
+    "sentiment": {
+      "label": "neutral",
+      "aggregate_score": 0.0,
+      "headline_count": 1,
+      "method": "lexicon scored over portfolio-filtered headlines"
+    },
+    "filter_method": "Direct ticker-name match wins. Sector keyword match falls back to 'sector' impact level. Macro headlines (CBE, EGP, rates) are not included by default \u2014 they affect everyone."
+  },
+  "trade_plan_params": {
+    "portfolio_nav_egp": 500000.0,
+    "risk_pct_per_trade": 1.0,
+    "atr_stop_multiple": 2.0,
+    "expected_hold_days": 5
+  },
+  "catalysts": [],
+  "portfolio": {
+    "error": "Portfolio CSV not found at /home/runner/egx_portfolio.csv.",
+    "hint": "Create a CSV with columns ticker,shares,cost_basis at /home/runner/egx_portfolio.csv, set $EGX_PORTFOLIO_CSV, or pass csv_path explicitly. Example row: CIRA,500,12.50"
+  },
+  "market_ytd_pct": 33.34020561316962,
+  "market_label": "Market YTD (13-name liquid basket EW): +33.34%"
+}
