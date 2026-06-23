@@ -1,0 +1,65 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-06-23 12:27 ===
+
+--- MACRO ---
+  EGX 30:  52,586 pts (—)
+  USD/EGP: 49.65 (-0.08%)
+  Brent:   $77.48 (-0.06%)
+  Gold 24K: 6,621.39 EGP/g  |  21K: 5,793.71  |  18K: 4,966.04
+  Egyptian gold pound: 46,350 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 3) ---
+  1. EAST   score=5.7  price=21.8  5d=+1.7% RSI=62  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EAST/
+  2. ETEL   score=0.83  price=32.77  5d=+2.6% RSI=31  trend=v
+     chart: https://www.tradingview.com/symbols/EGX-ETEL/
+  3. ALCN   score=-6.07  price=46.4  5d=-2.2% RSI=34  trend=v
+     chart: https://www.tradingview.com/symbols/EGX-ALCN/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  EAST: ENTRY 21.91 | STOP 19.83 | SCALE-OUT 23.77 (1146 sh) | TARGET 24.75 (1147 sh) | 2293 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-06-30
+  ETEL: ENTRY 32.93 | STOP 29.05 | SCALE-OUT 36.49 (672 sh) | TARGET 38.35 (673 sh) | 1345 total (8.82% NAV) | R:R 1:1.5 | time stop 2026-06-30
+  ALCN: ENTRY 46.63 | STOP 44.15 | SCALE-OUT 48.65 (538 sh) | TARGET 49.78 (539 sh) | 1077 total (9.99% NAV) | R:R 1:1.5 | time stop 2026-06-30
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  EAST   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  ETEL   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  ALCN   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  EAST:
+    Technicals:    RSI 62 — healthy uptrend; MACD bullish (+0.060); ATR 0.98 (2.5% of px) — sizing input
+    Fundamentals:  P/E 10.1 — fair; P/B 4.67; ROE 46.5% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "إيسترن كومباني" تهبط إلى 1.25 مليار جنيه خلال الربع الأول [Mubasher]
+      - عمومية "إيسترن كومباني" تقر توزيع كوبون نقدي على دفعتين [Mubasher]
+  ETEL:
+    Technicals:    RSI 31 — soft / mean-revert zone; MACD bearish (-0.303); ATR 1.86 (2.0% of px) — sizing input
+    Fundamentals:  P/E 9.6 — fair; P/B 1.22; ROE 12.7% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - المصرية للاتصالات تتفق مع "VIE Communities" لتطوير البنية الرقمية لمشروعاتها [Mubasher]
+      - أرباح المصرية للاتصالات المجمعة تتراجع 23% في الربع الأول.. والمستقلة تقفز 51% [Mubasher]
+  ALCN:
+    Technicals:    RSI 34 — soft / mean-revert zone; MACD bearish (-0.010); ATR 1.13 (4.0% of px) — sizing input
+    Fundamentals:  P/E 23.0 — premium; P/B 17.98; ROE 78.4% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - الإسكندرية لتداول الحاويات" تبدأ إجراءات إنشاء منطقة لوجستية متكاملة [Mubasher]
+      - القابضة للنقل ترفض بيع حصتها في أسهم الإسكندرية لتداول الحاويات [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: EAST, ETEL, ALCN
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
