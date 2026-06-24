@@ -1,0 +1,90 @@
+=== EGX PRE-MARKET BRIEFING — Wednesday 2026-06-24 12:12 ===
+
+--- MACRO ---
+  EGX 30:  51,770 pts (—)
+  USD/EGP: 49.58 (-0.18%)
+  Brent:   $75.93 (-0.52%)
+  Gold 24K: 6,501.11 EGP/g  |  21K: 5,688.47  |  18K: 4,875.83
+  Egyptian gold pound: 45,508 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 48) ---
+  1. DOMT   score=21.09  price=11.12  5d=+12.0% RSI=74  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-DOMT/
+  2. HDBK   score=20.13  price=45.23  5d=+10.1% RSI=78  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-HDBK/
+  3. OCDI   score=19.99  price=43.51  5d=+10.1% RSI=61  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OCDI/
+  4. CIRA   score=19.72  price=13.98  5d=+9.1% RSI=63  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CIRA/
+  5. GBCO   score=17.51  price=14.05  5d=+10.3% RSI=86  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-GBCO/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  DOMT: ENTRY 11.18 | STOP 9.79 | SCALE-OUT 12.45 (1875 sh) | TARGET 13.12 (1876 sh) | 3751 total (8.34% NAV) | R:R 1:1.5 | time stop 2026-07-01
+  HDBK: ENTRY 45.46 | STOP 36.09 | SCALE-OUT 54.37 (273 sh) | TARGET 58.93 (274 sh) | 547 total (4.95% NAV) | R:R 1:1.5 | time stop 2026-07-01
+  OCDI: ENTRY 43.73 | STOP 42.3 | SCALE-OUT 44.72 (574 sh) | TARGET 45.33 (575 sh) | 1149 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-01
+  CIRA: ENTRY 14.05 | STOP 11.91 | SCALE-OUT 16.05 (1209 sh) | TARGET 17.08 (1209 sh) | 2418 total (6.76% NAV) | R:R 1:1.5 | time stop 2026-07-01
+  GBCO: ENTRY 14.12 | STOP 12.31 | SCALE-OUT 15.79 (1440 sh) | TARGET 16.65 (1440 sh) | 2880 total (8.09% NAV) | R:R 1:1.5 | time stop 2026-07-01
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  DOMT   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  HDBK   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  OCDI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CIRA   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  GBCO   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    HDBK: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    CIRA: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  DOMT:
+    Technicals:    RSI 74 — overbought; MACD bullish (+0.274); Riding upper Bollinger — extended; ATR 0.67 (2.4% of px) — sizing input
+    Fundamentals:  P/E 8.4 — fair; P/B 1.94; ROE 23.2% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - "دومتي" تتوقع إدراج شركة الألبان الجديدة في البورصة المصرية الشهر المقبل [Mubasher]
+      - أرباح "دومتي" تقفز 581% خلال الربع الأول من 2026 [Mubasher]
+  HDBK:
+    Technicals:    RSI 78 — overbought; MACD bullish (+2.242); Riding upper Bollinger — extended; ATR 4.57 (2.8% of px) — sizing input
+    Fundamentals:  P/B 0.72; ROE 651.1% — strong
+    News tone:     mildly_bullish (+0.33, 3 hdl)
+      - بورصة مصر تقر قيد أسهم زيادة رأسمال بنك التعمير والإسكان [Mubasher]
+      - بنك التعمير والإسكان يعلن نهاية حق وموعد توزيع الأسهم المجانية [Mubasher]
+  OCDI:
+    Technicals:    RSI 61 — healthy uptrend; MACD bullish (+0.194); Riding upper Bollinger — extended; ATR 0.61 (2.7% of px) — sizing input
+    Fundamentals:  P/E 11.2 — fair; P/B 1.22; ROE 11.0% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم سوديك يترقب استئناف الاتجاه الصاعد من مستويات الدعم [Mubasher]
+      - أرباح "سوديك" تتراجع 68.6% في الربع الأول بضغط من تكلفة النشاط [Mubasher]
+  CIRA:
+    Technicals:    RSI 63 — healthy uptrend; MACD bullish (+0.019); Riding upper Bollinger — extended; ATR 1.03 (3.6% of px) — sizing input
+    Fundamentals:  P/E 10.8 — fair; P/B 4.71; ROE 43.6% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - ​"سير للتعليم" والبنك الأهلي يؤسّسان "التحالف المصري للتعليم" لإنشاء 100 مدرسة [Mubasher]
+      - الأهلي المصري وسيرا للتعليم يوقعان اتفاقية مساهمين للتوسع بقطاع التعليم [Mubasher]
+  GBCO:
+    Technicals:    RSI 86 — overbought; MACD bullish (+0.334); Riding upper Bollinger — extended; ATR 0.87 (2.8% of px) — sizing input
+    Fundamentals:  P/E 5.1 — cheap; P/B 0.56; ROE 11.1% — adequate
+    News tone:     bullish (+1.00, 4 hdl)
+      - Genesis launches sales operations in Egypt [Just Auto]
+      - سهم جي بي كوربوريشن يواجه مقاومة محورية تضع الاتجاه الصاعد تحت الاختبار [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: DOMT, HDBK, OCDI, CIRA, GBCO
+  Filtered: kept 1 of 23 headlines.
+  Tone: neutral (score +0.00)
+  [sector:Banks] FRA approves 13 companies to undertake non-bank financial activities — Daily News Egypt
+
+Disclaimer: Research only, not investment advice.
