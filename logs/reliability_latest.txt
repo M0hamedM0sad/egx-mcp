@@ -3,7 +3,7 @@ EGX MODEL RELIABILITY SCORECARD
 ======================================================================
 
 [~~~~]  Gate 1  EVIDENCE   (proven edge)
-        graded directional calls: 82 (need 30)  |  pending: 162
+        graded directional calls: 82 (need 30)  |  pending: 182
         directional accuracy vs EGX30: 52% (need >=55%)
 
 [~~~~]  Gate 2  DATA       (fundamentals coverage)

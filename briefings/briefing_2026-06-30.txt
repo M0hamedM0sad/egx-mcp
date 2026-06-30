@@ -1,0 +1,90 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-06-30 12:23 ===
+
+--- MACRO ---
+  EGX 30:  49,826 pts (—)
+  USD/EGP: 49.15 (-0.67%)
+  Brent:   $74.27 (+0.92%)
+  Gold 24K: 6,381.52 EGP/g  |  21K: 5,583.83  |  18K: 4,786.14
+  Egyptian gold pound: 44,671 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 41) ---
+  1. OCDI   score=16.68  price=43.51  5d=+9.0% RSI=67  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OCDI/
+  2. GBCO   score=11.46  price=14.05  5d=+8.4% RSI=83  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-GBCO/
+  3. POUL   score=11.45  price=8.76  5d=+5.6% RSI=52  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-POUL/
+  4. CSAG   score=8.85  price=19.05  5d=+2.1% RSI=61  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CSAG/
+  5. EGBE   score=6.42  price=0.297  5d=+2.3% RSI=50  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EGBE/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  OCDI: ENTRY 43.73 | STOP 41.78 | SCALE-OUT 45.24 (574 sh) | TARGET 46.1 (575 sh) | 1149 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-07
+  GBCO: ENTRY 14.12 | STOP 12.03 | SCALE-OUT 16.07 (1235 sh) | TARGET 17.09 (1235 sh) | 2470 total (6.94% NAV) | R:R 1:1.5 | time stop 2026-07-07
+  POUL: ENTRY 8.8 | STOP 5.71 | SCALE-OUT 11.81 (818 sh) | TARGET 13.34 (819 sh) | 1637 total (2.87% NAV) | R:R 1:1.5 | time stop 2026-07-07
+  CSAG: ENTRY 19.15 | STOP 17.5 | SCALE-OUT 20.6 (1312 sh) | TARGET 21.37 (1312 sh) | 2624 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-07
+  EGBE: ENTRY 0.3 | STOP 0.28 | SCALE-OUT 0.31 (84175 sh) | TARGET 0.32 (84175 sh) | 21580 total (1.28% NAV) | R:R 1:1.5 | time stop 2026-07-07
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  OCDI   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  GBCO   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  POUL   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  CSAG   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  EGBE   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    OCDI: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    EGBE: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  OCDI:
+    Technicals:    RSI 67 — healthy uptrend; MACD bullish (+0.421); ATR 0.86 (3.6% of px) — sizing input
+    Fundamentals:  P/E 11.2 — fair; P/B 1.22; ROE 11.0% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم سوديك يترقب استئناف الاتجاه الصاعد من مستويات الدعم [Mubasher]
+      - أرباح "سوديك" تتراجع 68.6% في الربع الأول بضغط من تكلفة النشاط [Mubasher]
+  GBCO:
+    Technicals:    RSI 83 — overbought; MACD bullish (+0.354); ATR 1.01 (3.2% of px) — sizing input
+    Fundamentals:  P/E 5.1 — cheap; P/B 0.56; ROE 11.1% — adequate
+    News tone:     bullish (+1.00, 4 hdl)
+      - Genesis launches sales operations in Egypt [Just Auto]
+      - سهم جي بي كوربوريشن يواجه مقاومة محورية تضع الاتجاه الصاعد تحت الاختبار [Mubasher]
+  POUL:
+    Technicals:    RSI 52 — healthy uptrend; MACD bullish (+0.146); ATR 1.53 (4.0% of px) — sizing input
+    Fundamentals:  P/E 1.1 — cheap; P/B 0.78; ROE 73.8% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - 625 مليون جنيه أرباح "القاهرة للدواجن" المجمعة خلال الربع الأول من 2026 [Mubasher]
+      - اليوم.. نهاية الحق في توزيع كوبون 4 شركات [Mubasher]
+  CSAG:
+    Technicals:    RSI 61 — healthy uptrend; MACD bullish (+0.060); ATR 0.77 (2.4% of px) — sizing input
+    Fundamentals:  P/E 1.6 — cheap; P/B 3.68; ROE 223.4% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح القناة للتوكيلات الملاحية ترتفع 21% خلال 9 أشهر [Mubasher]
+      - عمومية "القناة للتوكيلات" تُقر الموازنة التقديرية وتوافق على تأسيس شركة جديدة [Mubasher]
+  EGBE:
+    Technicals:    RSI 50 — healthy uptrend; MACD bearish (+0.000); ATR 0.01 (1.6% of px) — sizing input
+    Fundamentals:  ROE 27.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - البورصة تعلن نهاية حق وموعد توزيع كوبون البنك المصري الخليجي [Mubasher]
+      - بورصة مصر تشهد تنفيذ 3 صفقات بقيمة 371 مليون جنيه [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: OCDI, GBCO, POUL, CSAG, EGBE
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
