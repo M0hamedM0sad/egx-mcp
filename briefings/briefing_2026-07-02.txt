@@ -1,0 +1,90 @@
+=== EGX PRE-MARKET BRIEFING — Thursday 2026-07-02 11:51 ===
+
+--- MACRO ---
+  EGX 30:  50,441 pts (—)
+  USD/EGP: 49.04 (—)
+  Brent:   $70.46 (-0.37%)
+  Gold 24K: 6,432.67 EGP/g  |  21K: 5,628.58  |  18K: 4,824.50
+  Egyptian gold pound: 45,029 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 43) ---
+  1. CSAG   score=12.22  price=19.05  5d=+4.2% RSI=88  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CSAG/
+  2. MASR   score=11.94  price=4.25  5d=+4.5% RSI=69  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MASR/
+  3. MTIE   score=9.83  price=8.75  5d=+4.0% RSI=72  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MTIE/
+  4. RAYA   score=8.95  price=2.08  5d=+4.0% RSI=67  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-RAYA/
+  5. ADIB   score=8.67  price=37.89  5d=+2.5% RSI=60  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ADIB/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  CSAG: ENTRY 19.15 | STOP 17.4 | SCALE-OUT 20.7 (1312 sh) | TARGET 21.52 (1312 sh) | 2624 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-09
+  MASR: ENTRY 4.27 | STOP 3.74 | SCALE-OUT 4.76 (4875 sh) | TARGET 5.02 (4875 sh) | 9750 total (8.29% NAV) | R:R 1:1.5 | time stop 2026-07-09
+  MTIE: ENTRY 8.79 | STOP 8.34 | SCALE-OUT 9.16 (2857 sh) | TARGET 9.37 (2857 sh) | 5714 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-09
+  RAYA: ENTRY 2.09 | STOP 1.44 | SCALE-OUT 2.72 (3914 sh) | TARGET 3.04 (3915 sh) | 7829 total (3.26% NAV) | R:R 1:1.5 | time stop 2026-07-09
+  ADIB: ENTRY 38.08 | STOP 35.37 | SCALE-OUT 40.41 (659 sh) | TARGET 41.67 (660 sh) | 1319 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-09
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  CSAG   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MASR   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MTIE   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  RAYA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  ADIB   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    MTIE: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    ADIB: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  CSAG:
+    Technicals:    RSI 88 — overbought; MACD bullish (+0.112); ATR 0.82 (2.5% of px) — sizing input
+    Fundamentals:  P/E 1.6 — cheap; P/B 3.68; ROE 223.4% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح القناة للتوكيلات الملاحية ترتفع 21% خلال 9 أشهر [Mubasher]
+      - عمومية "القناة للتوكيلات" تُقر الموازنة التقديرية وتوافق على تأسيس شركة جديدة [Mubasher]
+  MASR:
+    Technicals:    RSI 69 — healthy uptrend; MACD bearish (-0.002); ATR 0.26 (3.5% of px) — sizing input
+    Fundamentals:  P/E 4.7 — cheap; P/B 0.91; ROE 19.5% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - مدينة مصر للإسكان تشتري 500 ألف سهم خزينة خلال جلسة الاثنين [Mubasher]
+      - "مدينة مصر للإسكان" تُقر شراء 2% من أسهمها وتخصص رصيداً لنظام إثابة العاملين [Mubasher]
+  MTIE:
+    Technicals:    RSI 72 — overbought; MACD bearish (-0.014); ATR 0.21 (2.2% of px) — sizing input
+    Fundamentals:  P/E 14.1 — fair; P/B 3.69; ROE 26.2% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم "ام ام جروب" يتماسك بالقرب من مستوى دعم رئيسي مع تحسن في أحجام التداول [Mubasher]
+      - ​إم إم جروب ترتفع بأرباحها إلى 318.2 مليون جنيه خلال الربع الأول من 2026 [Mubasher]
+  RAYA:
+    Technicals:    RSI 67 — healthy uptrend; MACD bullish (+0.025); ATR 0.32 (4.1% of px) — sizing input
+    Fundamentals:  P/E 4.2 — cheap; P/B 2.04; ROE 48.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - تعين مروة عباس رئيساً تنفيذياً لشركة "راية لتكنولوجيا المعلومات" [Mubasher]
+      - ​راية القابضة تُتم بيع كامل حصتها في "أسطول للنقل البري" لصالح أسيك للتعدين [Mubasher]
+  ADIB:
+    Technicals:    RSI 60 — healthy uptrend; MACD bearish (-0.004); ATR 1.26 (2.7% of px) — sizing input
+    Fundamentals:  P/E 3.5 — cheap; P/B 1.45; ROE 41.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح مصرف أبوظبي الإسلامي - مصر ترتفع إلى 3.6 مليار جنيه في الربع الأول [Mubasher]
+      - بورصة مصر تفحص قيد أسهم زيادة رأسمال مصرف أبوظبي الإسلامي- مصر [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: CSAG, MASR, MTIE, RAYA, ADIB
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
