@@ -28,6 +28,11 @@ log = logging.getLogger("egx-mcp.egx_listing")
 _CACHE_PATH = Path(__file__).parent / "egx_symbols_cache.json"
 _CACHE_TTL_SECONDS = 7 * 24 * 3600  # weekly refresh
 
+# Full-market universe validated against investing.com (the model's real fetch
+# path), built by scripts.expand_universe. ~249 names vs the legacy ~68. Yahoo's
+# .CA probe (below) is kept only as a fallback when this file is absent.
+_INVESTING_UNIVERSE_PATH = Path(__file__).parent / "egx_universe_investing.json"
+
 
 # Candidate EGX symbols beyond the curated 29 — drawn from EGX 70 / EGX 100
 # components I'm confident are tradeable. yfinance probe drops the dead ones.
@@ -188,7 +193,20 @@ def validate_and_cache(force: bool = False) -> dict[str, Any]:
 
 
 def get_full_universe() -> list[str]:
-    """Return the validated EGX symbol list (uses cache if fresh)."""
+    """Return the validated EGX symbol list.
+
+    Prefers the investing.com-validated full market (egx_universe_investing.json,
+    ~249 names from scripts.expand_universe). Falls back to the legacy
+    yfinance-probed candidate set when that file is absent.
+    """
+    if _INVESTING_UNIVERSE_PATH.exists():
+        try:
+            data = json.loads(_INVESTING_UNIVERSE_PATH.read_text(encoding="utf-8"))
+            tickers = [row["ticker"] for row in data.get("validated", [])]
+            if tickers:
+                return tickers
+        except Exception as e:  # noqa: BLE001
+            log.warning("could not read investing universe (%s); using yfinance probe", e)
     cache = validate_and_cache(force=False)
     return [row["ticker"] for row in cache.get("validated", [])]
 

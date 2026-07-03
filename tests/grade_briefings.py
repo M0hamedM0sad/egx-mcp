@@ -35,6 +35,24 @@ from pathlib import Path
 # Make the package importable when running from repo root
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+# Same workaround as oos_last_week.py: curl_cffi with impersonate=chrome uses
+# BoringSSL which ignores cert env vars; without this every yfinance fetch
+# fails ("possibly delisted") and grading silently produces nothing.
+# curl_cffi ships with recent yfinance but is not our declared dependency —
+# skip the patch rather than die if it's absent.
+try:
+    import curl_cffi.requests as _curl_requests
+
+    _orig_session_init = _curl_requests.Session.__init__
+
+    def _patched_session_init(self, *args, **kwargs):
+        kwargs["verify"] = False
+        _orig_session_init(self, *args, **kwargs)
+
+    _curl_requests.Session.__init__ = _patched_session_init
+except ImportError:
+    pass
+
 try:
     sys.stdout.reconfigure(encoding="utf-8")
 except (AttributeError, ValueError):
@@ -43,7 +61,25 @@ except (AttributeError, ValueError):
 import pandas as pd
 
 from egx_mcp.data import backtest as bt_mod
+from egx_mcp.data import egx_listing
 from egx_mcp.data.agentic_backtest import _benchmark_series
+
+
+def _synthetic_basket(start: str, end: str) -> pd.Series | None:
+    """Equal-weight basket of the full validated universe, as an index series.
+
+    Fallback benchmark: every EGX30 symbol Yahoo once served (^CASE30,
+    EGS69491M015.CA, EGX30.CA) now returns no data, which left bench=None and
+    every excess_pct null — grading silently degraded to "vs zero" while the
+    scorecard reported it as "vs EGX30". This basket is the same benchmark
+    notion tests/oos_last_week.py already uses.
+    """
+    universe = egx_listing.get_full_universe()
+    panel = bt_mod._price_panel(universe, start=start, end=end)
+    if panel.empty:
+        return None
+    daily = panel.pct_change(fill_method=None).mean(axis=1).fillna(0.0)
+    return (1.0 + daily).cumprod()
 
 _DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2})")
 _BUY_SIDE = {"BUY", "ACCUMULATE", "WEEKLY_BUY"}
@@ -172,7 +208,7 @@ def _grade(rows: list[dict], panel: pd.DataFrame, bench: pd.Series | None,
     return graded
 
 
-def _summary(graded: list[dict]) -> None:
+def _summary(graded: list[dict], bench_name: str = "EGX30") -> None:
     done = [g for g in graded if g["outcome"] == "graded" and g["correct"] is not None]
     pending = [g for g in graded if g["outcome"] == "pending"]
     print(f"\n{'=' * 64}")
@@ -192,7 +228,7 @@ def _summary(graded: list[dict]) -> None:
               f"buy-side hit={buy_hit:.0%} of {len(buy)}" if buy_hit is not None
               else f"  H={h:>3}d  accuracy={acc:.0%}  ({len(sub)} calls)")
         if avg_exc is not None:
-            print(f"         mean excess vs EGX30 = {avg_exc:+.2f}%")
+            print(f"         mean excess vs {bench_name} = {avg_exc:+.2f}%")
 
 
 def main() -> int:
@@ -240,6 +276,14 @@ def main() -> int:
         print("No realized prices fetched (network / SSL issue?). Cannot grade.")
         return 1
     bench = _benchmark_series(start, end)
+    bench_name = "EGX30"
+    if bench is None:
+        print("EGX30 index unavailable on Yahoo — using synthetic equal-weight basket.")
+        bench = _synthetic_basket(start, end)
+        bench_name = "synthetic equal-weight basket"
+    if bench is None:
+        print("WARNING: no benchmark available — grading vs absolute return (0%).")
+        bench_name = "absolute (no benchmark!)"
 
     graded = _grade(rows, panel, bench, horizons)
 
@@ -253,7 +297,7 @@ def main() -> int:
         w.writeheader()
         w.writerows(graded)
 
-    _summary(graded)
+    _summary(graded, bench_name)
     print(f"\nWrote {len(graded)} rows -> {out_jsonl}")
     print(f"                      -> {out_csv}")
     print("\nThis is the evidence base. Re-run after each briefing — it grows and")

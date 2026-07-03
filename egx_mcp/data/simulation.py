@@ -31,27 +31,12 @@ import math
 import random
 from typing import Any
 
-import yfinance as yf
-
 from .universe import EGX_UNIVERSE, resolve_ticker
 from . import technicals
 from . import egx_listing
+from . import investing
 
 log = logging.getLogger("egx-mcp.simulation")
-
-
-def _daily_returns(yahoo_symbol: str, lookback_days: int) -> list[float]:
-    """Return the trailing daily return series."""
-    df = yf.Ticker(yahoo_symbol).history(period=f"{max(lookback_days, 60)}d", interval="1d")
-    if df.empty or len(df) < 30:
-        return []
-    closes = df["Close"].dropna().tolist()
-    rets = []
-    for i in range(1, len(closes)):
-        prev, cur = closes[i - 1], closes[i]
-        if prev > 0:
-            rets.append(cur / prev - 1)
-    return rets[-lookback_days:]
 
 
 def _percentile(sorted_vals: list[float], q: float) -> float:
@@ -129,26 +114,30 @@ def simulate_one(
 ) -> dict[str, Any]:
     """Run a bootstrap MC for one ticker and return a probabilistic forecast."""
     canonical, yahoo, name = resolve_ticker(user_ticker)
-    rets = _daily_returns(yahoo, lookback_days)
+
+    # Reliable, glitch-guarded daily history (investing.com primary, Yahoo
+    # fallback, zero-volume bars dropped). One fetch supplies both the return
+    # distribution and the baseline close, so the forecast can never anchor on
+    # a stale or carry-forward bar.
+    df = investing.daily_history(canonical, lookback_days=max(lookback_days, 60) + 60)
+    closes = df["Close"].dropna().tolist() if not df.empty else []
+    if len(closes) < 21:
+        return {"ticker": canonical, "error": "Not enough return history for simulation"}
+
+    rets = [closes[i] / closes[i - 1] - 1
+            for i in range(1, len(closes)) if closes[i - 1] > 0][-lookback_days:]
     if len(rets) < 20:
         return {"ticker": canonical, "error": "Not enough return history for simulation"}
 
-    last_price = None
-    try:
-        df = yf.Ticker(yahoo).history(period="5d", interval="1d")
-        if not df.empty:
-            last_price = float(df["Close"].iloc[-1])
-    except Exception:
-        pass
-    if not last_price:
-        return {"ticker": canonical, "error": "No live price"}
+    last_price = closes[-1]
+    baseline_date = df.index[-1].strftime("%Y-%m-%d")
 
     overlay = _edge_overlay(canonical)
     drift = overlay["drift_pct"]
 
     rng = random.Random(seed)
     terminals = []
-    up_2 = up_5 = down_2 = down_5 = 0
+    up_0 = up_2 = up_5 = down_2 = down_5 = 0
     for _ in range(n_paths):
         p = last_price
         for _step in range(horizon_days):
@@ -156,6 +145,7 @@ def simulate_one(
             p *= (1 + r)
         terminals.append(p)
         chg = p / last_price - 1
+        if chg > 0: up_0 += 1
         if chg >= 0.02: up_2 += 1
         if chg >= 0.05: up_5 += 1
         if chg <= -0.02: down_2 += 1
@@ -167,13 +157,17 @@ def simulate_one(
     p90 = _percentile(terminals, 0.90)
     mean_terminal = sum(terminals) / len(terminals)
 
-    expected_return_pct = (mean_terminal / last_price - 1) * 100
+    # Headline point forecast = MEDIAN terminal: compounded bootstrap paths
+    # are right-skewed, so the mean overstates names with hot trailing
+    # windows. The mean stays available as expected_terminal_price.
+    expected_return_pct = (p50 / last_price - 1) * 100
     # Empirical stdev of terminal returns
     rets_terminal = [(t / last_price - 1) for t in terminals]
     mean_r = sum(rets_terminal) / len(rets_terminal)
     var_r = sum((r - mean_r) ** 2 for r in rets_terminal) / len(rets_terminal)
     std_r = math.sqrt(var_r) if var_r > 0 else 0.0001
 
+    prob_up = up_0 / n_paths
     prob_up_2 = up_2 / n_paths
     prob_up_5 = up_5 / n_paths
     prob_down_2 = down_2 / n_paths
@@ -190,6 +184,7 @@ def simulate_one(
         "horizon_days": horizon_days,
         "n_paths": n_paths,
         "lookback_days_used": len(rets),
+        "baseline_date": baseline_date,
         "current_price": round(last_price, 4),
         "expected_terminal_price": round(mean_terminal, 4),
         "expected_return_pct": round(expected_return_pct, 2),
@@ -198,6 +193,7 @@ def simulate_one(
         "p90_price": round(p90, 4),
         "p10_return_pct": round((p10 / last_price - 1) * 100, 2),
         "p90_return_pct": round((p90 / last_price - 1) * 100, 2),
+        "prob_up": round(prob_up, 3),
         "prob_up_2pct": round(prob_up_2, 3),
         "prob_up_5pct": round(prob_up_5, 3),
         "prob_down_2pct": round(prob_down_2, 3),
