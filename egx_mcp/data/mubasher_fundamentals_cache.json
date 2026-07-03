@@ -6,13 +6,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/COMI/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 420706587000.0,
+    "market_cap": 390919332300.0,
     "book_value_per_share": 57.67,
-    "pb_ratio": 1.52,
+    "pb_ratio": 1.77,
     "trailing_eps": 21.77,
-    "pe_ratio": 2.75,
+    "pe_ratio": 4.97,
     "roe_pct": 37.75,
-    "fetched_at": 1781985091.1230807
+    "fetched_at": 1783106219.8976614
   },
   "HDBK": {
     "ticker": "HDBK",
@@ -21,13 +21,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/HDBK/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 81283587000.0,
-    "book_value_per_share": 63.01,
-    "pb_ratio": 1.45,
-    "trailing_eps": 410.26,
-    "pe_ratio": 2.44,
-    "roe_pct": 651.15,
-    "fetched_at": 1777500006.5696647
+    "market_cap": 88514580000.0,
+    "book_value_per_share": 78.54,
+    "pb_ratio": 2.06,
+    "trailing_eps": 0.06,
+    "pe_ratio": 2575.76,
+    "roe_pct": 0.07,
+    "fetched_at": 1783105833.7869928
   },
   "CIEB": {
     "ticker": "CIEB",
@@ -36,13 +36,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/CIEB/ratios"
     ],
     "par_value": 4.0,
-    "market_cap": 30025000000.0,
-    "book_value_per_share": 14.78,
-    "pb_ratio": 1.29,
-    "trailing_eps": 5.98,
-    "pe_ratio": 4.41,
-    "roe_pct": 40.44,
-    "fetched_at": 1777500007.8511705
+    "market_cap": 29900000000.0,
+    "book_value_per_share": 16.34,
+    "pb_ratio": 1.27,
+    "trailing_eps": 5.71,
+    "pe_ratio": 4.31,
+    "roe_pct": 34.98,
+    "fetched_at": 1783106404.0923817
   },
   "ADIB": {
     "ticker": "ADIB",
@@ -51,13 +51,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ADIB/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 53160000000.0,
+    "market_cap": 55968000000.0,
     "book_value_per_share": 26.09,
     "pb_ratio": 0.92,
     "trailing_eps": 10.69,
     "pe_ratio": 2.02,
     "roe_pct": 40.98,
-    "fetched_at": 1777500009.248585
+    "fetched_at": 1783105581.8451135
   },
   "FAIT": {
     "ticker": "FAIT",
@@ -66,13 +66,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/FAIT/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 7500242145.6,
+    "market_cap": 8336112505.2,
     "book_value_per_share": 183.11,
     "pb_ratio": 0.15,
     "trailing_eps": 21.86,
     "pe_ratio": 2.89,
     "roe_pct": 11.94,
-    "fetched_at": 1777500010.601899
+    "fetched_at": 1783105628.7007298
   },
   "HRHO": {
     "ticker": "HRHO",
@@ -81,13 +81,11 @@
       "https://english.mubasher.info/markets/EGX/stocks/HRHO/ratios"
     ],
     "par_value": 5.0,
-    "market_cap": 41236000058.5,
+    "market_cap": 39163252444.94,
     "book_value_per_share": 23.33,
-    "pb_ratio": 0.94,
     "trailing_eps": 2.59,
-    "pe_ratio": 10.83,
     "roe_pct": 11.09,
-    "fetched_at": 1777500012.4118345
+    "fetched_at": 1783105931.1961274
   },
   "EFIH": {
     "ticker": "EFIH",
@@ -96,13 +94,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/EFIH/ratios"
     ],
     "par_value": 0.5,
-    "market_cap": 72106666673.6,
-    "book_value_per_share": 2.08,
-    "pb_ratio": 6.15,
-    "trailing_eps": 0.57,
-    "pe_ratio": 22.37,
-    "roe_pct": 27.51,
-    "fetched_at": 1777500013.537858
+    "market_cap": 71898666673.58,
+    "book_value_per_share": 2.55,
+    "pb_ratio": 7.23,
+    "trailing_eps": 0.99,
+    "pe_ratio": 25.94,
+    "roe_pct": 38.85,
+    "fetched_at": 1783106399.218546
   },
   "CIRA": {
     "ticker": "CIRA",
@@ -111,22 +109,28 @@
       "https://english.mubasher.info/markets/EGX/stocks/CIRA/ratios"
     ],
     "par_value": 0.4,
-    "market_cap": 11154606820.5,
+    "market_cap": 16784361360.0,
     "book_value_per_share": 2.97,
     "pb_ratio": 4.82,
     "trailing_eps": 1.29,
     "pe_ratio": 11.06,
     "roe_pct": 43.6,
-    "fetched_at": 1777500014.7734525
+    "fetched_at": 1783106018.522132
   },
   "TMGH": {
     "ticker": "TMGH",
-    "sources": [],
-    "errors": [
-      "overview: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "ratios: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)"
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/TMGH",
+      "https://english.mubasher.info/markets/EGX/stocks/TMGH/ratios"
     ],
-    "fetched_at": 1779990826.9619215
+    "par_value": 10.0,
+    "market_cap": 194587537011.98,
+    "book_value_per_share": 46.26,
+    "pb_ratio": 1.89,
+    "trailing_eps": 8.07,
+    "pe_ratio": 10.67,
+    "roe_pct": 17.45,
+    "fetched_at": 1783105903.1370273
   },
   "PHDC": {
     "ticker": "PHDC",
@@ -135,13 +139,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/PHDC/ratios"
     ],
     "par_value": 2.0,
-    "market_cap": 31916642170.68,
-    "book_value_per_share": 5.9,
-    "pb_ratio": 1.46,
-    "trailing_eps": 1.54,
-    "pe_ratio": 5.6,
-    "roe_pct": 26.03,
-    "fetched_at": 1777500017.3705645
+    "market_cap": 41611751217.15,
+    "book_value_per_share": 6.63,
+    "pb_ratio": 1.38,
+    "trailing_eps": 1.69,
+    "pe_ratio": 5.69,
+    "roe_pct": 25.43,
+    "fetched_at": 1783106412.1676316
   },
   "ORHD": {
     "ticker": "ORHD",
@@ -150,13 +154,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ORHD/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 35157726565.3,
-    "book_value_per_share": 10.24,
-    "pb_ratio": 2.1,
-    "trailing_eps": 4.5,
-    "pe_ratio": 4.77,
-    "roe_pct": 43.97,
-    "fetched_at": 1777500020.1457603
+    "market_cap": 43184088578.6,
+    "book_value_per_share": 16.09,
+    "pb_ratio": 1.66,
+    "trailing_eps": 6.1,
+    "pe_ratio": 4.92,
+    "roe_pct": 37.92,
+    "fetched_at": 1783106381.7084212
   },
   "EMFD": {
     "ticker": "EMFD",
@@ -165,13 +169,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/EMFD/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 58717898759.52,
+    "market_cap": 62803095797.52,
     "book_value_per_share": 11.87,
     "pb_ratio": 0.79,
     "trailing_eps": 0.43,
     "pe_ratio": 3.81,
     "roe_pct": 3.64,
-    "fetched_at": 1777500021.623926
+    "fetched_at": 1783105853.704007
   },
   "OCDI": {
     "ticker": "OCDI",
@@ -180,13 +184,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/OCDI/ratios"
     ],
     "par_value": 4.0,
-    "market_cap": 28235529533.4,
+    "market_cap": 32644913597.52,
     "book_value_per_share": 35.53,
     "pb_ratio": 1.71,
     "trailing_eps": 3.9,
     "pe_ratio": 5.52,
     "roe_pct": 10.97,
-    "fetched_at": 1777500023.4122036
+    "fetched_at": 1783105785.686296
   },
   "HELI": {
     "ticker": "HELI",
@@ -195,13 +199,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/HELI/ratios"
     ],
     "par_value": 0.25,
-    "market_cap": 8370984204.0,
+    "market_cap": 8584597836.0,
     "book_value_per_share": 6.02,
-    "pb_ratio": 1.37,
+    "pb_ratio": 1.71,
     "trailing_eps": 0.49,
-    "pe_ratio": 3.95,
+    "pe_ratio": 8.49,
     "roe_pct": 8.07,
-    "fetched_at": 1777500025.1117346
+    "fetched_at": 1783105907.827591
   },
   "SWDY": {
     "ticker": "SWDY",
@@ -210,13 +214,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/SWDY/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 185605441849.2,
-    "book_value_per_share": 4.91,
-    "pb_ratio": 2.73,
-    "trailing_eps": 3.69,
-    "pe_ratio": 9.69,
-    "roe_pct": 75.02,
-    "fetched_at": 1777500026.6584332
+    "market_cap": 187318064150.0,
+    "book_value_per_share": 33.98,
+    "pb_ratio": 2.5,
+    "trailing_eps": 9.05,
+    "pe_ratio": 9.64,
+    "roe_pct": 26.64,
+    "fetched_at": 1783106287.8630853
   },
   "ORWE": {
     "ticker": "ORWE",
@@ -225,13 +229,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ORWE/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 15403884326.88,
-    "book_value_per_share": 27.37,
-    "pb_ratio": 0.84,
-    "trailing_eps": 3.19,
-    "pe_ratio": 12.07,
-    "roe_pct": 11.66,
-    "fetched_at": 1777500027.7425053
+    "market_cap": 14858496367.12,
+    "book_value_per_share": 32.69,
+    "pb_ratio": 0.77,
+    "trailing_eps": 5.16,
+    "pe_ratio": 6.67,
+    "roe_pct": 15.79,
+    "fetched_at": 1783106006.3844736
   },
   "ABUK": {
     "ticker": "ABUK",
@@ -240,13 +244,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ABUK/ratios"
     ],
     "par_value": 1.5,
-    "market_cap": 113013589483.2,
+    "market_cap": 85769692688.4,
     "book_value_per_share": 18.93,
     "pb_ratio": 4.32,
     "trailing_eps": 4.15,
     "pe_ratio": 19.7,
     "roe_pct": 21.9,
-    "fetched_at": 1777500028.803099
+    "fetched_at": 1783105848.4704201
   },
   "MFPC": {
     "ticker": "MFPC",
@@ -255,10 +259,10 @@
       "https://english.mubasher.info/markets/EGX/stocks/MFPC/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 137097104571.4,
+    "market_cap": 103253049468.0,
     "book_value_per_share": 26.44,
     "trailing_eps": 0.0,
-    "fetched_at": 1777500030.1503458
+    "fetched_at": 1783106260.9127314
   },
   "EFID": {
     "ticker": "EFID",
@@ -267,13 +271,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/EFID/ratios"
     ],
     "par_value": 0.2,
-    "market_cap": 41300805704.0,
-    "book_value_per_share": 3.0,
-    "pb_ratio": 2.29,
-    "trailing_eps": 1.69,
-    "pe_ratio": 6.33,
-    "roe_pct": 56.51,
-    "fetched_at": 1777500031.501468
+    "market_cap": 38276746710.08,
+    "book_value_per_share": 4.62,
+    "pb_ratio": 6.21,
+    "trailing_eps": 2.5,
+    "pe_ratio": 12.94,
+    "roe_pct": 54.03,
+    "fetched_at": 1783105955.8508108
   },
   "JUFO": {
     "ticker": "JUFO",
@@ -282,13 +286,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/JUFO/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 27394887886.2,
-    "book_value_per_share": 7.91,
-    "pb_ratio": 3.68,
-    "trailing_eps": 2.04,
-    "pe_ratio": 21.39,
-    "roe_pct": 25.83,
-    "fetched_at": 1777500032.6783974
+    "market_cap": 28006801189.5,
+    "book_value_per_share": 7.56,
+    "pb_ratio": 3.56,
+    "trailing_eps": 2.27,
+    "pe_ratio": 14.96,
+    "roe_pct": 30.08,
+    "fetched_at": 1783106216.5539677
   },
   "DOMT": {
     "ticker": "DOMT",
@@ -297,13 +301,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/DOMT/ratios"
     ],
     "par_value": 0.2,
-    "market_cap": 7034130418.55,
+    "market_cap": 7695434764.85,
     "book_value_per_share": 5.72,
     "pb_ratio": 5.1,
     "trailing_eps": 1.32,
     "pe_ratio": 11.66,
     "roe_pct": 23.16,
-    "fetched_at": 1777500033.7178469
+    "fetched_at": 1783105772.4862447
   },
   "CCAP": {
     "ticker": "CCAP",
@@ -312,13 +316,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/CCAP/ratios"
     ],
     "par_value": 5.0,
-    "market_cap": 15342575165.37,
+    "market_cap": 16243187544.05,
     "book_value_per_share": 9.69,
     "pb_ratio": 0.26,
     "trailing_eps": 1.17,
     "pe_ratio": 0.59,
     "roe_pct": 12.05,
-    "fetched_at": 1777500034.7178087
+    "fetched_at": 1783106294.5455809
   },
   "ETEL": {
     "ticker": "ETEL",
@@ -327,13 +331,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ETEL/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 160806144720.0,
-    "book_value_per_share": 26.9,
-    "pb_ratio": 1.25,
-    "trailing_eps": 3.42,
-    "pe_ratio": 6.65,
-    "roe_pct": 12.73,
-    "fetched_at": 1777500036.3634286
+    "market_cap": 158091900876.0,
+    "book_value_per_share": 36.77,
+    "pb_ratio": 2.11,
+    "trailing_eps": 8.37,
+    "pe_ratio": 5.95,
+    "roe_pct": 22.76,
+    "fetched_at": 1783105698.201792
   },
   "EAST": {
     "ticker": "EAST",
@@ -342,13 +346,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/EAST/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 119940000000.0,
+    "market_cap": 112200000000.0,
     "book_value_per_share": 4.67,
-    "pb_ratio": 5.43,
+    "pb_ratio": 6.66,
     "trailing_eps": 2.17,
-    "pe_ratio": 7.23,
+    "pe_ratio": 10.3,
     "roe_pct": 46.46,
-    "fetched_at": 1777500037.444448
+    "fetched_at": 1783106070.3195257
   },
   "CLHO": {
     "ticker": "CLHO",
@@ -357,13 +361,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/CLHO/ratios"
     ],
     "par_value": 0.5,
-    "market_cap": 20713072128.99,
-    "book_value_per_share": 2.26,
-    "pb_ratio": 4.34,
-    "trailing_eps": 0.69,
-    "pe_ratio": 16.46,
-    "roe_pct": 30.65,
-    "fetched_at": 1777500038.576649
+    "market_cap": 23560577508.9,
+    "book_value_per_share": 2.59,
+    "pb_ratio": 4.83,
+    "trailing_eps": 0.33,
+    "pe_ratio": 21.25,
+    "roe_pct": 12.57,
+    "fetched_at": 1783106122.1532085
   },
   "PHAR": {
     "ticker": "PHAR",
@@ -372,13 +376,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/PHAR/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 14388115245.0,
-    "book_value_per_share": 31.28,
-    "pb_ratio": 1.43,
-    "trailing_eps": 3.01,
-    "pe_ratio": 8.32,
-    "roe_pct": 9.63,
-    "fetched_at": 1777500039.8185627
+    "market_cap": 14885944707.5,
+    "book_value_per_share": 31.38,
+    "pb_ratio": 2.29,
+    "trailing_eps": 6.38,
+    "pe_ratio": 11.66,
+    "roe_pct": 20.32,
+    "fetched_at": 1783105758.719323
   },
   "EGTS": {
     "ticker": "EGTS",
@@ -387,13 +391,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/EGTS/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 14038500000.0,
+    "market_cap": 18585000000.0,
     "book_value_per_share": 0.58,
     "pb_ratio": 22.08,
     "trailing_eps": 3.52,
     "pe_ratio": 10.09,
     "roe_pct": 611.05,
-    "fetched_at": 1777500040.9130292
+    "fetched_at": 1783106128.4528215
   },
   "FWRY": {
     "ticker": "FWRY",
@@ -402,13 +406,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/FWRY/ratios"
     ],
     "par_value": 0.5,
-    "market_cap": 67449160231.2,
+    "market_cap": 62680027689.6,
     "book_value_per_share": 1.45,
     "pb_ratio": 6.59,
     "trailing_eps": 0.59,
     "pe_ratio": 15.24,
     "roe_pct": 40.44,
-    "fetched_at": 1777500041.8994606
+    "fetched_at": 1783105647.947854
   },
   "MTIE": {
     "ticker": "MTIE",
@@ -417,13 +421,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/MTIE/ratios"
     ],
     "par_value": 0.62,
-    "market_cap": 15899276746.16,
-    "book_value_per_share": 2.37,
-    "pb_ratio": 2.97,
-    "trailing_eps": 0.62,
-    "pe_ratio": 10.34,
-    "roe_pct": 26.18,
-    "fetched_at": 1777500043.0557244
+    "market_cap": 17655372633.8,
+    "book_value_per_share": 2.75,
+    "pb_ratio": 2.75,
+    "trailing_eps": 0.65,
+    "pe_ratio": 10.77,
+    "roe_pct": 23.46,
+    "fetched_at": 1783105586.38393
   },
   "BTFH": {
     "ticker": "BTFH",
@@ -432,13 +436,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/BTFH/ratios"
     ],
     "par_value": 2.0,
-    "market_cap": 32690226179.2,
-    "book_value_per_share": 0.0,
-    "pb_ratio": 1576.04,
+    "market_cap": 31832777623.68,
+    "book_value_per_share": 2.24,
+    "pb_ratio": 1.3,
     "trailing_eps": 0.26,
-    "pe_ratio": 48857.14,
-    "roe_pct": 12192.19,
-    "fetched_at": 1777500044.1885202
+    "pe_ratio": 22.36,
+    "roe_pct": 11.6,
+    "fetched_at": 1783105947.3715525
   },
   "EGBE": {
     "ticker": "EGBE",
@@ -447,13 +451,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/EGBE/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 194350411.15,
+    "market_cap": 232098260.03,
     "book_value_per_share": 18.52,
-    "pb_ratio": 0.71,
+    "pb_ratio": 0.61,
     "trailing_eps": 5.0,
-    "pe_ratio": 2.6,
+    "pe_ratio": 1.2,
     "roe_pct": 26.98,
-    "fetched_at": 1777500045.300222
+    "fetched_at": 1783106408.2838178
   },
   "SAUD": {
     "ticker": "SAUD",
@@ -462,13 +466,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/SAUD/ratios"
     ],
     "par_value": 7.0,
-    "market_cap": 16004332251.3,
+    "market_cap": 15335364251.7,
     "book_value_per_share": 18.55,
     "pb_ratio": 0.77,
     "trailing_eps": 5.49,
     "pe_ratio": 2.8,
     "roe_pct": 29.58,
-    "fetched_at": 1777500046.5331216
+    "fetched_at": 1783106025.250383
   },
   "AMER": {
     "ticker": "AMER",
@@ -477,13 +481,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/AMER/ratios"
     ],
     "par_value": 0.7,
-    "market_cap": 1904886562.4,
-    "book_value_per_share": 1.06,
-    "pb_ratio": 1.1,
-    "trailing_eps": 0.18,
-    "pe_ratio": 31.7,
-    "roe_pct": 16.97,
-    "fetched_at": 1777500047.7027938
+    "market_cap": 2202807209.6,
+    "book_value_per_share": 2.15,
+    "pb_ratio": 0.88,
+    "trailing_eps": 0.26,
+    "pe_ratio": 11.54,
+    "roe_pct": 12.09,
+    "fetched_at": 1783106010.262785
   },
   "OBRI": {
     "ticker": "OBRI",
@@ -492,13 +496,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/OBRI/ratios"
     ],
     "par_value": 5.0,
-    "market_cap": 1509200000.0,
+    "market_cap": 1400000000.0,
     "book_value_per_share": 7.06,
     "pb_ratio": 2.81,
     "trailing_eps": 2.31,
     "pe_ratio": 17.81,
     "roe_pct": 32.67,
-    "fetched_at": 1777500048.8127391
+    "fetched_at": 1783105909.6722806
   },
   "UEGC": {
     "ticker": "UEGC",
@@ -507,13 +511,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/UEGC/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 986315091.6,
+    "market_cap": 1051585943.25,
     "book_value_per_share": 1.82,
     "pb_ratio": 0.55,
     "trailing_eps": 0.16,
     "pe_ratio": 2.85,
     "roe_pct": 8.74,
-    "fetched_at": 1777500049.8273907
+    "fetched_at": 1783106343.1333444
   },
   "RREI": {
     "ticker": "RREI",
@@ -522,13 +526,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/RREI/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 941248000.0,
+    "market_cap": 855008000.0,
     "book_value_per_share": 1.53,
     "pb_ratio": 1.42,
     "trailing_eps": 0.08,
     "pe_ratio": 36.21,
     "roe_pct": 5.11,
-    "fetched_at": 1777500050.8672657
+    "fetched_at": 1783106362.7731287
   },
   "ROTO": {
     "ticker": "ROTO",
@@ -537,13 +541,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ROTO/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 588081846.0,
-    "book_value_per_share": 7.64,
-    "pb_ratio": 2.87,
-    "trailing_eps": 0.23,
-    "pe_ratio": 30.28,
-    "roe_pct": 3.07,
-    "fetched_at": 1777500051.9250953
+    "market_cap": 718093464.0,
+    "book_value_per_share": 9.76,
+    "pb_ratio": 5.22,
+    "trailing_eps": 11.16,
+    "pe_ratio": 17.04,
+    "roe_pct": 114.36,
+    "fetched_at": 1783105805.036661
   },
   "MASR": {
     "ticker": "MASR",
@@ -552,13 +556,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/MASR/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 13215650000.0,
-    "book_value_per_share": 4.69,
-    "pb_ratio": 0.88,
-    "trailing_eps": 0.91,
-    "pe_ratio": 4.53,
-    "roe_pct": 19.46,
-    "fetched_at": 1777500052.9596
+    "market_cap": 15841700000.0,
+    "book_value_per_share": 6.15,
+    "pb_ratio": 1.0,
+    "trailing_eps": 1.27,
+    "pe_ratio": 3.52,
+    "roe_pct": 20.63,
+    "fetched_at": 1783105810.8700356
   },
   "ZMID": {
     "ticker": "ZMID",
@@ -567,13 +571,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ZMID/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 5890000000.0,
-    "book_value_per_share": 2.13,
-    "pb_ratio": 1.7,
-    "trailing_eps": 0.82,
-    "pe_ratio": 4.7,
-    "roe_pct": 38.53,
-    "fetched_at": 1777500054.2126045
+    "market_cap": 6500000000.0,
+    "book_value_per_share": 2.32,
+    "pb_ratio": 2.1,
+    "trailing_eps": 0.66,
+    "pe_ratio": 7.34,
+    "roe_pct": 28.36,
+    "fetched_at": 1783106029.0717819
   },
   "ARCC": {
     "ticker": "ARCC",
@@ -582,13 +586,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ARCC/ratios"
     ],
     "par_value": 2.0,
-    "market_cap": 20224699980.0,
+    "market_cap": 20997328968.0,
     "book_value_per_share": 9.75,
     "pb_ratio": 4.12,
     "trailing_eps": 8.61,
     "pe_ratio": 4.29,
     "roe_pct": 88.27,
-    "fetched_at": 1777500055.2892056
+    "fetched_at": 1783105900.4998138
   },
   "MISR": {
     "ticker": "MISR",
@@ -612,13 +616,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/SCEM/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 15346206146.68,
+    "market_cap": 16561592289.5,
     "book_value_per_share": 17.16,
     "pb_ratio": 2.9,
     "trailing_eps": 8.77,
     "pe_ratio": 14.35,
     "roe_pct": 51.09,
-    "fetched_at": 1777500057.6562514
+    "fetched_at": 1783105768.0528173
   },
   "MICH": {
     "ticker": "MICH",
@@ -627,13 +631,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/MICH/ratios"
     ],
     "par_value": 4.0,
-    "market_cap": 3842353125.0,
-    "book_value_per_share": 14.38,
-    "pb_ratio": 2.11,
-    "trailing_eps": 5.16,
-    "pe_ratio": 6.55,
-    "roe_pct": 35.89,
-    "fetched_at": 1777500058.7797399
+    "market_cap": 4117668750.0,
+    "book_value_per_share": 13.26,
+    "pb_ratio": 3.0,
+    "trailing_eps": 4.17,
+    "pe_ratio": 3.62,
+    "roe_pct": 31.47,
+    "fetched_at": 1783106014.2945771
   },
   "IRON": {
     "ticker": "IRON",
@@ -642,12 +646,12 @@
       "https://english.mubasher.info/markets/EGX/stocks/IRON/ratios"
     ],
     "par_value": 1.8,
-    "market_cap": 33555562749.3,
+    "market_cap": 31465056074.38,
     "book_value_per_share": 6.93,
     "pb_ratio": 1.74,
     "trailing_eps": 0.0,
     "roe_pct": 0.0,
-    "fetched_at": 1777500059.9380617
+    "fetched_at": 1783106309.6635697
   },
   "CERA": {
     "ticker": "CERA",
@@ -656,13 +660,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/CERA/ratios"
     ],
     "par_value": 0.25,
-    "market_cap": 1250625000.0,
-    "book_value_per_share": 0.62,
-    "pb_ratio": 2.23,
-    "trailing_eps": 0.04,
-    "pe_ratio": 18.74,
-    "roe_pct": 5.88,
-    "fetched_at": 1777500061.0889614
+    "market_cap": 1315312500.0,
+    "book_value_per_share": 0.43,
+    "pb_ratio": 2.37,
+    "trailing_eps": 0.02,
+    "pe_ratio": 29.56,
+    "roe_pct": 4.88,
+    "fetched_at": 1783105625.2852116
   },
   "LCSW": {
     "ticker": "LCSW",
@@ -671,13 +675,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/LCSW/ratios"
     ],
     "par_value": 5.0,
-    "market_cap": 2084000000.0,
+    "market_cap": 2276000000.0,
     "book_value_per_share": 48.57,
     "pb_ratio": 0.53,
     "trailing_eps": 2.65,
     "pe_ratio": 5.45,
     "roe_pct": 5.46,
-    "fetched_at": 1777500062.1341946
+    "fetched_at": 1783105879.9250822
   },
   "OFH": {
     "ticker": "OFH",
@@ -686,13 +690,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/OFH/ratios"
     ],
     "par_value": 0.31,
-    "market_cap": 3033556568.33,
+    "market_cap": 2879958767.4,
     "book_value_per_share": 0.63,
-    "pb_ratio": 1.18,
+    "pb_ratio": 0.87,
     "trailing_eps": 0.51,
-    "pe_ratio": 131.46,
+    "pe_ratio": 1.39,
     "roe_pct": 80.59,
-    "fetched_at": 1777500063.194887
+    "fetched_at": 1783105941.1639645
   },
   "ORAS": {
     "ticker": "ORAS",
@@ -701,11 +705,11 @@
       "https://english.mubasher.info/markets/EGX/stocks/ORAS/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 67733873664.0,
+    "market_cap": 80478072550.0,
     "book_value_per_share": 5.32,
     "trailing_eps": 4.04,
     "roe_pct": 75.95,
-    "fetched_at": 1777500064.4667625
+    "fetched_at": 1783106081.2642038
   },
   "ELEC": {
     "ticker": "ELEC",
@@ -714,13 +718,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ELEC/ratios"
     ],
     "par_value": 0.2,
-    "market_cap": 7389195031.79,
+    "market_cap": 6958434783.3,
     "book_value_per_share": 1.15,
     "pb_ratio": 2.67,
     "trailing_eps": 0.04,
     "pe_ratio": 63.86,
     "roe_pct": 3.71,
-    "fetched_at": 1777500065.734177
+    "fetched_at": 1783106316.9269867
   },
   "DSCW": {
     "ticker": "DSCW",
@@ -729,13 +733,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/DSCW/ratios"
     ],
     "par_value": 0.2,
-    "market_cap": 5574331715.68,
+    "market_cap": 4636343205.83,
     "book_value_per_share": 0.81,
     "pb_ratio": 4.09,
     "trailing_eps": 0.23,
     "pe_ratio": 13.38,
     "roe_pct": 28.01,
-    "fetched_at": 1777500066.7592142
+    "fetched_at": 1783106232.6283543
   },
   "POUL": {
     "ticker": "POUL",
@@ -744,22 +748,28 @@
       "https://english.mubasher.info/markets/EGX/stocks/POUL/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 17124307200.0,
-    "book_value_per_share": 11.23,
-    "pb_ratio": 1.84,
-    "trailing_eps": 8.28,
-    "pe_ratio": 4.55,
-    "roe_pct": 73.76,
-    "fetched_at": 1777500067.8403087
+    "market_cap": 18202060800.0,
+    "book_value_per_share": 15.86,
+    "pb_ratio": 2.07,
+    "trailing_eps": 5.13,
+    "pe_ratio": 5.26,
+    "roe_pct": 32.34,
+    "fetched_at": 1783105744.3858788
   },
   "GBCO": {
     "ticker": "GBCO",
-    "sources": [],
-    "errors": [
-      "overview: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
-      "ratios: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)"
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GBCO",
+      "https://english.mubasher.info/markets/EGX/stocks/GBCO/ratios"
     ],
-    "fetched_at": 1781819772.5449088
+    "par_value": 1.0,
+    "market_cap": 34638305000.0,
+    "book_value_per_share": 25.01,
+    "pb_ratio": 1.08,
+    "trailing_eps": 2.77,
+    "pe_ratio": 9.76,
+    "roe_pct": 11.06,
+    "fetched_at": 1783105637.4429233
   },
   "RAYA": {
     "ticker": "RAYA",
@@ -768,13 +778,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/RAYA/ratios"
     ],
     "par_value": 0.25,
-    "market_cap": 29369702688.48,
-    "book_value_per_share": 1.02,
-    "pb_ratio": 3.53,
-    "trailing_eps": 0.49,
-    "pe_ratio": 9.11,
-    "roe_pct": 48.03,
-    "fetched_at": 1777500069.9659946
+    "market_cap": 32965992813.6,
+    "book_value_per_share": 1.47,
+    "pb_ratio": 3.71,
+    "trailing_eps": 0.36,
+    "pe_ratio": 8.4,
+    "roe_pct": 24.39,
+    "fetched_at": 1783105644.6510134
   },
   "AMOC": {
     "ticker": "AMOC",
@@ -783,13 +793,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/AMOC/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 10732365000.0,
+    "market_cap": 10047870000.0,
     "book_value_per_share": 3.43,
     "pb_ratio": 1.67,
     "trailing_eps": 0.46,
     "pe_ratio": 5.17,
     "roe_pct": 13.34,
-    "fetched_at": 1777500071.2612832
+    "fetched_at": 1783105658.6711335
   },
   "SKPC": {
     "ticker": "SKPC",
@@ -798,13 +808,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/SKPC/ratios"
     ],
     "par_value": 2.0,
-    "market_cap": 16556400000.0,
+    "market_cap": 14415408000.0,
     "book_value_per_share": 8.42,
     "pb_ratio": 2.54,
     "trailing_eps": 2.1,
     "pe_ratio": 10.22,
     "roe_pct": 24.92,
-    "fetched_at": 1777500072.3520298
+    "fetched_at": 1783105830.903291
   },
   "EFIC": {
     "ticker": "EFIC",
@@ -813,13 +823,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/EFIC/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 21221000000.0,
+    "market_cap": 18624000000.0,
     "book_value_per_share": 30.62,
-    "pb_ratio": 10.09,
+    "pb_ratio": 7.3,
     "trailing_eps": 28.36,
-    "pe_ratio": 9.2,
+    "pe_ratio": 7.88,
     "roe_pct": 92.61,
-    "fetched_at": 1777500073.457677
+    "fetched_at": 1783106089.8174052
   },
   "OLFI": {
     "ticker": "OLFI",
@@ -828,13 +838,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/OLFI/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 8936000000.0,
+    "market_cap": 8916000000.0,
     "book_value_per_share": 4.2,
     "pb_ratio": 7.02,
     "trailing_eps": 2.78,
     "pe_ratio": 9.13,
     "roe_pct": 66.24,
-    "fetched_at": 1777500074.5807924
+    "fetched_at": 1783106212.5421047
   },
   "ASCM": {
     "ticker": "ASCM",
@@ -843,13 +853,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ASCM/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 2261500000.0,
+    "market_cap": 2960500000.0,
     "book_value_per_share": 52.85,
     "pb_ratio": 0.92,
     "trailing_eps": 13.47,
     "pe_ratio": 20.75,
     "roe_pct": 25.48,
-    "fetched_at": 1777500075.7484891
+    "fetched_at": 1783106064.79271
   },
   "MOIL": {
     "ticker": "MOIL",
@@ -858,13 +868,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/MOIL/ratios"
     ],
     "par_value": 0.4,
-    "market_cap": 203620735.42,
-    "book_value_per_share": 0.03,
-    "pb_ratio": 9.83,
-    "trailing_eps": 0.03,
-    "pe_ratio": 3.43,
-    "roe_pct": 106.98,
-    "fetched_at": 1777500077.0676858
+    "market_cap": 226663266.68,
+    "book_value_per_share": 0.53,
+    "pb_ratio": 0.98,
+    "trailing_eps": 0.19,
+    "pe_ratio": 2.29,
+    "roe_pct": 35.85,
+    "fetched_at": 1783105653.5801067
   },
   "SUGR": {
     "ticker": "SUGR",
@@ -873,13 +883,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/SUGR/ratios"
     ],
     "par_value": 5.0,
-    "market_cap": 7038804712.5,
-    "book_value_per_share": 26.62,
-    "pb_ratio": 2.96,
-    "trailing_eps": 24.77,
-    "pe_ratio": 5.69,
-    "roe_pct": 93.05,
-    "fetched_at": 1777500078.2548892
+    "market_cap": 6683309525.0,
+    "book_value_per_share": 14.66,
+    "pb_ratio": 3.27,
+    "trailing_eps": 2.27,
+    "pe_ratio": 12.72,
+    "roe_pct": 15.51,
+    "fetched_at": 1783105575.3855767
   },
   "EGCH": {
     "ticker": "EGCH",
@@ -888,13 +898,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/EGCH/ratios"
     ],
     "par_value": 5.0,
-    "market_cap": 24136934837.85,
+    "market_cap": 24395190107.72,
     "book_value_per_share": 7.49,
     "pb_ratio": 0.97,
     "trailing_eps": 1.55,
     "pe_ratio": 1.44,
     "roe_pct": 20.74,
-    "fetched_at": 1777500079.5914552
+    "fetched_at": 1783106378.179366
   },
   "BIOC": {
     "ticker": "BIOC",
@@ -903,13 +913,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/BIOC/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 5757468948.0,
+    "market_cap": 5969595016.0,
     "book_value_per_share": 23.89,
     "pb_ratio": 1.56,
     "trailing_eps": 3.26,
     "pe_ratio": 56.63,
     "roe_pct": 13.67,
-    "fetched_at": 1777500080.603807
+    "fetched_at": 1783105912.7912452
   },
   "ACGC": {
     "ticker": "ACGC",
@@ -918,13 +928,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ACGC/ratios"
     ],
     "par_value": 4.5,
-    "market_cap": 2224453400.4,
-    "book_value_per_share": 7.3,
-    "pb_ratio": 1.15,
-    "trailing_eps": 0.04,
-    "pe_ratio": 5.16,
-    "roe_pct": 0.52,
-    "fetched_at": 1777500081.6706219
+    "market_cap": 2444250581.63,
+    "book_value_per_share": 9.0,
+    "pb_ratio": 0.87,
+    "trailing_eps": 0.67,
+    "pe_ratio": 11.25,
+    "roe_pct": 7.39,
+    "fetched_at": 1783106207.8707905
   },
   "ALCN": {
     "ticker": "ALCN",
@@ -933,13 +943,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ALCN/ratios"
     ],
     "par_value": 0.5,
-    "market_cap": 89832130020.0,
+    "market_cap": 84439222712.0,
     "book_value_per_share": 2.58,
-    "pb_ratio": 4.78,
+    "pb_ratio": 7.76,
     "trailing_eps": 2.02,
-    "pe_ratio": 8.79,
+    "pe_ratio": 14.06,
     "roe_pct": 78.36,
-    "fetched_at": 1777500082.656065
+    "fetched_at": 1783105716.452348
   },
   "CSAG": {
     "ticker": "CSAG",
@@ -948,13 +958,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/CSAG/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 9114000000.0,
+    "market_cap": 9774000000.0,
     "book_value_per_share": 5.17,
     "pb_ratio": 6.43,
     "trailing_eps": 11.56,
     "pe_ratio": 66.39,
     "roe_pct": 223.43,
-    "fetched_at": 1777500083.7171056
+    "fetched_at": 1783105682.5856576
   },
   "BINV": {
     "ticker": "BINV",
@@ -963,13 +973,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/BINV/ratios"
     ],
     "par_value": 5.0,
-    "market_cap": 8734511440.0,
-    "book_value_per_share": 25.5,
-    "pb_ratio": 0.99,
-    "trailing_eps": 1.4,
-    "pe_ratio": 5.08,
-    "roe_pct": 5.48,
-    "fetched_at": 1777500084.9352999
+    "market_cap": 10053422667.44,
+    "book_value_per_share": 28.23,
+    "pb_ratio": 1.48,
+    "trailing_eps": 5.57,
+    "pe_ratio": 31.84,
+    "roe_pct": 19.74,
+    "fetched_at": 1783105887.247455
   },
   "ETRS": {
     "ticker": "ETRS",
@@ -978,13 +988,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/ETRS/ratios"
     ],
     "par_value": 1.0,
-    "market_cap": 1196999375.0,
-    "book_value_per_share": 4.23,
-    "pb_ratio": 1.53,
-    "trailing_eps": 0.35,
-    "pe_ratio": 74.84,
-    "roe_pct": 8.25,
-    "fetched_at": 1777500085.9477193
+    "market_cap": 1651141250.0,
+    "book_value_per_share": 5.35,
+    "pb_ratio": 1.08,
+    "trailing_eps": 1.25,
+    "pe_ratio": 7.99,
+    "roe_pct": 23.4,
+    "fetched_at": 1783105904.8894181
   },
   "EXPA": {
     "ticker": "EXPA",
@@ -993,12 +1003,2589 @@
       "https://english.mubasher.info/markets/EGX/stocks/EXPA/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 23759200000.0,
-    "book_value_per_share": 20.14,
-    "pb_ratio": 1.01,
-    "trailing_eps": 5.47,
-    "pe_ratio": 3.77,
-    "roe_pct": 27.14,
-    "fetched_at": 1777500087.0053644
+    "market_cap": 24983200000.0,
+    "book_value_per_share": 19.46,
+    "pb_ratio": 0.89,
+    "trailing_eps": 8.4,
+    "pe_ratio": 3.63,
+    "roe_pct": 43.16,
+    "fetched_at": 1783105706.1687124
+  },
+  "INFI": {
+    "ticker": "INFI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/INFI",
+      "https://english.mubasher.info/markets/EGX/stocks/INFI/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 1358881975.0,
+    "book_value_per_share": 12.72,
+    "pb_ratio": 5.16,
+    "trailing_eps": 3.58,
+    "pe_ratio": 17.31,
+    "roe_pct": 28.16,
+    "fetched_at": 1783105567.0883026
+  },
+  "TAQA": {
+    "ticker": "TAQA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/TAQA",
+      "https://english.mubasher.info/markets/EGX/stocks/TAQA/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 19636177176.0,
+    "book_value_per_share": 3.08,
+    "pb_ratio": 4.51,
+    "trailing_eps": 0.66,
+    "pe_ratio": 17.12,
+    "roe_pct": 21.59,
+    "fetched_at": 1783105571.8818479
+  },
+  "COPR": {
+    "ticker": "COPR",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/COPR",
+      "https://english.mubasher.info/markets/EGX/stocks/COPR/ratios"
+    ],
+    "par_value": 0.15,
+    "market_cap": 190248173.28,
+    "book_value_per_share": 0.15,
+    "pb_ratio": 5.69,
+    "trailing_eps": 0.0,
+    "pe_ratio": 65.79,
+    "roe_pct": 1.4,
+    "fetched_at": 1783105578.5681047
+  },
+  "AFMC": {
+    "ticker": "AFMC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/AFMC",
+      "https://english.mubasher.info/markets/EGX/stocks/AFMC/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 2284005064.32,
+    "book_value_per_share": 8.48,
+    "pb_ratio": 6.45,
+    "trailing_eps": 4.77,
+    "pe_ratio": 31.69,
+    "roe_pct": 56.27,
+    "fetched_at": 1783105583.8168223
+  },
+  "SCFM": {
+    "ticker": "SCFM",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SCFM",
+      "https://english.mubasher.info/markets/EGX/stocks/SCFM/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 1428960000.0,
+    "book_value_per_share": 1.23,
+    "pb_ratio": 15.09,
+    "trailing_eps": 6.67,
+    "pe_ratio": 11.62,
+    "roe_pct": 543.78,
+    "fetched_at": 1783105589.6345758
+  },
+  "NHPS": {
+    "ticker": "NHPS",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/NHPS",
+      "https://english.mubasher.info/markets/EGX/stocks/NHPS/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 1091360000.0,
+    "book_value_per_share": 13.35,
+    "pb_ratio": 3.75,
+    "trailing_eps": 1.42,
+    "pe_ratio": 17.11,
+    "roe_pct": 10.67,
+    "fetched_at": 1783105593.4002135
+  },
+  "GOUR": {
+    "ticker": "GOUR",
+    "sources": [],
+    "fetched_at": 1783105597.3007889
+  },
+  "ADPC": {
+    "ticker": "ADPC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ADPC",
+      "https://english.mubasher.info/markets/EGX/stocks/ADPC/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 1725000000.0,
+    "book_value_per_share": 1.89,
+    "pb_ratio": 2.71,
+    "trailing_eps": 0.27,
+    "pe_ratio": 8.34,
+    "roe_pct": 14.41,
+    "fetched_at": 1783105599.018056
+  },
+  "ADRI": {
+    "ticker": "ADRI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ADRI",
+      "https://english.mubasher.info/markets/EGX/stocks/ADRI/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 519297783.04,
+    "book_value_per_share": 0.54,
+    "pb_ratio": 2.23,
+    "trailing_eps": 0.01,
+    "pe_ratio": 292.27,
+    "roe_pct": 1.62,
+    "fetched_at": 1783105601.5005708
+  },
+  "AIDC": {
+    "ticker": "AIDC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/AIDC",
+      "https://english.mubasher.info/markets/EGX/stocks/AIDC/ratios"
+    ],
+    "par_value": 0.11,
+    "market_cap": 1039271841.57,
+    "fetched_at": 1783105604.1430318
+  },
+  "MOSC": {
+    "ticker": "MOSC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MOSC",
+      "https://english.mubasher.info/markets/EGX/stocks/MOSC/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 1606320000.0,
+    "book_value_per_share": 21.83,
+    "pb_ratio": 8.47,
+    "trailing_eps": 38.07,
+    "pe_ratio": 19.42,
+    "roe_pct": 174.39,
+    "fetched_at": 1783105606.4004445
+  },
+  "FTNS": {
+    "ticker": "FTNS",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/FTNS",
+      "https://english.mubasher.info/markets/EGX/stocks/FTNS/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 188945000.0,
+    "book_value_per_share": 0.46,
+    "pb_ratio": 2.91,
+    "trailing_eps": 0.02,
+    "pe_ratio": 36.91,
+    "roe_pct": 3.4,
+    "fetched_at": 1783105609.5797033
+  },
+  "AXPH": {
+    "ticker": "AXPH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/AXPH",
+      "https://english.mubasher.info/markets/EGX/stocks/AXPH/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 6061750000.0,
+    "book_value_per_share": 217.12,
+    "pb_ratio": 4.2,
+    "trailing_eps": 132.0,
+    "pe_ratio": 6.01,
+    "roe_pct": 60.8,
+    "fetched_at": 1783105611.6374533
+  },
+  "MPRC": {
+    "ticker": "MPRC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MPRC",
+      "https://english.mubasher.info/markets/EGX/stocks/MPRC/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 7323510600.0,
+    "book_value_per_share": 23.9,
+    "pb_ratio": 1.27,
+    "trailing_eps": 8.22,
+    "pe_ratio": 7.0,
+    "roe_pct": 34.39,
+    "fetched_at": 1783105615.196068
+  },
+  "EPCO": {
+    "ticker": "EPCO",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EPCO",
+      "https://english.mubasher.info/markets/EGX/stocks/EPCO/ratios"
+    ],
+    "par_value": 2.0,
+    "market_cap": 370359000.0,
+    "book_value_per_share": 1.19,
+    "pb_ratio": 4.35,
+    "trailing_eps": 0.24,
+    "pe_ratio": 47.43,
+    "roe_pct": 19.94,
+    "fetched_at": 1783105617.1054432
+  },
+  "EPPK": {
+    "ticker": "EPPK",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EPPK",
+      "https://english.mubasher.info/markets/EGX/stocks/EPPK/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 116563200.0,
+    "book_value_per_share": 10.61,
+    "pb_ratio": 5.14,
+    "trailing_eps": 42.39,
+    "pe_ratio": 4.01,
+    "roe_pct": 399.55,
+    "fetched_at": 1783105619.745354
+  },
+  "AALR": {
+    "ticker": "AALR",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/AALR",
+      "https://english.mubasher.info/markets/EGX/stocks/AALR/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 1342622400.0,
+    "book_value_per_share": 75.52,
+    "pb_ratio": 2.03,
+    "trailing_eps": 19.48,
+    "pe_ratio": 13.26,
+    "roe_pct": 25.79,
+    "fetched_at": 1783105623.1722944
+  },
+  "EEII": {
+    "ticker": "EEII",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EEII",
+      "https://english.mubasher.info/markets/EGX/stocks/EEII/ratios"
+    ],
+    "par_value": 0.38,
+    "market_cap": 553065553.2,
+    "book_value_per_share": 0.82,
+    "pb_ratio": 2.29,
+    "trailing_eps": 0.04,
+    "pe_ratio": 49.03,
+    "roe_pct": 4.67,
+    "fetched_at": 1783105632.081548
+  },
+  "TYCN": {
+    "ticker": "TYCN",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/TYCN",
+      "https://english.mubasher.info/markets/EGX/stocks/TYCN/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 143739750.0,
+    "book_value_per_share": 1.59,
+    "pb_ratio": 50.88,
+    "trailing_eps": 0.75,
+    "pe_ratio": 108.02,
+    "roe_pct": 47.11,
+    "fetched_at": 1783105634.5017715
+  },
+  "AMPI": {
+    "ticker": "AMPI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/AMPI",
+      "https://english.mubasher.info/markets/EGX/stocks/AMPI/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 77802472.8,
+    "book_value_per_share": 0.77,
+    "pb_ratio": 3.98,
+    "trailing_eps": 0.23,
+    "pe_ratio": 13.54,
+    "roe_pct": 29.4,
+    "fetched_at": 1783105639.7679198
+  },
+  "EDFM": {
+    "ticker": "EDFM",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EDFM",
+      "https://english.mubasher.info/markets/EGX/stocks/EDFM/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 1944000000.0,
+    "book_value_per_share": 69.69,
+    "pb_ratio": 3.36,
+    "trailing_eps": 28.84,
+    "pe_ratio": 10.08,
+    "roe_pct": 41.38,
+    "fetched_at": 1783105641.834279
+  },
+  "SNFI": {
+    "ticker": "SNFI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SNFI",
+      "https://english.mubasher.info/markets/EGX/stocks/SNFI/ratios"
+    ],
+    "par_value": 2.11,
+    "market_cap": 205400286.0,
+    "book_value_per_share": 12195.36,
+    "pb_ratio": 0.0,
+    "trailing_eps": 0.0,
+    "fetched_at": 1783105650.9506495
+  },
+  "EGREF": {
+    "ticker": "EGREF",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EGREF",
+      "https://english.mubasher.info/markets/EGX/stocks/EGREF/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 106589804.3,
+    "fetched_at": 1783105656.7786455
+  },
+  "ELSH": {
+    "ticker": "ELSH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ELSH",
+      "https://english.mubasher.info/markets/EGX/stocks/ELSH/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 2649900000.0,
+    "book_value_per_share": 4.44,
+    "pb_ratio": 1.89,
+    "trailing_eps": 0.14,
+    "pe_ratio": 58.48,
+    "roe_pct": 3.22,
+    "fetched_at": 1783105661.585848
+  },
+  "DTPP": {
+    "ticker": "DTPP",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/DTPP",
+      "https://english.mubasher.info/markets/EGX/stocks/DTPP/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 1115856000.0,
+    "book_value_per_share": 44.11,
+    "pb_ratio": 2.6,
+    "trailing_eps": 17.79,
+    "pe_ratio": 7.86,
+    "roe_pct": 40.33,
+    "fetched_at": 1783105664.3514657
+  },
+  "BONY": {
+    "ticker": "BONY",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/BONY",
+      "https://english.mubasher.info/markets/EGX/stocks/BONY/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 8317487742.88,
+    "book_value_per_share": 7.54,
+    "pb_ratio": 0.58,
+    "trailing_eps": 1.39,
+    "pe_ratio": 3.53,
+    "roe_pct": 18.48,
+    "fetched_at": 1783105666.9514675
+  },
+  "VLMR": {
+    "ticker": "VLMR",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/VLMR",
+      "https://english.mubasher.info/markets/EGX/stocks/VLMR/ratios"
+    ],
+    "par_value": 0.25,
+    "market_cap": 553339647.13,
+    "book_value_per_share": 0.6,
+    "pb_ratio": 1.14,
+    "trailing_eps": 0.16,
+    "pe_ratio": 3.6,
+    "roe_pct": 27.66,
+    "fetched_at": 1783105668.9798613
+  },
+  "ARVA": {
+    "ticker": "ARVA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ARVA",
+      "https://english.mubasher.info/markets/EGX/stocks/ARVA/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 826618940.61,
+    "book_value_per_share": 1.55,
+    "pb_ratio": 4.13,
+    "trailing_eps": 0.06,
+    "pe_ratio": 180.08,
+    "roe_pct": 3.56,
+    "fetched_at": 1783105671.6461103
+  },
+  "IDRE": {
+    "ticker": "IDRE",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/IDRE",
+      "https://english.mubasher.info/markets/EGX/stocks/IDRE/ratios"
+    ],
+    "par_value": 4.0,
+    "market_cap": 1607989612.5,
+    "book_value_per_share": 4.15,
+    "pb_ratio": 8.29,
+    "trailing_eps": 1.08,
+    "pe_ratio": 60.69,
+    "roe_pct": 25.97,
+    "fetched_at": 1783105674.5456262
+  },
+  "RTVC": {
+    "ticker": "RTVC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/RTVC",
+      "https://english.mubasher.info/markets/EGX/stocks/RTVC/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 935363711.27,
+    "book_value_per_share": 1.18,
+    "pb_ratio": 0.45,
+    "trailing_eps": 8.05,
+    "pe_ratio": 8.15,
+    "roe_pct": 684.91,
+    "fetched_at": 1783105677.79089
+  },
+  "EOSB": {
+    "ticker": "EOSB",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EOSB",
+      "https://english.mubasher.info/markets/EGX/stocks/EOSB/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 45725000.0,
+    "book_value_per_share": 0.19,
+    "pb_ratio": 5.83,
+    "trailing_eps": 0.07,
+    "pe_ratio": 14.22,
+    "roe_pct": 33.69,
+    "fetched_at": 1783105680.0459225
+  },
+  "EGSA": {
+    "ticker": "EGSA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EGSA",
+      "https://english.mubasher.info/markets/EGX/stocks/EGSA/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 326220360.16,
+    "book_value_per_share": 17.99,
+    "pb_ratio": 0.42,
+    "trailing_eps": 0.9,
+    "pe_ratio": 4.44,
+    "roe_pct": 4.98,
+    "fetched_at": 1783105684.6083827
+  },
+  "ELKA": {
+    "ticker": "ELKA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ELKA",
+      "https://english.mubasher.info/markets/EGX/stocks/ELKA/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 1453581395.66,
+    "book_value_per_share": 5.82,
+    "pb_ratio": 0.42,
+    "trailing_eps": 0.06,
+    "pe_ratio": 26.7,
+    "roe_pct": 1.08,
+    "fetched_at": 1783105686.867438
+  },
+  "OIH": {
+    "ticker": "OIH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/OIH",
+      "https://english.mubasher.info/markets/EGX/stocks/OIH/ratios"
+    ],
+    "par_value": 0.11,
+    "market_cap": 7396423774.2,
+    "book_value_per_share": 0.56,
+    "pb_ratio": 2.0,
+    "trailing_eps": 0.23,
+    "pe_ratio": 4.83,
+    "roe_pct": 41.43,
+    "fetched_at": 1783105689.3342876
+  },
+  "APSW": {
+    "ticker": "APSW",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/APSW",
+      "https://english.mubasher.info/markets/EGX/stocks/APSW/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 810388744.0,
+    "book_value_per_share": 0.59,
+    "pb_ratio": 8.68,
+    "trailing_eps": 0.41,
+    "pe_ratio": 18.02,
+    "roe_pct": 70.32,
+    "fetched_at": 1783105693.1240737
+  },
+  "POCO": {
+    "ticker": "POCO",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/POCO",
+      "https://english.mubasher.info/markets/EGX/stocks/POCO/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 1000000000.0,
+    "book_value_per_share": 30.69,
+    "trailing_eps": 91.35,
+    "roe_pct": 297.65,
+    "fetched_at": 1783105695.3518963
+  },
+  "MBSC": {
+    "ticker": "MBSC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MBSC",
+      "https://english.mubasher.info/markets/EGX/stocks/MBSC/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 14805896621.24,
+    "book_value_per_share": 93.68,
+    "pb_ratio": 4.47,
+    "trailing_eps": 42.96,
+    "pe_ratio": 5.04,
+    "roe_pct": 45.86,
+    "fetched_at": 1783105702.018615
+  },
+  "SCTS": {
+    "ticker": "SCTS",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SCTS",
+      "https://english.mubasher.info/markets/EGX/stocks/SCTS/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 56959758000.0,
+    "book_value_per_share": 46.67,
+    "pb_ratio": 9.07,
+    "trailing_eps": 11.12,
+    "pe_ratio": 17.71,
+    "roe_pct": 23.83,
+    "fetched_at": 1783105708.5687933
+  },
+  "NCCW": {
+    "ticker": "NCCW",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/NCCW",
+      "https://english.mubasher.info/markets/EGX/stocks/NCCW/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 1308300000.0,
+    "book_value_per_share": 1.61,
+    "pb_ratio": 3.48,
+    "trailing_eps": 0.03,
+    "pe_ratio": 127.08,
+    "roe_pct": 1.69,
+    "fetched_at": 1783105711.2181098
+  },
+  "SPIN": {
+    "ticker": "SPIN",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SPIN",
+      "https://english.mubasher.info/markets/EGX/stocks/SPIN/ratios"
+    ],
+    "par_value": 2.0,
+    "market_cap": 5111415308.87,
+    "book_value_per_share": 2.39,
+    "pb_ratio": 3.56,
+    "trailing_eps": 0.28,
+    "pe_ratio": 26.89,
+    "roe_pct": 11.84,
+    "fetched_at": 1783105714.268756
+  },
+  "AMES": {
+    "ticker": "AMES",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/AMES",
+      "https://english.mubasher.info/markets/EGX/stocks/AMES/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 7538432616.0,
+    "book_value_per_share": 2.29,
+    "pb_ratio": 20.25,
+    "trailing_eps": 0.32,
+    "pe_ratio": 101.56,
+    "roe_pct": 13.82,
+    "fetched_at": 1783105718.5856874
+  },
+  "HDST": {
+    "ticker": "HDST",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/HDST",
+      "https://english.mubasher.info/markets/EGX/stocks/HDST/ratios"
+    ],
+    "par_value": 0.1,
+    "fetched_at": 1783105722.2523284
+  },
+  "ISMQ": {
+    "ticker": "ISMQ",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ISMQ",
+      "https://english.mubasher.info/markets/EGX/stocks/ISMQ/ratios"
+    ],
+    "par_value": 0.2,
+    "market_cap": 9143524522.08,
+    "book_value_per_share": 0.95,
+    "pb_ratio": 12.75,
+    "trailing_eps": 2.86,
+    "pe_ratio": 9.46,
+    "roe_pct": 299.52,
+    "fetched_at": 1783105724.5856
+  },
+  "ATLC": {
+    "ticker": "ATLC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ATLC",
+      "https://english.mubasher.info/markets/EGX/stocks/ATLC/ratios"
+    ],
+    "par_value": 2.5,
+    "market_cap": 2108000000.0,
+    "book_value_per_share": 3.23,
+    "pb_ratio": 1.3,
+    "trailing_eps": 0.42,
+    "pe_ratio": 6.9,
+    "roe_pct": 12.87,
+    "fetched_at": 1783105727.6188838
+  },
+  "GEOS": {
+    "ticker": "GEOS",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GEOS",
+      "https://english.mubasher.info/markets/EGX/stocks/GEOS/ratios"
+    ],
+    "par_value": 1.0,
+    "fetched_at": 1783105730.6857486
+  },
+  "ARAB": {
+    "ticker": "ARAB",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ARAB",
+      "https://english.mubasher.info/markets/EGX/stocks/ARAB/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 2891816385.12,
+    "book_value_per_share": 0.18,
+    "pb_ratio": 1.05,
+    "trailing_eps": 0.03,
+    "pe_ratio": 6.2,
+    "roe_pct": 14.33,
+    "fetched_at": 1783105733.3190835
+  },
+  "MILS": {
+    "ticker": "MILS",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MILS",
+      "https://english.mubasher.info/markets/EGX/stocks/MILS/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 1387148000.0,
+    "book_value_per_share": 23.73,
+    "pb_ratio": 3.71,
+    "trailing_eps": 12.68,
+    "pe_ratio": 38.34,
+    "roe_pct": 53.44,
+    "fetched_at": 1783105736.052518
+  },
+  "EGS72XL1C014": {
+    "ticker": "EGS72XL1C014",
+    "sources": [],
+    "fetched_at": 1783105739.4021916
+  },
+  "NIPH": {
+    "ticker": "NIPH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/NIPH",
+      "https://english.mubasher.info/markets/EGX/stocks/NIPH/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 9000000000.0,
+    "book_value_per_share": 22.07,
+    "pb_ratio": 4.58,
+    "trailing_eps": 5.52,
+    "pe_ratio": 18.7,
+    "roe_pct": 25.01,
+    "fetched_at": 1783105742.1026332
+  },
+  "FCMD": {
+    "ticker": "FCMD",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/FCMD",
+      "https://english.mubasher.info/markets/EGX/stocks/FCMD/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 358141853.16,
+    "book_value_per_share": 0.53,
+    "pb_ratio": 10.65,
+    "trailing_eps": 0.22,
+    "pe_ratio": 26.31,
+    "roe_pct": 40.48,
+    "fetched_at": 1783105748.4362783
+  },
+  "UTOP": {
+    "ticker": "UTOP",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/UTOP",
+      "https://english.mubasher.info/markets/EGX/stocks/UTOP/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 248700000.0,
+    "book_value_per_share": 16.22,
+    "pb_ratio": 2.52,
+    "trailing_eps": 8.76,
+    "pe_ratio": 7.43,
+    "roe_pct": 54.04,
+    "fetched_at": 1783105750.6362026
+  },
+  "GGRN": {
+    "ticker": "GGRN",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GGRN",
+      "https://english.mubasher.info/markets/EGX/stocks/GGRN/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 1974000000.0,
+    "book_value_per_share": 0.24,
+    "pb_ratio": 9.95,
+    "trailing_eps": 0.07,
+    "pe_ratio": 79.9,
+    "roe_pct": 29.13,
+    "fetched_at": 1783105752.6194682
+  },
+  "SEIG": {
+    "ticker": "SEIG",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SEIG",
+      "https://english.mubasher.info/markets/EGX/stocks/SEIG/ratios"
+    ],
+    "par_value": 2.68,
+    "market_cap": 476350000.0,
+    "book_value_per_share": 139.66,
+    "pb_ratio": 0.02,
+    "trailing_eps": 15.29,
+    "pe_ratio": 0.18,
+    "roe_pct": 10.95,
+    "fetched_at": 1783105754.5859842
+  },
+  "TRTO": {
+    "ticker": "TRTO",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/TRTO",
+      "https://english.mubasher.info/markets/EGX/stocks/TRTO/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 3300000.0,
+    "book_value_per_share": 0.91,
+    "pb_ratio": 2.2,
+    "trailing_eps": 0.07,
+    "pe_ratio": 15.43,
+    "roe_pct": 7.72,
+    "fetched_at": 1783105756.8530998
+  },
+  "IBCT": {
+    "ticker": "IBCT",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/IBCT",
+      "https://english.mubasher.info/markets/EGX/stocks/IBCT/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 328346600.0,
+    "book_value_per_share": 2.92,
+    "pb_ratio": 3.16,
+    "trailing_eps": 4.31,
+    "pe_ratio": 31.06,
+    "roe_pct": 147.8,
+    "fetched_at": 1783105761.3527493
+  },
+  "APPC": {
+    "ticker": "APPC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/APPC",
+      "https://english.mubasher.info/markets/EGX/stocks/APPC/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 11497784.32,
+    "book_value_per_share": 2.39,
+    "pb_ratio": 0.98,
+    "trailing_eps": 0.0,
+    "fetched_at": 1783105763.7714972
+  },
+  "CEFM": {
+    "ticker": "CEFM",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/CEFM",
+      "https://english.mubasher.info/markets/EGX/stocks/CEFM/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 1472293500.0,
+    "book_value_per_share": 30.66,
+    "pb_ratio": 2.93,
+    "trailing_eps": 7.42,
+    "pe_ratio": 13.88,
+    "roe_pct": 24.21,
+    "fetched_at": 1783105765.8527715
+  },
+  "EGS385S1C012": {
+    "ticker": "EGS385S1C012",
+    "sources": [],
+    "fetched_at": 1783105770.7361705
+  },
+  "GPIM": {
+    "ticker": "GPIM",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GPIM",
+      "https://english.mubasher.info/markets/EGX/stocks/GPIM/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 1832727265.6,
+    "book_value_per_share": 0.12,
+    "pb_ratio": 2.14,
+    "trailing_eps": 0.01,
+    "pe_ratio": 17.9,
+    "roe_pct": 10.28,
+    "fetched_at": 1783105774.5531178
+  },
+  "OCPH": {
+    "ticker": "OCPH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/OCPH",
+      "https://english.mubasher.info/markets/EGX/stocks/OCPH/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 4278240000.0,
+    "book_value_per_share": 53.46,
+    "pb_ratio": 2.37,
+    "trailing_eps": 11.83,
+    "pe_ratio": 9.09,
+    "roe_pct": 22.13,
+    "fetched_at": 1783105776.4027598
+  },
+  "EEP": {
+    "ticker": "EEP",
+    "sources": [],
+    "fetched_at": 1783105778.5866706
+  },
+  "EGS370O1C013": {
+    "ticker": "EGS370O1C013",
+    "sources": [],
+    "fetched_at": 1783105779.8527257
+  },
+  "DGTZ": {
+    "ticker": "DGTZ",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/DGTZ",
+      "https://english.mubasher.info/markets/EGX/stocks/DGTZ/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 271080000.0,
+    "book_value_per_share": 1.52,
+    "pb_ratio": 6.06,
+    "trailing_eps": 0.27,
+    "pe_ratio": 17.58,
+    "roe_pct": 17.47,
+    "fetched_at": 1783105781.335717
+  },
+  "MIPH": {
+    "ticker": "MIPH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MIPH",
+      "https://english.mubasher.info/markets/EGX/stocks/MIPH/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 8003029440.0,
+    "book_value_per_share": 362.87,
+    "pb_ratio": 0.51,
+    "trailing_eps": 0.64,
+    "pe_ratio": 186.73,
+    "roe_pct": 0.18,
+    "fetched_at": 1783105783.1529248
+  },
+  "INEG": {
+    "ticker": "INEG",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/INEG",
+      "https://english.mubasher.info/markets/EGX/stocks/INEG/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 206500000.0,
+    "book_value_per_share": 0.09,
+    "pb_ratio": 4.17,
+    "trailing_eps": 0.0,
+    "pe_ratio": 22.91,
+    "roe_pct": 3.68,
+    "fetched_at": 1783105788.702997
+  },
+  "ACTF": {
+    "ticker": "ACTF",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ACTF",
+      "https://english.mubasher.info/markets/EGX/stocks/ACTF/ratios"
+    ],
+    "par_value": 0.25,
+    "market_cap": 2994324738.72,
+    "book_value_per_share": 1.83,
+    "pb_ratio": 1.63,
+    "trailing_eps": 0.74,
+    "pe_ratio": 2.08,
+    "roe_pct": 40.39,
+    "fetched_at": 1783105797.869848
+  },
+  "LUTS": {
+    "ticker": "LUTS",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/LUTS",
+      "https://english.mubasher.info/markets/EGX/stocks/LUTS/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 775950000.0,
+    "book_value_per_share": 0.12,
+    "pb_ratio": 5.38,
+    "trailing_eps": 0.05,
+    "pe_ratio": 23.78,
+    "roe_pct": 38.97,
+    "fetched_at": 1783105801.8369277
+  },
+  "GGCC": {
+    "ticker": "GGCC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GGCC",
+      "https://english.mubasher.info/markets/EGX/stocks/GGCC/ratios"
+    ],
+    "par_value": 0.2,
+    "market_cap": 706928005.35,
+    "book_value_per_share": 0.47,
+    "pb_ratio": 1.17,
+    "trailing_eps": 0.06,
+    "pe_ratio": 82.13,
+    "roe_pct": 12.56,
+    "fetched_at": 1783105806.9198139
+  },
+  "EGAS": {
+    "ticker": "EGAS",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EGAS",
+      "https://english.mubasher.info/markets/EGX/stocks/EGAS/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 7157754883.09,
+    "book_value_per_share": 31.12,
+    "pb_ratio": 1.37,
+    "trailing_eps": 3.06,
+    "pe_ratio": 99.93,
+    "roe_pct": 9.83,
+    "fetched_at": 1783105814.6035707
+  },
+  "CANA": {
+    "ticker": "CANA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/CANA",
+      "https://english.mubasher.info/markets/EGX/stocks/CANA/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 23231000000.0,
+    "book_value_per_share": 29.11,
+    "pb_ratio": 1.31,
+    "trailing_eps": 8.44,
+    "pe_ratio": 3.1,
+    "roe_pct": 28.98,
+    "fetched_at": 1783105817.720064
+  },
+  "TALM": {
+    "ticker": "TALM",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/TALM",
+      "https://english.mubasher.info/markets/EGX/stocks/TALM/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 11537950000.0,
+    "book_value_per_share": 2.68,
+    "trailing_eps": 1.84,
+    "roe_pct": 68.68,
+    "fetched_at": 1783105822.8034925
+  },
+  "PRDC": {
+    "ticker": "PRDC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/PRDC",
+      "https://english.mubasher.info/markets/EGX/stocks/PRDC/ratios"
+    ],
+    "par_value": 4.5,
+    "market_cap": 8031641727.2,
+    "book_value_per_share": 6.75,
+    "pb_ratio": 0.43,
+    "trailing_eps": 0.77,
+    "pe_ratio": 2.02,
+    "roe_pct": 11.46,
+    "fetched_at": 1783105826.7869124
+  },
+  "KABO": {
+    "ticker": "KABO",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/KABO",
+      "https://english.mubasher.info/markets/EGX/stocks/KABO/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 3585805890.35,
+    "book_value_per_share": 1.2,
+    "pb_ratio": 7.17,
+    "trailing_eps": 0.34,
+    "pe_ratio": 152.85,
+    "roe_pct": 28.38,
+    "fetched_at": 1783105836.6035554
+  },
+  "MHOT": {
+    "ticker": "MHOT",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MHOT",
+      "https://english.mubasher.info/markets/EGX/stocks/MHOT/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 13456080000.0,
+    "book_value_per_share": 9.42,
+    "pb_ratio": 3.05,
+    "trailing_eps": 4.68,
+    "pe_ratio": 7.71,
+    "roe_pct": 49.65,
+    "fetched_at": 1783105840.3870146
+  },
+  "RUBX": {
+    "ticker": "RUBX",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/RUBX",
+      "https://english.mubasher.info/markets/EGX/stocks/RUBX/ratios"
+    ],
+    "par_value": 2.5,
+    "market_cap": 712839731.48,
+    "book_value_per_share": 2.76,
+    "pb_ratio": 3.24,
+    "trailing_eps": 0.21,
+    "pe_ratio": 29.06,
+    "roe_pct": 7.73,
+    "fetched_at": 1783105843.2374902
+  },
+  "MFSC": {
+    "ticker": "MFSC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MFSC",
+      "https://english.mubasher.info/markets/EGX/stocks/MFSC/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 4638750000.0,
+    "book_value_per_share": 4.56,
+    "pb_ratio": 8.48,
+    "trailing_eps": 5.21,
+    "pe_ratio": 7.77,
+    "roe_pct": 114.27,
+    "fetched_at": 1783105846.3203743
+  },
+  "EBSC": {
+    "ticker": "EBSC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EBSC",
+      "https://english.mubasher.info/markets/EGX/stocks/EBSC/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 1097593455.0,
+    "book_value_per_share": 0.39,
+    "pb_ratio": 4.14,
+    "trailing_eps": 0.03,
+    "pe_ratio": 48.91,
+    "roe_pct": 7.42,
+    "fetched_at": 1783105850.4697194
+  },
+  "MBEG": {
+    "ticker": "MBEG",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MBEG",
+      "https://english.mubasher.info/markets/EGX/stocks/MBEG/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 765617155.38,
+    "book_value_per_share": 0.89,
+    "pb_ratio": 3.91,
+    "trailing_eps": 0.1,
+    "pe_ratio": 16.36,
+    "roe_pct": 11.03,
+    "fetched_at": 1783105856.3204842
+  },
+  "RACC": {
+    "ticker": "RACC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/RACC",
+      "https://english.mubasher.info/markets/EGX/stocks/RACC/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 2020461421.95,
+    "book_value_per_share": 6.2,
+    "pb_ratio": 1.55,
+    "trailing_eps": 1.57,
+    "pe_ratio": 5.52,
+    "roe_pct": 25.32,
+    "fetched_at": 1783105858.5706284
+  },
+  "MEPA": {
+    "ticker": "MEPA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MEPA",
+      "https://english.mubasher.info/markets/EGX/stocks/MEPA/ratios"
+    ],
+    "par_value": 0.2,
+    "market_cap": 1034900000.0,
+    "book_value_per_share": 0.34,
+    "pb_ratio": 5.6,
+    "trailing_eps": 0.15,
+    "pe_ratio": 30.77,
+    "roe_pct": 44.12,
+    "fetched_at": 1783105861.1372652
+  },
+  "SNFC": {
+    "ticker": "SNFC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SNFC",
+      "https://english.mubasher.info/markets/EGX/stocks/SNFC/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 1980239609.6,
+    "book_value_per_share": 0.4,
+    "pb_ratio": 30.82,
+    "trailing_eps": 0.02,
+    "pe_ratio": 2139.34,
+    "roe_pct": 5.7,
+    "fetched_at": 1783105864.487252
+  },
+  "TORA": {
+    "ticker": "TORA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/TORA",
+      "https://english.mubasher.info/markets/EGX/stocks/TORA/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 5006694000.0,
+    "book_value_per_share": 14.34,
+    "pb_ratio": 0.48,
+    "trailing_eps": 3.17,
+    "pe_ratio": 2.17,
+    "roe_pct": 22.11,
+    "fetched_at": 1783105867.9374542
+  },
+  "CID": {
+    "ticker": "CID",
+    "sources": [],
+    "fetched_at": 1783105870.6709828
+  },
+  "ELNA": {
+    "ticker": "ELNA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ELNA",
+      "https://english.mubasher.info/markets/EGX/stocks/ELNA/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 298886264.0,
+    "book_value_per_share": 3.41,
+    "pb_ratio": 8.05,
+    "trailing_eps": 0.25,
+    "pe_ratio": 99.13,
+    "roe_pct": 7.29,
+    "fetched_at": 1783105873.121324
+  },
+  "ECAP": {
+    "ticker": "ECAP",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ECAP",
+      "https://english.mubasher.info/markets/EGX/stocks/ECAP/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 1745367025.36,
+    "book_value_per_share": 8.97,
+    "pb_ratio": 2.27,
+    "trailing_eps": 6.38,
+    "pe_ratio": 15.74,
+    "roe_pct": 71.14,
+    "fetched_at": 1783105875.6575344
+  },
+  "SPMD": {
+    "ticker": "SPMD",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SPMD",
+      "https://english.mubasher.info/markets/EGX/stocks/SPMD/ratios"
+    ],
+    "par_value": 0.2,
+    "market_cap": 715398187.45,
+    "book_value_per_share": 0.06,
+    "trailing_eps": 0.22,
+    "roe_pct": 345.15,
+    "fetched_at": 1783105882.8571494
+  },
+  "CICH": {
+    "ticker": "CICH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/CICH",
+      "https://english.mubasher.info/markets/EGX/stocks/CICH/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 11870000000.0,
+    "book_value_per_share": 8.19,
+    "pb_ratio": 1.32,
+    "trailing_eps": 1.76,
+    "pe_ratio": 6.46,
+    "roe_pct": 21.5,
+    "fetched_at": 1783105884.7283025
+  },
+  "ELWA": {
+    "ticker": "ELWA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ELWA",
+      "https://english.mubasher.info/markets/EGX/stocks/ELWA/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 360360000.0,
+    "book_value_per_share": 1.84,
+    "pb_ratio": 0.73,
+    "trailing_eps": 0.03,
+    "pe_ratio": 6.92,
+    "roe_pct": 1.85,
+    "fetched_at": 1783105889.574007
+  },
+  "EGAL": {
+    "ticker": "EGAL",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EGAL",
+      "https://english.mubasher.info/markets/EGX/stocks/EGAL/ratios"
+    ],
+    "par_value": 4.0,
+    "market_cap": 117925500000.0,
+    "book_value_per_share": 37.74,
+    "pb_ratio": 3.3,
+    "trailing_eps": 39.73,
+    "pe_ratio": 3.86,
+    "roe_pct": 105.27,
+    "fetched_at": 1783105892.3857925
+  },
+  "CCRS": {
+    "ticker": "CCRS",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/CCRS",
+      "https://english.mubasher.info/markets/EGX/stocks/CCRS/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 487200000.0,
+    "book_value_per_share": 0.51,
+    "pb_ratio": 2.89,
+    "trailing_eps": 0.04,
+    "pe_ratio": 1371.43,
+    "roe_pct": 7.52,
+    "fetched_at": 1783105896.4192955
+  },
+  "ALEX": {
+    "ticker": "ALEX",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ALEX",
+      "https://english.mubasher.info/markets/EGX/stocks/ALEX/ratios"
+    ],
+    "par_value": 6.3,
+    "market_cap": 8647596355.84,
+    "book_value_per_share": 1.07,
+    "pb_ratio": 5.54,
+    "trailing_eps": 1.54,
+    "pe_ratio": 3.84,
+    "roe_pct": 144.37,
+    "fetched_at": 1783105898.4574711
+  },
+  "AFDI": {
+    "ticker": "AFDI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/AFDI",
+      "https://english.mubasher.info/markets/EGX/stocks/AFDI/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 798120000.0,
+    "book_value_per_share": 16.83,
+    "pb_ratio": 1.54,
+    "trailing_eps": 0.55,
+    "pe_ratio": 5.7,
+    "roe_pct": 3.27,
+    "fetched_at": 1783105914.8088574
+  },
+  "GMCI": {
+    "ticker": "GMCI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GMCI",
+      "https://english.mubasher.info/markets/EGX/stocks/GMCI/ratios"
+    ],
+    "par_value": 2.0,
+    "market_cap": 77406379.38,
+    "book_value_per_share": 0.07,
+    "pb_ratio": 15.77,
+    "trailing_eps": 0.0,
+    "pe_ratio": 1.6,
+    "roe_pct": 818.99,
+    "fetched_at": 1783105918.184529
+  },
+  "MPCI": {
+    "ticker": "MPCI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MPCI",
+      "https://english.mubasher.info/markets/EGX/stocks/MPCI/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 5596955000.0,
+    "book_value_per_share": 16.8,
+    "pb_ratio": 4.41,
+    "trailing_eps": 22.37,
+    "pe_ratio": 3.31,
+    "roe_pct": 133.14,
+    "fetched_at": 1783105921.3679342
+  },
+  "UEFM": {
+    "ticker": "UEFM",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/UEFM",
+      "https://english.mubasher.info/markets/EGX/stocks/UEFM/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 3333050000.0,
+    "book_value_per_share": 106.92,
+    "pb_ratio": 4.18,
+    "trailing_eps": 54.41,
+    "pe_ratio": 16.01,
+    "roe_pct": 50.89,
+    "fetched_at": 1783105923.2630756
+  },
+  "CNFN": {
+    "ticker": "CNFN",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/CNFN",
+      "https://english.mubasher.info/markets/EGX/stocks/CNFN/ratios"
+    ],
+    "par_value": 0.16,
+    "market_cap": 5697596240.0,
+    "book_value_per_share": 3.17,
+    "pb_ratio": 1.41,
+    "trailing_eps": 0.0,
+    "pe_ratio": 7.9,
+    "roe_pct": 178.57,
+    "fetched_at": 1783105926.1888874
+  },
+  "VERT": {
+    "ticker": "VERT",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/VERT",
+      "https://english.mubasher.info/markets/EGX/stocks/VERT/ratios"
+    ],
+    "par_value": 0.2,
+    "market_cap": 211981770.0,
+    "book_value_per_share": 0.35,
+    "pb_ratio": 3.27,
+    "trailing_eps": 0.23,
+    "pe_ratio": 6.89,
+    "roe_pct": 64.79,
+    "fetched_at": 1783105928.9472425
+  },
+  "MPCO": {
+    "ticker": "MPCO",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MPCO",
+      "https://english.mubasher.info/markets/EGX/stocks/MPCO/ratios"
+    ],
+    "par_value": 0.2,
+    "market_cap": 1830000000.0,
+    "book_value_per_share": 0.3,
+    "pb_ratio": 2.85,
+    "trailing_eps": 0.17,
+    "pe_ratio": 11.47,
+    "roe_pct": 57.4,
+    "fetched_at": 1783105934.9084933
+  },
+  "KRDI": {
+    "ticker": "KRDI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/KRDI",
+      "https://english.mubasher.info/markets/EGX/stocks/KRDI/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 686000000.0,
+    "book_value_per_share": 0.2,
+    "trailing_eps": 0.06,
+    "roe_pct": 32.27,
+    "fetched_at": 1783105937.1400273
+  },
+  "RAKT": {
+    "ticker": "RAKT",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/RAKT",
+      "https://english.mubasher.info/markets/EGX/stocks/RAKT/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 678000000.0,
+    "book_value_per_share": 32.43,
+    "pb_ratio": 0.76,
+    "trailing_eps": 0.0,
+    "fetched_at": 1783105938.9040947
+  },
+  "NARE": {
+    "ticker": "NARE",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/NARE",
+      "https://english.mubasher.info/markets/EGX/stocks/NARE/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 1775656167.2,
+    "book_value_per_share": 18.11,
+    "pb_ratio": 0.44,
+    "trailing_eps": 0.14,
+    "pe_ratio": 10.71,
+    "roe_pct": 0.76,
+    "fetched_at": 1783105943.3317757
+  },
+  "ICID": {
+    "ticker": "ICID",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ICID",
+      "https://english.mubasher.info/markets/EGX/stocks/ICID/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 798000000.0,
+    "book_value_per_share": 1.37,
+    "pb_ratio": 2.81,
+    "trailing_eps": 0.11,
+    "pe_ratio": 34.61,
+    "roe_pct": 8.37,
+    "fetched_at": 1783105945.3882153
+  },
+  "IEEC": {
+    "ticker": "IEEC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/IEEC",
+      "https://english.mubasher.info/markets/EGX/stocks/IEEC/ratios"
+    ],
+    "par_value": 0.2,
+    "market_cap": 669222000.0,
+    "book_value_per_share": 0.22,
+    "pb_ratio": 1.5,
+    "trailing_eps": 0.01,
+    "pe_ratio": 21.07,
+    "roe_pct": 6.06,
+    "fetched_at": 1783105950.75719
+  },
+  "UNIT": {
+    "ticker": "UNIT",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/UNIT",
+      "https://english.mubasher.info/markets/EGX/stocks/UNIT/ratios"
+    ],
+    "par_value": 1.25,
+    "market_cap": 3048735788.35,
+    "book_value_per_share": 3.84,
+    "pb_ratio": 2.79,
+    "trailing_eps": 0.58,
+    "pe_ratio": 18.65,
+    "roe_pct": 14.97,
+    "fetched_at": 1783105952.8786635
+  },
+  "CPME": {
+    "ticker": "CPME",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/CPME",
+      "https://english.mubasher.info/markets/EGX/stocks/CPME/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 423000000.0,
+    "book_value_per_share": 10.21,
+    "pb_ratio": 0.13,
+    "trailing_eps": 0.57,
+    "pe_ratio": 83.5,
+    "roe_pct": 5.54,
+    "fetched_at": 1783105960.096323
+  },
+  "MCRO": {
+    "ticker": "MCRO",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MCRO",
+      "https://english.mubasher.info/markets/EGX/stocks/MCRO/ratios"
+    ],
+    "par_value": 0.2,
+    "market_cap": 689949811.76,
+    "book_value_per_share": 0.18,
+    "trailing_eps": 0.16,
+    "roe_pct": 89.25,
+    "fetched_at": 1783105963.5295873
+  },
+  "AJWA": {
+    "ticker": "AJWA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/AJWA",
+      "https://english.mubasher.info/markets/EGX/stocks/AJWA/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 3598465371.0,
+    "book_value_per_share": 66.81,
+    "pb_ratio": 1.03,
+    "trailing_eps": 4.7,
+    "pe_ratio": 6.63,
+    "roe_pct": 7.03,
+    "fetched_at": 1783105969.5129123
+  },
+  "UPMS": {
+    "ticker": "UPMS",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/UPMS",
+      "https://english.mubasher.info/markets/EGX/stocks/UPMS/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 165986010.0,
+    "book_value_per_share": 5.08,
+    "pb_ratio": 2.58,
+    "trailing_eps": 0.09,
+    "pe_ratio": 6.42,
+    "roe_pct": 1.76,
+    "fetched_at": 1783105986.6415992
+  },
+  "TANM": {
+    "ticker": "TANM",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/TANM",
+      "https://english.mubasher.info/markets/EGX/stocks/TANM/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 763875000.0,
+    "book_value_per_share": 1.59,
+    "pb_ratio": 2.2,
+    "trailing_eps": 0.28,
+    "pe_ratio": 14.67,
+    "roe_pct": 17.53,
+    "fetched_at": 1783105993.5165231
+  },
+  "RKAZ": {
+    "ticker": "RKAZ",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/RKAZ",
+      "https://english.mubasher.info/markets/EGX/stocks/RKAZ/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 110000000.0,
+    "book_value_per_share": 0.99,
+    "pb_ratio": 2.69,
+    "trailing_eps": 0.19,
+    "pe_ratio": 57.59,
+    "roe_pct": 18.99,
+    "fetched_at": 1783106012.1711423
+  },
+  "SMFR": {
+    "ticker": "SMFR",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SMFR",
+      "https://english.mubasher.info/markets/EGX/stocks/SMFR/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 1862976000.0,
+    "book_value_per_share": 211.92,
+    "pb_ratio": 0.78,
+    "trailing_eps": 1.59,
+    "pe_ratio": 26.3,
+    "roe_pct": 0.75,
+    "fetched_at": 1783106016.4095843
+  },
+  "GRCA": {
+    "ticker": "GRCA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GRCA",
+      "https://english.mubasher.info/markets/EGX/stocks/GRCA/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 407862000.0,
+    "book_value_per_share": 6.48,
+    "pb_ratio": 2.56,
+    "trailing_eps": 0.29,
+    "pe_ratio": 58.08,
+    "roe_pct": 4.51,
+    "fetched_at": 1783106020.4651601
+  },
+  "ISPH": {
+    "ticker": "ISPH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ISPH",
+      "https://english.mubasher.info/markets/EGX/stocks/ISPH/ratios"
+    ],
+    "par_value": 0.25,
+    "market_cap": 11692800000.0,
+    "book_value_per_share": 2.36,
+    "pb_ratio": 4.74,
+    "trailing_eps": 0.82,
+    "pe_ratio": 10.9,
+    "roe_pct": 34.73,
+    "fetched_at": 1783106023.371956
+  },
+  "PRCL": {
+    "ticker": "PRCL",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/PRCL",
+      "https://english.mubasher.info/markets/EGX/stocks/PRCL/ratios"
+    ],
+    "par_value": 2.0,
+    "market_cap": 1657038110.0,
+    "book_value_per_share": 2.4,
+    "pb_ratio": 4.87,
+    "trailing_eps": 2.01,
+    "pe_ratio": 5.92,
+    "roe_pct": 84.01,
+    "fetched_at": 1783106032.0414672
+  },
+  "ACAMD": {
+    "ticker": "ACAMD",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ACAMD",
+      "https://english.mubasher.info/markets/EGX/stocks/ACAMD/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 2979178661.25,
+    "book_value_per_share": 0.09,
+    "pb_ratio": 20.2,
+    "trailing_eps": 0.03,
+    "pe_ratio": 201.88,
+    "roe_pct": 30.05,
+    "fetched_at": 1783106047.906892
+  },
+  "MOIN": {
+    "ticker": "MOIN",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MOIN",
+      "https://english.mubasher.info/markets/EGX/stocks/MOIN/ratios"
+    ],
+    "par_value": 2.5,
+    "market_cap": 4746000000.0,
+    "book_value_per_share": 7.49,
+    "pb_ratio": 2.25,
+    "trailing_eps": 5.81,
+    "pe_ratio": 10.3,
+    "roe_pct": 77.55,
+    "fetched_at": 1783106052.775799
+  },
+  "AIFI": {
+    "ticker": "AIFI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/AIFI",
+      "https://english.mubasher.info/markets/EGX/stocks/AIFI/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 2325596508.0,
+    "book_value_per_share": 0.07,
+    "pb_ratio": 57.84,
+    "trailing_eps": 0.03,
+    "pe_ratio": 48.71,
+    "roe_pct": 37.06,
+    "fetched_at": 1783106055.0408669
+  },
+  "ALUM": {
+    "ticker": "ALUM",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ALUM",
+      "https://english.mubasher.info/markets/EGX/stocks/ALUM/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 904185099.0,
+    "book_value_per_share": 2.66,
+    "pb_ratio": 5.05,
+    "trailing_eps": 0.02,
+    "pe_ratio": 63.75,
+    "roe_pct": 0.83,
+    "fetched_at": 1783106061.0495796
+  },
+  "AIH": {
+    "ticker": "AIH",
+    "sources": [],
+    "fetched_at": 1783106067.8381836
+  },
+  "MITR": {
+    "ticker": "MITR",
+    "sources": [],
+    "fetched_at": 1783106074.2243252
+  },
+  "VLMRA": {
+    "ticker": "VLMRA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/VLMRA",
+      "https://english.mubasher.info/markets/EGX/stocks/VLMRA/ratios"
+    ],
+    "par_value": 3.93,
+    "market_cap": 10145286219.6,
+    "book_value_per_share": 0.6,
+    "pb_ratio": 1.03,
+    "trailing_eps": 0.16,
+    "pe_ratio": 1.82,
+    "roe_pct": 27.66,
+    "fetched_at": 1783106076.5854838
+  },
+  "KNGC": {
+    "ticker": "KNGC",
+    "sources": [],
+    "fetched_at": 1783106079.913321
+  },
+  "SVCE": {
+    "ticker": "SVCE",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SVCE",
+      "https://english.mubasher.info/markets/EGX/stocks/SVCE/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 4634488232.4,
+    "book_value_per_share": 6.03,
+    "pb_ratio": 1.07,
+    "trailing_eps": 1.79,
+    "pe_ratio": 3.61,
+    "roe_pct": 29.64,
+    "fetched_at": 1783106085.048207
+  },
+  "TWSA": {
+    "ticker": "TWSA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/TWSA",
+      "https://english.mubasher.info/markets/EGX/stocks/TWSA/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 810750000.0,
+    "pb_ratio": 2.6,
+    "pe_ratio": 5.62,
+    "fetched_at": 1783106093.562469
+  },
+  "MAAL": {
+    "ticker": "MAAL",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MAAL",
+      "https://english.mubasher.info/markets/EGX/stocks/MAAL/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 1505448000.0,
+    "book_value_per_share": 0.75,
+    "pb_ratio": 4.31,
+    "trailing_eps": 0.21,
+    "pe_ratio": 20.88,
+    "roe_pct": 27.71,
+    "fetched_at": 1783106118.6504447
+  },
+  "CPCI": {
+    "ticker": "CPCI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/CPCI",
+      "https://english.mubasher.info/markets/EGX/stocks/CPCI/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 6047077781.25,
+    "book_value_per_share": 77.77,
+    "pb_ratio": 3.67,
+    "trailing_eps": 38.53,
+    "pe_ratio": 7.45,
+    "roe_pct": 49.54,
+    "fetched_at": 1783106142.4614906
+  },
+  "HBCO": {
+    "ticker": "HBCO",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/HBCO",
+      "https://english.mubasher.info/markets/EGX/stocks/HBCO/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 528800000.0,
+    "book_value_per_share": 2.7,
+    "pb_ratio": 1.98,
+    "trailing_eps": 0.27,
+    "pe_ratio": 1.09,
+    "roe_pct": 9.97,
+    "fetched_at": 1783106154.4903867
+  },
+  "SEIGA": {
+    "ticker": "SEIGA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SEIGA",
+      "https://english.mubasher.info/markets/EGX/stocks/SEIGA/ratios"
+    ],
+    "par_value": 4.0,
+    "market_cap": 13525000.0,
+    "book_value_per_share": 139.66,
+    "trailing_eps": 15.29,
+    "roe_pct": 10.95,
+    "fetched_at": 1783106165.3788955
+  },
+  "NINH": {
+    "ticker": "NINH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/NINH",
+      "https://english.mubasher.info/markets/EGX/stocks/NINH/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 4370520000.0,
+    "book_value_per_share": 3.1,
+    "pb_ratio": 4.16,
+    "trailing_eps": 0.78,
+    "pe_ratio": 17.13,
+    "roe_pct": 25.03,
+    "fetched_at": 1783106180.2102716
+  },
+  "ADCI": {
+    "ticker": "ADCI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ADCI",
+      "https://english.mubasher.info/markets/EGX/stocks/ADCI/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 2891640000.0,
+    "book_value_per_share": 57.43,
+    "pb_ratio": 2.83,
+    "trailing_eps": 20.61,
+    "pe_ratio": 6.11,
+    "roe_pct": 35.88,
+    "fetched_at": 1783106190.9955707
+  },
+  "WKOL": {
+    "ticker": "WKOL",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/WKOL",
+      "https://english.mubasher.info/markets/EGX/stocks/WKOL/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 1569680000.0,
+    "book_value_per_share": 39.02,
+    "pb_ratio": 6.15,
+    "trailing_eps": 66.12,
+    "pe_ratio": 7.26,
+    "roe_pct": 169.45,
+    "fetched_at": 1783106199.9112403
+  },
+  "EHDR": {
+    "ticker": "EHDR",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EHDR",
+      "https://english.mubasher.info/markets/EGX/stocks/EHDR/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 1693440000.0,
+    "book_value_per_share": 0.19,
+    "pb_ratio": 12.52,
+    "trailing_eps": 0.02,
+    "pe_ratio": 90.88,
+    "roe_pct": 11.47,
+    "fetched_at": 1783106204.8995216
+  },
+  "CAED": {
+    "ticker": "CAED",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/CAED",
+      "https://english.mubasher.info/markets/EGX/stocks/CAED/ratios"
+    ],
+    "par_value": 4.0,
+    "market_cap": 855960000.0,
+    "book_value_per_share": 7.37,
+    "pb_ratio": 7.02,
+    "trailing_eps": 2.93,
+    "pe_ratio": 25.35,
+    "roe_pct": 39.74,
+    "fetched_at": 1783106222.1016207
+  },
+  "VALU": {
+    "ticker": "VALU",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/VALU",
+      "https://english.mubasher.info/markets/EGX/stocks/VALU/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 25297341841.23,
+    "book_value_per_share": 1.2,
+    "pb_ratio": 9.71,
+    "trailing_eps": 0.42,
+    "pe_ratio": 28.66,
+    "roe_pct": 34.96,
+    "fetched_at": 1783106224.7123756
+  },
+  "SDTI": {
+    "ticker": "SDTI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SDTI",
+      "https://english.mubasher.info/markets/EGX/stocks/SDTI/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 3668760000.0,
+    "book_value_per_share": 5.25,
+    "pb_ratio": 6.44,
+    "trailing_eps": 14.92,
+    "pe_ratio": 57.53,
+    "roe_pct": 284.03,
+    "fetched_at": 1783106228.445713
+  },
+  "DAPH": {
+    "ticker": "DAPH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/DAPH",
+      "https://english.mubasher.info/markets/EGX/stocks/DAPH/ratios"
+    ],
+    "par_value": 14.0,
+    "market_cap": 1935658296.0,
+    "book_value_per_share": 30.25,
+    "pb_ratio": 1.55,
+    "trailing_eps": 0.38,
+    "pe_ratio": 139.58,
+    "roe_pct": 1.27,
+    "fetched_at": 1783106235.8125606
+  },
+  "GTWL": {
+    "ticker": "GTWL",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GTWL",
+      "https://english.mubasher.info/markets/EGX/stocks/GTWL/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 1256935944.0,
+    "book_value_per_share": 64.08,
+    "pb_ratio": 0.46,
+    "trailing_eps": 9.07,
+    "pe_ratio": 1.93,
+    "roe_pct": 14.15,
+    "fetched_at": 1783106239.7672088
+  },
+  "ZEOT": {
+    "ticker": "ZEOT",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ZEOT",
+      "https://english.mubasher.info/markets/EGX/stocks/ZEOT/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 2210000000.0,
+    "book_value_per_share": 1.49,
+    "pb_ratio": 6.73,
+    "trailing_eps": 0.85,
+    "pe_ratio": 34.8,
+    "roe_pct": 57.1,
+    "fetched_at": 1783106244.1292803
+  },
+  "GSSC": {
+    "ticker": "GSSC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GSSC",
+      "https://english.mubasher.info/markets/EGX/stocks/GSSC/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 4293625000.0,
+    "book_value_per_share": 18.84,
+    "pb_ratio": 8.01,
+    "trailing_eps": 8.66,
+    "pe_ratio": 22.58,
+    "roe_pct": 45.94,
+    "fetched_at": 1783106252.8508964
+  },
+  "EASB": {
+    "ticker": "EASB",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EASB",
+      "https://english.mubasher.info/markets/EGX/stocks/EASB/ratios"
+    ],
+    "par_value": 0.8,
+    "market_cap": 678600000.0,
+    "book_value_per_share": 1.29,
+    "pb_ratio": 2.53,
+    "trailing_eps": 0.1,
+    "pe_ratio": 7.19,
+    "roe_pct": 7.59,
+    "fetched_at": 1783106255.1920009
+  },
+  "AREH": {
+    "ticker": "AREH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/AREH",
+      "https://english.mubasher.info/markets/EGX/stocks/AREH/ratios"
+    ],
+    "par_value": 0.2,
+    "market_cap": 628000000.0,
+    "book_value_per_share": 0.36,
+    "pb_ratio": 2.99,
+    "trailing_eps": 0.01,
+    "pe_ratio": 588.89,
+    "roe_pct": 2.58,
+    "fetched_at": 1783106267.1792138
+  },
+  "IFAP": {
+    "ticker": "IFAP",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/IFAP",
+      "https://english.mubasher.info/markets/EGX/stocks/IFAP/ratios"
+    ],
+    "par_value": 2.0,
+    "market_cap": 9612584114.78,
+    "book_value_per_share": 8.84,
+    "pb_ratio": 2.11,
+    "trailing_eps": 0.2,
+    "pe_ratio": 9.62,
+    "roe_pct": 2.26,
+    "fetched_at": 1783106270.227925
+  },
+  "KWIN": {
+    "ticker": "KWIN",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/KWIN",
+      "https://english.mubasher.info/markets/EGX/stocks/KWIN/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 708120000.0,
+    "book_value_per_share": 6.3,
+    "pb_ratio": 9.27,
+    "trailing_eps": 0.34,
+    "pe_ratio": 32.78,
+    "roe_pct": 5.44,
+    "fetched_at": 1783106272.2780943
+  },
+  "PHTV": {
+    "ticker": "PHTV",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/PHTV",
+      "https://english.mubasher.info/markets/EGX/stocks/PHTV/ratios"
+    ],
+    "par_value": 20.0,
+    "market_cap": 6958575000.0,
+    "book_value_per_share": 93.87,
+    "pb_ratio": 1.91,
+    "trailing_eps": 44.51,
+    "pe_ratio": 6.07,
+    "roe_pct": 47.41,
+    "fetched_at": 1783106275.2291334
+  },
+  "ISMA": {
+    "ticker": "ISMA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ISMA",
+      "https://english.mubasher.info/markets/EGX/stocks/ISMA/ratios"
+    ],
+    "par_value": 4.0,
+    "market_cap": 2542938921.7,
+    "book_value_per_share": 2.2,
+    "pb_ratio": 6.32,
+    "trailing_eps": 0.47,
+    "pe_ratio": 25.22,
+    "roe_pct": 21.53,
+    "fetched_at": 1783106278.3692305
+  },
+  "GIHD": {
+    "ticker": "GIHD",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GIHD",
+      "https://english.mubasher.info/markets/EGX/stocks/GIHD/ratios"
+    ],
+    "par_value": 4.0,
+    "market_cap": 236587500.0,
+    "book_value_per_share": 9.54,
+    "pb_ratio": 4.24,
+    "trailing_eps": 4.12,
+    "pe_ratio": 36.57,
+    "roe_pct": 43.13,
+    "fetched_at": 1783106281.5127375
+  },
+  "ASPI": {
+    "ticker": "ASPI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ASPI",
+      "https://english.mubasher.info/markets/EGX/stocks/ASPI/ratios"
+    ],
+    "par_value": 0.2,
+    "market_cap": 638000000.0,
+    "book_value_per_share": 0.32,
+    "pb_ratio": 1.03,
+    "trailing_eps": 0.04,
+    "pe_ratio": 12.13,
+    "roe_pct": 11.77,
+    "fetched_at": 1783106284.1969872
+  },
+  "NEDA": {
+    "ticker": "NEDA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/NEDA",
+      "https://english.mubasher.info/markets/EGX/stocks/NEDA/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 173345581.5,
+    "book_value_per_share": 0.53,
+    "pb_ratio": 3.94,
+    "trailing_eps": 0.02,
+    "pe_ratio": 19.78,
+    "roe_pct": 4.64,
+    "fetched_at": 1783106292.2629604
+  },
+  "SINA": {
+    "ticker": "SINA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SINA",
+      "https://english.mubasher.info/markets/EGX/stocks/SINA/ratios"
+    ],
+    "par_value": 15.0,
+    "fetched_at": 1783106296.9798725
+  },
+  "QNBE": {
+    "ticker": "QNBE",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/QNBE",
+      "https://english.mubasher.info/markets/EGX/stocks/QNBE/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 113128205715.0,
+    "book_value_per_share": 50.1,
+    "pb_ratio": 0.63,
+    "trailing_eps": 13.2,
+    "pe_ratio": 2.01,
+    "roe_pct": 26.34,
+    "fetched_at": 1783106299.7095094
+  },
+  "BIDI": {
+    "ticker": "BIDI",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/BIDI",
+      "https://english.mubasher.info/markets/EGX/stocks/BIDI/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 40621500.0,
+    "book_value_per_share": 0.25,
+    "pb_ratio": 6.99,
+    "trailing_eps": 0.04,
+    "pe_ratio": 437.91,
+    "roe_pct": 15.68,
+    "fetched_at": 1783106302.2690644
+  },
+  "CFGH": {
+    "ticker": "CFGH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/CFGH",
+      "https://english.mubasher.info/markets/EGX/stocks/CFGH/ratios"
+    ],
+    "par_value": 0.07,
+    "market_cap": 48435750.0,
+    "book_value_per_share": 0.04,
+    "pb_ratio": 2.49,
+    "trailing_eps": 0.05,
+    "pe_ratio": 2.16,
+    "roe_pct": 115.03,
+    "fetched_at": 1783106304.4343996
+  },
+  "EFAC": {
+    "ticker": "EFAC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EFAC",
+      "https://english.mubasher.info/markets/EGX/stocks/EFAC/ratios"
+    ],
+    "par_value": 10.0,
+    "book_value_per_share": 0.0,
+    "trailing_eps": 0.0,
+    "fetched_at": 1783106307.191422
+  },
+  "MOED": {
+    "ticker": "MOED",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MOED",
+      "https://english.mubasher.info/markets/EGX/stocks/MOED/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 686415000.0,
+    "book_value_per_share": 0.12,
+    "pb_ratio": 6.99,
+    "trailing_eps": 0.01,
+    "pe_ratio": 56.77,
+    "roe_pct": 10.43,
+    "fetched_at": 1783106313.1300037
+  },
+  "GDWA": {
+    "ticker": "GDWA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GDWA",
+      "https://english.mubasher.info/markets/EGX/stocks/GDWA/ratios"
+    ],
+    "par_value": 1.9,
+    "market_cap": 786146557.82,
+    "book_value_per_share": 3.36,
+    "pb_ratio": 2.35,
+    "trailing_eps": 0.13,
+    "pe_ratio": 21.61,
+    "roe_pct": 3.91,
+    "fetched_at": 1783106314.9960284
+  },
+  "ENGC": {
+    "ticker": "ENGC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ENGC",
+      "https://english.mubasher.info/markets/EGX/stocks/ENGC/ratios"
+    ],
+    "par_value": 4.0,
+    "market_cap": 5325300000.0,
+    "book_value_per_share": 16.97,
+    "pb_ratio": 1.65,
+    "trailing_eps": 0.99,
+    "pe_ratio": 5.48,
+    "roe_pct": 5.82,
+    "fetched_at": 1783106318.9907405
+  },
+  "MCQE": {
+    "ticker": "MCQE",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MCQE",
+      "https://english.mubasher.info/markets/EGX/stocks/MCQE/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 16512000000.0,
+    "book_value_per_share": 31.61,
+    "pb_ratio": 4.5,
+    "trailing_eps": 26.99,
+    "pe_ratio": 7.9,
+    "roe_pct": 85.4,
+    "fetched_at": 1783106320.9122171
+  },
+  "SIPC": {
+    "ticker": "SIPC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/SIPC",
+      "https://english.mubasher.info/markets/EGX/stocks/SIPC/ratios"
+    ],
+    "par_value": 0.4,
+    "market_cap": 845000000.0,
+    "book_value_per_share": 0.4,
+    "pb_ratio": 6.82,
+    "trailing_eps": 0.08,
+    "pe_ratio": 34.73,
+    "roe_pct": 20.56,
+    "fetched_at": 1783106322.7613912
+  },
+  "KZPC": {
+    "ticker": "KZPC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/KZPC",
+      "https://english.mubasher.info/markets/EGX/stocks/KZPC/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 2040759900.0,
+    "book_value_per_share": 2.82,
+    "pb_ratio": 3.46,
+    "trailing_eps": 0.22,
+    "pe_ratio": 53.69,
+    "roe_pct": 7.96,
+    "fetched_at": 1783106324.9710596
+  },
+  "COSG": {
+    "ticker": "COSG",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/COSG",
+      "https://english.mubasher.info/markets/EGX/stocks/COSG/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 960960000.0,
+    "book_value_per_share": 0.16,
+    "pb_ratio": 1.83,
+    "trailing_eps": 0.04,
+    "pe_ratio": 20.51,
+    "roe_pct": 23.19,
+    "fetched_at": 1783106327.6944833
+  },
+  "CRST": {
+    "ticker": "CRST",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/CRST",
+      "https://english.mubasher.info/markets/EGX/stocks/CRST/ratios"
+    ],
+    "par_value": 0.16,
+    "market_cap": 729632467.2,
+    "book_value_per_share": 0.26,
+    "pb_ratio": 0.79,
+    "trailing_eps": 0.16,
+    "pe_ratio": 9.04,
+    "roe_pct": 62.07,
+    "fetched_at": 1783106330.6996293
+  },
+  "FIRE": {
+    "ticker": "FIRE",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/FIRE",
+      "https://english.mubasher.info/markets/EGX/stocks/FIRE/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 61325000.0,
+    "book_value_per_share": 1.02,
+    "pb_ratio": 1.73,
+    "trailing_eps": 0.16,
+    "pe_ratio": 1.98,
+    "roe_pct": 15.88,
+    "fetched_at": 1783106333.6653564
+  },
+  "FNAR": {
+    "ticker": "FNAR",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/FNAR",
+      "https://english.mubasher.info/markets/EGX/stocks/FNAR/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 193600000.0,
+    "book_value_per_share": 2.72,
+    "pb_ratio": 2.69,
+    "trailing_eps": 0.05,
+    "pe_ratio": 11.41,
+    "roe_pct": 1.91,
+    "fetched_at": 1783106336.248482
+  },
+  "AMIA": {
+    "ticker": "AMIA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/AMIA",
+      "https://english.mubasher.info/markets/EGX/stocks/AMIA/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 4452175291.92,
+    "book_value_per_share": 2.56,
+    "pb_ratio": 2.0,
+    "trailing_eps": 0.92,
+    "pe_ratio": 11.9,
+    "roe_pct": 35.72,
+    "fetched_at": 1783106338.2323866
+  },
+  "NFCI": {
+    "ticker": "NFCI",
+    "sources": [],
+    "fetched_at": 1783106341.0169044
+  },
+  "EALR": {
+    "ticker": "EALR",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/EALR",
+      "https://english.mubasher.info/markets/EGX/stocks/EALR/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 1778400000.0,
+    "book_value_per_share": 14.51,
+    "pb_ratio": 3.95,
+    "trailing_eps": 1.06,
+    "pe_ratio": 87.57,
+    "roe_pct": 7.31,
+    "fetched_at": 1783106346.0824094
+  },
+  "BIGP": {
+    "ticker": "BIGP",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/BIGP",
+      "https://english.mubasher.info/markets/EGX/stocks/BIGP/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 61019399.94,
+    "book_value_per_share": 0.09,
+    "pb_ratio": 2.18,
+    "trailing_eps": 0.01,
+    "pe_ratio": 11.34,
+    "roe_pct": 12.13,
+    "fetched_at": 1783106350.449232
+  },
+  "UBEE": {
+    "ticker": "UBEE",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/UBEE",
+      "https://english.mubasher.info/markets/EGX/stocks/UBEE/ratios"
+    ],
+    "par_value": 5.0,
+    "market_cap": 14751000000.0,
+    "book_value_per_share": 15.48,
+    "pb_ratio": 0.83,
+    "trailing_eps": 0.01,
+    "pe_ratio": 6.12,
+    "roe_pct": 0.09,
+    "fetched_at": 1783106353.7079878
+  },
+  "ATQA": {
+    "ticker": "ATQA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ATQA",
+      "https://english.mubasher.info/markets/EGX/stocks/ATQA/ratios"
+    ],
+    "par_value": 0.5,
+    "market_cap": 11316000000.0,
+    "book_value_per_share": 1.99,
+    "pb_ratio": 4.17,
+    "trailing_eps": 0.04,
+    "pe_ratio": 321.62,
+    "roe_pct": 2.02,
+    "fetched_at": 1783106357.850831
+  },
+  "GTHE": {
+    "ticker": "GTHE",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GTHE",
+      "https://english.mubasher.info/markets/EGX/stocks/GTHE/ratios"
+    ],
+    "par_value": 0.58,
+    "market_cap": 13927308596.1,
+    "book_value_per_share": 0.13,
+    "pb_ratio": 2.42,
+    "trailing_eps": 0.04,
+    "pe_ratio": 9.9,
+    "roe_pct": 26.87,
+    "fetched_at": 1783106365.9716308
+  },
+  "MKIT": {
+    "ticker": "MKIT",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MKIT",
+      "https://english.mubasher.info/markets/EGX/stocks/MKIT/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 55400000.0,
+    "book_value_per_share": 1.25,
+    "pb_ratio": 31.9,
+    "trailing_eps": 0.19,
+    "pe_ratio": 14645.16,
+    "roe_pct": 15.43,
+    "fetched_at": 1783106368.8532393
+  },
+  "ODIN": {
+    "ticker": "ODIN",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ODIN",
+      "https://english.mubasher.info/markets/EGX/stocks/ODIN/ratios"
+    ],
+    "par_value": 0.25,
+    "market_cap": 1308000000.0,
+    "book_value_per_share": 0.65,
+    "pb_ratio": 3.45,
+    "trailing_eps": 0.59,
+    "pe_ratio": 3.83,
+    "roe_pct": 89.93,
+    "fetched_at": 1783106371.3789856
+  },
+  "ICFC": {
+    "ticker": "ICFC",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ICFC",
+      "https://english.mubasher.info/markets/EGX/stocks/ICFC/ratios"
+    ],
+    "par_value": 2.0,
+    "market_cap": 987525000.0,
+    "book_value_per_share": 10.84,
+    "pb_ratio": 1.33,
+    "trailing_eps": 2.63,
+    "pe_ratio": 8.02,
+    "roe_pct": 24.31,
+    "fetched_at": 1783106373.9590247
+  },
+  "PRMH": {
+    "ticker": "PRMH",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/PRMH",
+      "https://english.mubasher.info/markets/EGX/stocks/PRMH/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 906500000.0,
+    "book_value_per_share": 1.39,
+    "pb_ratio": 1.46,
+    "trailing_eps": 0.24,
+    "pe_ratio": 6.28,
+    "roe_pct": 17.14,
+    "fetched_at": 1783106375.8556027
+  },
+  "WCDF": {
+    "ticker": "WCDF",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/WCDF",
+      "https://english.mubasher.info/markets/EGX/stocks/WCDF/ratios"
+    ],
+    "par_value": 10.0,
+    "market_cap": 3825000000.0,
+    "book_value_per_share": 130.12,
+    "pb_ratio": 4.21,
+    "trailing_eps": 62.06,
+    "pe_ratio": 8.21,
+    "roe_pct": 47.69,
+    "fetched_at": 1783106383.957663
+  },
+  "MENA": {
+    "ticker": "MENA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/MENA",
+      "https://english.mubasher.info/markets/EGX/stocks/MENA/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 1666840065.15,
+    "book_value_per_share": 0.43,
+    "pb_ratio": 12.03,
+    "trailing_eps": 0.23,
+    "pe_ratio": 64.39,
+    "roe_pct": 53.52,
+    "fetched_at": 1783106385.9635882
+  },
+  "RMDA": {
+    "ticker": "RMDA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/RMDA",
+      "https://english.mubasher.info/markets/EGX/stocks/RMDA/ratios"
+    ],
+    "par_value": 0.25,
+    "market_cap": 7570091422.92,
+    "book_value_per_share": 1.1,
+    "pb_ratio": 2.89,
+    "trailing_eps": 0.21,
+    "pe_ratio": 17.15,
+    "roe_pct": 18.6,
+    "fetched_at": 1783106388.3512545
+  },
+  "GTEX": {
+    "ticker": "GTEX",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/GTEX",
+      "https://english.mubasher.info/markets/EGX/stocks/GTEX/ratios"
+    ],
+    "par_value": 0.036,
+    "market_cap": 15988500.0,
+    "book_value_per_share": 0.05,
+    "pb_ratio": 1.26,
+    "trailing_eps": 0.01,
+    "pe_ratio": 2.02,
+    "roe_pct": 13.53,
+    "fetched_at": 1783106390.2209737
+  },
+  "FAITA": {
+    "ticker": "FAITA",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/FAITA",
+      "https://english.mubasher.info/markets/EGX/stocks/FAITA/ratios"
+    ],
+    "par_value": 1.0,
+    "market_cap": 407814773.85,
+    "book_value_per_share": 183.11,
+    "pb_ratio": 0.26,
+    "trailing_eps": 21.86,
+    "pe_ratio": 2.15,
+    "roe_pct": 11.94,
+    "fetched_at": 1783106396.6322176
+  },
+  "ACAP": {
+    "ticker": "ACAP",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/ACAP",
+      "https://english.mubasher.info/markets/EGX/stocks/ACAP/ratios"
+    ],
+    "par_value": 0.3,
+    "market_cap": 6259583639.76,
+    "book_value_per_share": 1.36,
+    "pb_ratio": 2.83,
+    "trailing_eps": 1.91,
+    "pe_ratio": 16.14,
+    "roe_pct": 140.3,
+    "fetched_at": 1783106402.3439634
+  },
+  "UNIP": {
+    "ticker": "UNIP",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/UNIP",
+      "https://english.mubasher.info/markets/EGX/stocks/UNIP/ratios"
+    ],
+    "par_value": 0.1,
+    "market_cap": 248239615.65,
+    "book_value_per_share": 0.63,
+    "pb_ratio": 1.95,
+    "trailing_eps": 0.06,
+    "pe_ratio": 6.33,
+    "roe_pct": 8.89,
+    "fetched_at": 1783106406.2618284
+  },
+  "NAHO": {
+    "ticker": "NAHO",
+    "sources": [
+      "https://english.mubasher.info/markets/EGX/stocks/NAHO",
+      "https://english.mubasher.info/markets/EGX/stocks/NAHO/ratios"
+    ],
+    "par_value": 0.7,
+    "market_cap": 36443122.35,
+    "book_value_per_share": 0.27,
+    "pb_ratio": 0.34,
+    "trailing_eps": 0.13,
+    "pe_ratio": 0.81,
+    "roe_pct": 46.81,
+    "fetched_at": 1783106410.2402108
   }
 }

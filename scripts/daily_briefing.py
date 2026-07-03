@@ -613,11 +613,29 @@ def build_briefing(force: bool = False) -> dict:
     except Exception as e:
         out["exdiv_filter_error"] = str(e)[:120]
 
-    # V8b monthly verdicts on the W1 picks (cross-check)
+    # V8b monthly verdicts on the W1 picks (cross-check) PLUS the whole
+    # audited-fundamentals universe. Deciding only the day's momentum picks
+    # gave the learning loop 5 calls/day drawn from a biased (momentum-
+    # selected) sample; grading the full covered list accumulates evidence
+    # ~6x faster and lets learn.py fit thresholds/weights on the same
+    # population decide() actually serves.
     try:
         verdicts = []
-        for p in (out["w1_picks"].get("top_picks", []) or []):
-            tk = p["ticker"]
+        decided: set[str] = set()
+        pick_tickers = [p["ticker"] for p in (out["w1_picks"].get("top_picks", []) or [])]
+        audited: list[str] = []
+        try:
+            import csv as _csv
+            _audited_csv = Path(__file__).parent.parent / "egx_fundamentals_audited.csv"
+            with _audited_csv.open(encoding="utf-8-sig") as f:
+                audited = [row["ticker"].strip() for row in _csv.DictReader(f)
+                           if row.get("ticker", "").strip()]
+        except Exception as e:
+            out["v8b_universe_error"] = str(e)[:120]
+        for tk in pick_tickers + [t for t in audited if t not in pick_tickers]:
+            if tk in decided:
+                continue
+            decided.add(tk)
             try:
                 d = decision.decide(tk)
                 verdicts.append({

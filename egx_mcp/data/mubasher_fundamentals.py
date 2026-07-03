@@ -30,6 +30,10 @@ from typing import Any
 import httpx
 from bs4 import BeautifulSoup
 
+from ._certs import ensure_ca_bundle
+
+ensure_ca_bundle()  # trust the OS cert store (TLS-inspecting proxy) before any request
+
 log = logging.getLogger("egx-mcp.mubasher_fundamentals")
 
 _CACHE_PATH = Path(__file__).parent / "mubasher_fundamentals_cache.json"
