@@ -1,6 +1,60 @@
 {
-  "status": "insufficient_evidence",
-  "graded_v8b_calls": 0,
-  "need": 40,
-  "message": "Only 0 graded decide() calls (need 40). Let the daily grading accumulate — no proposal made."
+  "status": "no_change",
+  "graded_v8b_calls": 73,
+  "in_sample": 43,
+  "out_of_sample": 30,
+  "current_buy_threshold": 75,
+  "candidate_buy_threshold": null,
+  "threshold_improves": false,
+  "oos_current": {
+    "threshold": 75,
+    "n": 0,
+    "mean_excess_pct": null,
+    "beat_bench_pct": null
+  },
+  "oos_candidate": null,
+  "weights_proposal": {
+    "status": "no_change",
+    "n_with_subscores": 53,
+    "in_sample": 31,
+    "out_of_sample": 22,
+    "current_weights": {
+      "valuation": 0.3,
+      "quality": 0.25,
+      "momentum": 0.25,
+      "risk": 0.2
+    },
+    "candidate_weights": {
+      "valuation": 0.322,
+      "quality": 0.2548,
+      "momentum": 0.2177,
+      "risk": 0.2054
+    },
+    "oos_rankcorr_current": -0.092,
+    "oos_rankcorr_candidate": -0.117,
+    "improves": false,
+    "message": "Current weights hold up — the tilted candidate did not rank out-of-sample excess meaningfully better."
+  },
+  "conviction_reliability": {
+    "medium": {
+      "n": 17,
+      "accuracy_pct": 29.4
+    }
+  },
+  "subscore_signal": {
+    "n": 53,
+    "corr_with_excess": {
+      "valuation": -0.151,
+      "quality": -0.199,
+      "momentum": -0.086,
+      "risk": 0.184
+    },
+    "note": "Higher positive correlation = the factor predicted out-performance and arguably deserves more weight. Groundwork only — weights are not auto-tuned."
+  },
+  "recommendation": "KEEP_CURRENT",
+  "proposed_params": null,
+  "change_tag": "none",
+  "message": "BUY threshold 75 holds (no candidate threshold viable in-sample); Current weights hold up — the tilted candidate did not rank out-of-sample excess meaningfully better.",
+  "pr_title": "Learning loop: update (OOS-validated)",
+  "pr_body": "## Learning loop — OOS-validated model update\n\nBUY threshold 75 holds (no candidate threshold viable in-sample); Current weights hold up — the tilted candidate did not rank out-of-sample excess meaningfully better.\n\nLearned from 73 graded v8b calls (43 in-sample / 30 out-of-sample).\n\n**Merging this PR is the human approval gate** — it applies the update to `model_params.json`, which the decision layer reads on next run. Close without merging to reject."
 }
