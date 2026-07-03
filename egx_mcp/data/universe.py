@@ -39,7 +39,8 @@ EGX_UNIVERSE: dict[str, dict[str, str]] = {
 
     # Industrial / construction
     "SWDY":  {"yahoo": "SWDY.CA",         "name": "Elsewedy Electric",                     "sector": "Industrial Goods"},
-    "ESRS":  {"yahoo": "ESRS.CA",         "name": "Ezz Steel",                             "sector": "Basic Resources"},
+    # "ESRS" (Ezz Steel) removed — delisted from EGX. Kept in news_filter and
+    # historical sims; no longer part of the live watchlist.
     "ORWE":  {"yahoo": "ORWE.CA",         "name": "Oriental Weavers",                      "sector": "Personal & Household"},
     "ABUK":  {"yahoo": "ABUK.CA",         "name": "Abou Kir Fertilizers",                  "sector": "Chemicals"},
     "MFPC":  {"yahoo": "MFPC.CA",         "name": "Misr Fertilizers Production (MOPCO)",   "sector": "Chemicals"},
@@ -54,7 +55,7 @@ EGX_UNIVERSE: dict[str, dict[str, str]] = {
 
     # Healthcare / pharma
     "CLHO":  {"yahoo": "CLHO.CA",         "name": "Cleopatra Hospital",                    "sector": "Healthcare"},
-    "IDHC":  {"yahoo": "IDHC.CA",         "name": "Integrated Diagnostics Holdings",       "sector": "Healthcare"},
+    # "IDHC" (Integrated Diagnostics) removed — delisted from EGX (LSE-only).
     "EIPI":  {"yahoo": "PHAR.CA",         "name": "EIPICO",                                "sector": "Healthcare"},
 
     # Tourism / leisure

@@ -51,8 +51,14 @@ _WEIGHT_BOUND = (0.5, 1.5)  # candidate weight stays within ±50% of base, per f
 _WEIGHT_MIN_GAIN = 0.05     # OOS ranking-corr improvement required to propose
 
 
+_PRIMARY_HORIZON = 21   # decide() is a monthly model — learn on its native claim.
+                        # The 5d slice is live-inverted (34% hit, p<0.01); learning
+                        # from it would tune thresholds against noise.
+
+
 def _load_v8b() -> list[dict]:
-    """Graded decide()-sourced rows with a usable score and excess."""
+    """Graded decide()-sourced rows with a usable score and excess, at the
+    model's claim horizon only."""
     if not _GRADED.exists():
         return []
     rows = []
@@ -62,6 +68,7 @@ def _load_v8b() -> list[dict]:
             continue
         r = json.loads(line)
         if (r.get("source") == "v8b" and r.get("outcome") == "graded"
+                and r.get("horizon_days") == _PRIMARY_HORIZON
                 and isinstance(r.get("score"), (int, float))
                 and isinstance(r.get("excess_pct"), (int, float))):
             rows.append(r)

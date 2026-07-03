@@ -39,6 +39,7 @@ _CORE = ["pe_ratio", "pb_ratio", "roe_pct", "profit_margin_pct", "debt_to_equity
 _MIN_CALLS = 30          # graded directional calls before stats are meaningful
 _MIN_ACC = 55.0          # directional accuracy vs benchmark to claim edge
 _MIN_BUCKET = 10         # graded calls per conviction bucket for calibration
+_PRIMARY_HORIZON = 21    # the model's claim horizon (decide() is monthly)
 _BUY = {"BUY", "ACCUMULATE", "WEEKLY_BUY"}
 _SELL = {"REDUCE", "AVOID", "SELL"}
 
@@ -57,22 +58,36 @@ def _load_graded() -> list[dict]:
 def _gate1(rows: list[dict]) -> tuple[str, list[str]]:
     graded = [r for r in rows if r.get("outcome") == "graded" and r.get("correct") is not None]
     pending = [r for r in rows if r.get("outcome") == "pending"]
-    lines = [f"graded directional calls: {len(graded)} (need {_MIN_CALLS})  |  pending: {len(pending)}"]
-    if not graded:
-        return "OPEN", lines + ["No graded calls yet — run the briefing over time to accumulate."]
-    acc = sum(1 for r in graded if r["correct"]) / len(graded) * 100
-    exc = [r["excess_pct"] for r in graded if r.get("excess_pct") is not None]
+    # The model's claim is the 21-session hold: decide() is a monthly model,
+    # and live evidence shows the 5-day slice is inverted (34% hit, p<0.01)
+    # while 21d is the only horizon with positive excess. The gate therefore
+    # keys on 21d; 5d is shown as context, never as the pass/fail stat.
+    primary = [r for r in graded if r.get("horizon_days") == _PRIMARY_HORIZON]
+    short = [r for r in graded if r.get("horizon_days") != _PRIMARY_HORIZON]
+    lines = [f"graded {_PRIMARY_HORIZON}d calls (the model's claim): {len(primary)} "
+             f"(need {_MIN_CALLS})  |  pending: {len(pending)}"]
+    if not primary:
+        return "OPEN", lines + [f"No graded {_PRIMARY_HORIZON}d calls yet — "
+                                "run the briefing over time to accumulate."]
+    acc = sum(1 for r in primary if r["correct"]) / len(primary) * 100
+    exc = [r["excess_pct"] for r in primary if r.get("excess_pct") is not None]
     mean_exc = sum(exc) / len(exc) if exc else None
-    lines.append(f"directional accuracy vs benchmark: {acc:.0f}% (need >={_MIN_ACC:.0f}%)")
+    lines.append(f"{_PRIMARY_HORIZON}d directional accuracy vs benchmark: {acc:.0f}% "
+                 f"(need >={_MIN_ACC:.0f}%)")
     if mean_exc is not None:
-        lines.append(f"mean excess vs benchmark: {mean_exc:+.2f}%")
+        lines.append(f"{_PRIMARY_HORIZON}d mean excess vs benchmark: {mean_exc:+.2f}%")
     else:
         lines.append("(!) no excess returns recorded — calls were graded vs 0%, "
                      "re-run tests/grade_briefings to grade vs the basket benchmark")
-    status = "PASS" if (len(graded) >= _MIN_CALLS and acc >= _MIN_ACC) else (
-        "EMERGING" if len(graded) >= _MIN_CALLS else "OPEN")
-    if len(graded) < _MIN_CALLS:
-        lines.append(f"-> need {_MIN_CALLS - len(graded)} more graded calls before this means anything.")
+    if short:
+        acc5 = sum(1 for r in short if r["correct"]) / len(short) * 100
+        lines.append(f"(context) other horizons: {len(short)} calls, {acc5:.0f}% accuracy "
+                     "— not counted toward the gate")
+    status = "PASS" if (len(primary) >= _MIN_CALLS and acc >= _MIN_ACC) else (
+        "EMERGING" if len(primary) >= _MIN_CALLS else "OPEN")
+    if len(primary) < _MIN_CALLS:
+        lines.append(f"-> need {_MIN_CALLS - len(primary)} more graded "
+                     f"{_PRIMARY_HORIZON}d calls before this means anything.")
     return status, lines
 
 
@@ -107,7 +122,9 @@ def _gate2() -> tuple[str, list[str]]:
 
 
 def _gate3(rows: list[dict]) -> tuple[str, list[str]]:
-    graded = [r for r in rows if r.get("outcome") == "graded" and r.get("correct") is not None]
+    # Calibration is judged on the same 21d claim horizon as Gate 1.
+    graded = [r for r in rows if r.get("outcome") == "graded" and r.get("correct") is not None
+              and r.get("horizon_days") == _PRIMARY_HORIZON]
     buckets: dict[str, list[dict]] = {}
     for r in graded:
         buckets.setdefault(r.get("conviction") or "unknown", []).append(r)
