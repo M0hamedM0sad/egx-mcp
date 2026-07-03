@@ -218,20 +218,21 @@ def _build_proposal() -> dict:
     stamp = rows[-1].get("entry_date")
 
     # Learn on IS: candidate BUY threshold maximizing in-sample mean excess.
+    # No viable candidate (scores clustered below the candidate range) is NOT
+    # a dead end — the weight lever below learns from the same rows regardless.
     is_scored = [(c, _sel_stats(in_s, c)) for c in _CANDIDATES]
     viable = [(c, s) for c, s in is_scored if s["n"] >= _MIN_TRADES and s["mean_excess_pct"] is not None]
-    if not viable:
-        return {"status": "insufficient_evidence", "graded_v8b_calls": n,
-                "message": "Not enough names clear the candidate thresholds in-sample."}
-    cand, _ = max(viable, key=lambda x: x[1]["mean_excess_pct"])
-
-    # Validate OOS: learned threshold vs current, on data it wasn't fit on.
-    oos_cand = _sel_stats(oos, cand)
     oos_cur = _sel_stats(oos, cur_buy)
-    thr_improves = (oos_cand["mean_excess_pct"] is not None and oos_cur["mean_excess_pct"] is not None
-                    and oos_cand["n"] >= _MIN_TRADES
-                    and oos_cand["mean_excess_pct"] >= oos_cur["mean_excess_pct"]
-                    and cand != cur_buy)
+    if viable:
+        cand, _ = max(viable, key=lambda x: x[1]["mean_excess_pct"])
+        # Validate OOS: learned threshold vs current, on data it wasn't fit on.
+        oos_cand = _sel_stats(oos, cand)
+        thr_improves = (oos_cand["mean_excess_pct"] is not None and oos_cur["mean_excess_pct"] is not None
+                        and oos_cand["n"] >= _MIN_TRADES
+                        and oos_cand["mean_excess_pct"] >= oos_cur["mean_excess_pct"]
+                        and cand != cur_buy)
+    else:
+        cand, oos_cand, thr_improves = None, None, False
 
     # Second lever: composite reweight, learned + OOS-validated independently.
     cur_weights = current.get("score_weights", model_params.DEFAULTS["score_weights"])
@@ -263,7 +264,9 @@ def _build_proposal() -> dict:
     if w_improves:
         msgs.append(weights_prop["message"])
     if not any_change:
-        msgs.append(f"BUY threshold {cur_buy} holds (candidate {cand} didn't beat it OOS); "
+        thr_note = (f"candidate {cand} didn't beat it OOS" if cand is not None
+                    else "no candidate threshold viable in-sample")
+        msgs.append(f"BUY threshold {cur_buy} holds ({thr_note}); "
                     + weights_prop.get("message", "weights unchanged."))
 
     prop = {
