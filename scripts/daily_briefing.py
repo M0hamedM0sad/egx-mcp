@@ -550,6 +550,31 @@ def build_briefing(force: bool = False) -> dict:
     except Exception as e:
         out["regime"] = {"error": str(e)}
 
+    # Market stance — exposure guidance BEFORE picks. The 12-week walk-forward
+    # (tests/oos_multiweek) showed the equal-weight basket beating every
+    # ranking variant in a broad bull, and the live 5d pick record is inverted;
+    # until reliability Gate 1 passes, picks are satellite ideas, not the core.
+    _STANCES = {
+        "BULL": ("BROAD_EXPOSURE",
+                 "Bull regime with breadth — core position: equal-weight EGX basket. "
+                 "Picks below are satellite ideas (21-session holds, small size) "
+                 "until the model's edge is proven (reliability Gate 1)."),
+        "SIDEWAYS": ("SELECTIVE",
+                     "Range-bound — no broad tailwind. Only high-conviction names, "
+                     "tight stops, 21-session holds."),
+        "BEAR": ("DEFENSIVE",
+                 "Bear regime — cut gross exposure; T-bills compete hard. "
+                 "Buy-side picks need exceptional justification."),
+        "HIGH_VOL": ("DEFENSIVE",
+                     "High-vol regime — cut gross exposure, size down, widen stops; "
+                     "quality and risk factors dominate."),
+    }
+    reg_label = (out.get("regime") or {}).get("regime", "UNKNOWN")
+    stance, note = _STANCES.get(
+        reg_label, ("SELECTIVE", "Regime unknown — default to selective, small sizing."))
+    out["market_stance"] = {"stance": stance, "note": note, "regime": reg_label,
+                            "holding_horizon_sessions": 21}
+
     # Risk-free rate
     try:
         out["rf_rate"] = risk_free.get_rate()
@@ -874,6 +899,17 @@ def render_html(b: dict) -> str:
     parts = [f"<html><head>{css}</head><body>"]
     parts.append(f"<h1>EGX Pre-Market Briefing</h1>")
     parts.append(f"<p><b>{b['cairo_local']}</b> | EGX opens 10:00 Cairo</p>")
+
+    # MARKET STANCE — exposure guidance leads; picks are downstream of it.
+    ms = b.get("market_stance") or {}
+    if ms.get("stance"):
+        stance_color = {"BROAD_EXPOSURE": "#0a7d3a", "SELECTIVE": "#856404",
+                        "DEFENSIVE": "#c0392b"}.get(ms["stance"], "#0d3e66")
+        parts.append(f"<div class='summary-box' style='border-left:4px solid {stance_color}'>"
+                     f"<b style='color:{stance_color}'>Market stance: {ms['stance']}"
+                     f"</b> ({ms.get('regime', '?')} regime) — {ms.get('note', '')} "
+                     f"<span style='color:#666'>Recommended holding horizon: "
+                     f"{ms.get('holding_horizon_sessions', 21)} sessions.</span></div>")
 
     # MACRO
     parts.append("<h2>Macro Snapshot</h2>")
@@ -1354,9 +1390,18 @@ def render_text(b: dict) -> str:
     lines.append(f"  Regime:  {regime_d.get('regime', '?')} — {regime_d.get('description','')[:80]}")
     lines.append("")
 
+    ms = b.get("market_stance") or {}
+    if ms.get("stance"):
+        lines.append(f"--- MARKET STANCE: {ms['stance']} ---")
+        lines.append(f"  {ms.get('note', '')}")
+        lines.append(f"  Recommended holding horizon: "
+                     f"{ms.get('holding_horizon_sessions', 21)} sessions.")
+        lines.append("")
+
     w1 = b.get("w1_picks", {}) or {}
     picks = w1.get("top_picks", []) or []
-    lines.append(f"--- TODAY'S W1 PICKS (5-day horizon, eligible: {w1.get('n_eligible','?')}) ---")
+    lines.append(f"--- TODAY'S W1 PICKS (satellite ideas — see stance above, "
+                 f"eligible: {w1.get('n_eligible','?')}) ---")
     for i, p in enumerate(picks, 1):
         tk = p['ticker']
         chart = tv_scraper.chart_url(tk)
