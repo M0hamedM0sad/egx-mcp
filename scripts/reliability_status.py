@@ -63,9 +63,12 @@ def _gate1(rows: list[dict]) -> tuple[str, list[str]]:
     acc = sum(1 for r in graded if r["correct"]) / len(graded) * 100
     exc = [r["excess_pct"] for r in graded if r.get("excess_pct") is not None]
     mean_exc = sum(exc) / len(exc) if exc else None
-    lines.append(f"directional accuracy vs EGX30: {acc:.0f}% (need >={_MIN_ACC:.0f}%)")
+    lines.append(f"directional accuracy vs benchmark: {acc:.0f}% (need >={_MIN_ACC:.0f}%)")
     if mean_exc is not None:
-        lines.append(f"mean excess vs EGX30: {mean_exc:+.2f}%")
+        lines.append(f"mean excess vs benchmark: {mean_exc:+.2f}%")
+    else:
+        lines.append("(!) no excess returns recorded — calls were graded vs 0%, "
+                     "re-run tests/grade_briefings to grade vs the basket benchmark")
     status = "PASS" if (len(graded) >= _MIN_CALLS and acc >= _MIN_ACC) else (
         "EMERGING" if len(graded) >= _MIN_CALLS else "OPEN")
     if len(graded) < _MIN_CALLS:

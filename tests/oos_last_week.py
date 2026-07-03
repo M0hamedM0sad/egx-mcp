@@ -5,7 +5,11 @@ Dates are computed dynamically each run:
   Window   = the 5 EGX trading sessions (Sun–Thu) immediately before today
 
 For each name in the validated universe:
-  1. Score using ONLY data through the cutoff (price-based composite).
+  1. Score with the PRODUCTION W1 weekly model (egx_mcp.data.weekly) using
+     ONLY data through the cutoff — same score, same quality and volume
+     eligibility filters the briefing's weekly picks use. (Earlier versions
+     of this test scored with a stale monthly-style composite, so the weekly
+     OOS log was grading a model the briefing doesn't actually run.)
   2. Run the bootstrap MC simulator as if today were the cutoff day.
   3. Take the actual realized return over the test window.
   4. Compare: pick rank, forecast E[ret], actual ret, hit?
@@ -28,18 +32,23 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
-import curl_cffi.requests as _curl_requests
-
 # curl_cffi with impersonate=chrome uses BoringSSL which ignores both cert env
 # vars and explicit cacert paths. Disable verify so yfinance can reach Yahoo's
-# crumb endpoint. Public market data, no creds — acceptable here.
-_orig_session_init = _curl_requests.Session.__init__
+# crumb endpoint. Public market data, no creds — acceptable here. curl_cffi
+# ships with recent yfinance but is not our declared dependency — skip the
+# patch rather than die if it's absent.
+try:
+    import curl_cffi.requests as _curl_requests
 
-def _patched_session_init(self, *args, **kwargs):
-    kwargs["verify"] = False
-    _orig_session_init(self, *args, **kwargs)
+    _orig_session_init = _curl_requests.Session.__init__
 
-_curl_requests.Session.__init__ = _patched_session_init
+    def _patched_session_init(self, *args, **kwargs):
+        kwargs["verify"] = False
+        _orig_session_init(self, *args, **kwargs)
+
+    _curl_requests.Session.__init__ = _patched_session_init
+except ImportError:
+    pass
 
 import numpy as np
 import pandas as pd
@@ -51,6 +60,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from egx_mcp.data import egx_listing, risk_free
 from egx_mcp.data.universe import resolve_ticker
+from egx_mcp.data.weekly import W1Config, _features as _w1_features, \
+    _score as _w1_score, _load_quality_set
 
 # ---------------------------------------------------------------------------
 # Dynamic date computation — no hardcoded dates
@@ -87,39 +98,38 @@ print(f"{'=' * 80}\n")
 # Data helpers
 # ---------------------------------------------------------------------------
 
-def _fetch(symbol: str) -> pd.Series:
-    """Pull daily history wide enough to cover the full test window."""
+def _fetch(symbol: str) -> tuple[pd.Series, pd.Series]:
+    """Pull daily close + volume history covering the full test window."""
     try:
         h = yf.Ticker(symbol).history(start="2025-01-01", end=_FETCH_END, interval="1d")
         if h is None or h.empty:
-            return pd.Series(dtype=float)
-        s = h["Close"].copy()
-        idx = pd.to_datetime(s.index)
+            return pd.Series(dtype=float), pd.Series(dtype=float)
+        idx = pd.to_datetime(h.index)
         if idx.tz is not None:
             idx = idx.tz_convert("UTC").tz_localize(None)
-        s.index = pd.to_datetime(idx.date)
-        return s[~s.index.duplicated(keep="last")]
+        out = []
+        for col in ("Close", "Volume"):
+            s = h[col].copy()
+            s.index = pd.to_datetime(idx.date)
+            out.append(s[~s.index.duplicated(keep="last")])
+        return out[0], out[1]
     except Exception:
-        return pd.Series(dtype=float)
+        return pd.Series(dtype=float), pd.Series(dtype=float)
 
 
-def _price_only_score(closes: pd.Series, cutoff: pd.Timestamp) -> float | None:
-    """Same composite the backtest harness uses, computed at cutoff."""
-    sub = closes.loc[:cutoff].dropna()
-    if len(sub) < 130:
-        return None
-    p_now = float(sub.iloc[-1])
-    p_6m  = float(sub.iloc[-130])
-    p_1m  = float(sub.iloc[-22])
-    ma200 = float(sub.tail(200).mean()) if len(sub) >= 200 else float(sub.mean())
-    vol   = float(sub.tail(60).pct_change().std() * (252 ** 0.5))
-    if not (p_now > 0 and p_6m > 0 and p_1m > 0):
-        return None
-    mom_6m  = (p_now / p_6m - 1) * 100
-    mr_1m   = -(p_now / p_1m - 1) * 100
-    trend   = 5 if p_now > ma200 else -5
-    vol_pen = max(0, (vol * 100 - 30) * 0.5)
-    return mom_6m * 0.5 + mr_1m * 0.2 + trend - vol_pen
+_W1_CFG = W1Config()
+
+
+def _production_score(closes: pd.Series, volumes: pd.Series,
+                      cutoff: pd.Timestamp) -> tuple[float | None, bool]:
+    """Score with the deployed W1 weekly model as of cutoff.
+
+    Returns (score, passes_volume_filter); score is None when features
+    can't be computed."""
+    f = _w1_features(closes, volumes, cutoff)
+    if f is None:
+        return None, False
+    return _w1_score(f, _W1_CFG), f["vol_ratio"] >= _W1_CFG.min_volume_ratio
 
 
 def _bootstrap_forecast(closes: pd.Series, cutoff: pd.Timestamp, horizon_days: int) -> dict:
@@ -142,8 +152,11 @@ def _bootstrap_forecast(closes: pd.Series, cutoff: pd.Timestamp, horizon_days: i
         if p / last - 1 >= 0.02:
             up_2 += 1
     terminals.sort()
+    # Point forecast = MEDIAN terminal, not mean: compounded bootstrap paths
+    # are right-skewed, so the mean systematically overstates hot names
+    # (2026-05-28 week: mean said EGTS +9.2%, realized +1.2%).
     return {
-        "e_ret":  (sum(terminals) / len(terminals) / last - 1) * 100,
+        "e_ret":  (terminals[int(0.50 * N_PATHS)] / last - 1) * 100,
         "p_up_2": up_2 / N_PATHS,
         "p10":    (terminals[int(0.10 * N_PATHS)] / last - 1) * 100,
         "p90":    (terminals[int(0.90 * N_PATHS)] / last - 1) * 100,
@@ -156,7 +169,9 @@ def _bootstrap_forecast(closes: pd.Series, cutoff: pd.Timestamp, horizon_days: i
 
 print("Loading price history for validated EGX universe...")
 universe = egx_listing.get_full_universe()
-print(f"Universe size: {len(universe)}\n")
+quality_set = _load_quality_set(_W1_CFG.min_roe_pct)
+print(f"Universe size: {len(universe)}  "
+      f"(quality set ROE>={_W1_CFG.min_roe_pct:.0f}%: {len(quality_set)})\n")
 
 cutoff_ts = pd.Timestamp(CUTOFF)
 end_ts    = pd.Timestamp(WINDOW_END)
@@ -164,10 +179,10 @@ end_ts    = pd.Timestamp(WINDOW_END)
 results: list[dict] = []
 for tk in universe:
     _, yahoo, _ = resolve_ticker(tk)
-    closes = _fetch(yahoo)
+    closes, volumes = _fetch(yahoo)
     if closes.empty:
         continue
-    score = _price_only_score(closes, cutoff_ts)
+    score, passes_volume = _production_score(closes, volumes, cutoff_ts)
     if score is None:
         continue
 
@@ -184,6 +199,7 @@ for tk in universe:
     results.append({
         "ticker":               tk,
         "score":                score,
+        "eligible":             passes_volume and ((not quality_set) or tk in quality_set),
         "cutoff_price":         p0,
         "end_price":            p1,
         "actual_ret_pct":       actual_ret_pct,
@@ -196,6 +212,16 @@ for tk in universe:
     })
 
 results.sort(key=lambda r: r["score"], reverse=True)
+# Picks come only from names that pass the production eligibility filters;
+# the basket benchmark stays the full scored universe. Mirror production's
+# fallback: when a holiday half-session empties the volume filter,
+# rank_universe relaxes to quality-only eligibility.
+eligible_results = [r for r in results if r["eligible"]]
+if len(eligible_results) < TOP_N:
+    print("(volume filter emptied the eligible set — relaxed to quality-only, "
+          "matching weekly.rank_universe)")
+    eligible_results = [r for r in results
+                        if (not quality_set) or r["ticker"] in quality_set]
 
 # ---------------------------------------------------------------------------
 # Aggregate metrics
@@ -207,7 +233,7 @@ rf_week  = ((1 + rf / 100) ** (5 / 252) - 1) * 100
 basket_returns = [r["actual_ret_pct"] for r in results]
 benchmark_ret  = sum(basket_returns) / len(basket_returns) if basket_returns else None
 
-top     = results[:TOP_N]
+top     = eligible_results[:TOP_N]
 top_ret = sum(r["actual_ret_pct"] for r in top) / len(top) if top else None
 
 # ---------------------------------------------------------------------------
@@ -250,12 +276,12 @@ print(f"    Mean error (bias):   {me:+.2f}pp")
 print(f"    Actual within 90% CI: {in_ci:.0f}% of names")
 print(f"    (Calibrated would be 80%; below = overconfident, above = underconfident)\n")
 
-bottom  = results[-TOP_N:]
+bottom  = eligible_results[-TOP_N:]
 bot_ret = sum(r["actual_ret_pct"] for r in bottom) / len(bottom)
 print(f"Model would have AVOIDED these bottom {TOP_N} on {CUTOFF}:\n")
 print(f"{'Rank':<7}{'Tic':<7}{'Score':<8}{'Forecast':<12}{'Actual':<10}")
 print("-" * 50)
-for i, r in enumerate(bottom, len(results) - TOP_N + 1):
+for i, r in enumerate(bottom, len(eligible_results) - TOP_N + 1):
     print(f"{i:<7}{r['ticker']:<7}{r['score']:<8.1f}"
           f"{r['forecast_e_ret_pct']:>+7.2f}%   "
           f"{r['actual_ret_pct']:>+7.2f}%")
@@ -273,8 +299,10 @@ _LOG.parent.mkdir(parents=True, exist_ok=True)
 _record = {
     "cutoff":           CUTOFF,
     "window_end":       WINDOW_END,
+    "score_model":      "w1-prod",   # weeks before this field used the old monthly composite
     "n_universe":       len(universe),
     "n_scored":         len(results),
+    "n_eligible":       len(eligible_results),
     "top5_return_pct":  round(top_ret, 4) if top_ret is not None else None,
     "basket_return_pct":round(benchmark_ret, 4) if benchmark_ret is not None else None,
     "tbill_week_pct":   round(rf_week, 4),

@@ -131,9 +131,8 @@ jobs:
             exit 0
           fi
 
-          CUR=$(jq -r '.current_buy_threshold' "$PROP")
-          CAND=$(jq -r '.candidate_buy_threshold' "$PROP")
-          BRANCH="auto-learn/buy-${CAND}"
+          TAG=$(jq -r '.change_tag // "none"' "$PROP")
+          BRANCH="auto-learn/${TAG}"
 
           # Idempotent: skip if a PR for this candidate is already open or the
           # branch already exists on the remote (e.g. previously opened/rejected).
@@ -155,25 +154,40 @@ jobs:
           if git diff --cached --quiet; then
             echo "learn --apply produced no diff — nothing to PR."; exit 0
           fi
-          git commit -m "feat(model): apply OOS-validated BUY threshold ${CUR}->${CAND}"
+          git commit -m "feat(model): apply OOS-validated update (${TAG})"
           git push -u origin "$BRANCH"
 
-          BODY=$(jq -r '
-            "## Learning loop — OOS-validated BUY-threshold update\n\n"
-            + .message + "\n\n"
-            + "| | current | candidate |\n|---|---|---|\n"
-            + "| BUY threshold | \(.current_buy_threshold) | \(.candidate_buy_threshold) |\n"
-            + "| OOS mean excess | \(.oos_current.mean_excess_pct)% | \(.oos_candidate.mean_excess_pct)% |\n"
-            + "| OOS names | \(.oos_current.n) | \(.oos_candidate.n) |\n\n"
-            + "Learned from \(.graded_v8b_calls) graded v8b calls "
-            + "(\(.in_sample) in-sample / \(.out_of_sample) out-of-sample).\n\n"
-            + "**Merging this PR is the human approval gate** — it applies the new "
-            + "threshold to `model_params.json`, which the decision layer reads on next run. "
-            + "Close without merging to reject the proposal."
-          ' "$PROP")
-
+          # Title + body are precomputed by learn.py (handles threshold and/or
+          # weight changes), so the workflow doesn't reconstruct them in jq.
+          jq -r '.pr_body' "$PROP" > /tmp/pr_body.md
           gh pr create \
-            --title "Learning loop: BUY threshold ${CUR} → ${CAND} (OOS-validated)" \
-            --body "$BODY" \
+            --title "$(jq -r '.pr_title' "$PROP")" \
+            --body-file /tmp/pr_body.md \
             --base "${GITHUB_REF_NAME}" \
             --head "$BRANCH"
+
+      - name: Benchmark coverage guard
+        # The learning loop only uses graded rows that carry excess_pct (return
+        # vs benchmark). If the benchmark fetch silently fails, grading still
+        # "succeeds" but every row is unusable and the loop starves on
+        # "insufficient evidence" forever — exactly what happened before the
+        # synthetic-basket fallback existed. Runs LAST so the day's evidence is
+        # already committed either way; a failure here just turns the run red
+        # (and emails the repo owner) instead of losing the briefing.
+        if: always()
+        run: |
+          python - <<'EOF' | tee -a "$GITHUB_STEP_SUMMARY"
+          import json, sys
+          from pathlib import Path
+          f = Path("logs/graded_verdicts.jsonl")
+          rows = [json.loads(l) for l in f.read_text(encoding="utf-8").splitlines() if l.strip()] if f.exists() else []
+          graded = [r for r in rows if r.get("outcome") == "graded"]
+          with_exc = [r for r in graded if isinstance(r.get("excess_pct"), (int, float))]
+          pct = 100.0 * len(with_exc) / len(graded) if graded else 0.0
+          print(f"## Benchmark coverage: {len(with_exc)}/{len(graded)} graded rows have excess_pct ({pct:.0f}%)")
+          if graded and pct < 80.0:
+              print("FAIL: benchmark returns are missing on >20% of graded calls — "
+                    "the learning loop cannot use them. Check the synthetic-basket "
+                    "fetch (Yahoo rate limit / network) in tests/grade_briefings.py.")
+              sys.exit(1)
+          EOF

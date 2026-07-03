@@ -6,13 +6,13 @@
       "https://english.mubasher.info/markets/EGX/stocks/COMI/ratios"
     ],
     "par_value": 10.0,
-    "market_cap": 423777438000.0,
+    "market_cap": 420706587000.0,
     "book_value_per_share": 57.67,
     "pb_ratio": 1.52,
     "trailing_eps": 21.77,
     "pe_ratio": 2.75,
     "roe_pct": 37.75,
-    "fetched_at": 1777500005.3309276
+    "fetched_at": 1781985091.1230807
   },
   "HDBK": {
     "ticker": "HDBK",
@@ -754,18 +754,12 @@
   },
   "GBCO": {
     "ticker": "GBCO",
-    "sources": [
-      "https://english.mubasher.info/markets/EGX/stocks/GBCO",
-      "https://english.mubasher.info/markets/EGX/stocks/GBCO/ratios"
+    "sources": [],
+    "errors": [
+      "overview: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)",
+      "ratios: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)"
     ],
-    "par_value": 1.0,
-    "market_cap": 29297645000.0,
-    "book_value_per_share": 25.01,
-    "pb_ratio": 0.92,
-    "trailing_eps": 2.77,
-    "pe_ratio": 5.81,
-    "roe_pct": 11.06,
-    "fetched_at": 1777500068.8709917
+    "fetched_at": 1781819772.5449088
   },
   "RAYA": {
     "ticker": "RAYA",

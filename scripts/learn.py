@@ -42,6 +42,14 @@ _MIN_SAMPLE = 40        # total graded v8b calls before we dare learn anything
 _MIN_TRADES = 8         # min selected names for a threshold's stat to count
 _CANDIDATES = list(range(65, 91, 5))   # BUY-threshold candidates (>=ACCUMULATE, keeps order)
 
+# --- score-weight learning ---
+_WEIGHT_KEYS = ("valuation", "quality", "momentum", "risk")
+_SUB_FIELDS = {k: f"sub_{k}" for k in _WEIGHT_KEYS}
+_MIN_SUBSCORE_SAMPLE = 40   # graded v8b rows carrying ALL four sub-scores
+_WEIGHT_TILT = 0.5          # how hard to tilt toward positive-corr factors
+_WEIGHT_BOUND = (0.5, 1.5)  # candidate weight stays within ±50% of base, per factor
+_WEIGHT_MIN_GAIN = 0.05     # OOS ranking-corr improvement required to propose
+
 
 def _load_v8b() -> list[dict]:
     """Graded decide()-sourced rows with a usable score and excess."""
@@ -107,6 +115,81 @@ def _subscore_signal(rows: list[dict]) -> dict:
                      "not auto-tuned.")}
 
 
+def _subscore_complete(rows: list[dict]) -> list[dict]:
+    """Graded rows carrying all four sub-scores AND an excess — usable for reweighting."""
+    return [r for r in rows
+            if all(isinstance(r.get(f), (int, float)) for f in _SUB_FIELDS.values())
+            and isinstance(r.get("excess_pct"), (int, float))]
+
+
+def _weighted_composite(r: dict, w: dict) -> float:
+    return sum(r[_SUB_FIELDS[k]] * w[k] for k in _WEIGHT_KEYS)
+
+
+def _normalize(w: dict) -> dict:
+    s = sum(w.values())
+    return {k: round(v / s, 4) for k, v in w.items()} if s > 0 else dict(w)
+
+
+def _rank_corr(rows: list[dict], w: dict) -> float | None:
+    """How well the w-weighted composite ranks realized forward excess."""
+    return _corr([_weighted_composite(r, w) for r in rows],
+                 [r["excess_pct"] for r in rows])
+
+
+def _candidate_weights(in_rows: list[dict], base: dict) -> dict:
+    """Tilt the base weights toward factors that correlated positively with
+    excess in-sample, capped to ±50% per factor and renormalized. One
+    conservative candidate (not a free fit) to keep overfitting in check."""
+    exc = [r["excess_pct"] for r in in_rows]
+    cand = {}
+    for k in _WEIGHT_KEYS:
+        c = _corr([r[_SUB_FIELDS[k]] for r in in_rows], exc) or 0.0
+        factor = max(_WEIGHT_BOUND[0], min(_WEIGHT_BOUND[1], 1 + _WEIGHT_TILT * c))
+        cand[k] = base[k] * factor
+    return _normalize(cand)
+
+
+def _learn_weights(rows: list[dict], base: dict) -> dict:
+    """Propose an OOS-validated composite reweight, or explain why not.
+
+    Mirrors the threshold loop: fit on a time-ordered IS slice, validate on a
+    held-out OOS slice. The metric is rank correlation of the weighted composite
+    with realized excess — higher means the score orders winners better."""
+    usable = _subscore_complete(rows)
+    n = len(usable)
+    if n < _MIN_SUBSCORE_SAMPLE:
+        return {"status": "insufficient_evidence", "n_with_subscores": n,
+                "need": _MIN_SUBSCORE_SAMPLE, "current_weights": base,
+                "note": (f"{n} graded calls carry all four sub-scores "
+                         f"(need {_MIN_SUBSCORE_SAMPLE}). Newer briefings record them; "
+                         "let the daily loop accumulate.")}
+    usable.sort(key=lambda r: r.get("entry_date") or "")
+    cut = int(n * 0.6)
+    in_s, oos = usable[:cut], usable[cut:]
+    cand = _candidate_weights(in_s, base)
+    oos_base = _rank_corr(oos, base)
+    oos_cand = _rank_corr(oos, cand)
+    improves = (oos_cand is not None and oos_base is not None
+                and len(oos) >= _MIN_TRADES
+                and oos_cand >= oos_base + _WEIGHT_MIN_GAIN
+                and oos_cand > 0
+                and cand != base)
+    return {
+        "status": "proposal" if improves else "no_change",
+        "n_with_subscores": n, "in_sample": len(in_s), "out_of_sample": len(oos),
+        "current_weights": base, "candidate_weights": cand,
+        "oos_rankcorr_current": oos_base, "oos_rankcorr_candidate": oos_cand,
+        "improves": improves,
+        "message": (
+            f"Reweight {base} -> {cand} ranks held-out excess better "
+            f"(corr {oos_cand} vs {oos_base} on {len(oos)} calls)."
+            if improves else
+            "Current weights hold up — the tilted candidate did not rank "
+            "out-of-sample excess meaningfully better."),
+    }
+
+
 def _conviction_reliability(rows: list[dict]) -> dict:
     out = {}
     for c in ("high", "medium", "low", "weekly"):
@@ -145,38 +228,115 @@ def _build_proposal() -> dict:
     # Validate OOS: learned threshold vs current, on data it wasn't fit on.
     oos_cand = _sel_stats(oos, cand)
     oos_cur = _sel_stats(oos, cur_buy)
-    improves = (oos_cand["mean_excess_pct"] is not None and oos_cur["mean_excess_pct"] is not None
-                and oos_cand["n"] >= _MIN_TRADES
-                and oos_cand["mean_excess_pct"] >= oos_cur["mean_excess_pct"]
-                and cand != cur_buy)
+    thr_improves = (oos_cand["mean_excess_pct"] is not None and oos_cur["mean_excess_pct"] is not None
+                    and oos_cand["n"] >= _MIN_TRADES
+                    and oos_cand["mean_excess_pct"] >= oos_cur["mean_excess_pct"]
+                    and cand != cur_buy)
 
+    # Second lever: composite reweight, learned + OOS-validated independently.
+    cur_weights = current.get("score_weights", model_params.DEFAULTS["score_weights"])
+    weights_prop = _learn_weights(rows, cur_weights)
+    w_improves = weights_prop.get("improves", False)
+
+    any_change = thr_improves or w_improves
     proposed = json.loads(json.dumps(current))  # deep copy
-    proposed["verdict_thresholds"]["BUY"] = cand
+    if thr_improves:
+        proposed["verdict_thresholds"]["BUY"] = cand
+    if w_improves:
+        proposed["score_weights"] = weights_prop["candidate_weights"]
     proposed["version"] = f"learned-{stamp}"
     proposed["learned_at"] = stamp
-    proposed["provenance"] = (f"learned from {n} graded v8b calls; BUY {cur_buy}->{cand}, "
+    changes = []
+    if thr_improves:
+        changes.append(f"BUY {cur_buy}->{cand}")
+    if w_improves:
+        changes.append("score_weights tilted")
+    proposed["provenance"] = (f"learned from {n} graded v8b calls; "
+                              f"{', '.join(changes) or 'no change'}; "
                               f"OOS-validated on {len(oos)} held-out calls")
 
-    return {
-        "status": "proposal" if improves else "no_change",
+    msgs = []
+    if thr_improves:
+        msgs.append(f"BUY threshold {cur_buy}->{cand} beats current out-of-sample "
+                    f"({oos_cand['mean_excess_pct']}% vs {oos_cur['mean_excess_pct']}% mean excess "
+                    f"on {oos_cand['n']} held-out names).")
+    if w_improves:
+        msgs.append(weights_prop["message"])
+    if not any_change:
+        msgs.append(f"BUY threshold {cur_buy} holds (candidate {cand} didn't beat it OOS); "
+                    + weights_prop.get("message", "weights unchanged."))
+
+    prop = {
+        "status": "proposal" if any_change else "no_change",
         "graded_v8b_calls": n,
         "in_sample": len(in_s), "out_of_sample": len(oos),
         "current_buy_threshold": cur_buy,
         "candidate_buy_threshold": cand,
+        "threshold_improves": thr_improves,
         "oos_current": oos_cur,
         "oos_candidate": oos_cand,
+        "weights_proposal": weights_prop,
         "conviction_reliability": _conviction_reliability(rows),
         "subscore_signal": _subscore_signal(rows),
-        "recommendation": "APPLY" if improves else "KEEP_CURRENT",
-        "proposed_params": proposed if improves else None,
-        "message": (
-            f"Learned BUY threshold {cand} beats current {cur_buy} out-of-sample "
-            f"({oos_cand['mean_excess_pct']}% vs {oos_cur['mean_excess_pct']}% mean excess "
-            f"on {oos_cand['n']} held-out names). Review, then apply."
-            if improves else
-            f"Current BUY threshold {cur_buy} holds up — learned candidate {cand} did not "
-            "beat it out-of-sample. No change recommended."),
+        "recommendation": "APPLY" if any_change else "KEEP_CURRENT",
+        "proposed_params": proposed if any_change else None,
+        "change_tag": _change_tag(thr_improves, cand, w_improves,
+                                  weights_prop.get("candidate_weights")),
+        "message": " ".join(msgs),
     }
+    prop["pr_title"], prop["pr_body"] = _pr_text(prop)
+    return prop
+
+
+def _change_tag(thr_improves: bool, cand: int, w_improves: bool,
+                cand_w: dict | None) -> str:
+    """Stable branch-name tag keyed on WHAT changes, so the daily workflow
+    reuses one PR per distinct candidate and opens a fresh one when it shifts."""
+    parts = []
+    if thr_improves:
+        parts.append(f"buy-{cand}")
+    if w_improves and cand_w:
+        parts.append("w-" + "-".join(str(int(round(cand_w[k] * 100))) for k in _WEIGHT_KEYS))
+    return "_".join(parts) or "none"
+
+
+def _pr_text(p: dict) -> tuple[str, str]:
+    """Precompute the PR title + markdown body so the workflow stays simple."""
+    bits = []
+    if p["threshold_improves"]:
+        bits.append(f"BUY {p['current_buy_threshold']}→{p['candidate_buy_threshold']}")
+    if p["weights_proposal"].get("improves"):
+        bits.append("reweight")
+    title = "Learning loop: " + (" + ".join(bits) or "update") + " (OOS-validated)"
+
+    lines = ["## Learning loop — OOS-validated model update", "", p["message"], ""]
+    if p["threshold_improves"]:
+        oc, oa = p["oos_current"], p["oos_candidate"]
+        lines += [
+            "### BUY threshold",
+            "| | current | candidate |", "|---|---|---|",
+            f"| BUY threshold | {p['current_buy_threshold']} | {p['candidate_buy_threshold']} |",
+            f"| OOS mean excess | {oc['mean_excess_pct']}% | {oa['mean_excess_pct']}% |",
+            f"| OOS names | {oc['n']} | {oa['n']} |", "",
+        ]
+    wp = p["weights_proposal"]
+    if wp.get("improves"):
+        cw, nw = wp["current_weights"], wp["candidate_weights"]
+        lines += [
+            "### Composite weights",
+            "| factor | current | candidate |", "|---|---|---|",
+            *[f"| {k} | {cw[k]} | {nw[k]} |" for k in _WEIGHT_KEYS],
+            f"| OOS rank-corr w/ excess | {wp['oos_rankcorr_current']} | "
+            f"{wp['oos_rankcorr_candidate']} |", "",
+        ]
+    lines += [
+        f"Learned from {p['graded_v8b_calls']} graded v8b calls "
+        f"({p['in_sample']} in-sample / {p['out_of_sample']} out-of-sample).", "",
+        "**Merging this PR is the human approval gate** — it applies the update to "
+        "`model_params.json`, which the decision layer reads on next run. "
+        "Close without merging to reject.",
+    ]
+    return title, "\n".join(lines)
 
 
 def cmd_analyze():
@@ -201,8 +361,12 @@ def cmd_apply():
               f"{prop.get('message', '')}")
         return 1
     model_params.save_params(prop["proposed_params"])
-    print(f"Applied: BUY threshold -> {prop['candidate_buy_threshold']} "
-          f"(was {prop['current_buy_threshold']}).")
+    if prop.get("threshold_improves"):
+        print(f"Applied: BUY threshold -> {prop['candidate_buy_threshold']} "
+              f"(was {prop['current_buy_threshold']}).")
+    if prop.get("weights_proposal", {}).get("improves"):
+        print(f"Applied: score_weights -> {prop['weights_proposal']['candidate_weights']} "
+              f"(was {prop['weights_proposal']['current_weights']}).")
     print(f"Written to {model_params._PARAMS_FILE}. The decision layer now uses it.")
     print("Re-run grading/backtests to confirm the change holds going forward.")
     return 0

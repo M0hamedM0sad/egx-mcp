@@ -37,6 +37,10 @@ from typing import Any
 
 import httpx
 
+from ._certs import ensure_ca_bundle
+
+ensure_ca_bundle()  # trust the OS cert store (TLS-inspecting proxy) before any request
+
 log = logging.getLogger("egx-mcp.tv_scraper")
 
 _HEADERS = {

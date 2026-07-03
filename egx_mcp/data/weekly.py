@@ -249,6 +249,15 @@ def rank_universe(asof: str | None = None, cfg: W1Config | None = None,
 
     eligible = [r for r in rows if r["passes_quality_filter"] and r["passes_volume_filter"]]
     eligible.sort(key=lambda r: r["score"], reverse=True)
+    volume_filter_relaxed = False
+    if len(eligible) < top_n:
+        # Pre-holiday half-sessions can fail the single-session volume filter
+        # for the entire universe (e.g. the 2026-03-19 and 2026-05-28 Eid
+        # weeks), leaving an empty pick list. Fall back to quality-only
+        # eligibility rather than emitting a degenerate briefing.
+        volume_filter_relaxed = True
+        eligible = [r for r in rows if r["passes_quality_filter"]]
+        eligible.sort(key=lambda r: r["score"], reverse=True)
     top_picks = eligible[:top_n]
     runners_up = eligible[top_n:top_n + 5]
 
@@ -259,6 +268,7 @@ def rank_universe(asof: str | None = None, cfg: W1Config | None = None,
         "n_with_features": len(rows),
         "n_passes_quality": sum(1 for r in rows if r["passes_quality_filter"]),
         "n_eligible": len(eligible),
+        "volume_filter_relaxed": volume_filter_relaxed,
         "config": {
             "w_mom5": cfg.w_mom5, "w_mom20": cfg.w_mom20, "w_mr1": cfg.w_mr1,
             "w_breakout": cfg.w_breakout, "w_trend": cfg.w_trend,
