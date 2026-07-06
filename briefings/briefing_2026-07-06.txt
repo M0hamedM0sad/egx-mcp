@@ -1,0 +1,91 @@
+=== EGX PRE-MARKET BRIEFING — Monday 2026-07-06 13:21 ===
+
+--- MACRO ---
+  EGX 30:  51,923 pts (—)
+  USD/EGP: 48.8 (-0.57%)
+  Brent:   $71.99 (+0.39%)
+  Gold 24K: 6,533.76 EGP/g  |  21K: 5,717.04  |  18K: 4,900.32
+  Egyptian gold pound: 45,736 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 42) ---
+  1. OBRI   score=20.65  price=5.82  5d=+13.3% RSI=57  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OBRI/
+  2. EGTS   score=16.86  price=6.05  5d=+12.6% RSI=56  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EGTS/
+  3. MASR   score=16.83  price=4.25  5d=+7.8% RSI=66  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MASR/
+  4. RAYA   score=14.97  price=2.08  5d=+6.9% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-RAYA/
+  5. MTIE   score=13.39  price=8.75  5d=+5.6% RSI=69  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MTIE/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  OBRI: ENTRY 5.85 | STOP 2.82 | SCALE-OUT 8.82 (834 sh) | TARGET 10.32 (834 sh) | 1668 total (1.94% NAV) | R:R 1:1.5 | time stop 2026-07-13
+  EGTS: ENTRY 6.08 | STOP 4.33 | SCALE-OUT 7.77 (1454 sh) | TARGET 8.63 (1455 sh) | 2909 total (3.52% NAV) | R:R 1:1.5 | time stop 2026-07-13
+  MASR: ENTRY 4.27 | STOP 3.76 | SCALE-OUT 4.74 (5073 sh) | TARGET 4.99 (5073 sh) | 10146 total (8.62% NAV) | R:R 1:1.5 | time stop 2026-07-13
+  RAYA: ENTRY 2.09 | STOP 1.45 | SCALE-OUT 2.71 (3950 sh) | TARGET 3.03 (3951 sh) | 7901 total (3.29% NAV) | R:R 1:1.5 | time stop 2026-07-13
+  MTIE: ENTRY 8.79 | STOP 8.35 | SCALE-OUT 9.15 (2857 sh) | TARGET 9.35 (2857 sh) | 5714 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-13
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  OBRI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  EGTS   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MASR   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  RAYA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MTIE   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    EGTS: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    MTIE: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  OBRI:
+    Technicals:    RSI 57 — healthy uptrend; MACD bullish (+0.201); Riding upper Bollinger — extended; ATR 1.50 (3.9% of px) — sizing input
+    Fundamentals:  P/E 2.5 — cheap; P/B 0.82; ROE 32.7% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "العبور للاستثمار العقاري" تقفز 237% خلال الربع الأول من 2026 [Mubasher]
+      - مساهم يخفض حصته في أسهم رأسمال العبور للاستثمار العقاري إلى 19.47% [Mubasher]
+  EGTS:
+    Technicals:    RSI 56 — healthy uptrend; MACD bearish (-0.094); ATR 0.86 (4.5% of px) — sizing input
+    Fundamentals:  P/E 1.7 — cheap; P/B 10.43; ROE 611.0% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - المصرية للمنتجعات السياحية تتحول للخسارة خلال 2025 [Mubasher]
+      - ​"المصرية للمنتجعات" تحصل على حكم لصالحها بشأن عقود أراضٍ بـ "سهل حشيش" [Mubasher]
+  MASR:
+    Technicals:    RSI 66 — healthy uptrend; MACD bullish (+0.017); ATR 0.25 (3.3% of px) — sizing input
+    Fundamentals:  P/E 4.7 — cheap; P/B 0.91; ROE 19.5% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - مدينة مصر تشتري 1.25 مليون سهم خزينة [Mubasher]
+      - "مدينة مصر للإسكان" تشتري 1.2 مليون سهم خزينة [Mubasher]
+  RAYA:
+    Technicals:    RSI 68 — healthy uptrend; MACD bullish (+0.047); Riding upper Bollinger — extended; ATR 0.32 (4.0% of px) — sizing input
+    Fundamentals:  P/E 4.2 — cheap; P/B 2.04; ROE 48.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - تعين مروة عباس رئيساً تنفيذياً لشركة "راية لتكنولوجيا المعلومات" [Mubasher]
+      - ​راية القابضة تُتم بيع كامل حصتها في "أسطول للنقل البري" لصالح أسيك للتعدين [Mubasher]
+  MTIE:
+    Technicals:    RSI 69 — healthy uptrend; MACD bullish (+0.016); Riding upper Bollinger — extended; ATR 0.20 (2.1% of px) — sizing input
+    Fundamentals:  P/E 14.1 — fair; P/B 3.69; ROE 26.2% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم "ام ام جروب" يتماسك بالقرب من مستوى دعم رئيسي مع تحسن في أحجام التداول [Mubasher]
+      - ​إم إم جروب ترتفع بأرباحها إلى 318.2 مليون جنيه خلال الربع الأول من 2026 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: OBRI, EGTS, MASR, RAYA, MTIE
+  Filtered: kept 2 of 23 headlines.
+  Tone: bullish (score +1.00)
+  [sector:Retail] مبيعات التجزئة في منطقة اليورو ترتفع متجاوزة التوقعات خلال مايو — Mubasher
+  [sector:Retail] مبيعات التجزئة في منطقة اليورو ترتفع متجاوزة التوقعات خلال مايو — Mubasher
+
+Disclaimer: Research only, not investment advice.
