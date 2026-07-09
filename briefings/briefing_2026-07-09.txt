@@ -1,0 +1,85 @@
+=== EGX PRE-MARKET BRIEFING — Thursday 2026-07-09 12:17 ===
+
+--- MACRO ---
+  EGX 30:  52,028 pts (—)
+  USD/EGP: 49.58 (+0.02%)
+  Brent:   $78.20 (-0.85%)
+  Gold 24K: 6,560.72 EGP/g  |  21K: 5,740.63  |  18K: 4,920.54
+  Egyptian gold pound: 45,925 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 48) ---
+  1. AMER   score=25.63  price=0.864  5d=+15.8% RSI=67  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMER/
+  2. EFIH   score=19.86  price=25.15  5d=+9.9% RSI=63  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EFIH/
+  3. MOIL   score=17.84  price=0.38  5d=+9.6% RSI=73  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MOIL/
+  4. CCAP   score=16.57  price=2.2  5d=+9.4% RSI=55  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CCAP/
+  5. OBRI   score=14.86  price=5.82  5d=+7.2% RSI=47  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OBRI/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  AMER: ENTRY 0.87 | STOP 0.67 | SCALE-OUT 1.06 (12966 sh) | TARGET 1.15 (12967 sh) | 25933 total (4.48% NAV) | R:R 1:1.5 | time stop 2026-07-16
+  EFIH: ENTRY 25.28 | STOP 23.88 | SCALE-OUT 26.42 (994 sh) | TARGET 27.06 (994 sh) | 1988 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-16
+  MOIL: ENTRY 0.38 | STOP 0.36 | SCALE-OUT 0.4 (65789 sh) | TARGET 0.42 (65789 sh) | 82097 total (6.24% NAV) | R:R 1:1.5 | time stop 2026-07-16
+  CCAP: ENTRY 2.21 | STOP 1.91 | SCALE-OUT 2.49 (8579 sh) | TARGET 2.64 (8579 sh) | 17158 total (7.55% NAV) | R:R 1:1.5 | time stop 2026-07-16
+  OBRI: ENTRY 5.85 | STOP 2.31 | SCALE-OUT 9.33 (711 sh) | TARGET 11.09 (712 sh) | 1423 total (1.66% NAV) | R:R 1:1.5 | time stop 2026-07-16
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  AMER   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  EFIH   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MOIL   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bullish
+  CCAP   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bearish
+  OBRI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  AMER:
+    Technicals:    RSI 67 — healthy uptrend; MACD bullish (+0.035); Riding upper Bollinger — extended; ATR 0.10 (3.5% of px) — sizing input
+    Fundamentals:  P/E 4.8 — cheap; P/B 0.82; ROE 17.0% — adequate
+    News tone:     bullish (+1.00, 4 hdl)
+      - Amer Group of Hotels streamlines online bookings with STAAH’s solutions [Hotel Management Network]
+      - سهم عامر جروب يقترب من استئناف الاتجاه الصاعد بعد حركة تصحيحية [Mubasher]
+  EFIH:
+    Technicals:    RSI 62 — healthy uptrend; MACD bullish (+0.247); ATR 0.64 (2.9% of px) — sizing input
+    Fundamentals:  P/E 44.1 — premium; P/B 12.09; ROE 27.5% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - تنفيذ صفقة بـ106.74 مليون جنيه على أسهم إي فاينانس ضمن نظام الإثابة [Mubasher]
+      - بالتعاون مع "إي فاينانس".. بنك مصر و"العدل" يتعاونان لميكنة سداد الرسوم القضائية [Mubasher]
+  MOIL:
+    Technicals:    RSI 73 — overbought; MACD bullish (+0.004); Riding upper Bollinger — extended; ATR 0.01 (2.3% of px) — sizing input
+    Fundamentals:  P/E 12.7 — fair; P/B 12.67; ROE 107.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - "ماريديف" تتحول للربحية وتحقق 1.9 مليون دولار خلال الربع الأول من 2026 [Mubasher]
+      - أرباح "ماريديف" المجمعة تقفز بنسبة 171% خلال عام 2025 [Mubasher]
+  CCAP:
+    Technicals:    RSI 55 — healthy uptrend; MACD bullish (+0.012); ATR 0.15 (2.8% of px) — sizing input
+    Fundamentals:  P/E 1.9 — cheap; P/B 0.23; ROE 12.1% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - جنوب الوادي للأسمنت تقر تسوية نزاعها مع "أسيك" التابعة لـ"القلعة" [Mubasher]
+      - القلعة: "المصرية للتكرير" تسدد ديونها الرئيسية وتستعد لتوزيع الأرباح [Mubasher]
+  OBRI:
+    Technicals:    RSI 47 — soft / mean-revert zone; MACD bullish (+0.276); ATR 1.76 (5.0% of px) — sizing input
+    Fundamentals:  P/E 2.5 — cheap; P/B 0.82; ROE 32.7% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - "العبور للاستثمار" تنفق 57.73 مليون جنيه من متحصلات زيادة رأس المال [Mubasher]
+      - أرباح "العبور للاستثمار العقاري" تقفز 237% خلال الربع الأول من 2026 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: AMER, EFIH, MOIL, CCAP, OBRI
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
