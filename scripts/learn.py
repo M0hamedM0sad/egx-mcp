@@ -32,7 +32,7 @@ from pathlib import Path
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from egx_mcp.data import model_params
+from egx_mcp.data import model_params, reliability
 
 ROOT = Path(__file__).parent.parent
 _GRADED = ROOT / "logs" / "graded_verdicts.jsonl"
@@ -212,6 +212,20 @@ def _build_proposal() -> dict:
     current = model_params.load_params()
     cur_buy = current["verdict_thresholds"]["BUY"]
     n = len(rows)
+
+    gate = reliability.status()
+    if not gate["passed"]:
+        return {
+            "status": "blocked_by_reliability",
+            "graded_v8b_calls": n,
+            "reliability_gate": gate,
+            "recommendation": "KEEP_CURRENT",
+            "message": (
+                "No learning proposal: the live decision-reliability gate is not passed. "
+                "Accumulate independent, directionally positive, calibrated 21-session "
+                "v8b evidence before changing model parameters."
+            ),
+        }
 
     if n < _MIN_SAMPLE:
         return {"status": "insufficient_evidence", "graded_v8b_calls": n,

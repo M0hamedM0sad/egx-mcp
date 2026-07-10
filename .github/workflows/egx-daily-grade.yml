@@ -57,16 +57,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -e .
 
+      # Grade BEFORE generating today's briefing: grading past verdicts only
+      # needs prior briefings + realized prices, so a bad data day that kills
+      # the briefing step must not also stall evidence accumulation.
+      - name: Grade decisions against realized prices (A1)
+        run: python -m tests.grade_briefings || echo "grading produced nothing yet"
+
       - name: Generate today's briefing (records decisions)
-        # Non-fatal: a bad data day must not block grading of past verdicts.
-        continue-on-error: true
+        # Fail closed: do not append or learn from a day whose decision
+        # snapshots could not be generated from current source data.
         env:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
-        run: python -m scripts.daily_briefing || echo "briefing step failed (non-fatal)"
-
-      - name: Grade decisions against realized prices (A1)
-        run: python -m tests.grade_briefings || echo "grading produced nothing yet"
+        run: python -m scripts.daily_briefing
 
       - name: Statistical edge validation (A4) → run summary
         # Honest gate: is the measured edge real or luck? Exits non-zero unless
@@ -81,7 +84,6 @@ jobs:
       - name: Learning loop — analyze & propose (no change applied)
         # Reads graded_verdicts.jsonl, fits a BUY threshold on the IS slice,
         # validates OOS. Writes logs/learning_proposal.json. Does NOT apply.
-        continue-on-error: true
         run: |
           echo "## V8b Learning Loop — Threshold Proposal" >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
@@ -96,6 +98,9 @@ jobs:
           echo '```' >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit updated evidence
+        # always(): graded evidence from the step above must land even when
+        # the briefing step failed closed on a bad data day.
+        if: always()
         run: |
           git config user.name  "egx-learner[bot]"
           git config user.email "egx-learner@users.noreply.github.com"
