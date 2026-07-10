@@ -61,7 +61,7 @@ from .data import (
     risk_free, liquidity, regime, factors, risk as risk_mod,
     optimizer, backtest, weekly, company_brief,
     sentiment, debate as debate_mod, risk_gate as risk_gate_mod,
-    reflection, agentic_backtest, behavior, price_cache, briefing_page,
+    reflection, reliability, agentic_backtest, behavior, price_cache, briefing_page,
     project_impact as project_impact_mod,
     events as events_mod, forecast as forecast_mod,
     ir_fetch as ir_fetch_mod, ir_extract as ir_extract_mod,
@@ -69,6 +69,19 @@ from .data import (
 from .data import calendar as cal_mod
 
 mcp = FastMCP("egx-mcp")
+
+
+def _buy_side_gate_response() -> dict[str, Any] | None:
+    """Block MCP-level trade construction while live model evidence is unproven."""
+    gate = reliability.status()
+    if gate["passed"]:
+        return None
+    return {
+        "error": "Buy-side trade construction is disabled while the model is research-only.",
+        "actionable": False,
+        "reliability_gate": gate,
+        "next_step": "Use model_reliability() and review raw research; do not size a trade from this MCP yet.",
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -379,6 +392,9 @@ def position_size(
         stop_loss_price, stop_distance_egp, target_price, risk_egp,
         reward_to_risk, atr_14, method.
     """
+    blocked = _buy_side_gate_response()
+    if blocked:
+        return blocked
     return sizing.position_size(
         ticker,
         portfolio_value_egp=portfolio_value_egp,
@@ -427,12 +443,16 @@ def decide(
                    cost-adjusted upside below threshold)
         REDUCE     score 35-49
         AVOID      score < 35
-        ABSTAIN    data confidence too low to trust a valuation
+        ABSTAIN    data confidence is too low, or the live model-reliability
+                   gate is not yet proven
 
     The gate (1) caps conviction to what the fundamentals support, (2) flags
     borderline scores and split sub-scores, (3) abstains when inputs can't be
     trusted, and (4) downgrades buy-side calls whose upside doesn't clear
-    transaction costs. Check `actionable`, `data_confidence`,
+    transaction costs. Buy-side output is fail-closed: until the v8b model
+    demonstrates sufficient independent 21-session live evidence, positive
+    direction-aware edge, and calibrated conviction, BUY/ACCUMULATE becomes
+    research-only ABSTAIN. Check `actionable`, `data_confidence`,
     `expected_net_upside_pct`, and `abstain_reasons` in the output.
 
     Args:
@@ -457,6 +477,19 @@ def decide(
         round_trip_cost_pct=round_trip_cost_pct,
         min_net_edge_pct=min_net_edge_pct,
     )
+
+
+@mcp.tool()
+def model_reliability() -> dict[str, Any]:
+    """Return whether ``decide`` is currently allowed to issue buy-side output.
+
+    The report uses only live, point-in-time v8b calls at the model's native
+    21-session horizon. It requires enough directional calls across independent
+    briefing dates, positive direction-aware excess return, and conviction
+    calibration. If ``passed`` is false, Claude must treat the MCP as research
+    support and must not turn a score into an investment instruction.
+    """
+    return reliability.status()
 
 
 # ---------------------------------------------------------------------------
@@ -935,6 +968,10 @@ def risk_gate_review(
         Dict with: original_verdict, final_verdict, downgrades (reasons),
         breaches (raw checks), portfolio_snapshot.
     """
+    if proposed_verdict.upper() in {"BUY", "ACCUMULATE"}:
+        blocked = _buy_side_gate_response()
+        if blocked:
+            return blocked
     return risk_gate_mod.risk_gate(
         ticker,
         proposed_verdict=proposed_verdict,
@@ -975,6 +1012,9 @@ def trader_plan(
         Dict with: entry_plan (per tranche), exit_plan (per level),
         stop_loss_price, total_shares, base_sizing.
     """
+    blocked = _buy_side_gate_response()
+    if blocked:
+        return blocked
     return sizing.trader_plan(
         ticker,
         portfolio_value_egp=portfolio_value_egp,

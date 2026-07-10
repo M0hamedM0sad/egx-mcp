@@ -1,7 +1,8 @@
 """Decision synthesizer — the headline tool.
 
 Combines scoring, peer comparison, calendar, sizing, and macro into a
-single actionable verdict:
+single auditable research verdict. Buy-side output is actionable only after
+the live-evidence reliability gate passes:
 
     BUY        score ≥ 75 + macro tailwind + no blocking catalyst
     ACCUMULATE score 65–74 OR (score ≥ 75 with mild headwind)
@@ -20,7 +21,7 @@ from datetime import datetime
 from typing import Any
 
 from . import calendar as cal_mod
-from . import model_params, peers, scoring, sizing
+from . import model_params, peers, reliability, scoring, sizing
 from .universe import resolve_ticker
 
 log = logging.getLogger("egx-mcp.decision")
@@ -140,7 +141,7 @@ def _data_confidence(f_raw: dict[str, Any]) -> dict[str, Any]:
 
 def _assess(verdict: str, conviction: str, score_val: float,
             subscores: dict[str, float], upside_pct: float | None,
-            dconf: dict[str, Any], round_trip_cost_pct: float,
+            dconf: dict[str, Any], reliability_gate: dict[str, Any], round_trip_cost_pct: float,
             min_net_edge_pct: float) -> dict[str, Any]:
     """Apply confidence cap, cost-adjusted edge, and abstention rules.
 
@@ -189,7 +190,18 @@ def _assess(verdict: str, conviction: str, score_val: float,
                                "no reliable valuation possible.")
         final_verdict, final_conv = "ABSTAIN", "none"
 
-    # B. Buy-side edge must clear costs.
+    # B. The model must have demonstrated live, independent edge before it can
+    # issue an actionable buy-side call.  A good-looking single-name score is
+    # not a substitute for validation of the decision process itself.
+    elif verdict in ("BUY", "ACCUMULATE") and not reliability_gate.get("passed", False):
+        abstain_reasons.append(
+            "Model reliability gate is not passed; buy-side output is research-only until "
+            "live 21-session evidence, independent dates, signed edge, and conviction "
+            "calibration all pass."
+        )
+        final_verdict, final_conv = "ABSTAIN", "none"
+
+    # C. Buy-side edge must clear costs.
     elif verdict in ("BUY", "ACCUMULATE"):
         if net_upside is not None and net_upside < min_net_edge_pct:
             cautions.append(f"Cost-adjusted upside {net_upside}% < required {min_net_edge_pct}% "
@@ -266,9 +278,10 @@ def decide(
     # 5b. Confidence / cost / abstention layer — the reliability gate.
     subscores_flat = {k: v["score"] for k, v in (score.get("subscores") or {}).items()}
     dconf = _data_confidence(f_raw)
+    reliability_gate = reliability.status()
     assessment = _assess(
         base_verdict, base_conviction, score["composite_score"], subscores_flat,
-        fv.get("upside_pct"), dconf, round_trip_cost_pct, min_net_edge_pct,
+        fv.get("upside_pct"), dconf, reliability_gate, round_trip_cost_pct, min_net_edge_pct,
     )
     verdict = assessment["verdict"]
     conviction = assessment["conviction"]
@@ -328,6 +341,7 @@ def decide(
 
         "data_confidence": dconf["level"],
         "data_confidence_detail": dconf,
+        "reliability_gate": reliability_gate,
         "conviction_note": (
             "Conviction is capped by data confidence and flagged when signals "
             "conflict or the score is borderline. Validate that conviction "
