@@ -1,0 +1,1541 @@
+{
+  "source": "tradingview master + investing.com validation",
+  "validated": [
+    {
+      "ticker": "INFI",
+      "bars": 76,
+      "last_close": 93.23,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "TAQA",
+      "bars": 76,
+      "last_close": 15.43,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SUGR",
+      "bars": 76,
+      "last_close": 48.39,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "COPR",
+      "bars": 76,
+      "last_close": 0.38,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ADIB",
+      "bars": 76,
+      "last_close": 47.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AFMC",
+      "bars": 76,
+      "last_close": 70.78,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MTIE",
+      "bars": 76,
+      "last_close": 9.22,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SCFM",
+      "bars": 76,
+      "last_close": 249.73,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "NHPS",
+      "bars": 76,
+      "last_close": 70.5,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GOUR",
+      "bars": 76,
+      "last_close": 12.83,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ADPC",
+      "bars": 76,
+      "last_close": 3.92,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ADRI",
+      "bars": 76,
+      "last_close": 7.21,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AIDC",
+      "bars": 76,
+      "last_close": 0.639,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MOSC",
+      "bars": 76,
+      "last_close": 281.68,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "FTNS",
+      "bars": 76,
+      "last_close": 1.17,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AXPH",
+      "bars": 76,
+      "last_close": 1118.16,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MPRC",
+      "bars": 76,
+      "last_close": 33.7,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EPCO",
+      "bars": 76,
+      "last_close": 9.19,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EPPK",
+      "bars": 76,
+      "last_close": 12.68,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AALR",
+      "bars": 76,
+      "last_close": 207.04,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CERA",
+      "bars": 76,
+      "last_close": 1.26,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "FAIT",
+      "bars": 76,
+      "last_close": 37.11,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EEII",
+      "bars": 76,
+      "last_close": 2.5,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "TYCN",
+      "bars": 75,
+      "last_close": 41.4,
+      "last_date": "2026-06-17"
+    },
+    {
+      "ticker": "GBCO",
+      "bars": 76,
+      "last_close": 29.01,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AMPI",
+      "bars": 76,
+      "last_close": 2.59,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EDFM",
+      "bars": 76,
+      "last_close": 332.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "RAYA",
+      "bars": 76,
+      "last_close": 7.43,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "FWRY",
+      "bars": 76,
+      "last_close": 18.9,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SNFI",
+      "bars": 31,
+      "last_close": 11.5,
+      "last_date": "2026-06-17"
+    },
+    {
+      "ticker": "MOIL",
+      "bars": 76,
+      "last_close": 0.48,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EGREF",
+      "bars": 76,
+      "last_close": 13.94,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AMOC",
+      "bars": 76,
+      "last_close": 7.8,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ELSH",
+      "bars": 76,
+      "last_close": 12.86,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "DTPP",
+      "bars": 76,
+      "last_close": 117.33,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "BONY",
+      "bars": 76,
+      "last_close": 5.09,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "VLMR",
+      "bars": 76,
+      "last_close": 0.672,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ARVA",
+      "bars": 76,
+      "last_close": 11.01,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "IDRE",
+      "bars": 76,
+      "last_close": 44.9,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "RTVC",
+      "bars": 76,
+      "last_close": 3.92,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EOSB",
+      "bars": 71,
+      "last_close": 1.48,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CSAG",
+      "bars": 76,
+      "last_close": 31.59,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EGSA",
+      "bars": 74,
+      "last_close": 8.78,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ELKA",
+      "bars": 76,
+      "last_close": 1.32,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "OIH",
+      "bars": 76,
+      "last_close": 1.36,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "APSW",
+      "bars": 76,
+      "last_close": 8.61,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "POCO",
+      "bars": 79,
+      "last_close": 107.18,
+      "last_date": "2026-06-18"
+    },
+    {
+      "ticker": "ETEL",
+      "bars": 76,
+      "last_close": 93.01,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MBSC",
+      "bars": 76,
+      "last_close": 251.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EXPA",
+      "bars": 76,
+      "last_close": 18.48,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SCTS",
+      "bars": 76,
+      "last_close": 598.15,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "NCCW",
+      "bars": 76,
+      "last_close": 6.37,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SPIN",
+      "bars": 76,
+      "last_close": 13.82,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ALCN",
+      "bars": 76,
+      "last_close": 28.45,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AMES",
+      "bars": 76,
+      "last_close": 49.76,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "HDST",
+      "bars": 35,
+      "last_close": 72.5,
+      "last_date": "2026-06-18"
+    },
+    {
+      "ticker": "ISMQ",
+      "bars": 76,
+      "last_close": 8.33,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ATLC",
+      "bars": 76,
+      "last_close": 5.36,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GEOS",
+      "bars": 82,
+      "last_close": 7.22,
+      "last_date": "2026-06-18"
+    },
+    {
+      "ticker": "ARAB",
+      "bars": 76,
+      "last_close": 0.211,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MILS",
+      "bars": 76,
+      "last_close": 138.32,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EGS72XL1C014",
+      "bars": 76,
+      "last_close": 0.09,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "NIPH",
+      "bars": 76,
+      "last_close": 166.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "POUL",
+      "bars": 76,
+      "last_close": 35.94,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "FCMD",
+      "bars": 75,
+      "last_close": 7.21,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "UTOP",
+      "bars": 76,
+      "last_close": 77.06,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GGRN",
+      "bars": 76,
+      "last_close": 1.48,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SEIG",
+      "bars": 76,
+      "last_close": 185.76,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "TRTO",
+      "bars": 63,
+      "last_close": 0.034,
+      "last_date": "2026-06-17"
+    },
+    {
+      "ticker": "PHAR",
+      "bars": 76,
+      "last_close": 89.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "IBCT",
+      "bars": 76,
+      "last_close": 13.72,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "APPC",
+      "bars": 31,
+      "last_close": 1.35,
+      "last_date": "2026-06-17"
+    },
+    {
+      "ticker": "CEFM",
+      "bars": 76,
+      "last_close": 102.04,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SCEM",
+      "bars": 76,
+      "last_close": 61.97,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EGS385S1C012",
+      "bars": 76,
+      "last_close": 75.64,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "DOMT",
+      "bars": 76,
+      "last_close": 26.19,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GPIM",
+      "bars": 76,
+      "last_close": 1.14,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "OCPH",
+      "bars": 76,
+      "last_close": 338.62,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EEP",
+      "bars": 82,
+      "last_close": 279.0,
+      "last_date": "2026-06-19"
+    },
+    {
+      "ticker": "EGS370O1C013",
+      "bars": 76,
+      "last_close": 25.03,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "DGTZ",
+      "bars": 76,
+      "last_close": 2.6,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MIPH",
+      "bars": 76,
+      "last_close": 694.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "OCDI",
+      "bars": 76,
+      "last_close": 22.3,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "INEG",
+      "bars": 76,
+      "last_close": 0.429,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ACTF",
+      "bars": 76,
+      "last_close": 2.78,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "LUTS",
+      "bars": 76,
+      "last_close": 0.785,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ROTO",
+      "bars": 76,
+      "last_close": 43.16,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GGCC",
+      "bars": 76,
+      "last_close": 0.421,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MASR",
+      "bars": 76,
+      "last_close": 7.4,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EGAS",
+      "bars": 76,
+      "last_close": 51.67,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CANA",
+      "bars": 76,
+      "last_close": 37.55,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "TALM",
+      "bars": 76,
+      "last_close": 16.11,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "PRDC",
+      "bars": 76,
+      "last_close": 7.91,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SKPC",
+      "bars": 76,
+      "last_close": 16.44,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "HDBK",
+      "bars": 76,
+      "last_close": 160.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "KABO",
+      "bars": 76,
+      "last_close": 6.24,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MHOT",
+      "bars": 76,
+      "last_close": 32.42,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "RUBX",
+      "bars": 76,
+      "last_close": 9.97,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MFSC",
+      "bars": 76,
+      "last_close": 45.21,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ABUK",
+      "bars": 76,
+      "last_close": 71.49,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EBSC",
+      "bars": 76,
+      "last_close": 1.9,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EMFD",
+      "bars": 76,
+      "last_close": 12.16,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MBEG",
+      "bars": 76,
+      "last_close": 3.95,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "RACC",
+      "bars": 76,
+      "last_close": 9.89,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MEPA",
+      "bars": 76,
+      "last_close": 1.7,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SNFC",
+      "bars": 76,
+      "last_close": 12.1,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "TORA",
+      "bars": 31,
+      "last_close": 76.0,
+      "last_date": "2026-06-17"
+    },
+    {
+      "ticker": "CID",
+      "bars": 48,
+      "last_close": 8300.0,
+      "last_date": "2026-06-19"
+    },
+    {
+      "ticker": "ELNA",
+      "bars": 76,
+      "last_close": 39.56,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ECAP",
+      "bars": 76,
+      "last_close": 34.4,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "LCSW",
+      "bars": 76,
+      "last_close": 28.18,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SPMD",
+      "bars": 76,
+      "last_close": 0.458,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CICH",
+      "bars": 76,
+      "last_close": 12.21,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "BINV",
+      "bars": 76,
+      "last_close": 47.4,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ELWA",
+      "bars": 76,
+      "last_close": 2.09,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EGAL",
+      "bars": 76,
+      "last_close": 297.4,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CCRS",
+      "bars": 76,
+      "last_close": 2.41,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ALEX",
+      "bars": 31,
+      "last_close": 16.57,
+      "last_date": "2026-06-17"
+    },
+    {
+      "ticker": "ARCC",
+      "bars": 76,
+      "last_close": 56.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "TMGH",
+      "bars": 76,
+      "last_close": 97.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ETRS",
+      "bars": 76,
+      "last_close": 10.85,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "HELI",
+      "bars": 76,
+      "last_close": 6.57,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "OBRI",
+      "bars": 76,
+      "last_close": 35.35,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "BIOC",
+      "bars": 76,
+      "last_close": 72.96,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AFDI",
+      "bars": 76,
+      "last_close": 44.34,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GMCI",
+      "bars": 76,
+      "last_close": 1.77,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MPCI",
+      "bars": 76,
+      "last_close": 240.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "UEFM",
+      "bars": 76,
+      "last_close": 473.11,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CNFN",
+      "bars": 76,
+      "last_close": 4.79,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "VERT",
+      "bars": 76,
+      "last_close": 7.99,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "HRHO",
+      "bars": 76,
+      "last_close": 27.62,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MPCO",
+      "bars": 76,
+      "last_close": 1.96,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "KRDI",
+      "bars": 76,
+      "last_close": 0.352,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "RAKT",
+      "bars": 76,
+      "last_close": 22.49,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "OFH",
+      "bars": 76,
+      "last_close": 0.612,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "NARE",
+      "bars": 76,
+      "last_close": 14.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ICID",
+      "bars": 76,
+      "last_close": 7.55,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "BTFH",
+      "bars": 76,
+      "last_close": 3.12,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "IEEC",
+      "bars": 76,
+      "last_close": 0.454,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "UNIT",
+      "bars": 76,
+      "last_close": 13.7,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EFID",
+      "bars": 76,
+      "last_close": 27.95,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CPME",
+      "bars": 47,
+      "last_close": 19.78,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MCRO",
+      "bars": 76,
+      "last_close": 1.24,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AJWA",
+      "bars": 76,
+      "last_close": 176.15,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "UPMS",
+      "bars": 76,
+      "last_close": 9.66,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "TANM",
+      "bars": 76,
+      "last_close": 5.35,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ORWE",
+      "bars": 76,
+      "last_close": 23.45,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AMER",
+      "bars": 76,
+      "last_close": 2.49,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "RKAZ",
+      "bars": 76,
+      "last_close": 5.12,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MICH",
+      "bars": 76,
+      "last_close": 39.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SMFR",
+      "bars": 76,
+      "last_close": 203.48,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CIRA",
+      "bars": 76,
+      "last_close": 28.72,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GRCA",
+      "bars": 76,
+      "last_close": 53.23,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ISPH",
+      "bars": 76,
+      "last_close": 12.6,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SAUD",
+      "bars": 76,
+      "last_close": 21.75,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ZMID",
+      "bars": 76,
+      "last_close": 6.3,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "PRCL",
+      "bars": 76,
+      "last_close": 27.4,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ACAMD",
+      "bars": 76,
+      "last_close": 2.37,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MOIN",
+      "bars": 76,
+      "last_close": 24.09,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AIFI",
+      "bars": 76,
+      "last_close": 2.03,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ALUM",
+      "bars": 76,
+      "last_close": 23.57,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ASCM",
+      "bars": 76,
+      "last_close": 59.11,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AIH",
+      "bars": 80,
+      "last_close": 0.74,
+      "last_date": "2026-06-19"
+    },
+    {
+      "ticker": "EAST",
+      "bars": 76,
+      "last_close": 38.88,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MITR",
+      "bars": 78,
+      "last_close": 0.66,
+      "last_date": "2026-06-19"
+    },
+    {
+      "ticker": "VLMRA",
+      "bars": 76,
+      "last_close": 29.94,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "KNGC",
+      "bars": 82,
+      "last_close": 16.81,
+      "last_date": "2026-06-19"
+    },
+    {
+      "ticker": "ORAS",
+      "bars": 76,
+      "last_close": 793.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SVCE",
+      "bars": 76,
+      "last_close": 9.24,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EFIC",
+      "bars": 76,
+      "last_close": 202.08,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "TWSA",
+      "bars": 76,
+      "last_close": 5.34,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MAAL",
+      "bars": 76,
+      "last_close": 6.68,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CLHO",
+      "bars": 76,
+      "last_close": 15.9,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EGTS",
+      "bars": 76,
+      "last_close": 18.53,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CPCI",
+      "bars": 76,
+      "last_close": 370.0,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "HBCO",
+      "bars": 76,
+      "last_close": 13.31,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SEIGA",
+      "bars": 79,
+      "last_close": 767.0,
+      "last_date": "2026-06-19"
+    },
+    {
+      "ticker": "NINH",
+      "bars": 76,
+      "last_close": 17.56,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ADCI",
+      "bars": 76,
+      "last_close": 231.71,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "WKOL",
+      "bars": 76,
+      "last_close": 288.93,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EHDR",
+      "bars": 76,
+      "last_close": 2.7,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ACGC",
+      "bars": 76,
+      "last_close": 9.69,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "OLFI",
+      "bars": 76,
+      "last_close": 22.5,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "JUFO",
+      "bars": 76,
+      "last_close": 31.8,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "COMI",
+      "bars": 76,
+      "last_close": 136.7,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CAED",
+      "bars": 76,
+      "last_close": 74.42,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "VALU",
+      "bars": 76,
+      "last_close": 11.89,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SDTI",
+      "bars": 76,
+      "last_close": 47.8,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "DSCW",
+      "bars": 76,
+      "last_close": 1.83,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "DAPH",
+      "bars": 76,
+      "last_close": 81.49,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GTWL",
+      "bars": 76,
+      "last_close": 48.69,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ZEOT",
+      "bars": 76,
+      "last_close": 11.79,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GSSC",
+      "bars": 76,
+      "last_close": 249.83,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EASB",
+      "bars": 76,
+      "last_close": 8.02,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MFPC",
+      "bars": 76,
+      "last_close": 37.22,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AREH",
+      "bars": 76,
+      "last_close": 1.65,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "IFAP",
+      "bars": 76,
+      "last_close": 19.26,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "KWIN",
+      "bars": 76,
+      "last_close": 74.61,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "PHTV",
+      "bars": 76,
+      "last_close": 234.13,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ISMA",
+      "bars": 76,
+      "last_close": 30.22,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GIHD",
+      "bars": 76,
+      "last_close": 41.85,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ASPI",
+      "bars": 76,
+      "last_close": 0.33,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SWDY",
+      "bars": 76,
+      "last_close": 87.27,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "NEDA",
+      "bars": 76,
+      "last_close": 2.77,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CCAP",
+      "bars": 76,
+      "last_close": 5.06,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SINA",
+      "bars": 72,
+      "last_close": 0.1,
+      "last_date": "2026-06-19"
+    },
+    {
+      "ticker": "QNBE",
+      "bars": 76,
+      "last_close": 53.07,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "BIDI",
+      "bars": 76,
+      "last_close": 1.54,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CFGH",
+      "bars": 73,
+      "last_close": 0.101,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EFAC",
+      "bars": 73,
+      "last_close": 183.0,
+      "last_date": "2026-06-19"
+    },
+    {
+      "ticker": "IRON",
+      "bars": 76,
+      "last_close": 32.44,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MOED",
+      "bars": 76,
+      "last_close": 0.702,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GDWA",
+      "bars": 76,
+      "last_close": 0.812,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ELEC",
+      "bars": 76,
+      "last_close": 2.14,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ENGC",
+      "bars": 76,
+      "last_close": 37.5,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MCQE",
+      "bars": 76,
+      "last_close": 178.42,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "SIPC",
+      "bars": 76,
+      "last_close": 3.55,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "KZPC",
+      "bars": 76,
+      "last_close": 10.71,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "COSG",
+      "bars": 76,
+      "last_close": 1.6,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CRST",
+      "bars": 76,
+      "last_close": 1.36,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "FIRE",
+      "bars": 76,
+      "last_close": 4.26,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "FNAR",
+      "bars": 76,
+      "last_close": 13.1,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "AMIA",
+      "bars": 76,
+      "last_close": 9.11,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "NFCI",
+      "bars": 54,
+      "last_close": 0.21,
+      "last_date": "2026-06-17"
+    },
+    {
+      "ticker": "UEGC",
+      "bars": 76,
+      "last_close": 1.46,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EALR",
+      "bars": 76,
+      "last_close": 358.66,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "BIGP",
+      "bars": 76,
+      "last_close": 0.188,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "UBEE",
+      "bars": 76,
+      "last_close": 14.28,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ATQA",
+      "bars": 76,
+      "last_close": 9.53,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "RREI",
+      "bars": 76,
+      "last_close": 3.66,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GTHE",
+      "bars": 31,
+      "last_close": 3.1,
+      "last_date": "2026-06-17"
+    },
+    {
+      "ticker": "MKIT",
+      "bars": 76,
+      "last_close": 2.81,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ODIN",
+      "bars": 76,
+      "last_close": 2.21,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ICFC",
+      "bars": 76,
+      "last_close": 15.16,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "PRMH",
+      "bars": 76,
+      "last_close": 2.84,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EGCH",
+      "bars": 76,
+      "last_close": 13.66,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ORHD",
+      "bars": 76,
+      "last_close": 39.6,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "WCDF",
+      "bars": 76,
+      "last_close": 531.95,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "MENA",
+      "bars": 76,
+      "last_close": 6.8,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "RMDA",
+      "bars": 76,
+      "last_close": 5.09,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "GTEX",
+      "bars": 62,
+      "last_close": 0.033,
+      "last_date": "2026-06-17"
+    },
+    {
+      "ticker": "FAITA",
+      "bars": 76,
+      "last_close": 0.99,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EFIH",
+      "bars": 76,
+      "last_close": 21.22,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "ACAP",
+      "bars": 76,
+      "last_close": 9.28,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "CIEB",
+      "bars": 76,
+      "last_close": 23.91,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "UNIP",
+      "bars": 76,
+      "last_close": 0.338,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "EGBE",
+      "bars": 76,
+      "last_close": 0.438,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "NAHO",
+      "bars": 76,
+      "last_close": 0.102,
+      "last_date": "2026-06-21"
+    },
+    {
+      "ticker": "PHDC",
+      "bars": 76,
+      "last_close": 15.86,
+      "last_date": "2026-06-21"
+    }
+  ],
+  "nodata": [
+    "YAYT",
+    "EGWA",
+    "MMAT",
+    "ANCC",
+    "SUCE",
+    "EGS48271C018-EGP",
+    "LKGP",
+    "NMIN",
+    "EGS73M81C012",
+    "MISR",
+    "EITP",
+    "ICLE",
+    "EGS65101C015",
+    "SIEG",
+    "NDRL",
+    "NBKE",
+    "SMPP",
+    "EGS65621C012",
+    "ACFR",
+    "MLIC",
+    "SPHT",
+    "EGS30AJ1C016-EGP",
+    "MEGM",
+    "EGOTH",
+    "OCAP",
+    "DCRC",
+    "EGS65861C014",
+    "NCGC",
+    "WATP",
+    "RMTV",
+    "DCCC",
+    "PACH",
+    "EGS3E071C013-EGP",
+    "IRAX",
+    "EGS72L31C011",
+    "GPPL",
+    "DEIN",
+    "HAVC",
+    "SAIB",
+    "KORA"
+  ]
+}

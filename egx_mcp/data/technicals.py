@@ -13,16 +13,20 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-import yfinance as yf
-
 from .universe import resolve_ticker
+from . import investing
 
 log = logging.getLogger("egx-mcp.technicals")
+
+_PERIOD_DAYS = {"1mo": 30, "3mo": 95, "6mo": 190, "1y": 370, "2y": 740}
 
 
 def compute(user_ticker: str, period: str = "6mo") -> dict[str, Any]:
     canonical, yahoo, name = resolve_ticker(user_ticker)
-    df = yf.Ticker(yahoo).history(period=period, interval="1d", auto_adjust=False)
+    # Glitch-guarded source (investing.com primary, zero-volume bars dropped).
+    # Always pull >=260 trading days so SMA-200 is available regardless of period.
+    lookback = max(_PERIOD_DAYS.get(period, 260), 260)
+    df = investing.daily_history(canonical, lookback_days=lookback)
 
     if df.empty or len(df) < 30:
         return {

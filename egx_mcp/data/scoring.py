@@ -15,7 +15,7 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-from . import fundamentals, market, technicals, regime, risk_free
+from . import fundamentals, market, technicals, regime, risk_free, model_params
 from .macro import sector_macro_bias
 
 log = logging.getLogger("egx-mcp.scoring")
@@ -193,6 +193,9 @@ def _score_risk(history: dict) -> dict:
 # COMPOSITE
 # ---------------------------------------------------------------------------
 
+# Baseline composite weights. The ACTIVE weights are read at score time from
+# model_params (learnable + human-approved); this dict is only the fallback the
+# loop starts from and what DEFAULTS in model_params mirrors.
 _WEIGHTS = {"valuation": 0.30, "quality": 0.25, "momentum": 0.25, "risk": 0.20}
 
 
@@ -231,7 +234,8 @@ def score_stock(user_ticker: str, history_period: str = "6mo") -> dict[str, Any]
     except Exception:
         reg = {"regime": "UNKNOWN", "weight_override": {}}
         bias = {}
-    weights = {k: _WEIGHTS[k] * bias.get(k, 1.0) for k in _WEIGHTS}
+    base_weights = model_params.score_weights()
+    weights = {k: base_weights[k] * bias.get(k, 1.0) for k in base_weights}
     total = sum(weights.values())
     weights = {k: v / total for k, v in weights.items()}
 
@@ -269,7 +273,7 @@ def score_stock(user_ticker: str, history_period: str = "6mo") -> dict[str, Any]
             "risk": risk,
         },
         "weights_used": {k: round(v, 3) for k, v in weights.items()},
-        "weights_base": _WEIGHTS,
+        "weights_base": base_weights,
         "regime": reg.get("regime"),
         "regime_description": reg.get("description"),
         "sector_medians": sector_med,

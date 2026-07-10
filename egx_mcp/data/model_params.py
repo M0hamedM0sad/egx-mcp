@@ -24,10 +24,22 @@ _PARAMS_FILE = Path(__file__).parent.parent.parent / "model_params.json"
 # Original hardcoded values — the baseline the model starts from.
 DEFAULTS: dict[str, Any] = {
     "verdict_thresholds": {"BUY": 75, "ACCUMULATE": 65, "HOLD": 50, "REDUCE": 35},
+    "score_weights": {"valuation": 0.30, "quality": 0.25, "momentum": 0.25, "risk": 0.20},
     "version": "default",
     "learned_at": None,
     "provenance": "hardcoded baseline",
 }
+
+_WEIGHT_KEYS = ("valuation", "quality", "momentum", "risk")
+
+
+def _weights_ok(w: Any) -> bool:
+    """Sane composite weights: all four factors, each positive, sum ≈ 1."""
+    if not isinstance(w, dict):
+        return False
+    vals = [w.get(k) for k in _WEIGHT_KEYS]
+    return (all(isinstance(v, (int, float)) and v > 0 for v in vals)
+            and abs(sum(vals) - 1.0) <= 0.02)
 
 _cache: dict[str, Any] | None = None
 
@@ -48,13 +60,18 @@ def load_params() -> dict[str, Any]:
             th = loaded.get("verdict_thresholds", {})
             keys = ("BUY", "ACCUMULATE", "HOLD", "REDUCE")
             vals = [th.get(k) for k in keys]
-            ok = (all(isinstance(v, (int, float)) for v in vals)
-                  and vals == sorted(vals, reverse=True)
-                  and all(0 < v < 100 for v in vals))
-            if ok:
+            th_ok = (all(isinstance(v, (int, float)) for v in vals)
+                     and vals == sorted(vals, reverse=True)
+                     and all(0 < v < 100 for v in vals))
+            # score_weights is optional in a learned file; validate only if present.
+            w_ok = ("score_weights" not in loaded) or _weights_ok(loaded["score_weights"])
+            if th_ok and w_ok:
                 params.update(loaded)
-            else:
+            elif not th_ok:
                 log.warning("model_params.json has invalid thresholds %s — using defaults", th)
+            else:
+                log.warning("model_params.json has invalid score_weights %s — using defaults",
+                            loaded.get("score_weights"))
         except Exception as e:  # noqa: BLE001
             log.warning("failed to read model_params.json (%s) — using defaults", e)
     _cache = params
@@ -70,3 +87,8 @@ def save_params(params: dict[str, Any]) -> None:
 
 def thresholds() -> dict[str, float]:
     return load_params()["verdict_thresholds"]
+
+
+def score_weights() -> dict[str, float]:
+    """Composite sub-score weights — learnable, human-approved (see learn.py)."""
+    return load_params().get("score_weights", DEFAULTS["score_weights"])

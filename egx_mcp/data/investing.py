@@ -28,6 +28,10 @@ from typing import Any
 
 import httpx
 
+from ._certs import ensure_ca_bundle
+
+ensure_ca_bundle()  # trust the OS cert store (TLS-inspecting proxy) before any request
+
 log = logging.getLogger("egx-mcp.investing")
 
 # Verify TLS by default. Set EGX_INSECURE_SSL=1 only when running behind a
@@ -199,3 +203,45 @@ def fetch_quote(ticker: str) -> dict[str, Any]:
         "volume": last["volume"],
         "source": "investing.com",
     }
+
+
+def daily_history(user_ticker: str, lookback_days: int = 400,
+                  drop_zero_volume: bool = True):
+    """Glitch-guarded daily OHLCV as a pandas DataFrame for an EGX name.
+
+    Primary source is investing.com, which is current and correct for EGX.
+    Yahoo's `.CA` feed is unreliable here — it serves zero-volume carry-forward
+    bars on non-trading days and can lag real sessions by days, which silently
+    stales the latest close (the forecast baseline) and flattens the return
+    series. Falls back to Yahoo only if investing.com yields nothing.
+
+    Zero-volume bars are dropped in BOTH paths: they are non-trading
+    carry-forwards, not real sessions, so they corrupt both the bootstrap
+    return distribution and the technical indicators.
+
+    Returns a DataFrame indexed by date (ascending) with columns
+    Open/High/Low/Close/Volume, or an empty DataFrame on total failure.
+    """
+    import pandas as pd
+
+    cols = ["Open", "High", "Low", "Close", "Volume"]
+    rows = fetch_history(user_ticker, lookback_days=lookback_days)
+    if rows:
+        df = pd.DataFrame(rows)
+        df["date"] = pd.to_datetime(df["date"])
+        df = (df.set_index("date").sort_index()
+                .rename(columns={"open": "Open", "high": "High", "low": "Low",
+                                 "close": "Close", "volume": "Volume"}))
+        df = df[cols]
+    else:
+        # Last resort: Yahoo. Same zero-volume guard applies below.
+        from .universe import resolve_ticker
+        import yfinance as yf
+        _, yahoo, _ = resolve_ticker(user_ticker)
+        df = yf.Ticker(yahoo).history(
+            period=f"{lookback_days}d", interval="1d", auto_adjust=False)
+        df = df[cols] if not df.empty else pd.DataFrame(columns=cols)
+
+    if not df.empty and drop_zero_volume:
+        df = df[df["Volume"] > 0]
+    return df

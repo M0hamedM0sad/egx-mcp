@@ -4,7 +4,7 @@ A Model Context Protocol server for the Egyptian Exchange (EGX) that delivers **
 
 ## What it does
 
-Sixteen tools, no API keys required. The headline tool is `decide(ticker)` — it returns a BUY/HOLD/SELL verdict with conviction, fair value, stop loss, target, and full rationale.
+Sixteen tools, no API keys required. The headline tool is `decide(ticker)` — it returns an auditable research verdict with conviction, fair value, stop loss, target, and full rationale. Buy-side output is automatically withheld until the live reliability gate has passed.
 
 ### Raw data (the foundation layer)
 
@@ -43,6 +43,23 @@ Sixteen tools, no API keys required. The headline tool is `decide(ticker)` — i
 7. If portfolio NAV is provided and the verdict is buy-side, returns a **sized position** with explicit entry, stop, target, and shares.
 
 The output includes `key_drivers`, `key_risks`, `blocking_catalysts`, and `data_quality_notes` so every verdict is auditable.
+
+### Reliability gate (important for Claude)
+
+Ask `model_reliability()` before treating any result as actionable. Until it
+returns `passed: true`, the MCP is **research-only**: a provisional BUY or
+ACCUMULATE is returned as `ABSTAIN`, position sizing is withheld, and the
+GitHub learning loop cannot open a parameter-change proposal. The gate requires
+live, point-in-time V8b calls at the model's native 21-session horizon to show:
+
+- at least 40 directional calls across 8 independent briefing dates;
+- at least 55% directional accuracy versus the benchmark;
+- positive direction-aware, date-weighted excess return; and
+- calibrated high/medium/low conviction buckets.
+
+This is intentionally stricter than a backtest. It does not turn the model
+into investment advice or execution software; it prevents unproven output from
+being presented as a trade instruction.
 
 ## Data sources
 

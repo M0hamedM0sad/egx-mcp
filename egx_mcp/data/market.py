@@ -11,6 +11,10 @@ import time
 from datetime import datetime
 from typing import Any
 
+from ._certs import ensure_ca_bundle
+
+ensure_ca_bundle()  # trust the OS cert store before yfinance opens any connection
+
 import yfinance as yf
 
 from .universe import resolve_ticker

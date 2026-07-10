@@ -1,6 +1,6 @@
 {
   "status": "insufficient_evidence",
-  "graded_v8b_calls": 0,
+  "graded_v8b_calls": 10,
   "need": 40,
-  "message": "Only 0 graded decide() calls (need 40). Let the daily grading accumulate — no proposal made."
+  "message": "Only 10 graded decide() calls (need 40). Let the daily grading accumulate — no proposal made."
 }
