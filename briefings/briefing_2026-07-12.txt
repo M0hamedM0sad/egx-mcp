@@ -1,0 +1,91 @@
+=== EGX PRE-MARKET BRIEFING — Sunday 2026-07-12 10:57 ===
+
+--- MACRO ---
+  EGX 30:  52,341 pts (—)
+  USD/EGP: 49.56 (—)
+  Brent:   $76.01 (-0.76%)
+  Gold 24K: 6,554.73 EGP/g  |  21K: 5,735.39  |  18K: 4,916.05
+  Egyptian gold pound: 45,883 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 45) ---
+  1. AMER   score=33.72  price=0.864  5d=+24.2% RSI=74  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMER/
+  2. OFH    score=15.29  price=0.336  5d=+6.7% RSI=62  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OFH/
+  3. EFIH   score=13.78  price=25.15  5d=+7.0% RSI=62  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EFIH/
+  4. ZMID   score=12.57  price=7.55  5d=+5.4% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ZMID/
+  5. COMI   score=10.92  price=81.2  5d=+5.7% RSI=52  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-COMI/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  AMER: ENTRY 0.87 | STOP 0.63 | SCALE-OUT 1.1 (10602 sh) | TARGET 1.22 (10602 sh) | 21204 total (3.66% NAV) | R:R 1:1.5 | time stop 2026-07-19
+  OFH: ENTRY 0.34 | STOP 0.31 | SCALE-OUT 0.36 (74404 sh) | TARGET 0.38 (74405 sh) | 148809 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-19
+  EFIH: ENTRY 25.28 | STOP 23.83 | SCALE-OUT 26.47 (994 sh) | TARGET 27.14 (994 sh) | 1988 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-19
+  ZMID: ENTRY 7.59 | STOP 7.11 | SCALE-OUT 7.99 (3311 sh) | TARGET 8.21 (3311 sh) | 6622 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-19
+  COMI: ENTRY 81.61 | STOP 75.6 | SCALE-OUT 86.8 (307 sh) | TARGET 89.6 (308 sh) | 615 total (9.99% NAV) | R:R 1:1.5 | time stop 2026-07-19
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  AMER   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  OFH    FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: mildly_bullish
+  EFIH   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  ZMID   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  COMI   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    OFH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    ZMID: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    COMI: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  AMER:
+    Technicals:    RSI 74 — overbought; MACD bullish (+0.057); Riding upper Bollinger — extended; ATR 0.12 (3.9% of px) — sizing input
+    Fundamentals:  P/E 4.8 — cheap; P/B 0.82; ROE 17.0% — adequate
+    News tone:     bullish (+1.00, 4 hdl)
+      - Amer Group of Hotels streamlines online bookings with STAAH’s solutions [Hotel Management Network]
+      - سهم عامر جروب يقترب من استئناف الاتجاه الصاعد بعد حركة تصحيحية [Mubasher]
+  OFH:
+    Technicals:    RSI 62 — healthy uptrend; MACD bullish (+0.005); Riding upper Bollinger — extended; ATR 0.01 (2.2% of px) — sizing input
+    Fundamentals:  P/B 0.53; ROE 80.6% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - "أو بي المالية القابضة" تتحول للربحية بـ 106.7 مليون جنيه خلال الربع الأول [Mubasher]
+      - سهم أوراسكوم المالية القابضة يقترب من تأكيد اختراق نموذج إيجابي [Mubasher]
+  EFIH:
+    Technicals:    RSI 60 — healthy uptrend; MACD bullish (+0.217); ATR 0.66 (3.0% of px) — sizing input
+    Fundamentals:  P/E 44.1 — premium; P/B 12.09; ROE 27.5% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - تنفيذ صفقة بـ106.74 مليون جنيه على أسهم إي فاينانس ضمن نظام الإثابة [Mubasher]
+      - بالتعاون مع "إي فاينانس".. بنك مصر و"العدل" يتعاونان لميكنة سداد الرسوم القضائية [Mubasher]
+  ZMID:
+    Technicals:    RSI 68 — healthy uptrend; MACD bullish (+0.033); ATR 0.22 (3.2% of px) — sizing input
+    Fundamentals:  P/E 9.2 — fair; P/B 3.54; ROE 38.5% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم زهراء المعادي يواصل التحرك ضمن اتجاه صاعد ويترقب تجاوز مستوى فني هام [Mubasher]
+      - سهم زهراء المعادي يتحرك بإيجابية قرب مناطق مقاومة مؤثرة [Mubasher]
+  COMI:
+    Technicals:    RSI 52 — healthy uptrend; MACD bullish (+0.438); ATR 2.80 (2.1% of px) — sizing input
+    Fundamentals:  P/E 3.7 — cheap; P/B 1.41; ROE 37.8% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - البنك التجاري الدولي مصر يرفع العائد على شهادة الثلاث سنوات الشهرية إلى 18% [Mubasher]
+      - سهم البنك التجاري الدولي يتعافى تدريجياً بعد موجة تصحيح قوية [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: AMER, OFH, EFIH, ZMID, COMI
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
