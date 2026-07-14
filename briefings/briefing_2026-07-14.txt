@@ -1,0 +1,90 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-07-14 10:58 ===
+
+--- MACRO ---
+  EGX 30:  52,364 pts (—)
+  USD/EGP: 50.6 (+0.82%)
+  Brent:   $86.79 (+2.46%)
+  Gold 24K: 6,549.12 EGP/g  |  21K: 5,730.48  |  18K: 4,911.84
+  Egyptian gold pound: 45,844 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 43) ---
+  1. AMER   score=40.08  price=0.864  5d=+25.9% RSI=77  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMER/
+  2. CIRA   score=16.7  price=13.98  5d=+9.0% RSI=69  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CIRA/
+  3. ZMID   score=15.13  price=7.55  5d=+7.1% RSI=72  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ZMID/
+  4. MOIL   score=14.53  price=0.38  5d=+7.5% RSI=76  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MOIL/
+  5. CCAP   score=13.85  price=2.2  5d=+5.9% RSI=63  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CCAP/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  AMER: ENTRY 0.87 | STOP 0.59 | SCALE-OUT 1.14 (9064 sh) | TARGET 1.28 (9065 sh) | 18129 total (3.13% NAV) | R:R 1:1.5 | time stop 2026-07-21
+  CIRA: ENTRY 14.05 | STOP 11.45 | SCALE-OUT 16.51 (986 sh) | TARGET 17.78 (987 sh) | 1973 total (5.52% NAV) | R:R 1:1.5 | time stop 2026-07-21
+  ZMID: ENTRY 7.59 | STOP 7.06 | SCALE-OUT 8.04 (3311 sh) | TARGET 8.29 (3311 sh) | 6622 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-21
+  MOIL: ENTRY 0.38 | STOP 0.35 | SCALE-OUT 0.41 (65789 sh) | TARGET 0.42 (65789 sh) | 97007 total (7.37% NAV) | R:R 1:1.5 | time stop 2026-07-21
+  CCAP: ENTRY 2.21 | STOP 1.87 | SCALE-OUT 2.53 (7608 sh) | TARGET 2.69 (7608 sh) | 15216 total (6.7% NAV) | R:R 1:1.5 | time stop 2026-07-21
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  AMER   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CIRA   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  ZMID   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  MOIL   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bullish
+  CCAP   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bearish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    CIRA: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    ZMID: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  AMER:
+    Technicals:    RSI 77 — overbought; MACD bullish (+0.084); Riding upper Bollinger — extended; ATR 0.14 (4.4% of px) — sizing input
+    Fundamentals:  P/E 4.8 — cheap; P/B 0.82; ROE 17.0% — adequate
+    News tone:     bullish (+1.00, 4 hdl)
+      - Amer Group of Hotels streamlines online bookings with STAAH’s solutions [Hotel Management Network]
+      - سهم عامر جروب يقترب من استئناف الاتجاه الصاعد بعد حركة تصحيحية [Mubasher]
+  CIRA:
+    Technicals:    RSI 69 — healthy uptrend; MACD bullish (+0.196); Riding upper Bollinger — extended; ATR 1.27 (4.0% of px) — sizing input
+    Fundamentals:  P/E 10.8 — fair; P/B 4.71; ROE 43.6% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - "القاهرة للخدمات" تدعو عموميتها لمناقشة إنشاء مدرسة بمدينة رشيد الجديدة [Mubasher]
+      - القاهرة للخدمات تناقش نقل ملكية أرض مدرسة لتسوية جزء من مديونية سيرا للتعليم [Mubasher]
+  ZMID:
+    Technicals:    RSI 72 — overbought; MACD bullish (+0.060); Riding upper Bollinger — extended; ATR 0.25 (3.4% of px) — sizing input
+    Fundamentals:  P/E 9.2 — fair; P/B 3.54; ROE 38.5% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم زهراء المعادي يواصل التحرك ضمن اتجاه صاعد ويترقب تجاوز مستوى فني هام [Mubasher]
+      - سهم زهراء المعادي يتحرك بإيجابية قرب مناطق مقاومة مؤثرة [Mubasher]
+  MOIL:
+    Technicals:    RSI 76 — overbought; MACD bullish (+0.005); Riding upper Bollinger — extended; ATR 0.01 (2.7% of px) — sizing input
+    Fundamentals:  P/E 12.7 — fair; P/B 12.67; ROE 107.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - "ماريديف" تتحول للربحية وتحقق 1.9 مليون دولار خلال الربع الأول من 2026 [Mubasher]
+      - أرباح "ماريديف" المجمعة تقفز بنسبة 171% خلال عام 2025 [Mubasher]
+  CCAP:
+    Technicals:    RSI 63 — healthy uptrend; MACD bullish (+0.035); Riding upper Bollinger — extended; ATR 0.16 (3.1% of px) — sizing input
+    Fundamentals:  P/E 1.9 — cheap; P/B 0.23; ROE 12.1% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - جنوب الوادي للأسمنت تقر تسوية نزاعها مع "أسيك" التابعة لـ"القلعة" [Mubasher]
+      - القلعة: "المصرية للتكرير" تسدد ديونها الرئيسية وتستعد لتوزيع الأرباح [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: AMER, CIRA, ZMID, MOIL, CCAP
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
