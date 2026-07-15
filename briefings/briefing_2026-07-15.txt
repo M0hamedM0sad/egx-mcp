@@ -1,0 +1,90 @@
+=== EGX PRE-MARKET BRIEFING — Wednesday 2026-07-15 11:04 ===
+
+--- MACRO ---
+  EGX 30:  52,326 pts (—)
+  USD/EGP: 50.66 (-0.02%)
+  Brent:   $85.04 (-0.77%)
+  Gold 24K: 6,574.15 EGP/g  |  21K: 5,752.38  |  18K: 4,930.61
+  Egyptian gold pound: 46,019 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 46) ---
+  1. AMER   score=23.79  price=0.864  5d=+12.7% RSI=86  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMER/
+  2. CIRA   score=20.46  price=13.98  5d=+10.4% RSI=72  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CIRA/
+  3. AMOC   score=15.75  price=9.08  5d=+7.7% RSI=71  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMOC/
+  4. CCAP   score=14.18  price=2.2  5d=+6.2% RSI=67  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CCAP/
+  5. EGCH   score=12.19  price=8.11  5d=+7.3% RSI=63  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EGCH/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  AMER: ENTRY 0.87 | STOP 0.58 | SCALE-OUT 1.14 (8928 sh) | TARGET 1.28 (8929 sh) | 17857 total (3.09% NAV) | R:R 1:1.5 | time stop 2026-07-22
+  CIRA: ENTRY 14.05 | STOP 11.42 | SCALE-OUT 16.54 (976 sh) | TARGET 17.82 (977 sh) | 1953 total (5.46% NAV) | R:R 1:1.5 | time stop 2026-07-22
+  AMOC: ENTRY 9.13 | STOP 8.67 | SCALE-OUT 9.49 (2753 sh) | TARGET 9.69 (2753 sh) | 5506 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-22
+  CCAP: ENTRY 2.21 | STOP 1.87 | SCALE-OUT 2.53 (7543 sh) | TARGET 2.7 (7544 sh) | 15087 total (6.64% NAV) | R:R 1:1.5 | time stop 2026-07-22
+  EGCH: ENTRY 8.15 | STOP 7.23 | SCALE-OUT 8.99 (2845 sh) | TARGET 9.43 (2845 sh) | 5690 total (9.23% NAV) | R:R 1:1.5 | time stop 2026-07-22
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  AMER   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CIRA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  AMOC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CCAP   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bearish
+  EGCH   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    EGCH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  AMER:
+    Technicals:    RSI 86 — overbought; MACD bullish (+0.086); Riding upper Bollinger — extended; ATR 0.14 (4.4% of px) — sizing input
+    Fundamentals:  P/E 4.8 — cheap; P/B 0.82; ROE 17.0% — adequate
+    News tone:     bullish (+1.00, 4 hdl)
+      - Amer Group of Hotels streamlines online bookings with STAAH’s solutions [Hotel Management Network]
+      - سهم عامر جروب يقترب من استئناف الاتجاه الصاعد بعد حركة تصحيحية [Mubasher]
+  CIRA:
+    Technicals:    RSI 72 — overbought; MACD bullish (+0.266); Riding upper Bollinger — extended; ATR 1.28 (4.0% of px) — sizing input
+    Fundamentals:  P/E 10.8 — fair; P/B 4.71; ROE 43.6% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - "القاهرة للخدمات" تدعو عموميتها لمناقشة إنشاء مدرسة بمدينة رشيد الجديدة [Mubasher]
+      - القاهرة للخدمات تناقش نقل ملكية أرض مدرسة لتسوية جزء من مديونية سيرا للتعليم [Mubasher]
+  AMOC:
+    Technicals:    RSI 71 — overbought; MACD bullish (+0.083); Riding upper Bollinger — extended; ATR 0.20 (2.4% of px) — sizing input
+    Fundamentals:  P/E 19.7 — premium; P/B 2.65; ROE 13.3% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - "أموك" ترفع توقعات أرباحها لعام 2026 إلى 2.1 مليار جنيه [Mubasher]
+      - أرباح "أموك" تنمو 37% لتتجاوز 635 مليون جنيه خلال الربع الأول [Mubasher]
+  CCAP:
+    Technicals:    RSI 67 — healthy uptrend; MACD bullish (+0.046); Riding upper Bollinger — extended; ATR 0.17 (3.0% of px) — sizing input
+    Fundamentals:  P/E 1.9 — cheap; P/B 0.23; ROE 12.1% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - جنوب الوادي للأسمنت تقر تسوية نزاعها مع "أسيك" التابعة لـ"القلعة" [Mubasher]
+      - القلعة: "المصرية للتكرير" تسدد ديونها الرئيسية وتستعد لتوزيع الأرباح [Mubasher]
+  EGCH:
+    Technicals:    RSI 63 — healthy uptrend; MACD bullish (+0.093); ATR 0.44 (3.2% of px) — sizing input
+    Fundamentals:  P/E 5.2 — cheap; P/B 1.08; ROE 20.7% — strong
+    News tone:     mildly_bullish (+0.33, 3 hdl)
+      - سهم كيما يختبر منطقة دعم محورية وسط تراجع الزخم الشرائي [Mubasher]
+      - أين أنفقت "كيما" 2.59 مليار جنيه من متحصلات زيادة رأس المال؟ [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: AMER, CIRA, AMOC, CCAP, EGCH
+  Filtered: kept 2 of 23 headlines.
+  Tone: bearish (score -1.00)
+  [CIRA] الصناعة المصرية تستهدف خفض استهلاك الغاز بمصانع السيراميك 25% والكهرباء 15% — Mubasher
+  [sector:Education] Education spending tops 2.5% of GDP, remittances near $40bn: HDB CEO — Daily News Egypt
+
+Disclaimer: Research only, not investment advice.
