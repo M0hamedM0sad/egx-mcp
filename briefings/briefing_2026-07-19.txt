@@ -1,0 +1,89 @@
+=== EGX PRE-MARKET BRIEFING — Sunday 2026-07-19 11:00 ===
+
+--- MACRO ---
+  EGX 30:  52,928 pts (—)
+  USD/EGP: 50.5 (+0.20%)
+  Brent:   $88.10 (+3.59%)
+  Gold 24K: 6,524.97 EGP/g  |  21K: 5,709.35  |  18K: 4,893.73
+  Egyptian gold pound: 45,675 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 47) ---
+  1. BIOC   score=51.34  price=28.48  5d=+43.6% RSI=86  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  2. AMER   score=37.86  price=0.864  5d=+28.1% RSI=93  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMER/
+  3. CIRA   score=19.77  price=13.98  5d=+10.5% RSI=74  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CIRA/
+  4. ZMID   score=18.72  price=7.55  5d=+9.5% RSI=73  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ZMID/
+  5. MASR   score=18.11  price=4.25  5d=+8.2% RSI=79  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MASR/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  BIOC: ENTRY 28.62 | STOP 19.24 | SCALE-OUT 37.72 (270 sh) | TARGET 42.33 (271 sh) | 541 total (3.08% NAV) | R:R 1:1.5 | time stop 2026-07-26
+  AMER: ENTRY 0.87 | STOP 0.5 | SCALE-OUT 1.23 (6834 sh) | TARGET 1.41 (6834 sh) | 13668 total (2.36% NAV) | R:R 1:1.5 | time stop 2026-07-26
+  CIRA: ENTRY 14.05 | STOP 11.25 | SCALE-OUT 16.71 (914 sh) | TARGET 18.08 (915 sh) | 1829 total (5.11% NAV) | R:R 1:1.5 | time stop 2026-07-26
+  ZMID: ENTRY 7.59 | STOP 7.05 | SCALE-OUT 8.05 (3311 sh) | TARGET 8.3 (3311 sh) | 6622 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-26
+  MASR: ENTRY 4.27 | STOP 3.73 | SCALE-OUT 4.77 (4781 sh) | TARGET 5.03 (4782 sh) | 9563 total (8.13% NAV) | R:R 1:1.5 | time stop 2026-07-26
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  BIOC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  AMER   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CIRA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  ZMID   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  MASR   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    ZMID: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  BIOC:
+    Technicals:    RSI 86 — overbought; MACD bullish (+2.847); Riding upper Bollinger — extended; ATR 4.62 (4.4% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم جلاسكو سميثكلاين يترقب تأكيد استمرار الزخم الإيجابي [Mubasher]
+      - أرباح "جلاكسو سميثكلاين" المجمعة تهبط 92% في الربع الأول [Mubasher]
+  AMER:
+    Technicals:    RSI 93 — overbought; MACD bullish (+0.132); Riding upper Bollinger — extended; ATR 0.18 (4.7% of px) — sizing input
+    Fundamentals:  P/E 4.8 — cheap; P/B 0.82; ROE 17.0% — adequate
+    News tone:     bullish (+1.00, 4 hdl)
+      - Amer Group of Hotels streamlines online bookings with STAAH’s solutions [Hotel Management Network]
+      - مساهم يرفع حصته في أسهم رأسمال عامر القابضة إلى 6.25%ِ [Mubasher]
+  CIRA:
+    Technicals:    RSI 74 — overbought; MACD bullish (+0.302); ATR 1.37 (4.3% of px) — sizing input
+    Fundamentals:  P/E 10.8 — fair; P/B 4.71; ROE 43.6% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - "القاهرة للخدمات" تدعو عموميتها لمناقشة إنشاء مدرسة بمدينة رشيد الجديدة [Mubasher]
+      - القاهرة للخدمات تناقش نقل ملكية أرض مدرسة لتسوية جزء من مديونية سيرا للتعليم [Mubasher]
+  ZMID:
+    Technicals:    RSI 73 — overbought; MACD bullish (+0.071); Riding upper Bollinger — extended; ATR 0.25 (3.3% of px) — sizing input
+    Fundamentals:  P/E 9.2 — fair; P/B 3.54; ROE 38.5% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم زهراء المعادي يواصل التحرك ضمن اتجاه صاعد ويترقب تجاوز مستوى فني هام [Mubasher]
+      - سهم زهراء المعادي يتحرك بإيجابية قرب مناطق مقاومة مؤثرة [Mubasher]
+  MASR:
+    Technicals:    RSI 79 — overbought; MACD bullish (+0.082); ATR 0.26 (3.1% of px) — sizing input
+    Fundamentals:  P/E 4.7 — cheap; P/B 0.91; ROE 19.5% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - ​"مدينة مصر للإسكان" تشتري 1.77 مليون سهم خزينة [Mubasher]
+      - ​"مدينة مصر للإسكان" تشتري مليون سهم خزينة [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: BIOC, AMER, CIRA, ZMID, MASR
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
