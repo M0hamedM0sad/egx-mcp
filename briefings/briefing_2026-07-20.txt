@@ -1,0 +1,89 @@
+=== EGX PRE-MARKET BRIEFING — Monday 2026-07-20 11:49 ===
+
+--- MACRO ---
+  EGX 30:  52,560 pts (—)
+  USD/EGP: 50.98 (+0.95%)
+  Brent:   $87.76 (-2.78%)
+  Gold 24K: 6,593.71 EGP/g  |  21K: 5,769.50  |  18K: 4,945.29
+  Egyptian gold pound: 46,156 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 43) ---
+  1. BIOC   score=85.8  price=28.48  5d=+72.3% RSI=96  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  2. AMER   score=44.37  price=0.864  5d=+32.9% RSI=98  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMER/
+  3. SCEM   score=22.32  price=10.14  5d=+13.3% RSI=76  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SCEM/
+  4. DSCW   score=18.89  price=1.386  5d=+8.9% RSI=96  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-DSCW/
+  5. OFH    score=18.4  price=0.336  5d=+10.1% RSI=88  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OFH/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  BIOC: ENTRY 28.62 | STOP 17.09 | SCALE-OUT 39.87 (219 sh) | TARGET 45.57 (219 sh) | 438 total (2.49% NAV) | R:R 1:1.5 | time stop 2026-07-27
+  AMER: ENTRY 0.87 | STOP 0.4 | SCALE-OUT 1.32 (5434 sh) | TARGET 1.55 (5435 sh) | 10869 total (1.88% NAV) | R:R 1:1.5 | time stop 2026-07-27
+  SCEM: ENTRY 10.19 | STOP 5.97 | SCALE-OUT 14.31 (599 sh) | TARGET 16.4 (599 sh) | 1198 total (2.43% NAV) | R:R 1:1.5 | time stop 2026-07-27
+  DSCW: ENTRY 1.39 | STOP 1.3 | SCALE-OUT 1.47 (18037 sh) | TARGET 1.51 (18038 sh) | 36075 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-07-27
+  OFH: ENTRY 0.34 | STOP 0.3 | SCALE-OUT 0.37 (68306 sh) | TARGET 0.39 (68306 sh) | 136612 total (9.18% NAV) | R:R 1:1.5 | time stop 2026-07-27
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: bullish
+  AMER   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  SCEM   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  DSCW   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  OFH    FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: mildly_bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    OFH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  BIOC:
+    Technicals:    RSI 96 — overbought; MACD bullish (+5.043); Riding upper Bollinger — extended; ATR 5.70 (4.5% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - "جلاكسو سميثكلاين": لا معلومات تبرر تحرك السهم [Mubasher]
+      - سهم جلاسكو سميثكلاين يترقب تأكيد استمرار الزخم الإيجابي [Mubasher]
+  AMER:
+    Technicals:    RSI 98 — overbought; MACD bullish (+0.161); Riding upper Bollinger — extended; ATR 0.23 (5.5% of px) — sizing input
+    Fundamentals:  P/E 4.8 — cheap; P/B 0.82; ROE 17.0% — adequate
+    News tone:     bullish (+1.00, 4 hdl)
+      - Amer Group of Hotels streamlines online bookings with STAAH’s solutions [Hotel Management Network]
+      - مساهم يرفع حصته في أسهم رأسمال عامر القابضة إلى 6.25%ِ [Mubasher]
+  SCEM:
+    Technicals:    RSI 76 — overbought; MACD bullish (+0.681); Riding upper Bollinger — extended; ATR 2.09 (2.9% of px) — sizing input
+    Fundamentals:  P/E 1.2 — cheap; P/B 0.59; ROE 51.1% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم أسمنت سيناء يحافظ على الاتجاه الإيجابي واستمرار فرص الصعود [Mubasher]
+      - أرباح "أسمنت سيناء" تقفز 465% إلى 1.1 مليار جنيه في الربع الأول [Mubasher]
+  DSCW:
+    Technicals:    RSI 96 — overbought; MACD bullish (+0.022); Riding upper Bollinger — extended; ATR 0.04 (2.1% of px) — sizing input
+    Fundamentals:  P/E 6.0 — cheap; P/B 1.71; ROE 28.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - "دايس للملابس" تتحول للخسارة في الربع الأول من 2026 [Mubasher]
+      - عمومية "دايس للملابس الجاهزة" تقرر عدم توزيع أرباح 2025 [Mubasher]
+  OFH:
+    Technicals:    RSI 88 — overbought; MACD bullish (+0.009); Riding upper Bollinger — extended; ATR 0.02 (2.6% of px) — sizing input
+    Fundamentals:  P/B 0.53; ROE 80.6% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - "أو بي المالية القابضة" تتحول للربحية بـ 106.7 مليون جنيه خلال الربع الأول [Mubasher]
+      - سهم أوراسكوم المالية القابضة يقترب من تأكيد اختراق نموذج إيجابي [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: BIOC, AMER, SCEM, DSCW, OFH
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
