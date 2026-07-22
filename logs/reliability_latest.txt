@@ -3,7 +3,7 @@ EGX MODEL RELIABILITY SCORECARD
 ======================================================================
 
 [PASS]  Gate 1  EVIDENCE   (proven edge)
-        graded directional calls: 215 (need 30)  |  pending: 246
+        graded directional calls: 220 (need 30)  |  pending: 256
         directional accuracy vs EGX30: 60% (need >=55%)
 
 [~~~~]  Gate 2  DATA       (fundamentals coverage)
@@ -12,7 +12,7 @@ EGX MODEL RELIABILITY SCORECARD
         -> 27 at medium; add profit_margin + debt_to_equity to reach high.
 
 [OPEN]  Gate 3  CALIBRATION(conviction = accuracy)
-        need >=10 graded calls in >=2 conviction buckets (have: { medium:32, weekly:183 })
+        need >=10 graded calls in >=2 conviction buckets (have: { medium:32, weekly:188 })
 
 ======================================================================
 VERDICT: NOT YET RELIABLE — 2 gate(s) open.
