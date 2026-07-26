@@ -1,0 +1,91 @@
+=== EGX PRE-MARKET BRIEFING — Sunday 2026-07-26 11:06 ===
+
+--- MACRO ---
+  EGX 30:  53,932 pts (—)
+  USD/EGP: 51.3 (+0.10%)
+  Brent:   $96.78 (-3.91%)
+  Gold 24K: 6,714.11 EGP/g  |  21K: 5,874.84  |  18K: 5,035.58
+  Egyptian gold pound: 46,999 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 45) ---
+  1. BIOC   score=46.82  price=28.48  5d=+38.1% RSI=79  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  2. SCEM   score=42.95  price=10.14  5d=+30.4% RSI=82  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SCEM/
+  3. SKPC   score=14.72  price=27.29  5d=+8.1% RSI=52  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SKPC/
+  4. OFH    score=12.94  price=0.336  5d=+8.1% RSI=84  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OFH/
+  5. MICH   score=12.89  price=27.61  5d=+5.3% RSI=79  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MICH/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  BIOC: ENTRY 28.62 | STOP 9.71 | SCALE-OUT 47.25 (133 sh) | TARGET 56.63 (133 sh) | 266 total (1.52% NAV) | R:R 1:1.5 | time stop 2026-08-02
+  SCEM: ENTRY 10.19 | STOP 3.94 | SCALE-OUT 16.34 (402 sh) | TARGET 19.45 (403 sh) | 805 total (1.63% NAV) | R:R 1:1.5 | time stop 2026-08-02
+  SKPC: ENTRY 27.43 | STOP 26.31 | SCALE-OUT 28.27 (916 sh) | TARGET 28.76 (916 sh) | 1832 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-08-02
+  OFH: ENTRY 0.34 | STOP 0.3 | SCALE-OUT 0.38 (61881 sh) | TARGET 0.4 (61881 sh) | 123762 total (8.32% NAV) | R:R 1:1.5 | time stop 2026-08-02
+  MICH: ENTRY 27.75 | STOP 25.57 | SCALE-OUT 29.65 (905 sh) | TARGET 30.67 (905 sh) | 1810 total (9.99% NAV) | R:R 1:1.5 | time stop 2026-08-02
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  BIOC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  SCEM   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  SKPC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  OFH    FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: mildly_bullish
+  MICH   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    BIOC: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    OFH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    MICH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  BIOC:
+    Technicals:    RSI 79 — overbought; MACD bullish (+5.201); Riding upper Bollinger — extended; ATR 9.38 (7.7% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - "جلاكسو سميثكلاين": لا معلومات تبرر تحرك السهم [Mubasher]
+      - سهم جلاسكو سميثكلاين يترقب تأكيد استمرار الزخم الإيجابي [Mubasher]
+  SCEM:
+    Technicals:    RSI 82 — overbought; MACD bullish (+2.026); Riding upper Bollinger — extended; ATR 3.10 (3.8% of px) — sizing input
+    Fundamentals:  P/E 1.2 — cheap; P/B 0.59; ROE 51.1% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم أسمنت سيناء يحافظ على الاتجاه الإيجابي واستمرار فرص الصعود [Mubasher]
+      - أرباح "أسمنت سيناء" تقفز 465% إلى 1.1 مليار جنيه في الربع الأول [Mubasher]
+  SKPC:
+    Technicals:    RSI 52 — healthy uptrend; MACD bullish (+0.032); ATR 0.49 (3.0% of px) — sizing input
+    Fundamentals:  P/E 13.0 — fair; P/B 3.24; ROE 24.9% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "سيدي كرير للبتروكيماويات" تتراجع 69% خلال الربع الأول من 2026 [Mubasher]
+      - سهم سيدي كرير يتحرك عرضياً بعد موجة صعود قوية ويترقب مستوى فني هام [Mubasher]
+  OFH:
+    Technicals:    RSI 84 — overbought; MACD bullish (+0.010); ATR 0.02 (2.8% of px) — sizing input
+    Fundamentals:  P/B 0.53; ROE 80.6% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - "أو بي المالية القابضة" تتحول للربحية بـ 106.7 مليون جنيه خلال الربع الأول [Mubasher]
+      - سهم أوراسكوم المالية القابضة يقترب من تأكيد اختراق نموذج إيجابي [Mubasher]
+  MICH:
+    Technicals:    RSI 79 — overbought; MACD bullish (+0.154); Riding upper Bollinger — extended; ATR 1.02 (2.5% of px) — sizing input
+    Fundamentals:  P/E 5.3 — cheap; P/B 1.92; ROE 35.9% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - انخفاض أرباح مصر لصناعة الكيماويات 9% خلال 2025-2026 بضغط من تكلفة المبيعات [Mubasher]
+      - مصر لصناعة الكيماويات تسجل 496.9 مليون جنيه أرباحاً خلال 11 شهراً [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: BIOC, SCEM, SKPC, OFH, MICH
+  Filtered: kept 0 of 19 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
