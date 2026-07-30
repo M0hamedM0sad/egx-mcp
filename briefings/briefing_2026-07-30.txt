@@ -1,0 +1,91 @@
+=== EGX PRE-MARKET BRIEFING — Thursday 2026-07-30 11:24 ===
+
+--- MACRO ---
+  EGX 30:  53,627 pts (—)
+  USD/EGP: 51.15 (+1.05%)
+  Brent:   $91.09 (+1.78%)
+  Gold 24K: 6,783.94 EGP/g  |  21K: 5,935.94  |  18K: 5,087.95
+  Egyptian gold pound: 47,488 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 40) ---
+  1. BIOC   score=95.59  price=28.48  5d=+80.5% RSI=88  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  2. MOIL   score=27.14  price=0.38  5d=+17.0% RSI=92  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MOIL/
+  3. CIRA   score=26.03  price=13.98  5d=+14.7% RSI=84  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CIRA/
+  4. EFIC   score=14.71  price=104.14  5d=+8.8% RSI=71  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EFIC/
+  5. ADIB   score=14.27  price=37.89  5d=+5.5% RSI=80  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ADIB/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  BIOC: ENTRY 28.62 | STOP -2.04 | SCALE-OUT 59.0 (81 sh) | TARGET 74.26 (82 sh) | 163 total (0.93% NAV) | R:R 1:1.5 | time stop 2026-08-06
+  MOIL: ENTRY 0.38 | STOP 0.34 | SCALE-OUT 0.42 (57077 sh) | TARGET 0.45 (57078 sh) | 114155 total (8.68% NAV) | R:R 1:1.5 | time stop 2026-08-06
+  CIRA: ENTRY 14.05 | STOP 10.62 | SCALE-OUT 17.34 (744 sh) | TARGET 19.02 (745 sh) | 1489 total (4.16% NAV) | R:R 1:1.5 | time stop 2026-08-06
+  EFIC: ENTRY 104.66 | STOP 88.04 | SCALE-OUT 120.24 (155 sh) | TARGET 128.29 (155 sh) | 310 total (6.46% NAV) | R:R 1:1.5 | time stop 2026-08-06
+  ADIB: ENTRY 38.08 | STOP 35.43 | SCALE-OUT 40.35 (659 sh) | TARGET 41.58 (660 sh) | 1319 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-08-06
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: neutral
+  MOIL   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: neutral
+  CIRA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  EFIC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  ADIB   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    BIOC: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+    MOIL: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    ADIB: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  BIOC:
+    Technicals:    RSI 88 — overbought; MACD bullish (+10.099); Riding upper Bollinger — extended; ATR 15.26 (7.6% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - "جلاكسو سميثكلاين": لا معلومات تبرر تحرك السهم [Mubasher]
+      - سهم جلاسكو سميثكلاين يترقب تأكيد استمرار الزخم الإيجابي [Mubasher]
+  MOIL:
+    Technicals:    RSI 92 — overbought; MACD bullish (+0.013); Riding upper Bollinger — extended; ATR 0.02 (3.2% of px) — sizing input
+    Fundamentals:  P/E 12.7 — fair; P/B 12.67; ROE 107.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - ​"ماريدايف" تتلقى عرضاً للاستحواذ على 20% من أسهم رأسمال الشركة [Mubasher]
+      - "ماريديف" تعيد هيكلة 245 مليون دولار من القروض حتى نهاية 2030 [Mubasher]
+  CIRA:
+    Technicals:    RSI 84 — overbought; MACD bullish (+0.385); Riding upper Bollinger — extended; ATR 1.68 (4.6% of px) — sizing input
+    Fundamentals:  P/E 10.8 — fair; P/B 4.71; ROE 43.6% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "سيرا للتعليم" تقفز 106% لأكثر من 1.2 مليار جنيه خلال 9 أشهر [Mubasher]
+      - "القاهرة للخدمات" تدعو عموميتها لمناقشة إنشاء مدرسة بمدينة رشيد الجديدة [Mubasher]
+  EFIC:
+    Technicals:    RSI 71 — overbought; MACD bullish (+1.772); Riding upper Bollinger — extended; ATR 8.05 (4.0% of px) — sizing input
+    Fundamentals:  P/E 3.7 — cheap; P/B 3.40; ROE 92.6% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - نافع فهمي رئيسًا لمجلس إدارة المالية والصناعية المصرية [Mubasher]
+      - أرباح المالية والصناعية تتراجع 83% خلال الربع الأول [Mubasher]
+  ADIB:
+    Technicals:    RSI 80 — overbought; MACD bullish (+0.587); Riding upper Bollinger — extended; ATR 1.23 (2.4% of px) — sizing input
+    Fundamentals:  P/E 3.5 — cheap; P/B 1.45; ROE 41.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح مصرف أبوظبي الإسلامي - مصر ترتفع إلى 3.6 مليار جنيه في الربع الأول [Mubasher]
+      - بورصة مصر تفحص قيد أسهم زيادة رأسمال مصرف أبوظبي الإسلامي- مصر [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: BIOC, MOIL, CIRA, EFIC, ADIB
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
