@@ -1,0 +1,84 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-08-04 11:32 ===
+
+--- MACRO ---
+  EGX 30:  54,094 pts (—)
+  USD/EGP: 50.32 (+0.50%)
+  Brent:   $86.11 (+1.26%)
+  Gold 24K: 6,642.14 EGP/g  |  21K: 5,811.88  |  18K: 4,981.61
+  Egyptian gold pound: 46,495 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 37) ---
+  1. BIOC   score=169.13  price=28.48  5d=+141.8% RSI=92  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  2. CIRA   score=25.1  price=13.98  5d=+15.7% RSI=73  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CIRA/
+  3. AMOC   score=22.75  price=9.08  5d=+14.6% RSI=82  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMOC/
+  4. OCDI   score=16.25  price=43.51  5d=+8.4% RSI=67  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OCDI/
+  5. ETEL   score=16.12  price=32.77  5d=+9.8% RSI=78  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ETEL/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  BIOC: ENTRY 28.62 | STOP -14.11 | SCALE-OUT 71.07 (58 sh) | TARGET 92.36 (59 sh) | 117 total (0.67% NAV) | R:R 1:1.5 | time stop 2026-08-11
+  CIRA: ENTRY 14.05 | STOP 10.54 | SCALE-OUT 17.42 (726 sh) | TARGET 19.14 (727 sh) | 1453 total (4.06% NAV) | R:R 1:1.5 | time stop 2026-08-11
+  AMOC: ENTRY 9.13 | STOP 8.56 | SCALE-OUT 9.6 (2753 sh) | TARGET 9.85 (2753 sh) | 5506 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-08-11
+  OCDI: ENTRY 43.73 | STOP 41.56 | SCALE-OUT 45.46 (574 sh) | TARGET 46.43 (575 sh) | 1149 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-08-11
+  ETEL: ENTRY 32.93 | STOP 25.74 | SCALE-OUT 39.8 (355 sh) | TARGET 43.31 (356 sh) | 711 total (4.66% NAV) | R:R 1:1.5 | time stop 2026-08-11
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  CIRA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  AMOC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  OCDI   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: neutral
+  ETEL   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    BIOC: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+    OCDI: V8b says HOLD but chairman says REDUCE — Bear case has the edge on monthly view — informational only. Does not override W1 short-horizon entr
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  BIOC:
+    Technicals:    RSI 92 — overbought; MACD bullish (+18.138); Riding upper Bollinger — extended; ATR 21.29 (7.4% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate
+    News tone:     neutral (+0.00, 0 hdl)
+  CIRA:
+    Technicals:    RSI 73 — overbought; MACD bullish (+0.391); Riding upper Bollinger — extended; ATR 1.72 (4.7% of px) — sizing input
+    Fundamentals:  P/E 10.8 — fair; P/B 4.71; ROE 43.6% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "سيرا للتعليم" تقفز 106% لأكثر من 1.2 مليار جنيه خلال 9 أشهر [Mubasher]
+      - "القاهرة للخدمات" تدعو عموميتها لمناقشة إنشاء مدرسة بمدينة رشيد الجديدة [Mubasher]
+  AMOC:
+    Technicals:    RSI 82 — overbought; MACD bullish (+0.118); Riding upper Bollinger — extended; ATR 0.26 (2.7% of px) — sizing input
+    Fundamentals:  P/E 19.7 — premium; P/B 2.65; ROE 13.3% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+  OCDI:
+    Technicals:    RSI 67 — healthy uptrend; MACD bearish (-0.036); Riding upper Bollinger — extended; ATR 0.97 (3.3% of px) — sizing input
+    Fundamentals:  P/E 11.2 — fair; P/B 1.22; ROE 11.0% — adequate
+    News tone:     neutral (+0.00, 0 hdl)
+      - أرباح "سوديك" تهبط 36% بالنصف الأول رغم نمو الإيرادات إلى 5.98 مليار جنيه [Mubasher]
+      - سهم سوديك يترقب استئناف الاتجاه الصاعد من مستويات الدعم [Mubasher]
+  ETEL:
+    Technicals:    RSI 78 — overbought; MACD bullish (+1.005); Riding upper Bollinger — extended; ATR 3.51 (3.1% of px) — sizing input
+    Fundamentals:  P/E 9.6 — fair; P/B 1.22; ROE 12.7% — adequate
+    News tone:     neutral (+0.00, 0 hdl)
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: BIOC, CIRA, AMOC, OCDI, ETEL
+  Filtered: kept 0 of 8 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
