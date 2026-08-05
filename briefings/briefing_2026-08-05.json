@@ -1,0 +1,1210 @@
+{
+  "as_of_utc": "2026-08-05T09:29:29.331703Z",
+  "cairo_local": "Wednesday 2026-08-05 11:29",
+  "is_trading_day": true,
+  "macro": {
+    "as_of": "2026-08-05T09:29:30.643481Z",
+    "egp_usd": {
+      "value": 49.75,
+      "change_pct": -0.76
+    },
+    "brent_usd": {
+      "value": 80.18,
+      "change_pct": 2.32
+    },
+    "gold_usd": {
+      "value": 4220.1001,
+      "change_pct": 0.8
+    },
+    "cbe_rates": {
+      "deposit_rate_pct": null,
+      "lending_rate_pct": null,
+      "midpoint_pct": null,
+      "source": "https://www.cbe.org.eg/en/economic-research/statistics/cbe-rates"
+    },
+    "regime_flags": [
+      "Brent rallying \u2014 supports petrochems, pressures industrial margins"
+    ],
+    "note": "EGP/USD and Brent from Yahoo (delayed). CBE rates scraped \u2014 verify against cbe.org.eg before acting on rate-sensitive trades."
+  },
+  "egx30_spot": {
+    "value": 54753.7,
+    "change_pct": null,
+    "source": "tradingview.com",
+    "chart_url": "https://www.tradingview.com/symbols/EGX-EGX30/"
+  },
+  "egx70_spot": {
+    "error": "EGX 70 unavailable from any source today",
+    "source": "yfinance (failed)"
+  },
+  "egx_index_sources": [
+    "tradingview.com (EGX 30)"
+  ],
+  "gold_egp": {
+    "as_of": "2026-08-05T09:29:31.809980Z",
+    "gold_oz_usd": 4220.1,
+    "usdegp": 49.75,
+    "egp_per_gram_24k": 6750.05,
+    "egp_per_gram_21k": 5906.29,
+    "egp_per_gram_18k": 5062.54,
+    "egyptian_gold_pound_egp": 47250.34,
+    "method": "Computed from international spot: (USD/oz \u00d7 USDEGP) / 31.1035 for 24K, then \u00d7 21/24 and 18/24 for the standard alloys. Local dealer prices typically 5-15% above this \u2014 verify against sigma-egy / iSagha before acting.",
+    "note": "Egyptian gold pound (\u0627\u0644\u062c\u0646\u064a\u0647 \u0627\u0644\u0630\u0647\u0628) = 8g of 21K gold by convention \u2014 that's the math here, regardless of any local premium for handmade pieces."
+  },
+  "regime": {
+    "regime": "SIDEWAYS",
+    "description": "Range-bound \u2014 slight bias to mean-reversion and value.",
+    "weight_override": {
+      "valuation": 1.2,
+      "quality": 1.1,
+      "momentum": 0.9,
+      "risk": 1.0
+    },
+    "metrics": {
+      "egx30_last": 180.81,
+      "ret_60d_pct": 3.29,
+      "annualized_vol_pct": 17.93,
+      "sma_200": 149.24,
+      "above_ma200": true,
+      "drawdown_1y_pct": 0.0
+    },
+    "source_symbol": "synthetic_basket(13_names)",
+    "as_of": "2026-08-05T09:29:34.201452Z"
+  },
+  "rf_rate": {
+    "rate_pct": 25.0,
+    "source": "fallback:hardcoded_stale",
+    "is_stale": true,
+    "daily_rate_pct": 0.08859,
+    "as_of": "2026-08-05T09:29:37.809636Z",
+    "note": "Used as the baseline for excess-return calculations across the scoring engine, decision tool, and backtest harness. Override with EGX_TBILL_RATE_PCT env var when CBE source is stale."
+  },
+  "w1_picks": {
+    "as_of": "2026-08-05",
+    "horizon_days": 5,
+    "n_universe": 68,
+    "n_with_features": 67,
+    "n_passes_quality": 52,
+    "n_eligible": 42,
+    "config": {
+      "w_mom5": 1.5,
+      "w_mom20": 0.0,
+      "w_mr1": 0.5,
+      "w_breakout": 3.0,
+      "w_trend": 3.0,
+      "min_roe_pct": 10.0,
+      "top_n": 5
+    },
+    "top_picks": [
+      {
+        "ticker": "BIOC",
+        "score": 169.13,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 28.48,
+        "mom_1d_pct": 20.0,
+        "mom_5d_pct": 141.77,
+        "mom_20d_pct": 389.23,
+        "above_ma20": true,
+        "vol_ratio_today": 0.92,
+        "breakout_signal": 1.0,
+        "high_20d": 345.25,
+        "low_20d": 72.02,
+        "rsi_14": 93.5,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 345.25,
+        "split_warning": "Live tape 28.48 differs from adjusted close 345.25 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "AMOC",
+        "score": 19.96,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 9.08,
+        "mom_1d_pct": -5.01,
+        "mom_5d_pct": 9.64,
+        "mom_20d_pct": 15.92,
+        "above_ma20": true,
+        "vol_ratio_today": 1.69,
+        "breakout_signal": 0.0,
+        "high_20d": 9.58,
+        "low_20d": 7.75,
+        "rsi_14": 68.3,
+        "macd_slope_pos": false
+      },
+      {
+        "ticker": "CLHO",
+        "score": 18.96,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 6.61,
+        "mom_1d_pct": 1.22,
+        "mom_5d_pct": 9.05,
+        "mom_20d_pct": 11.71,
+        "above_ma20": true,
+        "vol_ratio_today": 1.95,
+        "breakout_signal": 1.0,
+        "high_20d": 18.32,
+        "low_20d": 16.07,
+        "rsi_14": 78.9,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 18.32,
+        "split_warning": "Live tape 6.61 differs from adjusted close 18.32 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "MICH",
+        "score": 17.65,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 27.61,
+        "mom_1d_pct": 7.16,
+        "mom_5d_pct": 10.2,
+        "mom_20d_pct": 19.75,
+        "above_ma20": true,
+        "vol_ratio_today": 2.65,
+        "breakout_signal": 1.0,
+        "high_20d": 45.18,
+        "low_20d": 37.51,
+        "rsi_14": 79.4,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 45.18,
+        "split_warning": "Live tape 27.61 differs from adjusted close 45.18 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "EGCH",
+        "score": 17.25,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 8.11,
+        "mom_1d_pct": 3.87,
+        "mom_5d_pct": 8.79,
+        "mom_20d_pct": 12.05,
+        "above_ma20": true,
+        "vol_ratio_today": 3.55,
+        "breakout_signal": 1.0,
+        "high_20d": 14.23,
+        "low_20d": 12.63,
+        "rsi_14": 69.0,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 14.23,
+        "split_warning": "Live tape 8.11 differs from adjusted close 14.23 \u2014 likely recent split. Use trade plan."
+      }
+    ],
+    "runners_up": [
+      {
+        "ticker": "ASCM",
+        "score": 11.15,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 66.12,
+        "mom_1d_pct": 0.17,
+        "mom_5d_pct": 3.49,
+        "mom_20d_pct": 10.02,
+        "above_ma20": true,
+        "vol_ratio_today": 2.03,
+        "breakout_signal": 1.0,
+        "high_20d": 66.12,
+        "low_20d": 57.61,
+        "rsi_14": 66.3,
+        "macd_slope_pos": true
+      },
+      {
+        "ticker": "DSCW",
+        "score": 11.12,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 2.05,
+        "mom_1d_pct": 3.54,
+        "mom_5d_pct": 4.59,
+        "mom_20d_pct": 17.82,
+        "above_ma20": true,
+        "vol_ratio_today": 3.07,
+        "breakout_signal": 1.0,
+        "high_20d": 2.05,
+        "low_20d": 1.76,
+        "rsi_14": 79.4,
+        "macd_slope_pos": true
+      },
+      {
+        "ticker": "ETEL",
+        "score": 11.08,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 107.3,
+        "mom_1d_pct": -5.14,
+        "mom_5d_pct": 3.67,
+        "mom_20d_pct": 15.66,
+        "above_ma20": true,
+        "vol_ratio_today": 1.31,
+        "breakout_signal": 0.0,
+        "high_20d": 113.11,
+        "low_20d": 96.5,
+        "rsi_14": 67.4,
+        "macd_slope_pos": false
+      },
+      {
+        "ticker": "OCDI",
+        "score": 11.01,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 29.36,
+        "mom_1d_pct": -0.1,
+        "mom_5d_pct": 5.31,
+        "mom_20d_pct": 15.09,
+        "above_ma20": true,
+        "vol_ratio_today": 0.98,
+        "breakout_signal": 0.0,
+        "high_20d": 29.39,
+        "low_20d": 26.55,
+        "rsi_14": 65.9,
+        "macd_slope_pos": true
+      },
+      {
+        "ticker": "EXPA",
+        "score": 10.63,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 20.73,
+        "mom_1d_pct": 2.62,
+        "mom_5d_pct": 3.96,
+        "mom_20d_pct": 10.68,
+        "above_ma20": true,
+        "vol_ratio_today": 0.53,
+        "breakout_signal": 1.0,
+        "high_20d": 20.73,
+        "low_20d": 18.36,
+        "rsi_14": 88.9,
+        "macd_slope_pos": true
+      }
+    ],
+    "skipped_count": 1,
+    "validation_summary": "Backtested 28 months. Full window: +107.8% CAGR, Sharpe 1.64, -24.9% MaxDD vs market +40.8% / 0.65 / -23.5%. Holdout 10mo OOS: +131% CAGR, Sharpe 2.78, -8.9% MaxDD vs market +50% / 1.32 / -5.6%.",
+    "disclaimer": "Algorithmic ranking for the next ~5 trading days. Not investment advice. The model has positive expected alpha vs a passive EGX weekly buy-hold; individual weeks can still lose. Verify against the EGX official tape before acting."
+  },
+  "exdiv_filtered": [],
+  "v8b_verdicts": [
+    {
+      "ticker": "BIOC",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 37.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "AMOC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 56.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 67.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "CLHO",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 40.0,
+        "quality": 75.0,
+        "momentum": 68.9,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "MICH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 60.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 66.8,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "EGCH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 60.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 67.0,
+        "risk": 50.0
+      }
+    }
+  ],
+  "chairman_per_pick": {
+    "BIOC": {
+      "verdict": "AVOID",
+      "conviction": "high",
+      "edge": -0.32,
+      "rationale": "Bear case dominates on monthly view \u2014 informational only. Does not override W1 short-horizon entries; treat as context.",
+      "deciding_factors": [
+        "sentiment: Recent headlines lean bullish (w=0.08)",
+        "scoring.risk: Risk profile is elevated (vol / drawdown) (w=0.20)",
+        "scoring.momentum: Momentum is broken or trend down (w=0.20)"
+      ],
+      "sentiment_label": "bullish",
+      "sentiment_score": 1.0
+    },
+    "AMOC": {
+      "verdict": "HOLD",
+      "conviction": "low",
+      "edge": 0.247,
+      "rationale": "Bull and bear cases are roughly balanced.",
+      "deciding_factors": [
+        "scoring.momentum: Momentum and trend alignment (w=0.25)",
+        "sentiment: Recent headlines lean bullish (w=0.08)",
+        "scoring.risk: Risk profile is elevated (vol / drawdown) (w=0.08)"
+      ],
+      "sentiment_label": "bullish",
+      "sentiment_score": 1.0
+    },
+    "CLHO": {
+      "verdict": "HOLD",
+      "conviction": "low",
+      "edge": 0.38,
+      "rationale": "Bull and bear cases are roughly balanced.",
+      "deciding_factors": [
+        "scoring.quality: Quality fundamentals (ROE / margin / leverage) (w=0.25)",
+        "scoring.momentum: Momentum and trend alignment (w=0.25)",
+        "scoring.valuation: Valuation is rich vs sector (w=0.20)"
+      ],
+      "sentiment_label": "bullish",
+      "sentiment_score": 0.8
+    },
+    "MICH": {
+      "verdict": "ACCUMULATE",
+      "conviction": "medium",
+      "edge": 0.497,
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "deciding_factors": [
+        "scoring.quality: Quality fundamentals (ROE / margin / leverage) (w=0.25)",
+        "scoring.momentum: Momentum and trend alignment (w=0.25)",
+        "scoring.risk: Risk profile is elevated (vol / drawdown) (w=0.08)"
+      ],
+      "sentiment_label": "bullish",
+      "sentiment_score": 1.0
+    },
+    "EGCH": {
+      "verdict": "ACCUMULATE",
+      "conviction": "medium",
+      "edge": 0.497,
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "deciding_factors": [
+        "scoring.quality: Quality fundamentals (ROE / margin / leverage) (w=0.25)",
+        "scoring.momentum: Momentum and trend alignment (w=0.25)",
+        "scoring.risk: Risk profile is elevated (vol / drawdown) (w=0.08)"
+      ],
+      "sentiment_label": "bullish",
+      "sentiment_score": 0.778
+    }
+  },
+  "divergences": [
+    {
+      "ticker": "BIOC",
+      "v8b": "REDUCE",
+      "chairman": "AVOID",
+      "rationale": "Bear case dominates on monthly view \u2014 informational only. Does not override W1 short-horizon entries; treat as context.",
+      "sentiment": "bullish"
+    },
+    {
+      "ticker": "MICH",
+      "v8b": "HOLD",
+      "chairman": "ACCUMULATE",
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "sentiment": "bullish"
+    },
+    {
+      "ticker": "EGCH",
+      "v8b": "HOLD",
+      "chairman": "ACCUMULATE",
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "sentiment": "bullish"
+    }
+  ],
+  "trade_plans": {
+    "BIOC": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 28.62,
+      "last_close_egp": 28.48,
+      "atr_14": 25.2379,
+      "stop_loss_egp": -22.0,
+      "stop_distance_egp": 50.48,
+      "scale_out_egp": 78.96,
+      "scale_out_shares": 49,
+      "target_egp": 104.19,
+      "runner_shares": 50,
+      "shares": 99,
+      "position_cost_egp": 2819.52,
+      "position_pct_of_nav": 0.56,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-08-12",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 78.96 EGP, sell 49 shares (half) and move stop to breakeven on the rest",
+        "Target: at 104.19 EGP, sell the remaining 50 shares \u2014 OR trail by 1\u00d7ATR (25.2379) on new highs to let it run",
+        "Stop -22.0 EGP hit \u2014 exit immediately",
+        "Time stop 2026-08-12: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": false
+    },
+    "AMOC": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 9.13,
+      "last_close_egp": 9.08,
+      "atr_14": 0.2879,
+      "stop_loss_egp": 8.5,
+      "stop_distance_egp": 0.58,
+      "scale_out_egp": 9.66,
+      "scale_out_shares": 2753,
+      "target_egp": 9.94,
+      "runner_shares": 2753,
+      "shares": 5506,
+      "position_cost_egp": 49994.48,
+      "position_pct_of_nav": 10.0,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-08-12",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 9.66 EGP, sell 2753 shares (half) and move stop to breakeven on the rest",
+        "Target: at 9.94 EGP, sell the remaining 2753 shares \u2014 OR trail by 1\u00d7ATR (0.2879) on new highs to let it run",
+        "Stop 8.5 EGP hit \u2014 exit immediately",
+        "Time stop 2026-08-12: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": true
+    },
+    "CLHO": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 6.64,
+      "last_close_egp": 6.61,
+      "atr_14": 0.7079,
+      "stop_loss_egp": 5.19,
+      "stop_distance_egp": 1.42,
+      "scale_out_egp": 8.03,
+      "scale_out_shares": 1765,
+      "target_egp": 8.73,
+      "runner_shares": 1766,
+      "shares": 3531,
+      "position_cost_egp": 23339.91,
+      "position_pct_of_nav": 4.67,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-08-12",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 8.03 EGP, sell 1765 shares (half) and move stop to breakeven on the rest",
+        "Target: at 8.73 EGP, sell the remaining 1766 shares \u2014 OR trail by 1\u00d7ATR (0.7079) on new highs to let it run",
+        "Stop 5.19 EGP hit \u2014 exit immediately",
+        "Time stop 2026-08-12: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": false
+    },
+    "MICH": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 27.75,
+      "last_close_egp": 27.61,
+      "atr_14": 1.7207,
+      "stop_loss_egp": 24.17,
+      "stop_distance_egp": 3.44,
+      "scale_out_egp": 31.05,
+      "scale_out_shares": 726,
+      "target_egp": 32.77,
+      "runner_shares": 726,
+      "shares": 1452,
+      "position_cost_egp": 40089.72,
+      "position_pct_of_nav": 8.02,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-08-12",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 31.05 EGP, sell 726 shares (half) and move stop to breakeven on the rest",
+        "Target: at 32.77 EGP, sell the remaining 726 shares \u2014 OR trail by 1\u00d7ATR (1.7207) on new highs to let it run",
+        "Stop 24.17 EGP hit \u2014 exit immediately",
+        "Time stop 2026-08-12: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": false
+    },
+    "EGCH": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 8.15,
+      "last_close_egp": 8.11,
+      "atr_14": 0.4079,
+      "stop_loss_egp": 7.29,
+      "stop_distance_egp": 0.82,
+      "scale_out_egp": 8.93,
+      "scale_out_shares": 3064,
+      "target_egp": 9.33,
+      "runner_shares": 3064,
+      "shares": 6128,
+      "position_cost_egp": 49698.08,
+      "position_pct_of_nav": 9.94,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-08-12",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 8.93 EGP, sell 3064 shares (half) and move stop to breakeven on the rest",
+        "Target: at 9.33 EGP, sell the remaining 3064 shares \u2014 OR trail by 1\u00d7ATR (0.4079) on new highs to let it run",
+        "Stop 7.29 EGP hit \u2014 exit immediately",
+        "Time stop 2026-08-12: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": false
+    }
+  },
+  "technicals_per_pick": {
+    "BIOC": {
+      "rsi_14": 93.4963,
+      "macd_minus_signal": 23.4486,
+      "sma_50": 96.7284,
+      "sma_200": null,
+      "atr_14": 25.2379,
+      "atr_pct_of_price": 7.31,
+      "bullets": [
+        "RSI 93 \u2014 overbought",
+        "MACD bullish (+23.449)",
+        "Riding upper Bollinger \u2014 extended",
+        "ATR 25.24 (7.3% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 93.5: overbought",
+        "MACD above signal: bullish momentum",
+        "Price above upper Bollinger Band \u2014 extended"
+      ]
+    },
+    "AMOC": {
+      "rsi_14": 68.2927,
+      "macd_minus_signal": 0.11710000000000001,
+      "sma_50": 8.133,
+      "sma_200": null,
+      "atr_14": 0.2879,
+      "atr_pct_of_price": 3.16,
+      "bullets": [
+        "RSI 68 \u2014 healthy uptrend",
+        "MACD bullish (+0.117)",
+        "ATR 0.29 (3.2% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 68.3: neutral",
+        "MACD above signal: bullish momentum"
+      ]
+    },
+    "CLHO": {
+      "rsi_14": 78.9203,
+      "macd_minus_signal": 0.1149,
+      "sma_50": 16.1332,
+      "sma_200": null,
+      "atr_14": 0.7079,
+      "atr_pct_of_price": 3.86,
+      "bullets": [
+        "RSI 79 \u2014 overbought",
+        "MACD bullish (+0.115)",
+        "Riding upper Bollinger \u2014 extended",
+        "ATR 0.71 (3.9% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 78.9: overbought",
+        "MACD above signal: bullish momentum",
+        "Price above upper Bollinger Band \u2014 extended"
+      ]
+    },
+    "MICH": {
+      "rsi_14": 79.4262,
+      "macd_minus_signal": 0.4548,
+      "sma_50": 37.9584,
+      "sma_200": null,
+      "atr_14": 1.7207,
+      "atr_pct_of_price": 3.81,
+      "bullets": [
+        "RSI 79 \u2014 overbought",
+        "MACD bullish (+0.455)",
+        "Riding upper Bollinger \u2014 extended",
+        "ATR 1.72 (3.8% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 79.4: overbought",
+        "MACD above signal: bullish momentum",
+        "Price above upper Bollinger Band \u2014 extended"
+      ]
+    },
+    "EGCH": {
+      "rsi_14": 68.9655,
+      "macd_minus_signal": 0.11019999999999999,
+      "sma_50": 13.4234,
+      "sma_200": null,
+      "atr_14": 0.4079,
+      "atr_pct_of_price": 2.87,
+      "bullets": [
+        "RSI 69 \u2014 healthy uptrend",
+        "MACD bullish (+0.110)",
+        "Riding upper Bollinger \u2014 extended",
+        "ATR 0.41 (2.9% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 69.0: neutral",
+        "MACD above signal: bullish momentum",
+        "Price above upper Bollinger Band \u2014 extended"
+      ]
+    }
+  },
+  "fundamentals_per_pick": {
+    "BIOC": {
+      "pe_ratio": 8.74,
+      "pb_ratio": 1.19,
+      "roe_pct": 13.67,
+      "profit_margin_pct": null,
+      "debt_to_equity": null,
+      "dividend_yield_pct": null,
+      "bullets": [
+        "P/E 8.7 \u2014 fair",
+        "P/B 1.19",
+        "ROE 13.7% \u2014 adequate"
+      ],
+      "pe_was_corrected": false
+    },
+    "AMOC": {
+      "pe_ratio": 19.74,
+      "pb_ratio": 2.65,
+      "roe_pct": 13.34,
+      "profit_margin_pct": null,
+      "debt_to_equity": null,
+      "dividend_yield_pct": null,
+      "bullets": [
+        "P/E 19.7 \u2014 premium",
+        "P/B 2.65",
+        "ROE 13.3% \u2014 adequate"
+      ],
+      "pe_was_corrected": false
+    },
+    "CLHO": {
+      "pe_ratio": 9.58,
+      "pb_ratio": 2.92,
+      "roe_pct": 30.65,
+      "profit_margin_pct": null,
+      "debt_to_equity": null,
+      "dividend_yield_pct": null,
+      "bullets": [
+        "P/E 9.6 \u2014 fair",
+        "P/B 2.92",
+        "ROE 30.6% \u2014 strong"
+      ],
+      "pe_was_corrected": false
+    },
+    "MICH": {
+      "pe_ratio": 5.35,
+      "pb_ratio": 1.92,
+      "roe_pct": 35.89,
+      "profit_margin_pct": null,
+      "debt_to_equity": null,
+      "dividend_yield_pct": null,
+      "bullets": [
+        "P/E 5.3 \u2014 cheap",
+        "P/B 1.92",
+        "ROE 35.9% \u2014 strong"
+      ],
+      "pe_was_corrected": false
+    },
+    "EGCH": {
+      "pe_ratio": 5.23,
+      "pb_ratio": 1.08,
+      "roe_pct": 20.74,
+      "profit_margin_pct": null,
+      "debt_to_equity": null,
+      "dividend_yield_pct": null,
+      "bullets": [
+        "P/E 5.2 \u2014 cheap",
+        "P/B 1.08",
+        "ROE 20.7% \u2014 strong"
+      ],
+      "pe_was_corrected": false
+    }
+  },
+  "news_per_pick": {
+    "BIOC": {
+      "headlines": [
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u062c\u0644\u0627\u0643\u0633\u0648 \u0633\u0645\u064a\u062b\u0643\u0644\u0627\u064a\u0646 \u062a\u0648\u0636\u062d: \u0627\u062a\u0641\u0627\u0642\u064a\u0629 \u0627\u0644\u0640110 \u0645\u0644\u0627\u064a\u064a\u0646 \u062f\u0648\u0644\u0627\u0631 \u062a\u062e\u0635 \u0627\u0644\u0634\u0631\u0643\u0629 \u0627\u0644\u0639\u0627\u0644\u0645\u064a\u0629",
+          "url": "https://www.mubasher.info/news/4650862/%D8%AC%D9%84%D8%A7%D9%83%D8%B3%D9%88-%D8%B3%D9%85%D9%8A%D8%AB%D9%83%D9%84%D8%A7%D9%8A%D9%86-%D8%AA%D9%88%D8%B6%D8%AD-%D8%A7%D8%AA%D9%81%D8%A7%D9%82%D9%8A%D8%A9-%D8%A7%D9%84%D9%80110-%D9%85%D9%84%D8%A7%D9%8A%D9%8A%D9%86-%D8%AF%D9%88%D9%84%D8%A7%D8%B1-%D8%AA%D8%AE%D8%B5-%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\"\u062c\u0644\u0627\u0643\u0633\u0648 \u0633\u0645\u064a\u062b\u0643\u0644\u0627\u064a\u0646\": \u0644\u0627 \u0645\u0639\u0644\u0648\u0645\u0627\u062a \u062a\u0628\u0631\u0631 \u062a\u062d\u0631\u0643 \u0627\u0644\u0633\u0647\u0645",
+          "url": "https://www.mubasher.info/news/4643202/-%D8%AC%D9%84%D8%A7%D9%83%D8%B3%D9%88-%D8%B3%D9%85%D9%8A%D8%AB%D9%83%D9%84%D8%A7%D9%8A%D9%86-%D9%84%D8%A7-%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA-%D8%AA%D8%A8%D8%B1%D8%B1-%D8%AA%D8%AD%D8%B1%D9%83-%D8%A7%D9%84%D8%B3%D9%87%D9%85/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0633\u0647\u0645 \u062c\u0644\u0627\u0633\u0643\u0648 \u0633\u0645\u064a\u062b\u0643\u0644\u0627\u064a\u0646 \u064a\u062a\u0631\u0642\u0628 \u062a\u0623\u0643\u064a\u062f \u0627\u0633\u062a\u0645\u0631\u0627\u0631 \u0627\u0644\u0632\u062e\u0645 \u0627\u0644\u0625\u064a\u062c\u0627\u0628\u064a",
+          "url": "https://www.mubasher.info/news/4630069/%D8%B3%D9%87%D9%85-%D8%AC%D9%84%D8%A7%D8%B3%D9%83%D9%88-%D8%B3%D9%85%D9%8A%D8%AB%D9%83%D9%84%D8%A7%D9%8A%D9%86-%D9%8A%D8%AA%D8%B1%D9%82%D8%A8-%D8%AA%D8%A3%D9%83%D9%8A%D8%AF-%D8%A7%D8%B3%D8%AA%D9%85%D8%B1%D8%A7%D8%B1-%D8%A7%D9%84%D8%B2%D8%AE%D9%85-%D8%A7%D9%84%D8%A5%D9%8A%D8%AC%D8%A7%D8%A8%D9%8A/",
+          "summary": null,
+          "lang": "ar"
+        }
+      ],
+      "sentiment": {
+        "ticker": "BIOC",
+        "as_of": "2026-08-05T09:31:13.564523Z",
+        "lang_requested": "both",
+        "headline_count": 3,
+        "scored_count": 0,
+        "coverage_pct": 0.0,
+        "aggregate_score": 0.0,
+        "label": "neutral",
+        "bull_signals": [],
+        "bear_signals": [],
+        "headlines": [
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u062c\u0644\u0627\u0643\u0633\u0648 \u0633\u0645\u064a\u062b\u0643\u0644\u0627\u064a\u0646 \u062a\u0648\u0636\u062d: \u0627\u062a\u0641\u0627\u0642\u064a\u0629 \u0627\u0644\u0640110 \u0645\u0644\u0627\u064a\u064a\u0646 \u062f\u0648\u0644\u0627\u0631 \u062a\u062e\u0635 \u0627\u0644\u0634\u0631\u0643\u0629 \u0627\u0644\u0639\u0627\u0644\u0645\u064a\u0629",
+            "url": "https://www.mubasher.info/news/4650862/%D8%AC%D9%84%D8%A7%D9%83%D8%B3%D9%88-%D8%B3%D9%85%D9%8A%D8%AB%D9%83%D9%84%D8%A7%D9%8A%D9%86-%D8%AA%D9%88%D8%B6%D8%AD-%D8%A7%D8%AA%D9%81%D8%A7%D9%82%D9%8A%D8%A9-%D8%A7%D9%84%D9%80110-%D9%85%D9%84%D8%A7%D9%8A%D9%8A%D9%86-%D8%AF%D9%88%D9%84%D8%A7%D8%B1-%D8%AA%D8%AE%D8%B5-%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9/",
+            "score": 0.0,
+            "matches": []
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\"\u062c\u0644\u0627\u0643\u0633\u0648 \u0633\u0645\u064a\u062b\u0643\u0644\u0627\u064a\u0646\": \u0644\u0627 \u0645\u0639\u0644\u0648\u0645\u0627\u062a \u062a\u0628\u0631\u0631 \u062a\u062d\u0631\u0643 \u0627\u0644\u0633\u0647\u0645",
+            "url": "https://www.mubasher.info/news/4643202/-%D8%AC%D9%84%D8%A7%D9%83%D8%B3%D9%88-%D8%B3%D9%85%D9%8A%D8%AB%D9%83%D9%84%D8%A7%D9%8A%D9%86-%D9%84%D8%A7-%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA-%D8%AA%D8%A8%D8%B1%D8%B1-%D8%AA%D8%AD%D8%B1%D9%83-%D8%A7%D9%84%D8%B3%D9%87%D9%85/",
+            "score": 0.0,
+            "matches": []
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0633\u0647\u0645 \u062c\u0644\u0627\u0633\u0643\u0648 \u0633\u0645\u064a\u062b\u0643\u0644\u0627\u064a\u0646 \u064a\u062a\u0631\u0642\u0628 \u062a\u0623\u0643\u064a\u062f \u0627\u0633\u062a\u0645\u0631\u0627\u0631 \u0627\u0644\u0632\u062e\u0645 \u0627\u0644\u0625\u064a\u062c\u0627\u0628\u064a",
+            "url": "https://www.mubasher.info/news/4630069/%D8%B3%D9%87%D9%85-%D8%AC%D9%84%D8%A7%D8%B3%D9%83%D9%88-%D8%B3%D9%85%D9%8A%D8%AB%D9%83%D9%84%D8%A7%D9%8A%D9%86-%D9%8A%D8%AA%D8%B1%D9%82%D8%A8-%D8%AA%D8%A3%D9%83%D9%8A%D8%AF-%D8%A7%D8%B3%D8%AA%D9%85%D8%B1%D8%A7%D8%B1-%D8%A7%D9%84%D8%B2%D8%AE%D9%85-%D8%A7%D9%84%D8%A5%D9%8A%D8%AC%D8%A7%D8%A8%D9%8A/",
+            "score": 0.0,
+            "matches": []
+          }
+        ],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    },
+    "AMOC": {
+      "headlines": [
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0623\u0631\u0628\u0627\u062d \"\u0623\u0645\u0648\u0643\" \u062a\u0642\u0641\u0632 109% \u0625\u0644\u0649 1.9 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644",
+          "url": "https://www.mubasher.info/news/4649332/%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A3%D9%85%D9%88%D9%83-%D8%AA%D9%82%D9%81%D8%B2-109-%D8%A5%D9%84%D9%89-1-9-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AC%D9%86%D9%8A%D9%87-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\"\u0623\u0645\u0648\u0643\" \u062a\u0631\u0641\u0639 \u062a\u0648\u0642\u0639\u0627\u062a \u0623\u0631\u0628\u0627\u062d\u0647\u0627 \u0644\u0639\u0627\u0645 2026 \u0625\u0644\u0649 2.1 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647",
+          "url": "https://www.mubasher.info/news/4633403/-%D8%A3%D9%85%D9%88%D9%83-%D8%AA%D8%B1%D9%81%D8%B9-%D8%AA%D9%88%D9%82%D8%B9%D8%A7%D8%AA-%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD%D9%87%D8%A7-%D9%84%D8%B9%D8%A7%D9%85-2026-%D8%A5%D9%84%D9%89-2-1-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AC%D9%86%D9%8A%D9%87/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0623\u0631\u0628\u0627\u062d \"\u0623\u0645\u0648\u0643\" \u062a\u0646\u0645\u0648 37% \u0644\u062a\u062a\u062c\u0627\u0648\u0632 635 \u0645\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647 \u062e\u0644\u0627\u0644 \u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0623\u0648\u0644",
+          "url": "https://www.mubasher.info/news/4614346/%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A3%D9%85%D9%88%D9%83-%D8%AA%D9%86%D9%85%D9%88-37-%D9%84%D8%AA%D8%AA%D8%AC%D8%A7%D9%88%D8%B2-635-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%AC%D9%86%D9%8A%D9%87-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D8%B1%D8%A8%D8%B9-%D8%A7%D9%84%D8%A3%D9%88%D9%84/",
+          "summary": null,
+          "lang": "ar"
+        }
+      ],
+      "sentiment": {
+        "ticker": "AMOC",
+        "as_of": "2026-08-05T09:31:15.731707Z",
+        "lang_requested": "both",
+        "headline_count": 3,
+        "scored_count": 2,
+        "coverage_pct": 66.7,
+        "aggregate_score": 1.0,
+        "label": "bullish",
+        "bull_signals": [
+          "\u0623\u0631\u0628\u0627\u062d \"\u0623\u0645\u0648\u0643\" \u062a\u0642\u0641\u0632 109% \u0625\u0644\u0649 1.9 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644",
+          "\u0623\u0631\u0628\u0627\u062d \"\u0623\u0645\u0648\u0643\" \u062a\u0646\u0645\u0648 37% \u0644\u062a\u062a\u062c\u0627\u0648\u0632 635 \u0645\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647 \u062e\u0644\u0627\u0644 \u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0623\u0648\u0644"
+        ],
+        "bear_signals": [],
+        "headlines": [
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0623\u0631\u0628\u0627\u062d \"\u0623\u0645\u0648\u0643\" \u062a\u0642\u0641\u0632 109% \u0625\u0644\u0649 1.9 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644",
+            "url": "https://www.mubasher.info/news/4649332/%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A3%D9%85%D9%88%D9%83-%D8%AA%D9%82%D9%81%D8%B2-109-%D8%A5%D9%84%D9%89-1-9-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AC%D9%86%D9%8A%D9%87-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84/",
+            "score": 1.0,
+            "matches": [
+              "+\u0623\u0631\u0628\u0627\u062d"
+            ]
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\"\u0623\u0645\u0648\u0643\" \u062a\u0631\u0641\u0639 \u062a\u0648\u0642\u0639\u0627\u062a \u0623\u0631\u0628\u0627\u062d\u0647\u0627 \u0644\u0639\u0627\u0645 2026 \u0625\u0644\u0649 2.1 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647",
+            "url": "https://www.mubasher.info/news/4633403/-%D8%A3%D9%85%D9%88%D9%83-%D8%AA%D8%B1%D9%81%D8%B9-%D8%AA%D9%88%D9%82%D8%B9%D8%A7%D8%AA-%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD%D9%87%D8%A7-%D9%84%D8%B9%D8%A7%D9%85-2026-%D8%A5%D9%84%D9%89-2-1-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AC%D9%86%D9%8A%D9%87/",
+            "score": 0.0,
+            "matches": []
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0623\u0631\u0628\u0627\u062d \"\u0623\u0645\u0648\u0643\" \u062a\u0646\u0645\u0648 37% \u0644\u062a\u062a\u062c\u0627\u0648\u0632 635 \u0645\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647 \u062e\u0644\u0627\u0644 \u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0623\u0648\u0644",
+            "url": "https://www.mubasher.info/news/4614346/%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A3%D9%85%D9%88%D9%83-%D8%AA%D9%86%D9%85%D9%88-37-%D9%84%D8%AA%D8%AA%D8%AC%D8%A7%D9%88%D8%B2-635-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%AC%D9%86%D9%8A%D9%87-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D8%B1%D8%A8%D8%B9-%D8%A7%D9%84%D8%A3%D9%88%D9%84/",
+            "score": 1.0,
+            "matches": [
+              "+\u0623\u0631\u0628\u0627\u062d"
+            ]
+          }
+        ],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    },
+    "CLHO": {
+      "headlines": [
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0645\u0633\u062a\u0634\u0641\u0649 \u0643\u0644\u064a\u0648\u0628\u0627\u062a\u0631\u0627 \u062a\u062a\u0648\u0642\u0639 \u0646\u0645\u0648 \u0625\u064a\u0631\u0627\u062f\u0627\u062a\u0647\u0627 27% \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2026",
+          "url": "https://www.mubasher.info/news/4647113/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7-%D8%AA%D8%AA%D9%88%D9%82%D8%B9-%D9%86%D9%85%D9%88-%D8%A5%D9%8A%D8%B1%D8%A7%D8%AF%D8%A7%D8%AA%D9%87%D8%A7-27-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-2026/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0627\u0631\u062a\u0641\u0627\u0639 \u0625\u064a\u0631\u0627\u062f\u0627\u062a \u0645\u0633\u062a\u0634\u0641\u0649 \u0643\u0644\u064a\u0648\u0628\u0627\u062a\u0631\u0627 \u0644\u0640 1.97 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647 \u0628\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0623\u0648\u0644.. \u0648\u0627\u0644\u0623\u0631\u0628\u0627\u062d \u062a\u0647\u0628\u0637",
+          "url": "https://www.mubasher.info/news/4622973/%D8%A7%D8%B1%D8%AA%D9%81%D8%A7%D8%B9-%D8%A5%D9%8A%D8%B1%D8%A7%D8%AF%D8%A7%D8%AA-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7-%D9%84%D9%80-1-97-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AC%D9%86%D9%8A%D9%87-%D8%A8%D8%A7%D9%84%D8%B1%D8%A8%D8%B9-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%AA%D9%87%D8%A8%D8%B7/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0639\u0645\u0648\u0645\u064a\u0629 \u0645\u0633\u062a\u0634\u0641\u0649 \u0643\u0644\u064a\u0648\u0628\u0627\u062a\u0631\u0627 \u062a\u0642\u0631 \u062a\u0648\u0632\u064a\u0639 84 \u0645\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647 \u0644\u0644\u0639\u0627\u0645\u0644\u064a\u0646 \u062f\u0648\u0646 \u0627\u0644\u0645\u0633\u0627\u0647\u0645\u064a\u0646",
+          "url": "https://www.mubasher.info/news/4594620/%D8%B9%D9%85%D9%88%D9%85%D9%8A%D8%A9-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7-%D8%AA%D9%82%D8%B1-%D8%AA%D9%88%D8%B2%D9%8A%D8%B9-84-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%AC%D9%86%D9%8A%D9%87-%D9%84%D9%84%D8%B9%D8%A7%D9%85%D9%84%D9%8A%D9%86-%D8%AF%D9%88%D9%86-%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D9%87%D9%85%D9%8A%D9%86/",
+          "summary": null,
+          "lang": "ar"
+        }
+      ],
+      "sentiment": {
+        "ticker": "CLHO",
+        "as_of": "2026-08-05T09:31:17.456763Z",
+        "lang_requested": "both",
+        "headline_count": 3,
+        "scored_count": 3,
+        "coverage_pct": 100.0,
+        "aggregate_score": 1.0,
+        "label": "bullish",
+        "bull_signals": [
+          "\u0645\u0633\u062a\u0634\u0641\u0649 \u0643\u0644\u064a\u0648\u0628\u0627\u062a\u0631\u0627 \u062a\u062a\u0648\u0642\u0639 \u0646\u0645\u0648 \u0625\u064a\u0631\u0627\u062f\u0627\u062a\u0647\u0627 27% \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2026",
+          "\u0627\u0631\u062a\u0641\u0627\u0639 \u0625\u064a\u0631\u0627\u062f\u0627\u062a \u0645\u0633\u062a\u0634\u0641\u0649 \u0643\u0644\u064a\u0648\u0628\u0627\u062a\u0631\u0627 \u0644\u0640 1.97 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647 \u0628\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0623\u0648\u0644.. \u0648\u0627\u0644\u0623\u0631\u0628\u0627\u062d \u062a\u0647\u0628\u0637",
+          "\u0639\u0645\u0648\u0645\u064a\u0629 \u0645\u0633\u062a\u0634\u0641\u0649 \u0643\u0644\u064a\u0648\u0628\u0627\u062a\u0631\u0627 \u062a\u0642\u0631 \u062a\u0648\u0632\u064a\u0639 84 \u0645\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647 \u0644\u0644\u0639\u0627\u0645\u0644\u064a\u0646 \u062f\u0648\u0646 \u0627\u0644\u0645\u0633\u0627\u0647\u0645\u064a\u0646"
+        ],
+        "bear_signals": [],
+        "headlines": [
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0645\u0633\u062a\u0634\u0641\u0649 \u0643\u0644\u064a\u0648\u0628\u0627\u062a\u0631\u0627 \u062a\u062a\u0648\u0642\u0639 \u0646\u0645\u0648 \u0625\u064a\u0631\u0627\u062f\u0627\u062a\u0647\u0627 27% \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2026",
+            "url": "https://www.mubasher.info/news/4647113/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7-%D8%AA%D8%AA%D9%88%D9%82%D8%B9-%D9%86%D9%85%D9%88-%D8%A5%D9%8A%D8%B1%D8%A7%D8%AF%D8%A7%D8%AA%D9%87%D8%A7-27-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-2026/",
+            "score": 1.0,
+            "matches": [
+              "+\u0646\u0645\u0648"
+            ]
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0627\u0631\u062a\u0641\u0627\u0639 \u0625\u064a\u0631\u0627\u062f\u0627\u062a \u0645\u0633\u062a\u0634\u0641\u0649 \u0643\u0644\u064a\u0648\u0628\u0627\u062a\u0631\u0627 \u0644\u0640 1.97 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647 \u0628\u0627\u0644\u0631\u0628\u0639 \u0627\u0644\u0623\u0648\u0644.. \u0648\u0627\u0644\u0623\u0631\u0628\u0627\u062d \u062a\u0647\u0628\u0637",
+            "url": "https://www.mubasher.info/news/4622973/%D8%A7%D8%B1%D8%AA%D9%81%D8%A7%D8%B9-%D8%A5%D9%8A%D8%B1%D8%A7%D8%AF%D8%A7%D8%AA-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7-%D9%84%D9%80-1-97-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AC%D9%86%D9%8A%D9%87-%D8%A8%D8%A7%D9%84%D8%B1%D8%A8%D8%B9-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%88%D8%A7%D9%84%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%AA%D9%87%D8%A8%D8%B7/",
+            "score": 1.0,
+            "matches": [
+              "+\u0627\u0631\u062a\u0641\u0627\u0639"
+            ]
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0639\u0645\u0648\u0645\u064a\u0629 \u0645\u0633\u062a\u0634\u0641\u0649 \u0643\u0644\u064a\u0648\u0628\u0627\u062a\u0631\u0627 \u062a\u0642\u0631 \u062a\u0648\u0632\u064a\u0639 84 \u0645\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647 \u0644\u0644\u0639\u0627\u0645\u0644\u064a\u0646 \u062f\u0648\u0646 \u0627\u0644\u0645\u0633\u0627\u0647\u0645\u064a\u0646",
+            "url": "https://www.mubasher.info/news/4594620/%D8%B9%D9%85%D9%88%D9%85%D9%8A%D8%A9-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%83%D9%84%D9%8A%D9%88%D8%A8%D8%A7%D8%AA%D8%B1%D8%A7-%D8%AA%D9%82%D8%B1-%D8%AA%D9%88%D8%B2%D9%8A%D8%B9-84-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%AC%D9%86%D9%8A%D9%87-%D9%84%D9%84%D8%B9%D8%A7%D9%85%D9%84%D9%8A%D9%86-%D8%AF%D9%88%D9%86-%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D9%87%D9%85%D9%8A%D9%86/",
+            "score": 1.0,
+            "matches": [
+              "+\u062a\u0648\u0632\u064a\u0639"
+            ]
+          }
+        ],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    },
+    "MICH": {
+      "headlines": [
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0627\u0646\u062e\u0641\u0627\u0636 \u0623\u0631\u0628\u0627\u062d \u0645\u0635\u0631 \u0644\u0635\u0646\u0627\u0639\u0629 \u0627\u0644\u0643\u064a\u0645\u0627\u0648\u064a\u0627\u062a 9% \u062e\u0644\u0627\u0644 2025-2026 \u0628\u0636\u063a\u0637 \u0645\u0646 \u062a\u0643\u0644\u0641\u0629 \u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a",
+          "url": "https://www.mubasher.info/news/4646592/%D8%A7%D9%86%D8%AE%D9%81%D8%A7%D8%B6-%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D9%85%D8%B5%D8%B1-%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9-%D8%A7%D9%84%D9%83%D9%8A%D9%85%D8%A7%D9%88%D9%8A%D8%A7%D8%AA-9-%D8%AE%D9%84%D8%A7%D9%84-2025-2026-%D8%A8%D8%B6%D8%BA%D8%B7-%D9%85%D9%86-%D8%AA%D9%83%D9%84%D9%81%D8%A9-%D8%A7%D9%84%D9%85%D8%A8%D9%8A%D8%B9%D8%A7%D8%AA/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0645\u0635\u0631 \u0644\u0635\u0646\u0627\u0639\u0629 \u0627\u0644\u0643\u064a\u0645\u0627\u0648\u064a\u0627\u062a \u062a\u0633\u062c\u0644 496.9 \u0645\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647 \u0623\u0631\u0628\u0627\u062d\u0627\u064b \u062e\u0644\u0627\u0644 11 \u0634\u0647\u0631\u0627\u064b",
+          "url": "https://www.mubasher.info/news/4632869/%D9%85%D8%B5%D8%B1-%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9-%D8%A7%D9%84%D9%83%D9%8A%D9%85%D8%A7%D9%88%D9%8A%D8%A7%D8%AA-%D8%AA%D8%B3%D8%AC%D9%84-496-9-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%AC%D9%86%D9%8A%D9%87-%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD%D8%A7-%D8%AE%D9%84%D8%A7%D9%84-11-%D8%B4%D9%87%D8%B1%D8%A7-/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0645\u0635\u0631 \u0644\u0635\u0646\u0627\u0639\u0629 \u0627\u0644\u0643\u064a\u0645\u0627\u0648\u064a\u0627\u062a \u062a\u0637\u0644\u0642 \u0645\u0634\u0631\u0648\u0639\u0627\u064b \u0644\u062a\u0623\u0647\u064a\u0644 5 \u0648\u062d\u062f\u0627\u062a \u0625\u0646\u062a\u0627\u062c\u064a\u0629",
+          "url": "https://www.mubasher.info/news/4623010/%D9%85%D8%B5%D8%B1-%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9-%D8%A7%D9%84%D9%83%D9%8A%D9%85%D8%A7%D9%88%D9%8A%D8%A7%D8%AA-%D8%AA%D8%B7%D9%84%D9%82-%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D8%A7-%D9%84%D8%AA%D8%A3%D9%87%D9%8A%D9%84-5-%D9%88%D8%AD%D8%AF%D8%A7%D8%AA-%D8%A5%D9%86%D8%AA%D8%A7%D8%AC%D9%8A%D8%A9/",
+          "summary": null,
+          "lang": "ar"
+        }
+      ],
+      "sentiment": {
+        "ticker": "MICH",
+        "as_of": "2026-08-05T09:31:19.987117Z",
+        "lang_requested": "both",
+        "headline_count": 3,
+        "scored_count": 1,
+        "coverage_pct": 33.3,
+        "aggregate_score": 1.0,
+        "label": "bullish",
+        "bull_signals": [
+          "\u0645\u0635\u0631 \u0644\u0635\u0646\u0627\u0639\u0629 \u0627\u0644\u0643\u064a\u0645\u0627\u0648\u064a\u0627\u062a \u062a\u0633\u062c\u0644 496.9 \u0645\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647 \u0623\u0631\u0628\u0627\u062d\u0627\u064b \u062e\u0644\u0627\u0644 11 \u0634\u0647\u0631\u0627\u064b"
+        ],
+        "bear_signals": [],
+        "headlines": [
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0627\u0646\u062e\u0641\u0627\u0636 \u0623\u0631\u0628\u0627\u062d \u0645\u0635\u0631 \u0644\u0635\u0646\u0627\u0639\u0629 \u0627\u0644\u0643\u064a\u0645\u0627\u0648\u064a\u0627\u062a 9% \u062e\u0644\u0627\u0644 2025-2026 \u0628\u0636\u063a\u0637 \u0645\u0646 \u062a\u0643\u0644\u0641\u0629 \u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a",
+            "url": "https://www.mubasher.info/news/4646592/%D8%A7%D9%86%D8%AE%D9%81%D8%A7%D8%B6-%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D9%85%D8%B5%D8%B1-%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9-%D8%A7%D9%84%D9%83%D9%8A%D9%85%D8%A7%D9%88%D9%8A%D8%A7%D8%AA-9-%D8%AE%D9%84%D8%A7%D9%84-2025-2026-%D8%A8%D8%B6%D8%BA%D8%B7-%D9%85%D9%86-%D8%AA%D9%83%D9%84%D9%81%D8%A9-%D8%A7%D9%84%D9%85%D8%A8%D9%8A%D8%B9%D8%A7%D8%AA/",
+            "score": 0.0,
+            "matches": [
+              "-\u0627\u0646\u062e\u0641\u0627\u0636",
+              "+\u0623\u0631\u0628\u0627\u062d"
+            ]
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0645\u0635\u0631 \u0644\u0635\u0646\u0627\u0639\u0629 \u0627\u0644\u0643\u064a\u0645\u0627\u0648\u064a\u0627\u062a \u062a\u0633\u062c\u0644 496.9 \u0645\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647 \u0623\u0631\u0628\u0627\u062d\u0627\u064b \u062e\u0644\u0627\u0644 11 \u0634\u0647\u0631\u0627\u064b",
+            "url": "https://www.mubasher.info/news/4632869/%D9%85%D8%B5%D8%B1-%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9-%D8%A7%D9%84%D9%83%D9%8A%D9%85%D8%A7%D9%88%D9%8A%D8%A7%D8%AA-%D8%AA%D8%B3%D8%AC%D9%84-496-9-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%AC%D9%86%D9%8A%D9%87-%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD%D8%A7-%D8%AE%D9%84%D8%A7%D9%84-11-%D8%B4%D9%87%D8%B1%D8%A7-/",
+            "score": 1.0,
+            "matches": [
+              "+\u0623\u0631\u0628\u0627\u062d\u0627\u064b"
+            ]
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0645\u0635\u0631 \u0644\u0635\u0646\u0627\u0639\u0629 \u0627\u0644\u0643\u064a\u0645\u0627\u0648\u064a\u0627\u062a \u062a\u0637\u0644\u0642 \u0645\u0634\u0631\u0648\u0639\u0627\u064b \u0644\u062a\u0623\u0647\u064a\u0644 5 \u0648\u062d\u062f\u0627\u062a \u0625\u0646\u062a\u0627\u062c\u064a\u0629",
+            "url": "https://www.mubasher.info/news/4623010/%D9%85%D8%B5%D8%B1-%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9-%D8%A7%D9%84%D9%83%D9%8A%D9%85%D8%A7%D9%88%D9%8A%D8%A7%D8%AA-%D8%AA%D8%B7%D9%84%D9%82-%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D8%A7-%D9%84%D8%AA%D8%A3%D9%87%D9%8A%D9%84-5-%D9%88%D8%AD%D8%AF%D8%A7%D8%AA-%D8%A5%D9%86%D8%AA%D8%A7%D8%AC%D9%8A%D8%A9/",
+            "score": 0.0,
+            "matches": []
+          }
+        ],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    },
+    "EGCH": {
+      "headlines": [
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0633\u0647\u0645 \u0643\u064a\u0645\u0627 \u064a\u062e\u062a\u0628\u0631 \u0645\u0646\u0637\u0642\u0629 \u062f\u0639\u0645 \u0645\u062d\u0648\u0631\u064a\u0629 \u0648\u0633\u0637 \u062a\u0631\u0627\u062c\u0639 \u0627\u0644\u0632\u062e\u0645 \u0627\u0644\u0634\u0631\u0627\u0626\u064a",
+          "url": "https://www.mubasher.info/news/4625571/%D8%B3%D9%87%D9%85-%D9%83%D9%8A%D9%85%D8%A7-%D9%8A%D8%AE%D8%AA%D8%A8%D8%B1-%D9%85%D9%86%D8%B7%D9%82%D8%A9-%D8%AF%D8%B9%D9%85-%D9%85%D8%AD%D9%88%D8%B1%D9%8A%D8%A9-%D9%88%D8%B3%D8%B7-%D8%AA%D8%B1%D8%A7%D8%AC%D8%B9-%D8%A7%D9%84%D8%B2%D8%AE%D9%85-%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A6%D9%8A/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0623\u064a\u0646 \u0623\u0646\u0641\u0642\u062a \"\u0643\u064a\u0645\u0627\" 2.59 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647 \u0645\u0646 \u0645\u062a\u062d\u0635\u0644\u0627\u062a \u0632\u064a\u0627\u062f\u0629 \u0631\u0623\u0633 \u0627\u0644\u0645\u0627\u0644\u061f",
+          "url": "https://www.mubasher.info/news/4617535/%D8%A3%D9%8A%D9%86-%D8%A3%D9%86%D9%81%D9%82%D8%AA-%D9%83%D9%8A%D9%85%D8%A7-2-59-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AC%D9%86%D9%8A%D9%87-%D9%85%D9%86-%D9%85%D8%AA%D8%AD%D8%B5%D9%84%D8%A7%D8%AA-%D8%B2%D9%8A%D8%A7%D8%AF%D8%A9-%D8%B1%D8%A3%D8%B3-%D8%A7%D9%84%D9%85%D8%A7%D9%84-/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0628\u0633\u0628\u0628 \u0641\u0631\u0648\u0642 \u0627\u0644\u0639\u0645\u0644\u0629.. \u0623\u0631\u0628\u0627\u062d \"\u0643\u064a\u0645\u0627\" \u062a\u062a\u0631\u0627\u062c\u0639 34.5% \u062e\u0644\u0627\u0644 9 \u0623\u0634\u0647\u0631",
+          "url": "https://www.mubasher.info/news/4605446/%D8%A8%D8%B3%D8%A8%D8%A8-%D9%81%D8%B1%D9%88%D9%82-%D8%A7%D9%84%D8%B9%D9%85%D9%84%D8%A9-%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D9%83%D9%8A%D9%85%D8%A7-%D8%AA%D8%AA%D8%B1%D8%A7%D8%AC%D8%B9-34-5-%D8%AE%D9%84%D8%A7%D9%84-9-%D8%A3%D8%B4%D9%87%D8%B1/",
+          "summary": null,
+          "lang": "ar"
+        }
+      ],
+      "sentiment": {
+        "ticker": "EGCH",
+        "as_of": "2026-08-05T09:31:22.497425Z",
+        "lang_requested": "both",
+        "headline_count": 3,
+        "scored_count": 3,
+        "coverage_pct": 100.0,
+        "aggregate_score": 0.333,
+        "label": "mildly_bullish",
+        "bull_signals": [
+          "\u0623\u064a\u0646 \u0623\u0646\u0641\u0642\u062a \"\u0643\u064a\u0645\u0627\" 2.59 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647 \u0645\u0646 \u0645\u062a\u062d\u0635\u0644\u0627\u062a \u0632\u064a\u0627\u062f\u0629 \u0631\u0623\u0633 \u0627\u0644\u0645\u0627\u0644\u061f",
+          "\u0628\u0633\u0628\u0628 \u0641\u0631\u0648\u0642 \u0627\u0644\u0639\u0645\u0644\u0629.. \u0623\u0631\u0628\u0627\u062d \"\u0643\u064a\u0645\u0627\" \u062a\u062a\u0631\u0627\u062c\u0639 34.5% \u062e\u0644\u0627\u0644 9 \u0623\u0634\u0647\u0631"
+        ],
+        "bear_signals": [
+          "\u0633\u0647\u0645 \u0643\u064a\u0645\u0627 \u064a\u062e\u062a\u0628\u0631 \u0645\u0646\u0637\u0642\u0629 \u062f\u0639\u0645 \u0645\u062d\u0648\u0631\u064a\u0629 \u0648\u0633\u0637 \u062a\u0631\u0627\u062c\u0639 \u0627\u0644\u0632\u062e\u0645 \u0627\u0644\u0634\u0631\u0627\u0626\u064a"
+        ],
+        "headlines": [
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0633\u0647\u0645 \u0643\u064a\u0645\u0627 \u064a\u062e\u062a\u0628\u0631 \u0645\u0646\u0637\u0642\u0629 \u062f\u0639\u0645 \u0645\u062d\u0648\u0631\u064a\u0629 \u0648\u0633\u0637 \u062a\u0631\u0627\u062c\u0639 \u0627\u0644\u0632\u062e\u0645 \u0627\u0644\u0634\u0631\u0627\u0626\u064a",
+            "url": "https://www.mubasher.info/news/4625571/%D8%B3%D9%87%D9%85-%D9%83%D9%8A%D9%85%D8%A7-%D9%8A%D8%AE%D8%AA%D8%A8%D8%B1-%D9%85%D9%86%D8%B7%D9%82%D8%A9-%D8%AF%D8%B9%D9%85-%D9%85%D8%AD%D9%88%D8%B1%D9%8A%D8%A9-%D9%88%D8%B3%D8%B7-%D8%AA%D8%B1%D8%A7%D8%AC%D8%B9-%D8%A7%D9%84%D8%B2%D8%AE%D9%85-%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D8%A6%D9%8A/",
+            "score": -1.0,
+            "matches": [
+              "-\u062a\u0631\u0627\u062c\u0639"
+            ]
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0623\u064a\u0646 \u0623\u0646\u0641\u0642\u062a \"\u0643\u064a\u0645\u0627\" 2.59 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647 \u0645\u0646 \u0645\u062a\u062d\u0635\u0644\u0627\u062a \u0632\u064a\u0627\u062f\u0629 \u0631\u0623\u0633 \u0627\u0644\u0645\u0627\u0644\u061f",
+            "url": "https://www.mubasher.info/news/4617535/%D8%A3%D9%8A%D9%86-%D8%A3%D9%86%D9%81%D9%82%D8%AA-%D9%83%D9%8A%D9%85%D8%A7-2-59-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AC%D9%86%D9%8A%D9%87-%D9%85%D9%86-%D9%85%D8%AA%D8%AD%D8%B5%D9%84%D8%A7%D8%AA-%D8%B2%D9%8A%D8%A7%D8%AF%D8%A9-%D8%B1%D8%A3%D8%B3-%D8%A7%D9%84%D9%85%D8%A7%D9%84-/",
+            "score": 1.0,
+            "matches": [
+              "+\u0632\u064a\u0627\u062f\u0629"
+            ]
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0628\u0633\u0628\u0628 \u0641\u0631\u0648\u0642 \u0627\u0644\u0639\u0645\u0644\u0629.. \u0623\u0631\u0628\u0627\u062d \"\u0643\u064a\u0645\u0627\" \u062a\u062a\u0631\u0627\u062c\u0639 34.5% \u062e\u0644\u0627\u0644 9 \u0623\u0634\u0647\u0631",
+            "url": "https://www.mubasher.info/news/4605446/%D8%A8%D8%B3%D8%A8%D8%A8-%D9%81%D8%B1%D9%88%D9%82-%D8%A7%D9%84%D8%B9%D9%85%D9%84%D8%A9-%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D9%83%D9%8A%D9%85%D8%A7-%D8%AA%D8%AA%D8%B1%D8%A7%D8%AC%D8%B9-34-5-%D8%AE%D9%84%D8%A7%D9%84-9-%D8%A3%D8%B4%D9%87%D8%B1/",
+            "score": 1.0,
+            "matches": [
+              "+\u0623\u0631\u0628\u0627\u062d"
+            ]
+          }
+        ],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    }
+  },
+  "market_news": {
+    "headlines": [
+      {
+        "date": null,
+        "source": "Daily News Egypt",
+        "title": "Gypto Pharma, Djibouti\u2019s Bacha Group sign MoU to expand Egyptian pharmaceutical exports to East Africa",
+        "url": "https://www.dailynewsegypt.com/2026/08/04/gypto-pharma-djiboutis-bacha-group-sign-mou-to-expand-egyptian-pharmaceutical-exports-to-east-africa/",
+        "summary": null,
+        "lang": "en",
+        "matched_tickers": [],
+        "matched_sectors": [
+          "Healthcare"
+        ],
+        "impact_level": "sector"
+      }
+    ],
+    "raw_headline_count": 23,
+    "filtered_headline_count": 1,
+    "filter_basis": "watchlist",
+    "filter_target_tickers": [
+      "BIOC",
+      "AMOC",
+      "CLHO",
+      "MICH",
+      "EGCH"
+    ],
+    "sentiment": {
+      "label": "bullish",
+      "aggregate_score": 1.0,
+      "headline_count": 1,
+      "method": "lexicon scored over portfolio-filtered headlines"
+    },
+    "filter_method": "Direct ticker-name match wins. Sector keyword match falls back to 'sector' impact level. Macro headlines (CBE, EGP, rates) are not included by default \u2014 they affect everyone."
+  },
+  "trade_plan_params": {
+    "portfolio_nav_egp": 500000.0,
+    "risk_pct_per_trade": 1.0,
+    "atr_stop_multiple": 2.0,
+    "expected_hold_days": 5
+  },
+  "catalysts": [],
+  "portfolio": {
+    "error": "Portfolio CSV not found at /home/runner/egx_portfolio.csv.",
+    "hint": "Create a CSV with columns ticker,shares,cost_basis at /home/runner/egx_portfolio.csv, set $EGX_PORTFOLIO_CSV, or pass csv_path explicitly. Example row: CIRA,500,12.50"
+  },
+  "market_ytd_pct": 38.02631643519515,
+  "market_label": "Market YTD (13-name liquid basket EW): +38.03%"
+}

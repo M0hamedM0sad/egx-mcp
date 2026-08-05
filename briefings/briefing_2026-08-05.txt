@@ -1,0 +1,91 @@
+=== EGX PRE-MARKET BRIEFING — Wednesday 2026-08-05 11:29 ===
+
+--- MACRO ---
+  EGX 30:  54,754 pts (—)
+  USD/EGP: 49.75 (-0.76%)
+  Brent:   $80.18 (+2.32%)
+  Gold 24K: 6,750.05 EGP/g  |  21K: 5,906.29  |  18K: 5,062.54
+  Egyptian gold pound: 47,250 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 42) ---
+  1. BIOC   score=169.13  price=28.48  5d=+141.8% RSI=94  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  2. AMOC   score=19.96  price=9.08  5d=+9.6% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMOC/
+  3. CLHO   score=18.96  price=6.61  5d=+9.1% RSI=79  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CLHO/
+  4. MICH   score=17.65  price=27.61  5d=+10.2% RSI=79  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MICH/
+  5. EGCH   score=17.25  price=8.11  5d=+8.8% RSI=69  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EGCH/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  BIOC: ENTRY 28.62 | STOP -22.0 | SCALE-OUT 78.96 (49 sh) | TARGET 104.19 (50 sh) | 99 total (0.56% NAV) | R:R 1:1.5 | time stop 2026-08-12
+  AMOC: ENTRY 9.13 | STOP 8.5 | SCALE-OUT 9.66 (2753 sh) | TARGET 9.94 (2753 sh) | 5506 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-08-12
+  CLHO: ENTRY 6.64 | STOP 5.19 | SCALE-OUT 8.03 (1765 sh) | TARGET 8.73 (1766 sh) | 3531 total (4.67% NAV) | R:R 1:1.5 | time stop 2026-08-12
+  MICH: ENTRY 27.75 | STOP 24.17 | SCALE-OUT 31.05 (726 sh) | TARGET 32.77 (726 sh) | 1452 total (8.02% NAV) | R:R 1:1.5 | time stop 2026-08-12
+  EGCH: ENTRY 8.15 | STOP 7.29 | SCALE-OUT 8.93 (3064 sh) | TARGET 9.33 (3064 sh) | 6128 total (9.94% NAV) | R:R 1:1.5 | time stop 2026-08-12
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  AMOC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CLHO   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MICH   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  EGCH   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    BIOC: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+    MICH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    EGCH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  BIOC:
+    Technicals:    RSI 93 — overbought; MACD bullish (+23.449); Riding upper Bollinger — extended; ATR 25.24 (7.3% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - جلاكسو سميثكلاين توضح: اتفاقية الـ110 ملايين دولار تخص الشركة العالمية [Mubasher]
+      - "جلاكسو سميثكلاين": لا معلومات تبرر تحرك السهم [Mubasher]
+  AMOC:
+    Technicals:    RSI 68 — healthy uptrend; MACD bullish (+0.117); ATR 0.29 (3.2% of px) — sizing input
+    Fundamentals:  P/E 19.7 — premium; P/B 2.65; ROE 13.3% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "أموك" تقفز 109% إلى 1.9 مليار جنيه خلال النصف الأول [Mubasher]
+      - "أموك" ترفع توقعات أرباحها لعام 2026 إلى 2.1 مليار جنيه [Mubasher]
+  CLHO:
+    Technicals:    RSI 79 — overbought; MACD bullish (+0.115); Riding upper Bollinger — extended; ATR 0.71 (3.9% of px) — sizing input
+    Fundamentals:  P/E 9.6 — fair; P/B 2.92; ROE 30.6% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - مستشفى كليوباترا تتوقع نمو إيراداتها 27% خلال النصف الأول من 2026 [Mubasher]
+      - ارتفاع إيرادات مستشفى كليوباترا لـ 1.97 مليار جنيه بالربع الأول.. والأرباح تهبط [Mubasher]
+  MICH:
+    Technicals:    RSI 79 — overbought; MACD bullish (+0.455); Riding upper Bollinger — extended; ATR 1.72 (3.8% of px) — sizing input
+    Fundamentals:  P/E 5.3 — cheap; P/B 1.92; ROE 35.9% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - انخفاض أرباح مصر لصناعة الكيماويات 9% خلال 2025-2026 بضغط من تكلفة المبيعات [Mubasher]
+      - مصر لصناعة الكيماويات تسجل 496.9 مليون جنيه أرباحاً خلال 11 شهراً [Mubasher]
+  EGCH:
+    Technicals:    RSI 69 — healthy uptrend; MACD bullish (+0.110); Riding upper Bollinger — extended; ATR 0.41 (2.9% of px) — sizing input
+    Fundamentals:  P/E 5.2 — cheap; P/B 1.08; ROE 20.7% — strong
+    News tone:     mildly_bullish (+0.33, 3 hdl)
+      - سهم كيما يختبر منطقة دعم محورية وسط تراجع الزخم الشرائي [Mubasher]
+      - أين أنفقت "كيما" 2.59 مليار جنيه من متحصلات زيادة رأس المال؟ [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: BIOC, AMOC, CLHO, MICH, EGCH
+  Filtered: kept 1 of 23 headlines.
+  Tone: bullish (score +1.00)
+  [sector:Healthcare] Gypto Pharma, Djibouti’s Bacha Group sign MoU to expand Egyptian pharmaceutical exports to East Afri — Daily News Egypt
+
+Disclaimer: Research only, not investment advice.
