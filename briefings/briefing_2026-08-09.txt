@@ -1,0 +1,92 @@
+=== EGX PRE-MARKET BRIEFING — Sunday 2026-08-09 09:43 ===
+
+--- MACRO ---
+  EGX 30:  54,677 pts (—)
+  USD/EGP: 49.74 (+0.20%)
+  Brent:   $83.55 (+0.12%)
+  Gold 24K: 7,035.90 EGP/g  |  21K: 6,156.42  |  18K: 5,276.93
+  Egyptian gold pound: 49,251 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 41) ---
+  1. BIOC   score=75.06  price=28.48  5d=+65.9% RSI=80  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  2. MICH   score=33.17  price=27.61  5d=+22.3% RSI=84  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MICH/
+  3. OFH    score=29.29  price=0.336  5d=+19.1% RSI=76  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OFH/
+  4. MTIE   score=28.22  price=8.75  5d=+17.0% RSI=85  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MTIE/
+  5. CSAG   score=27.93  price=19.05  5d=+16.4% RSI=66  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CSAG/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  BIOC: ENTRY 28.62 | STOP -78.89 | SCALE-OUT 135.85 (23 sh) | TARGET 189.54 (23 sh) | 46 total (0.26% NAV) | R:R 1:1.5 | time stop 2026-08-16
+  MICH: ENTRY 27.75 | STOP 22.62 | SCALE-OUT 32.6 (500 sh) | TARGET 35.1 (501 sh) | 1001 total (5.53% NAV) | R:R 1:1.5 | time stop 2026-08-16
+  OFH: ENTRY 0.34 | STOP 0.28 | SCALE-OUT 0.39 (45620 sh) | TARGET 0.42 (45620 sh) | 91240 total (6.13% NAV) | R:R 1:1.5 | time stop 2026-08-16
+  MTIE: ENTRY 8.79 | STOP 8.17 | SCALE-OUT 9.33 (2857 sh) | TARGET 9.61 (2857 sh) | 5714 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-08-16
+  CSAG: ENTRY 19.15 | STOP 17.1 | SCALE-OUT 21.0 (1284 sh) | TARGET 21.97 (1285 sh) | 2569 total (9.79% NAV) | R:R 1:1.5 | time stop 2026-08-16
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  MICH   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  OFH    FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: mildly_bullish
+  MTIE   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  CSAG   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    MICH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    OFH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    MTIE: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    CSAG: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  BIOC:
+    Technicals:    RSI 79 — overbought; MACD bullish (+26.902); Riding upper Bollinger — extended; ATR 53.69 (13.5% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - جلاكسو سميثكلاين توضح: اتفاقية الـ110 ملايين دولار تخص الشركة العالمية [Mubasher]
+      - "جلاكسو سميثكلاين": لا معلومات تبرر تحرك السهم [Mubasher]
+  MICH:
+    Technicals:    RSI 84 — overbought; MACD bullish (+1.032); Riding upper Bollinger — extended; ATR 2.50 (5.1% of px) — sizing input
+    Fundamentals:  P/E 5.3 — cheap; P/B 1.92; ROE 35.9% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - انخفاض أرباح مصر لصناعة الكيماويات 9% خلال 2025-2026 بضغط من تكلفة المبيعات [Mubasher]
+      - مصر لصناعة الكيماويات تسجل 496.9 مليون جنيه أرباحاً خلال 11 شهراً [Mubasher]
+  OFH:
+    Technicals:    RSI 75 — overbought; MACD bullish (+0.010); Riding upper Bollinger — extended; ATR 0.03 (3.3% of px) — sizing input
+    Fundamentals:  P/B 0.53; ROE 80.6% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - "أو بي المالية القابضة" تتحول للربحية بـ 106.7 مليون جنيه خلال الربع الأول [Mubasher]
+      - سهم أوراسكوم المالية القابضة يقترب من تأكيد اختراق نموذج إيجابي [Mubasher]
+  MTIE:
+    Technicals:    RSI 85 — overbought; MACD bullish (+0.147); Riding upper Bollinger — extended; ATR 0.29 (2.6% of px) — sizing input
+    Fundamentals:  P/E 14.1 — fair; P/B 3.69; ROE 26.2% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - البورصة توافق على قيد أسهم زيادة رأسمال "إم إم جروب" [Mubasher]
+      - "إم إم جروب" تعلن نهاية حق وموعد توزيع الأسهم المجانية [Mubasher]
+  CSAG:
+    Technicals:    RSI 66 — healthy uptrend; MACD bullish (+0.336); Riding upper Bollinger — extended; ATR 0.97 (2.6% of px) — sizing input
+    Fundamentals:  P/E 1.6 — cheap; P/B 3.68; ROE 223.4% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح القناة للتوكيلات الملاحية ترتفع 21% خلال 9 أشهر [Mubasher]
+      - عمومية "القناة للتوكيلات" تُقر الموازنة التقديرية وتوافق على تأسيس شركة جديدة [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: BIOC, MICH, OFH, MTIE, CSAG
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
