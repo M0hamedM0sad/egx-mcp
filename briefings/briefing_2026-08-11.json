@@ -1,0 +1,324 @@
+{
+  "as_of_utc": "2026-08-11T08:02:24.088956Z",
+  "cairo_local": "Tuesday 2026-08-11 10:02",
+  "is_trading_day": true,
+  "macro": {
+    "as_of": "2026-08-11T08:02:25.313005Z",
+    "egp_usd": {
+      "value": 50.26,
+      "change_pct": 0.86
+    },
+    "brent_usd": {
+      "value": 89.63,
+      "change_pct": 2.22
+    },
+    "gold_usd": {
+      "value": 4420.2002,
+      "change_pct": -1.27
+    },
+    "cbe_rates": {
+      "deposit_rate_pct": null,
+      "lending_rate_pct": null,
+      "midpoint_pct": null,
+      "source": "https://www.cbe.org.eg/en/economic-research/statistics/cbe-rates"
+    },
+    "regime_flags": [
+      "Brent rallying \u2014 supports petrochems, pressures industrial margins"
+    ],
+    "note": "EGP/USD and Brent from Yahoo (delayed). CBE rates scraped \u2014 verify against cbe.org.eg before acting on rate-sensitive trades."
+  },
+  "egx30_spot": {
+    "value": 54916.9,
+    "change_pct": null,
+    "source": "tradingview.com",
+    "chart_url": "https://www.tradingview.com/symbols/EGX-EGX30/"
+  },
+  "egx70_spot": {
+    "error": "EGX 70 unavailable from any source today",
+    "source": "yfinance (failed)"
+  },
+  "egx_index_sources": [
+    "tradingview.com (EGX 30)"
+  ],
+  "gold_egp": {
+    "as_of": "2026-08-11T08:02:26.439431Z",
+    "gold_oz_usd": 4420.2,
+    "usdegp": 50.26,
+    "egp_per_gram_24k": 7142.59,
+    "egp_per_gram_21k": 6249.76,
+    "egp_per_gram_18k": 5356.94,
+    "egyptian_gold_pound_egp": 49998.1,
+    "method": "Computed from international spot: (USD/oz \u00d7 USDEGP) / 31.1035 for 24K, then \u00d7 21/24 and 18/24 for the standard alloys. Local dealer prices typically 5-15% above this \u2014 verify against sigma-egy / iSagha before acting.",
+    "note": "Egyptian gold pound (\u0627\u0644\u062c\u0646\u064a\u0647 \u0627\u0644\u0630\u0647\u0628) = 8g of 21K gold by convention \u2014 that's the math here, regardless of any local premium for handmade pieces."
+  },
+  "regime": {
+    "regime": "BULL",
+    "description": "Trending higher with manageable vol \u2014 momentum names lead.",
+    "weight_override": {
+      "valuation": 0.8,
+      "quality": 0.9,
+      "momentum": 1.4,
+      "risk": 0.9
+    },
+    "metrics": {
+      "egx30_last": 175.59,
+      "ret_60d_pct": 5.76,
+      "annualized_vol_pct": 18.09,
+      "sma_200": 142.38,
+      "above_ma200": true,
+      "drawdown_1y_pct": 0.0
+    },
+    "source_symbol": "synthetic_basket(13_names)",
+    "as_of": "2026-08-11T08:02:28.864032Z"
+  },
+  "rf_rate": {
+    "rate_pct": 25.0,
+    "source": "fallback:hardcoded_stale",
+    "is_stale": true,
+    "daily_rate_pct": 0.08859,
+    "as_of": "2026-08-11T08:02:32.281990Z",
+    "note": "Used as the baseline for excess-return calculations across the scoring engine, decision tool, and backtest harness. Override with EGX_TBILL_RATE_PCT env var when CBE source is stale."
+  },
+  "w1_picks": {
+    "as_of": "2026-08-11",
+    "horizon_days": 5,
+    "n_universe": 68,
+    "n_with_features": 67,
+    "n_passes_quality": 52,
+    "n_eligible": 0,
+    "config": {
+      "w_mom5": 1.5,
+      "w_mom20": 0.0,
+      "w_mr1": 0.5,
+      "w_breakout": 3.0,
+      "w_trend": 3.0,
+      "min_roe_pct": 10.0,
+      "top_n": 5
+    },
+    "top_picks": [],
+    "runners_up": [],
+    "skipped_count": 1,
+    "validation_summary": "Backtested 28 months. Full window: +107.8% CAGR, Sharpe 1.64, -24.9% MaxDD vs market +40.8% / 0.65 / -23.5%. Holdout 10mo OOS: +131% CAGR, Sharpe 2.78, -8.9% MaxDD vs market +50% / 1.32 / -5.6%.",
+    "disclaimer": "Algorithmic ranking for the next ~5 trading days. Not investment advice. The model has positive expected alpha vs a passive EGX weekly buy-hold; individual weeks can still lose. Verify against the EGX official tape before acting."
+  },
+  "exdiv_filtered": [],
+  "v8b_verdicts": [],
+  "chairman_per_pick": {},
+  "divergences": [],
+  "trade_plans": {},
+  "technicals_per_pick": {},
+  "fundamentals_per_pick": {},
+  "news_per_pick": {},
+  "market_news": {
+    "headlines": [
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u0633\u0645\u0627\u062f \u0645\u0635\u0631 \u062a\u062a\u062d\u0648\u0644 \u0644\u0644\u0631\u0628\u062d\u064a\u0629 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2026 \u0628\u062f\u0639\u0645 \u0645\u0646 \u0642\u0641\u0632\u0629 \u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a",
+        "url": "https://www.mubasher.info/news/4656350/%D8%B3%D9%85%D8%A7%D8%AF-%D9%85%D8%B5%D8%B1-%D8%AA%D8%AA%D8%AD%D9%88%D9%84-%D9%84%D9%84%D8%B1%D8%A8%D8%AD%D9%8A%D8%A9-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-2026-%D8%A8%D8%AF%D8%B9%D9%85-%D9%85%D9%86-%D9%82%D9%81%D8%B2%D8%A9-%D8%A7%D9%84%D9%85%D8%A8%D9%8A%D8%B9%D8%A7%D8%AA/",
+        "summary": null,
+        "lang": "en"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u0645\u064a\u0646\u0627 \u0644\u0644\u0627\u0633\u062a\u062b\u0645\u0627\u0631 \u0627\u0644\u0633\u064a\u0627\u062d\u064a \u062a\u062a\u062d\u0648\u0644 \u0644\u0644\u0631\u0628\u062d\u064a\u0629 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2026",
+        "url": "https://www.mubasher.info/news/4656334/%D9%85%D9%8A%D9%86%D8%A7-%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%AD%D9%8A-%D8%AA%D8%AA%D8%AD%D9%88%D9%84-%D9%84%D9%84%D8%B1%D8%A8%D8%AD%D9%8A%D8%A9-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-2026/",
+        "summary": null,
+        "lang": "en"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u0627\u0644\u0630\u0647\u0628 \u064a\u0648\u0627\u0635\u0644 \u0645\u0643\u0627\u0633\u0628\u0647 \u0644\u0644\u062c\u0644\u0633\u0629 \u0627\u0644\u062b\u0627\u0644\u062b\u0629 \u0645\u0639 \u062a\u0631\u0642\u0628 \u0628\u064a\u0627\u0646\u0627\u062a \u0627\u0644\u062a\u0636\u062e\u0645 \u0627\u0644\u0623\u0645\u0631\u064a\u0643\u064a\u0629",
+        "url": "https://www.mubasher.info/news/4656126/%D8%A7%D9%84%D8%B0%D9%87%D8%A8-%D9%8A%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D9%83%D8%A7%D8%B3%D8%A8%D9%87-%D9%84%D9%84%D8%AC%D9%84%D8%B3%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9-%D9%85%D8%B9-%D8%AA%D8%B1%D9%82%D8%A8-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%B6%D8%AE%D9%85-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D8%A9/",
+        "summary": null,
+        "lang": "en"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u062a\u0631\u0627\u062c\u0639 \u0623\u0631\u0628\u0627\u062d \u0627\u0644\u0625\u0633\u0645\u0627\u0639\u064a\u0644\u064a\u0629 \u0645\u0635\u0631 \u0644\u0644\u062f\u0648\u0627\u062c\u0646 11% \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2026",
+        "url": "https://www.mubasher.info/news/4656307/%D8%AA%D8%B1%D8%A7%D8%AC%D8%B9-%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A7%D9%84%D8%A5%D8%B3%D9%85%D8%A7%D8%B9%D9%8A%D9%84%D9%8A%D8%A9-%D9%85%D8%B5%D8%B1-%D9%84%D9%84%D8%AF%D9%88%D8%A7%D8%AC%D9%86-11-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-2026/",
+        "summary": null,
+        "lang": "en"
+      },
+      {
+        "date": null,
+        "source": "Enterprise",
+        "title": "NTRA refers telecom operators to public prosecutor",
+        "url": "https://enterpriseam.com/egypt/am-edition/#wwtt1",
+        "summary": null,
+        "lang": "en"
+      },
+      {
+        "date": null,
+        "source": "Enterprise",
+        "title": "Maersk, Hapag-Lloyd reroute Gemini service to Suez",
+        "url": "https://enterpriseam.com/egypt/am-edition/#wwtt2",
+        "summary": null,
+        "lang": "en"
+      },
+      {
+        "date": null,
+        "source": "Enterprise",
+        "title": "Gov\u2019t revives plans to corporatize EGX",
+        "url": "https://enterpriseam.com/egypt/am-edition/#wwtt3",
+        "summary": null,
+        "lang": "en"
+      },
+      {
+        "date": null,
+        "source": "Enterprise",
+        "title": "Urban inflation rose to 14.9% in July, its first uptick since March",
+        "url": "https://enterpriseam.com/egypt/issues/urban-inflation-rose-to-14-9-in-july-its-first-uptick-since-march/",
+        "summary": null,
+        "lang": "en"
+      },
+      {
+        "date": null,
+        "source": "Daily News Egypt",
+        "title": "Egypt telecom regulator refers four mobile operators to public prosecution over unauthorised line registrations",
+        "url": "https://www.dailynewsegypt.com/2026/08/10/egypt-telecom-regulator-refers-four-mobile-operators-to-public-prosecution-over-unauthorised-line-registrations/",
+        "summary": null,
+        "lang": "en"
+      },
+      {
+        "date": null,
+        "source": "Daily News Egypt",
+        "title": "Safa Abdo joins Impact Team 2050 as international youth advisor to ROSATOM leadership",
+        "url": "https://www.dailynewsegypt.com/2026/08/10/safa-abdo-joins-impact-team-2050-as-international-youth-advisor-to-rosatom-leadership/",
+        "summary": null,
+        "lang": "en"
+      },
+      {
+        "date": null,
+        "source": "Daily News Egypt",
+        "title": "Egyptian industry minister outlines updated 2030 strategy to boost exports and global integration",
+        "url": "https://www.dailynewsegypt.com/2026/08/10/egyptian-industry-minister-outlines-updated-2030-strategy-to-boost-exports-and-global-integration/",
+        "summary": null,
+        "lang": "en"
+      },
+      {
+        "date": null,
+        "source": "Daily News Egypt",
+        "title": "Egypt\u2019s health campaign delivers nearly 11 million free services in 8 days",
+        "url": "https://www.dailynewsegypt.com/2026/08/10/egypts-health-campaign-delivers-nearly-11-million-free-services-in-8-days/",
+        "summary": null,
+        "lang": "en"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u0633\u0645\u0627\u062f \u0645\u0635\u0631 \u062a\u062a\u062d\u0648\u0644 \u0644\u0644\u0631\u0628\u062d\u064a\u0629 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2026 \u0628\u062f\u0639\u0645 \u0645\u0646 \u0642\u0641\u0632\u0629 \u0627\u0644\u0645\u0628\u064a\u0639\u0627\u062a",
+        "url": "https://www.mubasher.info/news/4656350/%D8%B3%D9%85%D8%A7%D8%AF-%D9%85%D8%B5%D8%B1-%D8%AA%D8%AA%D8%AD%D9%88%D9%84-%D9%84%D9%84%D8%B1%D8%A8%D8%AD%D9%8A%D8%A9-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-2026-%D8%A8%D8%AF%D8%B9%D9%85-%D9%85%D9%86-%D9%82%D9%81%D8%B2%D8%A9-%D8%A7%D9%84%D9%85%D8%A8%D9%8A%D8%B9%D8%A7%D8%AA/",
+        "summary": null,
+        "lang": "ar"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u0645\u064a\u0646\u0627 \u0644\u0644\u0627\u0633\u062a\u062b\u0645\u0627\u0631 \u0627\u0644\u0633\u064a\u0627\u062d\u064a \u062a\u062a\u062d\u0648\u0644 \u0644\u0644\u0631\u0628\u062d\u064a\u0629 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2026",
+        "url": "https://www.mubasher.info/news/4656334/%D9%85%D9%8A%D9%86%D8%A7-%D9%84%D9%84%D8%A7%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%AD%D9%8A-%D8%AA%D8%AA%D8%AD%D9%88%D9%84-%D9%84%D9%84%D8%B1%D8%A8%D8%AD%D9%8A%D8%A9-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-2026/",
+        "summary": null,
+        "lang": "ar"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u0627\u0644\u0630\u0647\u0628 \u064a\u0648\u0627\u0635\u0644 \u0645\u0643\u0627\u0633\u0628\u0647 \u0644\u0644\u062c\u0644\u0633\u0629 \u0627\u0644\u062b\u0627\u0644\u062b\u0629 \u0645\u0639 \u062a\u0631\u0642\u0628 \u0628\u064a\u0627\u0646\u0627\u062a \u0627\u0644\u062a\u0636\u062e\u0645 \u0627\u0644\u0623\u0645\u0631\u064a\u0643\u064a\u0629",
+        "url": "https://www.mubasher.info/news/4656126/%D8%A7%D9%84%D8%B0%D9%87%D8%A8-%D9%8A%D9%88%D8%A7%D8%B5%D9%84-%D9%85%D9%83%D8%A7%D8%B3%D8%A8%D9%87-%D9%84%D9%84%D8%AC%D9%84%D8%B3%D8%A9-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%D8%A9-%D9%85%D8%B9-%D8%AA%D8%B1%D9%82%D8%A8-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%B6%D8%AE%D9%85-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D8%A9/",
+        "summary": null,
+        "lang": "ar"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u062a\u0631\u0627\u062c\u0639 \u0623\u0631\u0628\u0627\u062d \u0627\u0644\u0625\u0633\u0645\u0627\u0639\u064a\u0644\u064a\u0629 \u0645\u0635\u0631 \u0644\u0644\u062f\u0648\u0627\u062c\u0646 11% \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2026",
+        "url": "https://www.mubasher.info/news/4656307/%D8%AA%D8%B1%D8%A7%D8%AC%D8%B9-%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A7%D9%84%D8%A5%D8%B3%D9%85%D8%A7%D8%B9%D9%8A%D9%84%D9%8A%D8%A9-%D9%85%D8%B5%D8%B1-%D9%84%D9%84%D8%AF%D9%88%D8%A7%D8%AC%D9%86-11-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-2026/",
+        "summary": null,
+        "lang": "ar"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u062a\u0631\u0627\u062c\u0639 \u0627\u0644\u062f\u0648\u0644\u0627\u0631 \u0645\u0639 \u062a\u0631\u0642\u0628 \u0628\u064a\u0627\u0646\u0627\u062a \u0627\u0644\u062a\u0636\u062e\u0645 \u0627\u0644\u0623\u0645\u0631\u064a\u0643\u064a\u0629",
+        "url": "https://www.mubasher.info/news/4656212/%D8%AA%D8%B1%D8%A7%D8%AC%D8%B9-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D8%A7%D8%B1-%D9%85%D8%B9-%D8%AA%D8%B1%D9%82%D8%A8-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D8%B6%D8%AE%D9%85-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A%D8%A9/",
+        "summary": null,
+        "lang": "ar"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u0627\u0631\u062a\u0641\u0627\u0639 \u0623\u0633\u0639\u0627\u0631 \u0627\u0644\u0646\u0641\u0637 \u0648\u062a\u0630\u0628\u0630\u0628 \u0627\u0644\u0623\u0633\u0647\u0645 \u0627\u0644\u0622\u0633\u064a\u0648\u064a\u0629 \u0625\u062b\u0631 \u062a\u0639\u062b\u0631 \u0627\u0644\u0645\u0641\u0627\u0648\u0636\u0627\u062a",
+        "url": "https://www.mubasher.info/news/4656108/%D8%A7%D8%B1%D8%AA%D9%81%D8%A7%D8%B9-%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1-%D8%A7%D9%84%D9%86%D9%81%D8%B7-%D9%88%D8%AA%D8%B0%D8%A8%D8%B0%D8%A8-%D8%A7%D9%84%D8%A3%D8%B3%D9%87%D9%85-%D8%A7%D9%84%D8%A2%D8%B3%D9%8A%D9%88%D9%8A%D8%A9-%D8%A5%D8%AB%D8%B1-%D8%AA%D8%B9%D8%AB%D8%B1-%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%88%D8%B6%D8%A7%D8%AA/",
+        "summary": null,
+        "lang": "ar"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u062a\u0645 \u0627\u064a\u0642\u0627\u0641 \u0627\u0644\u0648\u0631\u0642\u0629 \u0627\u0644\u0645\u0627\u0644\u064a\u0629 - EGS38331C012 - \u0627\u0644\u0646\u064a\u0644 \u0644\u0644\u0627\u062f\u0648\u064a\u0629 \u0648\u0627\u0644\u0635\u0646\u0627\u0639\u0627\u062a \u0627\u0644\u0643\u064a\u0645\u0627\u0648\u064a\u0629 - \u0627\u0644\u0646\u064a\u0644 \u0644\u0645\u062f\u0629 10 \u062f\u0642\u0627\u0626\u0642 \u0644\u062a\u062c\u0627\u0648\u0632\u0647\u0627 \u0646\u0633\u0628\u0629 10 %",
+        "url": "https://www.mubasher.info/news/4656360/%D8%AA%D9%85-%D8%A7%D9%8A%D9%82%D8%A7%D9%81-%D8%A7%D9%84%D9%88%D8%B1%D9%82%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-EGS38331C012-%D8%A7%D9%84%D9%86%D9%8A%D9%84-%D9%84%D9%84%D8%A7%D8%AF%D9%88%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D9%8A%D9%85%D8%A7%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D9%86%D9%8A%D9%84-%D9%84%D9%85%D8%AF%D8%A9-10-%D8%AF%D9%82%D8%A7%D8%A6%D9%82-%D9%84%D8%AA%D8%AC%D8%A7%D9%88%D8%B2%D9%87%D8%A7-%D9%86%D8%B3%D8%A8%D8%A9-10-/",
+        "summary": null,
+        "lang": "ar"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u0627\u0644\u0639\u0646\u0648\u0627\u0646: \u0646\u0642\u0644 \u0627\u0644\u0645\u0642\u0631 \u0627\u0644\u0631\u0626\u064a\u0633\u064a \u0644\u0634\u0631\u0643\u0629/ \u0627\u064a\u062c\u064a\u0628\u062a \u0627\u0633\u062a\u0643\u0633 \u0644\u062a\u062f\u0627\u0648\u0644 \u0627\u0644\u0623\u0648\u0631\u0627\u0642 \u0627\u0644\u0645\u0627\u0644\u064a\u0629\u0643\u0648\u062f \u0627\u0644\u0634\u0631\u0643\u0629: 1151\u0645\u0636\u0645\u0648\u0646 \u0627\u0644\u0625\u0639\u0644\u0627\u0646:\u062a\u0645 \u0646\u0642\u0644 \u0627\u0644\u0645\u0642\u0631 \u0627\u0644\u0631\u0626\u064a\u0633\u064a \u0644\u0634\u0631\u0643\u0629/ \u0627\u064a\u062c\u064a\u0628\u062a",
+        "url": "https://www.mubasher.info/news/4656355/%D8%A7%D9%84%D8%B9%D9%86%D9%88%D8%A7%D9%86-%D9%86%D9%82%D9%84-%D8%A7%D9%84%D9%85%D9%82%D8%B1-%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A-%D9%84%D8%B4%D8%B1%D9%83%D8%A9-%D8%A7%D9%8A%D8%AC%D9%8A%D8%A8%D8%AA-%D8%A7%D8%B3%D8%AA%D9%83%D8%B3-%D9%84%D8%AA%D8%AF%D8%A7%D9%88%D9%84-%D8%A7%D9%84%D8%A3%D9%88%D8%B1%D8%A7%D9%82-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%D9%83%D9%88%D8%AF-%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A9-1151%D9%85%D8%B6%D9%85%D9%88%D9%86-%D8%A7%D9%84%D8%A5%D8%B9%D9%84%D8%A7%D9%86-%D8%AA%D9%85-%D9%86%D9%82%D9%84-%D8%A7%D9%84%D9%85%D9%82%D8%B1-%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A-%D9%84%D8%B4%D8%B1%D9%83%D8%A9-%D8%A7%D9%8A%D8%AC%D9%8A%D8%A8%D8%AA/",
+        "summary": null,
+        "lang": "ar"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u062a\u0645 \u0627\u064a\u0642\u0627\u0641 \u0627\u0644\u0648\u0631\u0642\u0629 \u0627\u0644\u0645\u0627\u0644\u064a\u0629 - EGS3C351C011 - \u062c\u0646\u0648\u0628 \u0627\u0644\u0648\u0627\u062f\u0649 \u0644\u0644\u0627\u0633\u0645\u0646\u062a \u0644\u0645\u062f\u0629 10 \u062f\u0642\u0627\u0626\u0642 \u0644\u062a\u062c\u0627\u0648\u0632\u0647\u0627 \u0646\u0633\u0628\u0629 10 %",
+        "url": "https://www.mubasher.info/news/4656353/%D8%AA%D9%85-%D8%A7%D9%8A%D9%82%D8%A7%D9%81-%D8%A7%D9%84%D9%88%D8%B1%D9%82%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-EGS3C351C011-%D8%AC%D9%86%D9%88%D8%A8-%D8%A7%D9%84%D9%88%D8%A7%D8%AF%D9%89-%D9%84%D9%84%D8%A7%D8%B3%D9%85%D9%86%D8%AA-%D9%84%D9%85%D8%AF%D8%A9-10-%D8%AF%D9%82%D8%A7%D8%A6%D9%82-%D9%84%D8%AA%D8%AC%D8%A7%D9%88%D8%B2%D9%87%D8%A7-%D9%86%D8%B3%D8%A8%D8%A9-10-/",
+        "summary": null,
+        "lang": "ar"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u062a\u0645 \u0627\u064a\u0642\u0627\u0641 \u0627\u0644\u0648\u0631\u0642\u0629 \u0627\u0644\u0645\u0627\u0644\u064a\u0629 - EGS3C401C014 - \u0627\u0633\u0645\u0646\u062a \u0633\u064a\u0646\u0627\u0621 \u0644\u0645\u062f\u0629 10 \u062f\u0642\u0627\u0626\u0642 \u0644\u062a\u062c\u0627\u0648\u0632\u0647\u0627 \u0646\u0633\u0628\u0629 10 %",
+        "url": "https://www.mubasher.info/news/4656346/%D8%AA%D9%85-%D8%A7%D9%8A%D9%82%D8%A7%D9%81-%D8%A7%D9%84%D9%88%D8%B1%D9%82%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-EGS3C401C014-%D8%A7%D8%B3%D9%85%D9%86%D8%AA-%D8%B3%D9%8A%D9%86%D8%A7%D8%A1-%D9%84%D9%85%D8%AF%D8%A9-10-%D8%AF%D9%82%D8%A7%D8%A6%D9%82-%D9%84%D8%AA%D8%AC%D8%A7%D9%88%D8%B2%D9%87%D8%A7-%D9%86%D8%B3%D8%A8%D8%A9-10-/",
+        "summary": null,
+        "lang": "ar"
+      },
+      {
+        "date": null,
+        "source": "Mubasher",
+        "title": "\u062a\u0645 \u0627\u064a\u0642\u0627\u0641 \u0627\u0644\u0648\u0631\u0642\u0629 \u0627\u0644\u0645\u0627\u0644\u064a\u0629 - EGS3C0O1C016 - \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0644\u0644\u0627\u0633\u0645\u0646\u062a \u0644\u0645\u062f\u0629 10 \u062f\u0642\u0627\u0626\u0642 \u0644\u062a\u062c\u0627\u0648\u0632\u0647\u0627 \u0646\u0633\u0628\u0629 10 %",
+        "url": "https://www.mubasher.info/news/4656345/%D8%AA%D9%85-%D8%A7%D9%8A%D9%82%D8%A7%D9%81-%D8%A7%D9%84%D9%88%D8%B1%D9%82%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-EGS3C0O1C016-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D9%84%D9%84%D8%A7%D8%B3%D9%85%D9%86%D8%AA-%D9%84%D9%85%D8%AF%D8%A9-10-%D8%AF%D9%82%D8%A7%D8%A6%D9%82-%D9%84%D8%AA%D8%AC%D8%A7%D9%88%D8%B2%D9%87%D8%A7-%D9%86%D8%B3%D8%A8%D8%A9-10-/",
+        "summary": null,
+        "lang": "ar"
+      }
+    ],
+    "raw_headline_count": 23,
+    "filtered_headline_count": 23,
+    "filter_basis": "unfiltered (no portfolio, no watchlist)",
+    "filter_target_tickers": [],
+    "sentiment": {
+      "label": "bullish",
+      "aggregate_score": 0.556,
+      "headline_count": 23,
+      "method": "lexicon scored over portfolio-filtered headlines"
+    },
+    "filter_method": "Direct ticker-name match wins. Sector keyword match falls back to 'sector' impact level. Macro headlines (CBE, EGP, rates) are not included by default \u2014 they affect everyone."
+  },
+  "trade_plan_params": {
+    "portfolio_nav_egp": 500000.0,
+    "risk_pct_per_trade": 1.0,
+    "atr_stop_multiple": 2.0,
+    "expected_hold_days": 5
+  },
+  "catalysts": [],
+  "portfolio": {
+    "error": "Portfolio CSV not found at /home/runner/egx_portfolio.csv.",
+    "hint": "Create a CSV with columns ticker,shares,cost_basis at /home/runner/egx_portfolio.csv, set $EGX_PORTFOLIO_CSV, or pass csv_path explicitly. Example row: CIRA,500,12.50"
+  },
+  "market_ytd_pct": 40.26994018419923,
+  "market_label": "Market YTD (13-name liquid basket EW): +40.27%"
+}
