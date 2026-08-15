@@ -182,3 +182,114 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+  # ── Job 3: Market-data panel → parameter proposal ─────────────────────────
+  panel-learn:
+    name: "Panel learning loop (market data)"
+    runs-on: ubuntu-latest
+    needs: oos-test          # serialise the pushes; both jobs commit to main
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Rebuild the market-data panel
+        # Refetches ~250 names of daily history from investing.com and
+        # reconstructs point-in-time scores + forward 21-session excess at every
+        # weekly rebalance date. Slow (network-bound) — hence weekly, not daily.
+        # continue-on-error: a data hiccup must not block the rest of the run;
+        # the learner below simply reports insufficient_panel.
+        continue-on-error: true
+        run: |
+          mkdir -p logs
+          python -m scripts.build_panel --refresh --lookback 1000 2>&1 \
+            | tee logs/panel_build_latest.txt
+
+      - name: Panel learning loop — analyze & propose (no change applied)
+        # Writes logs/learning_proposal_panel.json. Does NOT apply.
+        if: always()
+        run: |
+          echo "## Panel Learning Loop — Weight & Threshold Proposal" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          python -m scripts.learn_panel 2>&1 \
+            | tee logs/learning_proposal_panel_latest.txt >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit panel proposal
+        # The panel itself is gitignored (tens of MB, reproducible from market
+        # data); only the proposal and its log are versioned.
+        if: always()
+        run: |
+          git config user.name  "egx-enhancer[bot]"
+          git config user.email "egx-enhancer@users.noreply.github.com"
+          git add logs/learning_proposal_panel.json \
+                  logs/learning_proposal_panel_latest.txt \
+                  logs/panel_build_latest.txt 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No panel proposal to commit."
+          else
+            git commit -m "chore(panel): market-data learning proposal [skip ci]"
+            git pull --rebase origin main
+            git push
+          fi
+
+      - name: Open PR for panel-validated proposal
+        # Mirrors the daily loop's gate: branch off main, run `--apply` to write
+        # model_params.json, open a PR. Merging is the human approval step —
+        # nothing reaches the decision layer until a human merges.
+        #
+        # NOTE: valuation/quality weights in this proposal are fitted on a
+        # fundamentals snapshot that post-dates most panel rows. The PR body
+        # carries the look-ahead warning and the price-only reference IC —
+        # read that block before merging.
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          PROP=logs/learning_proposal_panel.json
+          if [ ! -f "$PROP" ]; then echo "No proposal file — nothing to open."; exit 0; fi
+          STATUS=$(jq -r '.status // "missing"' "$PROP")
+          if [ "$STATUS" != "proposal" ]; then
+            echo "No actionable proposal (status: $STATUS) — nothing to open."
+            exit 0
+          fi
+
+          TAG=$(jq -r '.change_tag // "none"' "$PROP")
+          BRANCH="auto-learn-panel/${TAG}"
+
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number -q '.[].number')" ]; then
+            echo "PR for $BRANCH already open — skipping."; exit 0
+          fi
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            echo "Branch $BRANCH already exists on remote — skipping."; exit 0
+          fi
+
+          git config user.name  "egx-enhancer[bot]"
+          git config user.email "egx-enhancer@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+
+          python -m scripts.learn_panel --apply
+
+          git add model_params.json
+          if git diff --cached --quiet; then
+            echo "learn_panel --apply produced no diff — nothing to PR."; exit 0
+          fi
+          git commit -m "feat(model): apply panel-validated update (${TAG})"
+          git push -u origin "$BRANCH"
+
+          jq -r '.pr_body' "$PROP" > /tmp/pr_body.md
+          gh pr create \
+            --title "$(jq -r '.pr_title' "$PROP")" \
+            --body-file /tmp/pr_body.md \
+            --base "${GITHUB_REF_NAME}" \
+            --head "$BRANCH"

@@ -81,6 +81,28 @@ jobs:
           python -m tests.validate_edge 2>&1 | tee logs/edge_validation_latest.txt >> "$GITHUB_STEP_SUMMARY" || true
           echo '```' >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Snapshot fundamentals (builds point-in-time history)
+        # Appends today's fundamentals to logs/fundamentals_history.jsonl, and
+        # only the values that CHANGED since the last run — so the store records
+        # the date each figure moved instead of 250 identical rows per day.
+        #
+        # This is what decontaminates the weekly panel loop: valuation and
+        # quality are look-ahead-biased for every date older than this history,
+        # because the only alternative is a current snapshot with no past. The
+        # clean region grows one day at a time, so the sooner this runs daily
+        # the sooner those two factors become learnable.
+        #
+        # continue-on-error: a scrape hiccup must not break the grading chain;
+        # a missed day just means no new snapshot rows.
+        continue-on-error: true
+        run: |
+          mkdir -p logs
+          echo "## Fundamentals Snapshot" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          python -m scripts.snapshot_fundamentals --refresh 2>&1 \
+            | tee logs/fundamentals_snapshot_latest.txt >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
       - name: Learning loop — analyze & propose (no change applied)
         # Reads graded_verdicts.jsonl, fits a BUY threshold on the IS slice,
         # validates OOS. Writes logs/learning_proposal.json. Does NOT apply.

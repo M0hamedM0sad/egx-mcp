@@ -1,0 +1,211 @@
+{
+  "status": "no_change",
+  "panel_rows": 18159,
+  "panel_dates": 84,
+  "date_range": [
+    "2024-10-03",
+    "2026-07-09"
+  ],
+  "horizon_days": 21,
+  "fundamentals_asof": "current",
+  "n_selection_folds": 4,
+  "holdout_dates": [
+    "2026-04-16",
+    "2026-07-09"
+  ],
+  "embargo_sessions": 22,
+  "current_weights": {
+    "valuation": 0.3,
+    "quality": 0.25,
+    "momentum": 0.25,
+    "risk": 0.2
+  },
+  "current_buy_threshold": 75,
+  "fitters": {
+    "tilt": {
+      "candidate_weights": {
+        "valuation": 0.3023,
+        "quality": 0.2503,
+        "momentum": 0.2487,
+        "risk": 0.1987
+      },
+      "oos_ic_candidate": 0.0809,
+      "oos_ic_base": 0.0809,
+      "fold_ic_candidate": [
+        0.1454,
+        0.0615,
+        0.1067,
+        0.0098
+      ],
+      "folds_won": 3,
+      "n_folds": 4,
+      "holdout_ic_candidate": 0.126,
+      "holdout_ic_base": 0.1257,
+      "holdout_dates": [
+        "2026-04-16",
+        "2026-07-09"
+      ],
+      "qualifies": false
+    },
+    "cv": {
+      "status": "ok",
+      "n_grid": 829,
+      "candidate_weights": {
+        "valuation": 0.2,
+        "quality": 0.4,
+        "momentum": 0.05,
+        "risk": 0.35
+      },
+      "oos_ic_candidate": 0.0963,
+      "oos_ic_base": 0.0809,
+      "fold_ic_candidate": [
+        0.1392,
+        0.0754,
+        0.1609,
+        0.0097
+      ],
+      "fold_ic_base": [
+        0.1461,
+        0.0615,
+        0.1066,
+        0.0093
+      ],
+      "folds_won": 3,
+      "n_folds": 4,
+      "top5": [
+        {
+          "weights": {
+            "valuation": 0.2,
+            "quality": 0.4,
+            "momentum": 0.05,
+            "risk": 0.35
+          },
+          "oos_ic": 0.0963
+        },
+        {
+          "weights": {
+            "valuation": 0.25,
+            "quality": 0.4,
+            "momentum": 0.05,
+            "risk": 0.3
+          },
+          "oos_ic": 0.096
+        },
+        {
+          "weights": {
+            "valuation": 0.3,
+            "quality": 0.35,
+            "momentum": 0.05,
+            "risk": 0.3
+          },
+          "oos_ic": 0.0958
+        },
+        {
+          "weights": {
+            "valuation": 0.15,
+            "quality": 0.45,
+            "momentum": 0.05,
+            "risk": 0.35
+          },
+          "oos_ic": 0.0957
+        },
+        {
+          "weights": {
+            "valuation": 0.2,
+            "quality": 0.45,
+            "momentum": 0.05,
+            "risk": 0.3
+          },
+          "oos_ic": 0.0956
+        }
+      ],
+      "holdout_ic_candidate": 0.0971,
+      "holdout_ic_base": 0.1257,
+      "holdout_dates": [
+        "2026-04-16",
+        "2026-07-09"
+      ],
+      "qualifies": false
+    }
+  },
+  "winning_fitter": null,
+  "threshold": {
+    "status": "ok",
+    "candidate": 75,
+    "current": 75,
+    "in_sample": {
+      "threshold": 75,
+      "n": 727,
+      "mean_excess_pct": 1.428,
+      "beat_bench_pct": 43.1
+    },
+    "oos_candidate": {
+      "threshold": 75,
+      "n": 363,
+      "mean_excess_pct": -0.241,
+      "beat_bench_pct": 38.6
+    },
+    "oos_current": {
+      "threshold": 75,
+      "n": 363,
+      "mean_excess_pct": -0.241,
+      "beat_bench_pct": 38.6
+    },
+    "improves": false
+  },
+  "contamination": {
+    "clean_row_pct": 0.0,
+    "warning": "only 0.0% of panel rows have a point-in-time fundamentals read; the rest fall back to a snapshot that post-dates them, so valuation/quality weights are fitted on look-ahead-contaminated features and must NOT be read as out-of-sample evidence. Run scripts.snapshot_fundamentals daily — this share grows as history accumulates.",
+    "point_in_time_clean": [
+      "momentum",
+      "risk"
+    ],
+    "contaminated": [
+      "valuation",
+      "quality"
+    ],
+    "per_factor_oos_ic": {
+      "valuation": {
+        "oos_ic": 0.0497,
+        "point_in_time": false
+      },
+      "quality": {
+        "oos_ic": 0.0791,
+        "point_in_time": false
+      },
+      "momentum": {
+        "oos_ic": 0.0024,
+        "point_in_time": true
+      },
+      "risk": {
+        "oos_ic": 0.0642,
+        "point_in_time": true
+      }
+    },
+    "clean_only_weights": {
+      "valuation": 0.0,
+      "quality": 0.0,
+      "momentum": 0.5556,
+      "risk": 0.4444
+    },
+    "clean_only_oos_ic": 0.0314
+  },
+  "live_reliability_gate": {
+    "passed": false,
+    "mode": "research_only",
+    "failed_checks": [
+      "sample_size",
+      "independent_dates",
+      "directional_accuracy",
+      "positive_signed_edge",
+      "conviction_calibration",
+      "evidence_freshness"
+    ]
+  },
+  "recommendation": "KEEP_CURRENT",
+  "proposed_params": null,
+  "change_tag": "none",
+  "message": "Neither fitter cleared the guardrails — current weights hold. Valuation/quality weights are fitted on look-ahead-contaminated features — see contamination block before approving. Live reliability gate is NOT passed — the model is research-only. Merging still changes live verdicts.",
+  "pr_title": "Panel learning loop: no change",
+  "pr_body": "## Learning loop — market-data panel\n\nNeither fitter cleared the guardrails — current weights hold. Valuation/quality weights are fitted on look-ahead-contaminated features — see contamination block before approving. Live reliability gate is NOT passed — the model is research-only. Merging still changes live verdicts.\n\nPanel: **18159 rows** over 84 rebalance dates (2024-10-03 → 2026-07-09), 21-session forward excess vs the equal-weight basket. Purged walk-forward CV, 4 selection folds, 22-session embargo, holdout 2026-04-16 → 2026-07-09 (never seen by either fitter).\n\n### Fitters\n\n| fitter | sel. IC | base | folds won | holdout IC | holdout base | qualifies |\n|---|---|---|---|---|---|---|\n| tilt | 0.0809 | 0.0809 | 3/4 | 0.126 | 0.1257 | False |\n| cv | 0.0963 | 0.0809 | 3/4 | 0.0971 | 0.1257 | False |\n\n### Weights\n\n| factor | current | tilt | cv |\n|---|---|---|---|\n| valuation ⚠️ | 0.3 | 0.3023 | 0.2 |\n| quality ⚠️ | 0.25 | 0.2503 | 0.4 |\n| momentum | 0.25 | 0.2487 | 0.05 |\n| risk | 0.2 | 0.1987 | 0.35 |\n\n### ⚠️ Look-ahead\n\nonly 0.0% of panel rows have a point-in-time fundamentals read; the rest fall back to a snapshot that post-dates them, so valuation/quality weights are fitted on look-ahead-contaminated features and must NOT be read as out-of-sample evidence. Run scripts.snapshot_fundamentals daily — this share grows as history accumulates.\n\n| factor | solo OOS IC | point-in-time |\n|---|---|---|\n| valuation | 0.0497 | **no** |\n| quality | 0.0791 | **no** |\n| momentum | 0.0024 | yes |\n| risk | 0.0642 | yes |\n\nPrice-only reference (momentum + risk, fully point-in-time): **OOS IC 0.0314**.\n\n### ⚠️ Live reliability gate not passed\n\n`model_reliability()` reports **research_only** (failing: sample_size, independent_dates, directional_accuracy, positive_signed_edge, conviction_calibration, evidence_freshness). This proposal is fitted on historical market data, not on live graded calls — but merging it changes live verdicts all the same.\n\n**Merging this PR is the human approval gate** — it writes `model_params.json`, which the decision layer reads on next run. Close without merging to reject."
+}
