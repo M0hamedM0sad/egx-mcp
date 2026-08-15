@@ -13,6 +13,10 @@ scripts/configure_smtp.bat
 ir_data/*/documents/        # archived IR PDFs — large binaries
 *.log                       # raw briefing logs (noise)
 logs/briefing_*.log
+# Learning panel — regenerated from market data by scripts/build_panel.py.
+# Tens of MB and fully reproducible, so the proposal is versioned, not the panel.
+logs/panel_prices.json
+logs/panel.jsonl
 
 # Keep the evidence base tracked (do NOT ignore these):
 #   logs/graded_verdicts.jsonl, logs/graded_verdicts.csv

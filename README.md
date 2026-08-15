@@ -61,6 +61,75 @@ This is intentionally stricter than a backtest. It does not turn the model
 into investment advice or execution software; it prevents unproven output from
 being presented as a trade instruction.
 
+### Learning loop
+
+Two loops propose parameter updates. Neither changes anything on its own — both
+write a proposal and open a PR, and **merging the PR is the approval gate**.
+
+| | `scripts/learn.py` (daily) | `scripts/learn_panel.py` (weekly) |
+|---|---|---|
+| Evidence | verdicts the model emitted and graded | market-data panel, rebuilt from price history |
+| Sample | ~32 rows/day, 21d rows only | every name × every weekly rebalance date |
+| Learns | BUY threshold, weight tilt | BUY threshold, weight tilt **and** CV grid fit |
+| Validation | one IS/OOS split | purged walk-forward CV + untouched holdout |
+
+The panel loop exists because the daily one starves: it can only learn from
+calls it has already made, which after two months of running was ~20 usable
+rows at the 21-session claim horizon. `scripts/build_panel.py` reconstructs the
+same sample from market data instead — at each weekly rebalance date it scores
+every universe name **with the production sub-scorers** (`scoring._score_*`, fed
+inputs rebuilt as-of that date) and labels it with the forward 21-session excess
+over the equal-weight basket.
+
+```bash
+python -m scripts.snapshot_fundamentals --refresh         # record today's fundamentals
+python -m scripts.build_panel --refresh --lookback 1000   # rebuild the panel
+python -m scripts.learn_panel                             # propose (changes nothing)
+python -m scripts.learn_panel --apply                     # apply, after review
+```
+
+Two guardrails matter more than the fit:
+
+- **Purge + embargo.** A 21-session label means a training row dated within ~22
+  sessions of the test window already contains returns from inside it. Those
+  dates are dropped from training, or the CV would score a leak.
+- **Untouched holdout.** The grid fitter picks the best of ~800 weight vectors
+  by fold IC, so those fold scores are a selection statistic, not an unbiased
+  estimate — on pure noise one of them always looks good. A candidate must also
+  beat the incumbent on a final fold that played no part in choosing it.
+  `tests/test_panel_learning.py` asserts noise panels are rejected.
+
+⚠️ **Known look-ahead, and how it closes.** Of the four sub-scores, only
+momentum and risk are point-in-time. Valuation and quality read EPS, book
+value, ROE, margin and D/E from a snapshot with no history, so on historical
+dates they use figures that did not exist yet. The price half of the leak is
+removed (P/E and P/B are recomputed at the as-of price); the earnings half is
+not. Every proposal carries a contamination block with per-factor OOS IC, which
+factors are clean, the share of rows with a genuine point-in-time read, and a
+**price-only reference fit** (momentum + risk alone) so the trustworthy signal
+stays visible.
+
+`scripts/snapshot_fundamentals.py` is what closes it. The daily workflow
+appends each day's fundamentals to `logs/fundamentals_history.jsonl` — only the
+values that *changed*, so the store records the date each figure moved rather
+than 250 identical rows a day. `build_panel` then reads the most recent
+snapshot at or before each rebalance date, and those rows come out fully
+point-in-time; rows older than the history fall back to the current snapshot
+and stay flagged. The clean share is reported on every build and every
+proposal, and rises as history accumulates:
+
+```bash
+python -m scripts.snapshot_fundamentals --refresh   # one day's snapshot
+```
+
+Nothing retroactively fixes existing rows — a panel built today is 0% clean,
+because the history starts today. Treat valuation/quality weight changes as
+provisional until that share is high. Two details worth knowing: the lookup
+never reaches past the as-of date (`tests/test_panel_learning.py` pins this),
+and the clean-share counter **fails closed** — a row must carry the flag and
+carry it empty to count as clean, so rows predating the flag are treated as
+contaminated rather than assumed safe.
+
 ## Data sources
 
 - **`yfinance`** — Yahoo Finance covers EGX with the `.CA` suffix (e.g. `CIRA.CA`, `^CASE30`). Free, no key, ~15-min delay.

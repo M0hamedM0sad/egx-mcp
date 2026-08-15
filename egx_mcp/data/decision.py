@@ -222,6 +222,53 @@ def _assess(verdict: str, conviction: str, score_val: float,
     }
 
 
+# Wording-based fallback for score dicts predating note_deltas (e.g. a cached
+# payload). "stretched" is in the list here — its absence was the original bug.
+_NEGATIVE_WORDS = (
+    "weak", "expensive", "extreme", "elevated", "overbought", "deep",
+    "negative", "broken", "highly levered", "thin", "death-cross",
+    "above sector median", "≥ 150%", "≥ 1.5", "soft", "stretched",
+)
+
+
+def split_notes(subscores: dict) -> tuple[list[str], list[str], list[str]]:
+    """Split sub-score notes into (drivers, risks, neutral) by points awarded.
+
+    This used to keyword-match the note text and file anything unmatched as a
+    driver, which silently inverted the momentum stretch penalty: "6M +701% —
+    stretched (-260.6 pts)" matches no keyword, so the single largest deduction
+    the model can make was presented to the reader as a reason to buy — on a
+    name the same score sent to AVOID. Sign is now read from note_deltas rather
+    than guessed from vocabulary, so a new note can never be miscategorised
+    just because of how it is phrased.
+
+    Notes awarding exactly 0 (e.g. "P/E unavailable") are neither: calling them
+    drivers overstates them, dropping them hides a coverage gap.
+    """
+    drivers: list[str] = []
+    risks: list[str] = []
+    neutral: list[str] = []
+    for category, sub in (subscores or {}).items():
+        if not isinstance(sub, dict):
+            continue
+        notes = sub.get("notes") or []
+        deltas = sub.get("note_deltas") or []
+        for i, note in enumerate(notes):
+            delta = deltas[i] if i < len(deltas) else None
+            tagged = f"[{category}] {note}"
+            if delta is None:
+                lower = note.lower()
+                is_neg = any(k in lower for k in _NEGATIVE_WORDS)
+                (risks if is_neg else drivers).append(tagged)
+            elif delta < 0:
+                risks.append(tagged)
+            elif delta > 0:
+                drivers.append(tagged)
+            else:
+                neutral.append(tagged)
+    return drivers, risks, neutral
+
+
 def decide(
     user_ticker: str,
     portfolio_value_egp: float | None = None,
@@ -298,20 +345,8 @@ def decide(
         except Exception as e:
             sizing_payload = {"error": str(e)}
 
-    # 7. Key drivers and risks — extract from sub-scores
-    drivers = []
-    risks = []
-    for category, sub in (score.get("subscores") or {}).items():
-        for note in sub.get("notes", []):
-            # Heuristic: notes that imply weakness go to risks, others to drivers
-            lower = note.lower()
-            if any(k in lower for k in ("weak", "expensive", "extreme", "elevated",
-                                         "overbought", "deep", "negative", "broken",
-                                         "highly levered", "thin", "death-cross",
-                                         "above sector median", "≥ 150%", "≥ 1.5", "soft")):
-                risks.append(f"[{category}] {note}")
-            else:
-                drivers.append(f"[{category}] {note}")
+    # 7. Key drivers and risks
+    drivers, risks, neutral = split_notes(score.get("subscores") or {})
 
     # Add macro and catalyst notes
     macro = score.get("macro_context") or {}
@@ -368,6 +403,7 @@ def decide(
 
         "key_drivers": drivers,
         "key_risks": risks,
+        "neutral_notes": neutral,
         "blocking_catalysts": blocking_catalysts,
 
         "subscores": {

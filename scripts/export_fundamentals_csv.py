@@ -11,12 +11,16 @@ Output: egx_fundamentals_audited.csv at repo root.
 from __future__ import annotations
 
 import csv
-import io
 import json
 import sys
 from pathlib import Path
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+# reconfigure() rather than wrapping sys.stdout.buffer in a fresh TextIOWrapper:
+# this module is imported by other scripts that do the same, and a second
+# wrapper leaves the first unreferenced — TextIOWrapper closes the underlying
+# buffer when collected, killing stdout mid-run. Mutating in place is idempotent.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 CACHE = Path(__file__).parent.parent / "egx_mcp" / "data" / "mubasher_fundamentals_cache.json"
