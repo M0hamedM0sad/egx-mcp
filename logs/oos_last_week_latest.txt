@@ -1,52 +1,52 @@
 
 ================================================================================
 OUT-OF-SAMPLE WALK-FORWARD
-  Training cutoff: 2026-07-30 (Thu)   — model sees only data ≤ this date
-  Test window:     2026-07-30+1 → 2026-08-06  (last week's 5 EGX sessions)
+  Training cutoff: 2026-08-06 (Thu)   — model sees only data ≤ this date
+  Test window:     2026-08-06+1 → 2026-08-13  (last week's 5 EGX sessions)
 ================================================================================
 
 Loading price history for validated EGX universe...
 Universe size: 68
 
-Model would have picked these top 5 on 2026-07-30:
+Model would have picked these top 5 on 2026-08-06:
 
 Rank Tic    Score   Forecast    Actual    P(>2%)   In 90% CI
 ------------------------------------------------------------------------
-1    HELI   73.7      +2.33%     +0.12%  50%      ✓
-2    BIOC   65.1     +11.55%    +65.88%  64%      ✗
-3    CIRA   43.3      +5.05%     +3.86%  61%      ✓
-4    EGTS   43.0      +3.33%     +4.37%  51%      ✓
-5    RAYA   40.2      +1.32%     -1.07%  43%      ✓
+1    BIOC   151.8    +16.25%    +31.00%  68%      ✓
+2    HELI   71.5      +2.00%     -4.38%  47%      ✗
+3    AMER   54.3      +8.17%    +10.17%  71%      ✓
+4    EGTS   52.0      +3.30%     +3.14%  51%      ✓
+5    CIRA   50.2      +3.71%     +5.32%  53%      ✓
 
 ========================================================================
-AGGREGATE RESULTS — week of 2026-07-30 → 2026-08-06
+AGGREGATE RESULTS — week of 2026-08-06 → 2026-08-13
 ========================================================================
-  Top-5 portfolio return:    +14.63%
-  EGX synthetic basket (n=67):  +6.86%
+  Top-5 portfolio return:    +9.05%
+  EGX synthetic basket (n=67):  +3.28%
   EGP T-bill weekly:           +0.444%
-  Active vs basket:            +7.78 pp
-  Active vs T-bills:           +14.19 pp
+  Active vs basket:            +5.77 pp
+  Active vs T-bills:           +8.60 pp
 
-  Picks that beat basket: 1 / 5
+  Picks that beat basket: 3 / 5
   Picks with positive return: 4 / 5
 
   Bootstrap MC across 67 names:
-    Mean absolute error: 6.69pp (predicted vs actual)
-    Mean error (bias):   +5.75pp
-    Actual within 90% CI: 70% of names
+    Mean absolute error: 4.24pp (predicted vs actual)
+    Mean error (bias):   +1.96pp
+    Actual within 90% CI: 81% of names
     (Calibrated would be 80%; below = overconfident, above = underconfident)
 
-Model would have AVOIDED these bottom 5 on 2026-07-30:
+Model would have AVOIDED these bottom 5 on 2026-08-06:
 
 Rank   Tic    Score   Forecast    Actual    
 --------------------------------------------------
-63     EFIC   -10.9     -0.46%     +4.55%
-64     ELEC   -16.7     -0.26%     +1.40%
-65     OBRI   -19.5     -1.34%     -2.35%
-66     JUFO   -19.6     -0.94%    +16.02%
-67     HDBK   -49.3     -3.08%     +2.14%
+63     EFIC   -11.5     +0.02%     +8.84%
+64     ELEC   -12.5     +0.00%     +0.00%
+65     OBRI   -14.2     -1.55%     +3.35%
+66     JUFO   -18.9     -0.50%     +2.22%
+67     HDBK   -50.4     -2.89%     +3.15%
 
-  Bottom-5 actual return: +4.35%
-  Long top / short bottom spread: +10.28 pp
+  Bottom-5 actual return: +3.51%
+  Long top / short bottom spread: +5.54 pp
 
 Appended result to /home/runner/work/egx-mcp/egx-mcp/logs/oos_weekly_log.jsonl
