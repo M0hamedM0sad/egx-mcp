@@ -1,0 +1,90 @@
+=== EGX PRE-MARKET BRIEFING — Monday 2026-08-17 09:41 ===
+
+--- MACRO ---
+  EGX 30:  55,782 pts (—)
+  USD/EGP: 50.12 (-0.22%)
+  Brent:   $88.41 (-0.33%)
+  Gold 24K: 7,191.01 EGP/g  |  21K: 6,292.14  |  18K: 5,393.26
+  Egyptian gold pound: 50,337 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 42) ---
+  1. ARCC   score=37.45  price=10.5  5d=+25.8% RSI=83  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ARCC/
+  2. SCEM   score=28.65  price=10.14  5d=+19.5% RSI=64  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SCEM/
+  3. OCDI   score=28.61  price=43.51  5d=+17.5% RSI=94  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OCDI/
+  4. CSAG   score=23.42  price=19.05  5d=+14.0% RSI=84  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CSAG/
+  5. AMER   score=21.17  price=0.864  5d=+10.2% RSI=76  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMER/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  ARCC: ENTRY 10.55 | STOP 2.57 | SCALE-OUT 18.43 (315 sh) | TARGET 22.4 (315 sh) | 630 total (1.32% NAV) | R:R 1:1.5 | time stop 2026-08-24
+  SCEM: ENTRY 10.19 | STOP -2.27 | SCALE-OUT 22.55 (201 sh) | TARGET 28.75 (202 sh) | 403 total (0.82% NAV) | R:R 1:1.5 | time stop 2026-08-24
+  OCDI: ENTRY 43.73 | STOP 40.71 | SCALE-OUT 46.31 (574 sh) | TARGET 47.7 (575 sh) | 1149 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-08-24
+  CSAG: ENTRY 19.15 | STOP 16.2 | SCALE-OUT 21.9 (878 sh) | TARGET 23.32 (878 sh) | 1756 total (6.69% NAV) | R:R 1:1.5 | time stop 2026-08-24
+  AMER: ENTRY 0.87 | STOP -0.27 | SCALE-OUT 2.0 (2201 sh) | TARGET 2.57 (2201 sh) | 4402 total (0.76% NAV) | R:R 1:1.5 | time stop 2026-08-24
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  ARCC   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: mildly_bullish
+  SCEM   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  OCDI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CSAG   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  AMER   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    ARCC: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    CSAG: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  ARCC:
+    Technicals:    RSI 83 — overbought; MACD bullish (+2.108); Riding upper Bollinger — extended; ATR 3.97 (5.3% of px) — sizing input
+    Fundamentals:  P/E 1.2 — cheap; P/B 1.08; ROE 88.3% — strong
+    News tone:     mildly_bullish (+0.33, 3 hdl)
+      - أرباح العربية للأسمنت تقفز 54.5% في النصف الأول من 2026 [Mubasher]
+      - بورصة مصر تقر تخفيض رأسمال "العربية للأسمنت" عبر إعدام أسهم خزينة [Mubasher]
+  SCEM:
+    Technicals:    RSI 64 — healthy uptrend; MACD bullish (+1.238); ATR 6.20 (6.6% of px) — sizing input
+    Fundamentals:  P/E 1.2 — cheap; P/B 0.59; ROE 51.1% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "أسمنت سيناء" تقفز 103% متجاوزة 1.5 مليار جنيه في النصف الأول [Mubasher]
+      - سهم أسمنت سيناء يحافظ على الاتجاه الإيجابي واستمرار فرص الصعود [Mubasher]
+  OCDI:
+    Technicals:    RSI 94 — overbought; MACD bullish (+0.573); Riding upper Bollinger — extended; ATR 1.40 (3.9% of px) — sizing input
+    Fundamentals:  P/E 11.2 — fair; P/B 1.22; ROE 11.0% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "سوديك" تهبط 36% بالنصف الأول رغم نمو الإيرادات إلى 5.98 مليار جنيه [Mubasher]
+      - سهم سوديك يترقب استئناف الاتجاه الصاعد من مستويات الدعم [Mubasher]
+  CSAG:
+    Technicals:    RSI 84 — overbought; MACD bullish (+0.882); Riding upper Bollinger — extended; ATR 1.42 (3.4% of px) — sizing input
+    Fundamentals:  P/E 1.6 — cheap; P/B 3.68; ROE 223.4% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح القناة للتوكيلات الملاحية ترتفع 21% خلال 9 أشهر [Mubasher]
+      - عمومية "القناة للتوكيلات" تُقر الموازنة التقديرية وتوافق على تأسيس شركة جديدة [Mubasher]
+  AMER:
+    Technicals:    RSI 76 — overbought; MACD bullish (+0.134); ATR 0.57 (8.7% of px) — sizing input
+    Fundamentals:  P/E 4.8 — cheap; P/B 0.82; ROE 17.0% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح عامر جروب ترتفع 204% في النصف الأول من 2026 [Mubasher]
+      - مساهم يرفع حصته في أسهم رأسمال عامر القابضة إلى 6.25%ِ [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: ARCC, SCEM, OCDI, CSAG, AMER
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
