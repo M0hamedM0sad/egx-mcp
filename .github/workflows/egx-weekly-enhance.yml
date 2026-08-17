@@ -95,6 +95,9 @@ jobs:
             echo "No OOS artifacts to commit."
           else
             git commit -m "chore(oos): weekly walk-forward result [skip ci]"
+            # Drop unstaged runtime-cache churn written by the steps above; with
+            # it present `pull --rebase` aborts on "unstaged changes" (exit 128).
+            git checkout -- .
             git pull --rebase origin main
             git push
           fi
@@ -179,6 +182,10 @@ jobs:
             echo "No scorecard artifact to commit."
           else
             git commit -m "chore(score): reliability scorecard [skip ci]"
+            # The A0 sweep exercises every tool, so it always leaves tracked
+            # caches dirty — this is the step that has failed with exit 128 on
+            # every weekly run. Discard that churn before rebasing.
+            git checkout -- .
             git pull --rebase origin main
             git push
           fi

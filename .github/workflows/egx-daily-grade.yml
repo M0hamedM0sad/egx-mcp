@@ -104,6 +104,11 @@ jobs:
             echo "No new evidence to commit."
           else
             git commit -m "chore(evidence): daily briefing + graded verdicts + proposal [skip ci]"
+            # Running the tools rewrites tracked runtime caches (price_cache.json,
+            # investing_pairids.json, decisions.jsonl …). Whatever wasn't staged
+            # above is disposable churn — drop it, or `pull --rebase` refuses with
+            # "cannot pull with rebase: You have unstaged changes" and exits 128.
+            git checkout -- .
             git pull --rebase origin main
             git push
           fi
