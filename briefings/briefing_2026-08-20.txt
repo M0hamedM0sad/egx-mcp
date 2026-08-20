@@ -1,0 +1,92 @@
+=== EGX PRE-MARKET BRIEFING — Thursday 2026-08-20 09:31 ===
+
+--- MACRO ---
+  EGX 30:  54,488 pts (—)
+  USD/EGP: 50.75 (+0.30%)
+  Brent:   $92.87 (+1.17%)
+  Gold 24K: 7,415.04 EGP/g  |  21K: 6,488.16  |  18K: 5,561.28
+  Egyptian gold pound: 51,905 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- TODAY'S W1 PICKS (5-day horizon, eligible: 40) ---
+  1. AMOC   score=39.15  price=9.08  5d=+26.1% RSI=88  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMOC/
+  2. SWDY   score=26.61  price=47.69  5d=+16.4% RSI=84  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SWDY/
+  3. HDBK   score=19.12  price=45.23  5d=+9.0% RSI=96  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-HDBK/
+  4. FAIT   score=18.41  price=30.72  5d=+10.0% RSI=91  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-FAIT/
+  5. SUGR   score=16.28  price=63.31  5d=+7.5% RSI=83  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SUGR/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  AMOC: ENTRY 9.13 | STOP 8.15 | SCALE-OUT 10.01 (2676 sh) | TARGET 10.48 (2676 sh) | 5352 total (9.72% NAV) | R:R 1:1.5 | time stop 2026-08-27
+  SWDY: ENTRY 47.93 | STOP 35.47 | SCALE-OUT 59.91 (204 sh) | TARGET 66.02 (205 sh) | 409 total (3.9% NAV) | R:R 1:1.5 | time stop 2026-08-27
+  HDBK: ENTRY 45.46 | STOP 41.84 | SCALE-OUT 48.62 (552 sh) | TARGET 50.32 (553 sh) | 1105 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-08-27
+  FAIT: ENTRY 30.87 | STOP 28.7 | SCALE-OUT 32.74 (813 sh) | TARGET 33.76 (814 sh) | 1627 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-08-27
+  SUGR: ENTRY 63.63 | STOP 60.82 | SCALE-OUT 65.8 (394 sh) | TARGET 67.05 (395 sh) | 789 total (9.99% NAV) | R:R 1:1.5 | time stop 2026-08-27
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  AMOC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  SWDY   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bearish
+  HDBK   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  FAIT   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  SUGR   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    SWDY: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    HDBK: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    FAIT: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    SUGR: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  AMOC:
+    Technicals:    RSI 88 — overbought; MACD bullish (+0.270); Riding upper Bollinger — extended; ATR 0.47 (3.9% of px) — sizing input
+    Fundamentals:  P/E 19.7 — premium; P/B 2.65; ROE 13.3% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "أموك" تقفز 109% إلى 1.9 مليار جنيه خلال النصف الأول [Mubasher]
+      - "أموك" ترفع توقعات أرباحها لعام 2026 إلى 2.1 مليار جنيه [Mubasher]
+  SWDY:
+    Technicals:    RSI 83 — overbought; MACD bullish (+1.977); Riding upper Bollinger — extended; ATR 6.11 (4.8% of px) — sizing input
+    Fundamentals:  P/E 12.9 — fair; P/B 9.71; ROE 75.0% — strong
+    News tone:     mildly_bearish (-0.33, 3 hdl)
+      - البورصة تقر تخفيض رأسمال السويدي إليكتريك عبر إعدام أسهم الخزينة [Mubasher]
+      - أرباح السويدي إليكتريك ترتفع إلى 10.6 مليار جنيه خلال النصف الأول من 2026 [Mubasher]
+  HDBK:
+    Technicals:    RSI 96 — overbought; MACD bullish (+2.433); Riding upper Bollinger — extended; ATR 1.70 (1.8% of px) — sizing input
+    Fundamentals:  P/B 0.72; ROE 651.1% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح بنك التعمير والإسكان ترتفع إلى 10.78 مليار جنيه في النصف الأول من 2026 [Mubasher]
+      - بنك التعمير والإسكان يشارك في تحالف مصرفي لترتيب تمويل بـ4 مليارات جنيه لـ"أورا" [Mubasher]
+  FAIT:
+    Technicals:    RSI 91 — overbought; MACD bullish (+0.526); Riding upper Bollinger — extended; ATR 1.01 (2.4% of px) — sizing input
+    Fundamentals:  P/E 1.4 — cheap; P/B 0.17; ROE 11.9% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - اليوم.. نهاية الحق في توزيع كوبون 5 شركات بالبورصة المصرية [Mubasher]
+      - سهم بنك فيصل الإسلامي المصري يختبر حاجزاً نفسياً مهماً [Mubasher]
+  SUGR:
+    Technicals:    RSI 83 — overbought; MACD bullish (+0.492); Riding upper Bollinger — extended; ATR 1.25 (2.4% of px) — sizing input
+    Fundamentals:  P/E 2.6 — cheap; P/B 2.38; ROE 93.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - تراجع أرباح الدلتا للسكر 85% خلال النصف الأول.. و3 أسباب وراء الهبوط [Mubasher]
+      - أرباح الدلتا للسكر تهبط 74% في الربع الأول.. والشركة تعزو السبب لزيادة المعروض [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: AMOC, SWDY, HDBK, FAIT, SUGR
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
