@@ -2,4 +2,43 @@
 EGX MODEL — STATISTICAL RELIABILITY VALIDATION
 ========================================================================
 
-No graded directional calls found. Run tests.grade_briefings first.
+graded directional calls : 446
+distinct briefing dates  : 47  -> EFFECTIVE independent sample
+dates: 2026-04-30, 2026-05-02, 2026-06-07, 2026-06-08, 2026-06-09, 2026-06-10, 2026-06-11, 2026-06-14, 2026-06-15, 2026-06-16, 2026-06-17, 2026-06-22, 2026-06-23, 2026-06-24, 2026-06-25, 2026-06-28, 2026-06-29, 2026-06-30, 2026-07-01, 2026-07-02, 2026-07-05, 2026-07-06, 2026-07-07, 2026-07-08, 2026-07-09, 2026-07-12, 2026-07-13, 2026-07-14, 2026-07-15, 2026-07-16, 2026-07-19, 2026-07-20, 2026-07-21, 2026-07-22, 2026-07-23, 2026-07-26, 2026-07-27, 2026-07-28, 2026-07-29, 2026-07-30, 2026-08-02, 2026-08-03, 2026-08-04, 2026-08-05, 2026-08-06, 2026-08-09, 2026-08-10
+
+------------------------------------------------------------------------
+1. SIGNED EDGE  (excess in the call's own direction; the metric that
+   actually means 'the calls added value')
+------------------------------------------------------------------------
+  naive mean excess (sign-blind, MISLEADING) : +5.26%
+  mean SIGNED edge (direction-aware, HONEST) : +0.48%  95% CI [-3.83%, +5.68%]
+  -> CI spans 0: cannot distinguish the edge from luck at this sample.
+
+------------------------------------------------------------------------
+2. DIRECTIONAL HIT-RATE  (exact binomial vs a 50% coin)
+------------------------------------------------------------------------
+  pooled             n=446  hit= 36.1%  (binomial vs 50%: p=0.000)  (p<0.05)
+  horizon 5d         n=268  hit= 38.8%  (binomial vs 50%: p=0.000)  (p<0.05)
+  horizon 21d        n=178  hit= 32.0%  (binomial vs 50%: p=0.000)  (p<0.05)
+  buy-side           n=409  hit= 36.2%  (binomial vs 50%: p=0.000)  (p<0.05)
+  sell-side          n= 37  hit= 35.1%  (binomial vs 50%: p=0.099)
+
+------------------------------------------------------------------------
+3. CALIBRATION  (does higher conviction = higher hit-rate?)
+------------------------------------------------------------------------
+  medium     n= 55  hit= 29.1%  signed_edge=-22.77%
+  weekly     n=391  hit= 37.1%  signed_edge=+3.75%
+  not enough graded calls in >=2 ranked buckets to judge calibration.
+
+------------------------------------------------------------------------
+4. REGIME ROBUSTNESS  (edge split by the benchmark's own direction
+   over each call's window — a bull-only edge is the #1 EGX blow-up)
+------------------------------------------------------------------------
+  bench up   (bull): n=436  hit= 36.0%  signed_edge=+0.60%
+  bench down (corr): n= 10  hit= 40.0%  signed_edge=-4.60%
+
+========================================================================
+VERDICT: INCONCLUSIVE
+  Sample is adequate but the edge is statistically indistinguishable fro
+  m zero. Decision-support only; do not size up on conviction yet.
+========================================================================

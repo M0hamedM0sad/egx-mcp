@@ -1,8 +1,59 @@
 {
-  "status": "insufficient_evidence",
-  "graded_v8b_calls": 0,
-  "need": 40,
-  "message": "Only 0 graded decide() calls (need 40). Let the daily grading accumulate — no proposal made."
+  "status": "blocked_by_reliability",
+  "graded_v8b_calls": 158,
+  "reliability_gate": {
+    "passed": false,
+    "mode": "research_only",
+    "primary_horizon_days": 21,
+    "directional_calls": 20,
+    "independent_briefing_dates": 14,
+    "directional_accuracy_pct": 20.0,
+    "mean_signed_edge_pct": -22.072,
+    "mean_date_signed_edge_pct": -27.063,
+    "latest_evidence_date": "2026-07-20",
+    "evidence_age_days": 34,
+    "calibration": {
+      "high": {
+        "n": 0,
+        "accuracy_pct": null,
+        "usable": false
+      },
+      "medium": {
+        "n": 20,
+        "accuracy_pct": 20.0,
+        "usable": true
+      },
+      "low": {
+        "n": 0,
+        "accuracy_pct": null,
+        "usable": false
+      }
+    },
+    "checks": {
+      "sample_size": false,
+      "independent_dates": true,
+      "directional_accuracy": false,
+      "positive_signed_edge": false,
+      "conviction_calibration": false,
+      "evidence_freshness": true
+    },
+    "failed_checks": [
+      "sample_size",
+      "directional_accuracy",
+      "positive_signed_edge",
+      "conviction_calibration"
+    ],
+    "thresholds": {
+      "min_directional_calls": 40,
+      "min_independent_dates": 8,
+      "min_directional_accuracy_pct": 55.0,
+      "min_bucket_calls": 10,
+      "max_evidence_age_days": 45
+    },
+    "message": "Live v8b evidence is insufficient or unproven; buy-side output is research-only."
+  },
+  "recommendation": "KEEP_CURRENT",
+  "message": "No learning proposal: the live decision-reliability gate is not passed. Accumulate independent, directionally positive, calibrated 21-session v8b evidence before changing model parameters."
 }
 
 Proposal written -> /home/runner/work/egx-mcp/egx-mcp/logs/learning_proposal.json
