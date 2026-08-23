@@ -47,7 +47,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from egx_mcp.data import egx_listing
 from egx_mcp.data.universe import resolve_ticker
 from egx_mcp.data.weekly import W1Config, _features as _w1_features, \
-    _score as _w1_score, _load_quality_set
+    _score as _w1_score, _load_quality_set, eligibility as _w1_eligibility
 
 TOP_N = 5
 N_PATHS = 1000
@@ -156,7 +156,7 @@ def main() -> int:
             old = _old_score(cl, cut_ts)
             f = _w1_features(cl, volumes_d[tk], cut_ts)
             w1 = _w1_score(f, cfg) if f is not None else None
-            eligible = (f is not None and f["vol_ratio"] >= cfg.min_volume_ratio
+            eligible = (f is not None and all(_w1_eligibility(f, cfg).values())
                         and ((not quality) or tk in quality))
             rows.append({"tk": tk, "old": old, "w1": w1,
                          "eligible": eligible, "actual": actual})

@@ -77,21 +77,30 @@ class W1Config:
     # A penalty was already tried for extension (rsi_ceiling) and did not stop
     # entries like RSI 95 after +76% in five sessions, because the momentum
     # term outruns the penalty. These are hard filters instead.
-    # Levels checked against the 18k-row panel (85 rebalance dates, top-5 by
-    # composite, 21-session excess vs the equal-weight basket):
-    #   no filter                        mean +2.16%  median +0.81%  57.6% positive
-    #   run-up <= 25%                    mean +2.22%  median +1.14%  58.8% positive
-    #   + turnover >= 50k, price >= 1    mean +3.02%  median +2.75%  59.0% positive
-    #   turnover >= 250k (rejected)      mean +1.46%  — the 50k-250k bucket is the
-    #                                    best-performing one in the panel; cutting
-    #                                    it removed edge rather than variance.
-    # In-sample over the whole panel, so treat as a sanity check, not proof —
-    # the weekly walk-forward re-tests it out-of-sample.
-    min_price_egp: float = 1.0        # weakest-evidenced of the three: no effect
-                                      # univariate, helps only alongside turnover
-    min_turnover_egp: float = 50_000  # 20-day median traded value; below this the
-                                      # panel shows -0.99% mean and 28.6% hit rate
-    max_5d_runup_pct: float = 25.0    # do not buy the blow-off top
+    # --- variance filters: OFF by default, and here is why -----------------
+    # The 18k-row panel says extended names underperform (21-session forward
+    # excess: run-up 25-50% -> -1.88%, >50% -> -5.85%), which argued for a
+    # run-up cap. Out-of-sample on THIS model it is wrong — 26 weekly
+    # walk-forward weeks, identical prices and scores, only eligibility varying
+    # (tests/ab_w1_filters.py):
+    #
+    #   old (quality+volume)      mean +4.89%  median +2.06%  beat-basket 50.0%
+    #   + extension only          mean +1.26%  median +1.32%  -3.63pp, won 9/26 wks
+    #   + liquidity only          mean +4.31%  median +1.43%  -0.58pp, won 4/26 wks
+    #   + both                    mean +0.74%  median +0.59%  -4.15pp, won 9/26 wks
+    #
+    # The two results are not in conflict — they measure different models. The
+    # panel scores the v8b composite over 21 sessions, where extension mean-
+    # reverts. W1 is a 5-day momentum model, and its return IS the right tail:
+    # capping run-up removed exactly the weeks it earned anything (2026-07-23
+    # +34.57% -> +0.46%, 2026-08-13 +17.55% -> -0.40%).
+    #
+    # So the filters stay implemented and tunable, but default to inert. The
+    # burden of proof is on a change to live selection, and neither cleared it.
+    # Re-run tests/ab_w1_filters.py before enabling either.
+    min_price_egp: float = 0.0
+    min_turnover_egp: float = 0.0
+    max_5d_runup_pct: float = float("inf")
 
 
 # ---------------------------------------------------------------------------
@@ -195,6 +204,21 @@ def _features(closes: pd.Series, volumes: pd.Series, asof: pd.Timestamp) -> dict
     }
 
 
+def eligibility(f: dict, c: W1Config) -> dict[str, bool]:
+    """Which production filters this name passes at the as-of date.
+
+    Single source of truth: the OOS harnesses re-derived these rules inline and
+    silently stopped matching production the moment a filter was added, which
+    makes a walk-forward measure a model nobody runs. They call this instead.
+    """
+    return {
+        "volume": f["vol_ratio"] >= c.min_volume_ratio,
+        "liquidity": (f["p_now"] >= c.min_price_egp
+                      and f["turnover_egp"] >= c.min_turnover_egp),
+        "extension": f["mom_5d"] <= c.max_5d_runup_pct,
+    }
+
+
 def _score(f: dict, c: W1Config) -> float:
     s = (f["mom_5d"] * c.w_mom5
          + f["mom_20d"] * c.w_mom20
@@ -259,10 +283,9 @@ def rank_universe(asof: str | None = None, cfg: W1Config | None = None,
             skipped.append({"ticker": tk, "reason": "insufficient history"})
             continue
         passes_quality = (not quality_set) or (tk in quality_set)
-        passes_volume = f["vol_ratio"] >= cfg.min_volume_ratio
-        passes_liquidity = (f["p_now"] >= cfg.min_price_egp
-                            and f["turnover_egp"] >= cfg.min_turnover_egp)
-        passes_extension = f["mom_5d"] <= cfg.max_5d_runup_pct
+        elig = eligibility(f, cfg)
+        passes_volume, passes_liquidity, passes_extension = (
+            elig["volume"], elig["liquidity"], elig["extension"])
         score = _score(f, cfg)
         rows.append({
             "ticker": tk,

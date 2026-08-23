@@ -61,7 +61,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from egx_mcp.data import egx_listing, risk_free
 from egx_mcp.data.universe import resolve_ticker
 from egx_mcp.data.weekly import W1Config, _features as _w1_features, \
-    _score as _w1_score, _load_quality_set
+    _score as _w1_score, _load_quality_set, eligibility as _w1_eligibility
 
 # ---------------------------------------------------------------------------
 # Dynamic date computation — no hardcoded dates
@@ -124,12 +124,13 @@ def _production_score(closes: pd.Series, volumes: pd.Series,
                       cutoff: pd.Timestamp) -> tuple[float | None, bool]:
     """Score with the deployed W1 weekly model as of cutoff.
 
-    Returns (score, passes_volume_filter); score is None when features
-    can't be computed."""
+    Returns (score, passes_all_production_filters); score is None when features
+    can't be computed. Filters come from weekly.eligibility so this cannot
+    drift away from what production actually ranks."""
     f = _w1_features(closes, volumes, cutoff)
     if f is None:
         return None, False
-    return _w1_score(f, _W1_CFG), f["vol_ratio"] >= _W1_CFG.min_volume_ratio
+    return _w1_score(f, _W1_CFG), all(_w1_eligibility(f, _W1_CFG).values())
 
 
 def _bootstrap_forecast(closes: pd.Series, cutoff: pd.Timestamp, horizon_days: int) -> dict:
