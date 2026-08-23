@@ -39,7 +39,7 @@ def _evidence_gate(gate: dict) -> tuple[str, list[str]]:
         f"(need >= {reliability.MIN_DIRECTIONAL_ACCURACY_PCT:.0f}%)",
         f"date-weighted signed edge: "
         f"{gate['mean_date_signed_edge_pct'] if gate['mean_date_signed_edge_pct'] is not None else 'n/a'}% "
-        "(must be > 0)",
+        f"CI95 {gate['signed_edge_ci95'] or 'n/a'} (CI lower bound must be > 0)",
         f"latest evidence: {gate['latest_evidence_date'] or 'n/a'} "
         f"(age {gate['evidence_age_days'] if gate['evidence_age_days'] is not None else 'n/a'} days; "
         f"max {reliability.MAX_EVIDENCE_AGE_DAYS})",
@@ -48,6 +48,34 @@ def _evidence_gate(gate: dict) -> tuple[str, list[str]]:
     passed = all(checks[name] for name in checks_used)
     if not passed:
         lines.append("-> buy-side output remains research-only until every evidence check passes.")
+    return ("PASS" if passed else "OPEN"), lines
+
+
+def _cross_section_gate(gate: dict) -> tuple[str, list[str]]:
+    """Tier 1 — the whole scored cross-section, not just the directional calls.
+
+    Reaches significance far sooner than per-name hit-rate because it uses
+    every scored name per date and judges the basket, which is the unit that
+    actually gets traded.
+    """
+    ic, pf = gate["rank_ic"], gate["portfolio_edge"]
+
+    def _line(label: str, blk: dict, unit: str) -> str:
+        if blk["mean"] is None:
+            return f"{label}: n/a ({blk['n_dates']} dates — {blk['reason']})"
+        return (f"{label}: {blk['mean']:+.4f}{unit} "
+                f"CI95 {blk['ci95']} over {blk['n_dates']} dates "
+                f"-> {'PASS' if blk['positive'] else 'not yet'}")
+
+    lines = [
+        _line("date-wise rank IC (score vs 21d excess)", ic, ""),
+        _line(f"top-{reliability.PORTFOLIO_TOP_N} basket excess per date", pf, "%"),
+        f"needs >= {reliability.MIN_RANKED_DATES} dates with >= "
+        f"{reliability.MIN_NAMES_PER_DATE} scored names, CI lower bound > 0",
+    ]
+    passed = all(gate["tier1_checks"].values())
+    if not passed:
+        lines.append("-> satellite sizing stays disabled until both intervals clear zero.")
     return ("PASS" if passed else "OPEN"), lines
 
 
@@ -93,10 +121,14 @@ def main() -> int:
         ("1  EVIDENCE   (proven live edge)", _evidence_gate(gate)),
         ("2  DATA       (fundamentals coverage)", _data_gate()),
         ("3  CALIBRATION (conviction = accuracy)", _calibration_gate(gate)),
+        ("4  CROSS-SECTION (tier-1 satellite gate)", _cross_section_gate(gate)),
     ]
     print("=" * 70)
     print("EGX MODEL RELIABILITY SCORECARD")
     print("=" * 70)
+    scope = ("this version only" if gate["version_filtered"]
+             else "ALL versions — no stamped rows yet")
+    print(f"\nmodel version: {gate['model_version']}  (evidence scope: {scope})")
     for title, (status, lines) in gates:
         print(f"\n[{'PASS' if status == 'PASS' else 'OPEN'}]  Gate {title}")
         for line in lines:
@@ -105,7 +137,12 @@ def main() -> int:
     print("\n" + "=" * 70)
     if open_gates:
         print(f"VERDICT: NOT YET RELIABLE — {len(open_gates)} gate(s) open.")
-        print("Research-only: keep the human gate and do not use buy-side sizing.")
+        print(f"Tier {gate['tier']} — {gate['tier_name']}.")
+        if gate["tier"] >= 1:
+            print("Cross-sectional edge is established: capped satellite sizing is")
+            print("authorized. Full buy-side sizing still needs the directional gates.")
+        else:
+            print("Research-only: keep the human gate and do not use buy-side sizing.")
     else:
         print("VERDICT: live reliability gates pass. Still use human supervision and re-check after regime change.")
     print("=" * 70)

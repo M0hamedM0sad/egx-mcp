@@ -66,6 +66,32 @@ class W1Config:
     rsi_ceiling: float = 80.0
     w_rsi_ceiling: float = 1.0      # per RSI point above ceiling
     macd_slope_exempt: bool = True  # waive penalty if MACD hist is rising
+    # --- variance filters (hard, not penalties) ---------------------------
+    # Live grading shows the picks are right-skewed: the median call lags the
+    # basket while a handful of illiquid microcaps carry the mean. That shape
+    # needs an enormous sample to prove an edge, because the sample size a
+    # significance test needs scales with variance / effect². Cutting the tail
+    # is therefore the cheapest way to make the model provable — and these
+    # names are the ones a real order could not fill anyway.
+    #
+    # A penalty was already tried for extension (rsi_ceiling) and did not stop
+    # entries like RSI 95 after +76% in five sessions, because the momentum
+    # term outruns the penalty. These are hard filters instead.
+    # Levels checked against the 18k-row panel (85 rebalance dates, top-5 by
+    # composite, 21-session excess vs the equal-weight basket):
+    #   no filter                        mean +2.16%  median +0.81%  57.6% positive
+    #   run-up <= 25%                    mean +2.22%  median +1.14%  58.8% positive
+    #   + turnover >= 50k, price >= 1    mean +3.02%  median +2.75%  59.0% positive
+    #   turnover >= 250k (rejected)      mean +1.46%  — the 50k-250k bucket is the
+    #                                    best-performing one in the panel; cutting
+    #                                    it removed edge rather than variance.
+    # In-sample over the whole panel, so treat as a sanity check, not proof —
+    # the weekly walk-forward re-tests it out-of-sample.
+    min_price_egp: float = 1.0        # weakest-evidenced of the three: no effect
+                                      # univariate, helps only alongside turnover
+    min_turnover_egp: float = 50_000  # 20-day median traded value; below this the
+                                      # panel shows -0.99% mean and 28.6% hit rate
+    max_5d_runup_pct: float = 25.0    # do not buy the blow-off top
 
 
 # ---------------------------------------------------------------------------
@@ -144,8 +170,14 @@ def _features(closes: pd.Series, volumes: pd.Series, asof: pd.Timestamp) -> dict
         if len(hist) >= 2 and not pd.isna(hist.iloc[-1]) and not pd.isna(hist.iloc[-2]):
             macd_slope_pos = float(hist.iloc[-1]) > float(hist.iloc[-2])
 
+    # 20-day median traded value — what an order could actually get filled in.
+    recent = cl.tail(20)
+    v20 = vol.tail(20).reindex(recent.index).ffill()
+    turnover_egp = float((recent * v20).median()) if len(v20.dropna()) >= 10 else 0.0
+
     return {
         "p_now": p_now,
+        "turnover_egp": turnover_egp,
         "mom_1d": (p_now / p_1d - 1) * 100,
         "mom_5d": (p_now / p_5d - 1) * 100,
         "mom_20d": (p_now / p_20d - 1) * 100,
@@ -228,12 +260,18 @@ def rank_universe(asof: str | None = None, cfg: W1Config | None = None,
             continue
         passes_quality = (not quality_set) or (tk in quality_set)
         passes_volume = f["vol_ratio"] >= cfg.min_volume_ratio
+        passes_liquidity = (f["p_now"] >= cfg.min_price_egp
+                            and f["turnover_egp"] >= cfg.min_turnover_egp)
+        passes_extension = f["mom_5d"] <= cfg.max_5d_runup_pct
         score = _score(f, cfg)
         rows.append({
             "ticker": tk,
             "score": round(score, 2),
             "passes_quality_filter": passes_quality,
             "passes_volume_filter": passes_volume,
+            "passes_liquidity_filter": passes_liquidity,
+            "passes_extension_filter": passes_extension,
+            "turnover_egp_20d": round(f["turnover_egp"], 0),
             "price": round(f["p_now"], 4),
             "mom_1d_pct": round(f["mom_1d"], 2),
             "mom_5d_pct": round(f["mom_5d"], 2),
@@ -247,17 +285,25 @@ def rank_universe(asof: str | None = None, cfg: W1Config | None = None,
             "macd_slope_pos": f.get("macd_slope_pos", False),
         })
 
-    eligible = [r for r in rows if r["passes_quality_filter"] and r["passes_volume_filter"]]
-    eligible.sort(key=lambda r: r["score"], reverse=True)
+    def _eligible(require_volume: bool) -> list[dict]:
+        out = [r for r in rows
+               if r["passes_quality_filter"]
+               and r["passes_liquidity_filter"]      # never relaxed: an unfillable
+               and r["passes_extension_filter"]      # or blown-off name is not a pick
+               and (r["passes_volume_filter"] or not require_volume)]
+        out.sort(key=lambda r: r["score"], reverse=True)
+        return out
+
+    eligible = _eligible(require_volume=True)
     volume_filter_relaxed = False
     if len(eligible) < top_n:
         # Pre-holiday half-sessions can fail the single-session volume filter
         # for the entire universe (e.g. the 2026-03-19 and 2026-05-28 Eid
         # weeks), leaving an empty pick list. Fall back to quality-only
-        # eligibility rather than emitting a degenerate briefing.
+        # eligibility rather than emitting a degenerate briefing. Liquidity and
+        # extension still apply — a short list is honest, a bad pick is not.
         volume_filter_relaxed = True
-        eligible = [r for r in rows if r["passes_quality_filter"]]
-        eligible.sort(key=lambda r: r["score"], reverse=True)
+        eligible = _eligible(require_volume=False)
     top_picks = eligible[:top_n]
     runners_up = eligible[top_n:top_n + 5]
 
@@ -267,12 +313,17 @@ def rank_universe(asof: str | None = None, cfg: W1Config | None = None,
         "n_universe": len(universe),
         "n_with_features": len(rows),
         "n_passes_quality": sum(1 for r in rows if r["passes_quality_filter"]),
+        "n_fails_liquidity": sum(1 for r in rows if not r["passes_liquidity_filter"]),
+        "n_fails_extension": sum(1 for r in rows if not r["passes_extension_filter"]),
         "n_eligible": len(eligible),
         "volume_filter_relaxed": volume_filter_relaxed,
         "config": {
             "w_mom5": cfg.w_mom5, "w_mom20": cfg.w_mom20, "w_mr1": cfg.w_mr1,
             "w_breakout": cfg.w_breakout, "w_trend": cfg.w_trend,
             "min_roe_pct": cfg.min_roe_pct, "top_n": top_n,
+            "min_price_egp": cfg.min_price_egp,
+            "min_turnover_egp": cfg.min_turnover_egp,
+            "max_5d_runup_pct": cfg.max_5d_runup_pct,
         },
         "top_picks": top_picks,
         "runners_up": runners_up,

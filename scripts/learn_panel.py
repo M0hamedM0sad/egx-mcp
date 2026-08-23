@@ -197,23 +197,44 @@ def _cv_score(dates: dict[str, list[dict]], folds, w: dict) -> list[float]:
 # fitters
 # ---------------------------------------------------------------------------
 
-def _fit_tilt(train: dict[str, list[dict]], base: dict) -> dict:
-    """Incumbent fitter: correlation tilt, capped, renormalized."""
+def _fit_tilt(train: dict[str, list[dict]], base: dict, pit_only: bool = False) -> dict:
+    """Incumbent fitter: correlation tilt, capped, renormalized.
+
+    With `pit_only`, contaminated factors keep their current weight: a tilt
+    computed from look-ahead features is not evidence about anything.
+    """
     rows = [r for g in train.values() for r in g]
     exc = [r[f"excess_{_HORIZON}d_pct"] for r in rows]
     cand = {}
     for k in _KEYS:
+        if pit_only and k in _DIRTY:
+            cand[k] = base[k]
+            continue
         c = _pearson([r[_SUB[k]] for r in rows], exc) or 0.0
         cand[k] = base[k] * max(_TILT_BOUND[0], min(_TILT_BOUND[1], 1 + _TILT * c))
     return _normalize(cand)
 
 
-def _simplex_grid() -> list[dict]:
-    """Weight vectors on a 0.05 grid, each factor in [0.05, 0.60], summing to 1."""
+def _simplex_grid(base: dict | None = None, pit_only: bool = False) -> list[dict]:
+    """Weight vectors on a 0.05 grid, each factor in [0.05, 0.60], summing to 1.
+
+    With `pit_only` the contaminated factors are pinned at their current
+    weights and only the point-in-time-clean pair is searched — the panel
+    cannot say anything trustworthy about the other two until
+    scripts.snapshot_fundamentals has accumulated real history.
+    """
     lo, hi = _GRID_BOUNDS
     steps = [round(lo + i * _GRID_STEP, 4)
              for i in range(int(round((hi - lo) / _GRID_STEP)) + 1)]
     out = []
+    if pit_only and base:
+        pinned = {k: base[k] for k in _DIRTY}
+        budget = round(1.0 - sum(pinned.values()), 4)
+        for m in steps:
+            r = round(budget - m, 4)
+            if lo - 1e-9 <= r <= hi + 1e-9:
+                out.append({**pinned, "momentum": m, "risk": r})
+        return out
     for v, q, m in product(steps, repeat=3):
         r = round(1.0 - v - q - m, 4)
         if lo - 1e-9 <= r <= hi + 1e-9:
@@ -221,9 +242,9 @@ def _simplex_grid() -> list[dict]:
     return out
 
 
-def _fit_cv(dates: dict[str, list[dict]], folds, base: dict) -> dict:
+def _fit_cv(dates: dict[str, list[dict]], folds, base: dict, pit_only: bool = False) -> dict:
     """Grid search scored by mean OOS IC across purged walk-forward folds."""
-    grid = _simplex_grid()
+    grid = _simplex_grid(base, pit_only)
     base_folds = _cv_score(dates, folds, base)
     base_ic = st.mean(base_folds) if base_folds else None
     scored = []
@@ -299,6 +320,50 @@ def _clean_row_pct(rows: list[dict]) -> float:
     return 100 * clean / len(rows)
 
 
+def _candidate_factor_ic(dates: dict[str, list[dict]], folds) -> dict:
+    """Out-of-sample IC of each research feature build_panel records.
+
+    Purely diagnostic: these features are not in the live composite and this
+    block proposes nothing. It exists because the production momentum leg
+    measures ~0.00 OOS IC, and the only way to know whether a different
+    definition carries signal on the EGX is to score it on the same purged
+    folds as everything else. A feature that survives here is a candidate for a
+    human to wire in — not an automatic change.
+    """
+    keys = sorted({k for g in dates.values() for r in g for k in r if k.startswith("cand_")})
+    if not keys:
+        return {"status": "absent",
+                "note": "panel carries no cand_* columns — rebuild with scripts.build_panel"}
+    out = {}
+    for k in keys:
+        per_fold = []
+        for _, test in folds:
+            ics = []
+            for d in test:
+                group = [r for r in dates[d] if isinstance(r.get(k), (int, float))]
+                if len(group) < _MIN_NAMES_PER_DATE:
+                    continue
+                ic = _spearman([float(r[k]) for r in group],
+                               [r[f"excess_{_HORIZON}d_pct"] for r in group])
+                if ic is not None:
+                    ics.append(ic)
+            if ics:
+                per_fold.append(st.mean(ics))
+        if not per_fold:
+            out[k] = {"oos_ic": None, "n_folds": 0}
+            continue
+        out[k] = {"oos_ic": round(st.mean(per_fold), 4),
+                  "fold_ic": [round(x, 4) for x in per_fold],
+                  "n_folds": len(per_fold),
+                  "sign_consistent": all(x > 0 for x in per_fold) or all(x < 0 for x in per_fold)}
+    ranked = sorted((k for k in out if out[k]["oos_ic"] is not None),
+                    key=lambda k: -abs(out[k]["oos_ic"]))
+    return {"status": "ok", "per_factor": out, "ranked_by_abs_ic": ranked[:6],
+            "note": ("Diagnostic only — nothing here is applied. A candidate worth wiring "
+                     "in should have |IC| clearly above the production factors AND a "
+                     "consistent sign across folds.")}
+
+
 def _contamination(dates: dict[str, list[dict]], folds, w: dict) -> dict:
     """What the clean half of the feature set says, on its own.
 
@@ -342,7 +407,7 @@ def _contamination(dates: dict[str, list[dict]], folds, w: dict) -> dict:
 # proposal
 # ---------------------------------------------------------------------------
 
-def _build() -> dict:
+def _build(allow_contaminated: bool = False) -> dict:
     rows = _load_panel()
     dates = _by_date(rows)
     sorted_dates = sorted(dates)
@@ -374,8 +439,18 @@ def _build() -> dict:
     # the incumbent on data that played no part in choosing it.
     folds, holdout = all_folds[:-1], all_folds[-1:]
 
+    # Fit only what the panel can honestly speak to. valuation/quality are
+    # built from a fundamentals snapshot that post-dates most rows, so a weight
+    # learned for them encodes look-ahead, not skill. Default is to pin them at
+    # their current values; --allow-contaminated restores the old behaviour for
+    # comparison, and both paths report the same contamination block.
+    clean_pct = _clean_row_pct(rows)
+    pit_only = (not allow_contaminated) and clean_pct < 99.9
+    meta["pit_only_fit"] = pit_only
+    meta["clean_row_pct"] = round(clean_pct, 1)
+
     train_all = {d: dates[d] for f in folds for d in f[0]}
-    tilt_w = _fit_tilt(train_all, base)
+    tilt_w = _fit_tilt(train_all, base, pit_only)
     tilt_folds = _cv_score(dates, folds, tilt_w)
     base_folds = _cv_score(dates, folds, base)
     tilt = {"candidate_weights": tilt_w,
@@ -384,7 +459,7 @@ def _build() -> dict:
             "fold_ic_candidate": [round(x, 4) for x in tilt_folds],
             "folds_won": sum(1 for a, b in zip(tilt_folds, base_folds) if a > b),
             "n_folds": len(folds)}
-    cv = _fit_cv(dates, folds, base)
+    cv = _fit_cv(dates, folds, base, pit_only)
 
     base_hold = _cv_score(dates, holdout, base)
     hold_base_ic = st.mean(base_hold) if base_hold else None
@@ -446,8 +521,14 @@ def _build() -> dict:
         msg.append(f"BUY cut {cur_buy}->{thr['candidate']} "
                    f"({thr['oos_candidate']['mean_excess_pct']}% vs "
                    f"{thr['oos_current']['mean_excess_pct']}% OOS mean excess).")
-    msg.append("Valuation/quality weights are fitted on look-ahead-contaminated "
-               "features — see contamination block before approving.")
+    if pit_only:
+        msg.append(f"Point-in-time-clean fit: only {clean_pct:.1f}% of panel rows carry a "
+                   "real point-in-time fundamentals read, so valuation/quality stayed pinned "
+                   "at their current weights and only momentum/risk were searched "
+                   "(--allow-contaminated to fit all four).")
+    else:
+        msg.append("Valuation/quality weights are fitted on look-ahead-contaminated "
+                   "features — see contamination block before approving.")
 
     # The daily loop refuses to propose at all while the live gate is open.
     # This loop learns from historical market data rather than live calls, so it
@@ -473,6 +554,7 @@ def _build() -> dict:
         "winning_fitter": winner,
         "threshold": thr,
         "contamination": contam,
+        "candidate_factors": _candidate_factor_ic(dates, folds),
         "live_reliability_gate": {"passed": bool(gate.get("passed")),
                                   "mode": gate.get("mode"),
                                   "failed_checks": gate.get("failed_checks")},
@@ -560,8 +642,8 @@ def _pr_text(p: dict) -> tuple[str, str]:
     return title, "\n".join(lines)
 
 
-def cmd_analyze() -> int:
-    p = _build()
+def cmd_analyze(allow_contaminated: bool = False) -> int:
+    p = _build(allow_contaminated)
     _PROPOSAL.parent.mkdir(parents=True, exist_ok=True)
     _PROPOSAL.write_text(json.dumps(p, ensure_ascii=False, indent=2), encoding="utf-8")
     skip = {"proposed_params", "pr_body"}
@@ -592,8 +674,12 @@ def cmd_apply() -> int:
 def main() -> int:
     ap = argparse.ArgumentParser(description="Learn model params from the market-data panel.")
     ap.add_argument("--apply", action="store_true", help="Apply the proposal (after review).")
+    ap.add_argument("--allow-contaminated", action="store_true",
+                    help=("Also fit valuation/quality weights, which are built from a "
+                          "fundamentals snapshot that post-dates most panel rows. Off by "
+                          "default — those weights would be learned from look-ahead."))
     args = ap.parse_args()
-    return cmd_apply() if args.apply else cmd_analyze()
+    return cmd_apply() if args.apply else cmd_analyze(args.allow_contaminated)
 
 
 if __name__ == "__main__":

@@ -47,7 +47,7 @@ if hasattr(sys.stdout, "reconfigure"):
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from scripts.export_fundamentals_csv import ALIASES, _tv_fill  # noqa: E402
-from egx_mcp.data import investing, model_params, regime, scoring  # noqa: E402
+from egx_mcp.data import investing, model_params, price_sanity, regime, scoring  # noqa: E402
 
 ROOT = Path(__file__).parent.parent
 _PRICES = ROOT / "logs" / "panel_prices.json"
@@ -65,16 +65,69 @@ _REBALANCE_DOW = 3         # Thursday — matches the weekly walk-forward cutoff
 # Prices
 # ---------------------------------------------------------------------------
 
+def _yahoo_history(tk: str, lookback_days: int) -> list[dict] | None:
+    """Yahoo fallback for names investing.com refuses.
+
+    investing.com 403s every request from the GitHub runner IPs — on
+    2026-08-23 that turned a working 18k-row panel into `Fetched 0 series
+    (250 failed)` and the whole market-data learning arm produced nothing.
+    A second source means one blocked vendor degrades the panel instead of
+    zeroing it.
+    """
+    import yfinance as yf
+
+    from egx_mcp.data.agentic_backtest import _benchmark_series
+    from egx_mcp.data.universe import resolve_ticker
+
+    start = (pd.Timestamp.today() - pd.Timedelta(days=lookback_days)).strftime("%Y-%m-%d")
+    try:
+        if tk == "EGX30":
+            s = _benchmark_series(start, pd.Timestamp.today().strftime("%Y-%m-%d"))
+            if s is None or s.empty:
+                return None
+            return [{"date": d.strftime("%Y-%m-%d"), "close": float(v), "volume": None}
+                    for d, v in s.items() if v == v and v > 0]
+        _, yahoo, _ = resolve_ticker(tk)
+        h = yf.Ticker(yahoo).history(start=start, interval="1d", auto_adjust=True)
+        if h is None or h.empty:
+            return None
+        return [{"date": pd.Timestamp(d).strftime("%Y-%m-%d"),
+                 "close": float(row["Close"]),
+                 "volume": (float(row["Volume"]) if "Volume" in row and row["Volume"] == row["Volume"]
+                            else None)}
+                for d, row in h.iterrows() if float(row["Close"]) > 0]
+    except Exception:  # noqa: BLE001 — a fallback that raises is no fallback
+        return None
+
+
 def _refresh_prices(tickers: list[str], lookback_days: int, throttle_s: float = 0.4) -> dict:
-    """Fetch daily history for the universe + EGX30, straight from investing.com."""
+    """Fetch daily history for the universe + EGX30: investing.com, then Yahoo.
+
+    The result is MERGED into whatever the cache already holds. An outage at
+    one vendor must never delete history that was already fetched — the old
+    behaviour overwrote the file unconditionally, so a bad fetch day wiped the
+    learner's entire training substrate.
+    """
+    prev: dict[str, list[dict]] = {}
+    if _PRICES.exists():
+        try:
+            prev = json.loads(_PRICES.read_text(encoding="utf-8")).get("prices", {}) or {}
+        except Exception:  # noqa: BLE001
+            prev = {}
+
     out: dict[str, list[dict]] = {}
     failed: list[str] = []
+    from_yahoo: list[str] = []
     for i, tk in enumerate(tickers + ["EGX30"], 1):
         try:
             rows = investing.fetch_history(tk, lookback_days=lookback_days)
         except Exception as e:  # noqa: BLE001
             print(f"  {tk}: {type(e).__name__} {e}")
             rows = None
+        if not rows:
+            rows = _yahoo_history(tk, lookback_days)
+            if rows:
+                from_yahoo.append(tk)
         if rows:
             out[tk] = [{"date": r["date"], "close": r["close"], "volume": r.get("volume")}
                        for r in rows]
@@ -83,12 +136,22 @@ def _refresh_prices(tickers: list[str], lookback_days: int, throttle_s: float = 
         if i % 20 == 0:
             print(f"  fetched {i}/{len(tickers) + 1} ...")
         time.sleep(throttle_s)
-    payload = {"fetched_at": pd.Timestamp.utcnow().isoformat(),
+
+    merged = {**prev, **out}          # fresh series win; stale ones survive an outage
+    kept_stale = sorted(set(prev) - set(out))
+    payload = {"fetched_at": pd.Timestamp.now("UTC").isoformat(),
                "lookback_days": lookback_days,
-               "n_tickers": len(out), "failed": failed, "prices": out}
+               "n_tickers": len(merged), "failed": failed,
+               "from_yahoo": from_yahoo, "kept_from_previous": kept_stale,
+               "prices": merged}
     _PRICES.parent.mkdir(parents=True, exist_ok=True)
     _PRICES.write_text(json.dumps(payload), encoding="utf-8")
-    print(f"Fetched {len(out)} series ({len(failed)} failed) -> {_PRICES}")
+    print(f"Fetched {len(out)} series this run "
+          f"({len(out) - len(from_yahoo)} investing.com, {len(from_yahoo)} Yahoo fallback, "
+          f"{len(failed)} failed)")
+    if kept_stale:
+        print(f"  kept {len(kept_stale)} previously-cached series that no source served today")
+    print(f"Panel cache now holds {len(merged)} series -> {_PRICES}")
     return payload
 
 
@@ -115,7 +178,51 @@ def _load_prices() -> tuple[dict[str, list[dict]], str]:
 def _closes(rows: list[dict]) -> pd.Series:
     s = pd.Series({r["date"]: r["close"] for r in rows if r.get("close")}, dtype="float64")
     s.index = pd.to_datetime(s.index)
+    # Non-positive ticks are vendor errors, never prices (see price_sanity).
+    return price_sanity.clean_series(s.sort_index())
+
+
+def _volumes(rows: list[dict]) -> pd.Series:
+    s = pd.Series({r["date"]: r.get("volume") for r in rows}, dtype="float64")
+    s.index = pd.to_datetime(s.index)
     return s.sort_index().dropna()
+
+
+def _candidate_factors(closes: pd.Series, volumes: pd.Series) -> dict:
+    """Point-in-time research features the production score does NOT use.
+
+    Recorded so learn_panel can rank them by out-of-sample IC before anyone
+    proposes wiring one in. The live composite's momentum leg measures ~0.00
+    IC, so the useful question is which alternative definition, if any, carries
+    signal on this market — reversal, longer-horizon momentum, low-vol, or
+    liquidity. Nothing here changes a verdict; these are diagnostics.
+    """
+    out: dict[str, float | None] = {}
+
+    def _ret(lookback: int, skip: int = 0) -> float | None:
+        need = lookback + skip + 1
+        if len(closes) < need:
+            return None
+        end = float(closes.iloc[-1 - skip])
+        start = float(closes.iloc[-need])
+        return round((end / start - 1) * 100, 4) if start > 0 else None
+
+    out["cand_rev_5d"] = (-_ret(5)) if _ret(5) is not None else None
+    out["cand_mom_63d"] = _ret(63)
+    out["cand_mom_12_1"] = _ret(231, skip=21)      # 12 months, last month skipped
+    rets = closes.tail(63).pct_change().dropna()
+    out["cand_lowvol_63d"] = (round(-float(rets.std() * (252 ** 0.5) * 100), 4)
+                              if len(rets) > 5 else None)
+    high_252 = float(closes.tail(252).max())
+    out["cand_dist_52w_high"] = (round(float(closes.iloc[-1]) / high_252 * 100, 4)
+                                 if high_252 > 0 else None)
+    v = volumes.loc[:closes.index[-1]].tail(20)
+    if len(v) >= 10:
+        turnover = float((v * closes.reindex(v.index).ffill()).median())
+        out["cand_turnover_egp"] = round(turnover, 2) if turnover > 0 else None
+    else:
+        out["cand_turnover_egp"] = None
+    return out
 
 
 def _history_summary(closes: pd.Series) -> dict:
@@ -261,6 +368,7 @@ def build(prices: dict[str, list[dict]], source: str) -> list[dict]:
 
     egx_all = _closes(prices["EGX30"]) if "EGX30" in prices else pd.Series(dtype="float64")
     series = {tk: _closes(rows) for tk, rows in prices.items() if tk != "EGX30"}
+    vols = {tk: _volumes(rows) for tk, rows in prices.items() if tk != "EGX30"}
     series = {tk: s for tk, s in series.items() if len(s) >= _MIN_BARS and tk in fund_snap}
     print(f"Universe: {len(series)} names with >= {_MIN_BARS} bars and a fundamentals row")
     hist_start = min((r[0]["snapshot_date"] for r in fund_hist.values() if r), default=None)
@@ -306,6 +414,11 @@ def build(prices: dict[str, list[dict]], source: str) -> list[dict]:
                 # enter at the next session's close, hold h sessions
                 if i + 1 + h < len(s):
                     entry, exit_ = float(s.iloc[i + 1]), float(s.iloc[i + 1 + h])
+                    # A session outside the EGX daily band inside the holding
+                    # window is a split or a bad tick, not a return — labelling
+                    # on it teaches the learner a corporate action.
+                    if price_sanity.find_break(s.iloc[i + 1: i + 2 + h]) is not None:
+                        continue
                     if entry > 0:
                         fwd[m["ticker"]][h] = (exit_ / entry - 1) * 100
         basket = {h: st.mean([v[h] for v in fwd.values() if h in v])
@@ -337,7 +450,9 @@ def build(prices: dict[str, list[dict]], source: str) -> list[dict]:
                    "sub_momentum": sub_m, "sub_risk": sub_r,
                    "fundamentals_asof": m["f_asof"],
                    "pit_clean": ["momentum", "risk"] if m["dirty"] else list(subs),
-                   "pit_contaminated": ["valuation", "quality"] if m["dirty"] else []}
+                   "pit_contaminated": ["valuation", "quality"] if m["dirty"] else [],
+                   **_candidate_factors(m["hist"],
+                                        vols.get(m["ticker"], pd.Series(dtype="float64")))}
             for h in _HORIZONS:
                 r = fwd[m["ticker"]].get(h)
                 row[f"fwd_{h}d_pct"] = round(r, 4) if r is not None else None

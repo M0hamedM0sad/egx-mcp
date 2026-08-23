@@ -61,7 +61,7 @@ except (AttributeError, ValueError):
 import pandas as pd
 
 from egx_mcp.data import backtest as bt_mod
-from egx_mcp.data import egx_listing
+from egx_mcp.data import egx_listing, price_sanity
 from egx_mcp.data.agentic_backtest import _benchmark_series
 
 
@@ -87,9 +87,9 @@ _SELL_SIDE = {"REDUCE", "AVOID", "SELL"}
 
 _SUBSCORES = ["sub_valuation", "sub_quality", "sub_momentum", "sub_risk"]
 _FIELDS = ["briefing_date", "ticker", "source", "verdict", "conviction", "score",
-           "horizon_days", "entry_date", "entry_price", "exit_date", "exit_price",
-           "fwd_return_pct", "bench_return_pct", "excess_pct", "outcome", "correct",
-           *_SUBSCORES]
+           "model_version", "horizon_days", "entry_date", "entry_price", "exit_date",
+           "exit_price", "fwd_return_pct", "bench_return_pct", "excess_pct", "outcome",
+           "correct", "quarantine_reason", *_SUBSCORES]
 
 
 def _briefing_date(path: Path, payload: dict) -> str | None:
@@ -137,7 +137,10 @@ def _fwd_prices(ser: pd.Series, entry_date: str, horizon: int):
     Returns (entry_date, entry_px, exit_date, exit_px) or None if no entry,
     or (..., None, None) if the horizon hasn't elapsed yet (pending).
     """
-    ser = ser.dropna()
+    # Non-positive / non-finite ticks are dropped before indexing: a vendor
+    # zero or negative close would otherwise become an entry price and
+    # manufacture a several-hundred-percent return (see price_sanity).
+    ser = price_sanity.clean_series(ser)
     if ser.empty:
         return None
     pos = ser.index.searchsorted(pd.Timestamp(entry_date))
@@ -178,7 +181,8 @@ def _grade(rows: list[dict], panel: pd.DataFrame, bench: pd.Series | None,
             if fp is None:
                 continue
             e_date, e_px, x_date, x_px = fp
-            rec = {**r, "horizon_days": h, "entry_date": e_date, "entry_price": round(e_px, 4)}
+            rec = {**r, "horizon_days": h, "entry_date": e_date,
+                   "entry_price": round(e_px, 4), "quarantine_reason": None}
             if x_px is None:
                 rec.update({"exit_date": None, "exit_price": None, "fwd_return_pct": None,
                             "bench_return_pct": None, "excess_pct": None,
@@ -188,6 +192,23 @@ def _grade(rows: list[dict], panel: pd.DataFrame, bench: pd.Series | None,
             fwd = x_px / e_px - 1
             bret = _bench_return(bench, e_date, x_date)
             excess = (fwd - bret) if bret is not None else None
+
+            # A session outside the EGX daily band inside the holding window is
+            # a corporate action, not a return. Keep the numbers for audit but
+            # quarantine the row so no gate or learner consumes it.
+            brk = price_sanity.find_break(ser, e_date, x_date)
+            if brk is not None:
+                rec.update({
+                    "exit_date": x_date, "exit_price": round(x_px, 4),
+                    "fwd_return_pct": round(fwd * 100, 2),
+                    "bench_return_pct": round(bret * 100, 2) if bret is not None else None,
+                    "excess_pct": None, "outcome": "quarantined", "correct": None,
+                    "quarantine_reason": (f"suspected corporate action: {brk['pct']:+.1f}% "
+                                          f"on {brk['date']} ({brk['from']} -> {brk['to']})"),
+                })
+                graded.append(rec)
+                continue
+
             side = r["verdict"]
             # Correct against benchmark when we have it, else against zero.
             ref = excess if excess is not None else fwd
@@ -211,9 +232,17 @@ def _grade(rows: list[dict], panel: pd.DataFrame, bench: pd.Series | None,
 def _summary(graded: list[dict], bench_name: str = "EGX30") -> None:
     done = [g for g in graded if g["outcome"] == "graded" and g["correct"] is not None]
     pending = [g for g in graded if g["outcome"] == "pending"]
+    quarantined = [g for g in graded if g["outcome"] == "quarantined"]
     print(f"\n{'=' * 64}")
     print(f"GRADED {len(done)} directional calls   ({len(pending)} pending horizon)")
     print('=' * 64)
+    if quarantined:
+        print(f"  QUARANTINED {len(quarantined)} row(s) — suspected corporate action or bad tick:")
+        for g in quarantined[:8]:
+            print(f"    {g['briefing_date']} {g['ticker']:6s} H={g['horizon_days']:>3}d  "
+                  f"{g['quarantine_reason']}")
+        if len(quarantined) > 8:
+            print(f"    ... and {len(quarantined) - 8} more")
     if not done:
         print("No elapsed calls yet — re-run after more time passes since the briefings.")
         return
@@ -257,8 +286,12 @@ def main() -> int:
         if not bd:
             print(f"  ! skip {f.name}: no date")
             continue
+        # Stamp the model version the briefing ran under so the reliability
+        # gate can score the CURRENT model instead of a four-month average of
+        # every version that ever ran. Older briefings carry no stamp.
+        mv = payload.get("model_version")
         for v in _extract_verdicts(payload):
-            rows.append({"briefing_date": bd, **v})
+            rows.append({"briefing_date": bd, "model_version": mv, **v})
 
     if not rows:
         print("No verdicts extracted from briefings.")

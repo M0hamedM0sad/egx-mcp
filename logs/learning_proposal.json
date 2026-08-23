@@ -1,17 +1,25 @@
 {
   "status": "blocked_by_reliability",
-  "graded_v8b_calls": 158,
+  "graded_v8b_calls": 150,
   "reliability_gate": {
     "passed": false,
     "mode": "research_only",
+    "tier": 0,
+    "tier_name": "research-only",
+    "model_version": "default",
+    "version_filtered": false,
     "primary_horizon_days": 21,
-    "directional_calls": 20,
-    "independent_briefing_dates": 14,
-    "directional_accuracy_pct": 20.0,
-    "mean_signed_edge_pct": -22.072,
-    "mean_date_signed_edge_pct": -27.063,
-    "latest_evidence_date": "2026-07-20",
-    "evidence_age_days": 34,
+    "directional_calls": 18,
+    "independent_briefing_dates": 13,
+    "directional_accuracy_pct": 22.2,
+    "mean_signed_edge_pct": -6.329,
+    "mean_date_signed_edge_pct": -7.221,
+    "signed_edge_ci95": [
+      -12.4864,
+      -0.5653
+    ],
+    "latest_evidence_date": "2026-07-07",
+    "evidence_age_days": 47,
     "calibration": {
       "high": {
         "n": 0,
@@ -19,8 +27,8 @@
         "usable": false
       },
       "medium": {
-        "n": 20,
-        "accuracy_pct": 20.0,
+        "n": 18,
+        "accuracy_pct": 22.2,
         "usable": true
       },
       "low": {
@@ -29,26 +37,51 @@
         "usable": false
       }
     },
+    "rank_ic": {
+      "n_dates": 0,
+      "mean": null,
+      "ci95": null,
+      "positive": false,
+      "reason": "need >= 20 dates"
+    },
+    "portfolio_edge": {
+      "n_dates": 0,
+      "mean": null,
+      "ci95": null,
+      "positive": false,
+      "reason": "need >= 20 dates"
+    },
+    "latest_ranked_date": "2026-07-20",
+    "ranked_evidence_age_days": 34,
     "checks": {
       "sample_size": false,
       "independent_dates": true,
       "directional_accuracy": false,
       "positive_signed_edge": false,
       "conviction_calibration": false,
+      "evidence_freshness": false
+    },
+    "tier1_checks": {
+      "rank_ic_positive": false,
+      "portfolio_edge_positive": false,
       "evidence_freshness": true
     },
     "failed_checks": [
       "sample_size",
       "directional_accuracy",
       "positive_signed_edge",
-      "conviction_calibration"
+      "conviction_calibration",
+      "evidence_freshness"
     ],
     "thresholds": {
       "min_directional_calls": 40,
       "min_independent_dates": 8,
       "min_directional_accuracy_pct": 55.0,
       "min_bucket_calls": 10,
-      "max_evidence_age_days": 45
+      "max_evidence_age_days": 45,
+      "min_ranked_dates": 20,
+      "min_names_per_date": 8,
+      "portfolio_top_n": 5
     },
     "message": "Live v8b evidence is insufficient or unproven; buy-side output is research-only."
   },

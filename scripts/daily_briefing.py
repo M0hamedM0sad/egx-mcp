@@ -51,6 +51,7 @@ from egx_mcp.data import (
     tv_scraper, egx_official,
 )
 from egx_mcp.data import calendar as cal_mod
+from egx_mcp.data import reliability as reliability_mod
 
 
 # ---- Trade plan parameters (override via env vars if you want) ----
@@ -473,6 +474,10 @@ def build_briefing(force: bool = False) -> dict:
         "as_of_utc": now.isoformat() + "Z",
         "cairo_local": cairo.strftime("%A %Y-%m-%d %H:%M"),
         "is_trading_day": is_egx_day,
+        # Stamp the model version onto every verdict this briefing records, so
+        # the reliability gate can score the current model rather than a blend
+        # of every version that ever ran. See reliability.active_model_version.
+        "model_version": reliability_mod.active_model_version(),
     }
 
     # Macro
@@ -572,8 +577,26 @@ def build_briefing(force: bool = False) -> dict:
     reg_label = (out.get("regime") or {}).get("regime", "UNKNOWN")
     stance, note = _STANCES.get(
         reg_label, ("SELECTIVE", "Regime unknown — default to selective, small sizing."))
-    out["market_stance"] = {"stance": stance, "note": note, "regime": reg_label,
-                            "holding_horizon_sessions": 21}
+    # Reliability tier decides what the picks below are ALLOWED to be, not just
+    # how they are described. Tier 0 = research; tier 1 = the cross-sectional
+    # edge is established, so a capped satellite sleeve is authorized; tier 2 =
+    # the full directional gate passed.
+    try:
+        _gate = reliability_mod.status()
+    except Exception as e:  # noqa: BLE001
+        _gate = {"tier": 0, "tier_name": "research-only", "error": str(e)[:80]}
+    _tier_note = {
+        0: "Reliability tier 0 — research only. Do not size from these picks.",
+        1: (f"Reliability tier 1 — the cross-sectional edge clears its bootstrap "
+            f"interval (rank IC {(_gate.get('rank_ic') or {}).get('mean')}), so a CAPPED "
+            f"satellite sleeve is authorized. Full buy-side sizing still needs the "
+            f"directional gate."),
+        2: "Reliability tier 2 — every live evidence check passes.",
+    }[_gate.get("tier", 0)]
+    out["market_stance"] = {"stance": stance, "note": f"{note} {_tier_note}",
+                            "regime": reg_label, "holding_horizon_sessions": 21,
+                            "reliability_tier": _gate.get("tier", 0),
+                            "reliability_tier_name": _gate.get("tier_name")}
 
     # Risk-free rate
     try:

@@ -209,10 +209,25 @@ jobs:
           python -m pip install --upgrade pip
           pip install -e .
 
+      - name: Restore price cache
+        # The panel cache is gitignored (tens of MB), so every runner starts
+        # empty and a blocked vendor means a zero-row panel — which is exactly
+        # what happened on 2026-08-23 when investing.com 403'd all 250 names.
+        # build_panel merges new fetches into whatever it finds, so persisting
+        # this file turns a total outage into a stale panel instead of none.
+        # A run_id key never hits, so the cache is rewritten every week;
+        # restore-keys pulls the most recent one in.
+        uses: actions/cache@v4
+        with:
+          path: logs/panel_prices.json
+          key: egx-panel-prices-${{ github.run_id }}
+          restore-keys: |
+            egx-panel-prices-
+
       - name: Rebuild the market-data panel
-        # Refetches ~250 names of daily history from investing.com and
-        # reconstructs point-in-time scores + forward 21-session excess at every
-        # weekly rebalance date. Slow (network-bound) — hence weekly, not daily.
+        # Refetches ~250 names of daily history (investing.com, Yahoo fallback)
+        # and reconstructs point-in-time scores + forward 21-session excess at
+        # every weekly rebalance date. Slow (network-bound) — hence weekly.
         # continue-on-error: a data hiccup must not block the rest of the run;
         # the learner below simply reports insufficient_panel.
         continue-on-error: true
@@ -220,6 +235,26 @@ jobs:
           mkdir -p logs
           python -m scripts.build_panel --refresh --lookback 1000 2>&1 \
             | tee logs/panel_build_latest.txt
+
+      - name: Panel health guard
+        # An empty panel is a data outage, not a model result. Say so loudly in
+        # the summary — the previous failure mode was a silent "Panel: empty"
+        # buried under 500 lines of 403s, and the learning arm just went quiet.
+        if: always()
+        run: |
+          python - <<'EOF' | tee -a "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+          p = Path("logs/panel.jsonl")
+          rows = [l for l in p.read_text(encoding="utf-8").splitlines() if l.strip()] if p.exists() else []
+          cache = Path("logs/panel_prices.json")
+          n_series = len(json.loads(cache.read_text(encoding="utf-8")).get("prices", {})) if cache.exists() else 0
+          print(f"## Panel health: {len(rows)} labelled rows, {n_series} price series cached")
+          if not rows:
+              print("WARN: the panel is EMPTY — the market-data learning arm produced "
+                    "nothing this week. Check panel_build_latest.txt for vendor blocks "
+                    "(403s) before reading anything into 'no proposal'.")
+          EOF
 
       - name: Panel learning loop — analyze & propose (no change applied)
         # Writes logs/learning_proposal_panel.json. Does NOT apply.

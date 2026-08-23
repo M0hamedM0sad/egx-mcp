@@ -49,13 +49,37 @@ The output includes `key_drivers`, `key_risks`, `blocking_catalysts`, and `data_
 Ask `model_reliability()` before treating any result as actionable. Until it
 returns `passed: true`, the MCP is **research-only**: a provisional BUY or
 ACCUMULATE is returned as `ABSTAIN`, position sizing is withheld, and the
-GitHub learning loop cannot open a parameter-change proposal. The gate requires
-live, point-in-time V8b calls at the model's native 21-session horizon to show:
+GitHub learning loop cannot open a parameter-change proposal. The gate reports
+a **tier**, evaluated only on evidence stamped with the current
+`model_version` (bumping the version resets the sample to zero — fail-closed):
+
+**Tier 2 — `passed: true`, full buy-side.** Live point-in-time V8b calls at the
+model's native 21-session horizon must show:
 
 - at least 40 directional calls across 8 independent briefing dates;
 - at least 55% directional accuracy versus the benchmark;
-- positive direction-aware, date-weighted excess return; and
+- direction-aware, date-weighted excess return whose date-block bootstrap
+  95% interval clears zero; and
 - calibrated high/medium/low conviction buckets.
+
+**Tier 1 — capped satellite sizing.** Discrete verdicts discard most of a run:
+the majority of scored names come back HOLD, so a date that ranked 250 names
+contributes a handful of directional calls. Tier 1 tests the claim the score
+still makes — that it *ranks* names by forward excess — and the basket that is
+actually traded rather than the individual call:
+
+- date-wise Spearman IC of composite score versus realized 21-session excess;
+- per-date excess of the equal-weight top-5-by-score basket;
+- both judged by a date-block bootstrap (dates are the independence unit), each
+  95% interval required to clear zero, over at least 20 dates.
+
+Tier 1 reaches significance far sooner than per-name hit-rate without relaxing
+anything: it uses more of the same evidence and demands an interval, not a
+point estimate. It authorizes a capped satellite sleeve only.
+
+Rows whose holding window contains a session outside the EGX daily price band
+are **quarantined** as suspected corporate actions and excluded from every
+statistic — that break is a split or a bad tick, not a return.
 
 This is intentionally stricter than a backtest. It does not turn the model
 into investment advice or execution software; it prevents unproven output from

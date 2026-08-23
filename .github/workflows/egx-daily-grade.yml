@@ -61,7 +61,19 @@ jobs:
       # needs prior briefings + realized prices, so a bad data day that kills
       # the briefing step must not also stall evidence accumulation.
       - name: Grade decisions against realized prices (A1)
-        run: python -m tests.grade_briefings || echo "grading produced nothing yet"
+        # Retry: the price fetch is the single point of failure for evidence
+        # accumulation, and the gate's freshness check fails after 45 days
+        # without new graded rows — an outage would close a gate that data,
+        # not the model, is responsible for.
+        run: |
+          for attempt in 1 2 3; do
+            echo "grading attempt $attempt"
+            if python -m tests.grade_briefings; then
+              exit 0
+            fi
+            sleep $((attempt * 30))
+          done
+          echo "grading produced nothing after 3 attempts"
 
       - name: Generate today's briefing (records decisions)
         # Fail closed: do not append or learn from a day whose decision
@@ -222,4 +234,24 @@ jobs:
                     "the learning loop cannot use them. Check the synthetic-basket "
                     "fetch (Yahoo rate limit / network) in tests/grade_briefings.py.")
               sys.exit(1)
+          EOF
+
+      - name: Evidence freshness guard
+        # The reliability gate fails once the newest graded 21-session row is
+        # older than MAX_EVIDENCE_AGE_DAYS. That clock is driven by the price
+        # feed, not by the model, so warn while there is still time to fix a
+        # stalled fetch instead of discovering it the day the gate flips.
+        if: always()
+        run: |
+          python - <<'EOF' | tee -a "$GITHUB_STEP_SUMMARY"
+          from egx_mcp.data import reliability
+          g = reliability.status()
+          age, cap = g["evidence_age_days"], reliability.MAX_EVIDENCE_AGE_DAYS
+          print(f"## Evidence freshness: latest graded 21d row {g['latest_evidence_date']} "
+                f"(age {age}, limit {cap})")
+          if age is None:
+              print("WARN: no graded 21-session evidence at all.")
+          elif age > cap - 10:
+              print(f"WARN: {cap - age} day(s) of headroom left before the freshness "
+                    "check fails. Check the grading step's price fetch.")
           EOF

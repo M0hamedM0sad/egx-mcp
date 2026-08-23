@@ -26,6 +26,7 @@ from __future__ import annotations
 import argparse
 import io
 import json
+import statistics as st
 import sys
 from pathlib import Path
 
@@ -48,7 +49,14 @@ _SUB_FIELDS = {k: f"sub_{k}" for k in _WEIGHT_KEYS}
 _MIN_SUBSCORE_SAMPLE = 40   # graded v8b rows carrying ALL four sub-scores
 _WEIGHT_TILT = 0.5          # how hard to tilt toward positive-corr factors
 _WEIGHT_BOUND = (0.5, 1.5)  # candidate weight stays within ±50% of base, per factor
-_WEIGHT_MIN_GAIN = 0.05     # OOS ranking-corr improvement required to propose
+# A single 0.05 absolute gain on one pooled split was unreachable: real factor
+# reweights move rank correlation by 0.01-0.02, so the loop could only ever
+# answer "no change" regardless of what the evidence said. Judge the candidate
+# the way the panel fitter does instead — per date, and it has to win most of
+# them, which is a paired sign test rather than one noisy pooled number.
+_WEIGHT_MIN_GAIN = 0.01     # floor on the MEAN per-date ranking-corr gain
+_WEIGHT_MIN_WIN_PCT = 60.0  # ... and it must beat base on this share of dates
+_WEIGHT_MIN_OOS_DATES = 4   # below this there is nothing to be paired about
 
 
 _PRIMARY_HORIZON = 21   # decide() is a monthly model — learn on its native claim.
@@ -177,23 +185,49 @@ def _learn_weights(rows: list[dict], base: dict) -> dict:
     cand = _candidate_weights(in_s, base)
     oos_base = _rank_corr(oos, base)
     oos_cand = _rank_corr(oos, cand)
-    improves = (oos_cand is not None and oos_base is not None
+
+    # Paired per-date comparison: names inside one briefing move together, so a
+    # pooled correlation is one observation dressed as many. Scoring each date
+    # separately and counting wins is the honest unit and is far more sensitive
+    # than demanding a large gain from a single pooled split.
+    per_date: list[dict] = []
+    by_date: dict[str, list[dict]] = {}
+    for r in oos:
+        by_date.setdefault(str(r.get("briefing_date") or r.get("entry_date")), []).append(r)
+    for day, group in sorted(by_date.items()):
+        c_base, c_cand = _rank_corr(group, base), _rank_corr(group, cand)
+        if c_base is None or c_cand is None:
+            continue
+        per_date.append({"date": day, "n": len(group),
+                         "rankcorr_current": round(c_base, 4),
+                         "rankcorr_candidate": round(c_cand, 4)})
+    wins = sum(1 for d in per_date if d["rankcorr_candidate"] > d["rankcorr_current"])
+    win_pct = round(100 * wins / len(per_date), 1) if per_date else None
+    mean_gain = (round(st.mean([d["rankcorr_candidate"] - d["rankcorr_current"]
+                                for d in per_date]), 4) if per_date else None)
+
+    improves = (oos_cand is not None and oos_cand > 0
+                and cand != base
                 and len(oos) >= _MIN_TRADES
-                and oos_cand >= oos_base + _WEIGHT_MIN_GAIN
-                and oos_cand > 0
-                and cand != base)
+                and len(per_date) >= _WEIGHT_MIN_OOS_DATES
+                and mean_gain is not None and mean_gain >= _WEIGHT_MIN_GAIN
+                and win_pct is not None and win_pct >= _WEIGHT_MIN_WIN_PCT)
     return {
         "status": "proposal" if improves else "no_change",
         "n_with_subscores": n, "in_sample": len(in_s), "out_of_sample": len(oos),
         "current_weights": base, "candidate_weights": cand,
         "oos_rankcorr_current": oos_base, "oos_rankcorr_candidate": oos_cand,
+        "oos_dates": len(per_date), "date_win_pct": win_pct,
+        "mean_per_date_gain": mean_gain, "per_date": per_date,
         "improves": improves,
         "message": (
-            f"Reweight {base} -> {cand} ranks held-out excess better "
-            f"(corr {oos_cand} vs {oos_base} on {len(oos)} calls)."
+            f"Reweight {base} -> {cand} ranks held-out excess better on "
+            f"{win_pct}% of {len(per_date)} out-of-sample dates "
+            f"(mean per-date gain {mean_gain})."
             if improves else
-            "Current weights hold up — the tilted candidate did not rank "
-            "out-of-sample excess meaningfully better."),
+            f"Current weights hold up — candidate won {win_pct}% of "
+            f"{len(per_date)} out-of-sample dates "
+            f"(need >= {_WEIGHT_MIN_WIN_PCT}% and mean gain >= {_WEIGHT_MIN_GAIN})."),
     }
 
 

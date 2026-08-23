@@ -22,6 +22,11 @@ from typing import Any
 
 from . import market, technicals, liquidity, risk_free
 
+# Hard ceiling on the ATR-derived stop distance, as a share of entry price.
+# Beyond this the "stop" stops being a risk control: a 58%-of-price ATR is a
+# broken price series, not a volatility estimate.
+MAX_STOP_PCT_OF_PRICE = 25.0
+
 
 def position_size(
     user_ticker: str,
@@ -48,6 +53,14 @@ def position_size(
 
     risk_egp = portfolio_value_egp * (risk_pct / 100)
     stop_distance = atr_multiple * atr
+    # A stop cannot sit at or below zero. When ATR is a large fraction of price
+    # — usually because the series carries an unadjusted corporate action, e.g.
+    # GTWL priced 29.84 with ATR 17.30 giving a -4.92 "stop" — cap the distance
+    # and say so, rather than printing a negative price as a trade level.
+    max_distance = price * MAX_STOP_PCT_OF_PRICE / 100
+    stop_capped = stop_distance > max_distance
+    if stop_capped:
+        stop_distance = max_distance
     raw_shares = risk_egp / stop_distance
 
     # Cap by max position weight
@@ -98,6 +111,12 @@ def position_size(
         "position_weight_pct": round(cost / portfolio_value_egp * 100, 2),
         "stop_loss_price": stop_loss,
         "stop_distance_egp": round(stop_distance, 2),
+        "stop_distance_capped": stop_capped,
+        "stop_distance_capped_note": (
+            f"ATR({atr:.2f}) x {atr_multiple} exceeded {MAX_STOP_PCT_OF_PRICE}% of the "
+            f"{price:.2f} price — stop distance capped. Check the price series for an "
+            "unadjusted split or capital change before trading this."
+            if stop_capped else None),
         "scale_out_price": scale_out_price,
         "scale_out_shares": scale_out_shares,
         "target_price": target_price,
