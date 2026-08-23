@@ -2,22 +2,24 @@
 EGX MODEL RELIABILITY SCORECARD
 ======================================================================
 
-[PASS]  Gate 1  EVIDENCE   (proven edge)
-        graded directional calls: 431 (need 30)  |  pending: 238
-        directional accuracy vs EGX30: 61% (need >=55%)
+[OPEN]  Gate 1  EVIDENCE   (proven live edge)
+        graded V8b 21d directional calls: 0 (need >= 40)
+        independent briefing dates: 0 (need >= 8)
+        directional accuracy vs benchmark: n/a% (need >= 55%)
+        date-weighted signed edge: n/a% (must be > 0)
+        latest evidence: n/a (age n/a days; max 45)
+        -> buy-side output remains research-only until every evidence check passes.
 
-[~~~~]  Gate 2  DATA       (fundamentals coverage)
-        high=0  medium=27  low/ABSTAIN=5  (32 names)
-        -> 5 names will ABSTAIN until fundamentals are added.
-        -> 27 at medium; add profit_margin + debt_to_equity to reach high.
+[PASS]  Gate 2  DATA       (fundamentals coverage)
+        high=27  medium=3  low/ABSTAIN=0 (30 names)
+        -> add profit margin and debt/equity fields to promote medium-confidence names.
 
-[OPEN]  Gate 3  CALIBRATION(conviction = accuracy)
-        need >=10 graded calls in >=2 conviction buckets (have: { medium:54, weekly:377 })
+[OPEN]  Gate 3  CALIBRATION (conviction = accuracy)
+        high=n/a% (n=0)  medium=n/a% (n=0)  low=n/a% (n=0)
+        conviction tracks accuracy (monotone): False
+        -> need >= 10 V8b calls in at least two conviction buckets.
 
 ======================================================================
 VERDICT: NOT YET RELIABLE — 2 gate(s) open.
-Decision-support only: keep the human gate, stops, and size against conviction.
+Research-only: keep the human gate and do not use buy-side sizing.
 ======================================================================
-
-Close the gates by: running the daily briefing (Gate 1), running the IR
-pipeline to fill fundamentals (Gate 2), and accumulating graded calls (Gate 3).
