@@ -1,0 +1,1 @@
+No panel at /home/runner/work/egx-mcp/egx-mcp/logs/panel.jsonl. Run `python -m scripts.build_panel` first.

@@ -1,0 +1,522 @@
+history fetch failed for INFI (pid 40603): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40603?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for TAQA (pid 1204783): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1204783?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SUGR (pid 12956): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12956?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for COPR (pid 12879): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12879?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ADIB (pid 40917): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40917?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AFMC (pid 12967): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12967?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MTIE (pid 1010530): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1010530?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SCFM (pid 12999): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12999?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for NHPS (pid 40616): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40616?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GOUR (pid 1239871): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1239871?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ADPC (pid 40560): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40560?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ADRI (pid 1052625): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052625?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AIDC (pid 1233877): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1233877?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MOSC (pid 12933): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12933?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for FTNS (pid 1208727): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1208727?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AXPH (pid 12974): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12974?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MPRC (pid 12877): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12877?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EPCO (pid 12872): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12872?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EPPK (pid 40593): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40593?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AALR (pid 40558): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40558?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CERA (pid 40579): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40579?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for FAIT (pid 13002): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/13002?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EEII (pid 40586): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40586?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for TYCN (pid 40570): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40570?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GBCO (pid 12899): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12899?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AMPI (pid 1052615): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052615?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EDFM (pid 12987): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12987?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for RAYA (pid 12948): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12948?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for FWRY (pid 1152800): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1152800?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SNFI (pid 992996): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/992996?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MOIL (pid 12876): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12876?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EGREF (pid 1178526): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1178526?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AMOC (pid 12971): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12971?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ELSH (pid 12913): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12913?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for DTPP (pid 12908): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12908?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for BONY (pid 1233358): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1233358?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for VLMR (pid 12868): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12868?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ARVA (pid 40573): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40573?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for IDRE (pid 40602): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40602?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for RTVC (pid 12885): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12885?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EOSB (pid 40592): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40592?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CSAG (pid 12904): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12904?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EGSA (pid 40588): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40588?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ELKA (pid 12870): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12870?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for OIH (pid 40621): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40621?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for APSW (pid 12863): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12863?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for POCO (pid 1156245): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1156245?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ETEL (pid 12874): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12874?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MBSC (pid 12965): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12965?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EXPA (pid 13001): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/13001?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SCTS (pid 40625): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40625?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for NCCW (pid 12937): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12937?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SPIN (pid 12955): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12955?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ALCN (pid 40563): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40563?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AMES (pid 40568): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40568?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for HDST (pid 11873): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/11873?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ISMQ (pid 1174541): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1174541?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ATLC (pid 1057138): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1057138?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GEOS (pid 16854): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/16854?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ARAB (pid 960753): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/960753?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MILS (pid 12972): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12972?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EGS72XL1C014 (pid 1212435): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1212435?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for NIPH (pid 12980): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12980?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for POUL (pid 12945): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12945?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for FCMD (pid 1052621): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052621?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for UTOP (pid 1052618): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052618?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GGRN (pid 1226719): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1226719?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SEIG (pid 13000): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/13000?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for TRTO (pid 12957): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12957?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for PHAR (pid 12990): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12990?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for IBCT (pid 1162333): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1162333?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for APPC (pid 40571): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40571?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CEFM (pid 12901): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12901?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SCEM (pid 12998): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12998?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EGS385S1C012 (pid 1162332): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1162332?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for DOMT (pid 969108): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/969108?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GPIM (pid 40590): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40590?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for OCPH (pid 40619): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40619?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EEP (pid 17755): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/17755?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EGS370O1C013 (pid 1233747): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1233747?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for DGTZ (pid 1207928): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1207928?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MIPH (pid 40610): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40610?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for OCDI (pid 12880): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12880?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for INEG (pid 1052608): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052608?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ACTF (pid 1218756): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1218756?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for LUTS (pid 1203038): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1203038?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ROTO (pid 12949): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12949?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GGCC (pid 12916): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12916?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MASR (pid 12932): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12932?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EGAS (pid 12989): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12989?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CANA (pid 12977): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12977?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for TALM (pid 1172876): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1172876?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for PRDC (pid 1178528): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1178528?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SKPC (pid 12886): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12886?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for HDBK (pid 12921): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12921?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for KABO (pid 12928): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12928?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MHOT (pid 12970): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12970?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for RUBX (pid 12950): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12950?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MFSC (pid 12968): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12968?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ABUK (pid 12964): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12964?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EBSC (pid 40584): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40584?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EMFD (pid 960752): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/960752?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MBEG (pid 1052626): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052626?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for RACC (pid 1036884): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1036884?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MEPA (pid 40609): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40609?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SNFC (pid 12954): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12954?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for TORA (pid 13004): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/13004?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CID (pid 41949): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/41949?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ELNA (pid 12912): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12912?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ECAP (pid 12909): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12909?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for LCSW (pid 12929): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12929?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SPMD (pid 1129365): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1129365?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CICH (pid 1075451): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1075451?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for BINV (pid 1073052): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1073052?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ELWA (pid 40591): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40591?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EGAL (pid 40587): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40587?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CCRS (pid 12900): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12900?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ALEX (pid 40564): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40564?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ARCC (pid 950023): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/950023?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for TMGH (pid 12889): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12889?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ETRS (pid 12915): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12915?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for HELI (pid 12922): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12922?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for OBRI (pid 40618): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40618?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for BIOC (pid 12975): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12975?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AFDI (pid 12894): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12894?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GMCI (pid 12919): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12919?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MPCI (pid 40612): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40612?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for UEFM (pid 13005): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/13005?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CNFN (pid 1121784): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1121784?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for VERT (pid 1052623): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052623?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for HRHO (pid 12875): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12875?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MPCO (pid 12934): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12934?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for KRDI (pid 1184823): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1184823?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for RAKT (pid 12947): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12947?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for OFH (pid 1170419): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1170419?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for NARE (pid 40622): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40622?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ICID (pid 12923): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12923?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for BTFH (pid 40576): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40576?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for IEEC (pid 950024): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/950024?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for UNIT (pid 12960): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12960?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EFID (pid 992622): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/992622?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CPME (pid 1233491): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1233491?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MCRO (pid 1185538): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1185538?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AJWA (pid 12862): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12862?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for UPMS (pid 1162335): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1162335?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for TANM (pid 1174905): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1174905?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ORWE (pid 12943): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12943?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AMER (pid 40567): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40567?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for RKAZ (pid 1052611): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052611?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MICH (pid 12931): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12931?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SMFR (pid 12953): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12953?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CIRA (pid 40580): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40580?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GRCA (pid 12920): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12920?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ISPH (pid 1056341): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1056341?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SAUD (pid 12951): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12951?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ZMID (pid 12962): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12962?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for PRCL (pid 12946): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12946?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ACAMD (pid 1115767): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1115767?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MOIN (pid 12973): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12973?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AIFI (pid 40565): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40565?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ALUM (pid 40566): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40566?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ASCM (pid 12898): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12898?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AIH (pid 1236327): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1236327?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EAST (pid 12986): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12986?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MITR (pid 950418): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/950418?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for VLMRA (pid 1178525): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1178525?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for KNGC (pid 1217213): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1217213?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ORAS (pid 950025): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/950025?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SVCE (pid 12887): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12887?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EFIC (pid 12910): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12910?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for TWSA (pid 1236741): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1236741?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MAAL (pid 1171365): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1171365?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CLHO (pid 985148): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/985148?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EGTS (pid 12867): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12867?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CPCI (pid 12981): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12981?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for HBCO (pid 1224792): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1224792?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SEIGA (pid 991395): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/991395?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for NINH (pid 12941): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12941?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ADCI (pid 40559): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40559?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for WKOL (pid 40638): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40638?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EHDR (pid 12911): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12911?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ACGC (pid 12861): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12861?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for OLFI (pid 994418): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/994418?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for JUFO (pid 40604): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40604?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for COMI (pid 12865): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12865?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CAED (pid 40577): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40577?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for VALU (pid 1232685): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1232685?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SDTI (pid 40626): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40626?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for DSCW (pid 40581): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40581?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for DAPH (pid 12905): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12905?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GTWL (pid 40599): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40599?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ZEOT (pid 12961): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12961?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GSSC (pid 13003): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/13003?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EASB (pid 40583): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40583?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MFPC (pid 997882): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/997882?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AREH (pid 12897): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12897?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for IFAP (pid 12925): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12925?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for KWIN (pid 40605): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40605?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for PHTV (pid 12993): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12993?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ISMA (pid 12927): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12927?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GIHD (pid 12917): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12917?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ASPI (pid 12884): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12884?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SWDY (pid 12888): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12888?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for NEDA (pid 12940): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12940?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CCAP (pid 12864): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12864?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SINA (pid 950374): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/950374?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for QNBE (pid 12982): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12982?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for BIDI (pid 1162330): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1162330?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CFGH (pid 12969): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12969?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EFAC (pid 1207303): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1207303?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for IRON (pid 12926): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12926?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MOED (pid 1052619): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052619?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GDWA (pid 1178527): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1178527?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ELEC (pid 12869): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12869?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ENGC (pid 12914): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12914?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MCQE (pid 12966): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12966?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for SIPC (pid 992995): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/992995?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for KZPC (pid 13008): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/13008?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for COSG (pid 12903): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12903?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CRST (pid 12866): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12866?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for FIRE (pid 1162331): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1162331?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for FNAR (pid 1052620): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052620?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for AMIA (pid 40569): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40569?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for NFCI (pid 13473): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/13473?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for UEGC (pid 12890): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12890?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EALR (pid 40582): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40582?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for BIGP (pid 1052617): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052617?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for UBEE (pid 1224080): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1224080?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ATQA (pid 40574): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40574?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for RREI (pid 40623): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40623?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GTHE (pid 12882): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12882?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MKIT (pid 1052614): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052614?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ODIN (pid 12892): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12892?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ICFC (pid 1052616): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1052616?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for PRMH (pid 12994): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12994?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EGCH (pid 12992): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12992?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ORHD (pid 40620): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40620?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for WCDF (pid 13007): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/13007?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for MENA (pid 12930): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12930?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for RMDA (pid 1156268): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1156268?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for GTEX (pid 1212958): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1212958?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for FAITA (pid 40594): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/40594?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EFIH (pid 1178529): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1178529?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for ACAP (pid 1203006): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/1203006?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for CIEB (pid 12979): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12979?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for UNIP (pid 12959): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12959?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EGBE (pid 12991): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12991?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for NAHO (pid 12935): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12935?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for PHDC (pid 12883): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12883?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+history fetch failed for EGX30 (pid 12860): Client error '403 Forbidden' for url 'https://api.investing.com/api/financialdata/historical/12860?start-date=2023-11-27&end-date=2026-08-23&time-frame=Daily&add-missing-rows=false'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+/home/runner/work/egx-mcp/egx-mcp/scripts/build_panel.py:86: Pandas4Warning: Timestamp.utcnow is deprecated and will be removed in a future version. Use Timestamp.now('UTC') instead.
+  payload = {"fetched_at": pd.Timestamp.utcnow().isoformat(),
+Refreshing 249 names, 1000d lookback ...
+  fetched 20/250 ...
+  fetched 40/250 ...
+  fetched 60/250 ...
+  fetched 80/250 ...
+  fetched 100/250 ...
+  fetched 120/250 ...
+  fetched 140/250 ...
+  fetched 160/250 ...
+  fetched 180/250 ...
+  fetched 200/250 ...
+  fetched 220/250 ...
+  fetched 240/250 ...
+Fetched 0 series (250 failed) -> /home/runner/work/egx-mcp/egx-mcp/logs/panel_prices.json
+Price source: panel_prices.json (fetched 2026-08-23)
+TradingView fill: profit_margin_pct+98, debt_to_equity+165, dividend_yield_pct+0
+Universe: 0 names with >= 210 bars and a fundamentals row
+Point-in-time fundamentals from 2026-08-15 (243 tickers); earlier rows fall back to the 2026-07-03 snapshot and are flagged contaminated.
+Panel: empty
+No labelled rows produced.
