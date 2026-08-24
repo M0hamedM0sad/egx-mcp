@@ -8,10 +8,10 @@
     "directional_calls": 20,
     "independent_briefing_dates": 14,
     "directional_accuracy_pct": 20.0,
-    "mean_signed_edge_pct": -22.072,
-    "mean_date_signed_edge_pct": -27.063,
+    "mean_signed_edge_pct": -21.998,
+    "mean_date_signed_edge_pct": -27.004,
     "latest_evidence_date": "2026-07-20",
-    "evidence_age_days": 34,
+    "evidence_age_days": 35,
     "calibration": {
       "high": {
         "n": 0,

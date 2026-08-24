@@ -10,32 +10,32 @@ dates: 2026-04-30, 2026-05-02, 2026-06-07, 2026-06-08, 2026-06-09, 2026-06-10, 2
 1. SIGNED EDGE  (excess in the call's own direction; the metric that
    actually means 'the calls added value')
 ------------------------------------------------------------------------
-  naive mean excess (sign-blind, MISLEADING) : +5.26%
-  mean SIGNED edge (direction-aware, HONEST) : +0.48%  95% CI [-3.83%, +5.68%]
+  naive mean excess (sign-blind, MISLEADING) : +5.42%
+  mean SIGNED edge (direction-aware, HONEST) : +0.62%  95% CI [-3.69%, +5.81%]
   -> CI spans 0: cannot distinguish the edge from luck at this sample.
 
 ------------------------------------------------------------------------
 2. DIRECTIONAL HIT-RATE  (exact binomial vs a 50% coin)
 ------------------------------------------------------------------------
-  pooled             n=446  hit= 36.1%  (binomial vs 50%: p=0.000)  (p<0.05)
-  horizon 5d         n=268  hit= 38.8%  (binomial vs 50%: p=0.000)  (p<0.05)
+  pooled             n=446  hit= 36.3%  (binomial vs 50%: p=0.000)  (p<0.05)
+  horizon 5d         n=268  hit= 39.2%  (binomial vs 50%: p=0.000)  (p<0.05)
   horizon 21d        n=178  hit= 32.0%  (binomial vs 50%: p=0.000)  (p<0.05)
-  buy-side           n=409  hit= 36.2%  (binomial vs 50%: p=0.000)  (p<0.05)
+  buy-side           n=409  hit= 36.4%  (binomial vs 50%: p=0.000)  (p<0.05)
   sell-side          n= 37  hit= 35.1%  (binomial vs 50%: p=0.099)
 
 ------------------------------------------------------------------------
 3. CALIBRATION  (does higher conviction = higher hit-rate?)
 ------------------------------------------------------------------------
-  medium     n= 55  hit= 29.1%  signed_edge=-22.77%
-  weekly     n=391  hit= 37.1%  signed_edge=+3.75%
+  medium     n= 55  hit= 29.1%  signed_edge=-22.78%
+  weekly     n=391  hit= 37.3%  signed_edge=+3.91%
   not enough graded calls in >=2 ranked buckets to judge calibration.
 
 ------------------------------------------------------------------------
 4. REGIME ROBUSTNESS  (edge split by the benchmark's own direction
    over each call's window — a bull-only edge is the #1 EGX blow-up)
 ------------------------------------------------------------------------
-  bench up   (bull): n=436  hit= 36.0%  signed_edge=+0.60%
-  bench down (corr): n= 10  hit= 40.0%  signed_edge=-4.60%
+  bench up   (bull): n=428  hit= 36.2%  signed_edge=+0.74%
+  bench down (corr): n= 18  hit= 38.9%  signed_edge=-2.24%
 
 ========================================================================
 VERDICT: INCONCLUSIVE
