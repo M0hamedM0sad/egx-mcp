@@ -1,6 +1,6 @@
 {
   "status": "blocked_by_reliability",
-  "graded_v8b_calls": 158,
+  "graded_v8b_calls": 163,
   "reliability_gate": {
     "passed": false,
     "mode": "research_only",
@@ -11,7 +11,7 @@
     "mean_signed_edge_pct": -21.998,
     "mean_date_signed_edge_pct": -27.004,
     "latest_evidence_date": "2026-07-20",
-    "evidence_age_days": 35,
+    "evidence_age_days": 36,
     "calibration": {
       "high": {
         "n": 0,

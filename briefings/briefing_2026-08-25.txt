@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-08-25 09:35 ===
+
+--- MACRO ---
+  EGX 30:  55,366 pts (—)
+  USD/EGP: 50.7625 (-0.01%)
+  Brent:   $91.50 (-1.05%)
+  Gold 24K: 7,665.42 EGP/g  |  21K: 6,707.24  |  18K: 5,749.07
+  Egyptian gold pound: 53,658 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 97) ---
+  1. LUTS   score=66.24  price=0.429  5d=+54.4% RSI=88  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-LUTS/
+  2. AMIA   score=53.98  price=2.3  5d=+44.8% RSI=96  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMIA/
+  3. CAED   score=43.47  price=21.14  5d=+31.7% RSI=87  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CAED/
+  4. AMES   score=36.48  price=6.97  5d=+26.2% RSI=76  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMES/
+  5. FIRE   score=30.91  price=2.305  5d=+18.9% RSI=65  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-FIRE/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  LUTS: ENTRY 0.43 | STOP 0.11 | SCALE-OUT 0.75 (7876 sh) | TARGET 0.91 (7876 sh) | 15752 total (1.35% NAV) | R:R 1:1.5 | time stop 2026-09-01
+  AMIA: ENTRY 2.31 | STOP -0.3 | SCALE-OUT 4.9 (959 sh) | TARGET 6.21 (960 sh) | 1919 total (0.88% NAV) | R:R 1:1.5 | time stop 2026-09-01
+  CAED: ENTRY 21.25 | STOP -6.97 | SCALE-OUT 49.25 (88 sh) | TARGET 63.3 (89 sh) | 177 total (0.75% NAV) | R:R 1:1.5 | time stop 2026-09-01
+  AMES: ENTRY 7.0 | STOP -18.83 | SCALE-OUT 32.77 (96 sh) | TARGET 45.67 (97 sh) | 193 total (0.27% NAV) | R:R 1:1.5 | time stop 2026-09-01
+  FIRE: ENTRY 2.32 | STOP 1.75 | SCALE-OUT 2.86 (4533 sh) | TARGET 3.13 (4534 sh) | 9067 total (4.18% NAV) | R:R 1:1.5 | time stop 2026-09-01
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  LUTS   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  AMIA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CAED   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  AMES   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  FIRE   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    LUTS: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    AMIA: V8b says AVOID but chairman says HOLD — Bull and bear cases are roughly balanced.
+    CAED: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    AMES: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  LUTS:
+    Technicals:    RSI 88 — overbought; MACD bullish (+0.099); MA50 > MA200 — golden-cross regime; ATR 0.16 (10.0% of px) — sizing input
+    Fundamentals:  P/E 8.6 — fair; P/B 3.58; ROE 39.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - مساهم يخفض حصته في "لوتس للتنمية" ببيع 10 ملايين سهم بـ17.2 مليون جنيه [Mubasher]
+      - بورصة مصر تبحث قيد حق اكتتاب زيادة رأس مال "لوتس للتنمية" بـ95 مليون جنيه [Mubasher]
+  AMIA:
+    Technicals:    RSI 94 — overbought; MACD bullish (+0.502); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 1.30 (6.9% of px) — sizing input
+    Fundamentals:  P/E 2.5 — cheap; P/B 0.90; ROE 35.7% — strong; Margin 16.8%; D/E 4.73 — highly levered; Yield 1.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - بعد عرض البركة.. الملتقى العربي تعيّن مستشاراً لدراسة قيمة سهم "التوفيق للتأجير" [Mubasher]
+      - اليوم.. نهاية الحق في توزيع كوبون الملتقى العربي للاستثمارات [Mubasher]
+  CAED:
+    Technicals:    RSI 76 — overbought; MACD bullish (+3.177); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 14.05 (8.4% of px) — sizing input
+    Fundamentals:  P/E 7.2 — cheap; P/B 2.87; ROE 39.7% — strong; D/E 0.00; Yield 2.0%
+    News tone:     neutral (+0.00, 3 hdl)
+      - عمومية "القاهرة للخدمات التعليمية" تقر إنشاء مدرسة في رشيد الجديدة [Mubasher]
+      - القاهرة للخدمات التعليمية توضح مستجدات نقل أرض مدرسة في البحيرة [Mubasher]
+  AMES:
+    Technicals:    RSI 70 — healthy uptrend; MACD bullish (+1.417); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 12.90 (8.5% of px) — sizing input
+    Fundamentals:  P/E 21.8 — premium; P/B 3.04; ROE 13.8% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح الإسكندرية للخدمات الطبية تتراجع 6.4% في النصف الأول من 2026 [Mubasher]
+      - تغطية المرحلة الثانية لاكتتاب المركز الطبي الجديد 476.9 مرة [Mubasher]
+  FIRE:
+    Technicals:    RSI 66 — healthy uptrend; MACD bullish (+0.049); MA50 > MA200 — golden-cross regime; ATR 0.28 (5.3% of px) — sizing input
+    Fundamentals:  P/E 14.4 — fair; P/B 2.26; ROE 15.9% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - مساهم يرفع حصته في أسهم رأسمال الأولى للاستثمار إلى 25.64% [Mubasher]
+      - مساهم يرفع حصته في رأسمال الأولى للاستثمار إلى 20.16% [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: LUTS, AMIA, CAED, AMES, FIRE
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
