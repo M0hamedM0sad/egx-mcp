@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Wednesday 2026-08-26 09:38 ===
+
+--- MACRO ---
+  EGX 30:  55,120 pts (—)
+  USD/EGP: 50.2 (-0.24%)
+  Brent:   $85.46 (+0.23%)
+  Gold 24K: 7,568.38 EGP/g  |  21K: 6,622.33  |  18K: 5,676.28
+  Egyptian gold pound: 52,979 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 94) ---
+  1. AMIA   score=45.09  price=2.3  5d=+33.5% RSI=97  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMIA/
+  2. AMES   score=34.59  price=6.97  5d=+22.5% RSI=80  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMES/
+  3. LUTS   score=32.12  price=0.429  5d=+16.3% RSI=75  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-LUTS/
+  4. ICFC   score=29.99  price=29.47  5d=+18.9% RSI=75  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ICFC/
+  5. MILS   score=25.78  price=37.21  5d=+17.6% RSI=66  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MILS/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  AMIA: ENTRY 2.31 | STOP -0.72 | SCALE-OUT 5.32 (828 sh) | TARGET 6.83 (828 sh) | 1656 total (0.76% NAV) | R:R 1:1.5 | time stop 2026-09-02
+  AMES: ENTRY 7.0 | STOP -19.87 | SCALE-OUT 33.81 (93 sh) | TARGET 47.23 (93 sh) | 186 total (0.26% NAV) | R:R 1:1.5 | time stop 2026-09-02
+  LUTS: ENTRY 0.43 | STOP 0.07 | SCALE-OUT 0.78 (7038 sh) | TARGET 0.96 (7038 sh) | 14076 total (1.21% NAV) | R:R 1:1.5 | time stop 2026-09-02
+  ICFC: ENTRY 29.62 | STOP 27.27 | SCALE-OUT 31.67 (848 sh) | TARGET 32.77 (848 sh) | 1696 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-09-02
+  MILS: ENTRY 37.4 | STOP -3.65 | SCALE-OUT 78.07 (61 sh) | TARGET 98.5 (61 sh) | 122 total (0.91% NAV) | R:R 1:1.5 | time stop 2026-09-02
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  AMIA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  AMES   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  LUTS   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  ICFC   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  MILS   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    AMIA: V8b says AVOID but chairman says HOLD — Bull and bear cases are roughly balanced.
+    AMES: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+    LUTS: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    ICFC: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  AMIA:
+    Technicals:    RSI 97 — overbought; MACD bullish (+0.652); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 1.51 (7.4% of px) — sizing input
+    Fundamentals:  P/E 2.5 — cheap; P/B 0.90; ROE 35.7% — strong; Margin 16.8%; D/E 4.73 — highly levered; Yield 1.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - بعد عرض البركة.. الملتقى العربي تعيّن مستشاراً لدراسة قيمة سهم "التوفيق للتأجير" [Mubasher]
+      - اليوم.. نهاية الحق في توزيع كوبون الملتقى العربي للاستثمارات [Mubasher]
+  AMES:
+    Technicals:    RSI 68 — healthy uptrend; MACD bullish (+1.243); MA50 > MA200 — golden-cross regime; ATR 13.42 (9.1% of px) — sizing input
+    Fundamentals:  P/E 21.8 — premium; P/B 3.04; ROE 13.8% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح الإسكندرية للخدمات الطبية تتراجع 6.4% في النصف الأول من 2026 [Mubasher]
+      - تغطية المرحلة الثانية لاكتتاب المركز الطبي الجديد 476.9 مرة [Mubasher]
+  LUTS:
+    Technicals:    RSI 76 — overbought; MACD bullish (+0.074); MA50 > MA200 — golden-cross regime; ATR 0.18 (12.9% of px) — sizing input
+    Fundamentals:  P/E 8.6 — fair; P/B 3.58; ROE 39.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - مساهم يخفض حصته في "لوتس للتنمية" ببيع 10 ملايين سهم بـ17.2 مليون جنيه [Mubasher]
+      - بورصة مصر تبحث قيد حق اكتتاب زيادة رأس مال "لوتس للتنمية" بـ95 مليون جنيه [Mubasher]
+  ICFC:
+    Technicals:    RSI 76 — overbought; MACD bullish (+0.399); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 1.10 (5.5% of px) — sizing input
+    Fundamentals:  P/E 11.2 — fair; P/B 2.72; ROE 24.3% — strong; Margin 5.8%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "الدولية للأسمدة" ترتفع إلى 76.9 مليون جنيه في الربع الأول [Mubasher]
+      - مساهم يخفض حصته في رأسمال "الدولية للأسمدة" بصفقة قيمتها 5.2 مليون جنيه [Mubasher]
+  MILS:
+    Technicals:    RSI 62 — healthy uptrend; MACD bullish (+1.536); MA50 > MA200 — golden-cross regime; ATR 20.43 (9.1% of px) — sizing input
+    Fundamentals:  P/E 2.9 — cheap; P/B 1.57; ROE 53.4% — strong; D/E 0.00; Yield 2.3%
+    News tone:     neutral (+0.00, 3 hdl)
+      - ترسية مزاد "شونة بيجام" التابعة لمطاحن شمال القاهرة بقيمة 23.5 ألف جنيه للمتر [Mubasher]
+      - تراجع أرباح مطاحن شمال القاهرة 29% خلال العام المالي الماضي [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: AMIA, AMES, LUTS, ICFC, MILS
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.

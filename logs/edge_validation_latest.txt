@@ -2,39 +2,39 @@
 EGX MODEL — STATISTICAL RELIABILITY VALIDATION
 ========================================================================
 
-graded directional calls : 457
-distinct briefing dates  : 48  -> EFFECTIVE independent sample
-dates: 2026-04-30, 2026-05-02, 2026-06-07, 2026-06-08, 2026-06-09, 2026-06-10, 2026-06-11, 2026-06-14, 2026-06-15, 2026-06-16, 2026-06-17, 2026-06-22, 2026-06-23, 2026-06-24, 2026-06-25, 2026-06-28, 2026-06-29, 2026-06-30, 2026-07-01, 2026-07-02, 2026-07-05, 2026-07-06, 2026-07-07, 2026-07-08, 2026-07-09, 2026-07-12, 2026-07-13, 2026-07-14, 2026-07-15, 2026-07-16, 2026-07-19, 2026-07-20, 2026-07-21, 2026-07-22, 2026-07-23, 2026-07-26, 2026-07-27, 2026-07-28, 2026-07-29, 2026-07-30, 2026-08-02, 2026-08-03, 2026-08-04, 2026-08-05, 2026-08-06, 2026-08-09, 2026-08-10, 2026-08-13
+graded directional calls : 475
+distinct briefing dates  : 49  -> EFFECTIVE independent sample
+dates: 2026-04-30, 2026-05-02, 2026-06-07, 2026-06-08, 2026-06-09, 2026-06-10, 2026-06-11, 2026-06-14, 2026-06-15, 2026-06-16, 2026-06-17, 2026-06-22, 2026-06-23, 2026-06-24, 2026-06-25, 2026-06-28, 2026-06-29, 2026-06-30, 2026-07-01, 2026-07-02, 2026-07-05, 2026-07-06, 2026-07-07, 2026-07-08, 2026-07-09, 2026-07-12, 2026-07-13, 2026-07-14, 2026-07-15, 2026-07-16, 2026-07-19, 2026-07-20, 2026-07-21, 2026-07-22, 2026-07-23, 2026-07-26, 2026-07-27, 2026-07-28, 2026-07-29, 2026-07-30, 2026-08-02, 2026-08-03, 2026-08-04, 2026-08-05, 2026-08-06, 2026-08-09, 2026-08-10, 2026-08-13, 2026-08-16
 
 ------------------------------------------------------------------------
 1. SIGNED EDGE  (excess in the call's own direction; the metric that
    actually means 'the calls added value')
 ------------------------------------------------------------------------
-  naive mean excess (sign-blind, MISLEADING) : +5.94%
-  mean SIGNED edge (direction-aware, HONEST) : +1.30%  95% CI [-3.21%, +6.69%]
+  naive mean excess (sign-blind, MISLEADING) : +7.45%
+  mean SIGNED edge (direction-aware, HONEST) : +1.88%  95% CI [-2.74%, +7.28%]
   -> CI spans 0: cannot distinguish the edge from luck at this sample.
 
 ------------------------------------------------------------------------
 2. DIRECTIONAL HIT-RATE  (exact binomial vs a 50% coin)
 ------------------------------------------------------------------------
-  pooled             n=457  hit= 37.0%  (binomial vs 50%: p=0.000)  (p<0.05)
-  horizon 5d         n=274  hit= 39.4%  (binomial vs 50%: p=0.001)  (p<0.05)
-  horizon 21d        n=183  hit= 33.3%  (binomial vs 50%: p=0.000)  (p<0.05)
-  buy-side           n=419  hit= 37.0%  (binomial vs 50%: p=0.000)  (p<0.05)
-  sell-side          n= 38  hit= 36.8%  (binomial vs 50%: p=0.143)
+  pooled             n=475  hit= 37.5%  (binomial vs 50%: p=0.000)  (p<0.05)
+  horizon 5d         n=281  hit= 39.1%  (binomial vs 50%: p=0.000)  (p<0.05)
+  horizon 21d        n=194  hit= 35.1%  (binomial vs 50%: p=0.000)  (p<0.05)
+  buy-side           n=435  hit= 37.5%  (binomial vs 50%: p=0.000)  (p<0.05)
+  sell-side          n= 40  hit= 37.5%  (binomial vs 50%: p=0.154)
 
 ------------------------------------------------------------------------
 3. CALIBRATION  (does higher conviction = higher hit-rate?)
 ------------------------------------------------------------------------
-  medium     n= 56  hit= 30.4%  signed_edge=-22.19%
-  weekly     n=401  hit= 37.9%  signed_edge=+4.58%
+  medium     n= 59  hit= 30.5%  signed_edge=-25.68%
+  weekly     n=416  hit= 38.5%  signed_edge=+5.79%
   not enough graded calls in >=2 ranked buckets to judge calibration.
 
 ------------------------------------------------------------------------
 4. REGIME ROBUSTNESS  (edge split by the benchmark's own direction
    over each call's window — a bull-only edge is the #1 EGX blow-up)
 ------------------------------------------------------------------------
-  bench up   (bull): n=439  hit= 36.9%  signed_edge=+1.44%
+  bench up   (bull): n=457  hit= 37.4%  signed_edge=+2.04%
   bench down (corr): n= 18  hit= 38.9%  signed_edge=-2.24%
 
 ========================================================================
