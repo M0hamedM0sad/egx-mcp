@@ -8,12 +8,15 @@ $VLMR.CA: possibly delisted; no timezone found
 $POCO.CA: possibly delisted; no timezone found
 $HDST.CA: possibly delisted; no timezone found
 $GEOS.CA: possibly delisted; no timezone found
+$EGS72XL1C014.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-08-30)
 $FCMD.CA: possibly delisted; no timezone found
 $UTOP.CA: possibly delisted; no timezone found
 $GGRN.CA: possibly delisted; no timezone found
 $APPC.CA: possibly delisted; no timezone found
+$EGS385S1C012.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-08-30)
 $GPIM.CA: possibly delisted; no timezone found
 $EEP.CA: possibly delisted; no timezone found
+$EGS370O1C013.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-08-30)
 $DGTZ.CA: possibly delisted; no timezone found
 $ACTF.CA: possibly delisted; no timezone found
 $TORA.CA: possibly delisted; no timezone found
@@ -43,52 +46,52 @@ $ACAP.CA: possibly delisted; no timezone found
 
 ================================================================================
 OUT-OF-SAMPLE WALK-FORWARD
-  Training cutoff: 2026-08-13 (Thu)   — model sees only data ≤ this date
-  Test window:     2026-08-13+1 → 2026-08-20  (last week's 5 EGX sessions)
+  Training cutoff: 2026-08-20 (Thu)   — model sees only data ≤ this date
+  Test window:     2026-08-20+1 → 2026-08-27  (last week's 5 EGX sessions)
 ================================================================================
 
 Loading price history for validated EGX universe...
 Universe size: 249  (quality set ROE>=10%: 175)
 
-Model would have picked these top 5 on 2026-08-13:
+Model would have picked these top 5 on 2026-08-20:
 
 Rank Tic    Score   Forecast    Actual    P(>2%)   In 90% CI
 ------------------------------------------------------------------------
-1    MBSC   64.7      +0.94%     -2.23%  42%      ✓
-2    GTWL   45.8      +4.79%    +43.39%  56%      ✗
-3    MCQE   43.3      +0.42%    -10.52%  38%      ✗
-4    NIPH   43.2      +5.65%    -19.03%  64%      ✗
-5    LUTS   43.0      +4.07%    +76.15%  59%      ✗
+1    LUTS   97.9      +8.73%     -5.97%  69%      ✓
+2    GTWL   59.0     +10.78%    +14.48%  68%      ✓
+3    CAED   43.2      +4.21%     -9.08%  58%      ✗
+4    NAHO   43.1      +0.01%     -3.42%  28%      ✗
+5    AMES   36.1      +7.58%     -1.24%  61%      ✓
 
 ========================================================================
-AGGREGATE RESULTS — week of 2026-08-13 → 2026-08-20
+AGGREGATE RESULTS — week of 2026-08-20 → 2026-08-27
 ========================================================================
-  Top-5 portfolio return:    +17.55%
-  EGX synthetic basket (n=199):  +0.79%
+  Top-5 portfolio return:    -1.05%
+  EGX synthetic basket (n=199):  +1.65%
   EGP T-bill weekly:           +0.444%
-  Active vs basket:            +16.76 pp
-  Active vs T-bills:           +17.11 pp
+  Active vs basket:            -2.70 pp
+  Active vs T-bills:           -1.49 pp
 
-  Picks that beat basket: 2 / 5
-  Picks with positive return: 2 / 5
+  Picks that beat basket: 1 / 5
+  Picks with positive return: 1 / 5
 
   Bootstrap MC across 199 names:
-    Mean absolute error: 6.59pp (predicted vs actual)
-    Mean error (bias):   -0.53pp
-    Actual within 90% CI: 67% of names
+    Mean absolute error: 4.35pp (predicted vs actual)
+    Mean error (bias):   +0.35pp
+    Actual within 90% CI: 86% of names
     (Calibrated would be 80%; below = overconfident, above = underconfident)
 
-Model would have AVOIDED these bottom 5 on 2026-08-13:
+Model would have AVOIDED these bottom 5 on 2026-08-20:
 
 Rank   Tic    Score   Forecast    Actual    
 --------------------------------------------------
-104    GMCI   -11.0     +0.96%     +0.53%
-105    PRCL   -12.1     +2.47%     -1.66%
-106    RAYA   -12.2     -0.53%     -0.99%
-107    EOSB   -14.0     +0.00%     +0.00%
-108    BIGP   -17.2     +2.30%     +2.07%
+99     NIPH   -19.4     +4.48%    +12.14%
+100    EGTS   -19.4     -1.36%     +1.31%
+101    DSCW   -19.9     +0.92%     -1.56%
+102    MTIE   -23.0     -0.19%     +0.59%
+103    PRMH   -25.1     -0.57%     +4.24%
 
-  Bottom-5 actual return: -0.01%
-  Long top / short bottom spread: +17.56 pp
+  Bottom-5 actual return: +3.34%
+  Long top / short bottom spread: -4.39 pp
 
 Appended result to /home/runner/work/egx-mcp/egx-mcp/logs/oos_weekly_log.jsonl
