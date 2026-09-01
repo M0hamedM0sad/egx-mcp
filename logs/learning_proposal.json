@@ -1,17 +1,17 @@
 {
   "status": "blocked_by_reliability",
-  "graded_v8b_calls": 183,
+  "graded_v8b_calls": 193,
   "reliability_gate": {
     "passed": false,
     "mode": "research_only",
     "primary_horizon_days": 21,
-    "directional_calls": 23,
-    "independent_briefing_dates": 17,
-    "directional_accuracy_pct": 17.4,
-    "mean_signed_edge_pct": -46.868,
-    "mean_date_signed_edge_pct": -59.769,
-    "latest_evidence_date": "2026-07-27",
-    "evidence_age_days": 35,
+    "directional_calls": 25,
+    "independent_briefing_dates": 19,
+    "directional_accuracy_pct": 16.0,
+    "mean_signed_edge_pct": -45.028,
+    "mean_date_signed_edge_pct": -55.958,
+    "latest_evidence_date": "2026-07-29",
+    "evidence_age_days": 34,
     "calibration": {
       "high": {
         "n": 0,
@@ -19,8 +19,8 @@
         "usable": false
       },
       "medium": {
-        "n": 23,
-        "accuracy_pct": 17.4,
+        "n": 25,
+        "accuracy_pct": 16.0,
         "usable": true
       },
       "low": {

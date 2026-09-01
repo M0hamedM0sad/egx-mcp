@@ -2,40 +2,40 @@
 EGX MODEL — STATISTICAL RELIABILITY VALIDATION
 ========================================================================
 
-graded directional calls : 494
-distinct briefing dates  : 50  -> EFFECTIVE independent sample
-dates: 2026-04-30, 2026-05-02, 2026-06-07, 2026-06-08, 2026-06-09, 2026-06-10, 2026-06-11, 2026-06-14, 2026-06-15, 2026-06-16, 2026-06-17, 2026-06-22, 2026-06-23, 2026-06-24, 2026-06-25, 2026-06-28, 2026-06-29, 2026-06-30, 2026-07-01, 2026-07-02, 2026-07-05, 2026-07-06, 2026-07-07, 2026-07-08, 2026-07-09, 2026-07-12, 2026-07-13, 2026-07-14, 2026-07-15, 2026-07-16, 2026-07-19, 2026-07-20, 2026-07-21, 2026-07-22, 2026-07-23, 2026-07-26, 2026-07-27, 2026-07-28, 2026-07-29, 2026-07-30, 2026-08-02, 2026-08-03, 2026-08-04, 2026-08-05, 2026-08-06, 2026-08-09, 2026-08-10, 2026-08-13, 2026-08-16, 2026-08-17
+graded directional calls : 522
+distinct briefing dates  : 53  -> EFFECTIVE independent sample
+dates: 2026-04-30, 2026-05-02, 2026-06-07, 2026-06-08, 2026-06-09, 2026-06-10, 2026-06-11, 2026-06-14, 2026-06-15, 2026-06-16, 2026-06-17, 2026-06-22, 2026-06-23, 2026-06-24, 2026-06-25, 2026-06-28, 2026-06-29, 2026-06-30, 2026-07-01, 2026-07-02, 2026-07-05, 2026-07-06, 2026-07-07, 2026-07-08, 2026-07-09, 2026-07-12, 2026-07-13, 2026-07-14, 2026-07-15, 2026-07-16, 2026-07-19, 2026-07-20, 2026-07-21, 2026-07-22, 2026-07-23, 2026-07-26, 2026-07-27, 2026-07-28, 2026-07-29, 2026-07-30, 2026-08-02, 2026-08-03, 2026-08-04, 2026-08-05, 2026-08-06, 2026-08-09, 2026-08-10, 2026-08-13, 2026-08-16, 2026-08-17, 2026-08-19, 2026-08-20, 2026-08-23
 
 ------------------------------------------------------------------------
 1. SIGNED EDGE  (excess in the call's own direction; the metric that
    actually means 'the calls added value')
 ------------------------------------------------------------------------
-  naive mean excess (sign-blind, MISLEADING) : +8.72%
-  mean SIGNED edge (direction-aware, HONEST) : +1.93%  95% CI [-2.55%, +7.11%]
+  naive mean excess (sign-blind, MISLEADING) : +8.18%
+  mean SIGNED edge (direction-aware, HONEST) : +1.45%  95% CI [-2.79%, +6.35%]
   -> CI spans 0: cannot distinguish the edge from luck at this sample.
 
 ------------------------------------------------------------------------
 2. DIRECTIONAL HIT-RATE  (exact binomial vs a 50% coin)
 ------------------------------------------------------------------------
-  pooled             n=494  hit= 38.3%  (binomial vs 50%: p=0.000)  (p<0.05)
-  horizon 5d         n=288  hit= 39.2%  (binomial vs 50%: p=0.000)  (p<0.05)
-  horizon 21d        n=206  hit= 36.9%  (binomial vs 50%: p=0.000)  (p<0.05)
-  buy-side           n=451  hit= 38.4%  (binomial vs 50%: p=0.000)  (p<0.05)
-  sell-side          n= 43  hit= 37.2%  (binomial vs 50%: p=0.126)
+  pooled             n=522  hit= 38.3%  (binomial vs 50%: p=0.000)  (p<0.05)
+  horizon 5d         n=304  hit= 39.5%  (binomial vs 50%: p=0.000)  (p<0.05)
+  horizon 21d        n=218  hit= 36.7%  (binomial vs 50%: p=0.000)  (p<0.05)
+  buy-side           n=473  hit= 38.7%  (binomial vs 50%: p=0.000)  (p<0.05)
+  sell-side          n= 49  hit= 34.7%  (binomial vs 50%: p=0.044)  (p<0.05)
 
 ------------------------------------------------------------------------
 3. CALIBRATION  (does higher conviction = higher hit-rate?)
 ------------------------------------------------------------------------
-  medium     n= 63  hit= 30.2%  signed_edge=-29.71%
-  weekly     n=431  hit= 39.4%  signed_edge=+6.56%
+  medium     n= 69  hit= 29.0%  signed_edge=-28.35%
+  weekly     n=453  hit= 39.7%  signed_edge=+5.99%
   not enough graded calls in >=2 ranked buckets to judge calibration.
 
 ------------------------------------------------------------------------
 4. REGIME ROBUSTNESS  (edge split by the benchmark's own direction
    over each call's window — a bull-only edge is the #1 EGX blow-up)
 ------------------------------------------------------------------------
-  bench up   (bull): n=469  hit= 38.2%  signed_edge=+2.13%
-  bench down (corr): n= 25  hit= 40.0%  signed_edge=-1.83%
+  bench up   (bull): n=498  hit= 38.4%  signed_edge=+1.66%
+  bench down (corr): n= 24  hit= 37.5%  signed_edge=-3.02%
 
 ========================================================================
 VERDICT: INCONCLUSIVE

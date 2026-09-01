@@ -1,0 +1,95 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-09-01 14:13 ===
+
+--- MACRO ---
+  EGX 30:  55,350 pts (—)
+  USD/EGP: 50.87 (+0.20%)
+  Brent:   $92.06 (+3.47%)
+  Gold 24K: 7,229.60 EGP/g  |  21K: 6,325.90  |  18K: 5,422.20
+  Egyptian gold pound: 50,607 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 119) ---
+  1. LUTS   score=48.47  price=0.429  5d=+34.2% RSI=54  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-LUTS/
+  2. GTWL   score=36.02  price=29.69  5d=+24.8% RSI=81  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-GTWL/
+  3. ICFC   score=23.43  price=29.47  5d=+12.3% RSI=83  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ICFC/
+  4. AXPH   score=22.64  price=210.71  5d=+11.4% RSI=89  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AXPH/
+  5. OFH    score=19.79  price=0.336  5d=+12.3% RSI=77  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-OFH/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  LUTS: ENTRY 0.43 | STOP -0.03 | SCALE-OUT 0.89 (5470 sh) | TARGET 1.11 (5470 sh) | 10940 total (0.94% NAV) | R:R 1:1.5 | time stop 2026-09-08
+  GTWL: ENTRY 29.84 | STOP -13.11 | SCALE-OUT 72.49 (58 sh) | TARGET 93.89 (58 sh) | 116 total (0.69% NAV) | R:R 1:1.5 | time stop 2026-09-08
+  ICFC: ENTRY 29.62 | STOP 26.4 | SCALE-OUT 32.54 (814 sh) | TARGET 34.07 (814 sh) | 1628 total (9.6% NAV) | R:R 1:1.5 | time stop 2026-09-08
+  AXPH: ENTRY 211.76 | STOP 11.13 | SCALE-OUT 410.29 (12 sh) | TARGET 510.08 (13 sh) | 25 total (1.05% NAV) | R:R 1:1.5 | time stop 2026-09-08
+  OFH: ENTRY 0.34 | STOP 0.23 | SCALE-OUT 0.44 (23320 sh) | TARGET 0.5 (23321 sh) | 46641 total (3.13% NAV) | R:R 1:1.5 | time stop 2026-09-08
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  LUTS   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  GTWL   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  ICFC   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  AXPH   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  OFH    FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: mildly_bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    ICFC: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    AXPH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    OFH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  LUTS:
+    Technicals:    RSI 57 — healthy uptrend; MACD bearish (-0.014); MA50 > MA200 — golden-cross regime; ATR 0.23 (20.2% of px) — sizing input
+    Fundamentals:  P/E 8.6 — fair; P/B 3.58; ROE 39.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - اليوم.. انطلاق اكتتاب وبدء تداول حق زيادة رأسمال لوتس للتنمية الزراعية [Mubasher]
+      - 24 سبتمبر.. لوتس للتنمية تناقش انتخاب مجلس جديد ورفع قرض مساهم لـ100 مليون جنيه [Mubasher]
+  GTWL:
+    Technicals:    RSI 81 — overbought; MACD bullish (+6.724); MA50 > MA200 — golden-cross regime; ATR 21.40 (9.2% of px) — sizing input
+    Fundamentals:  P/E 3.3 — cheap; P/B 0.46; ROE 14.2% — adequate; D/E 1.21
+    News tone:     bullish (+1.00, 3 hdl)
+      - عمومية "جولدن تكس" تقرر زيادة رأس المال عبر الاكتتاب [Mubasher]
+      - أرباح "جولدن تكس للأصواف" تتراجع 43% خلال النصف الأول من 2026 [Mubasher]
+  ICFC:
+    Technicals:    RSI 81 — overbought; MACD bullish (+0.556); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 1.53 (6.7% of px) — sizing input
+    Fundamentals:  P/E 11.2 — fair; P/B 2.72; ROE 24.3% — strong; Margin 5.8%
+    News tone:     bullish (+1.00, 3 hdl)
+      - الصناعة: 9.4 مليار دولار صادرات مصر من الصناعات الكيماوية والأسمدة في 2025 [Mubasher]
+      - أرباح "الدولية للأسمدة" ترتفع إلى 76.9 مليون جنيه في الربع الأول [Mubasher]
+  AXPH:
+    Technicals:    RSI 89 — overbought; MACD bullish (+35.671); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 99.79 (5.9% of px) — sizing input
+    Fundamentals:  P/E 1.6 — cheap; P/B 0.97; ROE 60.8% — strong; D/E 0.01; Yield 3.7%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح الإسكندرية للأدوية تنمو 35% إلى 528 مليون جنيه خلال 2025-2026 [Mubasher]
+      - أرباح "الإسكندرية للأدوية" تنمو 31% خلال 11 شهراً [Mubasher]
+  OFH:
+    Technicals:    RSI 79 — overbought; MACD bullish (+0.014); MA50 > MA200 — golden-cross regime; ATR 0.05 (5.1% of px) — sizing input
+    Fundamentals:  P/B 0.53; ROE 80.6% — strong; D/E 0.00
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "أو بي القابضة" تهبط 93% خلال النصف الأول مع تحول المستقلة للربحية [Mubasher]
+      - "أو بي المالية القابضة" تتحول للربحية بـ 106.7 مليون جنيه خلال الربع الأول [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: LUTS, GTWL, ICFC, AXPH, OFH
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
