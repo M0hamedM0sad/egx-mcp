@@ -1,14 +1,14 @@
 Rescraping 249 names ...
 TradingView fill: profit_margin_pct+99, debt_to_equity+166, dividend_yield_pct+0
 {
-  "snapshot_date": "2026-09-01",
-  "appended": 216,
-  "unchanged": 27,
+  "snapshot_date": "2026-09-02",
+  "appended": 221,
+  "unchanged": 22,
   "skipped_empty": 10,
   "tickers_with_history": 243,
   "history_starts": "2026-08-15",
-  "history_rows": 2026
+  "history_rows": 2247
 }
 
-Appended 216 changed row(s) -> /home/runner/work/egx-mcp/egx-mcp/logs/fundamentals_history.jsonl
+Appended 221 changed row(s) -> /home/runner/work/egx-mcp/egx-mcp/logs/fundamentals_history.jsonl
 Point-in-time fundamentals available from 2026-08-15 onward; panel rows before that date stay flagged as look-ahead-contaminated.

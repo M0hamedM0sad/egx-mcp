@@ -1,0 +1,89 @@
+=== EGX PRE-MARKET BRIEFING — Wednesday 2026-09-02 13:50 ===
+
+--- MACRO ---
+  EGX 30:  55,444 pts (—)
+  USD/EGP: 51.02 (+0.49%)
+  Brent:   $94.12 (-1.39%)
+  Gold 24K: 7,183.17 EGP/g  |  21K: 6,285.28  |  18K: 5,387.38
+  Egyptian gold pound: 50,282 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 112) ---
+  1. ICFC   score=31.79  price=24.15  5d=+21.1% RSI=84  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ICFC/
+  2. AMOC   score=28.16  price=13.25  5d=+19.4% RSI=83  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMOC/
+  3. ATLC   score=26.59  price=6.8  5d=+23.0% RSI=74  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ATLC/
+  4. PRMH   score=26.49  price=2.68  5d=+17.5% RSI=42  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-PRMH/
+  5. MBSC   score=25.28  price=460.0  5d=+18.8% RSI=81  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MBSC/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  ICFC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  AMOC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  ATLC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  PRMH: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  MBSC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  ICFC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  AMOC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  ATLC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  PRMH   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MBSC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  ICFC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 8.0 — fair; P/B 1.33; ROE 24.3% — strong; Margin 5.8%
+    News tone:     bullish (+1.00, 3 hdl)
+      - الصناعة: 9.4 مليار دولار صادرات مصر من الصناعات الكيماوية والأسمدة في 2025 [Mubasher]
+      - أرباح "الدولية للأسمدة" ترتفع إلى 76.9 مليون جنيه في الربع الأول [Mubasher]
+  AMOC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 18.0 — premium; P/B 2.41; ROE 13.3% — adequate; Margin 3.5%; D/E 0.00; Yield 5.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "أموك" تقفز 109% إلى 1.9 مليار جنيه خلال النصف الأول [Mubasher]
+      - "أموك" ترفع توقعات أرباحها لعام 2026 إلى 2.1 مليار جنيه [Mubasher]
+  ATLC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 6.9 — cheap; P/B 1.30; ROE 12.9% — adequate; Margin 10.9%; D/E 4.44 — highly levered; Yield 6.6%
+    News tone:     neutral (+0.00, 3 hdl)
+      - بعد عرض البركة.. الملتقى العربي تعيّن مستشاراً لدراسة قيمة سهم "التوفيق للتأجير" [Mubasher]
+      - بورصة مصر تعلن موعد سريان عرض بنك البركة للاستحواذ على التوفيق للتأجير التمويلي [Mubasher]
+  PRMH:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 6.3 — cheap; P/B 1.46; ROE 17.1% — adequate; D/E 0.23
+    News tone:     bullish (+1.00, 3 hdl)
+      - الرقابة المالية ترفض نشر تقرير إفصاح زيادة رأسمال برايم القابضة وتوضح الأسباب [Mubasher]
+      - أرباح برايم القابضة تصعد إلى 43.7 مليون جنيه في النصف الأول [Mubasher]
+  MBSC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 5.0 — cheap; P/B 4.47; ROE 45.9% — strong; D/E 0.03; Yield 8.3%
+    News tone:     bullish (+1.00, 3 hdl)
+      - مصر بني سويف للأسمنت تشتري 23 ألف سهم خزينة [Mubasher]
+      - مصر بني سويف للأسمنت تقرر شراء 2.75 مليون سهم خزينة [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: ICFC, AMOC, ATLC, PRMH, MBSC
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
