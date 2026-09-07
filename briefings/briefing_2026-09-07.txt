@@ -1,0 +1,93 @@
+=== EGX PRE-MARKET BRIEFING — Monday 2026-09-07 15:07 ===
+
+--- MACRO ---
+  EGX 30:  56,688 pts (—)
+  USD/EGP: 50.8 (-0.16%)
+  Brent:   $96.28 (+0.29%)
+  Gold 24K: 7,311.44 EGP/g  |  21K: 6,397.51  |  18K: 5,483.58
+  Egyptian gold pound: 51,180 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 108) ---
+  1. ATLC   score=52.51  price=7.62  5d=+39.8% RSI=77  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ATLC/
+  2. SIPC   score=37.49  price=6.3  5d=+32.1% RSI=73  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SIPC/
+  3. AMOC   score=30.88  price=13.54  5d=+18.4% RSI=75  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMOC/
+  4. MOIN   score=29.7  price=42.02  5d=+22.4% RSI=60  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MOIN/
+  5. RKAZ   score=28.39  price=4.78  5d=+16.6% RSI=61  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-RKAZ/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  ATLC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  SIPC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  AMOC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  MOIN: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  RKAZ: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  ATLC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  SIPC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  AMOC   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  MOIN   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  RKAZ   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bearish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    AMOC: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  ATLC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 6.9 — cheap; P/B 1.30; ROE 12.9% — adequate; Margin 10.9%; D/E 4.44 — highly levered; Yield 6.6%
+    News tone:     bullish (+1.00, 3 hdl)
+      - الملتقى العربي تعتمد دراسة القيمة العادلة للتوفيق للتأجير بشأن عرض بنك البركة [Mubasher]
+      - حظر تصويت الأطراف المرتبطة بعرض بنك البركة على أسهم "التوفيق للتأجير" [Mubasher]
+  SIPC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 34.7 — premium; P/B 6.82; ROE 20.6% — strong; D/E 0.24
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح سبأ الدولية للأدوية تتراجع 99.9% في النصف الأول من 2026 [Mubasher]
+      - عمومية "سبأ للأدوية" تعتمد القوائم المالية وتقرر عدم توزيع أرباح عن 2025 [Mubasher]
+  AMOC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 18.0 — premium; P/B 2.41; ROE 13.3% — adequate; Margin 3.5%; D/E 0.00; Yield 5.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "أموك" تقفز 109% إلى 1.9 مليار جنيه خلال النصف الأول [Mubasher]
+      - "أموك" ترفع توقعات أرباحها لعام 2026 إلى 2.1 مليار جنيه [Mubasher]
+  MOIN:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 10.3 — fair; P/B 2.25; ROE 77.5% — strong; Margin 15.2%; D/E 0.00
+    News tone:     neutral (+0.00, 3 hdl)
+      - أرباح "المهندس للتأمين" تقفز 188% خلال النصف الأول من 2026 [Mubasher]
+      - ​"مصر للفنادق" تجدد تعاقدها التأميني مع "المهندس للتأمين" [Mubasher]
+  RKAZ:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 57.6 — premium; P/B 2.69; ROE 19.0% — adequate; Margin 8.6%; D/E 0.04
+    News tone:     bearish (-1.00, 3 hdl)
+      - خسائر "ركاز القابضة" تقفز لأكثر من مليون جنيه خلال النصف الأول [Mubasher]
+      - خسائر "ركاز القابضة" ترتفع 180% خلال الربع الأول من 2026 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: ATLC, SIPC, AMOC, MOIN, RKAZ
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
