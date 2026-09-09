@@ -1,0 +1,95 @@
+=== EGX PRE-MARKET BRIEFING — Wednesday 2026-09-09 14:03 ===
+
+--- MACRO ---
+  EGX 30:  56,360 pts (—)
+  USD/EGP: 51.15 (+0.35%)
+  Brent:   $100.54 (+1.25%)
+  Gold 24K: 7,324.65 EGP/g  |  21K: 6,409.07  |  18K: 5,493.49
+  Egyptian gold pound: 51,273 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 91) ---
+  1. MOIN   score=32.64  price=40.85  5d=+21.0% RSI=62  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MOIN/
+  2. SIPC   score=32.05  price=5.75  5d=+18.1% RSI=61  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SIPC/
+  3. RKAZ   score=28.16  price=4.9  5d=+19.5% RSI=63  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-RKAZ/
+  4. CIRA   score=26.86  price=38.4  5d=+17.9% RSI=54  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CIRA/
+  5. AMOC   score=25.66  price=14.2  5d=+15.9% RSI=78  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMOC/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  MOIN: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  SIPC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  RKAZ: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  CIRA: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  AMOC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  MOIN   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  SIPC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  RKAZ   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bearish
+  CIRA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  AMOC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    MOIN: V8b says ABSTAIN but chairman says HOLD — Bull and bear cases are roughly balanced.
+    SIPC: V8b says ABSTAIN but chairman says HOLD — Bull and bear cases are roughly balanced.
+    AMOC: V8b says ABSTAIN but chairman says HOLD — Bull and bear cases are roughly balanced.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  MOIN:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 10.3 — fair; P/B 2.25; ROE 77.5% — strong; Margin 15.2%; D/E 0.00
+    News tone:     neutral (+0.00, 3 hdl)
+      - أرباح "المهندس للتأمين" تقفز 188% خلال النصف الأول من 2026 [Mubasher]
+      - ​"مصر للفنادق" تجدد تعاقدها التأميني مع "المهندس للتأمين" [Mubasher]
+  SIPC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 34.7 — premium; P/B 6.82; ROE 20.6% — strong; D/E 0.24
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح سبأ الدولية للأدوية تتراجع 99.9% في النصف الأول من 2026 [Mubasher]
+      - عمومية "سبأ للأدوية" تعتمد القوائم المالية وتقرر عدم توزيع أرباح عن 2025 [Mubasher]
+  RKAZ:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 57.6 — premium; P/B 2.69; ROE 19.0% — adequate; Margin 8.6%; D/E 0.04
+    News tone:     bearish (-1.00, 3 hdl)
+      - خسائر "ركاز القابضة" تقفز لأكثر من مليون جنيه خلال النصف الأول [Mubasher]
+      - خسائر "ركاز القابضة" ترتفع 180% خلال الربع الأول من 2026 [Mubasher]
+  CIRA:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 20.8 — premium; P/B 9.01; ROE 43.6% — strong; Margin 7.1%; D/E 2.19 — highly levered; Yield 1.2%
+    News tone:     neutral (+0.00, 3 hdl)
+      - "سيرا للتعليم" تصدر توضيحاً بشأن المفاوضات على تمويلات بنكية [Mubasher]
+      - "سيرا" التعليمية تعتزم استثمار 3 مليارات جنيه لإنشاء جامعتين بدمياط وبدر [Mubasher]
+  AMOC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 18.0 — premium; P/B 2.41; ROE 13.3% — adequate; Margin 3.5%; D/E 0.00; Yield 5.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "أموك" تقفز 109% إلى 1.9 مليار جنيه خلال النصف الأول [Mubasher]
+      - "أموك" ترفع توقعات أرباحها لعام 2026 إلى 2.1 مليار جنيه [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: MOIN, SIPC, RKAZ, CIRA, AMOC
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
