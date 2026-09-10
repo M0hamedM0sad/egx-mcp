@@ -3,11 +3,11 @@ EGX MODEL RELIABILITY SCORECARD
 ======================================================================
 
 [OPEN]  Gate 1  EVIDENCE   (proven live edge)
-        graded V8b 21d directional calls: 33 (need >= 40)
-        independent briefing dates: 25 (need >= 8)
-        directional accuracy vs benchmark: 33.3% (need >= 55%)
-        date-weighted signed edge: -40.134% (must be > 0)
-        latest evidence: 2026-08-06 (age 34 days; max 45)
+        graded V8b 21d directional calls: 34 (need >= 40)
+        independent briefing dates: 26 (need >= 8)
+        directional accuracy vs benchmark: 35.3% (need >= 55%)
+        date-weighted signed edge: -36.714% (must be > 0)
+        latest evidence: 2026-08-09 (age 32 days; max 45)
         -> buy-side output remains research-only until every evidence check passes.
 
 [PASS]  Gate 2  DATA       (fundamentals coverage)
@@ -15,7 +15,7 @@ EGX MODEL RELIABILITY SCORECARD
         -> add profit margin and debt/equity fields to promote medium-confidence names.
 
 [OPEN]  Gate 3  CALIBRATION (conviction = accuracy)
-        high=n/a% (n=0)  medium=33.3% (n=33)  low=n/a% (n=0)
+        high=n/a% (n=0)  medium=35.3% (n=34)  low=n/a% (n=0)
         conviction tracks accuracy (monotone): False
         -> need >= 10 V8b calls in at least two conviction buckets.
 
