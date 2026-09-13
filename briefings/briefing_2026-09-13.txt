@@ -1,0 +1,94 @@
+=== EGX PRE-MARKET BRIEFING — Sunday 2026-09-13 14:26 ===
+
+--- MACRO ---
+  EGX 30:  55,865 pts (—)
+  USD/EGP: 51.31 (—)
+  Brent:   $104.61 (-3.59%)
+  Gold 24K: 7,273.16 EGP/g  |  21K: 6,364.02  |  18K: 5,454.87
+  Egyptian gold pound: 50,912 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 78) ---
+  1. MOIN   score=34.07  price=39.77  5d=+22.3% RSI=65  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MOIN/
+  2. MPCO   score=31.51  price=2.6  5d=+24.4% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MPCO/
+  3. SIPC   score=27.28  price=5.9  5d=+16.4% RSI=67  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SIPC/
+  4. MCRO   score=22.18  price=1.68  5d=+12.8% RSI=69  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MCRO/
+  5. EFIC   score=18.41  price=215.26  5d=+11.2% RSI=50  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EFIC/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  MOIN: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  MPCO: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  SIPC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  MCRO: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EFIC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  MOIN   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MPCO   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  SIPC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MCRO   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  EFIC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    MOIN: V8b says ABSTAIN but chairman says HOLD — Bull and bear cases are roughly balanced.
+    MPCO: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  MOIN:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 3.0 — cheap; P/B 2.29; ROE 77.5% — strong; Margin 15.2%; D/E 0.00
+    News tone:     neutral (+0.00, 3 hdl)
+      - أرباح "المهندس للتأمين" تقفز 188% خلال النصف الأول من 2026 [Mubasher]
+      - ​"مصر للفنادق" تجدد تعاقدها التأميني مع "المهندس للتأمين" [Mubasher]
+  MPCO:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 7.4 — cheap; P/B 4.20; ROE 57.4% — strong; D/E 0.38
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم ضمن قطاع الأغذية يقفز 13% وسط سيولة عالية [Mubasher]
+      - المنصورة للدواجن تتحول للخسائر في النصف الأول من 2026 [Mubasher]
+  SIPC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 7.5 — cheap; P/B 1.49; ROE 20.6% — strong; D/E 0.24
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح سبأ الدولية للأدوية تتراجع 99.9% في النصف الأول من 2026 [Mubasher]
+      - عمومية "سبأ للأدوية" تعتمد القوائم المالية وتقرر عدم توزيع أرباح عن 2025 [Mubasher]
+  MCRO:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 11.3 — fair; P/B 10.03; ROE 89.2% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "ماكرو جروب" تنمو 22.5% خلال النصف الأول من 2026 [Mubasher]
+      - بقيمة 426.4 مليون جنيه.. "ماكرو جروب" تستعرض أوجه إنفاق متحصلات زيادة رأس المال [Mubasher]
+  EFIC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 3.7 — cheap; P/B 3.40; ROE 92.6% — strong; Yield 1.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - ناس للاستثمارات تستحوذ على 25% من المالية والصناعية ضمن عملية إعادة هيكلة [Mubasher]
+      - ميدفيرت تنقل 25% من "المالية والصناعية" إلى "ناس" ضمن إعادة هيكلة الملكية [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: MOIN, MPCO, SIPC, MCRO, EFIC
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
