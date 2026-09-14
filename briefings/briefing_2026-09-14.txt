@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Monday 2026-09-14 15:29 ===
+
+--- MACRO ---
+  EGX 30:  55,226 pts (—)
+  USD/EGP: 51.76 (+0.88%)
+  Brent:   $108.94 (+0.98%)
+  Gold 24K: 7,173.87 EGP/g  |  21K: 6,277.13  |  18K: 5,380.40
+  Egyptian gold pound: 50,217 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 82) ---
+  1. MPCO   score=37.13  price=1.26  5d=+25.7% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MPCO/
+  2. SIPC   score=24.02  price=0.598  5d=+16.6% RSI=66  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SIPC/
+  3. DTPP   score=21.79  price=42.36  5d=+19.0% RSI=87  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-DTPP/
+  4. MBEG   score=20.79  price=1.36  5d=+13.3% RSI=69  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MBEG/
+  5. ETEL   score=19.82  price=32.77  5d=+9.8% RSI=75  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ETEL/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  MPCO: ENTRY 1.27 | STOP 0.97 | SCALE-OUT 1.55 (8704 sh) | TARGET 1.69 (8705 sh) | 17409 total (4.39% NAV) | R:R 1:1.5 | time stop 2026-09-21
+  SIPC: ENTRY 0.6 | STOP -0.34 | SCALE-OUT 1.54 (2667 sh) | TARGET 2.0 (2668 sh) | 5335 total (0.64% NAV) | R:R 1:1.5 | time stop 2026-09-21
+  DTPP: ENTRY 42.57 | STOP 17.22 | SCALE-OUT 67.5 (99 sh) | TARGET 80.07 (99 sh) | 198 total (1.68% NAV) | R:R 1:1.5 | time stop 2026-09-21
+  MBEG: ENTRY 1.37 | STOP 0.59 | SCALE-OUT 2.13 (3264 sh) | TARGET 2.51 (3265 sh) | 6529 total (1.78% NAV) | R:R 1:1.5 | time stop 2026-09-21
+  ETEL: ENTRY 32.93 | STOP 25.89 | SCALE-OUT 39.65 (363 sh) | TARGET 43.09 (363 sh) | 726 total (4.76% NAV) | R:R 1:1.5 | time stop 2026-09-21
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  MPCO   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  SIPC   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  DTPP   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MBEG   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: bullish
+  ETEL   FRESH  5d: BUY (5d)    1mo: BUY    (BUY)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    MPCO: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    SIPC: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    DTPP: V8b says AVOID but chairman says HOLD — Bull and bear cases are roughly balanced.
+    ETEL: V8b says ABSTAIN but chairman says BUY — Bull case clearly outweighs bear case AND composite score is strong.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  MPCO:
+    Technicals:    RSI 71 — overbought; MACD bullish (+0.039); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.14 (5.2% of px) — sizing input
+    Fundamentals:  P/E 7.4 — cheap; P/B 4.20; ROE 57.4% — strong; D/E 0.38
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم ضمن قطاع الأغذية يقفز 13% وسط سيولة عالية [Mubasher]
+      - المنصورة للدواجن تتحول للخسائر في النصف الأول من 2026 [Mubasher]
+  SIPC:
+    Technicals:    RSI 69 — healthy uptrend; MACD bullish (+0.083); MA50 > MA200 — golden-cross regime; ATR 0.47 (7.7% of px) — sizing input
+    Fundamentals:  P/E 7.5 — cheap; P/B 1.49; ROE 20.6% — strong; D/E 0.24
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح سبأ الدولية للأدوية تتراجع 99.9% في النصف الأول من 2026 [Mubasher]
+      - عمومية "سبأ للأدوية" تعتمد القوائم المالية وتقرر عدم توزيع أرباح عن 2025 [Mubasher]
+  DTPP:
+    Technicals:    RSI 84 — overbought; MACD bullish (+0.068); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 12.57 (3.5% of px) — sizing input
+    Fundamentals:  P/E 2.4 — cheap; P/B 0.96; ROE 40.3% — strong; Yield 5.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح دلتا للطباعة والتغليف تقفز 103.2% في النصف الأول [Mubasher]
+      - مساهم يخفض حصته في أسهم رأسمال دلتا للطباعة إلى 20.96% [Mubasher]
+  MBEG:
+    Technicals:    RSI 71 — overbought; MACD bearish (-0.009); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.38 (5.0% of px) — sizing input
+    Fundamentals:  P/E 13.6 — fair; P/B 1.53; ROE 11.0% — adequate; D/E 1.73 — highly levered
+    News tone:     bullish (+0.78, 3 hdl)
+      - أرباح إم بي للهندسة المجمعة ترتفع 39% في النصف الأول من 2026 [Mubasher]
+      - رغم تراجع الإيرادات.. أرباح إم بي للهندسة ترتفع 16.1% في النصف الأول من 2026 [Mubasher]
+  ETEL:
+    Technicals:    RSI 79 — overbought; MACD bullish (+0.620); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 3.44 (2.7% of px) — sizing input
+    Fundamentals:  P/E 3.9 — cheap; P/B 0.89; ROE 22.8% — strong; Margin 21.0%; D/E 1.18; Yield 1.6%
+    News tone:     neutral (+0.00, 3 hdl)
+      - كيف تفاعل سهم المصرية للاتصالات بعد تعليقها بشأن التوسع الإفريقي؟ [Mubasher]
+      - المصرية للاتصالات ترد على أنباء التوسع بشرق إفريقيا: لا قرارات معتمدة حالياً [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: MPCO, SIPC, DTPP, MBEG, ETEL
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
