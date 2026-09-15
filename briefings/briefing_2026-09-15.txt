@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-09-15 14:20 ===
+
+--- MACRO ---
+  EGX 30:  54,813 pts (—)
+  USD/EGP: 52.04 (+0.48%)
+  Brent:   $101.33 (-5.35%)
+  Gold 24K: 7,223.05 EGP/g  |  21K: 6,320.17  |  18K: 5,417.29
+  Egyptian gold pound: 50,561 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 104) ---
+  1. MPCO   score=22.41  price=2.53  5d=+10.5% RSI=61  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MPCO/
+  2. TALM   score=22.24  price=22.68  5d=+19.4% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-TALM/
+  3. RKAZ   score=22.08  price=5.5  5d=+15.1% RSI=75  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-RKAZ/
+  4. DTPP   score=22.01  price=332.0  5d=+9.9% RSI=65  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-DTPP/
+  5. CCAP   score=20.73  price=6.85  5d=+13.4% RSI=83  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CCAP/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  MPCO: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  TALM: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  RKAZ: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  DTPP: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  CCAP: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  MPCO   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  TALM   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  RKAZ   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bearish
+  DTPP   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CCAP   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    MPCO: V8b says ABSTAIN but chairman says HOLD — Bull and bear cases are roughly balanced.
+    TALM: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    RKAZ: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    DTPP: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  MPCO:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 11.5 — fair; P/B 2.85; ROE 57.4% — strong; D/E 0.38
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم ضمن قطاع الأغذية يقفز 13% وسط سيولة عالية [Mubasher]
+      - المنصورة للدواجن تتحول للخسائر في النصف الأول من 2026 [Mubasher]
+  TALM:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  ROE 68.7% — strong; Margin 26.4%; D/E 1.21
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم ضمن قطاع الخدمات التعليمية يقفز 20% وسط سيولة عالية [Mubasher]
+      - ارتفاع إيرادات "تعليم" إلى 2.41 مليار جنيه في 9 أشهر.. والتكاليف تهبط بالأرباح [Mubasher]
+  RKAZ:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 57.6 — premium; P/B 2.69; ROE 19.0% — adequate; Margin 8.6%; D/E 0.04
+    News tone:     bearish (-1.00, 3 hdl)
+      - خسائر "ركاز القابضة" تقفز لأكثر من مليون جنيه خلال النصف الأول [Mubasher]
+      - خسائر "ركاز القابضة" ترتفع 180% خلال الربع الأول من 2026 [Mubasher]
+  DTPP:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 7.9 — cheap; P/B 2.60; ROE 40.3% — strong; Yield 5.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح دلتا للطباعة والتغليف تقفز 103.2% في النصف الأول [Mubasher]
+      - مساهم يخفض حصته في أسهم رأسمال دلتا للطباعة إلى 20.96% [Mubasher]
+  CCAP:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 4.4 — cheap; P/B 0.53; ROE 12.1% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم "القلعة" يتصدر تعاملات البورصة بدعم صفقة "المصرية للتكرير" [Mubasher]
+      - رئيس "القلعة": 3 طروحات لشركات تابعة بالنصف الثاني من 2027 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: MPCO, TALM, RKAZ, DTPP, CCAP
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.

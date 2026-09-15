@@ -11,7 +11,7 @@
     "mean_signed_edge_pct": -26.765,
     "mean_date_signed_edge_pct": -33.628,
     "latest_evidence_date": "2026-08-10",
-    "evidence_age_days": 35,
+    "evidence_age_days": 36,
     "calibration": {
       "high": {
         "n": 0,
