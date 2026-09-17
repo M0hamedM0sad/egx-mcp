@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Thursday 2026-09-17 14:18 ===
+
+--- MACRO ---
+  EGX 30:  55,403 pts (—)
+  USD/EGP: 52.06 (-0.17%)
+  Brent:   $98.55 (-6.78%)
+  Gold 24K: 7,347.51 EGP/g  |  21K: 6,429.07  |  18K: 5,510.63
+  Egyptian gold pound: 51,433 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 69) ---
+  1. TALM   score=36.13  price=8.0  5d=+24.4% RSI=81  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-TALM/
+  2. MPCO   score=30.31  price=1.26  5d=+18.8% RSI=66  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MPCO/
+  3. RKAZ   score=24.43  price=3.32  5d=+11.2% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-RKAZ/
+  4. BINV   score=24.17  price=23.52  5d=+20.9% RSI=83  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BINV/
+  5. SPMD   score=23.99  price=0.361  5d=+7.3% RSI=53  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SPMD/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  TALM: ENTRY 8.04 | STOP 5.54 | SCALE-OUT 10.46 (1014 sh) | TARGET 11.7 (1015 sh) | 2029 total (3.25% NAV) | R:R 1:1.5 | time stop 2026-09-24
+  MPCO: ENTRY 1.27 | STOP 0.91 | SCALE-OUT 1.61 (7114 sh) | TARGET 1.79 (7114 sh) | 14228 total (3.59% NAV) | R:R 1:1.5 | time stop 2026-09-24
+  RKAZ: ENTRY 3.34 | STOP 2.36 | SCALE-OUT 4.28 (2611 sh) | TARGET 4.76 (2612 sh) | 5223 total (3.47% NAV) | R:R 1:1.5 | time stop 2026-09-24
+  BINV: ENTRY 23.64 | STOP 17.88 | SCALE-OUT 29.16 (443 sh) | TARGET 31.98 (443 sh) | 886 total (4.17% NAV) | R:R 1:1.5 | time stop 2026-09-24
+  SPMD: ENTRY 0.36 | STOP 0.3 | SCALE-OUT 0.43 (38461 sh) | TARGET 0.46 (38462 sh) | 76923 total (5.55% NAV) | R:R 1:1.5 | time stop 2026-09-24
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  TALM   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  MPCO   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  RKAZ   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bearish
+  BINV   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  SPMD   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    TALM: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    MPCO: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    BINV: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    SPMD: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  TALM:
+    Technicals:    RSI 74 — overbought; MACD bullish (+0.421); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 1.23 (5.5% of px) — sizing input
+    Fundamentals:  P/E 4.3 — cheap; P/B 2.99; ROE 68.7% — strong; Margin 26.4%; D/E 1.21
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم ضمن قطاع الخدمات التعليمية يقفز 20% وسط سيولة عالية [Mubasher]
+      - ارتفاع إيرادات "تعليم" إلى 2.41 مليار جنيه في 9 أشهر.. والتكاليف تهبط بالأرباح [Mubasher]
+  MPCO:
+    Technicals:    RSI 64 — healthy uptrend; MACD bullish (+0.049); MA50 > MA200 — golden-cross regime; ATR 0.18 (6.5% of px) — sizing input
+    Fundamentals:  P/E 7.4 — cheap; P/B 4.20; ROE 57.4% — strong; D/E 0.38
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم ضمن قطاع الأغذية يقفز 13% وسط سيولة عالية [Mubasher]
+      - المنصورة للدواجن تتحول للخسائر في النصف الأول من 2026 [Mubasher]
+  RKAZ:
+    Technicals:    RSI 65 — healthy uptrend; MACD bullish (+0.135); MA50 > MA200 — golden-cross regime; ATR 0.48 (8.8% of px) — sizing input
+    Fundamentals:  P/E 17.5 — premium; P/B 3.35; ROE 19.0% — adequate; Margin 8.6%; D/E 0.04
+    News tone:     bearish (-1.00, 3 hdl)
+      - خسائر "ركاز القابضة" تقفز لأكثر من مليون جنيه خلال النصف الأول [Mubasher]
+      - خسائر "ركاز القابضة" ترتفع 180% خلال الربع الأول من 2026 [Mubasher]
+  BINV:
+    Technicals:    RSI 83 — overbought; MACD bullish (+0.747); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 2.82 (4.5% of px) — sizing input
+    Fundamentals:  P/E 4.2 — cheap; P/B 0.83; ROE 19.7% — adequate; Margin 3908.9%; D/E 0.01; Yield 3.3%
+    News tone:     bullish (+1.00, 3 hdl)
+      - "بي إي إنفستمنتس" تقرر الاستحواذ على 53.5% من "بيج للاستثمار" [Mubasher]
+      - أرباح "بي انفستمنتس القابضة" تنخفض 15% إلى 369.7 مليون جنيه في النصف الأول [Mubasher]
+  SPMD:
+    Technicals:    RSI 54 — healthy uptrend; MACD bullish (+0.008); MA50 > MA200 — golden-cross regime; ATR 0.03 (6.7% of px) — sizing input
+    Fundamentals:  P/E 1.6 — cheap; P/B 6.02; ROE 345.1% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - سبيد ميديكال يواصل تصدره نشاط السوق.. بانخفاض نحو 5% [Mubasher]
+      - متصدراً النشاط.. كيف تفاعل سهم سبيد ميديكال مع رفض زيادة رأس المال؟ [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: TALM, MPCO, RKAZ, BINV, SPMD
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.

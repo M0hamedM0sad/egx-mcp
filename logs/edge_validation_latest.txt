@@ -2,43 +2,34 @@
 EGX MODEL — STATISTICAL RELIABILITY VALIDATION
 ========================================================================
 
-graded directional calls : 995
-distinct briefing dates  : 64  -> EFFECTIVE independent sample
-dates: 2026-04-30, 2026-05-02, 2026-06-07, 2026-06-08, 2026-06-09, 2026-06-10, 2026-06-11, 2026-06-14, 2026-06-15, 2026-06-16, 2026-06-17, 2026-06-22, 2026-06-23, 2026-06-24, 2026-06-25, 2026-06-28, 2026-06-29, 2026-06-30, 2026-07-01, 2026-07-02, 2026-07-05, 2026-07-06, 2026-07-07, 2026-07-08, 2026-07-09, 2026-07-12, 2026-07-13, 2026-07-14, 2026-07-15, 2026-07-16, 2026-07-19, 2026-07-20, 2026-07-21, 2026-07-22, 2026-07-23, 2026-07-26, 2026-07-27, 2026-07-28, 2026-07-29, 2026-07-30, 2026-08-02, 2026-08-03, 2026-08-04, 2026-08-05, 2026-08-06, 2026-08-09, 2026-08-10, 2026-08-13, 2026-08-16, 2026-08-17, 2026-08-19, 2026-08-20, 2026-08-23, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-30, 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-06, 2026-09-07
+graded directional calls : 1034
+distinct briefing dates  : 65  -> EFFECTIVE independent sample
+dates: 2026-04-30, 2026-05-02, 2026-06-07, 2026-06-08, 2026-06-09, 2026-06-10, 2026-06-11, 2026-06-14, 2026-06-15, 2026-06-16, 2026-06-17, 2026-06-22, 2026-06-23, 2026-06-24, 2026-06-25, 2026-06-28, 2026-06-29, 2026-06-30, 2026-07-01, 2026-07-02, 2026-07-05, 2026-07-06, 2026-07-07, 2026-07-08, 2026-07-09, 2026-07-12, 2026-07-13, 2026-07-14, 2026-07-15, 2026-07-16, 2026-07-19, 2026-07-20, 2026-07-21, 2026-07-22, 2026-07-23, 2026-07-26, 2026-07-27, 2026-07-28, 2026-07-29, 2026-07-30, 2026-08-02, 2026-08-03, 2026-08-04, 2026-08-05, 2026-08-06, 2026-08-09, 2026-08-10, 2026-08-13, 2026-08-16, 2026-08-17, 2026-08-19, 2026-08-20, 2026-08-23, 2026-08-24, 2026-08-25, 2026-08-26, 2026-08-27, 2026-08-30, 2026-08-31, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-06, 2026-09-07, 2026-09-08
 
 ------------------------------------------------------------------------
 1. SIGNED EDGE  (excess in the call's own direction; the metric that
    actually means 'the calls added value')
 ------------------------------------------------------------------------
-  naive mean excess (sign-blind, MISLEADING) : +3.30%
-  mean SIGNED edge (direction-aware, HONEST) : +1.30%  95% CI [-1.01%, +4.03%]
+  naive mean excess (sign-blind, MISLEADING) : +3.13%
+  mean SIGNED edge (direction-aware, HONEST) : +1.14%  95% CI [-1.13%, +3.80%]
   -> CI spans 0: cannot distinguish the edge from luck at this sample.
 
 ------------------------------------------------------------------------
 2. DIRECTIONAL HIT-RATE  (exact binomial vs a 50% coin)
 ------------------------------------------------------------------------
-  pooled             n=995  hit= 46.6%  (binomial vs 50%: p=0.036)  (p<0.05)
-  horizon 5d         n=721  hit= 50.1%  (binomial vs 50%: p=1.000)
-  horizon 21d        n=274  hit= 37.6%  (binomial vs 50%: p=0.000)  (p<0.05)
-  buy-side           n=576  hit= 38.0%  (binomial vs 50%: p=0.000)  (p<0.05)
-  sell-side          n=419  hit= 58.5%  (binomial vs 50%: p=0.001)  (p<0.05)
-
-------------------------------------------------------------------------
-3. CALIBRATION  (does higher conviction = higher hit-rate?)
-------------------------------------------------------------------------
-  medium     n=439  hit= 56.5%  signed_edge=-2.73%
-  weekly     n=556  hit= 38.8%  signed_edge=+4.47%
-  not enough graded calls in >=2 ranked buckets to judge calibration.
-
-------------------------------------------------------------------------
-4. REGIME ROBUSTNESS  (edge split by the benchmark's own direction
-   over each call's window — a bull-only edge is the #1 EGX blow-up)
-------------------------------------------------------------------------
-  bench up   (bull): n=804  hit= 45.4%  signed_edge=+1.77%
-  bench down (corr): n=191  hit= 51.8%  signed_edge=-0.72%
-
-========================================================================
-VERDICT: INCONCLUSIVE
-  Sample is adequate but the edge is statistically indistinguishable fro
-  m zero. Decision-support only; do not size up on conviction yet.
-========================================================================
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/egx-mcp/egx-mcp/tests/validate_edge.py", line 262, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/runner/work/egx-mcp/egx-mcp/tests/validate_edge.py", line 185, in main
+    out = _hitrate_block(rows, "pooled")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/egx-mcp/egx-mcp/tests/validate_edge.py", line 133, in _hitrate_block
+    p = _binom_two_sided_p(k, n)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/egx-mcp/egx-mcp/tests/validate_edge.py", line 90, in _binom_two_sided_p
+    probs = [math.comb(n, i) * p**i * (1 - p) ** (n - i) for i in range(n + 1)]
+             ~~~~~~~~~~~~~~~~^~~~~~
+OverflowError: int too large to convert to float
