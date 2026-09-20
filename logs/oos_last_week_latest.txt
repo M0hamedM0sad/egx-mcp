@@ -1,22 +1,24 @@
 $TAQA.CA: possibly delisted; no timezone found
 $GOUR.CA: possibly delisted; no timezone found
+$ADRI.CA: possibly delisted; no timezone found
 $AIDC.CA: possibly delisted; no timezone found
 $TYCN.CA: possibly delisted; no timezone found
 $SNFI.CA: possibly delisted; no timezone found
 $BONY.CA: possibly delisted; no timezone found
 $VLMR.CA: possibly delisted; no timezone found
+$ARVA.CA: possibly delisted; no timezone found
 $POCO.CA: possibly delisted; no timezone found
 $HDST.CA: possibly delisted; no timezone found
 $GEOS.CA: possibly delisted; no timezone found
-$EGS72XL1C014.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-09-13)
+$EGS72XL1C014.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-09-20)
 $FCMD.CA: possibly delisted; no timezone found
 $UTOP.CA: possibly delisted; no timezone found
 $GGRN.CA: possibly delisted; no timezone found
 $APPC.CA: possibly delisted; no timezone found
-$EGS385S1C012.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-09-13)
+$EGS385S1C012.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-09-20)
 $GPIM.CA: possibly delisted; no timezone found
 $EEP.CA: possibly delisted; no timezone found
-$EGS370O1C013.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-09-13)
+$EGS370O1C013.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-09-20)
 $DGTZ.CA: possibly delisted; no timezone found
 $ACTF.CA: possibly delisted; no timezone found
 $TORA.CA: possibly delisted; no timezone found
@@ -28,6 +30,7 @@ $NARE.CA: possibly delisted; no timezone found
 $CPME.CA: possibly delisted; no timezone found
 $UPMS.CA: possibly delisted; no timezone found
 $TANM.CA: possibly delisted; no timezone found
+$AIH.CA: possibly delisted; no timezone found
 $MITR.CA: possibly delisted; no timezone found
 $VLMRA.CA: possibly delisted; no timezone found
 $KNGC.CA: possibly delisted; no timezone found
@@ -46,52 +49,52 @@ $ACAP.CA: possibly delisted; no timezone found
 
 ================================================================================
 OUT-OF-SAMPLE WALK-FORWARD
-  Training cutoff: 2026-09-03 (Thu)   — model sees only data ≤ this date
-  Test window:     2026-09-03+1 → 2026-09-10  (last week's 5 EGX sessions)
+  Training cutoff: 2026-09-10 (Thu)   — model sees only data ≤ this date
+  Test window:     2026-09-10+1 → 2026-09-17  (last week's 5 EGX sessions)
 ================================================================================
 
 Loading price history for validated EGX universe...
 Universe size: 249  (quality set ROE>=10%: 175)
 
-Model would have picked these top 5 on 2026-09-03:
+Model would have picked these top 5 on 2026-09-10:
 
 Rank Tic    Score   Forecast    Actual    P(>2%)   In 90% CI
 ------------------------------------------------------------------------
-1    ATLC   42.9      +1.70%     +2.56%  48%      ✓
-2    AMOC   37.5      +3.40%     +0.74%  59%      ✓
-3    ABUK   33.2      +0.90%     +1.20%  41%      ✓
-4    RKAZ   26.4      -0.36%     -3.38%  39%      ✓
-5    SVCE   24.0      +1.05%     -1.75%  44%      ✓
+1    MPCO   25.4      +1.06%     +4.62%  44%      ✓
+2    SIPC   22.5      +3.40%     +0.85%  56%      ✓
+3    MCRO   18.6      +2.03%     +2.98%  50%      ✓
+4    EFIC   18.2      -0.56%     -9.41%  35%      ✗
+5    BIGP   17.9      +2.47%     +5.49%  51%      ✓
 
 ========================================================================
-AGGREGATE RESULTS — week of 2026-09-03 → 2026-09-10
+AGGREGATE RESULTS — week of 2026-09-10 → 2026-09-17
 ========================================================================
-  Top-5 portfolio return:    -0.13%
-  EGX synthetic basket (n=199):  +0.09%
+  Top-5 portfolio return:    +0.90%
+  EGX synthetic basket (n=200):  -1.75%
   EGP T-bill weekly:           +0.444%
-  Active vs basket:            -0.21 pp
-  Active vs T-bills:           -0.57 pp
+  Active vs basket:            +2.65 pp
+  Active vs T-bills:           +0.46 pp
 
-  Picks that beat basket: 3 / 5
-  Picks with positive return: 3 / 5
+  Picks that beat basket: 4 / 5
+  Picks with positive return: 4 / 5
 
-  Bootstrap MC across 199 names:
-    Mean absolute error: 4.09pp (predicted vs actual)
-    Mean error (bias):   -1.21pp
-    Actual within 90% CI: 89% of names
+  Bootstrap MC across 200 names:
+    Mean absolute error: 4.65pp (predicted vs actual)
+    Mean error (bias):   -2.91pp
+    Actual within 90% CI: 76% of names
     (Calibrated would be 80%; below = overconfident, above = underconfident)
 
-Model would have AVOIDED these bottom 5 on 2026-09-03:
+Model would have AVOIDED these bottom 5 on 2026-09-10:
 
 Rank   Tic    Score   Forecast    Actual    
 --------------------------------------------------
-108    ISMA   -25.2     +0.31%     -3.41%
-109    EPPK   -29.8     -0.76%    -10.93%
-110    AFMC   -37.5     +6.57%     -4.38%
-111    BIOC   -43.7    +13.84%    -13.31%
-112    AMES   -64.8     +4.60%    -30.68%
+71     CAED   -15.9     +3.73%     -1.20%
+72     MAAL   -16.1     +2.78%     -5.53%
+73     CLHO   -17.0     +0.20%     -0.18%
+74     BIOC   -23.4    +12.25%     -1.66%
+75     AMES   -49.6     +1.65%    -10.03%
 
-  Bottom-5 actual return: -12.54%
-  Long top / short bottom spread: +12.42 pp
+  Bottom-5 actual return: -3.72%
+  Long top / short bottom spread: +4.63 pp
 
 Appended result to /home/runner/work/egx-mcp/egx-mcp/logs/oos_weekly_log.jsonl
