@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Monday 2026-09-21 15:28 ===
+
+--- MACRO ---
+  EGX 30:  54,949 pts (—)
+  USD/EGP: 51.87 (-0.40%)
+  Brent:   $100.56 (+3.19%)
+  Gold 24K: 7,339.54 EGP/g  |  21K: 6,422.09  |  18K: 5,504.65
+  Egyptian gold pound: 51,377 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 98) ---
+  1. BINV   score=27.62  price=23.52  5d=+17.9% RSI=74  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BINV/
+  2. CCAP   score=24.82  price=2.2  5d=+14.9% RSI=80  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CCAP/
+  3. TALM   score=22.28  price=8.0  5d=+11.5% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-TALM/
+  4. CANA   score=19.01  price=15.03  5d=+11.1% RSI=74  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CANA/
+  5. IDRE   score=17.92  price=18.83  5d=+9.3% RSI=60  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-IDRE/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  BINV: ENTRY 23.64 | STOP 16.18 | SCALE-OUT 30.86 (340 sh) | TARGET 34.53 (341 sh) | 681 total (3.2% NAV) | R:R 1:1.5 | time stop 2026-09-28
+  CCAP: ENTRY 2.21 | STOP 1.74 | SCALE-OUT 2.66 (5418 sh) | TARGET 2.89 (5418 sh) | 10836 total (4.77% NAV) | R:R 1:1.5 | time stop 2026-09-28
+  TALM: ENTRY 8.04 | STOP 5.46 | SCALE-OUT 10.54 (984 sh) | TARGET 11.81 (984 sh) | 1968 total (3.15% NAV) | R:R 1:1.5 | time stop 2026-09-28
+  CANA: ENTRY 15.11 | STOP 11.63 | SCALE-OUT 18.43 (734 sh) | TARGET 20.13 (735 sh) | 1469 total (4.42% NAV) | R:R 1:1.5 | time stop 2026-09-28
+  IDRE: ENTRY 18.92 | STOP 11.41 | SCALE-OUT 26.25 (336 sh) | TARGET 29.97 (337 sh) | 673 total (2.53% NAV) | R:R 1:1.5 | time stop 2026-09-28
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  BINV   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  CCAP   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  TALM   FRESH  5d: BUY (5d)    1mo: BUY    (BUY)  tone: bullish
+  CANA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  IDRE   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    BINV: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    TALM: V8b says ABSTAIN but chairman says BUY — Bull case clearly outweighs bear case AND composite score is strong.
+    IDRE: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  BINV:
+    Technicals:    RSI 74 — overbought; MACD bullish (+1.067); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 3.67 (6.1% of px) — sizing input
+    Fundamentals:  P/E 4.2 — cheap; P/B 0.83; ROE 19.7% — adequate; Margin 3908.9%; D/E 0.01; Yield 3.3%
+    News tone:     bullish (+1.00, 3 hdl)
+      - ​"بي إنفستمنتس" تبيع جزءاً من حصتها في "جورميه" بصفقة 416 مليون جنيه [Mubasher]
+      - "بي إي إنفستمنتس" تقرر الاستحواذ على 53.5% من "بيج للاستثمار" [Mubasher]
+  CCAP:
+    Technicals:    RSI 80 — overbought; MACD bullish (+0.100); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.23 (3.2% of px) — sizing input
+    Fundamentals:  P/E 1.9 — cheap; P/B 0.23; ROE 12.1% — adequate
+    News tone:     bullish (+1.00, 3 hdl)
+      - السويدي للأسمنت ترفع حصتها في "القلعة" بشراء 15 مليون سهم بـ99 مليون جنيه [Mubasher]
+      - عمومية القلعة للاستشارات تقر استمرار الشركة رغم تجاوز الخسائر نصف حقوق المساهمين [Mubasher]
+  TALM:
+    Technicals:    RSI 68 — healthy uptrend; MACD bullish (+0.306); MA50 > MA200 — golden-cross regime; ATR 1.27 (6.0% of px) — sizing input
+    Fundamentals:  P/E 4.3 — cheap; P/B 2.99; ROE 68.7% — strong; Margin 26.4%; D/E 1.21
+    News tone:     bullish (+1.00, 3 hdl)
+      - سهم ضمن قطاع الخدمات التعليمية يقفز 20% وسط سيولة عالية [Mubasher]
+      - ارتفاع إيرادات "تعليم" إلى 2.41 مليار جنيه في 9 أشهر.. والتكاليف تهبط بالأرباح [Mubasher]
+  CANA:
+    Technicals:    RSI 74 — overbought; MACD bullish (+0.072); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 1.70 (3.6% of px) — sizing input
+    Fundamentals:  P/E 1.8 — cheap; P/B 0.52; ROE 29.0% — strong; Margin 41.8%; D/E 1.75 — highly levered
+    News tone:     bullish (+1.00, 3 hdl)
+      - "بنك قناة السويس" يحصل على عدم ممانعة الرقابة المالية لزيادة رأسماله المرخص [Mubasher]
+      - ارتفاع أرباح بنك قناة السويس لأكثر من 3.6 مليار جنيه في النصف الأول [Mubasher]
+  IDRE:
+    Technicals:    RSI 60 — healthy uptrend; MACD bullish (+0.033); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 3.71 (6.4% of px) — sizing input
+    Fundamentals:  P/E 17.4 — premium; P/B 4.54; ROE 26.0% — strong; D/E 0.00
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم الإسماعيلية الجديدة للتطوير تعاود الارتداد بعد اختبار ناجح لمناطق الدعم [Mubasher]
+      - "الإسماعيلية الجديدة للتطوير" تقلص خسائرها خلال الربع الأول من 2026 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: BINV, CCAP, TALM, CANA, IDRE
+  Filtered: kept 2 of 23 headlines.
+  Tone: neutral (score +0.00)
+  [CCAP] السويدي للأسمنت ترفع حصتها في "القلعة" بشراء 15 مليون سهم بـ99 مليون جنيه — Mubasher
+  [CCAP] السويدي للأسمنت ترفع حصتها في "القلعة" بشراء 15 مليون سهم بـ99 مليون جنيه — Mubasher
+
+Disclaimer: Research only, not investment advice.
