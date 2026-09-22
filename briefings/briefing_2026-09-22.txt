@@ -1,0 +1,94 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-09-22 14:12 ===
+
+--- MACRO ---
+  EGX 30:  55,045 pts (—)
+  USD/EGP: 51.585 (-0.55%)
+  Brent:   $98.37 (+1.31%)
+  Gold 24K: 7,231.87 EGP/g  |  21K: 6,327.89  |  18K: 5,423.90
+  Egyptian gold pound: 50,623 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 111) ---
+  1. CANA   score=25.13  price=47.24  5d=+13.6% RSI=71  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CANA/
+  2. BINV   score=24.48  price=59.28  5d=+14.5% RSI=76  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BINV/
+  3. MPCO   score=23.01  price=2.86  5d=+13.0% RSI=72  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MPCO/
+  4. SAUD   score=20.46  price=25.5  5d=+11.7% RSI=66  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SAUD/
+  5. IDRE   score=17.15  price=54.88  5d=+7.4% RSI=48  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-IDRE/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  CANA: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  BINV: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  MPCO: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  SAUD: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  IDRE: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  CANA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  BINV   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  MPCO   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  SAUD   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  IDRE   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    BINV: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    SAUD: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  CANA:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 3.1 — cheap; P/B 1.31; ROE 29.0% — strong; Margin 41.8%; D/E 1.75 — highly levered
+    News tone:     bullish (+1.00, 3 hdl)
+      - "بنك قناة السويس" يحصل على عدم ممانعة الرقابة المالية لزيادة رأسماله المرخص [Mubasher]
+      - ارتفاع أرباح بنك قناة السويس لأكثر من 3.6 مليار جنيه في النصف الأول [Mubasher]
+  BINV:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 7.8 — cheap; P/B 1.54; ROE 19.7% — adequate; Margin 3908.9%; D/E 0.01; Yield 3.3%
+    News tone:     neutral (+0.00, 3 hdl)
+      - بي إنفستمنتس تخفض حصتها في جورميه إيجيبت إلى 33.5% [Mubasher]
+      - ​"بي إنفستمنتس" تبيع جزءاً من حصتها في "جورميه" بصفقة 416 مليون جنيه [Mubasher]
+  MPCO:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 11.5 — fair; P/B 2.85; ROE 57.4% — strong; D/E 0.38
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم ضمن قطاع الأغذية يقفز 13% وسط سيولة عالية [Mubasher]
+      - المنصورة للدواجن تتحول للخسائر في النصف الأول من 2026 [Mubasher]
+  SAUD:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 4.2 — cheap; P/B 1.24; ROE 29.6% — strong; Margin 38.6%; D/E 0.29; Yield 5.2%
+    News tone:     bullish (+1.00, 3 hdl)
+      - تنفيذ عرض الشراء الإجباري لبنك البركة على أسهم "التوفيق للتأجير التمويلي" [Mubasher]
+      - عمومية الملتقى العربي تقر مبادلة أسهمها في "التوفيق" استجابة لعرض بنك البركة [Mubasher]
+  IDRE:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 60.7 — premium; P/B 8.29; ROE 26.0% — strong; D/E 0.00
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم الإسماعيلية الجديدة للتطوير تعاود الارتداد بعد اختبار ناجح لمناطق الدعم [Mubasher]
+      - "الإسماعيلية الجديدة للتطوير" تقلص خسائرها خلال الربع الأول من 2026 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: CANA, BINV, MPCO, SAUD, IDRE
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
