@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Wednesday 2026-09-23 14:24 ===
+
+--- MACRO ---
+  EGX 30:  54,931 pts (—)
+  USD/EGP: 51.35 (-0.45%)
+  Brent:   $96.29 (-2.19%)
+  Gold 24K: 7,189.02 EGP/g  |  21K: 6,290.39  |  18K: 5,391.77
+  Egyptian gold pound: 50,323 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 67) ---
+  1. SAUD   score=22.08  price=10.93  5d=+11.1% RSI=70  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SAUD/
+  2. ALCN   score=20.87  price=46.4  5d=+10.0% RSI=56  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ALCN/
+  3. EGTS   score=18.82  price=6.05  5d=+12.6% RSI=70  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EGTS/
+  4. BINV   score=18.8  price=23.52  5d=+9.1% RSI=66  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BINV/
+  5. CPCI   score=14.53  price=69.48  5d=+6.0% RSI=67  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CPCI/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  SAUD: ENTRY 10.98 | STOP 9.49 | SCALE-OUT 12.37 (1734 sh) | TARGET 13.09 (1734 sh) | 3468 total (7.58% NAV) | R:R 1:1.5 | time stop 2026-09-30
+  ALCN: ENTRY 46.63 | STOP 43.65 | SCALE-OUT 49.15 (538 sh) | TARGET 50.53 (539 sh) | 1077 total (9.99% NAV) | R:R 1:1.5 | time stop 2026-09-30
+  EGTS: ENTRY 6.08 | STOP 4.82 | SCALE-OUT 7.28 (2034 sh) | TARGET 7.89 (2035 sh) | 4069 total (4.92% NAV) | R:R 1:1.5 | time stop 2026-09-30
+  BINV: ENTRY 23.64 | STOP 14.77 | SCALE-OUT 32.27 (285 sh) | TARGET 36.64 (286 sh) | 571 total (2.69% NAV) | R:R 1:1.5 | time stop 2026-09-30
+  CPCI: ENTRY 69.83 | STOP 47.21 | SCALE-OUT 91.75 (112 sh) | TARGET 102.89 (112 sh) | 224 total (3.11% NAV) | R:R 1:1.5 | time stop 2026-09-30
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  SAUD   FRESH  5d: BUY (5d)    1mo: BUY    (BUY)  tone: bullish
+  ALCN   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  EGTS   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: bullish
+  BINV   FRESH  5d: BUY (5d)    1mo: BUY    (BUY)  tone: bullish
+  CPCI   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    SAUD: V8b says ABSTAIN but chairman says BUY — Bull case clearly outweighs bear case AND composite score is strong.
+    ALCN: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    BINV: V8b says ABSTAIN but chairman says BUY — Bull case clearly outweighs bear case AND composite score is strong.
+    CPCI: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  SAUD:
+    Technicals:    RSI 70 — healthy uptrend; MACD bullish (+0.164); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.72 (2.8% of px) — sizing input
+    Fundamentals:  P/E 2.0 — cheap; P/B 0.59; ROE 29.6% — strong; Margin 38.6%; D/E 0.29; Yield 5.2%
+    News tone:     bullish (+1.00, 3 hdl)
+      - بنك البركة يقرر زيادة رأس المال لتنفيذ الاستحواذ على "التوفيق للتأجير التمويلي" [Mubasher]
+      - تنفيذ عرض الشراء الإجباري لبنك البركة على أسهم "التوفيق للتأجير التمويلي" [Mubasher]
+  ALCN:
+    Technicals:    RSI 56 — healthy uptrend; MACD bullish (+0.176); MA50 > MA200 — golden-cross regime; ATR 1.38 (4.0% of px) — sizing input
+    Fundamentals:  P/E 23.0 — premium; P/B 17.98; ROE 78.4% — strong; Margin 72.3%; D/E 0.00; Yield 3.5%
+    News tone:     bullish (+1.00, 3 hdl)
+      - ​القابضة للنقل وميناء الإسكندرية يعلنان عدم بيع حصتهما في"الإسكندرية للحاويات" [Mubasher]
+      - نمو أرباح الإسكندرية لتداول الحاويات 18% لتصل إلى 3.8 مليار جنيه بالنصف الأول [Mubasher]
+  EGTS:
+    Technicals:    RSI 70 — overbought; MACD bullish (+0.124); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.61 (3.3% of px) — sizing input
+    Fundamentals:  P/E 1.7 — cheap; P/B 10.43; ROE 611.0% — strong; Margin -11.4%; D/E 0.00
+    News tone:     bullish (+1.00, 3 hdl)
+      - رغم نمو الإيرادات.. أرباح المصرية للمنتجعات تتراجع 9.4% في الربع الأول من 2026 [Mubasher]
+      - المصرية للمنتجعات السياحية تتحول للخسارة خلال 2025 [Mubasher]
+  BINV:
+    Technicals:    RSI 66 — healthy uptrend; MACD bullish (+0.681); MA50 > MA200 — golden-cross regime; ATR 4.38 (7.7% of px) — sizing input
+    Fundamentals:  P/E 4.2 — cheap; P/B 0.83; ROE 19.7% — adequate; Margin 3908.9%; D/E 0.01; Yield 3.3%
+    News tone:     neutral (+0.00, 3 hdl)
+      - بي إنفستمنتس تخفض حصتها في جورميه إيجيبت إلى 33.5% [Mubasher]
+      - ​"بي إنفستمنتس" تبيع جزءاً من حصتها في "جورميه" بصفقة 416 مليون جنيه [Mubasher]
+  CPCI:
+    Technicals:    RSI 67 — healthy uptrend; MACD bearish (-0.659); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 11.13 (2.0% of px) — sizing input
+    Fundamentals:  P/E 1.8 — cheap; P/B 0.89; ROE 49.5% — strong; D/E 0.14; Yield 4.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "القاهرة للأدوية" ترتفع إلى 552.5 مليون جنيه في العام المالي الماضي [Mubasher]
+      - أرباح "القاهرة للأدوية" ترتفع 17% خلال 9 أشهر لتتجاوز 412 مليون جنيه [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: SAUD, ALCN, EGTS, BINV, CPCI
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
