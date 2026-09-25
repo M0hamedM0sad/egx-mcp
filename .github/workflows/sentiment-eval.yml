@@ -1,0 +1,43 @@
+name: Sentiment backend eval (lexicon vs CAMeL-BERT)
+
+# Read-only: scores 382 labeled EGX Arabic headlines with the lexicon and the
+# transformer backend (CAMeL-BERT DA for Arabic) and prints accuracy,
+# macro-F1 and confusion. Commits nothing.
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - tests/eval_sentiment.py
+      - tests/egx_arabic_headlines_labeled.csv
+      - egx_mcp/data/transformer_sentiment.py
+      - .github/workflows/sentiment-eval.yml
+
+permissions:
+  contents: read
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install (CPU torch)
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -e . "transformers>=4.40"
+      - name: Evaluate
+        run: |
+          set -o pipefail
+          python -m tests.eval_sentiment tests/egx_arabic_headlines_labeled.csv 2>&1 | tee eval.txt
+          {
+            echo '## Lexicon vs CAMeL-BERT on EGX Arabic headlines'
+            echo '```'
+            grep -E 'Backend:|gold / pred|^ +(positive|negative|neutral) \||Transformer' eval.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

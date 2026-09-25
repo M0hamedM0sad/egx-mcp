@@ -80,20 +80,34 @@ def _eval_backend(rows: list[dict[str, str]], backend: str) -> dict:
         "backend": backend,
         "n": n,
         "accuracy": round(correct / n, 3) if n else 0.0,
+        "macro_f1": _macro_f1(confusion),
         "correct": correct,
         "confusion": confusion,
         "preds": preds,
     }
 
 
+def _macro_f1(confusion: dict[tuple[str, str], int]) -> float:
+    """Mean F1 over the three classes. Accuracy alone rewards calling
+    everything neutral when neutral dominates the set; macro-F1 does not."""
+    f1s = []
+    for c in ("positive", "negative", "neutral"):
+        tp = confusion.get((c, c), 0)
+        fp = sum(v for (g, p), v in confusion.items() if p == c and g != c)
+        fn = sum(v for (g, p), v in confusion.items() if g == c and p != c)
+        f1s.append(2 * tp / (2 * tp + fp + fn) if tp else 0.0)
+    return round(sum(f1s) / 3, 3)
+
+
 def _print_report(res: dict, show_misses: bool = True) -> None:
     print(f"\n{'=' * 64}")
     print(f"Backend: {res['backend']}   "
-          f"accuracy = {res['accuracy']:.1%}  ({res['correct']}/{res['n']})")
+          f"accuracy = {res['accuracy']:.1%}  ({res['correct']}/{res['n']})  "
+          f"macro-F1 = {res['macro_f1']:.3f}")
     print('=' * 64)
 
     labels = ["positive", "negative", "neutral"]
-    print(f"{'gold \\ pred':>14} | " + " ".join(f"{l[:4]:>5}" for l in labels))
+    print(f"{'gold / pred':>14} | " + " ".join(f"{l[:4]:>5}" for l in labels))
     print("-" * 44)
     for g in labels:
         row = " ".join(f"{res['confusion'].get((g, p), 0):>5}" for p in labels)
@@ -134,7 +148,8 @@ def main() -> int:
         delta = tf["accuracy"] - lex["accuracy"]
         print(f"\n{'#' * 64}")
         print(f"# Transformer vs lexicon: {delta:+.1%} accuracy "
-              f"({tf['accuracy']:.1%} vs {lex['accuracy']:.1%})")
+              f"({tf['accuracy']:.1%} vs {lex['accuracy']:.1%}); macro-F1 "
+              f"{tf['macro_f1']:.3f} vs {lex['macro_f1']:.3f}")
         print('#' * 64)
     else:
         print("Transformer backend unavailable — install with: "
