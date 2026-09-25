@@ -65,3 +65,32 @@ class EventStudyTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class FetchRetryTests(unittest.TestCase):
+    def test_retries_then_succeeds_and_raises_after_budget(self) -> None:
+        from unittest.mock import patch
+
+        class R:
+            def __init__(self, text):
+                self.text = text
+
+            def raise_for_status(self):
+                return None
+
+        calls = {"n": 0}
+
+        def flaky(*a, **k):
+            calls["n"] += 1
+            if calls["n"] < 3:
+                raise TimeoutError("read timed out")
+            return R(_CSV)
+
+        with patch("httpx.get", side_effect=flaky), patch.object(fed.time, "sleep"), \
+             patch.dict(fed._CACHE, clear=True):
+            self.assertEqual(len(fed.fetch_series("DFEDTARU")), 7)
+        self.assertEqual(calls["n"], 3)
+        with patch("httpx.get", side_effect=TimeoutError("down")), \
+             patch.object(fed.time, "sleep"), patch.dict(fed._CACHE, clear=True):
+            with self.assertRaises(RuntimeError):
+                fed.fetch_series("DFEDTARU")

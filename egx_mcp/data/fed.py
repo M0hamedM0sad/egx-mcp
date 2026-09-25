@@ -20,7 +20,10 @@ from typing import Any
 
 log = logging.getLogger("egx-mcp.fed")
 
-_FRED_CSV = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}"
+# cosd bounds the download (the full daily history is large and FRED timed
+# out on it from a GitHub runner, run 36141238575).
+_FRED_CSV = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd=2013-01-01"
+_ATTEMPTS = 4
 _CACHE: dict[str, tuple[float, list[tuple[date, float]]]] = {}
 _TTL_S = 6 * 3600
 
@@ -34,10 +37,22 @@ def fetch_series(series_id: str) -> list[tuple[date, float]]:
     from ._certs import ensure_ca_bundle
 
     ensure_ca_bundle()
-    r = httpx.get(_FRED_CSV.format(sid=series_id), timeout=30, follow_redirects=True,
-                  headers={"User-Agent": "egx-mcp (research)"})
-    r.raise_for_status()
-    out = parse_csv(r.text)
+    last: Exception | None = None
+    for attempt in range(_ATTEMPTS):
+        try:
+            r = httpx.get(_FRED_CSV.format(sid=series_id), timeout=httpx.Timeout(90, connect=20),
+                          follow_redirects=True,
+                          headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) egx-mcp research"})
+            r.raise_for_status()
+            out = parse_csv(r.text)
+            if out:
+                break
+            last = ValueError(f"{series_id}: empty CSV")
+        except Exception as e:  # noqa: BLE001
+            last = e
+        time.sleep(2 ** (attempt + 1))
+    else:
+        raise RuntimeError(f"FRED {series_id} failed after {_ATTEMPTS} attempts: {last}")
     _CACHE[series_id] = (time.time(), out)
     return out
 
