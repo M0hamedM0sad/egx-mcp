@@ -42,5 +42,9 @@ jobs:
           set -o pipefail
           python -m scripts.build_driver_profiles 2>&1 | tee driver_profiles.txt
           { echo '## Driver profiles'; echo '```'; cat driver_profiles.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          # One compact line (the indented file is ~10k lines and the log API
+          # truncates), then the summary again so a log tail shows both.
           echo "=== JSON ==="
-          cat egx_mcp/data/driver_profiles.json
+          python -c "import json; print(json.dumps(json.load(open('egx_mcp/data/driver_profiles.json')), separators=(',', ':')))"
+          echo "=== SUMMARY ==="
+          cat driver_profiles.txt
