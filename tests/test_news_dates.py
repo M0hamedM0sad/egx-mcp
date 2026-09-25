@@ -129,3 +129,39 @@ class AddDatesTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SentimentFreshnessTests(unittest.TestCase):
+    def test_only_recent_dated_headlines_are_scored(self) -> None:
+        from datetime import datetime, timedelta
+
+        from egx_mcp.data import sentiment
+
+        today = datetime.utcnow().date()
+        arts = {"articles": [
+            {"title": "fresh", "date": (today - timedelta(days=2)).isoformat()},
+            {"title": "old", "date": (today - timedelta(days=120)).isoformat()},
+            {"title": "undated", "date": None},
+        ]}
+        scores = {"fresh": 0.5, "old": 1.0, "undated": -1.0}
+        with patch.object(sentiment.news, "fetch", return_value=arts), \
+             patch.object(sentiment, "_score_headline",
+                          side_effect=lambda t, lang, b: (scores[t], [t])):
+            out = sentiment.analyze_sentiment("COMI", lang="ar", max_age_days=7)
+        self.assertEqual(out["headline_count"], 1)
+        self.assertEqual(out["aggregate_score"], 0.5)
+        self.assertEqual((out["stale_count"], out["undated_count"], out["listed_count"]), (1, 1, 3))
+        self.assertEqual(out["bull_signals"], ["fresh"])       # the old +1.0 story is not a signal
+        self.assertEqual({h["title"]: h["freshness"] for h in out["headlines"]},
+                         {"fresh": "fresh", "old": "stale", "undated": "undated"})
+
+    def test_nothing_fresh_reads_neutral(self) -> None:
+        from egx_mcp.data import sentiment
+
+        arts = {"articles": [{"title": "old", "date": "2020-01-01"}]}
+        with patch.object(sentiment.news, "fetch", return_value=arts), \
+             patch.object(sentiment, "_score_headline", return_value=(1.0, ["x"])):
+            out = sentiment.analyze_sentiment("COMI", lang="ar")
+        self.assertEqual(out["headline_count"], 0)
+        self.assertEqual(out["aggregate_score"], 0.0)
+        self.assertEqual(out["label"], sentiment._label(0.0))

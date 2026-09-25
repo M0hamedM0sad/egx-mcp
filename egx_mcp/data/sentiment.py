@@ -179,11 +179,26 @@ def _label(score: float) -> str:
     return "neutral"
 
 
+# Only headlines published within this many days count toward the tone.
+# Before article dates were read, stock pages mixed in stories up to four
+# months old (MAAL, Sep 2026) and scored them as today's news. Undated
+# headlines are listed but not scored: their age is unknown.
+DEFAULT_MAX_AGE_DAYS = int(os.environ.get("EGX_SENTIMENT_MAX_AGE_DAYS", "7"))
+
+
+def _age_days(date_str: str | None, today) -> int | None:
+    try:
+        return (today - datetime.strptime(str(date_str)[:10], "%Y-%m-%d").date()).days
+    except (TypeError, ValueError):
+        return None
+
+
 def analyze_sentiment(
     user_ticker: str | None = None,
     lang: str = "both",
     limit: int = 15,
     backend: str | None = None,
+    max_age_days: int | None = None,
 ) -> dict[str, Any]:
     """Score recent headlines for an EGX name (or the market).
 
@@ -203,6 +218,8 @@ def analyze_sentiment(
         bull_signals, bear_signals, backend (effective per language).
     """
     requested_backend = (backend or _DEFAULT_BACKEND).lower()
+    max_age = DEFAULT_MAX_AGE_DAYS if max_age_days is None else max_age_days
+    today = datetime.utcnow().date()
 
     canonical = None
     if user_ticker:
@@ -225,9 +242,14 @@ def analyze_sentiment(
         for art in payload.get("articles", []) or []:
             title = art.get("title") or ""
             score, matches = _score_headline(title, lng, eff_backend)
+            age = _age_days(art.get("date"), today)
+            freshness = ("undated" if age is None else
+                         "stale" if age > max_age else "fresh")
             entry = {
                 "lang": lng,
                 "date": art.get("date"),
+                "age_days": age,
+                "freshness": freshness,
                 "source": art.get("source"),
                 "title": title,
                 "url": art.get("url"),
@@ -235,13 +257,16 @@ def analyze_sentiment(
                 "matches": matches,
             }
             scored.append(entry)
+            if freshness != "fresh":
+                continue
             if score >= 0.34 and title:
                 bull_signals.append(title)
             elif score <= -0.34 and title:
                 bear_signals.append(title)
 
-    nonzero = [h for h in scored if h["score"] != 0]
-    n = len(scored)
+    fresh = [h for h in scored if h["freshness"] == "fresh"]
+    nonzero = [h for h in fresh if h["score"] != 0]
+    n = len(fresh)
     if nonzero:
         agg = sum(h["score"] for h in nonzero) / len(nonzero)
     else:
@@ -253,6 +278,10 @@ def analyze_sentiment(
         "as_of": datetime.utcnow().isoformat() + "Z",
         "lang_requested": lang,
         "headline_count": n,
+        "max_age_days": max_age,
+        "listed_count": len(scored),
+        "stale_count": sum(1 for h in scored if h["freshness"] == "stale"),
+        "undated_count": sum(1 for h in scored if h["freshness"] == "undated"),
         "scored_count": len(nonzero),
         "coverage_pct": round(coverage, 1),
         "aggregate_score": round(agg, 3),
@@ -263,7 +292,9 @@ def analyze_sentiment(
         "backend": backend_used,
         "method": (
             f"Backend per language: {backend_used or 'lexicon'}. Per-headline "
-            "score in [-1, +1]. Aggregate is mean over non-zero headlines. "
+            f"score in [-1, +1]. Only headlines published in the last {max_age} "
+            "days are scored (stale and undated ones are listed, not scored). "
+            "Aggregate is mean over non-zero fresh headlines. "
             "Coverage = share of headlines with tonal content. Lexicon is "
             "directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) "
             "is headline-accurate at the cost of model load + inference."
