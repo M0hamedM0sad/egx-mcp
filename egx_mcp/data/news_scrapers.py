@@ -177,8 +177,11 @@ def add_dates(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     An empty string in the cache records a page with no readable date."""
     global _fetches_done
     cache = _load_date_cache()
+    # A '#fragment' link points into a shared page (e.g. an Enterprise
+    # edition); that page's date is the edition template's, not the story's —
+    # probed: every Enterprise story came back 2025-01-14. Leave those undated.
     todo = [it for it in items if not it.get("date") and it.get("url")
-            and it["url"] not in cache]
+            and "#" not in it["url"] and it["url"] not in cache]
     if todo and _fetches_done < _MAX_DATE_FETCHES:
         with _client() as c:
             for it in todo:
@@ -195,7 +198,8 @@ def add_dates(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
                     log.warning(f"article date fetch failed for {it['url']}: {e}")
         _save_date_cache()
     for it in items:
-        if not it.get("date") and cache.get(it.get("url") or ""):
+        if not it.get("date") and "#" not in (it.get("url") or "") \
+                and cache.get(it.get("url") or ""):
             it["date"] = cache[it["url"]][:10]
             it["published"] = cache[it["url"]]
     return items

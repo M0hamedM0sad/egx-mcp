@@ -57,6 +57,32 @@ def main() -> int:
         except Exception as e:  # noqa: BLE001
             res["cbe"][url] = {"error": f"{type(e).__name__}: {e}"}
 
+    # Where does a Mubasher article keep its date? Dump every candidate.
+    arts = [it["url"] for v in res["sources"].values() for it in v.get("samples", [])
+            if "mubasher.info/news/" in (it.get("url") or "")][:2]
+    months = ("يناير|فبراير|مارس|أبريل|ابريل|مايو|يونيو|يوليو|أغسطس|اغسطس|سبتمبر|أكتوبر|"
+              "اكتوبر|نوفمبر|ديسمبر")
+    res["mubasher_article"] = {}
+    for url in arts:
+        try:
+            r = httpx.get(url, timeout=20, follow_redirects=True, headers=ns._HEADERS)
+            html = r.text
+            flat = re.sub(r"\s+", " ", html)
+            metas = re.findall(r"<meta[^>]+>", html)[:60]
+            res["mubasher_article"][url[:80]] = {
+                "status": r.status_code, "bytes": len(html),
+                "metas_with_digits": [m for m in metas if re.search(r"\d{4}", m)][:15],
+                "iso_dates": sorted(set(re.findall(r"20\d\d-\d\d-\d\d[T ]?[\d:]{0,8}", flat)))[:10],
+                "slash_dates": sorted(set(re.findall(r"\b\d{1,2}/\d{1,2}/20\d\d\b", flat)))[:10],
+                "arabic_dates": sorted(set(re.findall(rf"\d{{1,2}}\s+(?:{months})\s+20\d\d", flat)))[:10],
+                "time_tags": re.findall(r"<time[^>]*>[^<]{0,40}", html)[:5],
+                "date_classes": [flat[m.start():m.start() + 160] for m in
+                                 re.finditer(r'class="[^"]*(?:date|time|publish)[^"]*"', flat)][:6],
+                "json_ld": len(re.findall(r"application/ld\+json", html)),
+            }
+        except Exception as e:  # noqa: BLE001
+            res["mubasher_article"][url[:80]] = {"error": f"{type(e).__name__}: {e}"}
+
     total = sum(v.get("n", 0) for v in res["sources"].values())
     dated = sum(v.get("dated", 0) for v in res["sources"].values())
     print(f"=== VERDICT ===\n  headlines: {total}, with a publication date: {dated}")

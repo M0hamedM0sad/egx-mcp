@@ -99,6 +99,14 @@ class AddDatesTests(unittest.TestCase):
         saved = json.loads((Path(self.tmp.name) / "c.json").read_text(encoding="utf-8"))
         self.assertEqual(saved, {"u1": "2026-09-20T08:00", "u2": ""})   # 404 not cached
 
+    def test_fragment_links_are_not_dated(self) -> None:
+        calls: list[str] = []
+        pages = {"https://e.com/edition#s1": '<meta name="date" content="2025-01-14">'}
+        with patch.object(ns, "_client", lambda: _Client(pages, calls)):
+            out = ns.add_dates([{"title": "t", "url": "https://e.com/edition#s1", "date": None}])
+        self.assertIsNone(out[0]["date"])
+        self.assertEqual(calls, [])
+
     def test_fetch_budget_is_respected(self) -> None:
         calls: list[str] = []
         items = [{"title": str(i), "url": f"x{i}", "date": None}
