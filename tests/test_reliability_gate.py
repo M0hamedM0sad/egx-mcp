@@ -116,5 +116,35 @@ class MedianBenchmarkTests(unittest.TestCase):
         self.assertEqual(g["bench_kind"], "index_or_basket")
 
 
+class NewsAwareGradingTests(unittest.TestCase):
+    def test_chairman_verdicts_are_extracted_with_sentiment(self) -> None:
+        from tests import grade_briefings as gb
+
+        payload = {
+            "v8b_verdicts": [{"ticker": "AAA", "v8b_verdict": "HOLD", "v8b_score": 55}],
+            "chairman_per_pick": {
+                "AAA": {"verdict": "ACCUMULATE", "conviction": "medium", "edge": 0.3,
+                        "sentiment_label": "bullish", "sentiment_score": 1.0},
+                "BBB": {"error": "timeout"},
+            },
+        }
+        rows = gb._extract_verdicts(payload)
+        chair = [r for r in rows if r["source"] == "chairman"]
+        self.assertEqual(len(chair), 1)
+        self.assertEqual(chair[0]["verdict"], "ACCUMULATE")
+        self.assertEqual(chair[0]["sentiment_label"], "bullish")
+        self.assertTrue(set(chair[0]) <= set(gb._FIELDS) | {"ticker"})
+
+    def test_gate_ignores_chairman_rows(self) -> None:
+        rows = [{**_row((date.today() - timedelta(days=d)).isoformat(), "BUY", True, "high", 5.0),
+                 "source": "chairman"} for d in range(20)]
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "graded.jsonl"
+            path.write_text("\n".join(json.dumps(r) for r in rows), encoding="utf-8")
+            with patch.object(reliability, "_GRADED", path):
+                gate = reliability.status()
+        self.assertEqual(gate["directional_calls"], 0)
+
+
 if __name__ == "__main__":
     unittest.main()

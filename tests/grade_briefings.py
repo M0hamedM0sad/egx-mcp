@@ -119,7 +119,7 @@ _FIELDS = ["briefing_date", "ticker", "source", "verdict", "conviction", "score"
            "horizon_days", "entry_date", "entry_price", "exit_date", "exit_price",
            "fwd_return_pct", "bench_return_pct", "excess_pct", "outcome", "correct",
            "bench_kind", "bench_mean_return_pct", "excess_vs_mean_pct",
-           *_SUBSCORES]
+           "sentiment_label", "sentiment_score", *_SUBSCORES]
 
 
 def _briefing_date(path: Path, payload: dict) -> str | None:
@@ -148,6 +148,21 @@ def _extract_verdicts(payload: dict) -> list[dict]:
             "sub_quality": sub.get("quality"),
             "sub_momentum": sub.get("momentum"),
             "sub_risk": sub.get("risk"),
+        })
+    # News-aware chairman verdicts (bull/bear debate incl. headline
+    # sentiment) on the same W1 picks. Graded so news' contribution is
+    # measured instead of assumed; the reliability gate still reads v8b only.
+    for tk, c in (payload.get("chairman_per_pick") or {}).items():
+        if not isinstance(c, dict) or not c.get("verdict"):
+            continue
+        out.append({
+            "ticker": tk,
+            "source": "chairman",
+            "verdict": c["verdict"].upper(),
+            "conviction": c.get("conviction"),
+            "score": c.get("edge"),
+            "sentiment_label": c.get("sentiment_label"),
+            "sentiment_score": c.get("sentiment_score"),
         })
     # Weekly picks are an explicit BUY list (5-day horizon model).
     for p in (payload.get("w1_picks", {}) or {}).get("top_picks", []) or []:

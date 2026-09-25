@@ -25,9 +25,11 @@ Design rules:
 """
 from __future__ import annotations
 
+import json
 import logging
 import re
 from datetime import datetime
+from pathlib import Path
 from typing import Any, Iterable
 
 import httpx
@@ -76,6 +78,127 @@ def _absolute(href: str, base: str) -> str:
         if m:
             return m.group(1) + href
     return base.rstrip("/") + "/" + href.lstrip("/")
+
+
+# ---------------------------------------------------------------------------
+# Publication dates
+# ---------------------------------------------------------------------------
+# Listing pages carry no dates, so 533 of 534 briefing headlines had
+# date=None: a months-old story read as today's news, and no study of
+# news -> price was possible. Each article page is fetched once and its
+# published date read from standard metadata; results (misses included) are
+# cached so a headline is never refetched.
+
+_DATE_CACHE_PATH = Path(__file__).resolve().parents[2] / "logs" / "news_dates_cache.json"
+_DATE_CACHE: dict[str, str] | None = None
+_MAX_DATE_FETCHES = 40          # per process: bounds the extra requests per briefing
+
+_META_KEYS = ("article:published_time", "og:published_time", "og:article:published_time",
+              "datepublished", "pubdate", "publishdate", "publish-date", "date",
+              "dc.date.issued", "sailthru.date", "parsely-pub-date")
+_ISO_RE = re.compile(r"(\d{4}-\d{2}-\d{2})(?:[T ](\d{2}:\d{2}(?::\d{2})?))?")
+
+
+def _iso(value: Any) -> str | None:
+    m = _ISO_RE.search(str(value or ""))
+    if not m:
+        return None
+    try:
+        datetime.strptime(m.group(1), "%Y-%m-%d")
+    except ValueError:
+        return None
+    return m.group(1) + (f"T{m.group(2)}" if m.group(2) else "")
+
+
+def _jsonld_date(node: Any) -> str | None:
+    if isinstance(node, dict):
+        for k in ("datePublished", "dateCreated", "uploadDate"):
+            if k in node and _iso(node[k]):
+                return _iso(node[k])
+        for v in node.values():
+            found = _jsonld_date(v)
+            if found:
+                return found
+    elif isinstance(node, list):
+        for v in node:
+            found = _jsonld_date(v)
+            if found:
+                return found
+    return None
+
+
+def extract_published(html: str) -> str | None:
+    """Published date of an article page from meta tags, JSON-LD or <time>.
+    Returns 'YYYY-MM-DD' or 'YYYY-MM-DDTHH:MM[:SS]', else None."""
+    soup = BeautifulSoup(html, "html.parser")
+    for tag in soup.find_all("meta"):
+        key = (tag.get("property") or tag.get("name") or tag.get("itemprop") or "").lower()
+        if key in _META_KEYS and _iso(tag.get("content")):
+            return _iso(tag.get("content"))
+    for script in soup.find_all("script", type="application/ld+json"):
+        try:
+            found = _jsonld_date(json.loads(script.string or ""))
+        except (ValueError, TypeError):
+            continue
+        if found:
+            return found
+    for tag in soup.find_all(attrs={"itemprop": "datePublished"}):
+        found = _iso(tag.get("content") or tag.get("datetime") or tag.get_text())
+        if found:
+            return found
+    t = soup.find("time", datetime=True)
+    return _iso(t["datetime"]) if t else None
+
+
+def _load_date_cache() -> dict[str, str]:
+    global _DATE_CACHE
+    if _DATE_CACHE is None:
+        try:
+            _DATE_CACHE = json.loads(_DATE_CACHE_PATH.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            _DATE_CACHE = {}
+    return _DATE_CACHE
+
+
+def _save_date_cache() -> None:
+    try:
+        _DATE_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        _DATE_CACHE_PATH.write_text(json.dumps(_load_date_cache(), ensure_ascii=False),
+                                    encoding="utf-8")
+    except OSError as e:
+        log.warning(f"news date cache not saved: {e}")
+
+
+_fetches_done = 0
+
+
+def add_dates(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Fill each item's missing `date` from its article page (cached).
+    An empty string in the cache records a page with no readable date."""
+    global _fetches_done
+    cache = _load_date_cache()
+    todo = [it for it in items if not it.get("date") and it.get("url")
+            and it["url"] not in cache]
+    if todo and _fetches_done < _MAX_DATE_FETCHES:
+        with _client() as c:
+            for it in todo:
+                if _fetches_done >= _MAX_DATE_FETCHES:
+                    break
+                _fetches_done += 1
+                try:
+                    r = c.get(it["url"])
+                    # A page that loads but has no date is cached as "" (no
+                    # refetch); an HTTP error is not cached, so it is retried.
+                    if r.status_code == 200:
+                        cache[it["url"]] = extract_published(r.text) or ""
+                except Exception as e:  # noqa: BLE001
+                    log.warning(f"article date fetch failed for {it['url']}: {e}")
+        _save_date_cache()
+    for it in items:
+        if not it.get("date") and cache.get(it.get("url") or ""):
+            it["date"] = cache[it["url"]][:10]
+            it["published"] = cache[it["url"]]
+    return items
 
 
 def _dedupe(items: Iterable[dict]) -> list[dict]:
@@ -130,7 +253,7 @@ def fetch_mubasher_market(limit: int = 8) -> list[dict[str, Any]]:
         })
         if len(items) >= limit:
             break
-    return items
+    return add_dates(items)
 
 
 def fetch_mubasher_stock(ticker: str, limit: int = 5) -> list[dict[str, Any]]:
@@ -163,7 +286,7 @@ def fetch_mubasher_stock(ticker: str, limit: int = 5) -> list[dict[str, Any]]:
         })
         if len(items) >= limit:
             break
-    return items
+    return add_dates(items)
 
 
 # ---------------------------------------------------------------------------
@@ -213,7 +336,7 @@ def fetch_enterprise(limit: int = 6) -> list[dict[str, Any]]:
         })
         if len(items) >= limit:
             break
-    return items
+    return add_dates(items)
 
 
 # ---------------------------------------------------------------------------
@@ -253,7 +376,7 @@ def fetch_daily_news_egypt(limit: int = 6) -> list[dict[str, Any]]:
         })
         if len(items) >= limit:
             break
-    return items
+    return add_dates(items)
 
 
 # ---------------------------------------------------------------------------
