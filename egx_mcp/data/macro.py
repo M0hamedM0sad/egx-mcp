@@ -177,6 +177,11 @@ def get_context() -> dict[str, Any]:
         brent = _yf_quote("BZ=F")
         gold = _yf_quote("GC=F")
         cbe = _cbe_policy_rate()
+        try:
+            from . import fed
+            fed_rates = fed.current()
+        except Exception as e:  # noqa: BLE001
+            fed_rates = {"upper_pct": None, "error": str(e)}
 
         # Heuristic regime classification — this drives sector adjustments
         # in the scoring engine.
@@ -194,6 +199,9 @@ def get_context() -> dict[str, Any]:
             "brent_usd": brent,
             "gold_usd": gold,
             "cbe_rates": cbe,
+            # Context only: not used in scoring until scripts/fed_event_study.py
+            # shows Fed moves carry a measurable EGX / EGP effect.
+            "fed_rates": fed_rates,
             "regime_flags": regime_flags,
             "note": (
                 "EGP/USD and Brent from Yahoo (delayed). CBE rates from the "
