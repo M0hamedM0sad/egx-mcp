@@ -256,6 +256,37 @@ def get_fundamentals(user_ticker: str) -> dict[str, Any]:
     return payload
 
 
+_MARKET_MED: dict[str, Any] | None = None
+
+
+def market_medians() -> dict[str, Any]:
+    """Whole-market median P/E, P/B, ROE, margin from the audited CSV.
+
+    Used in place of sector medians for names outside the curated universe
+    (no sector), when model_params.valuation_market_fallback is on. Offline:
+    reads the same file get_fundamentals overrides from. P/E and P/B go
+    through the same sanity bands as a single name's."""
+    global _MARKET_MED
+    if _MARKET_MED is not None:
+        return _MARKET_MED
+    rows = _load_overrides().values()
+    pes = [r["pe_ratio"] for r in rows if r.get("pe_ratio") is not None
+           and _PE_MIN <= r["pe_ratio"] <= _PE_MAX]
+    pbs = [r["pb_ratio"] for r in rows if r.get("pb_ratio") is not None
+           and _PB_MIN <= r["pb_ratio"] <= _PB_MAX]
+    roes = [r["roe_pct"] for r in rows if r.get("roe_pct") is not None]
+    margins = [r["profit_margin_pct"] for r in rows if r.get("profit_margin_pct") is not None]
+    _MARKET_MED = {
+        "sector": "Market (all EGX)",
+        "peer_count": len(rows),
+        "median_pe": round(median(pes), 2) if pes else None,
+        "median_pb": round(median(pbs), 2) if pbs else None,
+        "median_roe_pct": round(median(roes), 2) if roes else None,
+        "median_margin_pct": round(median(margins), 2) if margins else None,
+    }
+    return _MARKET_MED
+
+
 def sector_medians(sector: str) -> dict[str, Any]:
     """Compute sector-level median P/E, P/B, ROE for relative valuation.
 

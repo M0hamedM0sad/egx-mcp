@@ -234,6 +234,12 @@ def score_stock(user_ticker: str, history_period: str = "6mo") -> dict[str, Any]
     except Exception as e:
         log.warning(f"sector medians failed for {sector}: {e}")
         sector_med = {}
+    if model_params.valuation_market_fallback() and not sector_med.get("median_pe"):
+        try:
+            mkt = fundamentals.market_medians()
+            sector_med = {**mkt, **{k: v for k, v in sector_med.items() if v is not None}}
+        except Exception as e:  # noqa: BLE001
+            log.warning(f"market medians failed: {e}")
 
     try:
         history = market.get_history(user_ticker, period=history_period)
@@ -253,7 +259,7 @@ def score_stock(user_ticker: str, history_period: str = "6mo") -> dict[str, Any]
     # Regime-aware weights: multiply base weights by regime bias and renormalize
     try:
         reg = regime.classify()
-        bias = reg.get("weight_override", {})
+        bias = reg.get("weight_override", {}) if model_params.regime_weight_overrides() else {}
     except Exception:
         reg = {"regime": "UNKNOWN", "weight_override": {}}
         bias = {}

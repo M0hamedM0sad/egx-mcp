@@ -119,7 +119,9 @@ def _features_at(i: int, raw: pd.DataFrame, px: pd.DataFrame, vol: pd.DataFrame,
     return f
 
 
-def run(prices: dict, hist: dict) -> dict:
+def run(prices: dict, hist: dict, keep_frames: bool = False) -> dict:
+    """Per-date ICs; with keep_frames, also each date's factor table + label
+    (used by scripts/propose_factor_weights.py for the walk-forward)."""
     raw, px, vol = _frames(prices)
     entries = hist["tickers"]
     excluded = sorted(tk for tk, e in entries.items() if tv_history.units_suspect(e))
@@ -137,9 +139,12 @@ def run(prices: dict, hist: dict) -> dict:
             continue
         excess = fwd - fwd.median()
         mkt_6m = float(feats["mom_6m"].median())
+        mkt_60d = float((px.iloc[i] / px.iloc[i - 60] - 1).reindex(feats.index).median())
         rec = {"date": d.strftime("%Y-%m-%d"), "n_names": int(fwd.notna().sum()),
                "n_fund": int(feats["earnings_yield"].notna().sum()),
-               "market_6m": mkt_6m, "ic": {}, "spread": {}}
+               "market_6m": mkt_6m, "market_60d": mkt_60d, "ic": {}, "spread": {}}
+        if keep_frames:
+            rec["frame"] = feats[ALL_FACTORS].assign(excess=excess)
         for fac in ALL_FACTORS:
             rec["ic"][fac] = _spearman(feats[fac], excess)
             ok = feats[fac].notna() & excess.notna()

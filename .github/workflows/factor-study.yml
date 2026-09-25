@@ -11,6 +11,7 @@ on:
     paths:
       - scripts/factor_study.py
       - egx_mcp/data/tv_history.py
+      - scripts/propose_factor_weights.py
       - .github/workflows/factor-study.yml
 
 permissions:
@@ -56,6 +57,17 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Walk-forward weight proposal (nothing is applied)
+        run: |
+          set -o pipefail
+          python -m scripts.propose_factor_weights 2>&1 | tee logs/factor_proposal_run.txt
+          {
+            echo '## Factor-weight proposal (walk-forward)'
+            echo '```'
+            cat logs/learning_proposal_factor_latest.txt 2>/dev/null || tail -40 logs/factor_proposal_run.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -64,4 +76,7 @@ jobs:
             logs/factor_study_latest.txt
             logs/factor_study_latest.json
             logs/factor_study_run.txt
+            logs/learning_proposal_factor.json
+            logs/learning_proposal_factor_latest.txt
+            logs/factor_proposal_run.txt
             logs/tv_fundamentals_history.json
