@@ -28,8 +28,11 @@ _CACHE: dict[str, tuple[float, list[tuple[date, float]]]] = {}
 _TTL_S = 6 * 3600
 
 
-def fetch_series(series_id: str) -> list[tuple[date, float]]:
-    """[(date, value)] ascending; missing values ('.') dropped. Cached 6h."""
+def fetch_series(series_id: str, attempts: int = _ATTEMPTS,
+                 read_timeout: float = 90) -> list[tuple[date, float]]:
+    """[(date, value)] ascending; missing values ('.') dropped. Cached 6h.
+    Research scripts use the retrying default; the daily briefing passes
+    attempts=1 and a short timeout so a FRED outage cannot stall it."""
     hit = _CACHE.get(series_id)
     if hit and time.time() - hit[0] < _TTL_S:
         return hit[1]
@@ -38,9 +41,9 @@ def fetch_series(series_id: str) -> list[tuple[date, float]]:
 
     ensure_ca_bundle()
     last: Exception | None = None
-    for attempt in range(_ATTEMPTS):
+    for attempt in range(attempts):
         try:
-            r = httpx.get(_FRED_CSV.format(sid=series_id), timeout=httpx.Timeout(90, connect=20),
+            r = httpx.get(_FRED_CSV.format(sid=series_id), timeout=httpx.Timeout(read_timeout, connect=10),
                           follow_redirects=True,
                           headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) egx-mcp research"})
             r.raise_for_status()
@@ -50,9 +53,10 @@ def fetch_series(series_id: str) -> list[tuple[date, float]]:
             last = ValueError(f"{series_id}: empty CSV")
         except Exception as e:  # noqa: BLE001
             last = e
-        time.sleep(2 ** (attempt + 1))
+        if attempt + 1 < attempts:
+            time.sleep(2 ** (attempt + 1))
     else:
-        raise RuntimeError(f"FRED {series_id} failed after {_ATTEMPTS} attempts: {last}")
+        raise RuntimeError(f"FRED {series_id} failed after {attempts} attempts: {last}")
     _CACHE[series_id] = (time.time(), out)
     return out
 
@@ -85,7 +89,8 @@ def decisions(upper: list[tuple[date, float]]) -> list[dict[str, Any]]:
 def current() -> dict[str, Any]:
     """Current target range and the last move, for the macro context."""
     try:
-        upper, lower = fetch_series("DFEDTARU"), fetch_series("DFEDTARL")
+        upper = fetch_series("DFEDTARU", attempts=1, read_timeout=15)
+        lower = fetch_series("DFEDTARL", attempts=1, read_timeout=15)
     except Exception as e:  # noqa: BLE001
         log.warning(f"FRED fetch failed: {e}")
         return {"upper_pct": None, "lower_pct": None, "error": f"FRED unreachable: {e}"}

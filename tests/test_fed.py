@@ -94,3 +94,22 @@ class FetchRetryTests(unittest.TestCase):
              patch.object(fed.time, "sleep"), patch.dict(fed._CACHE, clear=True):
             with self.assertRaises(RuntimeError):
                 fed.fetch_series("DFEDTARU")
+
+
+class BriefingPathTests(unittest.TestCase):
+    def test_current_tries_once_and_degrades(self) -> None:
+        from unittest.mock import patch
+
+        calls = {"n": 0}
+
+        def down(*a, **k):
+            calls["n"] += 1
+            raise TimeoutError("down")
+
+        with patch("httpx.get", side_effect=down), patch.object(fed.time, "sleep") as slept, \
+             patch.dict(fed._CACHE, clear=True):
+            out = fed.current()
+        self.assertIsNone(out["upper_pct"])
+        self.assertIn("error", out)
+        self.assertEqual(calls["n"], 1)
+        slept.assert_not_called()
