@@ -91,7 +91,7 @@ def _absolute(href: str, base: str) -> str:
 
 _DATE_CACHE_PATH = Path(__file__).resolve().parents[2] / "logs" / "news_dates_cache.json"
 _DATE_CACHE: dict[str, str] | None = None
-_MAX_DATE_FETCHES = 40          # per process: bounds the extra requests per briefing
+_MAX_DATE_FETCHES = 80          # per process: ~12 market + 5 picks x 6 stock headlines, x2 slack
 
 _META_KEYS = ("article:published_time", "og:published_time", "og:article:published_time",
               "datepublished", "pubdate", "publishdate", "publish-date", "date",
