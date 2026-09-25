@@ -104,7 +104,8 @@ def _features_at(i: int, raw: pd.DataFrame, px: pd.DataFrame, vol: pd.DataFrame,
     f["liquidity"] = np.log(traded.where(traded > 0).median())
     fund = {tk: tv_history.ratios(tv_history.pit(tables[tk], asof), price.get(tk))
             for tk in px.columns if tk in tables}
-    fd = pd.DataFrame.from_dict(fund, orient="index")
+    # None (missing ratio) must become NaN: an all-None column is object dtype.
+    fd = pd.DataFrame.from_dict(fund, orient="index").apply(pd.to_numeric, errors="coerce")
     for col in ("earnings_yield", "roa", "net_margin"):
         f[col] = fd[col] if col in fd else np.nan
     f["low_leverage"] = -fd["debt_to_assets"] if "debt_to_assets" in fd else np.nan

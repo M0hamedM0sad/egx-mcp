@@ -79,6 +79,18 @@ class FactorStudyTests(unittest.TestCase):
         self.assertGreater(summ["overall"]["value_composite"]["mean"], 0.1)
         self.assertTrue(any("earnings_yield" in line for line in lines))
 
+    def test_dates_before_any_visible_quarter_do_not_crash(self) -> None:
+        # Prices start 2023-01; with 8 quarters to 2025-06 nothing is public
+        # until late 2023, so early rebalances have no fundamentals at all.
+        prices, hist = _market()
+        for k, entry in enumerate(hist["tickers"].values()):
+            entry["q"] = {f: v[:8] for f, v in entry["q"].items()}
+            if k % 2:
+                entry["q"]["total_debt"] = [None] * 8        # TradingView gap
+        res = factor_study.run(prices, hist)
+        summ, _ = factor_study.summarize(res)
+        self.assertGreater(summ["overall"]["earnings_yield"]["n"], 10)
+
     def test_labels_never_overlap(self) -> None:
         prices, hist = _market(n_days=400)
         dates = [pd.Timestamp(r["date"]) for r in factor_study.run(prices, hist)["per_date"]]

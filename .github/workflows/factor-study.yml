@@ -47,6 +47,7 @@ jobs:
 
       - name: Run the factor study
         run: |
+          set -o pipefail
           python -m scripts.factor_study --refresh-tv 2>&1 | tee logs/factor_study_run.txt
           {
             echo '## EGX point-in-time factor study'
