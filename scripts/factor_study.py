@@ -59,7 +59,8 @@ WARMUP = 130          # rows of history before the first rebalance (6m momentum)
 MIN_NAMES = 20        # names with both factor and label for a date to count
 FFILL_LIMIT = 5       # thin names: carry a close across at most 5 missing sessions
 
-FUND_FACTORS = ["earnings_yield", "roa", "net_margin", "low_leverage"]
+FUND_FACTORS = ["earnings_yield", "earnings_yield_in_sector", "roa", "net_margin", "low_leverage"]
+MIN_SECTOR_NAMES = 5  # a sector-relative rank needs this many names with a value
 PRICE_FACTORS = ["mom_6m", "rev_1m", "low_vol_3m", "liquidity"]
 COMPOSITES = ["value_composite", "quality_composite"]
 ALL_FACTORS = FUND_FACTORS + COMPOSITES + PRICE_FACTORS
@@ -113,6 +114,12 @@ def _features_at(i: int, raw: pd.DataFrame, px: pd.DataFrame, vol: pd.DataFrame,
     # Clip extreme ratios (tiny denominators) before ranking into composites.
     for col in ("earnings_yield", "roa", "net_margin"):
         f[col] = f[col].clip(-1, 1)
+    # Cheapness within the name's own sector (egx_sectors.json): is comparing
+    # a bank with banks more informative than comparing it with the market?
+    from egx_mcp.data import sectors
+    sec = pd.Series({tk: sectors.all_sectors().get(tk) for tk in f.index})
+    grp = f["earnings_yield"].groupby(sec)
+    f["earnings_yield_in_sector"] = grp.rank(pct=True).where(grp.transform("count") >= MIN_SECTOR_NAMES)
     f["value_composite"] = f["earnings_yield"].rank(pct=True)
     q = f[["roa", "net_margin", "low_leverage"]].rank(pct=True)
     f["quality_composite"] = q.mean(axis=1, skipna=False)

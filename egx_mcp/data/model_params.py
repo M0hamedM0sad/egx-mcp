@@ -33,6 +33,10 @@ DEFAULTS: dict[str, Any] = {
     # momentum 1.4x). Switchable because the 2014-2026 study found 6m
     # momentum slightly NEGATIVE on EGX.
     "regime_weight_overrides": True,
+    # "curated": only the 30 EGX_UNIVERSE names have a sector (today).
+    # "tradingview": the other ~235 get one from egx_sectors.json, with sector
+    # medians computed over every classified peer.
+    "sector_source": "curated",
     "version": "default",
     "learned_at": None,
     "provenance": "hardcoded baseline",
@@ -105,6 +109,10 @@ def valuation_market_fallback() -> bool:
 def regime_weight_overrides() -> bool:
     return bool(load_params().get("regime_weight_overrides",
                                   DEFAULTS["regime_weight_overrides"]))
+
+
+def sector_source() -> str:
+    return str(load_params().get("sector_source", DEFAULTS["sector_source"]))
 
 
 def score_weights() -> dict[str, float]:

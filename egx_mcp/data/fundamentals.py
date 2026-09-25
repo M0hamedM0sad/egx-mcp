@@ -204,7 +204,7 @@ def get_fundamentals(user_ticker: str) -> dict[str, Any]:
         "ticker": canonical,
         "yahoo_symbol": yahoo,
         "name": info.get("longName") or info.get("shortName") or name,
-        "sector": EGX_UNIVERSE.get(canonical, {}).get("sector"),
+        "sector": _sector_of(canonical),
         "price": price,
         "trailing_eps": eps,
         "book_value_per_share": book_value,
@@ -287,12 +287,48 @@ def market_medians() -> dict[str, Any]:
     return _MARKET_MED
 
 
+def _sector_of(canonical: str) -> str | None:
+    from . import sectors
+    return sectors.sector_of(canonical)
+
+
+_MIN_SECTOR_PEERS = 5
+
+
+def _sector_medians_all(sector: str) -> dict[str, Any]:
+    """Sector medians over every classified listing, from the audited CSV
+    (offline; same sanity bands as market_medians). A median needs at least
+    _MIN_SECTOR_PEERS values, else it is None and the market fallback fills it."""
+    from . import sectors
+    peers = sectors.peers(sector)
+    rows = [r for tk, r in _load_overrides().items() if tk in set(peers)]
+
+    def med(vals):
+        return round(median(vals), 2) if len(vals) >= _MIN_SECTOR_PEERS else None
+    return {
+        "sector": sector,
+        "peer_count": len(peers),
+        "median_pe": med([r["pe_ratio"] for r in rows if r.get("pe_ratio") is not None
+                          and _PE_MIN <= r["pe_ratio"] <= _PE_MAX]),
+        "median_pb": med([r["pb_ratio"] for r in rows if r.get("pb_ratio") is not None
+                          and _PB_MIN <= r["pb_ratio"] <= _PB_MAX]),
+        "median_roe_pct": med([r["roe_pct"] for r in rows if r.get("roe_pct") is not None]),
+        "median_margin_pct": med([r["profit_margin_pct"] for r in rows
+                                  if r.get("profit_margin_pct") is not None]),
+        "source": "egx_sectors.json peers, audited CSV",
+    }
+
+
 def sector_medians(sector: str) -> dict[str, Any]:
     """Compute sector-level median P/E, P/B, ROE for relative valuation.
 
     Walks the curated universe — slow on cold cache, fast on warm cache
-    because get_fundamentals shares yfinance's underlying response.
+    because get_fundamentals shares yfinance's underlying response. With
+    model_params.sector_source == "tradingview", uses every classified peer.
     """
+    from . import model_params
+    if model_params.sector_source() == "tradingview":
+        return _sector_medians_all(sector)
     peers = [t for t, m in EGX_UNIVERSE.items()
              if m["sector"].lower() == sector.lower() and m["sector"] != "Index"]
 

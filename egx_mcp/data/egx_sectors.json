@@ -1,0 +1,1399 @@
+{
+ "_about": "Model sector for every EGX listing TradingView classifies, mapped from its industry (scripts/refresh_sectors.py, fetched 2026-09-25). Curated EGX_UNIVERSE sectors take precedence when model_params.sector_source='tradingview'. Unclassified listings are absent.",
+ "industry_map": {
+  "Agricultural Commodities/Milling": "Food & Beverage",
+  "Aluminum": "Basic Resources",
+  "Apparel/Footwear": "Personal & Household",
+  "Apparel/Footwear Retail": "Retail",
+  "Broadcasting": "Media",
+  "Building Products": "Building Materials",
+  "Chemicals: Agricultural": "Chemicals",
+  "Chemicals: Major Diversified": "Chemicals",
+  "Chemicals: Specialty": "Chemicals",
+  "Commercial Printing/Forms": "Paper & Packaging",
+  "Construction Materials": "Building Materials",
+  "Containers/Packaging": "Paper & Packaging",
+  "Contract Drilling": "Energy",
+  "Electric Utilities": "Utilities",
+  "Electrical Products": "Industrial Goods",
+  "Electronic Components": "Industrial Goods",
+  "Electronics Distributors": "Retail",
+  "Engineering & Construction": "Construction",
+  "Finance/Rental/Leasing": "Financial Services",
+  "Financial Conglomerates": "Financial Services",
+  "Food Distributors": "Food & Beverage",
+  "Food Retail": "Food & Beverage",
+  "Food: Meat/Fish/Dairy": "Food & Beverage",
+  "Food: Specialty/Candy": "Food & Beverage",
+  "Gas Distributors": "Utilities",
+  "Home Furnishings": "Personal & Household",
+  "Homebuilding": "Real Estate",
+  "Hospital/Nursing Management": "Healthcare",
+  "Hotels/Resorts/Cruise lines": "Travel & Leisure",
+  "Household/Personal Care": "Personal & Household",
+  "Industrial Machinery": "Industrial Goods",
+  "Industrial Specialties": "Chemicals",
+  "Information Technology Services": "Technology",
+  "Internet Software/Services": "Technology",
+  "Investment Banks/Brokers": "Financial Services",
+  "Investment Managers": "Financial Services",
+  "Investment Trusts/Mutual Funds": "Financial Services",
+  "Major Banks": "Banks",
+  "Major Telecommunications": "Telecom",
+  "Marine Shipping": "Transportation",
+  "Medical Distributors": "Healthcare",
+  "Medical/Nursing Services": "Healthcare",
+  "Metal Fabrication": "Industrial Goods",
+  "Miscellaneous Commercial Services": "Commercial Services",
+  "Movies/Entertainment": "Media",
+  "Multi-Line Insurance": "Financial Services",
+  "Oil Refining/Marketing": "Energy",
+  "Oilfield Services/Equipment": "Energy",
+  "Other Consumer Services": "Consumer Services",
+  "Other Transportation": "Transportation",
+  "Packaged Software": "Technology",
+  "Pharmaceuticals: Major": "Healthcare",
+  "Pharmaceuticals: Other": "Healthcare",
+  "Property/Casualty Insurance": "Financial Services",
+  "Publishing: Books/Magazines": "Paper & Packaging",
+  "Pulp & Paper": "Paper & Packaging",
+  "Real Estate Development": "Real Estate",
+  "Regional Banks": "Banks",
+  "Services to the Health Industry": "Healthcare",
+  "Specialty Stores": "Retail",
+  "Specialty Telecommunications": "Telecom",
+  "Steel": "Basic Resources",
+  "Textiles": "Personal & Household",
+  "Tobacco": "Personal & Household",
+  "Wholesale Distributors": "Trade & Distributors",
+  "Wireless Telecommunications": "Telecom"
+ },
+ "tickers": {
+  "AALR": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "ABUK": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Agricultural",
+   "tv_sector": "Process Industries"
+  },
+  "ACAMD": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Managers",
+   "tv_sector": "Finance"
+  },
+  "ACAP": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "ACGC": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "ACTF": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "ADCI": {
+   "sector": "Healthcare",
+   "tv_industry": "Pharmaceuticals: Major",
+   "tv_sector": "Health Technology"
+  },
+  "ADIB": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "ADPC": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food: Meat/Fish/Dairy",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "ADRI": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "AFDI": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "AFMC": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food Retail",
+   "tv_sector": "Retail Trade"
+  },
+  "AIDC": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "AIFI": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "AIH": {
+   "sector": "Financial Services",
+   "tv_industry": "Financial Conglomerates",
+   "tv_sector": "Finance"
+  },
+  "AJWA": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food: Specialty/Candy",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "ALCN": {
+   "sector": "Transportation",
+   "tv_industry": "Other Transportation",
+   "tv_sector": "Transportation"
+  },
+  "ALEX": {
+   "sector": "Building Materials",
+   "tv_industry": "Construction Materials",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "ALUM": {
+   "sector": "Basic Resources",
+   "tv_industry": "Aluminum",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "AMER": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "AMES": {
+   "sector": "Healthcare",
+   "tv_industry": "Hospital/Nursing Management",
+   "tv_sector": "Health Services"
+  },
+  "AMIA": {
+   "sector": "Financial Services",
+   "tv_industry": "Finance/Rental/Leasing",
+   "tv_sector": "Finance"
+  },
+  "AMII": {
+   "sector": "Building Materials",
+   "tv_industry": "Building Products",
+   "tv_sector": "Producer Manufacturing"
+  },
+  "AMOC": {
+   "sector": "Energy",
+   "tv_industry": "Oil Refining/Marketing",
+   "tv_sector": "Energy Minerals"
+  },
+  "AMPI": {
+   "sector": "Technology",
+   "tv_industry": "Packaged Software",
+   "tv_sector": "Technology Services"
+  },
+  "APPC": {
+   "sector": "Paper & Packaging",
+   "tv_industry": "Containers/Packaging",
+   "tv_sector": "Process Industries"
+  },
+  "APSW": {
+   "sector": "Personal & Household",
+   "tv_industry": "Textiles",
+   "tv_sector": "Process Industries"
+  },
+  "ARAB": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "ARCC": {
+   "sector": "Building Materials",
+   "tv_industry": "Construction Materials",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "AREH": {
+   "sector": "Construction",
+   "tv_industry": "Engineering & Construction",
+   "tv_sector": "Industrial Services"
+  },
+  "ASCM": {
+   "sector": "Building Materials",
+   "tv_industry": "Construction Materials",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "ASPI": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "ATLC": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "ATQA": {
+   "sector": "Industrial Goods",
+   "tv_industry": "Metal Fabrication",
+   "tv_sector": "Producer Manufacturing"
+  },
+  "AXPH": {
+   "sector": "Healthcare",
+   "tv_industry": "Pharmaceuticals: Major",
+   "tv_sector": "Health Technology"
+  },
+  "BIDI": {
+   "sector": "Paper & Packaging",
+   "tv_industry": "Containers/Packaging",
+   "tv_sector": "Process Industries"
+  },
+  "BIGP": {
+   "sector": "Trade & Distributors",
+   "tv_industry": "Wholesale Distributors",
+   "tv_sector": "Distribution Services"
+  },
+  "BINV": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Managers",
+   "tv_sector": "Finance"
+  },
+  "BIOC": {
+   "sector": "Healthcare",
+   "tv_industry": "Medical Distributors",
+   "tv_sector": "Distribution Services"
+  },
+  "BONY": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "BTFH": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "CAED": {
+   "sector": "Consumer Services",
+   "tv_industry": "Other Consumer Services",
+   "tv_sector": "Consumer Services"
+  },
+  "CANA": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "CCAP": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Managers",
+   "tv_sector": "Finance"
+  },
+  "CCRS": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "CEFM": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "CERA": {
+   "sector": "Building Materials",
+   "tv_industry": "Building Products",
+   "tv_sector": "Producer Manufacturing"
+  },
+  "CFGH": {
+   "sector": "Retail",
+   "tv_industry": "Apparel/Footwear Retail",
+   "tv_sector": "Retail Trade"
+  },
+  "CICH": {
+   "sector": "Financial Services",
+   "tv_industry": "Finance/Rental/Leasing",
+   "tv_sector": "Finance"
+  },
+  "CIEB": {
+   "sector": "Banks",
+   "tv_industry": "Major Banks",
+   "tv_sector": "Finance"
+  },
+  "CIRA": {
+   "sector": "Consumer Services",
+   "tv_industry": "Other Consumer Services",
+   "tv_sector": "Consumer Services"
+  },
+  "CLHO": {
+   "sector": "Healthcare",
+   "tv_industry": "Hospital/Nursing Management",
+   "tv_sector": "Health Services"
+  },
+  "CNFN": {
+   "sector": "Financial Services",
+   "tv_industry": "Finance/Rental/Leasing",
+   "tv_sector": "Finance"
+  },
+  "COMI": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "COPR": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "COSG": {
+   "sector": "Personal & Household",
+   "tv_industry": "Household/Personal Care",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "CPCI": {
+   "sector": "Healthcare",
+   "tv_industry": "Pharmaceuticals: Major",
+   "tv_sector": "Health Technology"
+  },
+  "CPME": {
+   "sector": "Financial Services",
+   "tv_industry": "Financial Conglomerates",
+   "tv_sector": "Finance"
+  },
+  "CRST": {
+   "sector": "Construction",
+   "tv_industry": "Engineering & Construction",
+   "tv_sector": "Industrial Services"
+  },
+  "CSAG": {
+   "sector": "Transportation",
+   "tv_industry": "Other Transportation",
+   "tv_sector": "Transportation"
+  },
+  "DAPH": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "DCCC": {
+   "sector": "Transportation",
+   "tv_industry": "Marine Shipping",
+   "tv_sector": "Transportation"
+  },
+  "DCRC": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "DEIN": {
+   "sector": "Financial Services",
+   "tv_industry": "Property/Casualty Insurance",
+   "tv_sector": "Finance"
+  },
+  "DGTZ": {
+   "sector": "Technology",
+   "tv_industry": "Information Technology Services",
+   "tv_sector": "Technology Services"
+  },
+  "DOMT": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food: Meat/Fish/Dairy",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "DSCW": {
+   "sector": "Personal & Household",
+   "tv_industry": "Apparel/Footwear",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "DTPP": {
+   "sector": "Paper & Packaging",
+   "tv_industry": "Containers/Packaging",
+   "tv_sector": "Process Industries"
+  },
+  "EALR": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "EASB": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "EAST": {
+   "sector": "Personal & Household",
+   "tv_industry": "Tobacco",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "EBSC": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "ECAP": {
+   "sector": "Building Materials",
+   "tv_industry": "Building Products",
+   "tv_sector": "Producer Manufacturing"
+  },
+  "EDFM": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food: Specialty/Candy",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "EEII": {
+   "sector": "Industrial Goods",
+   "tv_industry": "Electronic Components",
+   "tv_sector": "Electronic Technology"
+  },
+  "EFIC": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Agricultural",
+   "tv_sector": "Process Industries"
+  },
+  "EFID": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food: Specialty/Candy",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "EFIH": {
+   "sector": "Technology",
+   "tv_industry": "Packaged Software",
+   "tv_sector": "Technology Services"
+  },
+  "EGAL": {
+   "sector": "Basic Resources",
+   "tv_industry": "Aluminum",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "EGAS": {
+   "sector": "Utilities",
+   "tv_industry": "Gas Distributors",
+   "tv_sector": "Utilities"
+  },
+  "EGBE": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "EGCH": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Agricultural",
+   "tv_sector": "Process Industries"
+  },
+  "EGREF": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Trusts/Mutual Funds",
+   "tv_sector": "Miscellaneous"
+  },
+  "EGS30AJ1C016-EGP": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Specialty",
+   "tv_sector": "Process Industries"
+  },
+  "EGS370O1C013": {
+   "sector": "Paper & Packaging",
+   "tv_industry": "Commercial Printing/Forms",
+   "tv_sector": "Commercial Services"
+  },
+  "EGS3E071C013-EGP": {
+   "sector": "Industrial Goods",
+   "tv_industry": "Metal Fabrication",
+   "tv_sector": "Producer Manufacturing"
+  },
+  "EGS3I0S1C019": {
+   "sector": "Healthcare",
+   "tv_industry": "Medical Distributors",
+   "tv_sector": "Distribution Services"
+  },
+  "EGS65101C015": {
+   "sector": "Construction",
+   "tv_industry": "Engineering & Construction",
+   "tv_sector": "Industrial Services"
+  },
+  "EGS659O1C015": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food Distributors",
+   "tv_sector": "Distribution Services"
+  },
+  "EGSA": {
+   "sector": "Media",
+   "tv_industry": "Broadcasting",
+   "tv_sector": "Consumer Services"
+  },
+  "EGTS": {
+   "note": "Egyptian for Tourism Resorts, classed by TradingView as Electric Utilities",
+   "sector": "Travel & Leisure",
+   "tv_industry": "Electric Utilities",
+   "tv_sector": "Utilities"
+  },
+  "EGWA": {
+   "sector": "Transportation",
+   "tv_industry": "Other Transportation",
+   "tv_sector": "Transportation"
+  },
+  "EITP": {
+   "sector": "Consumer Services",
+   "tv_industry": "Other Consumer Services",
+   "tv_sector": "Consumer Services"
+  },
+  "ELEC": {
+   "sector": "Industrial Goods",
+   "tv_industry": "Electrical Products",
+   "tv_sector": "Producer Manufacturing"
+  },
+  "ELKA": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "ELNA": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "ELSH": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "ELWA": {
+   "sector": "Travel & Leisure",
+   "tv_industry": "Hotels/Resorts/Cruise lines",
+   "tv_sector": "Consumer Services"
+  },
+  "EMFD": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "ENGC": {
+   "sector": "Building Materials",
+   "tv_industry": "Building Products",
+   "tv_sector": "Producer Manufacturing"
+  },
+  "EOSB": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "EPCO": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "EPPK": {
+   "sector": "Paper & Packaging",
+   "tv_industry": "Containers/Packaging",
+   "tv_sector": "Process Industries"
+  },
+  "ETEL": {
+   "sector": "Telecom",
+   "tv_industry": "Major Telecommunications",
+   "tv_sector": "Communications"
+  },
+  "ETRS": {
+   "sector": "Transportation",
+   "tv_industry": "Other Transportation",
+   "tv_sector": "Transportation"
+  },
+  "EXPA": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "FAIT": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "FAITA": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "FERC": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Agricultural",
+   "tv_sector": "Process Industries"
+  },
+  "FIRE": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "FNAR": {
+   "sector": "Construction",
+   "tv_industry": "Engineering & Construction",
+   "tv_sector": "Industrial Services"
+  },
+  "FTNS": {
+   "sector": "Technology",
+   "tv_industry": "Internet Software/Services",
+   "tv_sector": "Technology Services"
+  },
+  "FWRY": {
+   "sector": "Technology",
+   "tv_industry": "Packaged Software",
+   "tv_sector": "Technology Services"
+  },
+  "GBCO": {
+   "sector": "Trade & Distributors",
+   "tv_industry": "Wholesale Distributors",
+   "tv_sector": "Distribution Services"
+  },
+  "GDWA": {
+   "sector": "Industrial Goods",
+   "tv_industry": "Industrial Machinery",
+   "tv_sector": "Producer Manufacturing"
+  },
+  "GGCC": {
+   "sector": "Construction",
+   "tv_industry": "Engineering & Construction",
+   "tv_sector": "Industrial Services"
+  },
+  "GGRN": {
+   "sector": "Commercial Services",
+   "tv_industry": "Miscellaneous Commercial Services",
+   "tv_sector": "Commercial Services"
+  },
+  "GIHD": {
+   "sector": "Real Estate",
+   "tv_industry": "Homebuilding",
+   "tv_sector": "Consumer Durables"
+  },
+  "GMCI": {
+   "sector": "Trade & Distributors",
+   "tv_industry": "Wholesale Distributors",
+   "tv_sector": "Distribution Services"
+  },
+  "GOUR": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food Retail",
+   "tv_sector": "Retail Trade"
+  },
+  "GPIM": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "GPPL": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "GRCA": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "GSSC": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food Retail",
+   "tv_sector": "Retail Trade"
+  },
+  "GTEX": {
+   "sector": "Financial Services",
+   "tv_industry": "Financial Conglomerates",
+   "tv_sector": "Finance"
+  },
+  "GTHE": {
+   "sector": "Telecom",
+   "tv_industry": "Specialty Telecommunications",
+   "tv_sector": "Communications"
+  },
+  "GTWL": {
+   "sector": "Personal & Household",
+   "tv_industry": "Textiles",
+   "tv_sector": "Process Industries"
+  },
+  "HDBK": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "HELI": {
+   "sector": "Real Estate",
+   "tv_industry": "Homebuilding",
+   "tv_sector": "Consumer Durables"
+  },
+  "HRHO": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "IBCT": {
+   "sector": "Trade & Distributors",
+   "tv_industry": "Wholesale Distributors",
+   "tv_sector": "Distribution Services"
+  },
+  "ICFC": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Agricultural",
+   "tv_sector": "Process Industries"
+  },
+  "ICID": {
+   "sector": "Financial Services",
+   "tv_industry": "Financial Conglomerates",
+   "tv_sector": "Finance"
+  },
+  "ICLE": {
+   "sector": "Financial Services",
+   "tv_industry": "Finance/Rental/Leasing",
+   "tv_sector": "Finance"
+  },
+  "IDRE": {
+   "sector": "Real Estate",
+   "tv_industry": "Homebuilding",
+   "tv_sector": "Consumer Durables"
+  },
+  "IEEC": {
+   "sector": "Construction",
+   "tv_industry": "Engineering & Construction",
+   "tv_sector": "Industrial Services"
+  },
+  "IFAP": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "INEG": {
+   "sector": "Industrial Goods",
+   "tv_industry": "Metal Fabrication",
+   "tv_sector": "Producer Manufacturing"
+  },
+  "INFI": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food: Specialty/Candy",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "IRAX": {
+   "sector": "Basic Resources",
+   "tv_industry": "Steel",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "IRON": {
+   "sector": "Basic Resources",
+   "tv_industry": "Steel",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "ISMA": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "ISMQ": {
+   "sector": "Basic Resources",
+   "tv_industry": "Steel",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "ISPH": {
+   "sector": "Healthcare",
+   "tv_industry": "Medical Distributors",
+   "tv_sector": "Distribution Services"
+  },
+  "JUFO": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food: Meat/Fish/Dairy",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "KABO": {
+   "sector": "Personal & Household",
+   "tv_industry": "Apparel/Footwear",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "KORA": {
+   "sector": "Utilities",
+   "tv_industry": "Electric Utilities",
+   "tv_sector": "Utilities"
+  },
+  "KRDI": {
+   "sector": "Financial Services",
+   "tv_industry": "Financial Conglomerates",
+   "tv_sector": "Finance"
+  },
+  "KWIN": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "KZPC": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Agricultural",
+   "tv_sector": "Process Industries"
+  },
+  "LCSW": {
+   "sector": "Building Materials",
+   "tv_industry": "Building Products",
+   "tv_sector": "Producer Manufacturing"
+  },
+  "LKGP": {
+   "sector": "Healthcare",
+   "tv_industry": "Services to the Health Industry",
+   "tv_sector": "Health Services"
+  },
+  "LUTS": {
+   "sector": "Financial Services",
+   "tv_industry": "Financial Conglomerates",
+   "tv_sector": "Finance"
+  },
+  "MAAL": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "MASR": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "MBEG": {
+   "sector": "Trade & Distributors",
+   "tv_industry": "Wholesale Distributors",
+   "tv_sector": "Distribution Services"
+  },
+  "MBSC": {
+   "sector": "Building Materials",
+   "tv_industry": "Construction Materials",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "MCQE": {
+   "sector": "Building Materials",
+   "tv_industry": "Construction Materials",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "MCRO": {
+   "sector": "Healthcare",
+   "tv_industry": "Pharmaceuticals: Major",
+   "tv_sector": "Health Technology"
+  },
+  "MEGM": {
+   "sector": "Paper & Packaging",
+   "tv_industry": "Containers/Packaging",
+   "tv_sector": "Process Industries"
+  },
+  "MENA": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "MEPA": {
+   "sector": "Paper & Packaging",
+   "tv_industry": "Containers/Packaging",
+   "tv_sector": "Process Industries"
+  },
+  "MFPC": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Agricultural",
+   "tv_sector": "Process Industries"
+  },
+  "MFSC": {
+   "sector": "Retail",
+   "tv_industry": "Specialty Stores",
+   "tv_sector": "Retail Trade"
+  },
+  "MHOT": {
+   "sector": "Travel & Leisure",
+   "tv_industry": "Hotels/Resorts/Cruise lines",
+   "tv_sector": "Consumer Services"
+  },
+  "MICH": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Specialty",
+   "tv_sector": "Process Industries"
+  },
+  "MILS": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "MIPH": {
+   "sector": "Healthcare",
+   "tv_industry": "Pharmaceuticals: Major",
+   "tv_sector": "Health Technology"
+  },
+  "MISR": {
+   "sector": "Building Materials",
+   "tv_industry": "Construction Materials",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "MMAT": {
+   "sector": "Travel & Leisure",
+   "tv_industry": "Hotels/Resorts/Cruise lines",
+   "tv_sector": "Consumer Services"
+  },
+  "MOED": {
+   "sector": "Commercial Services",
+   "tv_industry": "Miscellaneous Commercial Services",
+   "tv_sector": "Commercial Services"
+  },
+  "MOIL": {
+   "sector": "Energy",
+   "tv_industry": "Oilfield Services/Equipment",
+   "tv_sector": "Industrial Services"
+  },
+  "MOIN": {
+   "sector": "Financial Services",
+   "tv_industry": "Multi-Line Insurance",
+   "tv_sector": "Finance"
+  },
+  "MOSC": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "MPCI": {
+   "sector": "Healthcare",
+   "tv_industry": "Pharmaceuticals: Major",
+   "tv_sector": "Health Technology"
+  },
+  "MPCO": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "MPRC": {
+   "sector": "Media",
+   "tv_industry": "Movies/Entertainment",
+   "tv_sector": "Consumer Services"
+  },
+  "MTIE": {
+   "sector": "Retail",
+   "tv_industry": "Electronics Distributors",
+   "tv_sector": "Distribution Services"
+  },
+  "NAHO": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "NARE": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Managers",
+   "tv_sector": "Finance"
+  },
+  "NBKE": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "NCCW": {
+   "sector": "Construction",
+   "tv_industry": "Engineering & Construction",
+   "tv_sector": "Industrial Services"
+  },
+  "NCGC": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "NDRL": {
+   "sector": "Energy",
+   "tv_industry": "Contract Drilling",
+   "tv_sector": "Industrial Services"
+  },
+  "NEDA": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Agricultural",
+   "tv_sector": "Process Industries"
+  },
+  "NHPS": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "NINH": {
+   "sector": "Healthcare",
+   "tv_industry": "Hospital/Nursing Management",
+   "tv_sector": "Health Services"
+  },
+  "NIPH": {
+   "sector": "Healthcare",
+   "tv_industry": "Pharmaceuticals: Major",
+   "tv_sector": "Health Technology"
+  },
+  "OBRI": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "OCDI": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "OCPH": {
+   "sector": "Healthcare",
+   "tv_industry": "Pharmaceuticals: Major",
+   "tv_sector": "Health Technology"
+  },
+  "ODIN": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Managers",
+   "tv_sector": "Finance"
+  },
+  "OFH": {
+   "sector": "Financial Services",
+   "tv_industry": "Financial Conglomerates",
+   "tv_sector": "Finance"
+  },
+  "OIH": {
+   "sector": "Telecom",
+   "tv_industry": "Wireless Telecommunications",
+   "tv_sector": "Communications"
+  },
+  "OLFI": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food: Meat/Fish/Dairy",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "ORAS": {
+   "sector": "Construction",
+   "tv_industry": "Engineering & Construction",
+   "tv_sector": "Industrial Services"
+  },
+  "ORHD": {
+   "sector": "Real Estate",
+   "tv_industry": "Homebuilding",
+   "tv_sector": "Consumer Durables"
+  },
+  "ORWE": {
+   "sector": "Personal & Household",
+   "tv_industry": "Home Furnishings",
+   "tv_sector": "Consumer Durables"
+  },
+  "PACH": {
+   "sector": "Chemicals",
+   "tv_industry": "Industrial Specialties",
+   "tv_sector": "Process Industries"
+  },
+  "PHAR": {
+   "sector": "Healthcare",
+   "tv_industry": "Pharmaceuticals: Other",
+   "tv_sector": "Health Technology"
+  },
+  "PHDC": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "PHGC": {
+   "sector": "Healthcare",
+   "tv_industry": "Medical/Nursing Services",
+   "tv_sector": "Health Services"
+  },
+  "PHTV": {
+   "sector": "Travel & Leisure",
+   "tv_industry": "Hotels/Resorts/Cruise lines",
+   "tv_sector": "Consumer Services"
+  },
+  "POCO": {
+   "sector": "Transportation",
+   "tv_industry": "Other Transportation",
+   "tv_sector": "Transportation"
+  },
+  "POUL": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "PRCL": {
+   "sector": "Retail",
+   "tv_industry": "Specialty Stores",
+   "tv_sector": "Retail Trade"
+  },
+  "PRDC": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "PRMH": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "QNBE": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "RACC": {
+   "sector": "Commercial Services",
+   "tv_industry": "Miscellaneous Commercial Services",
+   "tv_sector": "Commercial Services"
+  },
+  "RAKT": {
+   "sector": "Paper & Packaging",
+   "tv_industry": "Pulp & Paper",
+   "tv_sector": "Process Industries"
+  },
+  "RAYA": {
+   "sector": "Technology",
+   "tv_industry": "Information Technology Services",
+   "tv_sector": "Technology Services"
+  },
+  "RKAZ": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Agricultural",
+   "tv_sector": "Process Industries"
+  },
+  "RMDA": {
+   "sector": "Healthcare",
+   "tv_industry": "Pharmaceuticals: Major",
+   "tv_sector": "Health Technology"
+  },
+  "RMTV": {
+   "sector": "Travel & Leisure",
+   "tv_industry": "Hotels/Resorts/Cruise lines",
+   "tv_sector": "Consumer Services"
+  },
+  "ROTO": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "RREI": {
+   "sector": "Real Estate",
+   "tv_industry": "Homebuilding",
+   "tv_sector": "Consumer Durables"
+  },
+  "RTVC": {
+   "sector": "Construction",
+   "tv_industry": "Engineering & Construction",
+   "tv_sector": "Industrial Services"
+  },
+  "RUBX": {
+   "sector": "Personal & Household",
+   "tv_industry": "Home Furnishings",
+   "tv_sector": "Consumer Durables"
+  },
+  "SAIB": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "SAUD": {
+   "sector": "Banks",
+   "tv_industry": "Regional Banks",
+   "tv_sector": "Finance"
+  },
+  "SCEM": {
+   "sector": "Building Materials",
+   "tv_industry": "Construction Materials",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "SCFM": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "SCTS": {
+   "sector": "Commercial Services",
+   "tv_industry": "Miscellaneous Commercial Services",
+   "tv_sector": "Commercial Services"
+  },
+  "SDTI": {
+   "sector": "Travel & Leisure",
+   "tv_industry": "Hotels/Resorts/Cruise lines",
+   "tv_sector": "Consumer Services"
+  },
+  "SEIG": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Managers",
+   "tv_sector": "Finance"
+  },
+  "SEIGA": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Managers",
+   "tv_sector": "Finance"
+  },
+  "SIPC": {
+   "sector": "Healthcare",
+   "tv_industry": "Pharmaceuticals: Major",
+   "tv_sector": "Health Technology"
+  },
+  "SKPC": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Specialty",
+   "tv_sector": "Process Industries"
+  },
+  "SMFR": {
+   "sector": "Trade & Distributors",
+   "tv_industry": "Wholesale Distributors",
+   "tv_sector": "Distribution Services"
+  },
+  "SMPP": {
+   "sector": "Paper & Packaging",
+   "tv_industry": "Publishing: Books/Magazines",
+   "tv_sector": "Consumer Services"
+  },
+  "SNFC": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "SNFI": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Food: Specialty/Candy",
+   "tv_sector": "Consumer Non-Durables"
+  },
+  "SPHT": {
+   "sector": "Travel & Leisure",
+   "tv_industry": "Hotels/Resorts/Cruise lines",
+   "tv_sector": "Consumer Services"
+  },
+  "SPIN": {
+   "sector": "Personal & Household",
+   "tv_industry": "Textiles",
+   "tv_sector": "Process Industries"
+  },
+  "SPMD": {
+   "sector": "Healthcare",
+   "tv_industry": "Medical/Nursing Services",
+   "tv_sector": "Health Services"
+  },
+  "SUCE": {
+   "sector": "Building Materials",
+   "tv_industry": "Construction Materials",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "SUGR": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "SVCE": {
+   "sector": "Building Materials",
+   "tv_industry": "Construction Materials",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "SWDY": {
+   "sector": "Industrial Goods",
+   "tv_industry": "Electrical Products",
+   "tv_sector": "Producer Manufacturing"
+  },
+  "TALM": {
+   "sector": "Consumer Services",
+   "tv_industry": "Other Consumer Services",
+   "tv_sector": "Consumer Services"
+  },
+  "TANM": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "TAQA": {
+   "sector": "Utilities",
+   "tv_industry": "Electric Utilities",
+   "tv_sector": "Utilities"
+  },
+  "TMGH": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "TORA": {
+   "sector": "Building Materials",
+   "tv_industry": "Construction Materials",
+   "tv_sector": "Non-Energy Minerals"
+  },
+  "TOUR": {
+   "sector": "Consumer Services",
+   "tv_industry": "Other Consumer Services",
+   "tv_sector": "Consumer Services"
+  },
+  "TRTO": {
+   "sector": "Commercial Services",
+   "tv_industry": "Miscellaneous Commercial Services",
+   "tv_sector": "Commercial Services"
+  },
+  "TWSA": {
+   "sector": "Financial Services",
+   "tv_industry": "Finance/Rental/Leasing",
+   "tv_sector": "Finance"
+  },
+  "TYCN": {
+   "sector": "Financial Services",
+   "tv_industry": "Investment Banks/Brokers",
+   "tv_sector": "Finance"
+  },
+  "UBEE": {
+   "sector": "Banks",
+   "tv_industry": "Major Banks",
+   "tv_sector": "Finance"
+  },
+  "UEFM": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "UEGC": {
+   "sector": "Construction",
+   "tv_industry": "Engineering & Construction",
+   "tv_sector": "Industrial Services"
+  },
+  "UNIP": {
+   "sector": "Paper & Packaging",
+   "tv_industry": "Pulp & Paper",
+   "tv_sector": "Process Industries"
+  },
+  "UNIT": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "UPMS": {
+   "sector": "Healthcare",
+   "tv_industry": "Medical/Nursing Services",
+   "tv_sector": "Health Services"
+  },
+  "UTOP": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  },
+  "VALU": {
+   "sector": "Financial Services",
+   "tv_industry": "Finance/Rental/Leasing",
+   "tv_sector": "Finance"
+  },
+  "VERT": {
+   "sector": "Technology",
+   "tv_industry": "Packaged Software",
+   "tv_sector": "Technology Services"
+  },
+  "VLMR": {
+   "sector": "Financial Services",
+   "tv_industry": "Financial Conglomerates",
+   "tv_sector": "Finance"
+  },
+  "VLMRA": {
+   "sector": "Financial Services",
+   "tv_industry": "Financial Conglomerates",
+   "tv_sector": "Finance"
+  },
+  "WATP": {
+   "sector": "Chemicals",
+   "tv_industry": "Chemicals: Major Diversified",
+   "tv_sector": "Process Industries"
+  },
+  "WCDF": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "WKOL": {
+   "sector": "Construction",
+   "tv_industry": "Engineering & Construction",
+   "tv_sector": "Industrial Services"
+  },
+  "ZEOT": {
+   "sector": "Food & Beverage",
+   "tv_industry": "Agricultural Commodities/Milling",
+   "tv_sector": "Process Industries"
+  },
+  "ZMID": {
+   "sector": "Real Estate",
+   "tv_industry": "Real Estate Development",
+   "tv_sector": "Finance"
+  }
+ }
+}

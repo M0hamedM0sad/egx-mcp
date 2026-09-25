@@ -129,3 +129,31 @@ class MarketMediansTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SectorSourceTests(unittest.TestCase):
+    def test_curated_default_and_tradingview_switch(self) -> None:
+        from egx_mcp.data import sectors
+
+        self.assertEqual(model_params.DEFAULTS["sector_source"], "curated")
+        with patch.object(model_params, "load_params", return_value=_params()):
+            self.assertIsNone(sectors.sector_of("MPCO"))            # not curated
+            self.assertEqual(sectors.sector_of("COMI"), "Banks")     # curated
+        with patch.object(model_params, "load_params",
+                          return_value=_params(sector_source="tradingview")):
+            self.assertEqual(sectors.sector_of("MPCO"), "Food & Beverage")
+            self.assertEqual(sectors.sector_of("EGTS"), "Travel & Leisure")   # hand-corrected
+            self.assertEqual(sectors.sector_of("EFIH"), "Financial Services") # curated wins
+        self.assertIn("COMI", sectors.peers("banks"))
+
+    def test_sector_medians_need_five_peers(self) -> None:
+        rows = {"B1": {"pe_ratio": 5.0}, "B2": {"pe_ratio": 6.0}, "B3": {"pe_ratio": 7.0},
+                "B4": {"pe_ratio": 8.0}, "B5": {"pe_ratio": 9.0}, "B6": {"pb_ratio": 1.0}}
+        from egx_mcp.data import sectors
+        with patch.object(sectors, "peers", return_value=list(rows)), \
+             patch.object(fundamentals, "_load_overrides", return_value=rows), \
+             patch.object(model_params, "load_params",
+                          return_value=_params(sector_source="tradingview")):
+            m = fundamentals.sector_medians("Banks")
+        self.assertEqual(m["median_pe"], 7.0)
+        self.assertIsNone(m["median_pb"])      # one value < 5 peers -> market fallback fills it
