@@ -8,6 +8,7 @@ on:
   push:
     paths:
       - scripts/probe_news.py
+      - scripts/refresh_sectors.py
       - egx_mcp/data/news_scrapers.py
       - .github/workflows/probe-news.yml
 
@@ -38,3 +39,5 @@ jobs:
             sed -n '/=== VERDICT ===/,/=== FULL RESULT ===/p' probe_news.txt
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
+      - name: TradingView sectors for every listing
+        run: python -m scripts.refresh_sectors
