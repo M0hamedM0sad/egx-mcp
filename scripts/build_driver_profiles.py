@@ -55,6 +55,12 @@ def main() -> int:
     print(f"profiles: {len(profiles)}  as of {res['as_of']}  weekly driver sd %: "
           f"{res['driver_weekly_sd_pct']}")
     print(f"strongest driver per name: {dict(top)}")
+    print("\nmedian weight of each driver in weekly moves, by sector (%):")
+    print(f"  {'sector':22} {'n':>3} {'market':>7} {'USD/EGP':>8} {'oil':>5} {'gold':>5} {'own':>5}")
+    for sec, w in sorted(res["sector_weights_pct"].items(), key=lambda kv: -kv[1]["n"]):
+        print(f"  {sec:22} {w['n']:>3} {w['market']:>7} {w['usdegp']:>8} {w['brent']:>5} "
+              f"{w['gold']:>5} {w['stock_specific']:>5}")
+    print()
     for tk in ("COMI", "ABUK", "SWDY", "TMGH", "AMOC", "EAST"):
         c = driver_profiles.describe(tk, data=res)
         print(f"  {tk}: " + (" | ".join(c["lines"]) if c["available"] else c["note"]))

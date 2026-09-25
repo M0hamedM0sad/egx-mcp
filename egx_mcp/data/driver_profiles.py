@@ -12,6 +12,13 @@ when its t-stat clears 2, with its impact sized as "a typical (1 sd) weekly
 move in the driver shifts this stock by X%", so a big beta on a quiet
 driver does not outrank a small beta on a volatile one.
 
+Each driver also gets a WEIGHT: its share of the stock's weekly variance,
+beta_j * cov(driver_j, stock) / var(stock). The driver shares sum to R^2
+and the rest (1 - R^2) is stock-specific (company news, results, flows), so
+a card reads e.g. "market 30% · USD/EGP 18% · oil 5% · gold 1% ·
+stock-specific 46%". With correlated drivers a share can come out slightly
+negative; it is shown as 0 and the stock-specific share absorbs the rest.
+
 Context only: profiles appear next to each pick in the briefing and do not
 feed the score until a study shows yesterday's driver moves predict
 tomorrow's relative returns. Built weekly by scripts/build_driver_profiles.py
@@ -68,24 +75,51 @@ def build(stock_closes: dict[str, pd.Series], driver_levels: dict[str, pd.Series
         df = df[df["y"].abs() < 0.5]                      # drop bad prints
         if len(df) < MIN_WEEKS:
             continue
-        beta, t, r2 = _ols(df["y"].to_numpy(), df[list(DRIVERS)].to_numpy())
+        y, X = df["y"].to_numpy(), df[list(DRIVERS)].to_numpy()
+        beta, t, r2 = _ols(y, X)
+        var_y = float(np.var(y, ddof=1))
+        share = {d: float(beta[i + 1] * np.cov(X[:, i], y, ddof=1)[0, 1] / var_y)
+                 if var_y > 0 else 0.0 for i, d in enumerate(DRIVERS)}
         rec = {"n_weeks": len(df), "r2": round(r2, 3),
                "vol_ann_pct": round(float(df["y"].std() * np.sqrt(52) * 100), 1),
                "sector": (sectors or {}).get(tk),
                "beta": {d: round(float(b), 3) for d, b in zip(DRIVERS, beta[1:])},
                "t": {d: round(float(x), 2) for d, x in zip(DRIVERS, t[1:])},
                "impact_1sd_pct": {d: round(float(b * sd[d] * 100), 2)
-                                  for d, b in zip(DRIVERS, beta[1:])}}
+                                  for d, b in zip(DRIVERS, beta[1:])},
+               "weights_pct": _weights(share)}
         rec["drivers"] = sorted(
             ({"driver": d, "sign": "+" if rec["beta"][d] > 0 else "-",
               "impact_1sd_pct": rec["impact_1sd_pct"][d], "t": rec["t"][d]}
              for d in DRIVERS if abs(rec["t"][d]) >= T_SIG),
             key=lambda x: -abs(x["impact_1sd_pct"]))
         out[tk] = rec
+    by_sector: dict[str, list[dict[str, float]]] = {}
+    for rec in out.values():
+        if rec.get("sector"):
+            by_sector.setdefault(rec["sector"], []).append(rec["weights_pct"])
+    sector_weights = {
+        sec: {"n": len(ws), **{k: round(float(np.median([w[k] for w in ws])), 1)
+                              for k in (*DRIVERS, "stock_specific")}}
+        for sec, ws in sorted(by_sector.items()) if len(ws) >= 3}
     return {"lookback_weeks": LOOKBACK_WEEKS, "min_weeks": MIN_WEEKS,
+            "sector_weights_pct": sector_weights,
             "driver_weekly_sd_pct": {d: round(float(sd[d] * 100), 2) for d in DRIVERS},
             "as_of": str(fac.index[-1].date()) if len(fac) else None,
             "profiles": out}
+
+
+def _weights(share: dict[str, float]) -> dict[str, float]:
+    """Driver shares of variance in %, negatives shown as 0, summing to 100
+    with the stock-specific remainder."""
+    w = {d: max(0.0, v) * 100 for d, v in share.items()}
+    total = sum(w.values())
+    if total > 100:
+        w = {d: v * 100 / total for d, v in w.items()}
+        total = 100.0
+    w = {d: round(v, 1) for d, v in w.items()}
+    w["stock_specific"] = round(100 - sum(w.values()), 1)
+    return w
 
 
 def load(path: Path = PROFILE_PATH) -> dict[str, Any]:
@@ -104,14 +138,19 @@ def describe(ticker: str, macro_today: dict[str, float | None] | None = None,
     if not p:
         return {"ticker": ticker, "available": False,
                 "note": "no driver profile (too little weekly history)"}
+    w = p.get("weights_pct") or {}
     lines = []
+    if w:
+        parts = [f"{LABELS[d]} {w[d]:.0f}%" for d in sorted(DRIVERS, key=lambda d: -w.get(d, 0))
+                 if w.get(d, 0) >= 0.5]
+        lines.append("what moves it: " + " · ".join(parts + [f"stock-specific {w['stock_specific']:.0f}%"]))
     for d in p["drivers"]:
         lines.append(f"moves {'with' if d['sign'] == '+' else 'against'} {LABELS[d['driver']]}: "
                      f"a typical weekly move shifts it {abs(d['impact_1sd_pct']):.1f}% (t={d['t']:+.1f})")
     if not p["drivers"]:
         lines.append("no significant link to market, USD/EGP, oil or gold: stock-specific news drives it")
-    idio = 1 - p["r2"]
-    lines.append(f"{idio:.0%} of its weekly moves are stock-specific (R² {p['r2']:.2f})")
+    if not w:
+        lines.append(f"{1 - p['r2']:.0%} of its weekly moves are stock-specific (R² {p['r2']:.2f})")
     today = []
     for d in p["drivers"]:
         mv = (macro_today or {}).get(d["driver"])
@@ -122,4 +161,5 @@ def describe(ticker: str, macro_today: dict[str, float | None] | None = None,
                      f"{'tailwind' if effect > 0 else 'headwind'}")
     return {"ticker": ticker, "available": True, "sector": p.get("sector"),
             "vol_ann_pct": p["vol_ann_pct"], "drivers": p["drivers"],
+            "weights_pct": w,
             "lines": lines, "today": today}
