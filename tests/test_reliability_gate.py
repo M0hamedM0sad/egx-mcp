@@ -61,6 +61,60 @@ class ReliabilityGateTests(unittest.TestCase):
         self.assertEqual(proposal["status"], "blocked_by_reliability")
         self.assertEqual(proposal["recommendation"], "KEEP_CURRENT")
 
+    def test_one_outlier_date_cannot_flip_the_edge_check(self) -> None:
+        # Nine dates lose 1%; one date's call "wins" +200%. The mean-date edge
+        # is positive, but most dates destroyed value, so the check must fail.
+        rows = []
+        for day_index in range(10):
+            day = (date.today() - timedelta(days=9 - day_index)).isoformat()
+            rows += [_row(day, "BUY", day_index == 9, "high", 200.0 if day_index == 9 else -1.0)
+                     for _ in range(5)]
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "graded.jsonl"
+            path.write_text("\n".join(json.dumps(row) for row in rows), encoding="utf-8")
+            with patch.object(reliability, "_GRADED", path):
+                gate = reliability.status()
+        self.assertGreater(gate["mean_date_signed_edge_pct"], 0)
+        self.assertLess(gate["median_date_signed_edge_pct"], 0)
+        self.assertFalse(gate["checks"]["positive_signed_edge"])
+
+
+class MedianBenchmarkTests(unittest.TestCase):
+    """Grading uses the universe median so a random call is right 50% of the time."""
+
+    def test_skewed_universe_grades_against_median_not_mean(self) -> None:
+        import numpy as np
+        import pandas as pd
+        from tests import grade_briefings as gb
+
+        idx = pd.bdate_range("2026-06-01", periods=30)
+        # 27 names drift down 0.1%/day, 3 rocket 3%/day: the mean is dragged far
+        # above what a typical name does.
+        upanel = pd.DataFrame(
+            {f"S{i}": 100 * np.cumprod(np.r_[1.0, np.full(29, 1.03 if i < 3 else 0.999)])
+             for i in range(30)}, index=idx)
+        # S5 lagged the (outlier-inflated) mean but beat the median.
+        upanel["S5"] = 100 * np.cumprod(np.r_[1.0, np.full(29, 1.0005)])
+        rows = [{"briefing_date": "2026-06-01", "ticker": "S5", "source": "v8b",
+                 "verdict": "ACCUMULATE"}]
+        g = gb._grade(rows, upanel[["S5"]], gb._synthetic_basket(upanel), [21], upanel)[0]
+        self.assertEqual(g["bench_kind"], "universe_median")
+        self.assertGreater(g["excess_pct"], 0)
+        self.assertLess(g["excess_vs_mean_pct"], 0)
+        self.assertTrue(g["correct"])
+
+    def test_small_universe_falls_back_to_basket(self) -> None:
+        import pandas as pd
+        from tests import grade_briefings as gb
+
+        idx = pd.bdate_range("2026-06-01", periods=30)
+        upanel = pd.DataFrame({f"S{i}": [100.0 + d for d in range(30)] for i in range(5)},
+                              index=idx)
+        rows = [{"briefing_date": "2026-06-01", "ticker": "S1", "source": "v8b",
+                 "verdict": "REDUCE"}]
+        g = gb._grade(rows, upanel[["S1"]], gb._synthetic_basket(upanel), [21], upanel)[0]
+        self.assertEqual(g["bench_kind"], "index_or_basket")
+
 
 if __name__ == "__main__":
     unittest.main()
