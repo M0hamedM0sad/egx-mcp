@@ -210,7 +210,7 @@ jobs:
           pip install -e .
 
       - name: Rebuild the market-data panel
-        # Refetches ~250 names of daily history from investing.com and
+        # Refetches ~250 names of daily history (investing.com, Yahoo fallback) and
         # reconstructs point-in-time scores + forward 21-session excess at every
         # weekly rebalance date. Slow (network-bound) — hence weekly, not daily.
         # continue-on-error: a data hiccup must not block the rest of the run;

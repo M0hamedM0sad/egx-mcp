@@ -87,10 +87,15 @@ def _binom_two_sided_p(k: int, n: int, p: float = 0.5) -> float:
     """Exact two-sided binomial p-value (no scipy) for k successes in n at p."""
     if n == 0:
         return 1.0
-    probs = [math.comb(n, i) * p**i * (1 - p) ** (n - i) for i in range(n + 1)]
-    obs = probs[k]
+    # Log-space pmf: math.comb(n, i) overflows float once n passes ~1000.
+    lp, lq = math.log(p), math.log1p(-p)
+    logs = [math.lgamma(n + 1) - math.lgamma(i + 1) - math.lgamma(n - i + 1)
+            + i * lp + (n - i) * lq for i in range(n + 1)]
+    obs = logs[k]
     # two-sided: sum of all outcomes no more likely than the observed one
-    return min(1.0, sum(pr for pr in probs if pr <= obs + 1e-12))
+    # (relative tolerance, as in scipy.stats.binomtest)
+    cut = obs + math.log1p(1e-7)
+    return min(1.0, sum(math.exp(x) for x in logs if x <= cut))
 
 
 def _cluster_bootstrap_ci(rows: list[dict], key: str, n_boot: int,
