@@ -28,6 +28,17 @@ class ExtractPublishedTests(unittest.TestCase):
         self.assertEqual(ns.extract_published(
             '<article><time datetime="2026-06-15">15 June</time></article>'), "2026-06-15")
 
+    def test_mubasher_markup(self) -> None:
+        # Shaped like the live page (probe run 36138421781).
+        html = ('<meta property="article:published_time" datetime="Fri Sep 25 15:46:59 UTC 2026" />'
+                '<span class="mi-article__published-at"><i class="fa fa-calendar"></i>'
+                '<time itemprop="datePublished" datetime="Fri Sep 25 15:46:59 UTC 2026">'
+                '25 سبتمبر 2026 03:46 م</time></span>')
+        self.assertEqual(ns.extract_published(html), "2026-09-25T15:46:59")
+        only_time = ('<time itemprop="datePublished" datetime="Mon Aug  4 09:05:00 UTC 2026">'
+                     '4 أغسطس 2026</time>')
+        self.assertEqual(ns.extract_published(only_time), "2026-08-04T09:05:00")
+
     def test_no_date_and_invalid_date(self) -> None:
         self.assertIsNone(ns.extract_published("<html><p>no date here</p></html>"))
         self.assertIsNone(ns.extract_published('<meta name="date" content="2026-13-45">'))

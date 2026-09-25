@@ -99,8 +99,22 @@ _META_KEYS = ("article:published_time", "og:published_time", "og:article:publish
 _ISO_RE = re.compile(r"(\d{4}-\d{2}-\d{2})(?:[T ](\d{2}:\d{2}(?::\d{2})?))?")
 
 
+# Mubasher writes datetime="Fri Sep 25 15:46:59 UTC 2026" (probed). The
+# "UTC" label is wrong — the clock is Cairo local time — so only the date
+# part should be trusted as exact.
+_CTIME_RE = re.compile(r"[A-Z][a-z]{2} ([A-Z][a-z]{2}) +(\d{1,2}) (\d{2}:\d{2}:\d{2}) [A-Z]{2,5} (\d{4})")
+
+
 def _iso(value: Any) -> str | None:
-    m = _ISO_RE.search(str(value or ""))
+    text = str(value or "")
+    c = _CTIME_RE.search(text)
+    if c:
+        try:
+            d = datetime.strptime(f"{c.group(1)} {c.group(2)} {c.group(4)}", "%b %d %Y")
+            return f"{d:%Y-%m-%d}T{c.group(3)}"
+        except ValueError:
+            pass
+    m = _ISO_RE.search(text)
     if not m:
         return None
     try:
@@ -133,8 +147,9 @@ def extract_published(html: str) -> str | None:
     soup = BeautifulSoup(html, "html.parser")
     for tag in soup.find_all("meta"):
         key = (tag.get("property") or tag.get("name") or tag.get("itemprop") or "").lower()
-        if key in _META_KEYS and _iso(tag.get("content")):
-            return _iso(tag.get("content"))
+        value = tag.get("content") or tag.get("datetime")      # Mubasher uses datetime=
+        if key in _META_KEYS and _iso(value):
+            return _iso(value)
     for script in soup.find_all("script", type="application/ld+json"):
         try:
             found = _jsonld_date(json.loads(script.string or ""))
