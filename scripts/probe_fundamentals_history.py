@@ -66,6 +66,12 @@ _TV_HISTORY_COLS = [
     "total_debt_fq_h", "return_on_equity_fq_h", "book_value_per_share_fq_h",
     "fiscal_period_end_fq_h", "fiscal_period_end_fy_h",
     "fiscal_period_fq_h", "fiscal_period_fy_h",
+    # equity / balance-sheet history under alternative field names
+    "total_equity_fy_h", "total_shareholders_equity_fq_h", "total_shareholders_equity_fy_h",
+    "shareholders_equity_fq_h", "common_equity_total_fq_h", "total_assets_fq_h",
+    "total_assets_fy_h", "total_liabilities_fq_h", "total_liabilities_fy_h",
+    "book_value_per_share_fy_h", "return_on_equity_fy_h", "total_shares_outstanding_fq_h",
+    "dividends_per_share_fy_h", "fiscal_period_end_fy", "fiscal_period_end_fq",
     # publication / release dates
     "earnings_release_date", "earnings_release_date_fq_h",
     "earnings_release_next_date", "earnings_publication_type_fq_h",
