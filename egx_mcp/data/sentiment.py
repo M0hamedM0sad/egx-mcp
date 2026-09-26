@@ -25,6 +25,7 @@ import re
 from datetime import datetime
 from typing import Any
 
+from . import egx_news_rules
 from . import news
 from . import transformer_sentiment
 from .universe import resolve_ticker
@@ -98,15 +99,19 @@ _TOKEN_RE = re.compile(r"[\w؀-ۿ]+", re.UNICODE)
 
 def _score_text(text: str, lang: str) -> tuple[float, list[str]]:
     """Return (score in -1..+1, list of matched terms with sign)."""
+    if lang == "en":
+        return _score_tokens(text, _EN_POS, _EN_NEG, _EN_NEGATORS)
+    return _score_tokens(text, _AR_POS, _AR_NEG, _AR_NEGATORS)
+
+
+def _score_tokens(text: str, pos_lex: set[str], neg_lex: set[str],
+                  negators: set[str]) -> tuple[float, list[str]]:
     if not text:
         return 0.0, []
 
     tokens = [t.lower() for t in _TOKEN_RE.findall(text)]
     if not tokens:
         return 0.0, []
-
-    pos_lex, neg_lex = (_EN_POS, _EN_NEG) if lang == "en" else (_AR_POS, _AR_NEG)
-    negators = _EN_NEGATORS if lang == "en" else _AR_NEGATORS
 
     pos_hits = 0
     neg_hits = 0
@@ -147,6 +152,9 @@ def _resolve_backend(backend: str, lang: str) -> str:
     """
     if backend == "lexicon":
         return "lexicon"
+    if backend == "rules":
+        # EGX phrase rules exist for Arabic; English keeps the lexicon.
+        return "rules" if lang == "ar" else "lexicon"
     if backend in ("transformer", "auto"):
         if transformer_sentiment.available(lang):
             return "transformer"
@@ -164,6 +172,8 @@ def _score_headline(text: str, lang: str, backend: str) -> tuple[float, list[str
     """Score one headline with the resolved backend for its language."""
     if backend == "transformer":
         return transformer_sentiment.score_text(text, lang)
+    if backend == "rules":
+        return egx_news_rules.score_text(text)
     return _score_text(text, lang)
 
 
@@ -206,7 +216,8 @@ def analyze_sentiment(
         user_ticker: EGX code or nickname. Omit for market-wide.
         lang: 'en', 'ar', or 'both' (default).
         limit: Max headlines per language. Default 15.
-        backend: 'lexicon' (default, zero-dependency), 'transformer'
+        backend: 'lexicon' (default, zero-dependency), 'rules' (EGX
+            phrase rules for Arabic, lexicon for English), 'transformer'
             (FinBERT EN + CAMeLBERT-DA AR), or 'auto' (transformer when
             available, else lexicon). Defaults to the EGX_SENTIMENT_BACKEND
             env var, or 'lexicon' if unset. Resolved per-language, so EN
