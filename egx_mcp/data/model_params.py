@@ -25,6 +25,18 @@ _PARAMS_FILE = Path(__file__).parent.parent.parent / "model_params.json"
 DEFAULTS: dict[str, Any] = {
     "verdict_thresholds": {"BUY": 75, "ACCUMULATE": 65, "HOLD": 50, "REDUCE": 35},
     "score_weights": {"valuation": 0.30, "quality": 0.25, "momentum": 0.25, "risk": 0.20},
+    # Names outside the 30-name curated universe have no sector, hence no
+    # sector medians, and scored a flat 50 on valuation (83% of live calls).
+    # True: compare them against the whole-market median instead.
+    "valuation_market_fallback": False,
+    # True: multiply weights by the regime's weight_override (BULL boosts
+    # momentum 1.4x). Switchable because the 2014-2026 study found 6m
+    # momentum slightly NEGATIVE on EGX.
+    "regime_weight_overrides": True,
+    # "curated": only the 30 EGX_UNIVERSE names have a sector (today).
+    # "tradingview": the other ~235 get one from egx_sectors.json, with sector
+    # medians computed over every classified peer.
+    "sector_source": "curated",
     "version": "default",
     "learned_at": None,
     "provenance": "hardcoded baseline",
@@ -87,6 +99,20 @@ def save_params(params: dict[str, Any]) -> None:
 
 def thresholds() -> dict[str, float]:
     return load_params()["verdict_thresholds"]
+
+
+def valuation_market_fallback() -> bool:
+    return bool(load_params().get("valuation_market_fallback",
+                                  DEFAULTS["valuation_market_fallback"]))
+
+
+def regime_weight_overrides() -> bool:
+    return bool(load_params().get("regime_weight_overrides",
+                                  DEFAULTS["regime_weight_overrides"]))
+
+
+def sector_source() -> str:
+    return str(load_params().get("sector_source", DEFAULTS["sector_source"]))
 
 
 def score_weights() -> dict[str, float]:

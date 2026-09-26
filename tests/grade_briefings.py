@@ -65,7 +65,12 @@ from egx_mcp.data import egx_listing
 from egx_mcp.data.agentic_backtest import _benchmark_series
 
 
-def _synthetic_basket(start: str, end: str) -> pd.Series | None:
+def _universe_panel(start: str, end: str) -> pd.DataFrame:
+    """Daily closes for the full validated universe (the benchmark population)."""
+    return bt_mod._price_panel(egx_listing.get_full_universe(), start=start, end=end)
+
+
+def _synthetic_basket(upanel: pd.DataFrame) -> pd.Series | None:
     """Equal-weight basket of the full validated universe, as an index series.
 
     Fallback benchmark: every EGX30 symbol Yahoo once served (^CASE30,
@@ -74,12 +79,36 @@ def _synthetic_basket(start: str, end: str) -> pd.Series | None:
     scorecard reported it as "vs EGX30". This basket is the same benchmark
     notion tests/oos_last_week.py already uses.
     """
-    universe = egx_listing.get_full_universe()
-    panel = bt_mod._price_panel(universe, start=start, end=end)
-    if panel.empty:
+    if upanel.empty:
         return None
-    daily = panel.pct_change(fill_method=None).mean(axis=1).fillna(0.0)
+    daily = upanel.pct_change(fill_method=None).mean(axis=1).fillna(0.0)
     return (1.0 + daily).cumprod()
+
+
+_MIN_MEDIAN_NAMES = 20
+
+
+def _median_return(upanel: pd.DataFrame, entry_date: str, exit_date: str | None) -> float | None:
+    """Cross-sectional MEDIAN forward return of the universe over [entry, exit].
+
+    The primary benchmark. EGX single-name returns are right-skewed, so an
+    equal-weight (mean) basket is beaten by only ~43% of names over 21
+    sessions: a random buy call scored "correct" 43% of the time and a random
+    sell call 57%, while the gate's accuracy bar assumes a 50% coin. Against
+    the median, a random call of either side is right exactly half the time.
+    """
+    if upanel.empty or exit_date is None:
+        return None
+    idx = upanel.index
+    ei = idx.searchsorted(pd.Timestamp(entry_date))
+    xi = idx.searchsorted(pd.Timestamp(exit_date))
+    if ei >= len(idx) or xi >= len(idx):
+        return None
+    e, x = upanel.iloc[ei], upanel.iloc[xi]
+    ok = e.notna() & x.notna() & (e > 0)
+    if int(ok.sum()) < _MIN_MEDIAN_NAMES:
+        return None
+    return float((x[ok] / e[ok] - 1).median())
 
 _DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2})")
 _BUY_SIDE = {"BUY", "ACCUMULATE", "WEEKLY_BUY"}
@@ -89,7 +118,8 @@ _SUBSCORES = ["sub_valuation", "sub_quality", "sub_momentum", "sub_risk"]
 _FIELDS = ["briefing_date", "ticker", "source", "verdict", "conviction", "score",
            "horizon_days", "entry_date", "entry_price", "exit_date", "exit_price",
            "fwd_return_pct", "bench_return_pct", "excess_pct", "outcome", "correct",
-           *_SUBSCORES]
+           "bench_kind", "bench_mean_return_pct", "excess_vs_mean_pct",
+           "sentiment_label", "sentiment_score", *_SUBSCORES]
 
 
 def _briefing_date(path: Path, payload: dict) -> str | None:
@@ -118,6 +148,21 @@ def _extract_verdicts(payload: dict) -> list[dict]:
             "sub_quality": sub.get("quality"),
             "sub_momentum": sub.get("momentum"),
             "sub_risk": sub.get("risk"),
+        })
+    # News-aware chairman verdicts (bull/bear debate incl. headline
+    # sentiment) on the same W1 picks. Graded so news' contribution is
+    # measured instead of assumed; the reliability gate still reads v8b only.
+    for tk, c in (payload.get("chairman_per_pick") or {}).items():
+        if not isinstance(c, dict) or not c.get("verdict"):
+            continue
+        out.append({
+            "ticker": tk,
+            "source": "chairman",
+            "verdict": c["verdict"].upper(),
+            "conviction": c.get("conviction"),
+            "score": c.get("edge"),
+            "sentiment_label": c.get("sentiment_label"),
+            "sentiment_score": c.get("sentiment_score"),
         })
     # Weekly picks are an explicit BUY list (5-day horizon model).
     for p in (payload.get("w1_picks", {}) or {}).get("top_picks", []) or []:
@@ -166,7 +211,15 @@ def _bench_return(bench: pd.Series | None, entry_date: str, exit_date: str | Non
 
 
 def _grade(rows: list[dict], panel: pd.DataFrame, bench: pd.Series | None,
-           horizons: list[int]) -> list[dict]:
+           horizons: list[int], upanel: pd.DataFrame | None = None) -> list[dict]:
+    """Grade each call at each horizon.
+
+    ``bench_return_pct``/``excess_pct``/``correct`` use the universe median
+    when ``upanel`` yields one (bench_kind="universe_median"), else the index
+    or basket series ``bench``. The basket/index figures are kept alongside
+    as ``bench_mean_return_pct``/``excess_vs_mean_pct`` for continuity.
+    """
+    upanel = upanel if upanel is not None else pd.DataFrame()
     graded: list[dict] = []
     for r in rows:
         tk = r["ticker"]
@@ -182,11 +235,16 @@ def _grade(rows: list[dict], panel: pd.DataFrame, bench: pd.Series | None,
             if x_px is None:
                 rec.update({"exit_date": None, "exit_price": None, "fwd_return_pct": None,
                             "bench_return_pct": None, "excess_pct": None,
-                            "outcome": "pending", "correct": None})
+                            "outcome": "pending", "correct": None,
+                            "bench_kind": None, "bench_mean_return_pct": None,
+                            "excess_vs_mean_pct": None})
                 graded.append(rec)
                 continue
             fwd = x_px / e_px - 1
-            bret = _bench_return(bench, e_date, x_date)
+            mret = _bench_return(bench, e_date, x_date)
+            med = _median_return(upanel, e_date, x_date)
+            bret, kind = (med, "universe_median") if med is not None else (
+                (mret, "index_or_basket") if mret is not None else (None, "none"))
             excess = (fwd - bret) if bret is not None else None
             side = r["verdict"]
             # Correct against benchmark when we have it, else against zero.
@@ -203,6 +261,9 @@ def _grade(rows: list[dict], panel: pd.DataFrame, bench: pd.Series | None,
                 "bench_return_pct": round(bret * 100, 2) if bret is not None else None,
                 "excess_pct": round(excess * 100, 2) if excess is not None else None,
                 "outcome": "graded", "correct": correct,
+                "bench_kind": kind,
+                "bench_mean_return_pct": round(mret * 100, 2) if mret is not None else None,
+                "excess_vs_mean_pct": round((fwd - mret) * 100, 2) if mret is not None else None,
             })
             graded.append(rec)
     return graded
@@ -275,17 +336,22 @@ def main() -> int:
     if panel.empty:
         print("No realized prices fetched (network / SSL issue?). Cannot grade.")
         return 1
+    upanel = _universe_panel(start, end)
     bench = _benchmark_series(start, end)
     bench_name = "EGX30"
     if bench is None:
         print("EGX30 index unavailable on Yahoo — using synthetic equal-weight basket.")
-        bench = _synthetic_basket(start, end)
+        bench = _synthetic_basket(upanel)
         bench_name = "synthetic equal-weight basket"
-    if bench is None:
+    if not upanel.empty:
+        print(f"Primary benchmark: universe median ({upanel.shape[1]} names); "
+              f"{bench_name} kept as bench_mean_return_pct.")
+        bench_name = "universe median"
+    elif bench is None:
         print("WARNING: no benchmark available — grading vs absolute return (0%).")
         bench_name = "absolute (no benchmark!)"
 
-    graded = _grade(rows, panel, bench, horizons)
+    graded = _grade(rows, panel, bench, horizons, upanel)
 
     out_jsonl, out_csv = Path(args.out_jsonl), Path(args.out_csv)
     out_jsonl.parent.mkdir(parents=True, exist_ok=True)

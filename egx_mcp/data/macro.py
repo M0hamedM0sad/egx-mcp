@@ -13,10 +13,12 @@ If any source fails, that field is null and the rest still return.
 """
 from __future__ import annotations
 
+import json
 import logging
 import re
 import time
-from datetime import datetime
+from datetime import date, datetime
+from pathlib import Path
 from typing import Any
 
 import httpx
@@ -61,34 +63,48 @@ def _yf_quote(symbol: str) -> dict[str, Any]:
         return {"value": None, "change_pct": None, "error": str(e)}
 
 
-def _cbe_policy_rate() -> dict[str, Any]:
-    """Scrape CBE's policy rate page. Falls back gracefully on failure."""
-    url = "https://www.cbe.org.eg/en/economic-research/statistics/cbe-rates"
+_CBE_FILE = Path(__file__).parent / "cbe_rates.json"
+CBE_STALE_DAYS = 60     # MPC meets about every 6 weeks; older than this = a decision may be missing
+
+
+def _cbe_policy_rate(today: date | None = None) -> dict[str, Any]:
+    """Latest CBE policy rates from the maintained decision file.
+
+    cbe.org.eg renders its rates with JavaScript: the old scrape found no
+    numbers and returned null in all 40 briefings checked (Sep 2026). The
+    decisions are few and public, so they are kept by hand in cbe_rates.json
+    with sources, and flagged stale when no decision was logged recently.
+    """
+    today = today or datetime.utcnow().date()
     try:
-        with httpx.Client(timeout=_TIMEOUT, headers=_HEADERS, follow_redirects=True) as c:
-            r = c.get(url)
-            r.raise_for_status()
-            html = r.text
-        # CBE publishes deposit & lending corridor rates as percentages.
-        # Layout-resilient: grab the first two %-style numbers near "Overnight".
-        rates = re.findall(r"(\d{1,2}\.\d{1,3})\s*%", html)
-        deposit = float(rates[0]) if len(rates) >= 1 else None
-        lending = float(rates[1]) if len(rates) >= 2 else None
-        return {
-            "deposit_rate_pct": deposit,
-            "lending_rate_pct": lending,
-            "midpoint_pct": round((deposit + lending) / 2, 2) if (deposit and lending) else None,
-            "source": url,
-        }
-    except Exception as e:
-        log.warning(f"CBE policy rate fetch failed: {e}")
-        return {
-            "deposit_rate_pct": None,
-            "lending_rate_pct": None,
-            "midpoint_pct": None,
-            "error": f"CBE page unreachable: {e}",
-            "source": url,
-        }
+        data = json.loads(_CBE_FILE.read_text(encoding="utf-8"))
+        past = sorted((d for d in data.get("decisions", [])
+                       if date.fromisoformat(d["date"]) <= today), key=lambda d: d["date"])
+    except Exception as e:  # noqa: BLE001
+        log.warning(f"CBE rates file unreadable: {e}")
+        past = []
+    if not past:
+        return {"deposit_rate_pct": None, "lending_rate_pct": None, "midpoint_pct": None,
+                "error": f"no CBE decision recorded in {_CBE_FILE.name}",
+                "source": str(_CBE_FILE.name)}
+    d = past[-1]
+    deposit, lending = d.get("overnight_deposit_pct"), d.get("overnight_lending_pct")
+    age = (today - date.fromisoformat(d["date"])).days
+    out = {
+        "deposit_rate_pct": deposit,
+        "lending_rate_pct": lending,
+        "main_operation_pct": d.get("main_operation_pct"),
+        "midpoint_pct": round((deposit + lending) / 2, 2) if (deposit and lending) else None,
+        "decision_date": d["date"],
+        "decision": d.get("action"),
+        "days_since_decision": age,
+        "stale": age > CBE_STALE_DAYS,
+        "source": d.get("sources", []),
+    }
+    if out["stale"]:
+        out["warning"] = (f"Last recorded MPC decision is {age} days old: check cbe.org.eg and "
+                          f"append any newer decision to {_CBE_FILE.name}.")
+    return out
 
 
 _TROY_OZ_GRAMS = 31.1034768
@@ -161,6 +177,11 @@ def get_context() -> dict[str, Any]:
         brent = _yf_quote("BZ=F")
         gold = _yf_quote("GC=F")
         cbe = _cbe_policy_rate()
+        try:
+            from . import fed
+            fed_rates = fed.current()
+        except Exception as e:  # noqa: BLE001
+            fed_rates = {"upper_pct": None, "error": str(e)}
 
         # Heuristic regime classification — this drives sector adjustments
         # in the scoring engine.
@@ -178,10 +199,13 @@ def get_context() -> dict[str, Any]:
             "brent_usd": brent,
             "gold_usd": gold,
             "cbe_rates": cbe,
+            # Context only: not used in scoring until scripts/fed_event_study.py
+            # shows Fed moves carry a measurable EGX / EGP effect.
+            "fed_rates": fed_rates,
             "regime_flags": regime_flags,
             "note": (
-                "EGP/USD and Brent from Yahoo (delayed). CBE rates scraped — "
-                "verify against cbe.org.eg before acting on rate-sensitive trades."
+                "EGP/USD and Brent from Yahoo (delayed). CBE rates from the "
+                "maintained decision file (cbe_rates.json) — see cbe_rates.stale."
             ),
         }
 

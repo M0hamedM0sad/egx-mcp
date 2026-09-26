@@ -48,7 +48,7 @@ from egx_mcp.data import (
     egx_listing, market, risk_free, sizing,
     technicals, fundamentals, news, sentiment, news_filter,
     debate as debate_mod, reflection,
-    tv_scraper, egx_official,
+    tv_scraper, egx_official, driver_profiles,
 )
 from egx_mcp.data import calendar as cal_mod
 
@@ -762,11 +762,24 @@ def build_briefing(force: bool = False) -> dict:
     out["technicals_per_pick"] = {}
     out["fundamentals_per_pick"] = {}
     out["news_per_pick"] = {}
+    out["context_per_pick"] = {}
+    mac = out.get("macro") or {}
+    macro_today = {
+        "usdegp": (mac.get("egp_usd") or {}).get("change_pct"),
+        "brent": (mac.get("brent_usd") or {}).get("change_pct"),
+        "gold": (mac.get("gold_usd") or {}).get("change_pct"),
+    }
+    profiles = driver_profiles.load()
     for p in (out["w1_picks"].get("top_picks", []) or []):
         tk = p["ticker"]
         out["technicals_per_pick"][tk] = technical_summary(tk)
         out["fundamentals_per_pick"][tk] = fundamental_summary(tk)
         out["news_per_pick"][tk] = per_ticker_news(tk, limit=3)
+        # What moves this name (context only; not part of the score).
+        try:
+            out["context_per_pick"][tk] = driver_profiles.describe(tk, macro_today, profiles)
+        except Exception as e:  # noqa: BLE001
+            out["context_per_pick"][tk] = {"ticker": tk, "available": False, "note": str(e)[:80]}
 
     # Market-wide news + sentiment.
     # Filtered by holdings if portfolio CSV is set + populated, else by
@@ -1143,6 +1156,17 @@ def render_html(b: dict) -> str:
                 parts.append(" · ".join(f.get("bullets") or []) or "no fundamentals")
             parts.append("</p>")
 
+            # Context row: what moves this stock (driver profile)
+            ctx = (b.get("context_per_pick") or {}).get(tk) or {}
+            if ctx.get("available"):
+                sec = f"{ctx['sector']} · " if ctx.get("sector") else ""
+                parts.append(f"<p style='margin:4px 0'><b>Context:</b> {sec}"
+                             + " · ".join(ctx.get("lines") or []))
+                if ctx.get("today"):
+                    parts.append("<br><span style='color:#555'>Today: "
+                                 + " · ".join(ctx["today"]) + "</span>")
+                parts.append("</p>")
+
             # News row (with sentiment)
             sent = (n.get("sentiment") or {})
             label = sent.get("label", "neutral")
@@ -1486,6 +1510,12 @@ def render_text(b: dict) -> str:
             f_line = "; ".join(f.get("bullets") or []) if not f.get("error") else f"unavailable ({f.get('error','')})"
             lines.append(f"    Technicals:    {t_line}")
             lines.append(f"    Fundamentals:  {f_line}")
+            ctx = (b.get("context_per_pick") or {}).get(tk) or {}
+            if ctx.get("available"):
+                sec = f"{ctx['sector']}; " if ctx.get("sector") else ""
+                lines.append(f"    Context:       {sec}" + "; ".join(ctx.get("lines") or []))
+                for tday in ctx.get("today") or []:
+                    lines.append(f"                   {tday}")
             sent = (n.get("sentiment") or {})
             lines.append(f"    News tone:     {sent.get('label','neutral')} "
                          f"({sent.get('aggregate_score', 0):+.2f}, "

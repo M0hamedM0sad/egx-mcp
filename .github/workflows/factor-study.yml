@@ -1,0 +1,82 @@
+name: EGX point-in-time factor study
+
+# Multi-year test of whether valuation / quality / price signals predicted the
+# next 21 sessions' relative return, using TradingView quarterly history made
+# visible only after a reporting lag. Read-only: results go to the run summary
+# and an uploaded artifact; nothing is committed.
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - scripts/factor_study.py
+      - egx_mcp/data/tv_history.py
+      - scripts/propose_factor_weights.py
+      - .github/workflows/factor-study.yml
+
+permissions:
+  contents: read
+
+jobs:
+  study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Fetch ~8 years of daily prices
+        # Same fetcher as the weekly panel (investing.com, Yahoo fallback).
+        run: |
+          mkdir -p logs
+          python - <<'EOF' 2>&1 | grep -v "possibly delisted" | tail -20
+          from egx_mcp.data.egx_listing import get_full_universe
+          from scripts.build_panel import _refresh_prices
+          tickers = get_full_universe()
+          print(f"{len(tickers)} names")
+          _refresh_prices(tickers, lookback_days=3000, throttle_s=0.3)
+          EOF
+
+      - name: Run the factor study
+        run: |
+          set -o pipefail
+          python -m scripts.factor_study --refresh-tv 2>&1 | tee logs/factor_study_run.txt
+          {
+            echo '## EGX point-in-time factor study'
+            echo '```'
+            cat logs/factor_study_latest.txt 2>/dev/null || tail -40 logs/factor_study_run.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Walk-forward weight proposal (nothing is applied)
+        run: |
+          set -o pipefail
+          python -m scripts.propose_factor_weights 2>&1 | tee logs/factor_proposal_run.txt
+          {
+            echo '## Factor-weight proposal (walk-forward)'
+            echo '```'
+            cat logs/learning_proposal_factor_latest.txt 2>/dev/null || tail -40 logs/factor_proposal_run.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: factor-study
+          path: |
+            logs/factor_study_latest.txt
+            logs/factor_study_latest.json
+            logs/factor_study_run.txt
+            logs/learning_proposal_factor.json
+            logs/learning_proposal_factor_latest.txt
+            logs/factor_proposal_run.txt
+            logs/tv_fundamentals_history.json

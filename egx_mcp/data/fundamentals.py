@@ -204,7 +204,7 @@ def get_fundamentals(user_ticker: str) -> dict[str, Any]:
         "ticker": canonical,
         "yahoo_symbol": yahoo,
         "name": info.get("longName") or info.get("shortName") or name,
-        "sector": EGX_UNIVERSE.get(canonical, {}).get("sector"),
+        "sector": _sector_of(canonical),
         "price": price,
         "trailing_eps": eps,
         "book_value_per_share": book_value,
@@ -256,12 +256,79 @@ def get_fundamentals(user_ticker: str) -> dict[str, Any]:
     return payload
 
 
+_MARKET_MED: dict[str, Any] | None = None
+
+
+def market_medians() -> dict[str, Any]:
+    """Whole-market median P/E, P/B, ROE, margin from the audited CSV.
+
+    Used in place of sector medians for names outside the curated universe
+    (no sector), when model_params.valuation_market_fallback is on. Offline:
+    reads the same file get_fundamentals overrides from. P/E and P/B go
+    through the same sanity bands as a single name's."""
+    global _MARKET_MED
+    if _MARKET_MED is not None:
+        return _MARKET_MED
+    rows = _load_overrides().values()
+    pes = [r["pe_ratio"] for r in rows if r.get("pe_ratio") is not None
+           and _PE_MIN <= r["pe_ratio"] <= _PE_MAX]
+    pbs = [r["pb_ratio"] for r in rows if r.get("pb_ratio") is not None
+           and _PB_MIN <= r["pb_ratio"] <= _PB_MAX]
+    roes = [r["roe_pct"] for r in rows if r.get("roe_pct") is not None]
+    margins = [r["profit_margin_pct"] for r in rows if r.get("profit_margin_pct") is not None]
+    _MARKET_MED = {
+        "sector": "Market (all EGX)",
+        "peer_count": len(rows),
+        "median_pe": round(median(pes), 2) if pes else None,
+        "median_pb": round(median(pbs), 2) if pbs else None,
+        "median_roe_pct": round(median(roes), 2) if roes else None,
+        "median_margin_pct": round(median(margins), 2) if margins else None,
+    }
+    return _MARKET_MED
+
+
+def _sector_of(canonical: str) -> str | None:
+    from . import sectors
+    return sectors.sector_of(canonical)
+
+
+_MIN_SECTOR_PEERS = 5
+
+
+def _sector_medians_all(sector: str) -> dict[str, Any]:
+    """Sector medians over every classified listing, from the audited CSV
+    (offline; same sanity bands as market_medians). A median needs at least
+    _MIN_SECTOR_PEERS values, else it is None and the market fallback fills it."""
+    from . import sectors
+    peers = sectors.peers(sector)
+    rows = [r for tk, r in _load_overrides().items() if tk in set(peers)]
+
+    def med(vals):
+        return round(median(vals), 2) if len(vals) >= _MIN_SECTOR_PEERS else None
+    return {
+        "sector": sector,
+        "peer_count": len(peers),
+        "median_pe": med([r["pe_ratio"] for r in rows if r.get("pe_ratio") is not None
+                          and _PE_MIN <= r["pe_ratio"] <= _PE_MAX]),
+        "median_pb": med([r["pb_ratio"] for r in rows if r.get("pb_ratio") is not None
+                          and _PB_MIN <= r["pb_ratio"] <= _PB_MAX]),
+        "median_roe_pct": med([r["roe_pct"] for r in rows if r.get("roe_pct") is not None]),
+        "median_margin_pct": med([r["profit_margin_pct"] for r in rows
+                                  if r.get("profit_margin_pct") is not None]),
+        "source": "egx_sectors.json peers, audited CSV",
+    }
+
+
 def sector_medians(sector: str) -> dict[str, Any]:
     """Compute sector-level median P/E, P/B, ROE for relative valuation.
 
     Walks the curated universe — slow on cold cache, fast on warm cache
-    because get_fundamentals shares yfinance's underlying response.
+    because get_fundamentals shares yfinance's underlying response. With
+    model_params.sector_source == "tradingview", uses every classified peer.
     """
+    from . import model_params
+    if model_params.sector_source() == "tradingview":
+        return _sector_medians_all(sector)
     peers = [t for t, m in EGX_UNIVERSE.items()
              if m["sector"].lower() == sector.lower() and m["sector"] != "Index"]
 

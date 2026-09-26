@@ -1,0 +1,20 @@
+{
+  "verdict_thresholds": {
+    "BUY": 75,
+    "ACCUMULATE": 65,
+    "HOLD": 50,
+    "REDUCE": 35
+  },
+  "score_weights": {
+    "valuation": 0.3,
+    "quality": 0.25,
+    "momentum": 0.25,
+    "risk": 0.2
+  },
+  "valuation_market_fallback": true,
+  "regime_weight_overrides": false,
+  "version": "factor-proposal-2026-09-25+sectors",
+  "learned_at": "2026-09-25",
+  "provenance": "scripts/propose_factor_weights.py walk-forward proposal (GitHub run 36133500256), applied on the owner's approval: OOS 2021-2026 IC +0.040 without regime overrides vs +0.033 with; earnings-yield IC +0.044, t=+3.06. Weights and thresholds unchanged. | sector_source=tradingview applied on the owner's approval (2026-09-25): sector-relative earnings yield IC +0.046 (t=+3.41) vs market-wide +0.044 (t=+3.06), 2019-2026, factor-study run 36141820822; 265 listings classified in egx_sectors.json.",
+  "sector_source": "tradingview"
+}
