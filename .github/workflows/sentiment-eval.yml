@@ -10,6 +10,8 @@ on:
     paths:
       - tests/eval_sentiment.py
       - tests/egx_arabic_headlines_labeled.csv
+      - tests/egx_english_headlines_labeled.csv
+      - egx_mcp/data/egx_news_rules*.py
       - egx_mcp/data/transformer_sentiment.py
       - .github/workflows/sentiment-eval.yml
 
@@ -34,10 +36,12 @@ jobs:
       - name: Evaluate
         run: |
           set -o pipefail
-          python -m tests.eval_sentiment tests/egx_arabic_headlines_labeled.csv 2>&1 | tee eval.txt
-          {
-            echo '## Lexicon vs CAMeL-BERT on EGX Arabic headlines'
-            echo '```'
-            grep -E 'Backend:|gold / pred|^ +(positive|negative|neutral) \||Transformer' eval.txt
-            echo '```'
-          } >> "$GITHUB_STEP_SUMMARY"
+          for f in egx_arabic_headlines_labeled egx_english_headlines_labeled; do
+            python -m tests.eval_sentiment tests/$f.csv 2>&1 | tee eval_$f.txt
+            {
+              echo "## $f: lexicon vs EGX rules vs transformer"
+              echo '```'
+              grep -E 'Backend:|gold / pred|^ +(positive|negative|neutral) \||Transformer|# EGX' eval_$f.txt
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+          done

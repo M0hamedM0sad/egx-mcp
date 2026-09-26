@@ -25,7 +25,7 @@ import re
 from datetime import datetime
 from typing import Any
 
-from . import egx_news_rules
+from . import egx_news_rules, egx_news_rules_en
 from . import news
 from . import transformer_sentiment
 from .universe import resolve_ticker
@@ -94,6 +94,7 @@ _AR_NEG = {
 _EN_NEGATORS = {"not", "no", "won't", "wouldn't", "didn't", "doesn't", "isn't", "aren't"}
 _AR_NEGATORS = {"لا", "لن", "ليس", "ليست", "ولا", "بدون", "غير"}
 
+_ARABIC_CHARS = re.compile(r"[\u0600-\u06FF]")
 _TOKEN_RE = re.compile(r"[\w؀-ۿ]+", re.UNICODE)
 
 
@@ -153,8 +154,7 @@ def _resolve_backend(backend: str, lang: str) -> str:
     if backend == "lexicon":
         return "lexicon"
     if backend == "rules":
-        # EGX phrase rules exist for Arabic; English keeps the lexicon.
-        return "rules" if lang == "ar" else "lexicon"
+        return "rules"
     if backend in ("transformer", "auto"):
         if transformer_sentiment.available(lang):
             return "transformer"
@@ -173,7 +173,9 @@ def _score_headline(text: str, lang: str, backend: str) -> tuple[float, list[str
     if backend == "transformer":
         return transformer_sentiment.score_text(text, lang)
     if backend == "rules":
-        return egx_news_rules.score_text(text)
+        if lang == "ar":
+            return egx_news_rules.score_text(text)
+        return egx_news_rules_en.score_text(text)
     return _score_text(text, lang)
 
 
@@ -217,7 +219,7 @@ def analyze_sentiment(
         lang: 'en', 'ar', or 'both' (default).
         limit: Max headlines per language. Default 15.
         backend: 'lexicon' (default, zero-dependency), 'rules' (EGX
-            phrase rules for Arabic, lexicon for English), 'transformer'
+            headline phrase rules, Arabic and English), 'transformer'
             (FinBERT EN + CAMeLBERT-DA AR), or 'auto' (transformer when
             available, else lexicon). Defaults to the EGX_SENTIMENT_BACKEND
             env var, or 'lexicon' if unset. Resolved per-language, so EN
@@ -252,12 +254,17 @@ def analyze_sentiment(
         backend_used[lng] = eff_backend
         for art in payload.get("articles", []) or []:
             title = art.get("title") or ""
-            score, matches = _score_headline(title, lng, eff_backend)
+            # The English market feed includes Mubasher's Arabic headlines;
+            # score each title in the language it is actually written in.
+            h_lang = "ar" if lng == "en" and _ARABIC_CHARS.search(title) else lng
+            h_backend = (_resolve_backend(requested_backend, h_lang)
+                         if h_lang != lng else eff_backend)
+            score, matches = _score_headline(title, h_lang, h_backend)
             age = _age_days(art.get("date"), today)
             freshness = ("undated" if age is None else
                          "stale" if age > max_age else "fresh")
             entry = {
-                "lang": lng,
+                "lang": h_lang,
                 "date": art.get("date"),
                 "age_days": age,
                 "freshness": freshness,

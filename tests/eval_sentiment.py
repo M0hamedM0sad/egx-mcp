@@ -29,7 +29,7 @@ try:
 except (AttributeError, ValueError):
     pass
 
-from egx_mcp.data import egx_news_rules, sentiment, transformer_sentiment
+from egx_mcp.data import egx_news_rules, egx_news_rules_en, sentiment, transformer_sentiment
 
 # Map a signed score in [-1, +1] to a 3-class label. The 0.1 deadzone mirrors
 # the mildly_bullish / mildly_bearish thresholds in sentiment._label.
@@ -65,8 +65,9 @@ def _eval_backend(rows: list[dict[str, str]], backend: str) -> dict:
 
         if backend == "transformer":
             score, _ = transformer_sentiment.score_text(text, lang)
-        elif backend == "rules" and lang == "ar":
-            score, _ = egx_news_rules.score_text(text)
+        elif backend == "rules":
+            mod = egx_news_rules if lang == "ar" else egx_news_rules_en
+            score, _ = mod.score_text(text)
         else:
             score, _ = sentiment._score_text(text, lang)
 

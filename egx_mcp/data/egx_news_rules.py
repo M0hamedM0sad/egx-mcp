@@ -56,6 +56,8 @@ _RULES: list[tuple[re.Pattern, int, str]] = [(re.compile(p), s, tag) for p, s, t
     # "للربحية" is ل + الربحية with the alef dropped, hence (?:لل|الي ال|ل).
     (r"(?:تتحول|يتحول|تحول|تحولها|تحوله)\s+" + _GAP + r"(?:لل|الي\s+ال|ل)ربحيه", +1, "turn_profit"),
     (r"(?:تتحول|يتحول|تحول|تحولها|تحوله)\s+" + _GAP + r"(?:لل|الي\s+ال|ل)خسا(?:ره|ئر)", -1, "turn_loss"),
+    # "Posts losses" is bad whatever follows ("… after sales fell").
+    (r"(?:تسجل|يسجل|سجلت|تحقق|يحقق|حققت)\s+(?:صافي\s+)?خسا(?:ئر|ره)", -1, "posts_loss"),
     # Losses shrinking is good; losses growing is bad.
     (_LOSS + _GAP + _DOWN, +1, "loss_down"),
     (_DOWN + r"\s+" + _LOSS, +1, "loss_down"),

@@ -57,9 +57,9 @@ class RuleTests(unittest.TestCase):
 
 
 class BackendTests(unittest.TestCase):
-    def test_rules_backend_is_arabic_only_and_opt_in(self) -> None:
+    def test_rules_backend_is_opt_in(self) -> None:
         self.assertEqual(sentiment._resolve_backend("rules", "ar"), "rules")
-        self.assertEqual(sentiment._resolve_backend("rules", "en"), "lexicon")
+        self.assertEqual(sentiment._resolve_backend("rules", "en"), "rules")
         self.assertEqual(sentiment._DEFAULT_BACKEND, "lexicon")
 
     def test_analyze_sentiment_uses_rules_when_asked(self) -> None:
@@ -78,3 +78,50 @@ class BackendTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class MixedFeedTests(unittest.TestCase):
+    def test_arabic_title_in_english_feed_is_scored_as_arabic(self) -> None:
+        from datetime import datetime
+        today = datetime.utcnow().strftime("%Y-%m-%d")
+        feed = {"articles": [{"title": "تراجع أرباح الشركة 30% خلال النصف الأول",
+                              "date": today, "source": "Mubasher", "url": "u"}]}
+        with patch.object(sentiment.news, "fetch", return_value=feed):
+            out = sentiment.analyze_sentiment(None, lang="en", backend="rules")
+        h = out["headlines"][0]
+        self.assertEqual(h["lang"], "ar")
+        self.assertLess(h["score"], 0)       # the English lexicon would give 0
+
+
+class EnglishRuleTests(unittest.TestCase):
+    """Fresh English headlines, not taken from the labeled eval set."""
+
+    def _sign(self, text: str) -> int:
+        from egx_mcp.data import egx_news_rules_en as en
+        score, _ = en.score_text(text)
+        return (score > 0.1) - (score < -0.1)
+
+    def test_direction_attaches_to_the_subject(self) -> None:
+        self.assertEqual(self._sign("Juhayna net profit falls 38% in 2Q"), -1)
+        self.assertEqual(self._sign("Abu Qir Fertilizers profit jumps 72% on higher urea prices"), +1)
+        self.assertEqual(self._sign("Ghabbour Auto loss narrows to EGP 40 mn"), +1)
+        self.assertEqual(self._sign("Heliopolis Housing net loss widens in 1H"), -1)
+        self.assertEqual(self._sign("Sidi Kerir swings to profit in Q2"), +1)
+        # "Group" must not read as "up", nor "downgrade" as "down".
+        self.assertEqual(self._sign("Orascom Development Group profit declines 12%"), -1)
+
+    def test_estimates_guidance_and_payouts(self) -> None:
+        self.assertEqual(self._sign("Fawry beats consensus estimates on digital payments"), +1)
+        self.assertEqual(self._sign("Eastern Co misses analyst estimates"), -1)
+        self.assertEqual(self._sign("Telecom Egypt raises full-year guidance"), +1)
+        self.assertEqual(self._sign("Kima suspends dividend payments"), -1)
+        self.assertEqual(self._sign("Edita announces share buyback program"), +1)
+
+    def test_legal_and_macro(self) -> None:
+        self.assertEqual(self._sign("Regulator refers broker to public prosecutor"), -1)
+        self.assertEqual(self._sign("CBE tightens lending requirements for consumer loans"), -1)
+        self.assertEqual(self._sign("Headline inflation eases to 11.2% in August"), +1)
+        self.assertEqual(self._sign("Profit rises 10% despite weaker demand"), +1)
+
+    def test_policy_announcements_stay_neutral(self) -> None:
+        self.assertEqual(self._sign("Finance minister reviews draft real estate tax law"), 0)
