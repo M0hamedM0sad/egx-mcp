@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Sunday 2026-09-27 14:35 ===
+
+--- MACRO ---
+  EGX 30:  54,193 pts (—)
+  USD/EGP: 51.72 (+0.04%)
+  Brent:   $97.44 (-7.81%)
+  Gold 24K: 7,185.45 EGP/g  |  21K: 6,287.27  |  18K: 5,389.09
+  Egyptian gold pound: 50,298 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 101) ---
+  1. MAAL   score=33.55  price=3.9  5d=+22.3% RSI=63  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MAAL/
+  2. MHOT   score=13.06  price=122.06  5d=+4.9% RSI=56  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MHOT/
+  3. MOIL   score=12.22  price=0.38  5d=+4.3% RSI=73  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MOIL/
+  4. EGTS   score=11.71  price=6.05  5d=+5.5% RSI=62  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EGTS/
+  5. SDTI   score=10.22  price=16.24  5d=+3.9% RSI=75  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SDTI/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  MAAL: ENTRY 3.92 | STOP 2.53 | SCALE-OUT 5.27 (1828 sh) | TARGET 5.95 (1829 sh) | 3657 total (2.85% NAV) | R:R 1:1.5 | time stop 2026-10-04
+  MHOT: ENTRY 122.67 | STOP 120.56 | SCALE-OUT 123.56 (204 sh) | TARGET 124.31 (205 sh) | 409 total (9.98% NAV) | R:R 1:1.5 | time stop 2026-10-04
+  MOIL: ENTRY 0.38 | STOP 0.36 | SCALE-OUT 0.4 (65789 sh) | TARGET 0.41 (65789 sh) | 58998 total (4.48% NAV) | R:R 1:1.5 | time stop 2026-10-04
+  EGTS: ENTRY 6.08 | STOP 4.62 | SCALE-OUT 7.48 (1743 sh) | TARGET 8.2 (1743 sh) | 3486 total (4.22% NAV) | R:R 1:1.5 | time stop 2026-10-04
+  SDTI: ENTRY 16.32 | STOP 10.42 | SCALE-OUT 22.06 (429 sh) | TARGET 24.97 (429 sh) | 858 total (2.79% NAV) | R:R 1:1.5 | time stop 2026-10-04
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  MAAL   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MHOT   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MOIL   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  EGTS   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  SDTI   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    MHOT: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    MOIL: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    EGTS: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    SDTI: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  MAAL:
+    Technicals:    RSI 63 — healthy uptrend; MACD bullish (+0.115); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.68 (6.4% of px) — sizing input
+    Fundamentals:  P/E 18.6 — premium; P/B 5.20; ROE 27.7% — strong; D/E 4.47 — highly levered
+    News tone:     bullish (+1.00, 3 hdl)
+      - عمومية "مرسيليا" ترفض عزل رئيسها وتتخذ قراراً بشأن دعوى المسؤولية [Mubasher]
+      - العامة الاستثمار تدعو عمومية مرسيليا لمناقشة تقرير تفتيش أعمال بعض أعضاء الإدارة [Mubasher]
+  MHOT:
+    Technicals:    RSI 56 — healthy uptrend; MACD bullish (+0.112); MA50 < MA200 — death-cross regime; Riding upper Bollinger — extended; ATR 0.75 (4.0% of px) — sizing input
+    Fundamentals:  P/E 26.1 — premium; P/B 12.96; ROE 49.6% — strong; Margin 56.4%; D/E 0.25; Yield 4.4%
+    News tone:     bullish (+1.00, 3 hdl)
+      - عمومية "مصر للفنادق" تقرر توزيع كوبون نقدي على المساهمين [Mubasher]
+      - مجلس إدارة مصر للفنادق يقترح توزيع كوبون نقدي بقيمة 1.1 جنيه للسهم [Mubasher]
+  MOIL:
+    Technicals:    RSI 73 — overbought; MACD bullish (+0.000); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.01 (1.6% of px) — sizing input
+    Fundamentals:  P/E 2.0 — cheap; P/B 0.72; ROE 35.9% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "ماريدايف" المجمعة تقفز 346% خلال النصف الأول من 2026 [Mubasher]
+      - "ماريدايف" تتحول للربحية وتسجل 4.55 مليون دولار خلال النصف الأول [Mubasher]
+  EGTS:
+    Technicals:    RSI 62 — healthy uptrend; MACD bullish (+0.172); MA50 > MA200 — golden-cross regime; ATR 0.72 (4.0% of px) — sizing input
+    Fundamentals:  P/E 1.7 — cheap; P/B 10.43; ROE 611.0% — strong; Margin -11.4%; D/E 0.00
+    News tone:     bullish (+1.00, 3 hdl)
+      - رغم نمو الإيرادات.. أرباح المصرية للمنتجعات تتراجع 9.4% في الربع الأول من 2026 [Mubasher]
+      - المصرية للمنتجعات السياحية تتحول للخسارة خلال 2025 [Mubasher]
+  SDTI:
+    Technicals:    RSI 75 — overbought; MACD bullish (+0.105); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 2.91 (3.6% of px) — sizing input
+    Fundamentals:  P/E 1.1 — cheap; P/B 3.09; ROE 284.0% — strong; D/E 6.75 — highly levered
+    News tone:     bullish (+1.00, 3 hdl)
+      - "شارم دريمز" تدعو عموميتها لمناقشة القوائم المالية وتشكيل مجلس الإدارة [Mubasher]
+      - أرباح شارم دريمز للاستثمار السياحي تهبط 55% خلال النصف الأول من 2026 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: MAAL, MHOT, MOIL, EGTS, SDTI
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
