@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Monday 2026-09-28 16:41 ===
+
+--- MACRO ---
+  EGX 30:  52,664 pts (—)
+  USD/EGP: 52.05 (+0.64%)
+  Brent:   $98.99 (+0.02%)
+  Gold 24K: 6,976.60 EGP/g  |  21K: 6,104.52  |  18K: 5,232.45
+  Egyptian gold pound: 48,836 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 83) ---
+  1. MAAL   score=42.24  price=11.32  5d=+30.1% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MAAL/
+  2. SDTI   score=17.63  price=86.05  5d=+10.3% RSI=79  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SDTI/
+  3. EGTS   score=12.6  price=17.99  5d=+6.2% RSI=56  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EGTS/
+  4. MHOT   score=10.54  price=18.85  5d=+5.0% RSI=58  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MHOT/
+  5. EGBE   score=8.11  price=0.518  5d=+3.6% RSI=49  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EGBE/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  MAAL: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  SDTI: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EGTS: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  MHOT: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EGBE: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  MAAL   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: bullish
+  SDTI   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  EGTS   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  MHOT   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  EGBE   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    SDTI: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    EGTS: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+    MHOT: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    EGBE: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  MAAL:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 18.6 — premium; P/B 5.20; ROE 27.7% — strong; D/E 4.47 — highly levered
+    News tone:     bullish (+1.00, 3 hdl)
+      - عمومية "مرسيليا" ترفض عزل رئيسها وتتخذ قراراً بشأن دعوى المسؤولية [Mubasher]
+      - العامة الاستثمار تدعو عمومية مرسيليا لمناقشة تقرير تفتيش أعمال بعض أعضاء الإدارة [Mubasher]
+  SDTI:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 1.1 — cheap; P/B 3.09; ROE 284.0% — strong; D/E 6.75 — highly levered
+    News tone:     bullish (+1.00, 3 hdl)
+      - "شارم دريمز" تدعو عموميتها لمناقشة القوائم المالية وتشكيل مجلس الإدارة [Mubasher]
+      - أرباح شارم دريمز للاستثمار السياحي تهبط 55% خلال النصف الأول من 2026 [Mubasher]
+  EGTS:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 1.7 — cheap; P/B 10.43; ROE 611.0% — strong; Margin -11.4%; D/E 0.00
+    News tone:     bullish (+1.00, 3 hdl)
+      - رغم نمو الإيرادات.. أرباح المصرية للمنتجعات تتراجع 9.4% في الربع الأول من 2026 [Mubasher]
+      - المصرية للمنتجعات السياحية تتحول للخسارة خلال 2025 [Mubasher]
+  MHOT:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 26.1 — premium; P/B 12.96; ROE 49.6% — strong; Margin 56.4%; D/E 0.25; Yield 4.4%
+    News tone:     bullish (+1.00, 3 hdl)
+      - البورصة تعلن نهاية حق وموعد توزيع كوبون مصر للفنادق [Mubasher]
+      - عمومية "مصر للفنادق" تقرر توزيع كوبون نقدي على المساهمين [Mubasher]
+  EGBE:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  ROE 27.0% — strong; Margin 32.0%; D/E 1.41; Yield 3.5%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح البنك المصري الخليجي ترتفع 32% إلى 2.2 مليار جنيه في النصف الأول [Mubasher]
+      - أرباح البنك المصري الخليجي تنمو 32% بالنصف الأول رغم تراجع الإيرادات من الفوائد [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: MAAL, SDTI, EGTS, MHOT, EGBE
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
