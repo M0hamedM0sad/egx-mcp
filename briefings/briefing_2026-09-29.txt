@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-09-29 15:32 ===
+
+--- MACRO ---
+  EGX 30:  52,710 pts (—)
+  USD/EGP: 51.97 (-0.15%)
+  Brent:   $96.34 (-3.29%)
+  Gold 24K: 6,999.46 EGP/g  |  21K: 6,124.53  |  18K: 5,249.59
+  Egyptian gold pound: 48,996 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 106) ---
+  1. MAAL   score=41.16  price=3.9  5d=+28.6% RSI=70  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MAAL/
+  2. SDTI   score=23.02  price=16.24  5d=+12.1% RSI=78  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SDTI/
+  3. EGTS   score=13.41  price=6.05  5d=+7.2% RSI=60  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EGTS/
+  4. MOIL   score=8.07  price=0.38  5d=+1.6% RSI=81  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MOIL/
+  5. ETEL   score=3.77  price=32.77  5d=+1.3% RSI=74  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ETEL/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  MAAL: ENTRY 3.92 | STOP 2.27 | SCALE-OUT 5.53 (1533 sh) | TARGET 6.34 (1534 sh) | 3067 total (2.39% NAV) | R:R 1:1.5 | time stop 2026-10-06
+  SDTI: ENTRY 16.32 | STOP 8.16 | SCALE-OUT 24.32 (309 sh) | TARGET 28.37 (309 sh) | 618 total (2.01% NAV) | R:R 1:1.5 | time stop 2026-10-06
+  EGTS: ENTRY 6.08 | STOP 4.4 | SCALE-OUT 7.7 (1519 sh) | TARGET 8.52 (1519 sh) | 3038 total (3.68% NAV) | R:R 1:1.5 | time stop 2026-10-06
+  MOIL: ENTRY 0.38 | STOP 0.36 | SCALE-OUT 0.4 (65789 sh) | TARGET 0.41 (65789 sh) | 50702 total (3.85% NAV) | R:R 1:1.5 | time stop 2026-10-06
+  ETEL: ENTRY 32.93 | STOP 21.61 | SCALE-OUT 43.93 (224 sh) | TARGET 49.5 (224 sh) | 448 total (2.94% NAV) | R:R 1:1.5 | time stop 2026-10-06
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  MAAL   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: bullish
+  SDTI   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  EGTS   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MOIL   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  ETEL   FRESH  5d: BUY (5d)    1mo: BUY    (BUY)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    SDTI: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    EGTS: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    MOIL: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    ETEL: V8b says ABSTAIN but chairman says BUY — Bull case clearly outweighs bear case AND composite score is strong.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  MAAL:
+    Technicals:    RSI 70 — overbought; MACD bullish (+0.236); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.81 (7.3% of px) — sizing input
+    Fundamentals:  P/E 18.6 — premium; P/B 5.20; ROE 27.7% — strong; D/E 4.47 — highly levered
+    News tone:     bullish (+1.00, 3 hdl)
+      - عمومية "مرسيليا" ترفض عزل رئيسها وتتخذ قراراً بشأن دعوى المسؤولية [Mubasher]
+      - العامة الاستثمار تدعو عمومية مرسيليا لمناقشة تقرير تفتيش أعمال بعض أعضاء الإدارة [Mubasher]
+  SDTI:
+    Technicals:    RSI 77 — overbought; MACD bullish (+0.769); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 4.04 (4.6% of px) — sizing input
+    Fundamentals:  P/E 1.1 — cheap; P/B 3.09; ROE 284.0% — strong; D/E 6.75 — highly levered
+    News tone:     bullish (+1.00, 3 hdl)
+      - "شارم دريمز" تدعو عموميتها لمناقشة القوائم المالية وتشكيل مجلس الإدارة [Mubasher]
+      - أرباح شارم دريمز للاستثمار السياحي تهبط 55% خلال النصف الأول من 2026 [Mubasher]
+  EGTS:
+    Technicals:    RSI 60 — healthy uptrend; MACD bullish (+0.154); MA50 > MA200 — golden-cross regime; ATR 0.82 (4.5% of px) — sizing input
+    Fundamentals:  P/E 1.7 — cheap; P/B 10.43; ROE 611.0% — strong; Margin -11.4%; D/E 0.00
+    News tone:     bullish (+1.00, 3 hdl)
+      - رغم نمو الإيرادات.. أرباح المصرية للمنتجعات تتراجع 9.4% في الربع الأول من 2026 [Mubasher]
+      - المصرية للمنتجعات السياحية تتحول للخسارة خلال 2025 [Mubasher]
+  MOIL:
+    Technicals:    RSI 81 — overbought; MACD bullish (+0.001); MA50 > MA200 — golden-cross regime; ATR 0.01 (1.5% of px) — sizing input
+    Fundamentals:  P/E 2.0 — cheap; P/B 0.72; ROE 35.9% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "ماريدايف" المجمعة تقفز 346% خلال النصف الأول من 2026 [Mubasher]
+      - "ماريدايف" تتحول للربحية وتسجل 4.55 مليون دولار خلال النصف الأول [Mubasher]
+  ETEL:
+    Technicals:    RSI 74 — overbought; MACD bullish (+0.115); MA50 > MA200 — golden-cross regime; ATR 5.58 (4.1% of px) — sizing input
+    Fundamentals:  P/E 3.9 — cheap; P/B 0.89; ROE 22.8% — strong; Margin 21.0%; D/E 1.18; Yield 1.6%
+    News tone:     neutral (+0.00, 3 hdl)
+      - المصرية للاتصالات تصدر توضيحاً بشأن ضخ 30 مليار جنيه استثمارات سنوياً [Mubasher]
+      - كيف تفاعل سهم المصرية للاتصالات بعد تعليقها بشأن التوسع الإفريقي؟ [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: MAAL, SDTI, EGTS, MOIL, ETEL
+  Filtered: kept 1 of 23 headlines.
+  Tone: neutral (score +0.00)
+  [sector:Travel & Leisure] Egypt’s Finance minister targets Qatari energy and tourism investments during Doha talks — Daily News Egypt
+
+Disclaimer: Research only, not investment advice.
