@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Thursday 2026-10-01 16:01 ===
+
+--- MACRO ---
+  EGX 30:  52,401 pts (—)
+  USD/EGP: 52.23 (+0.66%)
+  Brent:   $100.98 (+4.29%)
+  Gold 24K: 7,039.68 EGP/g  |  21K: 6,159.72  |  18K: 5,279.76
+  Egyptian gold pound: 49,278 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 101) ---
+  1. BIOC   score=22.41  price=28.48  5d=+22.0% RSI=59  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  2. BINV   score=10.72  price=23.52  5d=+6.3% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BINV/
+  3. CPCI   score=9.4  price=69.48  5d=+2.3% RSI=83  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CPCI/
+  4. MOIL   score=4.06  price=0.38  5d=+0.4% RSI=71  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MOIL/
+  5. KABO   score=3.37  price=2.41  5d=+5.0% RSI=50  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-KABO/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  BIOC: ENTRY 28.62 | STOP -17.39 | SCALE-OUT 74.35 (54 sh) | TARGET 97.28 (55 sh) | 109 total (0.62% NAV) | R:R 1:1.5 | time stop 2026-10-08
+  BINV: ENTRY 23.64 | STOP 12.7 | SCALE-OUT 34.34 (230 sh) | TARGET 39.75 (231 sh) | 461 total (2.17% NAV) | R:R 1:1.5 | time stop 2026-10-08
+  CPCI: ENTRY 69.83 | STOP 39.11 | SCALE-OUT 99.85 (82 sh) | TARGET 115.04 (82 sh) | 164 total (2.28% NAV) | R:R 1:1.5 | time stop 2026-10-08
+  MOIL: ENTRY 0.38 | STOP 0.36 | SCALE-OUT 0.4 (65789 sh) | TARGET 0.41 (65789 sh) | 53595 total (4.07% NAV) | R:R 1:1.5 | time stop 2026-10-08
+  KABO: ENTRY 2.42 | STOP 1.34 | SCALE-OUT 3.48 (2345 sh) | TARGET 4.01 (2346 sh) | 4691 total (2.26% NAV) | R:R 1:1.5 | time stop 2026-10-08
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  BINV   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  CPCI   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  MOIL   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  KABO   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    BINV: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    CPCI: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    MOIL: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    KABO: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  BIOC:
+    Technicals:    RSI 59 — healthy uptrend; MACD bullish (+0.418); MA50 > MA200 — golden-cross regime; ATR 22.93 (7.1% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate; Yield 1.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "جلاكسو سميثكلاين" تهبط32.5% خلال النصف الأول من 2026 [Mubasher]
+      - جلاكسو سميثكلاين توضح: اتفاقية الـ110 ملايين دولار تخص الشركة العالمية [Mubasher]
+  BINV:
+    Technicals:    RSI 68 — healthy uptrend; MACD bullish (+0.058); MA50 > MA200 — golden-cross regime; ATR 5.41 (9.0% of px) — sizing input
+    Fundamentals:  P/E 4.2 — cheap; P/B 0.83; ROE 19.7% — adequate; Margin 3908.9%; D/E 0.01; Yield 3.3%
+    News tone:     neutral (+0.00, 3 hdl)
+      - بي إنفستمنتس تخفض حصتها في جورميه إيجيبت إلى 33.5% [Mubasher]
+      - ​"بي إنفستمنتس" تبيع جزءاً من حصتها في "جورميه" بصفقة 416 مليون جنيه [Mubasher]
+  CPCI:
+    Technicals:    RSI 83 — overbought; MACD bullish (+0.538); MA50 > MA200 — golden-cross regime; ATR 15.19 (2.6% of px) — sizing input
+    Fundamentals:  P/E 1.8 — cheap; P/B 0.89; ROE 49.5% — strong; D/E 0.14; Yield 4.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - 22 أكتوبر.. مساهمو القاهرة للأدوية يناقشون توزيع الأرباح [Mubasher]
+      - أرباح "القاهرة للأدوية" ترتفع إلى 552.5 مليون جنيه في العام المالي الماضي [Mubasher]
+  MOIL:
+    Technicals:    RSI 71 — overbought; MACD bullish (+0.000); MA50 > MA200 — golden-cross regime; ATR 0.01 (1.6% of px) — sizing input
+    Fundamentals:  P/E 2.0 — cheap; P/B 0.72; ROE 35.9% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "ماريدايف" المجمعة تقفز 346% خلال النصف الأول من 2026 [Mubasher]
+      - "ماريدايف" تتحول للربحية وتسجل 4.55 مليون دولار خلال النصف الأول [Mubasher]
+  KABO:
+    Technicals:    RSI 50 — healthy uptrend; MACD bearish (-0.096); MA50 > MA200 — golden-cross regime; ATR 0.53 (5.6% of px) — sizing input
+    Fundamentals:  P/E 7.1 — cheap; P/B 2.01; ROE 28.4% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - كيف تفاعل سهم "كابو" مع العدول عن زيادة رأس المال؟ [Mubasher]
+      - "كابو" تتراجع عن زيادة رأس المال بأسهم مجانية وتعدل أوجه إنفاق 100 مليون جنيه [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: BIOC, BINV, CPCI, MOIL, KABO
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
