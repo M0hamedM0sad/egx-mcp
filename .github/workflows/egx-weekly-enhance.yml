@@ -210,7 +210,7 @@ jobs:
           pip install -e .
 
       - name: Rebuild the market-data panel
-        # Refetches ~250 names of daily history from investing.com and
+        # Refetches ~250 names of daily history (investing.com, Yahoo fallback) and
         # reconstructs point-in-time scores + forward 21-session excess at every
         # weekly rebalance date. Slow (network-bound) — hence weekly, not daily.
         # continue-on-error: a data hiccup must not block the rest of the run;
@@ -220,6 +220,13 @@ jobs:
           mkdir -p logs
           python -m scripts.build_panel --refresh --lookback 1000 2>&1 \
             | tee logs/panel_build_latest.txt
+
+      - name: Per-stock driver profiles (context cards)
+        # What moves each name (market, USD/EGP, Brent, gold), from the panel
+        # prices just refreshed. Context for the briefing only; not scored.
+        continue-on-error: true
+        run: |
+          python -m scripts.build_driver_profiles 2>&1 | tee logs/driver_profiles_latest.txt
 
       - name: Panel learning loop — analyze & propose (no change applied)
         # Writes logs/learning_proposal_panel.json. Does NOT apply.
@@ -240,7 +247,9 @@ jobs:
           git config user.email "egx-enhancer@users.noreply.github.com"
           git add logs/learning_proposal_panel.json \
                   logs/learning_proposal_panel_latest.txt \
-                  logs/panel_build_latest.txt 2>/dev/null || true
+                  logs/panel_build_latest.txt \
+                  logs/driver_profiles_latest.txt \
+                  egx_mcp/data/driver_profiles.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No panel proposal to commit."
           else

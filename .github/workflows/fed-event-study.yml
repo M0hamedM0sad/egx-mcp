@@ -1,0 +1,56 @@
+name: Fed moves -> USD/EGP and EGX (event study)
+
+# Read-only: measures what US Fed rate moves since 2015 did to USD/EGP and
+# EGX stocks before the Fed is allowed into the model. Commits nothing.
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - scripts/fed_event_study.py
+      - egx_mcp/data/fed.py
+      - .github/workflows/fed-event-study.yml
+
+permissions:
+  contents: read
+
+jobs:
+  study:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+      - name: Fetch ~11 years of daily prices
+        run: |
+          mkdir -p logs
+          python - <<'PY' 2>&1 | grep -v "possibly delisted" | tail -5
+          from egx_mcp.data.egx_listing import get_full_universe
+          from scripts.build_panel import _refresh_prices
+          _refresh_prices(get_full_universe(), lookback_days=4200, throttle_s=0.3)
+          PY
+      - name: Event study
+        run: |
+          set -o pipefail
+          python -m scripts.fed_event_study 2>&1 | tee logs/fed_event_study_run.txt
+          {
+            echo '## Fed moves -> USD/EGP and EGX'
+            echo '```'
+            cat logs/fed_event_study_latest.txt 2>/dev/null || tail -40 logs/fed_event_study_run.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fed-event-study
+          path: |
+            logs/fed_event_study_latest.txt
+            logs/fed_event_study_latest.json
+            logs/fed_event_study_run.txt

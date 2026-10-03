@@ -1,0 +1,24 @@
+{
+  "_about": "Central Bank of Egypt MPC decisions. Maintained by hand after each MPC meeting (about 8 a year): append a decision with at least one source. cbe.org.eg renders its rates with JavaScript, so scraping it returned null in every briefing. macro.py reads the latest decision on or before today and flags it stale after 60 days.",
+  "decisions": [
+    {
+      "date": "2026-08-20",
+      "action": "hold",
+      "overnight_deposit_pct": 19.0,
+      "overnight_lending_pct": 20.0,
+      "main_operation_pct": 19.5,
+      "sources": ["Web search summary, 2026-09-25: MPC kept rates unchanged on 2026-08-20 (fourth consecutive hold); confirmed as the prior level by the 2026-09-24 reports below"]
+    },
+    {
+      "date": "2026-09-24",
+      "action": "hold",
+      "overnight_deposit_pct": 19.0,
+      "overnight_lending_pct": 20.0,
+      "main_operation_pct": 19.5,
+      "sources": [
+        "https://enterpriseam.com/egypt/2026/09/25/monetary-policy-committee-leaves-key-policy-rates-unchanged/",
+        "https://english.ahram.org.eg/NewsContent/3/12/565198/Business/Economy/CBE-keeps-interest-rates-unchanged-amid-rising-inf.aspx"
+      ]
+    }
+  ]
+}

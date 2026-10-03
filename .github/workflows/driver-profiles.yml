@@ -1,0 +1,50 @@
+name: Per-stock driver profiles (on demand)
+
+# Builds the context cards now instead of waiting for the weekly run.
+# Read-only: prints the profiles (and the JSON) to the log; the weekly
+# workflow is what commits egx_mcp/data/driver_profiles.json.
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - egx_mcp/data/driver_profiles.py
+      - scripts/build_driver_profiles.py
+      - .github/workflows/driver-profiles.yml
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+      - name: Fetch ~4 years of daily prices
+        run: |
+          mkdir -p logs
+          python - <<'PY' 2>&1 | grep -v "possibly delisted" | tail -3
+          from egx_mcp.data.egx_listing import get_full_universe
+          from scripts.build_panel import _refresh_prices
+          _refresh_prices(get_full_universe(), lookback_days=1500, throttle_s=0.3)
+          PY
+      - name: Build profiles
+        run: |
+          set -o pipefail
+          python -m scripts.build_driver_profiles 2>&1 | tee driver_profiles.txt
+          { echo '## Driver profiles'; echo '```'; cat driver_profiles.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          # One compact line (the indented file is ~10k lines and the log API
+          # truncates), then the summary again so a log tail shows both.
+          echo "=== JSON ==="
+          python -c "import json; print(json.dumps(json.load(open('egx_mcp/data/driver_profiles.json')), separators=(',', ':')))"
+          echo "=== SUMMARY ==="
+          cat driver_profiles.txt

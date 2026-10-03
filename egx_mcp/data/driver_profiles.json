@@ -1,0 +1,8076 @@
+{
+ "as_of": "2026-09-24",
+ "driver_weekly_sd_pct": {
+  "brent": 5.51,
+  "gold": 2.81,
+  "market": 2.42,
+  "usdegp": 4.93
+ },
+ "lookback_weeks": 156,
+ "min_weeks": 80,
+ "profiles": {
+  "AALR": {
+   "beta": {
+    "brent": 0.033,
+    "gold": -0.066,
+    "market": 1.353,
+    "usdegp": 0.081
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.27,
+     "sign": "+",
+     "t": 5.26
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.18,
+    "gold": -0.19,
+    "market": 3.27,
+    "usdegp": 0.4
+   },
+   "n_weeks": 154,
+   "r2": 0.157,
+   "sector": "Real Estate",
+   "t": {
+    "brent": 0.3,
+    "gold": -0.31,
+    "market": 5.26,
+    "usdegp": 0.66
+   },
+   "vol_ann_pct": 57.3,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.0,
+    "market": 15.6,
+    "stock_specific": 84.3,
+    "usdegp": 0.1
+   }
+  },
+  "ABUK": {
+   "beta": {
+    "brent": 0.236,
+    "gold": 0.159,
+    "market": 0.789,
+    "usdegp": 0.058
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.91,
+     "sign": "+",
+     "t": 4.03
+    },
+    {
+     "driver": "brent",
+     "impact_1sd_pct": 1.3,
+     "sign": "+",
+     "t": 2.75
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 1.3,
+    "gold": 0.45,
+    "market": 1.91,
+    "usdegp": 0.29
+   },
+   "n_weeks": 156,
+   "r2": 0.137,
+   "sector": "Chemicals",
+   "t": {
+    "brent": 2.75,
+    "gold": 0.94,
+    "market": 4.03,
+    "usdegp": 0.6
+   },
+   "vol_ann_pct": 44.9,
+   "weights_pct": {
+    "brent": 4.0,
+    "gold": 0.5,
+    "market": 8.9,
+    "stock_specific": 86.4,
+    "usdegp": 0.2
+   }
+  },
+  "ACAMD": {
+   "beta": {
+    "brent": 0.055,
+    "gold": -0.059,
+    "market": 1.454,
+    "usdegp": -0.03
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.51,
+     "sign": "+",
+     "t": 7.52
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.3,
+    "gold": -0.17,
+    "market": 3.51,
+    "usdegp": -0.15
+   },
+   "n_weeks": 156,
+   "r2": 0.275,
+   "sector": "Financial Services",
+   "t": {
+    "brent": 0.65,
+    "gold": -0.35,
+    "market": 7.52,
+    "usdegp": -0.31
+   },
+   "vol_ann_pct": 48.4,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.0,
+    "market": 27.3,
+    "stock_specific": 72.6,
+    "usdegp": 0.1
+   }
+  },
+  "ACGC": {
+   "beta": {
+    "brent": 0.044,
+    "gold": -0.133,
+    "market": 0.844,
+    "usdegp": -0.069
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.04,
+     "sign": "+",
+     "t": 4.88
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.24,
+    "gold": -0.37,
+    "market": 2.04,
+    "usdegp": -0.34
+   },
+   "n_weeks": 156,
+   "r2": 0.146,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": 0.58,
+    "gold": -0.89,
+    "market": 4.88,
+    "usdegp": -0.81
+   },
+   "vol_ann_pct": 39.9,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.5,
+    "market": 13.5,
+    "stock_specific": 85.3,
+    "usdegp": 0.6
+   }
+  },
+  "ADCI": {
+   "beta": {
+    "brent": -0.091,
+    "gold": -0.075,
+    "market": 1.029,
+    "usdegp": -0.004
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.49,
+     "sign": "+",
+     "t": 5.57
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.5,
+    "gold": -0.21,
+    "market": 2.49,
+    "usdegp": -0.02
+   },
+   "n_weeks": 155,
+   "r2": 0.182,
+   "sector": "Healthcare",
+   "t": {
+    "brent": -1.12,
+    "gold": -0.47,
+    "market": 5.57,
+    "usdegp": -0.04
+   },
+   "vol_ann_pct": 43.6,
+   "weights_pct": {
+    "brent": 0.9,
+    "gold": 0.1,
+    "market": 17.2,
+    "stock_specific": 81.8,
+    "usdegp": 0.0
+   }
+  },
+  "ADIB": {
+   "beta": {
+    "brent": -0.0,
+    "gold": 0.246,
+    "market": 0.912,
+    "usdegp": 0.387
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.2,
+     "sign": "+",
+     "t": 4.44
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": 1.91,
+     "sign": "+",
+     "t": 3.81
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.0,
+    "gold": 0.69,
+    "market": 2.2,
+    "usdegp": 1.91
+   },
+   "n_weeks": 156,
+   "r2": 0.193,
+   "sector": "Banks",
+   "t": {
+    "brent": -0.0,
+    "gold": 1.39,
+    "market": 4.44,
+    "usdegp": 3.81
+   },
+   "vol_ann_pct": 48.7,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 1.5,
+    "market": 10.1,
+    "stock_specific": 80.7,
+    "usdegp": 7.7
+   }
+  },
+  "ADPC": {
+   "beta": {
+    "brent": -0.039,
+    "gold": -0.129,
+    "market": 1.382,
+    "usdegp": -0.033
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.34,
+     "sign": "+",
+     "t": 8.12
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.22,
+    "gold": -0.36,
+    "market": 3.34,
+    "usdegp": -0.16
+   },
+   "n_weeks": 156,
+   "r2": 0.312,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -0.52,
+    "gold": -0.88,
+    "market": 8.12,
+    "usdegp": -0.39
+   },
+   "vol_ann_pct": 43.7,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.3,
+    "market": 30.5,
+    "stock_specific": 68.7,
+    "usdegp": 0.2
+   }
+  },
+  "AFDI": {
+   "beta": {
+    "brent": -0.034,
+    "gold": -0.029,
+    "market": 1.603,
+    "usdegp": -0.069
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.87,
+     "sign": "+",
+     "t": 9.51
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.19,
+    "gold": -0.08,
+    "market": 3.87,
+    "usdegp": -0.34
+   },
+   "n_weeks": 155,
+   "r2": 0.385,
+   "sector": "Financial Services",
+   "t": {
+    "brent": -0.47,
+    "gold": -0.2,
+    "market": 9.51,
+    "usdegp": -0.83
+   },
+   "vol_ann_pct": 45.7,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.0,
+    "market": 37.7,
+    "stock_specific": 61.6,
+    "usdegp": 0.5
+   }
+  },
+  "AFMC": {
+   "beta": {
+    "brent": 0.28,
+    "gold": 0.491,
+    "market": 1.386,
+    "usdegp": -0.472
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.35,
+     "sign": "+",
+     "t": 5.48
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": -2.33,
+     "sign": "-",
+     "t": -3.79
+    },
+    {
+     "driver": "brent",
+     "impact_1sd_pct": 1.54,
+     "sign": "+",
+     "t": 2.48
+    },
+    {
+     "driver": "gold",
+     "impact_1sd_pct": 1.38,
+     "sign": "+",
+     "t": 2.24
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 1.54,
+    "gold": 1.38,
+    "market": 3.35,
+    "usdegp": -2.33
+   },
+   "n_weeks": 154,
+   "r2": 0.265,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": 2.48,
+    "gold": 2.24,
+    "market": 5.48,
+    "usdegp": -3.79
+   },
+   "vol_ann_pct": 62.8,
+   "weights_pct": {
+    "brent": 2.1,
+    "gold": 2.1,
+    "market": 15.3,
+    "stock_specific": 73.4,
+    "usdegp": 7.1
+   }
+  },
+  "AIFI": {
+   "beta": {
+    "brent": 0.222,
+    "gold": 0.002,
+    "market": 0.982,
+    "usdegp": -1.07
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.37,
+     "sign": "+",
+     "t": 3.24
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 1.22,
+    "gold": 0.01,
+    "market": 2.37,
+    "usdegp": -5.28
+   },
+   "n_weeks": 107,
+   "r2": 0.131,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": 1.68,
+    "gold": 0.01,
+    "market": 3.24,
+    "usdegp": -1.48
+   },
+   "vol_ann_pct": 52.0,
+   "weights_pct": {
+    "brent": 1.2,
+    "gold": 0.0,
+    "market": 9.8,
+    "stock_specific": 86.9,
+    "usdegp": 2.1
+   }
+  },
+  "AJWA": {
+   "beta": {
+    "brent": -0.183,
+    "gold": 0.058,
+    "market": 0.781,
+    "usdegp": -0.049
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.89,
+     "sign": "+",
+     "t": 3.71
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -1.01,
+    "gold": 0.16,
+    "market": 1.89,
+    "usdegp": -0.24
+   },
+   "n_weeks": 156,
+   "r2": 0.115,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -1.98,
+    "gold": 0.32,
+    "market": 3.71,
+    "usdegp": -0.47
+   },
+   "vol_ann_pct": 47.7,
+   "weights_pct": {
+    "brent": 2.7,
+    "gold": 0.1,
+    "market": 8.5,
+    "stock_specific": 88.5,
+    "usdegp": 0.2
+   }
+  },
+  "ALCN": {
+   "beta": {
+    "brent": 0.184,
+    "gold": 0.218,
+    "market": 0.904,
+    "usdegp": -0.008
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.18,
+     "sign": "+",
+     "t": 4.59
+    },
+    {
+     "driver": "brent",
+     "impact_1sd_pct": 1.01,
+     "sign": "+",
+     "t": 2.12
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 1.01,
+    "gold": 0.61,
+    "market": 2.18,
+    "usdegp": -0.04
+   },
+   "n_weeks": 155,
+   "r2": 0.149,
+   "sector": "Transportation",
+   "t": {
+    "brent": 2.12,
+    "gold": 1.28,
+    "market": 4.59,
+    "usdegp": -0.08
+   },
+   "vol_ann_pct": 45.5,
+   "weights_pct": {
+    "brent": 2.1,
+    "gold": 1.0,
+    "market": 11.8,
+    "stock_specific": 85.1,
+    "usdegp": 0.0
+   }
+  },
+  "ALUM": {
+   "beta": {
+    "brent": -0.038,
+    "gold": 0.131,
+    "market": 1.457,
+    "usdegp": 0.022
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.52,
+     "sign": "+",
+     "t": 8.04
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.21,
+    "gold": 0.37,
+    "market": 3.52,
+    "usdegp": 0.11
+   },
+   "n_weeks": 156,
+   "r2": 0.307,
+   "sector": "Basic Resources",
+   "t": {
+    "brent": -0.47,
+    "gold": 0.84,
+    "market": 8.04,
+    "usdegp": 0.25
+   },
+   "vol_ann_pct": 46.4,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.4,
+    "market": 30.1,
+    "stock_specific": 69.3,
+    "usdegp": 0.0
+   }
+  },
+  "AMER": {
+   "beta": {
+    "brent": -0.076,
+    "gold": 0.121,
+    "market": 1.986,
+    "usdegp": -0.259
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 4.8,
+     "sign": "+",
+     "t": 8.29
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": -1.28,
+     "sign": "-",
+     "t": -2.19
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.42,
+    "gold": 0.34,
+    "market": 4.8,
+    "usdegp": -1.28
+   },
+   "n_weeks": 156,
+   "r2": 0.342,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.72,
+    "gold": 0.58,
+    "market": 8.29,
+    "usdegp": -2.19
+   },
+   "vol_ann_pct": 62.9,
+   "weights_pct": {
+    "brent": 0.5,
+    "gold": 0.1,
+    "market": 31.0,
+    "stock_specific": 65.8,
+    "usdegp": 2.6
+   }
+  },
+  "AMES": {
+   "beta": {
+    "brent": 0.032,
+    "gold": 0.669,
+    "market": 0.455,
+    "usdegp": 0.066
+   },
+   "drivers": [
+    {
+     "driver": "gold",
+     "impact_1sd_pct": 1.88,
+     "sign": "+",
+     "t": 2.38
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.18,
+    "gold": 1.88,
+    "market": 1.1,
+    "usdegp": 0.32
+   },
+   "n_weeks": 150,
+   "r2": 0.054,
+   "sector": "Healthcare",
+   "t": {
+    "brent": 0.23,
+    "gold": 2.38,
+    "market": 1.39,
+    "usdegp": 0.42
+   },
+   "vol_ann_pct": 69.8,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 3.9,
+    "market": 1.3,
+    "stock_specific": 94.6,
+    "usdegp": 0.2
+   }
+  },
+  "AMIA": {
+   "beta": {
+    "brent": 0.022,
+    "gold": -0.128,
+    "market": 1.536,
+    "usdegp": -0.056
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.71,
+     "sign": "+",
+     "t": 7.52
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.12,
+    "gold": -0.36,
+    "market": 3.71,
+    "usdegp": -0.28
+   },
+   "n_weeks": 156,
+   "r2": 0.278,
+   "sector": "Financial Services",
+   "t": {
+    "brent": 0.24,
+    "gold": -0.73,
+    "market": 7.52,
+    "usdegp": -0.56
+   },
+   "vol_ann_pct": 51.2,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.2,
+    "market": 27.3,
+    "stock_specific": 72.2,
+    "usdegp": 0.3
+   }
+  },
+  "AMOC": {
+   "beta": {
+    "brent": 0.297,
+    "gold": -0.003,
+    "market": 0.991,
+    "usdegp": 0.058
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.39,
+     "sign": "+",
+     "t": 6.47
+    },
+    {
+     "driver": "brent",
+     "impact_1sd_pct": 1.64,
+     "sign": "+",
+     "t": 4.41
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 1.64,
+    "gold": -0.01,
+    "market": 2.39,
+    "usdegp": 0.28
+   },
+   "n_weeks": 156,
+   "r2": 0.279,
+   "sector": "Energy",
+   "t": {
+    "brent": 4.41,
+    "gold": -0.02,
+    "market": 6.47,
+    "usdegp": 0.76
+   },
+   "vol_ann_pct": 38.5,
+   "weights_pct": {
+    "brent": 8.6,
+    "gold": 0.0,
+    "market": 19.1,
+    "stock_specific": 72.0,
+    "usdegp": 0.3
+   }
+  },
+  "AMPI": {
+   "beta": {
+    "brent": -0.067,
+    "gold": 0.071,
+    "market": 1.151,
+    "usdegp": 0.798
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.78,
+     "sign": "+",
+     "t": 2.91
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.37,
+    "gold": 0.2,
+    "market": 2.78,
+    "usdegp": 3.94
+   },
+   "n_weeks": 106,
+   "r2": 0.079,
+   "sector": "Technology",
+   "t": {
+    "brent": -0.39,
+    "gold": 0.25,
+    "market": 2.91,
+    "usdegp": 0.85
+   },
+   "vol_ann_pct": 65.8,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.1,
+    "market": 7.6,
+    "stock_specific": 92.1,
+    "usdegp": 0.1
+   }
+  },
+  "APSW": {
+   "beta": {
+    "brent": -0.013,
+    "gold": -0.213,
+    "market": 0.47,
+    "usdegp": -0.001
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.14,
+     "sign": "+",
+     "t": 2.11
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.07,
+    "gold": -0.6,
+    "market": 1.14,
+    "usdegp": -0.0
+   },
+   "n_weeks": 156,
+   "r2": 0.036,
+   "sector": "Personal & Household",
+   "t": {
+    "brent": -0.13,
+    "gold": -1.11,
+    "market": 2.11,
+    "usdegp": -0.01
+   },
+   "vol_ann_pct": 48.4,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.8,
+    "market": 2.8,
+    "stock_specific": 96.4,
+    "usdegp": 0.0
+   }
+  },
+  "ARAB": {
+   "beta": {
+    "brent": -0.087,
+    "gold": -0.104,
+    "market": 1.127,
+    "usdegp": -0.002
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.72,
+     "sign": "+",
+     "t": 4.17
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.48,
+    "gold": -0.29,
+    "market": 2.72,
+    "usdegp": -0.01
+   },
+   "n_weeks": 155,
+   "r2": 0.111,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.74,
+    "gold": -0.45,
+    "market": 4.17,
+    "usdegp": -0.01
+   },
+   "vol_ann_pct": 60.9,
+   "weights_pct": {
+    "brent": 0.4,
+    "gold": 0.1,
+    "market": 10.5,
+    "stock_specific": 89.0,
+    "usdegp": 0.0
+   }
+  },
+  "ARCC": {
+   "beta": {
+    "brent": -0.077,
+    "gold": 0.37,
+    "market": 0.933,
+    "usdegp": -0.325
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.25,
+     "sign": "+",
+     "t": 3.94
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": -1.6,
+     "sign": "-",
+     "t": -2.78
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.43,
+    "gold": 1.04,
+    "market": 2.25,
+    "usdegp": -1.6
+   },
+   "n_weeks": 156,
+   "r2": 0.161,
+   "sector": "Building Materials",
+   "t": {
+    "brent": -0.74,
+    "gold": 1.81,
+    "market": 3.94,
+    "usdegp": -2.78
+   },
+   "vol_ann_pct": 55.0,
+   "weights_pct": {
+    "brent": 0.5,
+    "gold": 1.6,
+    "market": 9.3,
+    "stock_specific": 84.0,
+    "usdegp": 4.6
+   }
+  },
+  "AREH": {
+   "beta": {
+    "brent": -0.172,
+    "gold": -0.006,
+    "market": 1.295,
+    "usdegp": -0.053
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.13,
+     "sign": "+",
+     "t": 5.75
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.94,
+    "gold": -0.02,
+    "market": 3.13,
+    "usdegp": -0.26
+   },
+   "n_weeks": 156,
+   "r2": 0.203,
+   "sector": "Construction",
+   "t": {
+    "brent": -1.73,
+    "gold": -0.03,
+    "market": 5.75,
+    "usdegp": -0.48
+   },
+   "vol_ann_pct": 53.7,
+   "weights_pct": {
+    "brent": 2.0,
+    "gold": 0.0,
+    "market": 18.1,
+    "stock_specific": 79.6,
+    "usdegp": 0.3
+   }
+  },
+  "ASCM": {
+   "beta": {
+    "brent": -0.028,
+    "gold": 0.002,
+    "market": 1.414,
+    "usdegp": 0.08
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.42,
+     "sign": "+",
+     "t": 7.69
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.16,
+    "gold": 0.01,
+    "market": 3.42,
+    "usdegp": 0.39
+   },
+   "n_weeks": 155,
+   "r2": 0.286,
+   "sector": "Building Materials",
+   "t": {
+    "brent": -0.35,
+    "gold": 0.01,
+    "market": 7.69,
+    "usdegp": 0.88
+   },
+   "vol_ann_pct": 46.3,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.0,
+    "market": 28.3,
+    "stock_specific": 71.4,
+    "usdegp": 0.2
+   }
+  },
+  "ASPI": {
+   "beta": {
+    "brent": 0.083,
+    "gold": 0.064,
+    "market": 1.465,
+    "usdegp": -0.105
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.54,
+     "sign": "+",
+     "t": 7.42
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.46,
+    "gold": 0.18,
+    "market": 3.54,
+    "usdegp": -0.52
+   },
+   "n_weeks": 156,
+   "r2": 0.276,
+   "sector": "Financial Services",
+   "t": {
+    "brent": 0.96,
+    "gold": 0.37,
+    "market": 7.42,
+    "usdegp": -1.07
+   },
+   "vol_ann_pct": 49.5,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.1,
+    "market": 26.6,
+    "stock_specific": 72.3,
+    "usdegp": 0.8
+   }
+  },
+  "ATLC": {
+   "beta": {
+    "brent": -0.019,
+    "gold": -0.244,
+    "market": 1.255,
+    "usdegp": -0.063
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.03,
+     "sign": "+",
+     "t": 6.44
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.11,
+    "gold": -0.68,
+    "market": 3.03,
+    "usdegp": -0.31
+   },
+   "n_weeks": 156,
+   "r2": 0.229,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.23,
+    "gold": -1.45,
+    "market": 6.44,
+    "usdegp": -0.65
+   },
+   "vol_ann_pct": 47.3,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 1.0,
+    "market": 21.4,
+    "stock_specific": 77.1,
+    "usdegp": 0.4
+   }
+  },
+  "ATQA": {
+   "beta": {
+    "brent": -0.04,
+    "gold": 0.047,
+    "market": 1.242,
+    "usdegp": -0.198
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.0,
+     "sign": "+",
+     "t": 6.32
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": -0.98,
+     "sign": "-",
+     "t": -2.06
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.22,
+    "gold": 0.13,
+    "market": 3.0,
+    "usdegp": -0.98
+   },
+   "n_weeks": 155,
+   "r2": 0.239,
+   "sector": "Industrial Goods",
+   "t": {
+    "brent": -0.46,
+    "gold": 0.28,
+    "market": 6.32,
+    "usdegp": -2.06
+   },
+   "vol_ann_pct": 47.7,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.0,
+    "market": 21.0,
+    "stock_specific": 76.1,
+    "usdegp": 2.6
+   }
+  },
+  "AXPH": {
+   "beta": {
+    "brent": 0.009,
+    "gold": 0.09,
+    "market": 0.476,
+    "usdegp": 0.026
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.15,
+     "sign": "+",
+     "t": 3.0
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.05,
+    "gold": 0.25,
+    "market": 1.15,
+    "usdegp": 0.13
+   },
+   "n_weeks": 156,
+   "r2": 0.06,
+   "sector": "Healthcare",
+   "t": {
+    "brent": 0.13,
+    "gold": 0.66,
+    "market": 3.0,
+    "usdegp": 0.33
+   },
+   "vol_ann_pct": 34.9,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.3,
+    "market": 5.6,
+    "stock_specific": 94.1,
+    "usdegp": 0.0
+   }
+  },
+  "BIDI": {
+   "beta": {
+    "brent": -0.129,
+    "gold": -0.06,
+    "market": -0.286,
+    "usdegp": -0.021
+   },
+   "drivers": [],
+   "impact_1sd_pct": {
+    "brent": -0.71,
+    "gold": -0.17,
+    "market": -0.69,
+    "usdegp": -0.1
+   },
+   "n_weeks": 142,
+   "r2": 0.024,
+   "sector": "Paper & Packaging",
+   "t": {
+    "brent": -1.32,
+    "gold": -0.33,
+    "market": -1.32,
+    "usdegp": -0.21
+   },
+   "vol_ann_pct": 43.5,
+   "weights_pct": {
+    "brent": 1.1,
+    "gold": 0.1,
+    "market": 1.1,
+    "stock_specific": 97.7,
+    "usdegp": 0.0
+   }
+  },
+  "BIGP": {
+   "beta": {
+    "brent": 0.022,
+    "gold": -0.203,
+    "market": 0.848,
+    "usdegp": -0.024
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.05,
+     "sign": "+",
+     "t": 5.01
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.12,
+    "gold": -0.57,
+    "market": 2.05,
+    "usdegp": -0.12
+   },
+   "n_weeks": 155,
+   "r2": 0.153,
+   "sector": "Trade & Distributors",
+   "t": {
+    "brent": 0.3,
+    "gold": -1.39,
+    "market": 5.01,
+    "usdegp": -0.29
+   },
+   "vol_ann_pct": 39.0,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 1.1,
+    "market": 14.2,
+    "stock_specific": 84.6,
+    "usdegp": 0.1
+   }
+  },
+  "BINV": {
+   "beta": {
+    "brent": -0.104,
+    "gold": 0.031,
+    "market": 1.017,
+    "usdegp": -0.061
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.46,
+     "sign": "+",
+     "t": 5.66
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.57,
+    "gold": 0.09,
+    "market": 2.46,
+    "usdegp": -0.3
+   },
+   "n_weeks": 156,
+   "r2": 0.194,
+   "sector": "Financial Services",
+   "t": {
+    "brent": -1.32,
+    "gold": 0.2,
+    "market": 5.66,
+    "usdegp": -0.69
+   },
+   "vol_ann_pct": 42.6,
+   "weights_pct": {
+    "brent": 1.3,
+    "gold": 0.0,
+    "market": 17.7,
+    "stock_specific": 80.6,
+    "usdegp": 0.4
+   }
+  },
+  "BIOC": {
+   "beta": {
+    "brent": 0.137,
+    "gold": 0.139,
+    "market": 1.42,
+    "usdegp": -0.124
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.43,
+     "sign": "+",
+     "t": 6.83
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.76,
+    "gold": 0.39,
+    "market": 3.43,
+    "usdegp": -0.61
+   },
+   "n_weeks": 154,
+   "r2": 0.253,
+   "sector": "Healthcare",
+   "t": {
+    "brent": 1.49,
+    "gold": 0.78,
+    "market": 6.83,
+    "usdegp": -1.22
+   },
+   "vol_ann_pct": 50.7,
+   "weights_pct": {
+    "brent": 0.7,
+    "gold": 0.3,
+    "market": 23.5,
+    "stock_specific": 74.6,
+    "usdegp": 0.9
+   }
+  },
+  "BTFH": {
+   "beta": {
+    "brent": -0.038,
+    "gold": 0.061,
+    "market": 0.899,
+    "usdegp": 0.025
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.17,
+     "sign": "+",
+     "t": 6.04
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.21,
+    "gold": 0.17,
+    "market": 2.17,
+    "usdegp": 0.12
+   },
+   "n_weeks": 156,
+   "r2": 0.2,
+   "sector": "Financial Services",
+   "t": {
+    "brent": -0.58,
+    "gold": 0.47,
+    "market": 6.04,
+    "usdegp": 0.34
+   },
+   "vol_ann_pct": 35.4,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.2,
+    "market": 19.6,
+    "stock_specific": 79.9,
+    "usdegp": 0.0
+   }
+  },
+  "CAED": {
+   "beta": {
+    "brent": -0.042,
+    "gold": 0.167,
+    "market": 0.509,
+    "usdegp": -0.015
+   },
+   "drivers": [],
+   "impact_1sd_pct": {
+    "brent": -0.23,
+    "gold": 0.47,
+    "market": 1.23,
+    "usdegp": -0.07
+   },
+   "n_weeks": 152,
+   "r2": 0.028,
+   "sector": "Consumer Services",
+   "t": {
+    "brent": -0.36,
+    "gold": 0.73,
+    "market": 1.85,
+    "usdegp": -0.12
+   },
+   "vol_ann_pct": 56.4,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.4,
+    "market": 2.3,
+    "stock_specific": 97.2,
+    "usdegp": 0.0
+   }
+  },
+  "CANA": {
+   "beta": {
+    "brent": 0.025,
+    "gold": 0.05,
+    "market": 0.686,
+    "usdegp": 0.173
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.66,
+     "sign": "+",
+     "t": 3.28
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.14,
+    "gold": 0.14,
+    "market": 1.66,
+    "usdegp": 0.85
+   },
+   "n_weeks": 156,
+   "r2": 0.081,
+   "sector": "Banks",
+   "t": {
+    "brent": 0.27,
+    "gold": 0.28,
+    "market": 3.28,
+    "usdegp": 1.68
+   },
+   "vol_ann_pct": 46.4,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.1,
+    "market": 6.4,
+    "stock_specific": 91.9,
+    "usdegp": 1.6
+   }
+  },
+  "CCAP": {
+   "beta": {
+    "brent": 0.139,
+    "gold": -0.128,
+    "market": 1.107,
+    "usdegp": 0.018
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.67,
+     "sign": "+",
+     "t": 5.62
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.77,
+    "gold": -0.36,
+    "market": 2.67,
+    "usdegp": 0.09
+   },
+   "n_weeks": 156,
+   "r2": 0.182,
+   "sector": "Diversified",
+   "t": {
+    "brent": 1.61,
+    "gold": -0.75,
+    "market": 5.62,
+    "usdegp": 0.19
+   },
+   "vol_ann_pct": 46.4,
+   "weights_pct": {
+    "brent": 1.1,
+    "gold": 0.3,
+    "market": 16.8,
+    "stock_specific": 81.8,
+    "usdegp": 0.0
+   }
+  },
+  "CCRS": {
+   "beta": {
+    "brent": 0.008,
+    "gold": -0.079,
+    "market": 0.94,
+    "usdegp": 0.006
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.27,
+     "sign": "+",
+     "t": 4.06
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.04,
+    "gold": -0.22,
+    "market": 2.27,
+    "usdegp": 0.03
+   },
+   "n_weeks": 155,
+   "r2": 0.1,
+   "sector": "Real Estate",
+   "t": {
+    "brent": 0.08,
+    "gold": -0.4,
+    "market": 4.06,
+    "usdegp": 0.05
+   },
+   "vol_ann_pct": 52.0,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.1,
+    "market": 9.9,
+    "stock_specific": 90.0,
+    "usdegp": 0.0
+   }
+  },
+  "CEFM": {
+   "beta": {
+    "brent": 0.196,
+    "gold": 0.163,
+    "market": 0.753,
+    "usdegp": -0.015
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.82,
+     "sign": "+",
+     "t": 4.44
+    },
+    {
+     "driver": "brent",
+     "impact_1sd_pct": 1.08,
+     "sign": "+",
+     "t": 2.63
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 1.08,
+    "gold": 0.46,
+    "market": 1.82,
+    "usdegp": -0.08
+   },
+   "n_weeks": 156,
+   "r2": 0.15,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": 2.63,
+    "gold": 1.12,
+    "market": 4.44,
+    "usdegp": -0.18
+   },
+   "vol_ann_pct": 39.2,
+   "weights_pct": {
+    "brent": 3.4,
+    "gold": 0.7,
+    "market": 10.9,
+    "stock_specific": 85.0,
+    "usdegp": 0.0
+   }
+  },
+  "CERA": {
+   "beta": {
+    "brent": 0.005,
+    "gold": -0.275,
+    "market": 1.481,
+    "usdegp": -0.074
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.58,
+     "sign": "+",
+     "t": 6.67
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.02,
+    "gold": -0.77,
+    "market": 3.58,
+    "usdegp": -0.37
+   },
+   "n_weeks": 156,
+   "r2": 0.24,
+   "sector": "Building Materials",
+   "t": {
+    "brent": 0.05,
+    "gold": -1.43,
+    "market": 6.67,
+    "usdegp": -0.68
+   },
+   "vol_ann_pct": 54.3,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 1.0,
+    "market": 22.6,
+    "stock_specific": 76.0,
+    "usdegp": 0.4
+   }
+  },
+  "CFGH": {
+   "beta": {
+    "brent": 0.041,
+    "gold": 0.18,
+    "market": 0.294,
+    "usdegp": -0.015
+   },
+   "drivers": [],
+   "impact_1sd_pct": {
+    "brent": 0.22,
+    "gold": 0.51,
+    "market": 0.71,
+    "usdegp": -0.08
+   },
+   "n_weeks": 151,
+   "r2": 0.025,
+   "sector": "Retail",
+   "t": {
+    "brent": 0.49,
+    "gold": 1.09,
+    "market": 1.52,
+    "usdegp": -0.16
+   },
+   "vol_ann_pct": 40.9,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.8,
+    "market": 1.6,
+    "stock_specific": 97.5,
+    "usdegp": 0.0
+   }
+  },
+  "CICH": {
+   "beta": {
+    "brent": 0.03,
+    "gold": 0.067,
+    "market": 1.082,
+    "usdegp": -0.06
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.61,
+     "sign": "+",
+     "t": 8.34
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.17,
+    "gold": 0.19,
+    "market": 2.61,
+    "usdegp": -0.29
+   },
+   "n_weeks": 156,
+   "r2": 0.323,
+   "sector": "Financial Services",
+   "t": {
+    "brent": 0.53,
+    "gold": 0.6,
+    "market": 8.34,
+    "usdegp": -0.93
+   },
+   "vol_ann_pct": 33.6,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.2,
+    "market": 31.6,
+    "stock_specific": 67.6,
+    "usdegp": 0.6
+   }
+  },
+  "CIEB": {
+   "beta": {
+    "brent": -0.067,
+    "gold": 0.11,
+    "market": 0.728,
+    "usdegp": 0.229
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.76,
+     "sign": "+",
+     "t": 4.91
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": 1.13,
+     "sign": "+",
+     "t": 3.12
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.37,
+    "gold": 0.31,
+    "market": 1.76,
+    "usdegp": 1.13
+   },
+   "n_weeks": 156,
+   "r2": 0.189,
+   "sector": "Banks",
+   "t": {
+    "brent": -1.03,
+    "gold": 0.86,
+    "market": 4.91,
+    "usdegp": 3.12
+   },
+   "vol_ann_pct": 35.1,
+   "weights_pct": {
+    "brent": 0.6,
+    "gold": 0.6,
+    "market": 12.7,
+    "stock_specific": 81.3,
+    "usdegp": 4.8
+   }
+  },
+  "CIRA": {
+   "beta": {
+    "brent": -0.016,
+    "gold": -0.097,
+    "market": 0.68,
+    "usdegp": -0.007
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.64,
+     "sign": "+",
+     "t": 4.73
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.09,
+    "gold": -0.27,
+    "market": 1.64,
+    "usdegp": -0.03
+   },
+   "n_weeks": 156,
+   "r2": 0.134,
+   "sector": "Education",
+   "t": {
+    "brent": -0.25,
+    "gold": -0.78,
+    "market": 4.73,
+    "usdegp": -0.1
+   },
+   "vol_ann_pct": 32.9,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.3,
+    "market": 13.0,
+    "stock_specific": 86.6,
+    "usdegp": 0.0
+   }
+  },
+  "CLHO": {
+   "beta": {
+    "brent": 0.057,
+    "gold": 0.017,
+    "market": 0.667,
+    "usdegp": -0.005
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.61,
+     "sign": "+",
+     "t": 4.32
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.32,
+    "gold": 0.05,
+    "market": 1.61,
+    "usdegp": -0.03
+   },
+   "n_weeks": 156,
+   "r2": 0.112,
+   "sector": "Healthcare",
+   "t": {
+    "brent": 0.84,
+    "gold": 0.13,
+    "market": 4.32,
+    "usdegp": -0.07
+   },
+   "vol_ann_pct": 34.9,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.0,
+    "market": 10.9,
+    "stock_specific": 88.8,
+    "usdegp": 0.0
+   }
+  },
+  "CNFN": {
+   "beta": {
+    "brent": -0.064,
+    "gold": -0.152,
+    "market": 0.816,
+    "usdegp": -0.048
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.97,
+     "sign": "+",
+     "t": 4.61
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.35,
+    "gold": -0.43,
+    "market": 1.97,
+    "usdegp": -0.24
+   },
+   "n_weeks": 156,
+   "r2": 0.138,
+   "sector": "Financial Services",
+   "t": {
+    "brent": -0.82,
+    "gold": -1.0,
+    "market": 4.61,
+    "usdegp": -0.55
+   },
+   "vol_ann_pct": 40.6,
+   "weights_pct": {
+    "brent": 0.5,
+    "gold": 0.5,
+    "market": 12.4,
+    "stock_specific": 86.3,
+    "usdegp": 0.3
+   }
+  },
+  "COMI": {
+   "beta": {
+    "brent": -0.105,
+    "gold": -0.008,
+    "market": 0.286,
+    "usdegp": 0.191
+   },
+   "drivers": [
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": 0.94,
+     "sign": "+",
+     "t": 2.98
+    },
+    {
+     "driver": "market",
+     "impact_1sd_pct": 0.69,
+     "sign": "+",
+     "t": 2.21
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.58,
+    "gold": -0.02,
+    "market": 0.69,
+    "usdegp": 0.94
+   },
+   "n_weeks": 156,
+   "r2": 0.097,
+   "sector": "Banks",
+   "t": {
+    "brent": -1.84,
+    "gold": -0.07,
+    "market": 2.21,
+    "usdegp": 2.98
+   },
+   "vol_ann_pct": 29.1,
+   "weights_pct": {
+    "brent": 1.9,
+    "gold": 0.0,
+    "market": 2.8,
+    "stock_specific": 90.4,
+    "usdegp": 4.9
+   }
+  },
+  "COPR": {
+   "beta": {
+    "brent": 0.083,
+    "gold": 0.274,
+    "market": 0.968,
+    "usdegp": -0.163
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.34,
+     "sign": "+",
+     "t": 2.98
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.46,
+    "gold": 0.77,
+    "market": 2.34,
+    "usdegp": -0.8
+   },
+   "n_weeks": 156,
+   "r2": 0.069,
+   "sector": "Real Estate",
+   "t": {
+    "brent": 0.58,
+    "gold": 0.98,
+    "market": 2.98,
+    "usdegp": -1.02
+   },
+   "vol_ann_pct": 71.7,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.6,
+    "market": 5.6,
+    "stock_specific": 93.0,
+    "usdegp": 0.7
+   }
+  },
+  "COSG": {
+   "beta": {
+    "brent": -0.003,
+    "gold": -0.014,
+    "market": 1.355,
+    "usdegp": 0.001
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.27,
+     "sign": "+",
+     "t": 7.16
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.02,
+    "gold": -0.04,
+    "market": 3.27,
+    "usdegp": 0.0
+   },
+   "n_weeks": 155,
+   "r2": 0.256,
+   "sector": "Personal & Household",
+   "t": {
+    "brent": -0.04,
+    "gold": -0.09,
+    "market": 7.16,
+    "usdegp": 0.01
+   },
+   "vol_ann_pct": 46.8,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.0,
+    "market": 25.6,
+    "stock_specific": 74.4,
+    "usdegp": 0.0
+   }
+  },
+  "CPCI": {
+   "beta": {
+    "brent": 0.023,
+    "gold": 0.057,
+    "market": 0.918,
+    "usdegp": -0.036
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.22,
+     "sign": "+",
+     "t": 5.52
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.13,
+    "gold": 0.16,
+    "market": 2.22,
+    "usdegp": -0.18
+   },
+   "n_weeks": 156,
+   "r2": 0.172,
+   "sector": "Healthcare",
+   "t": {
+    "brent": 0.31,
+    "gold": 0.4,
+    "market": 5.52,
+    "usdegp": -0.44
+   },
+   "vol_ann_pct": 38.9,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.1,
+    "market": 16.9,
+    "stock_specific": 82.8,
+    "usdegp": 0.2
+   }
+  },
+  "CSAG": {
+   "beta": {
+    "brent": -0.09,
+    "gold": 0.095,
+    "market": 1.487,
+    "usdegp": -0.035
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.59,
+     "sign": "+",
+     "t": 8.18
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.5,
+    "gold": 0.27,
+    "market": 3.59,
+    "usdegp": -0.17
+   },
+   "n_weeks": 154,
+   "r2": 0.324,
+   "sector": "Transportation",
+   "t": {
+    "brent": -1.14,
+    "gold": 0.6,
+    "market": 8.18,
+    "usdegp": -0.4
+   },
+   "vol_ann_pct": 46.9,
+   "weights_pct": {
+    "brent": 0.9,
+    "gold": 0.2,
+    "market": 31.1,
+    "stock_specific": 67.6,
+    "usdegp": 0.2
+   }
+  },
+  "DAPH": {
+   "beta": {
+    "brent": -0.027,
+    "gold": 0.041,
+    "market": 1.412,
+    "usdegp": 0.172
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.41,
+     "sign": "+",
+     "t": 5.55
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.15,
+    "gold": 0.11,
+    "market": 3.41,
+    "usdegp": 0.85
+   },
+   "n_weeks": 154,
+   "r2": 0.173,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.22,
+    "gold": 0.19,
+    "market": 5.55,
+    "usdegp": 0.25
+   },
+   "vol_ann_pct": 58.9,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.0,
+    "market": 17.3,
+    "stock_specific": 82.6,
+    "usdegp": 0.0
+   }
+  },
+  "DOMT": {
+   "beta": {
+    "brent": -0.061,
+    "gold": -0.009,
+    "market": 1.073,
+    "usdegp": -0.113
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.59,
+     "sign": "+",
+     "t": 5.01
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.34,
+    "gold": -0.03,
+    "market": 2.59,
+    "usdegp": -0.56
+   },
+   "n_weeks": 156,
+   "r2": 0.157,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -0.65,
+    "gold": -0.05,
+    "market": 5.01,
+    "usdegp": -1.07
+   },
+   "vol_ann_pct": 49.7,
+   "weights_pct": {
+    "brent": 0.4,
+    "gold": 0.0,
+    "market": 14.4,
+    "stock_specific": 84.3,
+    "usdegp": 0.9
+   }
+  },
+  "DSCW": {
+   "beta": {
+    "brent": -0.041,
+    "gold": 0.024,
+    "market": 1.246,
+    "usdegp": 0.009
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.01,
+     "sign": "+",
+     "t": 6.41
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.22,
+    "gold": 0.07,
+    "market": 3.01,
+    "usdegp": 0.04
+   },
+   "n_weeks": 156,
+   "r2": 0.218,
+   "sector": "Personal & Household",
+   "t": {
+    "brent": -0.48,
+    "gold": 0.14,
+    "market": 6.41,
+    "usdegp": 0.09
+   },
+   "vol_ann_pct": 46.8,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.0,
+    "market": 21.6,
+    "stock_specific": 78.2,
+    "usdegp": 0.0
+   }
+  },
+  "DTPP": {
+   "beta": {
+    "brent": 0.016,
+    "gold": -0.324,
+    "market": 0.917,
+    "usdegp": 0.043
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.21,
+     "sign": "+",
+     "t": 3.36
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.09,
+    "gold": -0.91,
+    "market": 2.21,
+    "usdegp": 0.21
+   },
+   "n_weeks": 155,
+   "r2": 0.079,
+   "sector": "Paper & Packaging",
+   "t": {
+    "brent": 0.13,
+    "gold": -1.38,
+    "market": 3.36,
+    "usdegp": 0.32
+   },
+   "vol_ann_pct": 60.6,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 1.1,
+    "market": 6.9,
+    "stock_specific": 92.0,
+    "usdegp": 0.0
+   }
+  },
+  "EALR": {
+   "beta": {
+    "brent": 0.065,
+    "gold": -0.075,
+    "market": 0.875,
+    "usdegp": 0.088
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.11,
+     "sign": "+",
+     "t": 3.04
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.36,
+    "gold": -0.21,
+    "market": 2.11,
+    "usdegp": 0.43
+   },
+   "n_weeks": 153,
+   "r2": 0.062,
+   "sector": "Real Estate",
+   "t": {
+    "brent": 0.53,
+    "gold": -0.31,
+    "market": 3.04,
+    "usdegp": 0.65
+   },
+   "vol_ann_pct": 60.6,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.0,
+    "market": 5.8,
+    "stock_specific": 93.8,
+    "usdegp": 0.2
+   }
+  },
+  "EASB": {
+   "beta": {
+    "brent": -0.086,
+    "gold": -0.168,
+    "market": 0.722,
+    "usdegp": 0.017
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.74,
+     "sign": "+",
+     "t": 2.43
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.47,
+    "gold": -0.47,
+    "market": 1.74,
+    "usdegp": 0.08
+   },
+   "n_weeks": 155,
+   "r2": 0.044,
+   "sector": "Financial Services",
+   "t": {
+    "brent": -0.65,
+    "gold": -0.65,
+    "market": 2.43,
+    "usdegp": 0.11
+   },
+   "vol_ann_pct": 64.8,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.2,
+    "market": 3.8,
+    "stock_specific": 95.7,
+    "usdegp": 0.0
+   }
+  },
+  "EAST": {
+   "beta": {
+    "brent": -0.053,
+    "gold": -0.069,
+    "market": 0.674,
+    "usdegp": -0.02
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.63,
+     "sign": "+",
+     "t": 4.02
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.29,
+    "gold": -0.19,
+    "market": 1.63,
+    "usdegp": -0.1
+   },
+   "n_weeks": 156,
+   "r2": 0.104,
+   "sector": "Personal & Household",
+   "t": {
+    "brent": -0.72,
+    "gold": -0.48,
+    "market": 4.02,
+    "usdegp": -0.24
+   },
+   "vol_ann_pct": 37.7,
+   "weights_pct": {
+    "brent": 0.4,
+    "gold": 0.1,
+    "market": 9.8,
+    "stock_specific": 89.6,
+    "usdegp": 0.1
+   }
+  },
+  "EBSC": {
+   "beta": {
+    "brent": -0.081,
+    "gold": 0.144,
+    "market": 1.146,
+    "usdegp": -0.031
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.77,
+     "sign": "+",
+     "t": 3.78
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.45,
+    "gold": 0.4,
+    "market": 2.77,
+    "usdegp": -0.15
+   },
+   "n_weeks": 156,
+   "r2": 0.094,
+   "sector": "Financial Services",
+   "t": {
+    "brent": -0.61,
+    "gold": 0.55,
+    "market": 3.78,
+    "usdegp": -0.21
+   },
+   "vol_ann_pct": 67.8,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.2,
+    "market": 8.8,
+    "stock_specific": 90.6,
+    "usdegp": 0.1
+   }
+  },
+  "ECAP": {
+   "beta": {
+    "brent": -0.114,
+    "gold": 0.049,
+    "market": 1.525,
+    "usdegp": -0.077
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.68,
+     "sign": "+",
+     "t": 9.19
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.63,
+    "gold": 0.14,
+    "market": 3.68,
+    "usdegp": -0.38
+   },
+   "n_weeks": 156,
+   "r2": 0.379,
+   "sector": "Building Materials",
+   "t": {
+    "brent": -1.56,
+    "gold": 0.35,
+    "market": 9.19,
+    "usdegp": -0.94
+   },
+   "vol_ann_pct": 44.9,
+   "weights_pct": {
+    "brent": 1.5,
+    "gold": 0.1,
+    "market": 35.7,
+    "stock_specific": 62.1,
+    "usdegp": 0.6
+   }
+  },
+  "EDFM": {
+   "beta": {
+    "brent": 0.06,
+    "gold": -0.109,
+    "market": 0.604,
+    "usdegp": -0.067
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.46,
+     "sign": "+",
+     "t": 4.93
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.33,
+    "gold": -0.31,
+    "market": 1.46,
+    "usdegp": -0.33
+   },
+   "n_weeks": 156,
+   "r2": 0.156,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": 1.11,
+    "gold": -1.03,
+    "market": 4.93,
+    "usdegp": -1.11
+   },
+   "vol_ann_pct": 28.4,
+   "weights_pct": {
+    "brent": 0.5,
+    "gold": 0.6,
+    "market": 13.6,
+    "stock_specific": 84.4,
+    "usdegp": 0.9
+   }
+  },
+  "EEII": {
+   "beta": {
+    "brent": -0.019,
+    "gold": -0.289,
+    "market": 1.505,
+    "usdegp": -0.069
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.64,
+     "sign": "+",
+     "t": 9.29
+    },
+    {
+     "driver": "gold",
+     "impact_1sd_pct": -0.81,
+     "sign": "-",
+     "t": -2.07
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.1,
+    "gold": -0.81,
+    "market": 3.64,
+    "usdegp": -0.34
+   },
+   "n_weeks": 156,
+   "r2": 0.381,
+   "sector": "Industrial Goods",
+   "t": {
+    "brent": -0.27,
+    "gold": -2.07,
+    "market": 9.29,
+    "usdegp": -0.86
+   },
+   "vol_ann_pct": 43.9,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 1.7,
+    "market": 35.8,
+    "stock_specific": 61.8,
+    "usdegp": 0.6
+   }
+  },
+  "EFIC": {
+   "beta": {
+    "brent": -0.055,
+    "gold": 0.009,
+    "market": 0.963,
+    "usdegp": 0.226
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.33,
+     "sign": "+",
+     "t": 4.12
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.31,
+    "gold": 0.03,
+    "market": 2.33,
+    "usdegp": 1.12
+   },
+   "n_weeks": 156,
+   "r2": 0.119,
+   "sector": "Chemicals",
+   "t": {
+    "brent": -0.54,
+    "gold": 0.04,
+    "market": 4.12,
+    "usdegp": 1.96
+   },
+   "vol_ann_pct": 53.1,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.0,
+    "market": 9.8,
+    "stock_specific": 88.1,
+    "usdegp": 1.9
+   }
+  },
+  "EFID": {
+   "beta": {
+    "brent": -0.023,
+    "gold": 0.118,
+    "market": 0.73,
+    "usdegp": -0.148
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.76,
+     "sign": "+",
+     "t": 5.04
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": -0.73,
+     "sign": "-",
+     "t": -2.07
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.12,
+    "gold": 0.33,
+    "market": 1.76,
+    "usdegp": -0.73
+   },
+   "n_weeks": 155,
+   "r2": 0.179,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -0.35,
+    "gold": 0.94,
+    "market": 5.04,
+    "usdegp": -2.07
+   },
+   "vol_ann_pct": 34.0,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.4,
+    "market": 14.6,
+    "stock_specific": 82.1,
+    "usdegp": 2.7
+   }
+  },
+  "EFIH": {
+   "beta": {
+    "brent": -0.113,
+    "gold": 0.107,
+    "market": 0.604,
+    "usdegp": 0.069
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.46,
+     "sign": "+",
+     "t": 3.13
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.62,
+    "gold": 0.3,
+    "market": 1.46,
+    "usdegp": 0.34
+   },
+   "n_weeks": 156,
+   "r2": 0.079,
+   "sector": "Financial Services",
+   "t": {
+    "brent": -1.33,
+    "gold": 0.64,
+    "market": 3.13,
+    "usdegp": 0.72
+   },
+   "vol_ann_pct": 42.9,
+   "weights_pct": {
+    "brent": 1.2,
+    "gold": 0.3,
+    "market": 6.1,
+    "stock_specific": 92.2,
+    "usdegp": 0.2
+   }
+  },
+  "EGAL": {
+   "beta": {
+    "brent": 0.174,
+    "gold": 0.076,
+    "market": 1.423,
+    "usdegp": -0.004
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.44,
+     "sign": "+",
+     "t": 6.21
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.96,
+    "gold": 0.21,
+    "market": 3.44,
+    "usdegp": -0.02
+   },
+   "n_weeks": 156,
+   "r2": 0.212,
+   "sector": "Basic Resources",
+   "t": {
+    "brent": 1.73,
+    "gold": 0.39,
+    "market": 6.21,
+    "usdegp": -0.03
+   },
+   "vol_ann_pct": 55.0,
+   "weights_pct": {
+    "brent": 1.2,
+    "gold": 0.1,
+    "market": 20.0,
+    "stock_specific": 78.7,
+    "usdegp": 0.0
+   }
+  },
+  "EGAS": {
+   "beta": {
+    "brent": 0.05,
+    "gold": 0.084,
+    "market": 1.025,
+    "usdegp": 0.072
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.48,
+     "sign": "+",
+     "t": 5.62
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.27,
+    "gold": 0.24,
+    "market": 2.48,
+    "usdegp": 0.36
+   },
+   "n_weeks": 156,
+   "r2": 0.177,
+   "sector": "Utilities",
+   "t": {
+    "brent": 0.62,
+    "gold": 0.53,
+    "market": 5.62,
+    "usdegp": 0.8
+   },
+   "vol_ann_pct": 42.9,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.2,
+    "market": 17.1,
+    "stock_specific": 82.4,
+    "usdegp": 0.2
+   }
+  },
+  "EGBE": {
+   "beta": {
+    "brent": -0.064,
+    "gold": 0.023,
+    "market": 0.27,
+    "usdegp": -0.122
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 0.65,
+     "sign": "+",
+     "t": 2.16
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.35,
+    "gold": 0.06,
+    "market": 0.65,
+    "usdegp": -0.6
+   },
+   "n_weeks": 156,
+   "r2": 0.07,
+   "sector": "Banks",
+   "t": {
+    "brent": -1.16,
+    "gold": 0.21,
+    "market": 2.16,
+    "usdegp": -1.97
+   },
+   "vol_ann_pct": 27.7,
+   "weights_pct": {
+    "brent": 1.1,
+    "gold": 0.0,
+    "market": 3.2,
+    "stock_specific": 93.0,
+    "usdegp": 2.7
+   }
+  },
+  "EGCH": {
+   "beta": {
+    "brent": 0.046,
+    "gold": 0.019,
+    "market": 1.209,
+    "usdegp": 0.02
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.92,
+     "sign": "+",
+     "t": 6.21
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.26,
+    "gold": 0.05,
+    "market": 2.92,
+    "usdegp": 0.1
+   },
+   "n_weeks": 156,
+   "r2": 0.204,
+   "sector": "Chemicals",
+   "t": {
+    "brent": 0.54,
+    "gold": 0.11,
+    "market": 6.21,
+    "usdegp": 0.21
+   },
+   "vol_ann_pct": 46.5,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.0,
+    "market": 20.4,
+    "stock_specific": 79.6,
+    "usdegp": 0.0
+   }
+  },
+  "EGREF": {
+   "beta": {
+    "brent": 0.029,
+    "gold": 0.171,
+    "market": 0.536,
+    "usdegp": -0.012
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.3,
+     "sign": "+",
+     "t": 2.3
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.16,
+    "gold": 0.48,
+    "market": 1.3,
+    "usdegp": -0.06
+   },
+   "n_weeks": 139,
+   "r2": 0.044,
+   "sector": "Financial Services",
+   "t": {
+    "brent": 0.29,
+    "gold": 0.87,
+    "market": 2.3,
+    "usdegp": -0.11
+   },
+   "vol_ann_pct": 47.2,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.6,
+    "market": 3.8,
+    "stock_specific": 95.6,
+    "usdegp": 0.0
+   }
+  },
+  "EGSA": {
+   "beta": {
+    "brent": 0.001,
+    "gold": -0.063,
+    "market": 0.023,
+    "usdegp": 0.01
+   },
+   "drivers": [],
+   "impact_1sd_pct": {
+    "brent": 0.01,
+    "gold": -0.18,
+    "market": 0.05,
+    "usdegp": 0.05
+   },
+   "n_weeks": 156,
+   "r2": 0.007,
+   "sector": "Media",
+   "t": {
+    "brent": 0.03,
+    "gold": -0.99,
+    "market": 0.31,
+    "usdegp": 0.28
+   },
+   "vol_ann_pct": 15.7,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.6,
+    "market": 0.1,
+    "stock_specific": 99.3,
+    "usdegp": 0.0
+   }
+  },
+  "EGTS": {
+   "beta": {
+    "brent": -0.039,
+    "gold": -0.239,
+    "market": 0.65,
+    "usdegp": -0.11
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.57,
+     "sign": "+",
+     "t": 2.72
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.22,
+    "gold": -0.67,
+    "market": 1.57,
+    "usdegp": -0.54
+   },
+   "n_weeks": 156,
+   "r2": 0.065,
+   "sector": "Travel & Leisure",
+   "t": {
+    "brent": -0.37,
+    "gold": -1.16,
+    "market": 2.72,
+    "usdegp": -0.93
+   },
+   "vol_ann_pct": 52.6,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.9,
+    "market": 4.7,
+    "stock_specific": 93.5,
+    "usdegp": 0.8
+   }
+  },
+  "EHDR": {
+   "beta": {
+    "brent": 0.037,
+    "gold": 0.131,
+    "market": 0.955,
+    "usdegp": -0.012
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.31,
+     "sign": "+",
+     "t": 5.98
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.2,
+    "gold": 0.37,
+    "market": 2.31,
+    "usdegp": -0.06
+   },
+   "n_weeks": 155,
+   "r2": 0.199,
+   "sector": null,
+   "t": {
+    "brent": 0.53,
+    "gold": 0.95,
+    "market": 5.98,
+    "usdegp": -0.15
+   },
+   "vol_ann_pct": 37.8,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.6,
+    "market": 19.3,
+    "stock_specific": 80.1,
+    "usdegp": 0.0
+   }
+  },
+  "ELEC": {
+   "beta": {
+    "brent": -0.033,
+    "gold": -0.281,
+    "market": 1.536,
+    "usdegp": 0.039
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.71,
+     "sign": "+",
+     "t": 7.89
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.18,
+    "gold": -0.79,
+    "market": 3.71,
+    "usdegp": 0.19
+   },
+   "n_weeks": 155,
+   "r2": 0.303,
+   "sector": "Industrial Goods",
+   "t": {
+    "brent": -0.39,
+    "gold": -1.67,
+    "market": 7.89,
+    "usdegp": 0.4
+   },
+   "vol_ann_pct": 49.6,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 1.1,
+    "market": 29.1,
+    "stock_specific": 69.6,
+    "usdegp": 0.0
+   }
+  },
+  "ELKA": {
+   "beta": {
+    "brent": -0.04,
+    "gold": -0.296,
+    "market": 2.164,
+    "usdegp": 0.056
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 5.23,
+     "sign": "+",
+     "t": 9.79
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.22,
+    "gold": -0.83,
+    "market": 5.23,
+    "usdegp": 0.28
+   },
+   "n_weeks": 156,
+   "r2": 0.395,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.42,
+    "gold": -1.55,
+    "market": 9.79,
+    "usdegp": 0.52
+   },
+   "vol_ann_pct": 60.5,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.8,
+    "market": 38.6,
+    "stock_specific": 60.4,
+    "usdegp": 0.0
+   }
+  },
+  "ELNA": {
+   "beta": {
+    "brent": -0.016,
+    "gold": -0.204,
+    "market": 0.439,
+    "usdegp": -0.13
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.06,
+     "sign": "+",
+     "t": 2.22
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.09,
+    "gold": -0.57,
+    "market": 1.06,
+    "usdegp": -0.64
+   },
+   "n_weeks": 154,
+   "r2": 0.057,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -0.19,
+    "gold": -1.19,
+    "market": 2.22,
+    "usdegp": -1.33
+   },
+   "vol_ann_pct": 43.2,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 1.0,
+    "market": 3.3,
+    "stock_specific": 94.3,
+    "usdegp": 1.4
+   }
+  },
+  "ELSH": {
+   "beta": {
+    "brent": 0.053,
+    "gold": -0.123,
+    "market": 1.112,
+    "usdegp": -0.006
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.69,
+     "sign": "+",
+     "t": 5.47
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.29,
+    "gold": -0.35,
+    "market": 2.69,
+    "usdegp": -0.03
+   },
+   "n_weeks": 155,
+   "r2": 0.169,
+   "sector": "Real Estate",
+   "t": {
+    "brent": 0.59,
+    "gold": -0.7,
+    "market": 5.47,
+    "usdegp": -0.06
+   },
+   "vol_ann_pct": 47.5,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.2,
+    "market": 16.6,
+    "stock_specific": 83.1,
+    "usdegp": 0.0
+   }
+  },
+  "ELWA": {
+   "beta": {
+    "brent": -0.049,
+    "gold": 0.125,
+    "market": 0.596,
+    "usdegp": 0.01
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.44,
+     "sign": "+",
+     "t": 3.09
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.27,
+    "gold": 0.35,
+    "market": 1.44,
+    "usdegp": 0.05
+   },
+   "n_weeks": 156,
+   "r2": 0.067,
+   "sector": "Travel & Leisure",
+   "t": {
+    "brent": -0.58,
+    "gold": 0.75,
+    "market": 3.09,
+    "usdegp": 0.1
+   },
+   "vol_ann_pct": 42.5,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.4,
+    "market": 6.1,
+    "stock_specific": 93.2,
+    "usdegp": 0.0
+   }
+  },
+  "EMFD": {
+   "beta": {
+    "brent": -0.038,
+    "gold": -0.038,
+    "market": 1.149,
+    "usdegp": -0.066
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.78,
+     "sign": "+",
+     "t": 5.76
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.21,
+    "gold": -0.11,
+    "market": 2.78,
+    "usdegp": -0.33
+   },
+   "n_weeks": 156,
+   "r2": 0.189,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.43,
+    "gold": -0.22,
+    "market": 5.76,
+    "usdegp": -0.67
+   },
+   "vol_ann_pct": 47.2,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.0,
+    "market": 18.2,
+    "stock_specific": 81.2,
+    "usdegp": 0.4
+   }
+  },
+  "ENGC": {
+   "beta": {
+    "brent": -0.023,
+    "gold": 0.116,
+    "market": 1.359,
+    "usdegp": -0.049
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.28,
+     "sign": "+",
+     "t": 6.72
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.13,
+    "gold": 0.33,
+    "market": 3.28,
+    "usdegp": -0.24
+   },
+   "n_weeks": 156,
+   "r2": 0.238,
+   "sector": "Building Materials",
+   "t": {
+    "brent": -0.26,
+    "gold": 0.66,
+    "market": 6.72,
+    "usdegp": -0.49
+   },
+   "vol_ann_pct": 49.4,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.3,
+    "market": 23.2,
+    "stock_specific": 76.2,
+    "usdegp": 0.2
+   }
+  },
+  "EOSB": {
+   "beta": {
+    "brent": -0.025,
+    "gold": -0.074,
+    "market": 0.072,
+    "usdegp": 0.004
+   },
+   "drivers": [],
+   "impact_1sd_pct": {
+    "brent": -0.14,
+    "gold": -0.21,
+    "market": 0.17,
+    "usdegp": 0.02
+   },
+   "n_weeks": 128,
+   "r2": 0.021,
+   "sector": "Financial Services",
+   "t": {
+    "brent": -0.73,
+    "gold": -1.12,
+    "market": 0.93,
+    "usdegp": 0.11
+   },
+   "vol_ann_pct": 15.6,
+   "weights_pct": {
+    "brent": 0.4,
+    "gold": 0.9,
+    "market": 0.7,
+    "stock_specific": 98.0,
+    "usdegp": 0.0
+   }
+  },
+  "EPCO": {
+   "beta": {
+    "brent": -0.086,
+    "gold": -0.05,
+    "market": 1.566,
+    "usdegp": 0.012
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.78,
+     "sign": "+",
+     "t": 9.09
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.48,
+    "gold": -0.14,
+    "market": 3.78,
+    "usdegp": 0.06
+   },
+   "n_weeks": 155,
+   "r2": 0.363,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -1.14,
+    "gold": -0.33,
+    "market": 9.09,
+    "usdegp": 0.14
+   },
+   "vol_ann_pct": 45.7,
+   "weights_pct": {
+    "brent": 0.8,
+    "gold": 0.0,
+    "market": 35.6,
+    "stock_specific": 63.6,
+    "usdegp": 0.0
+   }
+  },
+  "EPPK": {
+   "beta": {
+    "brent": -0.059,
+    "gold": -0.445,
+    "market": 0.435,
+    "usdegp": 0.02
+   },
+   "drivers": [
+    {
+     "driver": "gold",
+     "impact_1sd_pct": -1.25,
+     "sign": "-",
+     "t": -2.74
+    },
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.05,
+     "sign": "+",
+     "t": 2.24
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.32,
+    "gold": -1.25,
+    "market": 1.05,
+    "usdegp": 0.1
+   },
+   "n_weeks": 145,
+   "r2": 0.085,
+   "sector": "Paper & Packaging",
+   "t": {
+    "brent": -0.72,
+    "gold": -2.74,
+    "market": 2.24,
+    "usdegp": 0.22
+   },
+   "vol_ann_pct": 41.1,
+   "weights_pct": {
+    "brent": 0.4,
+    "gold": 4.8,
+    "market": 3.3,
+    "stock_specific": 91.5,
+    "usdegp": 0.0
+   }
+  },
+  "ETEL": {
+   "beta": {
+    "brent": -0.03,
+    "gold": 0.113,
+    "market": 0.516,
+    "usdegp": -0.054
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.25,
+     "sign": "+",
+     "t": 3.68
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.16,
+    "gold": 0.32,
+    "market": 1.25,
+    "usdegp": -0.27
+   },
+   "n_weeks": 156,
+   "r2": 0.096,
+   "sector": "Telecom",
+   "t": {
+    "brent": -0.48,
+    "gold": 0.93,
+    "market": 3.68,
+    "usdegp": -0.78
+   },
+   "vol_ann_pct": 31.5,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.5,
+    "market": 8.4,
+    "stock_specific": 90.4,
+    "usdegp": 0.5
+   }
+  },
+  "ETRS": {
+   "beta": {
+    "brent": -0.089,
+    "gold": 0.003,
+    "market": 1.227,
+    "usdegp": 0.057
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.96,
+     "sign": "+",
+     "t": 7.1
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.49,
+    "gold": 0.01,
+    "market": 2.96,
+    "usdegp": 0.28
+   },
+   "n_weeks": 156,
+   "r2": 0.26,
+   "sector": "Transportation",
+   "t": {
+    "brent": -1.17,
+    "gold": 0.02,
+    "market": 7.1,
+    "usdegp": 0.67
+   },
+   "vol_ann_pct": 42.8,
+   "weights_pct": {
+    "brent": 0.9,
+    "gold": 0.0,
+    "market": 25.0,
+    "stock_specific": 74.1,
+    "usdegp": 0.0
+   }
+  },
+  "EXPA": {
+   "beta": {
+    "brent": -0.046,
+    "gold": -0.175,
+    "market": 0.734,
+    "usdegp": 0.149
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.77,
+     "sign": "+",
+     "t": 4.29
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.25,
+    "gold": -0.49,
+    "market": 1.77,
+    "usdegp": 0.73
+   },
+   "n_weeks": 156,
+   "r2": 0.127,
+   "sector": "Banks",
+   "t": {
+    "brent": -0.61,
+    "gold": -1.18,
+    "market": 4.29,
+    "usdegp": 1.76
+   },
+   "vol_ann_pct": 39.0,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.6,
+    "market": 10.5,
+    "stock_specific": 87.2,
+    "usdegp": 1.4
+   }
+  },
+  "FAIT": {
+   "beta": {
+    "brent": 0.022,
+    "gold": -0.059,
+    "market": 0.57,
+    "usdegp": 0.171
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.38,
+     "sign": "+",
+     "t": 5.29
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": 0.84,
+     "sign": "+",
+     "t": 3.21
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.12,
+    "gold": -0.16,
+    "market": 1.38,
+    "usdegp": 0.84
+   },
+   "n_weeks": 156,
+   "r2": 0.195,
+   "sector": "Banks",
+   "t": {
+    "brent": 0.47,
+    "gold": -0.63,
+    "market": 5.29,
+    "usdegp": 3.21
+   },
+   "vol_ann_pct": 25.6,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.1,
+    "market": 14.3,
+    "stock_specific": 80.5,
+    "usdegp": 5.0
+   }
+  },
+  "FAITA": {
+   "beta": {
+    "brent": -0.012,
+    "gold": -0.001,
+    "market": 0.115,
+    "usdegp": 0.012
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 0.28,
+     "sign": "+",
+     "t": 2.42
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.07,
+    "gold": -0.0,
+    "market": 0.28,
+    "usdegp": 0.06
+   },
+   "n_weeks": 156,
+   "r2": 0.041,
+   "sector": "Banks",
+   "t": {
+    "brent": -0.59,
+    "gold": -0.02,
+    "market": 2.42,
+    "usdegp": 0.49
+   },
+   "vol_ann_pct": 10.4,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.0,
+    "market": 3.8,
+    "stock_specific": 95.8,
+    "usdegp": 0.1
+   }
+  },
+  "FIRE": {
+   "beta": {
+    "brent": 0.035,
+    "gold": -0.534,
+    "market": 0.172,
+    "usdegp": 0.063
+   },
+   "drivers": [
+    {
+     "driver": "gold",
+     "impact_1sd_pct": -1.5,
+     "sign": "-",
+     "t": -2.26
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.19,
+    "gold": -1.5,
+    "market": 0.42,
+    "usdegp": 0.31
+   },
+   "n_weeks": 156,
+   "r2": 0.036,
+   "sector": "Real Estate",
+   "t": {
+    "brent": 0.29,
+    "gold": -2.26,
+    "market": 0.63,
+    "usdegp": 0.47
+   },
+   "vol_ann_pct": 59.3,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 3.2,
+    "market": 0.2,
+    "stock_specific": 96.4,
+    "usdegp": 0.1
+   }
+  },
+  "FNAR": {
+   "beta": {
+    "brent": -0.034,
+    "gold": -0.47,
+    "market": 0.623,
+    "usdegp": 0.059
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.51,
+     "sign": "+",
+     "t": 2.52
+    },
+    {
+     "driver": "gold",
+     "impact_1sd_pct": -1.32,
+     "sign": "-",
+     "t": -2.2
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.19,
+    "gold": -1.32,
+    "market": 1.51,
+    "usdegp": 0.29
+   },
+   "n_weeks": 156,
+   "r2": 0.068,
+   "sector": "Construction",
+   "t": {
+    "brent": -0.31,
+    "gold": -2.2,
+    "market": 2.52,
+    "usdegp": 0.48
+   },
+   "vol_ann_pct": 54.6,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 2.9,
+    "market": 3.9,
+    "stock_specific": 93.1,
+    "usdegp": 0.0
+   }
+  },
+  "FTNS": {
+   "beta": {
+    "brent": -0.042,
+    "gold": -0.116,
+    "market": 0.554,
+    "usdegp": 0.245
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.34,
+     "sign": "+",
+     "t": 2.47
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.23,
+    "gold": -0.33,
+    "market": 1.34,
+    "usdegp": 1.21
+   },
+   "n_weeks": 113,
+   "r2": 0.059,
+   "sector": "Technology",
+   "t": {
+    "brent": -0.43,
+    "gold": -0.71,
+    "market": 2.47,
+    "usdegp": 0.45
+   },
+   "vol_ann_pct": 38.2,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.4,
+    "market": 5.4,
+    "stock_specific": 94.0,
+    "usdegp": 0.0
+   }
+  },
+  "FWRY": {
+   "beta": {
+    "brent": -0.012,
+    "gold": 0.153,
+    "market": 0.627,
+    "usdegp": -0.144
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.51,
+     "sign": "+",
+     "t": 3.78
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.07,
+    "gold": 0.43,
+    "market": 1.51,
+    "usdegp": -0.71
+   },
+   "n_weeks": 156,
+   "r2": 0.115,
+   "sector": "Technology",
+   "t": {
+    "brent": -0.17,
+    "gold": 1.07,
+    "market": 3.78,
+    "usdegp": -1.76
+   },
+   "vol_ann_pct": 37.6,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.6,
+    "market": 8.8,
+    "stock_specific": 88.5,
+    "usdegp": 2.0
+   }
+  },
+  "GBCO": {
+   "beta": {
+    "brent": -0.118,
+    "gold": 0.029,
+    "market": 0.67,
+    "usdegp": 0.229
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.62,
+     "sign": "+",
+     "t": 3.9
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": 1.13,
+     "sign": "+",
+     "t": 2.7
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.65,
+    "gold": 0.08,
+    "market": 1.62,
+    "usdegp": 1.13
+   },
+   "n_weeks": 156,
+   "r2": 0.138,
+   "sector": "Trade & Distributors",
+   "t": {
+    "brent": -1.56,
+    "gold": 0.2,
+    "market": 3.9,
+    "usdegp": 2.7
+   },
+   "vol_ann_pct": 39.4,
+   "weights_pct": {
+    "brent": 1.5,
+    "gold": 0.1,
+    "market": 8.6,
+    "stock_specific": 86.1,
+    "usdegp": 3.7
+   }
+  },
+  "GDWA": {
+   "beta": {
+    "brent": 0.146,
+    "gold": -0.046,
+    "market": 1.179,
+    "usdegp": 0.026
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.85,
+     "sign": "+",
+     "t": 6.29
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.81,
+    "gold": -0.13,
+    "market": 2.85,
+    "usdegp": 0.13
+   },
+   "n_weeks": 155,
+   "r2": 0.217,
+   "sector": "Industrial Goods",
+   "t": {
+    "brent": 1.78,
+    "gold": -0.28,
+    "market": 6.29,
+    "usdegp": 0.28
+   },
+   "vol_ann_pct": 45.1,
+   "weights_pct": {
+    "brent": 1.3,
+    "gold": 0.0,
+    "market": 20.4,
+    "stock_specific": 78.3,
+    "usdegp": 0.0
+   }
+  },
+  "GGCC": {
+   "beta": {
+    "brent": 0.112,
+    "gold": -0.112,
+    "market": 1.807,
+    "usdegp": -0.072
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 4.36,
+     "sign": "+",
+     "t": 8.56
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.62,
+    "gold": -0.32,
+    "market": 4.36,
+    "usdegp": -0.36
+   },
+   "n_weeks": 156,
+   "r2": 0.333,
+   "sector": "Construction",
+   "t": {
+    "brent": 1.21,
+    "gold": -0.62,
+    "market": 8.56,
+    "usdegp": -0.69
+   },
+   "vol_ann_pct": 55.1,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.1,
+    "market": 32.4,
+    "stock_specific": 66.8,
+    "usdegp": 0.4
+   }
+  },
+  "GIHD": {
+   "beta": {
+    "brent": 0.063,
+    "gold": -0.03,
+    "market": 1.606,
+    "usdegp": -0.11
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.88,
+     "sign": "+",
+     "t": 7.99
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.35,
+    "gold": -0.08,
+    "market": 3.88,
+    "usdegp": -0.54
+   },
+   "n_weeks": 156,
+   "r2": 0.305,
+   "sector": "Real Estate",
+   "t": {
+    "brent": 0.72,
+    "gold": -0.17,
+    "market": 7.99,
+    "usdegp": -1.11
+   },
+   "vol_ann_pct": 51.4,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.0,
+    "market": 29.7,
+    "stock_specific": 69.5,
+    "usdegp": 0.8
+   }
+  },
+  "GMCI": {
+   "beta": {
+    "brent": -0.001,
+    "gold": 0.094,
+    "market": 0.432,
+    "usdegp": -0.017
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.04,
+     "sign": "+",
+     "t": 2.08
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.0,
+    "gold": 0.26,
+    "market": 1.04,
+    "usdegp": -0.09
+   },
+   "n_weeks": 148,
+   "r2": 0.032,
+   "sector": "Trade & Distributors",
+   "t": {
+    "brent": -0.01,
+    "gold": 0.54,
+    "market": 2.08,
+    "usdegp": -0.18
+   },
+   "vol_ann_pct": 42.6,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.2,
+    "market": 3.0,
+    "stock_specific": 96.8,
+    "usdegp": 0.0
+   }
+  },
+  "GRCA": {
+   "beta": {
+    "brent": 0.056,
+    "gold": 0.116,
+    "market": 0.556,
+    "usdegp": 0.008
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.34,
+     "sign": "+",
+     "t": 2.39
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.31,
+    "gold": 0.33,
+    "market": 1.34,
+    "usdegp": 0.04
+   },
+   "n_weeks": 156,
+   "r2": 0.04,
+   "sector": "Financial Services",
+   "t": {
+    "brent": 0.55,
+    "gold": 0.58,
+    "market": 2.39,
+    "usdegp": 0.07
+   },
+   "vol_ann_pct": 50.5,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.2,
+    "market": 3.6,
+    "stock_specific": 96.1,
+    "usdegp": 0.0
+   }
+  },
+  "GSSC": {
+   "beta": {
+    "brent": -0.019,
+    "gold": 0.055,
+    "market": 0.793,
+    "usdegp": 0.047
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.91,
+     "sign": "+",
+     "t": 3.45
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.1,
+    "gold": 0.15,
+    "market": 1.91,
+    "usdegp": 0.23
+   },
+   "n_weeks": 156,
+   "r2": 0.075,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -0.19,
+    "gold": 0.28,
+    "market": 3.45,
+    "usdegp": 0.41
+   },
+   "vol_ann_pct": 50.9,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.1,
+    "market": 7.3,
+    "stock_specific": 92.5,
+    "usdegp": 0.1
+   }
+  },
+  "GTWL": {
+   "beta": {
+    "brent": 0.1,
+    "gold": 0.255,
+    "market": 1.145,
+    "usdegp": -0.097
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.77,
+     "sign": "+",
+     "t": 3.59
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.55,
+    "gold": 0.72,
+    "market": 2.77,
+    "usdegp": -0.48
+   },
+   "n_weeks": 156,
+   "r2": 0.088,
+   "sector": "Personal & Household",
+   "t": {
+    "brent": 0.72,
+    "gold": 0.92,
+    "market": 3.59,
+    "usdegp": -0.61
+   },
+   "vol_ann_pct": 71.2,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.5,
+    "market": 7.9,
+    "stock_specific": 91.1,
+    "usdegp": 0.3
+   }
+  },
+  "HDBK": {
+   "beta": {
+    "brent": 0.061,
+    "gold": 0.151,
+    "market": 0.757,
+    "usdegp": 0.117
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.83,
+     "sign": "+",
+     "t": 3.47
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.33,
+    "gold": 0.42,
+    "market": 1.83,
+    "usdegp": 0.58
+   },
+   "n_weeks": 156,
+   "r2": 0.085,
+   "sector": "Banks",
+   "t": {
+    "brent": 0.63,
+    "gold": 0.8,
+    "market": 3.47,
+    "usdegp": 1.08
+   },
+   "vol_ann_pct": 48.5,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.5,
+    "market": 7.2,
+    "stock_specific": 91.4,
+    "usdegp": 0.7
+   }
+  },
+  "HELI": {
+   "beta": {
+    "brent": 0.051,
+    "gold": -0.011,
+    "market": 0.853,
+    "usdegp": 0.044
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.06,
+     "sign": "+",
+     "t": 5.51
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.28,
+    "gold": -0.03,
+    "market": 2.06,
+    "usdegp": 0.22
+   },
+   "n_weeks": 155,
+   "r2": 0.169,
+   "sector": "Real Estate",
+   "t": {
+    "brent": 0.75,
+    "gold": -0.08,
+    "market": 5.51,
+    "usdegp": 0.58
+   },
+   "vol_ann_pct": 36.0,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.0,
+    "market": 16.7,
+    "stock_specific": 83.0,
+    "usdegp": 0.1
+   }
+  },
+  "HRHO": {
+   "beta": {
+    "brent": -0.09,
+    "gold": 0.234,
+    "market": 1.022,
+    "usdegp": 0.196
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.47,
+     "sign": "+",
+     "t": 7.63
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": 0.96,
+     "sign": "+",
+     "t": 2.96
+    },
+    {
+     "driver": "gold",
+     "impact_1sd_pct": 0.66,
+     "sign": "+",
+     "t": 2.03
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.5,
+    "gold": 0.66,
+    "market": 2.47,
+    "usdegp": 0.96
+   },
+   "n_weeks": 156,
+   "r2": 0.331,
+   "sector": "Financial Services",
+   "t": {
+    "brent": -1.53,
+    "gold": 2.03,
+    "market": 7.63,
+    "usdegp": 2.96
+   },
+   "vol_ann_pct": 34.9,
+   "weights_pct": {
+    "brent": 1.3,
+    "gold": 2.4,
+    "market": 25.9,
+    "stock_specific": 66.9,
+    "usdegp": 3.5
+   }
+  },
+  "IBCT": {
+   "beta": {
+    "brent": -0.094,
+    "gold": -0.311,
+    "market": 0.877,
+    "usdegp": -0.21
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.12,
+     "sign": "+",
+     "t": 2.33
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.52,
+    "gold": -0.87,
+    "market": 2.12,
+    "usdegp": -1.04
+   },
+   "n_weeks": 127,
+   "r2": 0.058,
+   "sector": "Trade & Distributors",
+   "t": {
+    "brent": -0.52,
+    "gold": -1.03,
+    "market": 2.33,
+    "usdegp": -0.21
+   },
+   "vol_ann_pct": 73.5,
+   "weights_pct": {
+    "brent": 0.5,
+    "gold": 0.7,
+    "market": 4.4,
+    "stock_specific": 94.2,
+    "usdegp": 0.2
+   }
+  },
+  "ICFC": {
+   "beta": {
+    "brent": 0.077,
+    "gold": 0.049,
+    "market": 0.694,
+    "usdegp": -0.024
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.68,
+     "sign": "+",
+     "t": 2.49
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.42,
+    "gold": 0.14,
+    "market": 1.68,
+    "usdegp": -0.12
+   },
+   "n_weeks": 155,
+   "r2": 0.042,
+   "sector": "Chemicals",
+   "t": {
+    "brent": 0.63,
+    "gold": 0.21,
+    "market": 2.49,
+    "usdegp": -0.18
+   },
+   "vol_ann_pct": 60.0,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.0,
+    "market": 3.9,
+    "stock_specific": 95.9,
+    "usdegp": 0.0
+   }
+  },
+  "ICID": {
+   "beta": {
+    "brent": -0.089,
+    "gold": -0.356,
+    "market": 1.119,
+    "usdegp": -0.123
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.7,
+     "sign": "+",
+     "t": 5.1
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.49,
+    "gold": -1.0,
+    "market": 2.7,
+    "usdegp": -0.61
+   },
+   "n_weeks": 155,
+   "r2": 0.184,
+   "sector": "Financial Services",
+   "t": {
+    "brent": -0.93,
+    "gold": -1.89,
+    "market": 5.1,
+    "usdegp": -1.14
+   },
+   "vol_ann_pct": 51.3,
+   "weights_pct": {
+    "brent": 0.7,
+    "gold": 2.0,
+    "market": 14.6,
+    "stock_specific": 81.6,
+    "usdegp": 1.1
+   }
+  },
+  "IDRE": {
+   "beta": {
+    "brent": -0.049,
+    "gold": 0.071,
+    "market": 0.823,
+    "usdegp": -0.062
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.99,
+     "sign": "+",
+     "t": 3.56
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.27,
+    "gold": 0.2,
+    "market": 1.99,
+    "usdegp": -0.31
+   },
+   "n_weeks": 155,
+   "r2": 0.085,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.48,
+    "gold": 0.35,
+    "market": 3.56,
+    "usdegp": -0.55
+   },
+   "vol_ann_pct": 51.5,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.1,
+    "market": 8.0,
+    "stock_specific": 91.4,
+    "usdegp": 0.3
+   }
+  },
+  "IEEC": {
+   "beta": {
+    "brent": -0.029,
+    "gold": -0.017,
+    "market": 1.343,
+    "usdegp": -0.059
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.24,
+     "sign": "+",
+     "t": 5.87
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.16,
+    "gold": -0.05,
+    "market": 3.24,
+    "usdegp": -0.29
+   },
+   "n_weeks": 128,
+   "r2": 0.227,
+   "sector": "Construction",
+   "t": {
+    "brent": -0.28,
+    "gold": -0.09,
+    "market": 5.87,
+    "usdegp": -0.59
+   },
+   "vol_ann_pct": 48.7,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.0,
+    "market": 22.2,
+    "stock_specific": 77.2,
+    "usdegp": 0.4
+   }
+  },
+  "IFAP": {
+   "beta": {
+    "brent": -0.047,
+    "gold": -0.034,
+    "market": 0.841,
+    "usdegp": -0.058
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.03,
+     "sign": "+",
+     "t": 3.34
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.26,
+    "gold": -0.09,
+    "market": 2.03,
+    "usdegp": -0.28
+   },
+   "n_weeks": 155,
+   "r2": 0.075,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -0.42,
+    "gold": -0.15,
+    "market": 3.34,
+    "usdegp": -0.46
+   },
+   "vol_ann_pct": 55.7,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.0,
+    "market": 7.0,
+    "stock_specific": 92.6,
+    "usdegp": 0.2
+   }
+  },
+  "INEG": {
+   "beta": {
+    "brent": 0.072,
+    "gold": 0.074,
+    "market": 1.194,
+    "usdegp": -0.026
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.88,
+     "sign": "+",
+     "t": 4.46
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.4,
+    "gold": 0.21,
+    "market": 2.88,
+    "usdegp": -0.13
+   },
+   "n_weeks": 156,
+   "r2": 0.119,
+   "sector": "Industrial Goods",
+   "t": {
+    "brent": 0.61,
+    "gold": 0.32,
+    "market": 4.46,
+    "usdegp": -0.19
+   },
+   "vol_ann_pct": 60.8,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.1,
+    "market": 11.6,
+    "stock_specific": 88.2,
+    "usdegp": 0.0
+   }
+  },
+  "INFI": {
+   "beta": {
+    "brent": -0.033,
+    "gold": 0.208,
+    "market": 1.283,
+    "usdegp": -0.033
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.1,
+     "sign": "+",
+     "t": 5.88
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.18,
+    "gold": 0.58,
+    "market": 3.1,
+    "usdegp": -0.16
+   },
+   "n_weeks": 155,
+   "r2": 0.198,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -0.34,
+    "gold": 1.1,
+    "market": 5.88,
+    "usdegp": -0.3
+   },
+   "vol_ann_pct": 51.9,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.7,
+    "market": 18.8,
+    "stock_specific": 80.3,
+    "usdegp": 0.1
+   }
+  },
+  "IRON": {
+   "beta": {
+    "brent": -0.236,
+    "gold": -0.169,
+    "market": 0.862,
+    "usdegp": 0.063
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.08,
+     "sign": "+",
+     "t": 3.37
+    },
+    {
+     "driver": "brent",
+     "impact_1sd_pct": -1.3,
+     "sign": "-",
+     "t": -2.09
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -1.3,
+    "gold": -0.47,
+    "market": 2.08,
+    "usdegp": 0.31
+   },
+   "n_weeks": 156,
+   "r2": 0.101,
+   "sector": "Basic Resources",
+   "t": {
+    "brent": -2.09,
+    "gold": -0.76,
+    "market": 3.37,
+    "usdegp": 0.5
+   },
+   "vol_ann_pct": 57.5,
+   "weights_pct": {
+    "brent": 2.8,
+    "gold": 0.3,
+    "market": 7.0,
+    "stock_specific": 89.9,
+    "usdegp": 0.0
+   }
+  },
+  "ISMA": {
+   "beta": {
+    "brent": -0.115,
+    "gold": -0.087,
+    "market": 1.493,
+    "usdegp": -0.086
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.61,
+     "sign": "+",
+     "t": 7.96
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.63,
+    "gold": -0.24,
+    "market": 3.61,
+    "usdegp": -0.42
+   },
+   "n_weeks": 156,
+   "r2": 0.316,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -1.39,
+    "gold": -0.54,
+    "market": 7.96,
+    "usdegp": -0.93
+   },
+   "vol_ann_pct": 48.3,
+   "weights_pct": {
+    "brent": 1.3,
+    "gold": 0.1,
+    "market": 29.5,
+    "stock_specific": 68.4,
+    "usdegp": 0.7
+   }
+  },
+  "ISMQ": {
+   "beta": {
+    "brent": -0.092,
+    "gold": -0.037,
+    "market": 1.244,
+    "usdegp": -0.21
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.01,
+     "sign": "+",
+     "t": 5.16
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.51,
+    "gold": -0.1,
+    "market": 3.01,
+    "usdegp": -1.04
+   },
+   "n_weeks": 156,
+   "r2": 0.179,
+   "sector": "Basic Resources",
+   "t": {
+    "brent": -0.87,
+    "gold": -0.18,
+    "market": 5.16,
+    "usdegp": -1.77
+   },
+   "vol_ann_pct": 56.7,
+   "weights_pct": {
+    "brent": 0.6,
+    "gold": 0.0,
+    "market": 15.1,
+    "stock_specific": 82.1,
+    "usdegp": 2.2
+   }
+  },
+  "ISPH": {
+   "beta": {
+    "brent": -0.233,
+    "gold": -0.16,
+    "market": 1.316,
+    "usdegp": -0.215
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.18,
+     "sign": "+",
+     "t": 6.77
+    },
+    {
+     "driver": "brent",
+     "impact_1sd_pct": -1.28,
+     "sign": "-",
+     "t": -2.72
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": -1.06,
+     "sign": "-",
+     "t": -2.24
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -1.28,
+    "gold": -0.45,
+    "market": 3.18,
+    "usdegp": -1.06
+   },
+   "n_weeks": 156,
+   "r2": 0.302,
+   "sector": "Healthcare",
+   "t": {
+    "brent": -2.72,
+    "gold": -0.95,
+    "market": 6.77,
+    "usdegp": -2.24
+   },
+   "vol_ann_pct": 49.6,
+   "weights_pct": {
+    "brent": 4.2,
+    "gold": 0.4,
+    "market": 22.3,
+    "stock_specific": 69.9,
+    "usdegp": 3.2
+   }
+  },
+  "JUFO": {
+   "beta": {
+    "brent": 0.053,
+    "gold": 0.037,
+    "market": 0.799,
+    "usdegp": -0.147
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.93,
+     "sign": "+",
+     "t": 4.17
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.29,
+    "gold": 0.1,
+    "market": 1.93,
+    "usdegp": -0.72
+   },
+   "n_weeks": 156,
+   "r2": 0.121,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": 0.63,
+    "gold": 0.22,
+    "market": 4.17,
+    "usdegp": -1.55
+   },
+   "vol_ann_pct": 43.5,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.0,
+    "market": 10.4,
+    "stock_specific": 87.9,
+    "usdegp": 1.6
+   }
+  },
+  "KABO": {
+   "beta": {
+    "brent": 0.09,
+    "gold": -0.016,
+    "market": 1.328,
+    "usdegp": -0.007
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.21,
+     "sign": "+",
+     "t": 6.36
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.49,
+    "gold": -0.04,
+    "market": 3.21,
+    "usdegp": -0.04
+   },
+   "n_weeks": 156,
+   "r2": 0.214,
+   "sector": "Personal & Household",
+   "t": {
+    "brent": 0.98,
+    "gold": -0.09,
+    "market": 6.36,
+    "usdegp": -0.07
+   },
+   "vol_ann_pct": 50.1,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.0,
+    "market": 21.1,
+    "stock_specific": 78.6,
+    "usdegp": 0.0
+   }
+  },
+  "KWIN": {
+   "beta": {
+    "brent": 0.106,
+    "gold": 0.034,
+    "market": 0.028,
+    "usdegp": 0.142
+   },
+   "drivers": [],
+   "impact_1sd_pct": {
+    "brent": 0.58,
+    "gold": 0.1,
+    "market": 0.07,
+    "usdegp": 0.7
+   },
+   "n_weeks": 155,
+   "r2": 0.015,
+   "sector": "Financial Services",
+   "t": {
+    "brent": 0.93,
+    "gold": 0.15,
+    "market": 0.11,
+    "usdegp": 1.11
+   },
+   "vol_ann_pct": 55.5,
+   "weights_pct": {
+    "brent": 0.6,
+    "gold": 0.0,
+    "market": 0.0,
+    "stock_specific": 98.5,
+    "usdegp": 0.9
+   }
+  },
+  "KZPC": {
+   "beta": {
+    "brent": 0.101,
+    "gold": 0.021,
+    "market": 1.064,
+    "usdegp": 0.031
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.57,
+     "sign": "+",
+     "t": 5.01
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.55,
+    "gold": 0.06,
+    "market": 2.57,
+    "usdegp": 0.15
+   },
+   "n_weeks": 156,
+   "r2": 0.146,
+   "sector": "Chemicals",
+   "t": {
+    "brent": 1.08,
+    "gold": 0.11,
+    "market": 5.01,
+    "usdegp": 0.3
+   },
+   "vol_ann_pct": 49.0,
+   "weights_pct": {
+    "brent": 0.5,
+    "gold": 0.0,
+    "market": 14.1,
+    "stock_specific": 85.4,
+    "usdegp": 0.0
+   }
+  },
+  "LCSW": {
+   "beta": {
+    "brent": -0.131,
+    "gold": -0.072,
+    "market": 1.241,
+    "usdegp": 0.033
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.0,
+     "sign": "+",
+     "t": 5.57
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.72,
+    "gold": -0.2,
+    "market": 3.0,
+    "usdegp": 0.16
+   },
+   "n_weeks": 156,
+   "r2": 0.183,
+   "sector": "Building Materials",
+   "t": {
+    "brent": -1.34,
+    "gold": -0.37,
+    "market": 5.57,
+    "usdegp": 0.3
+   },
+   "vol_ann_pct": 52.6,
+   "weights_pct": {
+    "brent": 1.2,
+    "gold": 0.0,
+    "market": 17.1,
+    "stock_specific": 81.7,
+    "usdegp": 0.0
+   }
+  },
+  "LUTS": {
+   "beta": {
+    "brent": -0.154,
+    "gold": -0.298,
+    "market": 1.198,
+    "usdegp": 0.097
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.89,
+     "sign": "+",
+     "t": 4.36
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.85,
+    "gold": -0.84,
+    "market": 2.89,
+    "usdegp": 0.48
+   },
+   "n_weeks": 155,
+   "r2": 0.131,
+   "sector": "Financial Services",
+   "t": {
+    "brent": -1.27,
+    "gold": -1.25,
+    "market": 4.36,
+    "usdegp": 0.72
+   },
+   "vol_ann_pct": 62.7,
+   "weights_pct": {
+    "brent": 1.1,
+    "gold": 0.7,
+    "market": 11.2,
+    "stock_specific": 86.9,
+    "usdegp": 0.1
+   }
+  },
+  "MAAL": {
+   "beta": {
+    "brent": -0.124,
+    "gold": -0.261,
+    "market": 1.094,
+    "usdegp": 0.341
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.64,
+     "sign": "+",
+     "t": 4.16
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": 1.68,
+     "sign": "+",
+     "t": 2.62
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.68,
+    "gold": -0.73,
+    "market": 2.64,
+    "usdegp": 1.68
+   },
+   "n_weeks": 156,
+   "r2": 0.14,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -1.07,
+    "gold": -1.15,
+    "market": 4.16,
+    "usdegp": 2.62
+   },
+   "vol_ann_pct": 60.5,
+   "weights_pct": {
+    "brent": 0.7,
+    "gold": 0.5,
+    "market": 9.6,
+    "stock_specific": 85.9,
+    "usdegp": 3.3
+   }
+  },
+  "MASR": {
+   "beta": {
+    "brent": -0.036,
+    "gold": 0.148,
+    "market": 1.209,
+    "usdegp": -0.131
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.92,
+     "sign": "+",
+     "t": 9.4
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": -0.65,
+     "sign": "-",
+     "t": -2.06
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.2,
+    "gold": 0.42,
+    "market": 2.92,
+    "usdegp": -0.65
+   },
+   "n_weeks": 156,
+   "r2": 0.397,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.64,
+    "gold": 1.33,
+    "market": 9.4,
+    "usdegp": -2.06
+   },
+   "vol_ann_pct": 35.3,
+   "weights_pct": {
+    "brent": 0.4,
+    "gold": 0.7,
+    "market": 36.4,
+    "stock_specific": 60.3,
+    "usdegp": 2.2
+   }
+  },
+  "MBEG": {
+   "beta": {
+    "brent": -0.014,
+    "gold": -0.053,
+    "market": 0.597,
+    "usdegp": -0.08
+   },
+   "drivers": [],
+   "impact_1sd_pct": {
+    "brent": -0.08,
+    "gold": -0.15,
+    "market": 1.44,
+    "usdegp": -0.39
+   },
+   "n_weeks": 153,
+   "r2": 0.02,
+   "sector": "Trade & Distributors",
+   "t": {
+    "brent": -0.08,
+    "gold": -0.17,
+    "market": 1.69,
+    "usdegp": -0.09
+   },
+   "vol_ann_pct": 75.6,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.0,
+    "market": 1.9,
+    "stock_specific": 98.1,
+    "usdegp": 0.0
+   }
+  },
+  "MBSC": {
+   "beta": {
+    "brent": 0.156,
+    "gold": 0.289,
+    "market": 0.819,
+    "usdegp": -0.004
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.98,
+     "sign": "+",
+     "t": 3.71
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.86,
+    "gold": 0.81,
+    "market": 1.98,
+    "usdegp": -0.02
+   },
+   "n_weeks": 155,
+   "r2": 0.108,
+   "sector": "Building Materials",
+   "t": {
+    "brent": 1.61,
+    "gold": 1.5,
+    "market": 3.71,
+    "usdegp": -0.04
+   },
+   "vol_ann_pct": 49.8,
+   "weights_pct": {
+    "brent": 1.3,
+    "gold": 1.4,
+    "market": 8.1,
+    "stock_specific": 89.2,
+    "usdegp": 0.0
+   }
+  },
+  "MCQE": {
+   "beta": {
+    "brent": 0.075,
+    "gold": 0.331,
+    "market": 1.043,
+    "usdegp": -0.251
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.52,
+     "sign": "+",
+     "t": 4.3
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": -1.24,
+     "sign": "-",
+     "t": -2.1
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.41,
+    "gold": 0.93,
+    "market": 2.52,
+    "usdegp": -1.24
+   },
+   "n_weeks": 156,
+   "r2": 0.148,
+   "sector": "Building Materials",
+   "t": {
+    "brent": 0.7,
+    "gold": 1.58,
+    "market": 4.3,
+    "usdegp": -2.1
+   },
+   "vol_ann_pct": 56.0,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 1.3,
+    "market": 10.9,
+    "stock_specific": 85.1,
+    "usdegp": 2.6
+   }
+  },
+  "MCRO": {
+   "beta": {
+    "brent": 0.006,
+    "gold": 0.024,
+    "market": 1.152,
+    "usdegp": 0.521
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.78,
+     "sign": "+",
+     "t": 3.81
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.03,
+    "gold": 0.07,
+    "market": 2.78,
+    "usdegp": 2.57
+   },
+   "n_weeks": 128,
+   "r2": 0.108,
+   "sector": "Healthcare",
+   "t": {
+    "brent": 0.04,
+    "gold": 0.1,
+    "market": 3.81,
+    "usdegp": 0.73
+   },
+   "vol_ann_pct": 59.9,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.0,
+    "market": 10.4,
+    "stock_specific": 89.3,
+    "usdegp": 0.3
+   }
+  },
+  "MENA": {
+   "beta": {
+    "brent": -0.069,
+    "gold": -0.064,
+    "market": 1.334,
+    "usdegp": -0.009
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.22,
+     "sign": "+",
+     "t": 5.94
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.38,
+    "gold": -0.18,
+    "market": 3.22,
+    "usdegp": -0.04
+   },
+   "n_weeks": 156,
+   "r2": 0.196,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.7,
+    "gold": -0.33,
+    "market": 5.94,
+    "usdegp": -0.08
+   },
+   "vol_ann_pct": 53.4,
+   "weights_pct": {
+    "brent": 0.4,
+    "gold": 0.0,
+    "market": 19.1,
+    "stock_specific": 80.5,
+    "usdegp": 0.0
+   }
+  },
+  "MEPA": {
+   "beta": {
+    "brent": -0.03,
+    "gold": -0.372,
+    "market": 1.463,
+    "usdegp": 0.52
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.53,
+     "sign": "+",
+     "t": 7.01
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": 2.56,
+     "sign": "+",
+     "t": 5.04
+    },
+    {
+     "driver": "gold",
+     "impact_1sd_pct": -1.04,
+     "sign": "-",
+     "t": -2.06
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.16,
+    "gold": -1.04,
+    "market": 3.53,
+    "usdegp": 2.56
+   },
+   "n_weeks": 156,
+   "r2": 0.324,
+   "sector": "Paper & Packaging",
+   "t": {
+    "brent": -0.33,
+    "gold": -2.06,
+    "market": 7.01,
+    "usdegp": 5.04
+   },
+   "vol_ann_pct": 54.1,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 1.2,
+    "market": 21.1,
+    "stock_specific": 67.7,
+    "usdegp": 10.0
+   }
+  },
+  "MFPC": {
+   "beta": {
+    "brent": 0.255,
+    "gold": 0.107,
+    "market": 0.919,
+    "usdegp": -0.0
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.22,
+     "sign": "+",
+     "t": 4.48
+    },
+    {
+     "driver": "brent",
+     "impact_1sd_pct": 1.41,
+     "sign": "+",
+     "t": 2.84
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 1.41,
+    "gold": 0.3,
+    "market": 2.22,
+    "usdegp": -0.0
+   },
+   "n_weeks": 153,
+   "r2": 0.153,
+   "sector": "Chemicals",
+   "t": {
+    "brent": 2.84,
+    "gold": 0.6,
+    "market": 4.48,
+    "usdegp": -0.0
+   },
+   "vol_ann_pct": 47.0,
+   "weights_pct": {
+    "brent": 4.1,
+    "gold": 0.2,
+    "market": 11.1,
+    "stock_specific": 84.6,
+    "usdegp": 0.0
+   }
+  },
+  "MFSC": {
+   "beta": {
+    "brent": 0.029,
+    "gold": 0.175,
+    "market": 0.379,
+    "usdegp": -0.048
+   },
+   "drivers": [],
+   "impact_1sd_pct": {
+    "brent": 0.16,
+    "gold": 0.49,
+    "market": 0.92,
+    "usdegp": -0.24
+   },
+   "n_weeks": 156,
+   "r2": 0.033,
+   "sector": "Retail",
+   "t": {
+    "brent": 0.34,
+    "gold": 1.04,
+    "market": 1.94,
+    "usdegp": -0.5
+   },
+   "vol_ann_pct": 42.4,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.7,
+    "market": 2.5,
+    "stock_specific": 96.6,
+    "usdegp": 0.2
+   }
+  },
+  "MHOT": {
+   "beta": {
+    "brent": -0.052,
+    "gold": -0.055,
+    "market": 0.709,
+    "usdegp": 0.086
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.71,
+     "sign": "+",
+     "t": 3.44
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.29,
+    "gold": -0.15,
+    "market": 1.71,
+    "usdegp": 0.42
+   },
+   "n_weeks": 154,
+   "r2": 0.079,
+   "sector": "Travel & Leisure",
+   "t": {
+    "brent": -0.58,
+    "gold": -0.31,
+    "market": 3.44,
+    "usdegp": 0.85
+   },
+   "vol_ann_pct": 45.2,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.0,
+    "market": 7.3,
+    "stock_specific": 92.1,
+    "usdegp": 0.3
+   }
+  },
+  "MICH": {
+   "beta": {
+    "brent": 0.062,
+    "gold": 0.155,
+    "market": 1.036,
+    "usdegp": -0.052
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.5,
+     "sign": "+",
+     "t": 6.13
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.34,
+    "gold": 0.44,
+    "market": 2.5,
+    "usdegp": -0.26
+   },
+   "n_weeks": 156,
+   "r2": 0.209,
+   "sector": "Chemicals",
+   "t": {
+    "brent": 0.83,
+    "gold": 1.06,
+    "market": 6.13,
+    "usdegp": -0.63
+   },
+   "vol_ann_pct": 40.5,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.6,
+    "market": 19.9,
+    "stock_specific": 79.1,
+    "usdegp": 0.3
+   }
+  },
+  "MILS": {
+   "beta": {
+    "brent": 0.214,
+    "gold": 0.188,
+    "market": 0.927,
+    "usdegp": -0.15
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.24,
+     "sign": "+",
+     "t": 4.55
+    },
+    {
+     "driver": "brent",
+     "impact_1sd_pct": 1.18,
+     "sign": "+",
+     "t": 2.39
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 1.18,
+    "gold": 0.53,
+    "market": 2.24,
+    "usdegp": -0.74
+   },
+   "n_weeks": 156,
+   "r2": 0.159,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": 2.39,
+    "gold": 1.07,
+    "market": 4.55,
+    "usdegp": -1.49
+   },
+   "vol_ann_pct": 47.3,
+   "weights_pct": {
+    "brent": 2.6,
+    "gold": 0.6,
+    "market": 11.6,
+    "stock_specific": 83.9,
+    "usdegp": 1.3
+   }
+  },
+  "MIPH": {
+   "beta": {
+    "brent": 0.116,
+    "gold": -0.029,
+    "market": 0.543,
+    "usdegp": -0.011
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.31,
+     "sign": "+",
+     "t": 3.2
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.64,
+    "gold": -0.08,
+    "market": 1.31,
+    "usdegp": -0.05
+   },
+   "n_weeks": 156,
+   "r2": 0.074,
+   "sector": "Healthcare",
+   "t": {
+    "brent": 1.55,
+    "gold": -0.2,
+    "market": 3.2,
+    "usdegp": -0.13
+   },
+   "vol_ann_pct": 37.7,
+   "weights_pct": {
+    "brent": 1.3,
+    "gold": 0.0,
+    "market": 6.1,
+    "stock_specific": 92.6,
+    "usdegp": 0.0
+   }
+  },
+  "MKIT": {
+   "beta": {
+    "brent": 0.023,
+    "gold": -0.052,
+    "market": 0.021,
+    "usdegp": 0.03
+   },
+   "drivers": [],
+   "impact_1sd_pct": {
+    "brent": 0.12,
+    "gold": -0.15,
+    "market": 0.05,
+    "usdegp": 0.15
+   },
+   "n_weeks": 106,
+   "r2": 0.001,
+   "sector": null,
+   "t": {
+    "brent": 0.18,
+    "gold": -0.21,
+    "market": 0.07,
+    "usdegp": 0.25
+   },
+   "vol_ann_pct": 52.2,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.0,
+    "market": 0.0,
+    "stock_specific": 99.9,
+    "usdegp": 0.1
+   }
+  },
+  "MOED": {
+   "beta": {
+    "brent": -0.018,
+    "gold": 0.396,
+    "market": 0.818,
+    "usdegp": -0.046
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.98,
+     "sign": "+",
+     "t": 3.48
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.1,
+    "gold": 1.11,
+    "market": 1.98,
+    "usdegp": -0.23
+   },
+   "n_weeks": 155,
+   "r2": 0.1,
+   "sector": "Commercial Services",
+   "t": {
+    "brent": -0.17,
+    "gold": 1.95,
+    "market": 3.48,
+    "usdegp": -0.4
+   },
+   "vol_ann_pct": 52.9,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 2.4,
+    "market": 7.5,
+    "stock_specific": 89.9,
+    "usdegp": 0.1
+   }
+  },
+  "MOIL": {
+   "beta": {
+    "brent": 0.004,
+    "gold": 0.075,
+    "market": 0.647,
+    "usdegp": -0.067
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.56,
+     "sign": "+",
+     "t": 3.16
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.02,
+    "gold": 0.21,
+    "market": 1.56,
+    "usdegp": -0.33
+   },
+   "n_weeks": 156,
+   "r2": 0.068,
+   "sector": "Energy",
+   "t": {
+    "brent": 0.04,
+    "gold": 0.43,
+    "market": 3.16,
+    "usdegp": -0.66
+   },
+   "vol_ann_pct": 45.2,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.1,
+    "market": 6.3,
+    "stock_specific": 93.3,
+    "usdegp": 0.3
+   }
+  },
+  "MOIN": {
+   "beta": {
+    "brent": 0.094,
+    "gold": -0.021,
+    "market": 0.659,
+    "usdegp": 0.017
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.59,
+     "sign": "+",
+     "t": 3.31
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.52,
+    "gold": -0.06,
+    "market": 1.59,
+    "usdegp": 0.08
+   },
+   "n_weeks": 155,
+   "r2": 0.073,
+   "sector": "Financial Services",
+   "t": {
+    "brent": 1.07,
+    "gold": -0.12,
+    "market": 3.31,
+    "usdegp": 0.18
+   },
+   "vol_ann_pct": 43.7,
+   "weights_pct": {
+    "brent": 0.6,
+    "gold": 0.0,
+    "market": 6.7,
+    "stock_specific": 92.7,
+    "usdegp": 0.0
+   }
+  },
+  "MOSC": {
+   "beta": {
+    "brent": -0.112,
+    "gold": 0.025,
+    "market": 0.977,
+    "usdegp": 0.115
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.36,
+     "sign": "+",
+     "t": 5.27
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.62,
+    "gold": 0.07,
+    "market": 2.36,
+    "usdegp": 0.57
+   },
+   "n_weeks": 154,
+   "r2": 0.175,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -1.37,
+    "gold": 0.16,
+    "market": 5.27,
+    "usdegp": 1.26
+   },
+   "vol_ann_pct": 43.3,
+   "weights_pct": {
+    "brent": 1.3,
+    "gold": 0.0,
+    "market": 15.6,
+    "stock_specific": 82.5,
+    "usdegp": 0.6
+   }
+  },
+  "MPCI": {
+   "beta": {
+    "brent": -0.003,
+    "gold": 0.038,
+    "market": 0.963,
+    "usdegp": -0.184
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.33,
+     "sign": "+",
+     "t": 3.29
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.02,
+    "gold": 0.11,
+    "market": 2.33,
+    "usdegp": -0.91
+   },
+   "n_weeks": 155,
+   "r2": 0.081,
+   "sector": "Healthcare",
+   "t": {
+    "brent": -0.02,
+    "gold": 0.15,
+    "market": 3.29,
+    "usdegp": -1.27
+   },
+   "vol_ann_pct": 65.0,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.0,
+    "market": 6.9,
+    "stock_specific": 91.9,
+    "usdegp": 1.2
+   }
+  },
+  "MPCO": {
+   "beta": {
+    "brent": -0.053,
+    "gold": 0.156,
+    "market": 1.076,
+    "usdegp": -0.058
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.6,
+     "sign": "+",
+     "t": 4.57
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.29,
+    "gold": 0.44,
+    "market": 2.6,
+    "usdegp": -0.29
+   },
+   "n_weeks": 156,
+   "r2": 0.132,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -0.51,
+    "gold": 0.77,
+    "market": 4.57,
+    "usdegp": -0.5
+   },
+   "vol_ann_pct": 53.8,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.4,
+    "market": 12.4,
+    "stock_specific": 86.7,
+    "usdegp": 0.2
+   }
+  },
+  "MPRC": {
+   "beta": {
+    "brent": 0.014,
+    "gold": -0.231,
+    "market": 0.925,
+    "usdegp": -0.006
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.23,
+     "sign": "+",
+     "t": 4.58
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.08,
+    "gold": -0.65,
+    "market": 2.23,
+    "usdegp": -0.03
+   },
+   "n_weeks": 156,
+   "r2": 0.131,
+   "sector": "Media",
+   "t": {
+    "brent": 0.16,
+    "gold": -1.33,
+    "market": 4.58,
+    "usdegp": -0.06
+   },
+   "vol_ann_pct": 46.1,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 1.0,
+    "market": 12.1,
+    "stock_specific": 86.9,
+    "usdegp": 0.0
+   }
+  },
+  "MTIE": {
+   "beta": {
+    "brent": -0.075,
+    "gold": 0.047,
+    "market": 0.93,
+    "usdegp": -0.089
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.25,
+     "sign": "+",
+     "t": 5.2
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.41,
+    "gold": 0.13,
+    "market": 2.25,
+    "usdegp": -0.44
+   },
+   "n_weeks": 156,
+   "r2": 0.169,
+   "sector": "Retail",
+   "t": {
+    "brent": -0.95,
+    "gold": 0.31,
+    "market": 5.2,
+    "usdegp": -1.01
+   },
+   "vol_ann_pct": 41.9,
+   "weights_pct": {
+    "brent": 0.7,
+    "gold": 0.1,
+    "market": 15.4,
+    "stock_specific": 83.0,
+    "usdegp": 0.8
+   }
+  },
+  "NAHO": {
+   "beta": {
+    "brent": 0.069,
+    "gold": 0.143,
+    "market": 0.35,
+    "usdegp": -0.078
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 0.85,
+     "sign": "+",
+     "t": 2.37
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.38,
+    "gold": 0.4,
+    "market": 0.85,
+    "usdegp": -0.39
+   },
+   "n_weeks": 156,
+   "r2": 0.055,
+   "sector": "Financial Services",
+   "t": {
+    "brent": 1.07,
+    "gold": 1.12,
+    "market": 2.37,
+    "usdegp": -1.08
+   },
+   "vol_ann_pct": 32.4,
+   "weights_pct": {
+    "brent": 0.5,
+    "gold": 0.7,
+    "market": 3.6,
+    "stock_specific": 94.5,
+    "usdegp": 0.7
+   }
+  },
+  "NCCW": {
+   "beta": {
+    "brent": 0.036,
+    "gold": -0.341,
+    "market": 1.135,
+    "usdegp": -0.147
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.74,
+     "sign": "+",
+     "t": 5.75
+    },
+    {
+     "driver": "gold",
+     "impact_1sd_pct": -0.96,
+     "sign": "-",
+     "t": -2.0
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.2,
+    "gold": -0.96,
+    "market": 2.74,
+    "usdegp": -0.72
+   },
+   "n_weeks": 156,
+   "r2": 0.213,
+   "sector": "Construction",
+   "t": {
+    "brent": 0.41,
+    "gold": -2.0,
+    "market": 5.75,
+    "usdegp": -1.51
+   },
+   "vol_ann_pct": 47.4,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 2.2,
+    "market": 17.5,
+    "stock_specific": 78.6,
+    "usdegp": 1.7
+   }
+  },
+  "NEDA": {
+   "beta": {
+    "brent": -0.023,
+    "gold": -0.214,
+    "market": 1.235,
+    "usdegp": 0.001
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.98,
+     "sign": "+",
+     "t": 5.54
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.13,
+    "gold": -0.6,
+    "market": 2.98,
+    "usdegp": 0.01
+   },
+   "n_weeks": 156,
+   "r2": 0.176,
+   "sector": "Chemicals",
+   "t": {
+    "brent": -0.23,
+    "gold": -1.11,
+    "market": 5.54,
+    "usdegp": 0.01
+   },
+   "vol_ann_pct": 52.3,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.6,
+    "market": 16.9,
+    "stock_specific": 82.4,
+    "usdegp": 0.0
+   }
+  },
+  "NHPS": {
+   "beta": {
+    "brent": 0.084,
+    "gold": -0.299,
+    "market": 1.043,
+    "usdegp": 0.536
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.52,
+     "sign": "+",
+     "t": 4.19
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.46,
+    "gold": -0.84,
+    "market": 2.52,
+    "usdegp": 2.64
+   },
+   "n_weeks": 111,
+   "r2": 0.17,
+   "sector": "Real Estate",
+   "t": {
+    "brent": 0.77,
+    "gold": -1.65,
+    "market": 4.19,
+    "usdegp": 0.9
+   },
+   "vol_ann_pct": 44.7,
+   "weights_pct": {
+    "brent": 0.9,
+    "gold": 2.2,
+    "market": 13.1,
+    "stock_specific": 83.0,
+    "usdegp": 0.8
+   }
+  },
+  "NINH": {
+   "beta": {
+    "brent": 0.079,
+    "gold": -0.23,
+    "market": 1.026,
+    "usdegp": -0.085
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.48,
+     "sign": "+",
+     "t": 4.3
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.44,
+    "gold": -0.65,
+    "market": 2.48,
+    "usdegp": -0.42
+   },
+   "n_weeks": 156,
+   "r2": 0.122,
+   "sector": "Healthcare",
+   "t": {
+    "brent": 0.75,
+    "gold": -1.12,
+    "market": 4.3,
+    "usdegp": -0.72
+   },
+   "vol_ann_pct": 54.2,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.7,
+    "market": 10.8,
+    "stock_specific": 87.8,
+    "usdegp": 0.5
+   }
+  },
+  "NIPH": {
+   "beta": {
+    "brent": 0.039,
+    "gold": 0.328,
+    "market": 1.848,
+    "usdegp": -0.018
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 4.46,
+     "sign": "+",
+     "t": 6.13
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.21,
+    "gold": 0.92,
+    "market": 4.46,
+    "usdegp": -0.09
+   },
+   "n_weeks": 155,
+   "r2": 0.21,
+   "sector": "Healthcare",
+   "t": {
+    "brent": 0.29,
+    "gold": 1.26,
+    "market": 6.13,
+    "usdegp": -0.12
+   },
+   "vol_ann_pct": 72.3,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.9,
+    "market": 20.0,
+    "stock_specific": 79.1,
+    "usdegp": 0.0
+   }
+  },
+  "OBRI": {
+   "beta": {
+    "brent": -0.134,
+    "gold": -0.21,
+    "market": 1.008,
+    "usdegp": -0.075
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.43,
+     "sign": "+",
+     "t": 3.73
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.74,
+    "gold": -0.59,
+    "market": 2.43,
+    "usdegp": -0.37
+   },
+   "n_weeks": 156,
+   "r2": 0.103,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -1.13,
+    "gold": -0.9,
+    "market": 3.73,
+    "usdegp": -0.56
+   },
+   "vol_ann_pct": 60.8,
+   "weights_pct": {
+    "brent": 0.9,
+    "gold": 0.5,
+    "market": 8.5,
+    "stock_specific": 89.8,
+    "usdegp": 0.3
+   }
+  },
+  "OCDI": {
+   "beta": {
+    "brent": -0.034,
+    "gold": -0.315,
+    "market": 1.169,
+    "usdegp": -0.042
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.82,
+     "sign": "+",
+     "t": 5.65
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.18,
+    "gold": -0.88,
+    "market": 2.82,
+    "usdegp": -0.21
+   },
+   "n_weeks": 154,
+   "r2": 0.195,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.37,
+    "gold": -1.78,
+    "market": 5.65,
+    "usdegp": -0.41
+   },
+   "vol_ann_pct": 48.6,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 1.6,
+    "market": 17.4,
+    "stock_specific": 80.7,
+    "usdegp": 0.2
+   }
+  },
+  "OCPH": {
+   "beta": {
+    "brent": 0.212,
+    "gold": -0.005,
+    "market": 0.685,
+    "usdegp": 0.013
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.65,
+     "sign": "+",
+     "t": 2.59
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 1.17,
+    "gold": -0.01,
+    "market": 1.65,
+    "usdegp": 0.06
+   },
+   "n_weeks": 154,
+   "r2": 0.06,
+   "sector": "Healthcare",
+   "t": {
+    "brent": 1.82,
+    "gold": -0.02,
+    "market": 2.59,
+    "usdegp": 0.1
+   },
+   "vol_ann_pct": 58.0,
+   "weights_pct": {
+    "brent": 1.9,
+    "gold": 0.0,
+    "market": 4.1,
+    "stock_specific": 94.0,
+    "usdegp": 0.0
+   }
+  },
+  "ODIN": {
+   "beta": {
+    "brent": -0.09,
+    "gold": -0.007,
+    "market": 1.6,
+    "usdegp": 0.241
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.87,
+     "sign": "+",
+     "t": 8.38
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.49,
+    "gold": -0.02,
+    "market": 3.87,
+    "usdegp": 1.19
+   },
+   "n_weeks": 111,
+   "r2": 0.414,
+   "sector": "Financial Services",
+   "t": {
+    "brent": -1.07,
+    "gold": -0.05,
+    "market": 8.38,
+    "usdegp": 0.52
+   },
+   "vol_ann_pct": 40.8,
+   "weights_pct": {
+    "brent": 1.3,
+    "gold": 0.0,
+    "market": 40.8,
+    "stock_specific": 57.9,
+    "usdegp": 0.0
+   }
+  },
+  "OFH": {
+   "beta": {
+    "brent": 0.07,
+    "gold": 0.278,
+    "market": 1.365,
+    "usdegp": -0.027
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.3,
+     "sign": "+",
+     "t": 8.57
+    },
+    {
+     "driver": "gold",
+     "impact_1sd_pct": 0.78,
+     "sign": "+",
+     "t": 2.02
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.38,
+    "gold": 0.78,
+    "market": 3.3,
+    "usdegp": -0.13
+   },
+   "n_weeks": 156,
+   "r2": 0.344,
+   "sector": "Financial Services",
+   "t": {
+    "brent": 1.0,
+    "gold": 2.02,
+    "market": 8.57,
+    "usdegp": -0.34
+   },
+   "vol_ann_pct": 41.9,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 1.9,
+    "market": 32.2,
+    "stock_specific": 65.7,
+    "usdegp": 0.1
+   }
+  },
+  "OIH": {
+   "beta": {
+    "brent": -0.027,
+    "gold": -0.056,
+    "market": 1.224,
+    "usdegp": 0.031
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.96,
+     "sign": "+",
+     "t": 6.77
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.15,
+    "gold": -0.16,
+    "market": 2.96,
+    "usdegp": 0.15
+   },
+   "n_weeks": 156,
+   "r2": 0.235,
+   "sector": "Telecom",
+   "t": {
+    "brent": -0.33,
+    "gold": -0.36,
+    "market": 6.77,
+    "usdegp": 0.35
+   },
+   "vol_ann_pct": 44.0,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.0,
+    "market": 23.4,
+    "stock_specific": 76.5,
+    "usdegp": 0.0
+   }
+  },
+  "OLFI": {
+   "beta": {
+    "brent": -0.099,
+    "gold": -0.136,
+    "market": 0.734,
+    "usdegp": -0.067
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.77,
+     "sign": "+",
+     "t": 3.77
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.54,
+    "gold": -0.38,
+    "market": 1.77,
+    "usdegp": -0.33
+   },
+   "n_weeks": 156,
+   "r2": 0.105,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -1.15,
+    "gold": -0.81,
+    "market": 3.77,
+    "usdegp": -0.69
+   },
+   "vol_ann_pct": 43.9,
+   "weights_pct": {
+    "brent": 1.0,
+    "gold": 0.4,
+    "market": 8.7,
+    "stock_specific": 89.4,
+    "usdegp": 0.5
+   }
+  },
+  "ORHD": {
+   "beta": {
+    "brent": -0.081,
+    "gold": 0.037,
+    "market": 1.179,
+    "usdegp": -0.097
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.85,
+     "sign": "+",
+     "t": 7.33
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.45,
+    "gold": 0.1,
+    "market": 2.85,
+    "usdegp": -0.48
+   },
+   "n_weeks": 156,
+   "r2": 0.284,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -1.15,
+    "gold": 0.26,
+    "market": 7.33,
+    "usdegp": -1.22
+   },
+   "vol_ann_pct": 40.5,
+   "weights_pct": {
+    "brent": 1.0,
+    "gold": 0.0,
+    "market": 26.3,
+    "stock_specific": 71.7,
+    "usdegp": 1.0
+   }
+  },
+  "ORWE": {
+   "beta": {
+    "brent": -0.047,
+    "gold": 0.165,
+    "market": 0.986,
+    "usdegp": 0.103
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.38,
+     "sign": "+",
+     "t": 6.58
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.26,
+    "gold": 0.46,
+    "market": 2.38,
+    "usdegp": 0.51
+   },
+   "n_weeks": 156,
+   "r2": 0.241,
+   "sector": "Personal & Household",
+   "t": {
+    "brent": -0.72,
+    "gold": 1.27,
+    "market": 6.58,
+    "usdegp": 1.39
+   },
+   "vol_ann_pct": 36.7,
+   "weights_pct": {
+    "brent": 0.4,
+    "gold": 1.1,
+    "market": 21.9,
+    "stock_specific": 75.8,
+    "usdegp": 0.8
+   }
+  },
+  "PHAR": {
+   "beta": {
+    "brent": -0.064,
+    "gold": 0.126,
+    "market": 0.887,
+    "usdegp": -0.052
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.14,
+     "sign": "+",
+     "t": 6.51
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.35,
+    "gold": 0.35,
+    "market": 2.14,
+    "usdegp": -0.26
+   },
+   "n_weeks": 156,
+   "r2": 0.24,
+   "sector": "Healthcare",
+   "t": {
+    "brent": -1.07,
+    "gold": 1.07,
+    "market": 6.51,
+    "usdegp": -0.78
+   },
+   "vol_ann_pct": 33.3,
+   "weights_pct": {
+    "brent": 0.9,
+    "gold": 0.6,
+    "market": 22.0,
+    "stock_specific": 76.0,
+    "usdegp": 0.5
+   }
+  },
+  "PHDC": {
+   "beta": {
+    "brent": -0.054,
+    "gold": -0.019,
+    "market": 1.398,
+    "usdegp": -0.145
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.38,
+     "sign": "+",
+     "t": 7.81
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.3,
+    "gold": -0.05,
+    "market": 3.38,
+    "usdegp": -0.71
+   },
+   "n_weeks": 156,
+   "r2": 0.309,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.69,
+    "gold": -0.12,
+    "market": 7.81,
+    "usdegp": -1.64
+   },
+   "vol_ann_pct": 45.9,
+   "weights_pct": {
+    "brent": 0.4,
+    "gold": 0.0,
+    "market": 28.7,
+    "stock_specific": 69.2,
+    "usdegp": 1.7
+   }
+  },
+  "PHTV": {
+   "beta": {
+    "brent": 0.039,
+    "gold": -0.102,
+    "market": 0.252,
+    "usdegp": -0.01
+   },
+   "drivers": [],
+   "impact_1sd_pct": {
+    "brent": 0.22,
+    "gold": -0.29,
+    "market": 0.61,
+    "usdegp": -0.05
+   },
+   "n_weeks": 156,
+   "r2": 0.018,
+   "sector": "Travel & Leisure",
+   "t": {
+    "brent": 0.51,
+    "gold": -0.67,
+    "market": 1.44,
+    "usdegp": -0.11
+   },
+   "vol_ann_pct": 37.8,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.3,
+    "market": 1.3,
+    "stock_specific": 98.3,
+    "usdegp": 0.0
+   }
+  },
+  "POUL": {
+   "beta": {
+    "brent": -0.221,
+    "gold": -0.131,
+    "market": 1.104,
+    "usdegp": -0.094
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.67,
+     "sign": "+",
+     "t": 6.09
+    },
+    {
+     "driver": "brent",
+     "impact_1sd_pct": -1.21,
+     "sign": "-",
+     "t": -2.77
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -1.21,
+    "gold": -0.37,
+    "market": 2.67,
+    "usdegp": -0.47
+   },
+   "n_weeks": 156,
+   "r2": 0.251,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -2.77,
+    "gold": -0.84,
+    "market": 6.09,
+    "usdegp": -1.06
+   },
+   "vol_ann_pct": 44.6,
+   "weights_pct": {
+    "brent": 4.5,
+    "gold": 0.3,
+    "market": 19.3,
+    "stock_specific": 75.0,
+    "usdegp": 0.9
+   }
+  },
+  "PRCL": {
+   "beta": {
+    "brent": -0.132,
+    "gold": 0.034,
+    "market": 1.473,
+    "usdegp": -0.127
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.56,
+     "sign": "+",
+     "t": 7.01
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.73,
+    "gold": 0.1,
+    "market": 3.56,
+    "usdegp": -0.63
+   },
+   "n_weeks": 156,
+   "r2": 0.271,
+   "sector": "Retail",
+   "t": {
+    "brent": -1.43,
+    "gold": 0.19,
+    "market": 7.01,
+    "usdegp": -1.23
+   },
+   "vol_ann_pct": 52.4,
+   "weights_pct": {
+    "brent": 1.4,
+    "gold": 0.0,
+    "market": 24.6,
+    "stock_specific": 72.9,
+    "usdegp": 1.1
+   }
+  },
+  "PRDC": {
+   "beta": {
+    "brent": 0.052,
+    "gold": -0.074,
+    "market": 1.399,
+    "usdegp": 0.043
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.38,
+     "sign": "+",
+     "t": 8.64
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.29,
+    "gold": -0.21,
+    "market": 3.38,
+    "usdegp": 0.21
+   },
+   "n_weeks": 156,
+   "r2": 0.331,
+   "sector": "Real Estate",
+   "t": {
+    "brent": 0.74,
+    "gold": -0.53,
+    "market": 8.64,
+    "usdegp": 0.54
+   },
+   "vol_ann_pct": 42.2,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.1,
+    "market": 33.0,
+    "stock_specific": 66.8,
+    "usdegp": 0.0
+   }
+  },
+  "PRMH": {
+   "beta": {
+    "brent": 0.07,
+    "gold": 0.081,
+    "market": 1.296,
+    "usdegp": -0.057
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.13,
+     "sign": "+",
+     "t": 5.56
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.38,
+    "gold": 0.23,
+    "market": 3.13,
+    "usdegp": -0.28
+   },
+   "n_weeks": 156,
+   "r2": 0.174,
+   "sector": "Financial Services",
+   "t": {
+    "brent": 0.68,
+    "gold": 0.4,
+    "market": 5.56,
+    "usdegp": -0.5
+   },
+   "vol_ann_pct": 54.7,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.1,
+    "market": 17.0,
+    "stock_specific": 82.6,
+    "usdegp": 0.2
+   }
+  },
+  "RACC": {
+   "beta": {
+    "brent": -0.138,
+    "gold": 0.127,
+    "market": 1.179,
+    "usdegp": 0.157
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.85,
+     "sign": "+",
+     "t": 6.27
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.76,
+    "gold": 0.36,
+    "market": 2.85,
+    "usdegp": 0.77
+   },
+   "n_weeks": 156,
+   "r2": 0.234,
+   "sector": "Commercial Services",
+   "t": {
+    "brent": -1.66,
+    "gold": 0.78,
+    "market": 6.27,
+    "usdegp": 1.69
+   },
+   "vol_ann_pct": 45.8,
+   "weights_pct": {
+    "brent": 1.7,
+    "gold": 0.5,
+    "market": 20.2,
+    "stock_specific": 76.5,
+    "usdegp": 1.1
+   }
+  },
+  "RAKT": {
+   "beta": {
+    "brent": -0.028,
+    "gold": -0.247,
+    "market": 0.845,
+    "usdegp": -0.044
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.04,
+     "sign": "+",
+     "t": 3.74
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.16,
+    "gold": -0.69,
+    "market": 2.04,
+    "usdegp": -0.22
+   },
+   "n_weeks": 156,
+   "r2": 0.097,
+   "sector": "Paper & Packaging",
+   "t": {
+    "brent": -0.29,
+    "gold": -1.26,
+    "market": 3.74,
+    "usdegp": -0.39
+   },
+   "vol_ann_pct": 50.7,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.9,
+    "market": 8.5,
+    "stock_specific": 90.3,
+    "usdegp": 0.2
+   }
+  },
+  "RAYA": {
+   "beta": {
+    "brent": 0.066,
+    "gold": 0.257,
+    "market": 1.035,
+    "usdegp": 0.022
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.5,
+     "sign": "+",
+     "t": 5.46
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.36,
+    "gold": 0.72,
+    "market": 2.5,
+    "usdegp": 0.11
+   },
+   "n_weeks": 156,
+   "r2": 0.179,
+   "sector": "Technology",
+   "t": {
+    "brent": 0.79,
+    "gold": 1.57,
+    "market": 5.46,
+    "usdegp": 0.23
+   },
+   "vol_ann_pct": 44.6,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 1.5,
+    "market": 16.2,
+    "stock_specific": 82.1,
+    "usdegp": 0.0
+   }
+  },
+  "RKAZ": {
+   "beta": {
+    "brent": -0.129,
+    "gold": -0.407,
+    "market": 0.406,
+    "usdegp": 0.18
+   },
+   "drivers": [],
+   "impact_1sd_pct": {
+    "brent": -0.71,
+    "gold": -1.14,
+    "market": 0.98,
+    "usdegp": 0.89
+   },
+   "n_weeks": 129,
+   "r2": 0.047,
+   "sector": "Chemicals",
+   "t": {
+    "brent": -0.99,
+    "gold": -1.6,
+    "market": 1.31,
+    "usdegp": 1.31
+   },
+   "vol_ann_pct": 60.2,
+   "weights_pct": {
+    "brent": 0.7,
+    "gold": 1.7,
+    "market": 1.3,
+    "stock_specific": 95.3,
+    "usdegp": 1.0
+   }
+  },
+  "RMDA": {
+   "beta": {
+    "brent": -0.15,
+    "gold": -0.072,
+    "market": 0.99,
+    "usdegp": -0.065
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.39,
+     "sign": "+",
+     "t": 5.51
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.83,
+    "gold": -0.2,
+    "market": 2.39,
+    "usdegp": -0.32
+   },
+   "n_weeks": 156,
+   "r2": 0.197,
+   "sector": "Healthcare",
+   "t": {
+    "brent": -1.9,
+    "gold": -0.46,
+    "market": 5.51,
+    "usdegp": -0.73
+   },
+   "vol_ann_pct": 42.7,
+   "weights_pct": {
+    "brent": 2.4,
+    "gold": 0.1,
+    "market": 16.8,
+    "stock_specific": 80.2,
+    "usdegp": 0.5
+   }
+  },
+  "ROTO": {
+   "beta": {
+    "brent": -0.017,
+    "gold": -0.019,
+    "market": 1.178,
+    "usdegp": -0.152
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.85,
+     "sign": "+",
+     "t": 4.82
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.09,
+    "gold": -0.05,
+    "market": 2.85,
+    "usdegp": -0.75
+   },
+   "n_weeks": 156,
+   "r2": 0.147,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.16,
+    "gold": -0.09,
+    "market": 4.82,
+    "usdegp": -1.26
+   },
+   "vol_ann_pct": 56.4,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.0,
+    "market": 13.5,
+    "stock_specific": 85.2,
+    "usdegp": 1.2
+   }
+  },
+  "RREI": {
+   "beta": {
+    "brent": -0.181,
+    "gold": -0.12,
+    "market": 1.636,
+    "usdegp": -0.091
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.95,
+     "sign": "+",
+     "t": 8.15
+    },
+    {
+     "driver": "brent",
+     "impact_1sd_pct": -1.0,
+     "sign": "-",
+     "t": -2.06
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -1.0,
+    "gold": -0.34,
+    "market": 3.95,
+    "usdegp": -0.45
+   },
+   "n_weeks": 156,
+   "r2": 0.335,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -2.06,
+    "gold": -0.69,
+    "market": 8.15,
+    "usdegp": -0.92
+   },
+   "vol_ann_pct": 52.4,
+   "weights_pct": {
+    "brent": 2.4,
+    "gold": 0.2,
+    "market": 30.2,
+    "stock_specific": 66.5,
+    "usdegp": 0.7
+   }
+  },
+  "RTVC": {
+   "beta": {
+    "brent": 0.055,
+    "gold": 0.076,
+    "market": 1.047,
+    "usdegp": -0.189
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.53,
+     "sign": "+",
+     "t": 4.36
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.3,
+    "gold": 0.21,
+    "market": 2.53,
+    "usdegp": -0.93
+   },
+   "n_weeks": 156,
+   "r2": 0.13,
+   "sector": "Construction",
+   "t": {
+    "brent": 0.52,
+    "gold": 0.37,
+    "market": 4.36,
+    "usdegp": -1.59
+   },
+   "vol_ann_pct": 54.8,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.1,
+    "market": 11.2,
+    "stock_specific": 87.0,
+    "usdegp": 1.7
+   }
+  },
+  "RUBX": {
+   "beta": {
+    "brent": -0.013,
+    "gold": -0.02,
+    "market": 0.647,
+    "usdegp": 0.035
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.56,
+     "sign": "+",
+     "t": 2.53
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.07,
+    "gold": -0.06,
+    "market": 1.56,
+    "usdegp": 0.17
+   },
+   "n_weeks": 156,
+   "r2": 0.041,
+   "sector": "Personal & Household",
+   "t": {
+    "brent": -0.12,
+    "gold": -0.09,
+    "market": 2.53,
+    "usdegp": 0.28
+   },
+   "vol_ann_pct": 55.7,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.0,
+    "market": 4.1,
+    "stock_specific": 95.9,
+    "usdegp": 0.0
+   }
+  },
+  "SAUD": {
+   "beta": {
+    "brent": -0.031,
+    "gold": 0.152,
+    "market": 0.851,
+    "usdegp": 0.154
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.06,
+     "sign": "+",
+     "t": 7.12
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": 0.76,
+     "sign": "+",
+     "t": 2.61
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.17,
+    "gold": 0.43,
+    "market": 2.06,
+    "usdegp": 0.76
+   },
+   "n_weeks": 156,
+   "r2": 0.285,
+   "sector": "Banks",
+   "t": {
+    "brent": -0.59,
+    "gold": 1.48,
+    "market": 7.12,
+    "usdegp": 2.61
+   },
+   "vol_ann_pct": 30.1,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 1.4,
+    "market": 23.9,
+    "stock_specific": 71.5,
+    "usdegp": 2.9
+   }
+  },
+  "SCEM": {
+   "beta": {
+    "brent": 0.068,
+    "gold": 0.395,
+    "market": 0.984,
+    "usdegp": -0.13
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.38,
+     "sign": "+",
+     "t": 4.6
+    },
+    {
+     "driver": "gold",
+     "impact_1sd_pct": 1.11,
+     "sign": "+",
+     "t": 2.16
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.37,
+    "gold": 1.11,
+    "market": 2.38,
+    "usdegp": -0.64
+   },
+   "n_weeks": 153,
+   "r2": 0.159,
+   "sector": "Building Materials",
+   "t": {
+    "brent": 0.73,
+    "gold": 2.16,
+    "market": 4.6,
+    "usdegp": -1.25
+   },
+   "vol_ann_pct": 49.2,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 2.6,
+    "market": 12.3,
+    "stock_specific": 84.1,
+    "usdegp": 0.9
+   }
+  },
+  "SCFM": {
+   "beta": {
+    "brent": 0.07,
+    "gold": 0.005,
+    "market": 0.756,
+    "usdegp": -0.009
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.83,
+     "sign": "+",
+     "t": 2.85
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.39,
+    "gold": 0.01,
+    "market": 1.83,
+    "usdegp": -0.05
+   },
+   "n_weeks": 153,
+   "r2": 0.053,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": 0.6,
+    "gold": 0.02,
+    "market": 2.85,
+    "usdegp": -0.07
+   },
+   "vol_ann_pct": 57.6,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.0,
+    "market": 5.2,
+    "stock_specific": 94.6,
+    "usdegp": 0.0
+   }
+  },
+  "SCTS": {
+   "beta": {
+    "brent": -0.166,
+    "gold": -0.076,
+    "market": 0.608,
+    "usdegp": 0.02
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.47,
+     "sign": "+",
+     "t": 2.89
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.92,
+    "gold": -0.21,
+    "market": 1.47,
+    "usdegp": 0.1
+   },
+   "n_weeks": 155,
+   "r2": 0.077,
+   "sector": "Commercial Services",
+   "t": {
+    "brent": -1.8,
+    "gold": -0.42,
+    "market": 2.89,
+    "usdegp": 0.2
+   },
+   "vol_ann_pct": 46.5,
+   "weights_pct": {
+    "brent": 2.2,
+    "gold": 0.1,
+    "market": 5.4,
+    "stock_specific": 92.3,
+    "usdegp": 0.0
+   }
+  },
+  "SDTI": {
+   "beta": {
+    "brent": 0.005,
+    "gold": 0.052,
+    "market": 0.66,
+    "usdegp": -0.058
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.59,
+     "sign": "+",
+     "t": 3.42
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.03,
+    "gold": 0.15,
+    "market": 1.59,
+    "usdegp": -0.28
+   },
+   "n_weeks": 156,
+   "r2": 0.077,
+   "sector": "Travel & Leisure",
+   "t": {
+    "brent": 0.06,
+    "gold": 0.31,
+    "market": 3.42,
+    "usdegp": -0.61
+   },
+   "vol_ann_pct": 42.7,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.1,
+    "market": 7.3,
+    "stock_specific": 92.3,
+    "usdegp": 0.3
+   }
+  },
+  "SEIG": {
+   "beta": {
+    "brent": 0.041,
+    "gold": 0.129,
+    "market": 0.895,
+    "usdegp": -0.011
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.16,
+     "sign": "+",
+     "t": 3.54
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.23,
+    "gold": 0.36,
+    "market": 2.16,
+    "usdegp": -0.05
+   },
+   "n_weeks": 156,
+   "r2": 0.08,
+   "sector": "Financial Services",
+   "t": {
+    "brent": 0.37,
+    "gold": 0.59,
+    "market": 3.54,
+    "usdegp": -0.09
+   },
+   "vol_ann_pct": 56.2,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.2,
+    "market": 7.7,
+    "stock_specific": 92.1,
+    "usdegp": 0.0
+   }
+  },
+  "SIPC": {
+   "beta": {
+    "brent": 0.247,
+    "gold": -0.244,
+    "market": 1.362,
+    "usdegp": -0.727
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.29,
+     "sign": "+",
+     "t": 3.29
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 1.36,
+    "gold": -0.69,
+    "market": 3.29,
+    "usdegp": -3.58
+   },
+   "n_weeks": 106,
+   "r2": 0.12,
+   "sector": "Healthcare",
+   "t": {
+    "brent": 1.37,
+    "gold": -0.82,
+    "market": 3.29,
+    "usdegp": -0.74
+   },
+   "vol_ann_pct": 70.4,
+   "weights_pct": {
+    "brent": 1.2,
+    "gold": 0.5,
+    "market": 9.8,
+    "stock_specific": 88.1,
+    "usdegp": 0.4
+   }
+  },
+  "SKPC": {
+   "beta": {
+    "brent": 0.144,
+    "gold": 0.204,
+    "market": 1.098,
+    "usdegp": 0.144
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.65,
+     "sign": "+",
+     "t": 6.42
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.79,
+    "gold": 0.57,
+    "market": 2.65,
+    "usdegp": 0.71
+   },
+   "n_weeks": 156,
+   "r2": 0.243,
+   "sector": "Chemicals",
+   "t": {
+    "brent": 1.92,
+    "gold": 1.38,
+    "market": 6.42,
+    "usdegp": 1.71
+   },
+   "vol_ann_pct": 41.9,
+   "weights_pct": {
+    "brent": 1.5,
+    "gold": 1.2,
+    "market": 20.2,
+    "stock_specific": 75.7,
+    "usdegp": 1.4
+   }
+  },
+  "SMFR": {
+   "beta": {
+    "brent": -0.057,
+    "gold": 0.07,
+    "market": 0.533,
+    "usdegp": 0.116
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.29,
+     "sign": "+",
+     "t": 2.38
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.32,
+    "gold": 0.2,
+    "market": 1.29,
+    "usdegp": 0.57
+   },
+   "n_weeks": 154,
+   "r2": 0.046,
+   "sector": "Trade & Distributors",
+   "t": {
+    "brent": -0.58,
+    "gold": 0.36,
+    "market": 2.38,
+    "usdegp": 1.05
+   },
+   "vol_ann_pct": 48.8,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.1,
+    "market": 3.6,
+    "stock_specific": 95.5,
+    "usdegp": 0.6
+   }
+  },
+  "SNFC": {
+   "beta": {
+    "brent": 0.053,
+    "gold": -0.186,
+    "market": 0.32,
+    "usdegp": 0.095
+   },
+   "drivers": [],
+   "impact_1sd_pct": {
+    "brent": 0.29,
+    "gold": -0.52,
+    "market": 0.77,
+    "usdegp": 0.47
+   },
+   "n_weeks": 156,
+   "r2": 0.033,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": 0.65,
+    "gold": -1.15,
+    "market": 1.71,
+    "usdegp": 1.03
+   },
+   "vol_ann_pct": 40.5,
+   "weights_pct": {
+    "brent": 0.3,
+    "gold": 0.8,
+    "market": 1.7,
+    "stock_specific": 96.6,
+    "usdegp": 0.6
+   }
+  },
+  "SPIN": {
+   "beta": {
+    "brent": 0.047,
+    "gold": 0.209,
+    "market": 0.543,
+    "usdegp": 0.094
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.31,
+     "sign": "+",
+     "t": 3.25
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.26,
+    "gold": 0.59,
+    "market": 1.31,
+    "usdegp": 0.46
+   },
+   "n_weeks": 155,
+   "r2": 0.087,
+   "sector": "Personal & Household",
+   "t": {
+    "brent": 0.63,
+    "gold": 1.45,
+    "market": 3.25,
+    "usdegp": 1.14
+   },
+   "vol_ann_pct": 37.2,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 1.5,
+    "market": 6.3,
+    "stock_specific": 91.2,
+    "usdegp": 0.8
+   }
+  },
+  "SPMD": {
+   "beta": {
+    "brent": -0.078,
+    "gold": -0.066,
+    "market": 1.135,
+    "usdegp": -0.005
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.74,
+     "sign": "+",
+     "t": 8.52
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.43,
+    "gold": -0.18,
+    "market": 2.74,
+    "usdegp": -0.03
+   },
+   "n_weeks": 156,
+   "r2": 0.337,
+   "sector": "Healthcare",
+   "t": {
+    "brent": -1.33,
+    "gold": -0.57,
+    "market": 8.52,
+    "usdegp": -0.08
+   },
+   "vol_ann_pct": 34.8,
+   "weights_pct": {
+    "brent": 1.1,
+    "gold": 0.1,
+    "market": 32.5,
+    "stock_specific": 66.3,
+    "usdegp": 0.0
+   }
+  },
+  "SUGR": {
+   "beta": {
+    "brent": -0.02,
+    "gold": 0.021,
+    "market": 0.968,
+    "usdegp": 0.131
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.34,
+     "sign": "+",
+     "t": 6.12
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.11,
+    "gold": 0.06,
+    "market": 2.34,
+    "usdegp": 0.64
+   },
+   "n_weeks": 156,
+   "r2": 0.208,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -0.28,
+    "gold": 0.15,
+    "market": 6.12,
+    "usdegp": 1.67
+   },
+   "vol_ann_pct": 37.9,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.0,
+    "market": 19.5,
+    "stock_specific": 79.3,
+    "usdegp": 1.1
+   }
+  },
+  "SVCE": {
+   "beta": {
+    "brent": -0.043,
+    "gold": 0.04,
+    "market": 1.655,
+    "usdegp": -0.049
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 4.0,
+     "sign": "+",
+     "t": 7.53
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.24,
+    "gold": 0.11,
+    "market": 4.0,
+    "usdegp": -0.24
+   },
+   "n_weeks": 156,
+   "r2": 0.28,
+   "sector": "Building Materials",
+   "t": {
+    "brent": -0.45,
+    "gold": 0.21,
+    "market": 7.53,
+    "usdegp": -0.45
+   },
+   "vol_ann_pct": 55.2,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.0,
+    "market": 27.5,
+    "stock_specific": 72.1,
+    "usdegp": 0.2
+   }
+  },
+  "SWDY": {
+   "beta": {
+    "brent": -0.021,
+    "gold": 0.164,
+    "market": 0.8,
+    "usdegp": 0.348
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.93,
+     "sign": "+",
+     "t": 4.05
+    },
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": 1.71,
+     "sign": "+",
+     "t": 3.57
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.12,
+    "gold": 0.46,
+    "market": 1.93,
+    "usdegp": 1.71
+   },
+   "n_weeks": 156,
+   "r2": 0.164,
+   "sector": "Industrial Goods",
+   "t": {
+    "brent": -0.25,
+    "gold": 0.96,
+    "market": 4.05,
+    "usdegp": 3.57
+   },
+   "vol_ann_pct": 46.0,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.8,
+    "market": 8.7,
+    "stock_specific": 83.6,
+    "usdegp": 6.9
+   }
+  },
+  "TALM": {
+   "beta": {
+    "brent": -0.096,
+    "gold": 0.342,
+    "market": 0.576,
+    "usdegp": 0.13
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.39,
+     "sign": "+",
+     "t": 3.31
+    },
+    {
+     "driver": "gold",
+     "impact_1sd_pct": 0.96,
+     "sign": "+",
+     "t": 2.28
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.53,
+    "gold": 0.96,
+    "market": 1.39,
+    "usdegp": 0.64
+   },
+   "n_weeks": 156,
+   "r2": 0.123,
+   "sector": "Consumer Services",
+   "t": {
+    "brent": -1.26,
+    "gold": 2.28,
+    "market": 3.31,
+    "usdegp": 1.51
+   },
+   "vol_ann_pct": 39.6,
+   "weights_pct": {
+    "brent": 1.1,
+    "gold": 3.5,
+    "market": 6.5,
+    "stock_specific": 87.6,
+    "usdegp": 1.3
+   }
+  },
+  "TMGH": {
+   "beta": {
+    "brent": 0.018,
+    "gold": 0.007,
+    "market": 0.744,
+    "usdegp": 0.194
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.8,
+     "sign": "+",
+     "t": 3.22
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.1,
+    "gold": 0.02,
+    "market": 1.8,
+    "usdegp": 0.96
+   },
+   "n_weeks": 155,
+   "r2": 0.079,
+   "sector": "Real Estate",
+   "t": {
+    "brent": 0.19,
+    "gold": 0.04,
+    "market": 3.22,
+    "usdegp": 1.76
+   },
+   "vol_ann_pct": 49.6,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.0,
+    "market": 6.1,
+    "stock_specific": 92.2,
+    "usdegp": 1.7
+   }
+  },
+  "TRTO": {
+   "beta": {
+    "brent": -0.004,
+    "gold": 0.067,
+    "market": 0.255,
+    "usdegp": 0.495
+   },
+   "drivers": [
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": 2.44,
+     "sign": "+",
+     "t": 6.37
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.02,
+    "gold": 0.19,
+    "market": 0.62,
+    "usdegp": 2.44
+   },
+   "n_weeks": 153,
+   "r2": 0.229,
+   "sector": "Commercial Services",
+   "t": {
+    "brent": -0.06,
+    "gold": 0.49,
+    "market": 1.62,
+    "usdegp": 6.37
+   },
+   "vol_ann_pct": 38.1,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.3,
+    "market": 1.0,
+    "stock_specific": 77.2,
+    "usdegp": 21.5
+   }
+  },
+  "UEFM": {
+   "beta": {
+    "brent": -0.028,
+    "gold": 0.133,
+    "market": 0.699,
+    "usdegp": 0.047
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.69,
+     "sign": "+",
+     "t": 3.09
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.16,
+    "gold": 0.37,
+    "market": 1.69,
+    "usdegp": 0.23
+   },
+   "n_weeks": 156,
+   "r2": 0.065,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -0.28,
+    "gold": 0.68,
+    "market": 3.09,
+    "usdegp": 0.42
+   },
+   "vol_ann_pct": 49.9,
+   "weights_pct": {
+    "brent": 0.1,
+    "gold": 0.3,
+    "market": 6.0,
+    "stock_specific": 93.5,
+    "usdegp": 0.1
+   }
+  },
+  "UEGC": {
+   "beta": {
+    "brent": 0.052,
+    "gold": -0.077,
+    "market": 1.59,
+    "usdegp": -0.113
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.84,
+     "sign": "+",
+     "t": 9.57
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.29,
+    "gold": -0.22,
+    "market": 3.84,
+    "usdegp": -0.56
+   },
+   "n_weeks": 156,
+   "r2": 0.388,
+   "sector": "Construction",
+   "t": {
+    "brent": 0.71,
+    "gold": -0.54,
+    "market": 9.57,
+    "usdegp": -1.38
+   },
+   "vol_ann_pct": 45.3,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.1,
+    "market": 37.6,
+    "stock_specific": 61.2,
+    "usdegp": 1.1
+   }
+  },
+  "UNIP": {
+   "beta": {
+    "brent": 0.018,
+    "gold": -0.049,
+    "market": 1.239,
+    "usdegp": -0.078
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.99,
+     "sign": "+",
+     "t": 6.38
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.1,
+    "gold": -0.14,
+    "market": 2.99,
+    "usdegp": -0.39
+   },
+   "n_weeks": 155,
+   "r2": 0.22,
+   "sector": "Paper & Packaging",
+   "t": {
+    "brent": 0.21,
+    "gold": -0.29,
+    "market": 6.38,
+    "usdegp": -0.82
+   },
+   "vol_ann_pct": 46.6,
+   "weights_pct": {
+    "brent": 0.0,
+    "gold": 0.0,
+    "market": 21.4,
+    "stock_specific": 78.1,
+    "usdegp": 0.5
+   }
+  },
+  "UNIT": {
+   "beta": {
+    "brent": -0.03,
+    "gold": -0.132,
+    "market": 1.478,
+    "usdegp": -0.035
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.57,
+     "sign": "+",
+     "t": 8.57
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.17,
+    "gold": -0.37,
+    "market": 3.57,
+    "usdegp": -0.17
+   },
+   "n_weeks": 155,
+   "r2": 0.336,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.4,
+    "gold": -0.89,
+    "market": 8.57,
+    "usdegp": -0.41
+   },
+   "vol_ann_pct": 44.8,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.3,
+    "market": 33.0,
+    "stock_specific": 66.3,
+    "usdegp": 0.2
+   }
+  },
+  "WCDF": {
+   "beta": {
+    "brent": 0.036,
+    "gold": 0.081,
+    "market": 0.533,
+    "usdegp": 0.309
+   },
+   "drivers": [
+    {
+     "driver": "usdegp",
+     "impact_1sd_pct": 1.52,
+     "sign": "+",
+     "t": 4.17
+    },
+    {
+     "driver": "market",
+     "impact_1sd_pct": 1.29,
+     "sign": "+",
+     "t": 3.55
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.2,
+    "gold": 0.23,
+    "market": 1.29,
+    "usdegp": 1.52
+   },
+   "n_weeks": 156,
+   "r2": 0.166,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": 0.55,
+    "gold": 0.63,
+    "market": 3.55,
+    "usdegp": 4.17
+   },
+   "vol_ann_pct": 35.0,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.4,
+    "market": 6.5,
+    "stock_specific": 83.3,
+    "usdegp": 9.6
+   }
+  },
+  "WKOL": {
+   "beta": {
+    "brent": 0.156,
+    "gold": -0.124,
+    "market": 0.997,
+    "usdegp": -0.006
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.41,
+     "sign": "+",
+     "t": 4.43
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": 0.86,
+    "gold": -0.35,
+    "market": 2.41,
+    "usdegp": -0.03
+   },
+   "n_weeks": 153,
+   "r2": 0.131,
+   "sector": "Construction",
+   "t": {
+    "brent": 1.66,
+    "gold": -0.67,
+    "market": 4.43,
+    "usdegp": -0.06
+   },
+   "vol_ann_pct": 48.8,
+   "weights_pct": {
+    "brent": 1.4,
+    "gold": 0.3,
+    "market": 11.4,
+    "stock_specific": 86.9,
+    "usdegp": 0.0
+   }
+  },
+  "ZEOT": {
+   "beta": {
+    "brent": -0.063,
+    "gold": 0.026,
+    "market": 1.323,
+    "usdegp": -0.117
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 3.2,
+     "sign": "+",
+     "t": 6.05
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.35,
+    "gold": 0.07,
+    "market": 3.2,
+    "usdegp": -0.58
+   },
+   "n_weeks": 155,
+   "r2": 0.21,
+   "sector": "Food & Beverage",
+   "t": {
+    "brent": -0.65,
+    "gold": 0.14,
+    "market": 6.05,
+    "usdegp": -1.09
+   },
+   "vol_ann_pct": 52.3,
+   "weights_pct": {
+    "brent": 0.4,
+    "gold": 0.0,
+    "market": 19.8,
+    "stock_specific": 78.9,
+    "usdegp": 0.9
+   }
+  },
+  "ZMID": {
+   "beta": {
+    "brent": -0.034,
+    "gold": -0.126,
+    "market": 1.233,
+    "usdegp": -0.06
+   },
+   "drivers": [
+    {
+     "driver": "market",
+     "impact_1sd_pct": 2.98,
+     "sign": "+",
+     "t": 6.74
+    }
+   ],
+   "impact_1sd_pct": {
+    "brent": -0.19,
+    "gold": -0.35,
+    "market": 2.98,
+    "usdegp": -0.3
+   },
+   "n_weeks": 156,
+   "r2": 0.241,
+   "sector": "Real Estate",
+   "t": {
+    "brent": -0.42,
+    "gold": -0.8,
+    "market": 6.74,
+    "usdegp": -0.67
+   },
+   "vol_ann_pct": 44.7,
+   "weights_pct": {
+    "brent": 0.2,
+    "gold": 0.3,
+    "market": 23.2,
+    "stock_specific": 75.9,
+    "usdegp": 0.4
+   }
+  }
+ },
+ "sector_weights_pct": {
+  "Banks": {
+   "brent": 0.3,
+   "gold": 0.3,
+   "market": 8.7,
+   "n": 10,
+   "stock_specific": 88.8,
+   "usdegp": 2.8
+  },
+  "Basic Resources": {
+   "brent": 0.9,
+   "gold": 0.2,
+   "market": 17.6,
+   "n": 4,
+   "stock_specific": 80.4,
+   "usdegp": 0.0
+  },
+  "Building Materials": {
+   "brent": 0.2,
+   "gold": 0.7,
+   "market": 19.9,
+   "n": 10,
+   "stock_specific": 79.0,
+   "usdegp": 0.3
+  },
+  "Chemicals": {
+   "brent": 0.3,
+   "gold": 0.3,
+   "market": 12.6,
+   "n": 10,
+   "stock_specific": 85.0,
+   "usdegp": 0.1
+  },
+  "Commercial Services": {
+   "brent": 0.9,
+   "gold": 0.4,
+   "market": 6.5,
+   "n": 4,
+   "stock_specific": 83.6,
+   "usdegp": 0.6
+  },
+  "Construction": {
+   "brent": 0.2,
+   "gold": 0.1,
+   "market": 17.8,
+   "n": 8,
+   "stock_specific": 79.1,
+   "usdegp": 0.4
+  },
+  "Financial Services": {
+   "brent": 0.3,
+   "gold": 0.2,
+   "market": 13.5,
+   "n": 24,
+   "stock_specific": 84.4,
+   "usdegp": 0.2
+  },
+  "Food & Beverage": {
+   "brent": 0.3,
+   "gold": 0.3,
+   "market": 12.4,
+   "n": 27,
+   "stock_specific": 84.4,
+   "usdegp": 0.6
+  },
+  "Healthcare": {
+   "brent": 0.7,
+   "gold": 0.1,
+   "market": 10.9,
+   "n": 17,
+   "stock_specific": 87.8,
+   "usdegp": 0.2
+  },
+  "Industrial Goods": {
+   "brent": 0.2,
+   "gold": 0.5,
+   "market": 20.7,
+   "n": 6,
+   "stock_specific": 77.2,
+   "usdegp": 0.3
+  },
+  "Paper & Packaging": {
+   "brent": 0.1,
+   "gold": 1.0,
+   "market": 7.7,
+   "n": 6,
+   "stock_specific": 90.9,
+   "usdegp": 0.1
+  },
+  "Personal & Household": {
+   "brent": 0.2,
+   "gold": 0.1,
+   "market": 9.8,
+   "n": 9,
+   "stock_specific": 89.6,
+   "usdegp": 0.0
+  },
+  "Real Estate": {
+   "brent": 0.2,
+   "gold": 0.1,
+   "market": 17.3,
+   "n": 29,
+   "stock_specific": 82.6,
+   "usdegp": 0.3
+  },
+  "Retail": {
+   "brent": 0.4,
+   "gold": 0.4,
+   "market": 8.9,
+   "n": 4,
+   "stock_specific": 89.8,
+   "usdegp": 0.5
+  },
+  "Technology": {
+   "brent": 0.2,
+   "gold": 0.5,
+   "market": 8.2,
+   "n": 4,
+   "stock_specific": 90.3,
+   "usdegp": 0.1
+  },
+  "Trade & Distributors": {
+   "brent": 0.1,
+   "gold": 0.2,
+   "market": 4.0,
+   "n": 6,
+   "stock_specific": 94.8,
+   "usdegp": 0.2
+  },
+  "Transportation": {
+   "brent": 0.9,
+   "gold": 0.2,
+   "market": 25.0,
+   "n": 3,
+   "stock_specific": 74.1,
+   "usdegp": 0.0
+  },
+  "Travel & Leisure": {
+   "brent": 0.1,
+   "gold": 0.3,
+   "market": 6.1,
+   "n": 5,
+   "stock_specific": 93.2,
+   "usdegp": 0.3
+  }
+ }
+}

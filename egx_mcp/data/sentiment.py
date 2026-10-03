@@ -25,6 +25,7 @@ import re
 from datetime import datetime
 from typing import Any
 
+from . import egx_news_rules, egx_news_rules_en
 from . import news
 from . import transformer_sentiment
 from .universe import resolve_ticker
@@ -93,20 +94,25 @@ _AR_NEG = {
 _EN_NEGATORS = {"not", "no", "won't", "wouldn't", "didn't", "doesn't", "isn't", "aren't"}
 _AR_NEGATORS = {"لا", "لن", "ليس", "ليست", "ولا", "بدون", "غير"}
 
+_ARABIC_CHARS = re.compile(r"[\u0600-\u06FF]")
 _TOKEN_RE = re.compile(r"[\w؀-ۿ]+", re.UNICODE)
 
 
 def _score_text(text: str, lang: str) -> tuple[float, list[str]]:
     """Return (score in -1..+1, list of matched terms with sign)."""
+    if lang == "en":
+        return _score_tokens(text, _EN_POS, _EN_NEG, _EN_NEGATORS)
+    return _score_tokens(text, _AR_POS, _AR_NEG, _AR_NEGATORS)
+
+
+def _score_tokens(text: str, pos_lex: set[str], neg_lex: set[str],
+                  negators: set[str]) -> tuple[float, list[str]]:
     if not text:
         return 0.0, []
 
     tokens = [t.lower() for t in _TOKEN_RE.findall(text)]
     if not tokens:
         return 0.0, []
-
-    pos_lex, neg_lex = (_EN_POS, _EN_NEG) if lang == "en" else (_AR_POS, _AR_NEG)
-    negators = _EN_NEGATORS if lang == "en" else _AR_NEGATORS
 
     pos_hits = 0
     neg_hits = 0
@@ -147,6 +153,8 @@ def _resolve_backend(backend: str, lang: str) -> str:
     """
     if backend == "lexicon":
         return "lexicon"
+    if backend == "rules":
+        return "rules"
     if backend in ("transformer", "auto"):
         if transformer_sentiment.available(lang):
             return "transformer"
@@ -164,6 +172,10 @@ def _score_headline(text: str, lang: str, backend: str) -> tuple[float, list[str
     """Score one headline with the resolved backend for its language."""
     if backend == "transformer":
         return transformer_sentiment.score_text(text, lang)
+    if backend == "rules":
+        if lang == "ar":
+            return egx_news_rules.score_text(text)
+        return egx_news_rules_en.score_text(text)
     return _score_text(text, lang)
 
 
@@ -179,11 +191,26 @@ def _label(score: float) -> str:
     return "neutral"
 
 
+# Only headlines published within this many days count toward the tone.
+# Before article dates were read, stock pages mixed in stories up to four
+# months old (MAAL, Sep 2026) and scored them as today's news. Undated
+# headlines are listed but not scored: their age is unknown.
+DEFAULT_MAX_AGE_DAYS = int(os.environ.get("EGX_SENTIMENT_MAX_AGE_DAYS", "7"))
+
+
+def _age_days(date_str: str | None, today) -> int | None:
+    try:
+        return (today - datetime.strptime(str(date_str)[:10], "%Y-%m-%d").date()).days
+    except (TypeError, ValueError):
+        return None
+
+
 def analyze_sentiment(
     user_ticker: str | None = None,
     lang: str = "both",
     limit: int = 15,
     backend: str | None = None,
+    max_age_days: int | None = None,
 ) -> dict[str, Any]:
     """Score recent headlines for an EGX name (or the market).
 
@@ -191,7 +218,8 @@ def analyze_sentiment(
         user_ticker: EGX code or nickname. Omit for market-wide.
         lang: 'en', 'ar', or 'both' (default).
         limit: Max headlines per language. Default 15.
-        backend: 'lexicon' (default, zero-dependency), 'transformer'
+        backend: 'lexicon' (default, zero-dependency), 'rules' (EGX
+            headline phrase rules, Arabic and English), 'transformer'
             (FinBERT EN + CAMeLBERT-DA AR), or 'auto' (transformer when
             available, else lexicon). Defaults to the EGX_SENTIMENT_BACKEND
             env var, or 'lexicon' if unset. Resolved per-language, so EN
@@ -203,6 +231,8 @@ def analyze_sentiment(
         bull_signals, bear_signals, backend (effective per language).
     """
     requested_backend = (backend or _DEFAULT_BACKEND).lower()
+    max_age = DEFAULT_MAX_AGE_DAYS if max_age_days is None else max_age_days
+    today = datetime.utcnow().date()
 
     canonical = None
     if user_ticker:
@@ -224,10 +254,20 @@ def analyze_sentiment(
         backend_used[lng] = eff_backend
         for art in payload.get("articles", []) or []:
             title = art.get("title") or ""
-            score, matches = _score_headline(title, lng, eff_backend)
+            # The English market feed includes Mubasher's Arabic headlines;
+            # score each title in the language it is actually written in.
+            h_lang = "ar" if lng == "en" and _ARABIC_CHARS.search(title) else lng
+            h_backend = (_resolve_backend(requested_backend, h_lang)
+                         if h_lang != lng else eff_backend)
+            score, matches = _score_headline(title, h_lang, h_backend)
+            age = _age_days(art.get("date"), today)
+            freshness = ("undated" if age is None else
+                         "stale" if age > max_age else "fresh")
             entry = {
-                "lang": lng,
+                "lang": h_lang,
                 "date": art.get("date"),
+                "age_days": age,
+                "freshness": freshness,
                 "source": art.get("source"),
                 "title": title,
                 "url": art.get("url"),
@@ -235,13 +275,16 @@ def analyze_sentiment(
                 "matches": matches,
             }
             scored.append(entry)
+            if freshness != "fresh":
+                continue
             if score >= 0.34 and title:
                 bull_signals.append(title)
             elif score <= -0.34 and title:
                 bear_signals.append(title)
 
-    nonzero = [h for h in scored if h["score"] != 0]
-    n = len(scored)
+    fresh = [h for h in scored if h["freshness"] == "fresh"]
+    nonzero = [h for h in fresh if h["score"] != 0]
+    n = len(fresh)
     if nonzero:
         agg = sum(h["score"] for h in nonzero) / len(nonzero)
     else:
@@ -253,6 +296,10 @@ def analyze_sentiment(
         "as_of": datetime.utcnow().isoformat() + "Z",
         "lang_requested": lang,
         "headline_count": n,
+        "max_age_days": max_age,
+        "listed_count": len(scored),
+        "stale_count": sum(1 for h in scored if h["freshness"] == "stale"),
+        "undated_count": sum(1 for h in scored if h["freshness"] == "undated"),
         "scored_count": len(nonzero),
         "coverage_pct": round(coverage, 1),
         "aggregate_score": round(agg, 3),
@@ -263,7 +310,9 @@ def analyze_sentiment(
         "backend": backend_used,
         "method": (
             f"Backend per language: {backend_used or 'lexicon'}. Per-headline "
-            "score in [-1, +1]. Aggregate is mean over non-zero headlines. "
+            f"score in [-1, +1]. Only headlines published in the last {max_age} "
+            "days are scored (stale and undated ones are listed, not scored). "
+            "Aggregate is mean over non-zero fresh headlines. "
             "Coverage = share of headlines with tonal content. Lexicon is "
             "directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) "
             "is headline-accurate at the cost of model load + inference."

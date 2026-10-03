@@ -65,38 +65,89 @@ _REBALANCE_DOW = 3         # Thursday — matches the weekly walk-forward cutoff
 # Prices
 # ---------------------------------------------------------------------------
 
+def _yahoo_history(tk: str, lookback_days: int) -> list[dict]:
+    """Yahoo `.CA` daily closes — the fallback when investing.com refuses.
+
+    investing.com has answered the CI runners with 403 since Aug 2026, which
+    left the panel empty. Yahoo lags and pads non-trading days with
+    zero-volume carry-forward bars, so those are dropped (indices report no
+    volume at all, so the guard only applies when volume is present).
+    """
+    import yfinance as yf
+    from egx_mcp.data.universe import resolve_ticker
+
+    _, yahoo, _ = resolve_ticker(tk)
+    h = yf.Ticker(yahoo).history(period=f"{lookback_days}d", interval="1d",
+                                 auto_adjust=False)
+    if h is None or h.empty:
+        return []
+    has_volume = bool((h["Volume"] > 0).any())
+    out = []
+    for ts, r in h.iterrows():
+        vol = int(r["Volume"]) if pd.notna(r["Volume"]) else 0
+        if has_volume and vol <= 0:
+            continue
+        if pd.isna(r["Close"]):
+            continue
+        out.append({"date": ts.strftime("%Y-%m-%d"), "close": float(r["Close"]),
+                    "volume": vol})
+    return out
+
+
 def _refresh_prices(tickers: list[str], lookback_days: int, throttle_s: float = 0.4) -> dict:
-    """Fetch daily history for the universe + EGX30, straight from investing.com."""
+    """Fetch daily history for the universe + EGX30.
+
+    investing.com first (current and correct for EGX), Yahoo per name when it
+    returns nothing. A refresh that yields no series at all does not
+    overwrite an existing panel_prices.json — the last good fetch is kept.
+    """
     out: dict[str, list[dict]] = {}
     failed: list[str] = []
+    sources = {"investing": 0, "yahoo": 0}
     for i, tk in enumerate(tickers + ["EGX30"], 1):
+        rows = None
         try:
             rows = investing.fetch_history(tk, lookback_days=lookback_days)
         except Exception as e:  # noqa: BLE001
-            print(f"  {tk}: {type(e).__name__} {e}")
-            rows = None
+            print(f"  {tk}: investing {type(e).__name__} {e}")
+        src = "investing"
+        if not rows:
+            src = "yahoo"
+            try:
+                rows = _yahoo_history(tk, lookback_days)
+            except Exception as e:  # noqa: BLE001
+                print(f"  {tk}: yahoo {type(e).__name__} {e}")
+                rows = None
         if rows:
             out[tk] = [{"date": r["date"], "close": r["close"], "volume": r.get("volume")}
                        for r in rows]
+            sources[src] += 1
         else:
             failed.append(tk)
         if i % 20 == 0:
             print(f"  fetched {i}/{len(tickers) + 1} ...")
         time.sleep(throttle_s)
-    payload = {"fetched_at": pd.Timestamp.utcnow().isoformat(),
+    payload = {"fetched_at": pd.Timestamp.now("UTC").isoformat(),
                "lookback_days": lookback_days,
-               "n_tickers": len(out), "failed": failed, "prices": out}
+               "n_tickers": len(out), "sources": sources,
+               "failed": failed, "prices": out}
+    print(f"Fetched {len(out)} series ({len(failed)} failed; "
+          f"investing={sources['investing']} yahoo={sources['yahoo']})")
+    if not out and _PRICES.exists():
+        print(f"Refresh produced nothing; keeping the previous {_PRICES.name}")
+        return json.loads(_PRICES.read_text(encoding="utf-8"))
     _PRICES.parent.mkdir(parents=True, exist_ok=True)
     _PRICES.write_text(json.dumps(payload), encoding="utf-8")
-    print(f"Fetched {len(out)} series ({len(failed)} failed) -> {_PRICES}")
+    print(f"  -> {_PRICES}")
     return payload
 
 
 def _load_prices() -> tuple[dict[str, list[dict]], str]:
-    """Panel prices if present, else fall back to the committed price_cache."""
+    """Panel prices if present and non-empty, else the committed price_cache."""
     if _PRICES.exists():
         d = json.loads(_PRICES.read_text(encoding="utf-8"))
-        return d["prices"], f"panel_prices.json (fetched {d.get('fetched_at', '?')[:10]})"
+        if d.get("prices"):
+            return d["prices"], f"panel_prices.json (fetched {d.get('fetched_at', '?')[:10]})"
     if _PRICE_CACHE.exists():
         d = json.loads(_PRICE_CACHE.read_text(encoding="utf-8"))
         prices = {tk: [{"date": r["date"], "close": r["close"], "volume": r.get("volume")}

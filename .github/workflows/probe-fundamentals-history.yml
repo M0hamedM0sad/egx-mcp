@@ -1,0 +1,53 @@
+name: Probe historical fundamentals sources
+
+# One-off, read-only probe: which sources (TradingView scanner history,
+# Yahoo statements, Mubasher statement pages, EGX disclosures) can supply
+# point-in-time historical fundamentals for EGX names. Writes nothing back
+# to the repo — the result is in the run summary and the uploaded artifact.
+# Runs from GitHub's runners because those hosts are reachable from there.
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - scripts/probe_fundamentals_history.py
+      - .github/workflows/probe-fundamentals-history.yml
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Probe sources
+        run: |
+          mkdir -p logs
+          python -m scripts.probe_fundamentals_history 2>&1 | tee logs/probe_fundamentals_history.txt
+          {
+            echo '## Historical fundamentals — source probe'
+            echo '```'
+            sed -n '/=== VERDICT ===/,/=== FULL RESULT ===/p' logs/probe_fundamentals_history.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: probe-fundamentals-history
+          path: |
+            logs/probe_fundamentals_history.json
+            logs/probe_fundamentals_history.txt

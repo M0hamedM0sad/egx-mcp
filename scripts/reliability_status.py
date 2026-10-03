@@ -37,9 +37,9 @@ def _evidence_gate(gate: dict) -> tuple[str, list[str]]:
         f"directional accuracy vs benchmark: "
         f"{gate['directional_accuracy_pct'] if gate['directional_accuracy_pct'] is not None else 'n/a'}% "
         f"(need >= {reliability.MIN_DIRECTIONAL_ACCURACY_PCT:.0f}%)",
-        f"date-weighted signed edge: "
-        f"{gate['mean_date_signed_edge_pct'] if gate['mean_date_signed_edge_pct'] is not None else 'n/a'}% "
-        "(must be > 0)",
+        f"median-date signed edge: "
+        f"{gate['median_date_signed_edge_pct'] if gate['median_date_signed_edge_pct'] is not None else 'n/a'}% "
+        f"(must be > 0; mean-date {gate['mean_date_signed_edge_pct'] if gate['mean_date_signed_edge_pct'] is not None else 'n/a'}%)",
         f"latest evidence: {gate['latest_evidence_date'] or 'n/a'} "
         f"(age {gate['evidence_age_days'] if gate['evidence_age_days'] is not None else 'n/a'} days; "
         f"max {reliability.MAX_EVIDENCE_AGE_DAYS})",

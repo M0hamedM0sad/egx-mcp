@@ -13,6 +13,7 @@ pass, the MCP is research-only and may not emit an actionable buy-side call.
 from __future__ import annotations
 
 import json
+import statistics
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
@@ -82,6 +83,10 @@ def status() -> dict[str, Any]:
     accuracy = (sum(1 for row in rows if row["correct"]) / len(rows) * 100) if rows else None
     mean_signed_edge = sum(signed_edges) / len(signed_edges) if signed_edges else None
     mean_date_signed_edge = sum(date_edges) / len(date_edges) if date_edges else None
+    # The edge check uses the median date: single names move +/-70% in a
+    # month on EGX, and one such outlier swung the mean date edge by tens of
+    # points. A positive median needs most dates to add value, not one lucky one.
+    median_date_signed_edge = statistics.median(date_edges) if date_edges else None
 
     calibration: dict[str, dict[str, Any]] = {}
     usable_accuracy: list[float] = []
@@ -114,7 +119,7 @@ def status() -> dict[str, Any]:
         "sample_size": len(rows) >= MIN_DIRECTIONAL_CALLS,
         "independent_dates": len(by_date) >= MIN_INDEPENDENT_DATES,
         "directional_accuracy": accuracy is not None and accuracy >= MIN_DIRECTIONAL_ACCURACY_PCT,
-        "positive_signed_edge": mean_date_signed_edge is not None and mean_date_signed_edge > 0,
+        "positive_signed_edge": median_date_signed_edge is not None and median_date_signed_edge > 0,
         "conviction_calibration": calibration_passed,
         "evidence_freshness": evidence_age_days is not None and evidence_age_days <= MAX_EVIDENCE_AGE_DAYS,
     }
@@ -129,6 +134,8 @@ def status() -> dict[str, Any]:
         "directional_accuracy_pct": round(accuracy, 1) if accuracy is not None else None,
         "mean_signed_edge_pct": round(mean_signed_edge, 3) if mean_signed_edge is not None else None,
         "mean_date_signed_edge_pct": round(mean_date_signed_edge, 3) if mean_date_signed_edge is not None else None,
+        "median_date_signed_edge_pct": (round(median_date_signed_edge, 3)
+                                        if median_date_signed_edge is not None else None),
         "latest_evidence_date": latest_evidence_date.isoformat() if latest_evidence_date else None,
         "evidence_age_days": evidence_age_days,
         "calibration": calibration,

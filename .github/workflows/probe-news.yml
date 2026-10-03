@@ -1,0 +1,43 @@
+name: Probe news dates and CBE rates
+
+# Read-only check, from GitHub's runners, that headlines now carry a
+# publication date and what the CBE rates page serves. Commits nothing.
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - scripts/probe_news.py
+      - scripts/refresh_sectors.py
+      - egx_mcp/data/news_scrapers.py
+      - .github/workflows/probe-news.yml
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+      - name: Probe
+        run: |
+          set -o pipefail
+          python -m scripts.probe_news 2>&1 | tee probe_news.txt
+          {
+            echo '## News dates + CBE probe'
+            echo '```'
+            sed -n '/=== VERDICT ===/,/=== FULL RESULT ===/p' probe_news.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: TradingView sectors for every listing
+        run: python -m scripts.refresh_sectors

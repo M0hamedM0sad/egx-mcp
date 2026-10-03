@@ -87,10 +87,15 @@ def _binom_two_sided_p(k: int, n: int, p: float = 0.5) -> float:
     """Exact two-sided binomial p-value (no scipy) for k successes in n at p."""
     if n == 0:
         return 1.0
-    probs = [math.comb(n, i) * p**i * (1 - p) ** (n - i) for i in range(n + 1)]
-    obs = probs[k]
+    # Log-space pmf: math.comb(n, i) overflows float once n passes ~1000.
+    lp, lq = math.log(p), math.log1p(-p)
+    logs = [math.lgamma(n + 1) - math.lgamma(i + 1) - math.lgamma(n - i + 1)
+            + i * lp + (n - i) * lq for i in range(n + 1)]
+    obs = logs[k]
     # two-sided: sum of all outcomes no more likely than the observed one
-    return min(1.0, sum(pr for pr in probs if pr <= obs + 1e-12))
+    # (relative tolerance, as in scipy.stats.binomtest)
+    cut = obs + math.log1p(1e-7)
+    return min(1.0, sum(math.exp(x) for x in logs if x <= cut))
 
 
 def _cluster_bootstrap_ci(rows: list[dict], key: str, n_boot: int,
@@ -141,7 +146,11 @@ def main() -> int:
     ap.add_argument("--boot", type=int, default=20000, help="bootstrap resamples")
     args = ap.parse_args()
 
-    rows = _directional(_load(Path(args.infile)))
+    all_rows = _directional(_load(Path(args.infile)))
+    # News-aware chairman verdicts are reported on their own (section 5) so
+    # the pooled statistics stay comparable with earlier reports.
+    rows = [r for r in all_rows if r.get("source") != "chairman"]
+    news_rows = [r for r in all_rows if r.get("source") == "chairman"]
     print("=" * 72)
     print("EGX MODEL — STATISTICAL RELIABILITY VALIDATION")
     print("=" * 72)
@@ -230,6 +239,31 @@ def main() -> int:
             print(f"  {label}: n={len(sub):3}  hit={acc:5.1f}%  signed_edge={se:+.2f}%")
         else:
             print(f"  {label}: n=0  (no calls in this regime — robustness UNTESTED here)")
+
+    # --- 5. News-aware verdicts vs the model without news --------------------
+    print("\n" + "-" * 72)
+    print("5. NEWS  (chairman verdicts use headline sentiment; v8b does not)")
+    print("-" * 72)
+    if not news_rows:
+        print("  no graded chairman verdicts yet")
+    else:
+        out = []
+        for hd in sorted({r["horizon_days"] for r in news_rows}):
+            out += _hitrate_block([r for r in news_rows if r["horizon_days"] == hd],
+                                  f"chairman {hd}d")
+            same = {(r["briefing_date"], r["ticker"]) for r in news_rows
+                    if r["horizon_days"] == hd}
+            v8 = [r for r in rows if r.get("source") == "v8b" and r["horizon_days"] == hd
+                  and (r["briefing_date"], r["ticker"]) in same]
+            if v8:
+                out += _hitrate_block(v8, f"v8b same names {hd}d")
+        by_label: dict[str, list[dict]] = defaultdict(list)
+        for r in news_rows:
+            by_label[r.get("sentiment_label") or "unknown"].append(r)
+        for lab, sub in sorted(by_label.items(), key=lambda kv: -len(kv[1])):
+            out += _hitrate_block(sub, f"sentiment {lab}"[:18])
+        for ln in out:
+            print("  " + ln)
 
     # --- Verdict -------------------------------------------------------------
     print("\n" + "=" * 72)
