@@ -1,0 +1,95 @@
+=== EGX PRE-MARKET BRIEFING — Sunday 2026-10-04 14:57 ===
+
+--- MACRO ---
+  EGX 30:  53,911 pts (—)
+  USD/EGP: 52.26 (-0.02%)
+  Brent:   $102.25 (+0.02%)
+  Gold 24K: 6,993.49 EGP/g  |  21K: 6,119.30  |  18K: 5,245.12
+  Egyptian gold pound: 48,954 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 109) ---
+  1. BIOC   score=48.9  price=28.48  5d=+36.9% RSI=64  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  2. UEFM   score=17.34  price=169.11  5d=+11.2% RSI=46  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-UEFM/
+  3. CPCI   score=13.48  price=69.48  5d=+6.1% RSI=87  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CPCI/
+  4. LUTS   score=12.83  price=0.429  5d=+8.9% RSI=48  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-LUTS/
+  5. BINV   score=10.5  price=23.52  5d=+4.9% RSI=69  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BINV/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  BIOC: ENTRY 28.62 | STOP -24.18 | SCALE-OUT 81.14 (47 sh) | TARGET 107.47 (47 sh) | 94 total (0.54% NAV) | R:R 1:1.5 | time stop 2026-10-11
+  UEFM: ENTRY 169.96 | STOP 97.03 | SCALE-OUT 241.19 (34 sh) | TARGET 277.23 (35 sh) | 69 total (2.33% NAV) | R:R 1:1.5 | time stop 2026-10-11
+  CPCI: ENTRY 69.83 | STOP 35.46 | SCALE-OUT 103.5 (73 sh) | TARGET 120.5 (73 sh) | 146 total (2.03% NAV) | R:R 1:1.5 | time stop 2026-10-11
+  LUTS: ENTRY 0.43 | STOP 0.28 | SCALE-OUT 0.58 (16688 sh) | TARGET 0.65 (16689 sh) | 33377 total (2.86% NAV) | R:R 1:1.5 | time stop 2026-10-11
+  BINV: ENTRY 23.64 | STOP 12.41 | SCALE-OUT 34.63 (225 sh) | TARGET 40.18 (225 sh) | 450 total (2.12% NAV) | R:R 1:1.5 | time stop 2026-10-11
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  UEFM   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  CPCI   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  LUTS   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  BINV   FRESH  5d: BUY (5d)    1mo: BUY    (BUY)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    UEFM: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    CPCI: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    BINV: V8b says ABSTAIN but chairman says BUY — Bull case clearly outweighs bear case AND composite score is strong.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  BIOC:
+    Technicals:    RSI 64 — healthy uptrend; MACD bullish (+5.938); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 26.33 (7.5% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate; Yield 1.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "جلاكسو سميثكلاين" تهبط32.5% خلال النصف الأول من 2026 [Mubasher]
+      - جلاكسو سميثكلاين توضح: اتفاقية الـ110 ملايين دولار تخص الشركة العالمية [Mubasher]
+  UEFM:
+    Technicals:    RSI 46 — soft / mean-revert zone; MACD bullish (+0.277); MA50 > MA200 — golden-cross regime; ATR 36.04 (7.1% of px) — sizing input
+    Fundamentals:  P/E 3.1 — cheap; P/B 1.58; ROE 50.9% — strong; D/E 0.00; Yield 4.2%
+    News tone:     bullish (+1.00, 3 hdl)
+      - مطاحن مصر العليا ترفع رأس المال بأسهم مجانية وتقر إضافة أنشطة جديدة [Mubasher]
+      - مطاحن مصر العليا تقترح توزيع 126 مليون جنيه على المساهمين [Mubasher]
+  CPCI:
+    Technicals:    RSI 87 — overbought; MACD bullish (+1.874); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 17.01 (2.9% of px) — sizing input
+    Fundamentals:  P/E 1.8 — cheap; P/B 0.89; ROE 49.5% — strong; D/E 0.14; Yield 4.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - 22 أكتوبر.. مساهمو القاهرة للأدوية يناقشون توزيع الأرباح [Mubasher]
+      - أرباح "القاهرة للأدوية" ترتفع إلى 552.5 مليون جنيه في العام المالي الماضي [Mubasher]
+  LUTS:
+    Technicals:    RSI 48 — soft / mean-revert zone; MACD bearish (-0.005); MA50 > MA200 — golden-cross regime; ATR 0.07 (8.0% of px) — sizing input
+    Fundamentals:  P/E 8.6 — fair; P/B 3.58; ROE 39.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - عمومية "لوتس" تعتمد تشكيل مجلس الإدارة وتوافق على رفع سقف قرض حسن [Mubasher]
+      - ​"لوتس للتنمية الزراعية": توقيع اتفاق بـ16.6 مليون جنيه لتركيب محطات طاقة شمسية [Mubasher]
+  BINV:
+    Technicals:    RSI 69 — healthy uptrend; MACD bullish (+0.101); MA50 > MA200 — golden-cross regime; ATR 5.55 (9.3% of px) — sizing input
+    Fundamentals:  P/E 4.2 — cheap; P/B 0.83; ROE 19.7% — adequate; Margin 3908.9%; D/E 0.01; Yield 3.3%
+    News tone:     neutral (+0.00, 3 hdl)
+      - بي إنفستمنتس تخفض حصتها في جورميه إيجيبت إلى 33.5% [Mubasher]
+      - ​"بي إنفستمنتس" تبيع جزءاً من حصتها في "جورميه" بصفقة 416 مليون جنيه [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: BIOC, UEFM, CPCI, LUTS, BINV
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
