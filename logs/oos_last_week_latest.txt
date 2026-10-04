@@ -10,15 +10,15 @@ $ARVA.CA: possibly delisted; no timezone found
 $POCO.CA: possibly delisted; no timezone found
 $HDST.CA: possibly delisted; no timezone found
 $GEOS.CA: possibly delisted; no timezone found
-$EGS72XL1C014.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-09-27)
+$EGS72XL1C014.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-10-04)
 $FCMD.CA: possibly delisted; no timezone found
 $UTOP.CA: possibly delisted; no timezone found
 $GGRN.CA: possibly delisted; no timezone found
 $APPC.CA: possibly delisted; no timezone found
-$EGS385S1C012.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-09-27)
+$EGS385S1C012.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-10-04)
 $GPIM.CA: possibly delisted; no timezone found
 $EEP.CA: possibly delisted; no timezone found
-$EGS370O1C013.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-09-27)
+$EGS370O1C013.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-10-04)
 $DGTZ.CA: possibly delisted; no timezone found
 $ACTF.CA: possibly delisted; no timezone found
 $TORA.CA: possibly delisted; no timezone found
@@ -49,52 +49,52 @@ $ACAP.CA: possibly delisted; no timezone found
 
 ================================================================================
 OUT-OF-SAMPLE WALK-FORWARD
-  Training cutoff: 2026-09-17 (Thu)   — model sees only data ≤ this date
-  Test window:     2026-09-17+1 → 2026-09-24  (last week's 5 EGX sessions)
+  Training cutoff: 2026-09-24 (Thu)   — model sees only data ≤ this date
+  Test window:     2026-09-24+1 → 2026-10-01  (last week's 5 EGX sessions)
 ================================================================================
 
 Loading price history for validated EGX universe...
 Universe size: 249  (quality set ROE>=10%: 175)
 
-Model would have picked these top 5 on 2026-09-17:
+Model would have picked these top 5 on 2026-09-24:
 
 Rank Tic    Score   Forecast    Actual    P(>2%)   In 90% CI
 ------------------------------------------------------------------------
-1    TALM   34.6      +1.23%     -8.07%  44%      ✗
-2    BINV   28.0      +0.84%     -6.18%  40%      ✗
-3    DTPP   23.8      +7.13%     -4.70%  60%      ✓
-4    CCAP   22.9      +2.23%     +2.01%  52%      ✓
-5    CIRA   18.7      +1.99%     -3.89%  50%      ✓
+1    MAAL   33.5      +2.68%     +1.12%  55%      ✓
+2    MHOT   13.1      -0.57%     -7.94%  28%      ✗
+3    MOIL   12.2      +3.00%     +0.28%  61%      ✓
+4    EGTS   11.7      -0.47%     -9.17%  34%      ✗
+5    SDTI   10.2      +4.14%     +5.43%  65%      ✓
 
 ========================================================================
-AGGREGATE RESULTS — week of 2026-09-17 → 2026-09-24
+AGGREGATE RESULTS — week of 2026-09-24 → 2026-10-01
 ========================================================================
-  Top-5 portfolio return:    -4.16%
-  EGX synthetic basket (n=200):  -4.64%
+  Top-5 portfolio return:    -2.06%
+  EGX synthetic basket (n=200):  -2.76%
   EGP T-bill weekly:           +0.444%
-  Active vs basket:            +0.47 pp
-  Active vs T-bills:           -4.61 pp
+  Active vs basket:            +0.70 pp
+  Active vs T-bills:           -2.50 pp
 
-  Picks that beat basket: 2 / 5
-  Picks with positive return: 1 / 5
+  Picks that beat basket: 3 / 5
+  Picks with positive return: 3 / 5
 
   Bootstrap MC across 200 names:
-    Mean absolute error: 6.77pp (predicted vs actual)
-    Mean error (bias):   -5.77pp
-    Actual within 90% CI: 52% of names
+    Mean absolute error: 4.80pp (predicted vs actual)
+    Mean error (bias):   -3.45pp
+    Actual within 90% CI: 74% of names
     (Calibrated would be 80%; below = overconfident, above = underconfident)
 
-Model would have AVOIDED these bottom 5 on 2026-09-17:
+Model would have AVOIDED these bottom 5 on 2026-09-24:
 
 Rank   Tic    Score   Forecast    Actual    
 --------------------------------------------------
-90     ISPH   -15.3     -0.80%     -4.03%
-91     INFI   -15.5     +1.79%     -5.18%
-92     EAST   -17.2     -1.39%     -1.06%
-93     GMCI   -17.4     +0.06%     -1.73%
-94     NINH   -18.5     -0.56%     -3.05%
+96     MBSC   -21.5     +1.17%     -9.94%
+97     ARAB   -22.8     +0.53%     +7.17%
+98     ZMID   -24.7     +1.62%     -4.23%
+99     ASPI   -26.2     +0.65%     -5.63%
+100    EFID   -60.1     -0.15%     -1.92%
 
-  Bottom-5 actual return: -3.01%
-  Long top / short bottom spread: -1.16 pp
+  Bottom-5 actual return: -2.91%
+  Long top / short bottom spread: +0.85 pp
 
 Appended result to /home/runner/work/egx-mcp/egx-mcp/logs/oos_weekly_log.jsonl
