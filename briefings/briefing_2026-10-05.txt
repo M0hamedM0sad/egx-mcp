@@ -1,0 +1,95 @@
+=== EGX PRE-MARKET BRIEFING — Monday 2026-10-05 17:23 ===
+
+--- MACRO ---
+  EGX 30:  53,936 pts (—)
+  USD/EGP: 52.34 (+0.15%)
+  Brent:   $102.51 (+1.14%)
+  Gold 24K: 7,013.11 EGP/g  |  21K: 6,136.47  |  18K: 5,259.83
+  Egyptian gold pound: 49,092 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 111) ---
+  1. BIOC   score=65.21  price=349.99  5d=+46.8% RSI=67  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  2. LUTS   score=33.71  price=0.951  5d=+24.0% RSI=55  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-LUTS/
+  3. AFMC   score=24.27  price=161.86  5d=+15.1% RSI=51  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AFMC/
+  4. ARAB   score=22.48  price=0.246  5d=+14.9% RSI=49  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ARAB/
+  5. PRDC   score=21.9  price=8.3  5d=+18.6% RSI=56  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-PRDC/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  BIOC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  LUTS: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  AFMC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  ARAB: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  PRDC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  LUTS   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  AFMC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  ARAB   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  PRDC   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: neutral
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    AFMC: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    ARAB: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    PRDC: V8b says HOLD but chairman says REDUCE — Bear case has the edge on monthly view — informational only. Does not override W1 short-horizon entr
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  BIOC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 22.1 — premium; P/B 3.02; ROE 13.7% — adequate; Yield 1.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "جلاكسو سميثكلاين" تهبط32.5% خلال النصف الأول من 2026 [Mubasher]
+      - جلاكسو سميثكلاين توضح: اتفاقية الـ110 ملايين دولار تخص الشركة العالمية [Mubasher]
+  LUTS:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 23.8 — premium; P/B 5.38; ROE 39.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - لوتس للتنمية تعلن نتائج الاكتتاب في زيادة رأس المال [Mubasher]
+      - عمومية "لوتس" تعتمد تشكيل مجلس الإدارة وتوافق على رفع سقف قرض حسن [Mubasher]
+  AFMC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 31.7 — premium; P/B 6.45; ROE 56.3% — strong; Margin 13.9%; D/E 0.11; Yield 1.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - مجلس إدارة "مطاحن الإسكندرية" يوافق على مقترح توزيع 60 قرشاً للسهم [Mubasher]
+      - 25 أكتوبر.. عمومية مطاحن ومخابز الإسكندرية تناقش القوائم المالية وتوزيع الأرباح [Mubasher]
+  ARAB:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 6.2 — cheap; P/B 1.05; ROE 14.3% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم عقاري يتصدر نشاط البورصة المصرية.. منخفضاً 2.8% [Mubasher]
+      - ​"المطورون العرب" تتحول للربحية خلال الربع الأول من 2026 [Mubasher]
+  PRDC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 2.0 — cheap; P/B 0.43; ROE 11.5% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - "بايونيرز" تطلق مرحلة جديدة بمشروع "Ivoire East" بمبيعات مستهدفة 12 مليار جنيه [Mubasher]
+      - ​"بايونيرز بروبرتيز" تشتري 798 ألف سهم خزينة في جلسة الإثنين [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: BIOC, LUTS, AFMC, ARAB, PRDC
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
