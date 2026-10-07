@@ -1,0 +1,95 @@
+=== EGX PRE-MARKET BRIEFING — Wednesday 2026-10-07 16:03 ===
+
+--- MACRO ---
+  EGX 30:  53,152 pts (—)
+  USD/EGP: 52.31 (+0.15%)
+  Brent:   $102.00 (+0.43%)
+  Gold 24K: 6,932.74 EGP/g  |  21K: 6,066.15  |  18K: 5,199.55
+  Egyptian gold pound: 48,529 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 91) ---
+  1. MBEG   score=42.35  price=1.36  5d=+30.0% RSI=60  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MBEG/
+  2. MBSC   score=40.87  price=40.97  5d=+26.5% RSI=51  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MBSC/
+  3. BIOC   score=36.96  price=28.48  5d=+25.5% RSI=63  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  4. ARAB   score=36.47  price=0.381  5d=+25.4% RSI=61  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ARAB/
+  5. HRHO   score=23.97  price=21.55  5d=+13.7% RSI=64  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-HRHO/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  MBEG: ENTRY 1.37 | STOP 0.42 | SCALE-OUT 2.3 (2651 sh) | TARGET 2.77 (2652 sh) | 5303 total (1.44% NAV) | R:R 1:1.5 | time stop 2026-10-14
+  MBSC: ENTRY 41.17 | STOP -11.94 | SCALE-OUT 93.88 (47 sh) | TARGET 120.34 (47 sh) | 94 total (0.77% NAV) | R:R 1:1.5 | time stop 2026-10-14
+  BIOC: ENTRY 28.62 | STOP -27.93 | SCALE-OUT 84.89 (44 sh) | TARGET 113.1 (44 sh) | 88 total (0.5% NAV) | R:R 1:1.5 | time stop 2026-10-14
+  ARAB: ENTRY 0.38 | STOP 0.35 | SCALE-OUT 0.41 (65616 sh) | TARGET 0.42 (65617 sh) | 131233 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-10-14
+  HRHO: ENTRY 21.66 | STOP 19.99 | SCALE-OUT 23.11 (1160 sh) | TARGET 23.89 (1160 sh) | 2320 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-10-14
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  MBEG   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MBSC   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: neutral
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  ARAB   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  HRHO   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    MBSC: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    ARAB: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    HRHO: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  MBEG:
+    Technicals:    RSI 60 — healthy uptrend; MACD bullish (+0.024); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.47 (6.0% of px) — sizing input
+    Fundamentals:  P/E 13.6 — fair; P/B 1.53; ROE 11.0% — adequate; D/E 1.73 — highly levered
+    News tone:     bullish (+0.78, 3 hdl)
+      - أرباح إم بي للهندسة المجمعة ترتفع 39% في النصف الأول من 2026 [Mubasher]
+      - رغم تراجع الإيرادات.. أرباح إم بي للهندسة ترتفع 16.1% في النصف الأول من 2026 [Mubasher]
+  MBSC:
+    Technicals:    RSI 51 — healthy uptrend; MACD bullish (+2.615); MA50 > MA200 — golden-cross regime; ATR 26.46 (7.0% of px) — sizing input
+    Fundamentals:  P/B 0.44; ROE 45.9% — strong; D/E 0.03; Yield 8.3%
+    News tone:     bearish (-1.00, 3 hdl)
+      - مصر بني سويف للأسمنت تنفذ عملية شراء أسهم خزينة [Mubasher]
+      - عمومية مصر بني سويف للأسمنت تُقر تخفيض رأس المال وإضافة نشاط [Mubasher]
+  BIOC:
+    Technicals:    RSI 63 — healthy uptrend; MACD bullish (+10.201); MA50 > MA200 — golden-cross regime; ATR 28.21 (8.4% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate; Yield 1.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "جلاكسو سميثكلاين" تهبط32.5% خلال النصف الأول من 2026 [Mubasher]
+      - جلاكسو سميثكلاين توضح: اتفاقية الـ110 ملايين دولار تخص الشركة العالمية [Mubasher]
+  ARAB:
+    Technicals:    RSI 61 — healthy uptrend; MACD bullish (+0.004); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.01 (4.7% of px) — sizing input
+    Fundamentals:  P/E 12.7 — fair; P/B 2.12; ROE 14.3% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم عقاري يتصدر نشاط البورصة المصرية.. منخفضاً 2.8% [Mubasher]
+      - ​"المطورون العرب" تتحول للربحية خلال الربع الأول من 2026 [Mubasher]
+  HRHO:
+    Technicals:    RSI 64 — healthy uptrend; MACD bullish (+0.284); MA50 < MA200 — death-cross regime; Riding upper Bollinger — extended; ATR 0.78 (2.9% of px) — sizing input
+    Fundamentals:  P/E 8.3 — fair; P/B 0.92; ROE 11.1% — adequate; Margin 14.9%; D/E 1.55 — highly levered; Yield 1.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - إي اف چي القابضة تحصل على تمويل من EBRD بقيمة 40 مليون دولار [Mubasher]
+      - "إي اف چي" تحصل على موافقة الرقابة المالية للتحقق الرقمي من هوية الأجانب [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: MBEG, MBSC, BIOC, ARAB, HRHO
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
