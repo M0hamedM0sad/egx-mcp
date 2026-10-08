@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Thursday 2026-10-08 16:10 ===
+
+--- MACRO ---
+  EGX 30:  53,265 pts (—)
+  USD/EGP: 52.35 (+0.04%)
+  Brent:   $104.48 (+2.08%)
+  Gold 24K: 6,990.38 EGP/g  |  21K: 6,116.59  |  18K: 5,242.79
+  Egyptian gold pound: 48,933 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 85) ---
+  1. MBSC   score=42.33  price=377.0  5d=+29.9% RSI=51  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MBSC/
+  2. MBEG   score=40.02  price=7.93  5d=+26.3% RSI=59  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MBEG/
+  3. SIPC   score=33.7  price=6.2  5d=+24.0% RSI=55  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SIPC/
+  4. ARAB   score=28.98  price=0.273  5d=+18.7% RSI=58  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ARAB/
+  5. AMER   score=26.6  price=5.03  5d=+17.2% RSI=40  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMER/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  MBSC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  MBEG: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  SIPC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  ARAB: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  AMER: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  MBSC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  MBEG   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  SIPC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  ARAB   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  AMER   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    MBSC: V8b says ABSTAIN but chairman says HOLD — Bull and bear cases are roughly balanced.
+    MBEG: V8b says HOLD but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+    ARAB: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    AMER: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  MBSC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 5.0 — cheap; P/B 4.47; ROE 45.9% — strong; D/E 0.03; Yield 8.3%
+    News tone:     bearish (-1.00, 3 hdl)
+      - مصر بني سويف للأسمنت تنفذ عملية شراء أسهم خزينة [Mubasher]
+      - عمومية مصر بني سويف للأسمنت تُقر تخفيض رأس المال وإضافة نشاط [Mubasher]
+  MBEG:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 16.4 — premium; P/B 3.91; ROE 11.0% — adequate; D/E 1.73 — highly levered
+    News tone:     bullish (+0.78, 3 hdl)
+      - أرباح إم بي للهندسة المجمعة ترتفع 39% في النصف الأول من 2026 [Mubasher]
+      - رغم تراجع الإيرادات.. أرباح إم بي للهندسة ترتفع 16.1% في النصف الأول من 2026 [Mubasher]
+  SIPC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 34.7 — premium; P/B 6.82; ROE 20.6% — strong; D/E 0.24
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح سبأ الدولية للأدوية تتراجع 99.9% في النصف الأول من 2026 [Mubasher]
+      - عمومية "سبأ للأدوية" تعتمد القوائم المالية وتقرر عدم توزيع أرباح عن 2025 [Mubasher]
+  ARAB:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 6.2 — cheap; P/B 1.05; ROE 14.3% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم عقاري يتصدر نشاط البورصة المصرية.. منخفضاً 2.8% [Mubasher]
+      - ​"المطورون العرب" تتحول للربحية خلال الربع الأول من 2026 [Mubasher]
+  AMER:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 10.7 — fair; P/B 1.29; ROE 12.1% — adequate; D/E 0.88
+    News tone:     bullish (+1.00, 3 hdl)
+      - عامر جروب تقرر إعادة هيكلة تابعة عبر توزيع أسهم مجانية تمهيداً لقيدها بالبورصة [Mubasher]
+      - أرباح عامر جروب ترتفع 204% في النصف الأول من 2026 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: MBSC, MBEG, SIPC, ARAB, AMER
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
