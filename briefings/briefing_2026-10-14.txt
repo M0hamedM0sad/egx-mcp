@@ -1,0 +1,97 @@
+=== EGX PRE-MARKET BRIEFING — Wednesday 2026-10-14 14:33 ===
+
+--- MACRO ---
+  EGX 30:  51,937 pts (—)
+  USD/EGP: 53.05 (+0.59%)
+  Brent:   $105.92 (-0.43%)
+  Gold 24K: 7,121.21 EGP/g  |  21K: 6,231.06  |  18K: 5,340.91
+  Egyptian gold pound: 49,848 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 133) ---
+  1. ARAB   score=9.86  price=0.381  5d=+3.9% RSI=62  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ARAB/
+  2. BINV   score=2.57  price=23.52  5d=+0.7% RSI=62  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BINV/
+  3. CPCI   score=0.88  price=69.48  5d=-1.3% RSI=70  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CPCI/
+  4. EFIH   score=0.24  price=25.15  5d=-2.5% RSI=54  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EFIH/
+  5. EOSB   score=0.0  price=1.149  5d=+0.0%  trend=v
+     chart: https://www.tradingview.com/symbols/EGX-EOSB/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  ARAB: ENTRY 0.38 | STOP 0.35 | SCALE-OUT 0.41 (65616 sh) | TARGET 0.43 (65617 sh) | 131233 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-10-21
+  BINV: ENTRY 23.64 | STOP 16.9 | SCALE-OUT 30.14 (377 sh) | TARGET 33.45 (377 sh) | 754 total (3.55% NAV) | R:R 1:1.5 | time stop 2026-10-21
+  CPCI: ENTRY 69.83 | STOP 33.15 | SCALE-OUT 105.81 (68 sh) | TARGET 123.98 (69 sh) | 137 total (1.9% NAV) | R:R 1:1.5 | time stop 2026-10-21
+  EFIH: ENTRY 25.28 | STOP 23.11 | SCALE-OUT 27.19 (994 sh) | TARGET 28.21 (994 sh) | 1988 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-10-21
+  EOSB: ENTRY 1.15 | STOP 1.01 | SCALE-OUT 1.29 (17857 sh) | TARGET 1.36 (17857 sh) | 4261 total (0.98% NAV) | R:R 1:1.5 | time stop 2026-10-21
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  ARAB   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  BINV   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  CPCI   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  EFIH   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  EOSB   FRESH  5d: BUY (5d)    1mo: BUY    (BUY)  tone: bearish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    ARAB: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    BINV: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    CPCI: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    EFIH: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    EOSB: V8b says ABSTAIN but chairman says BUY — Bull case clearly outweighs bear case AND composite score is strong.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  ARAB:
+    Technicals:    RSI 62 — healthy uptrend; MACD bullish (+0.005); MA50 > MA200 — golden-cross regime; ATR 0.02 (5.9% of px) — sizing input
+    Fundamentals:  P/E 12.7 — fair; P/B 2.12; ROE 14.3% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم عقاري يتصدر نشاط البورصة المصرية.. منخفضاً 2.8% [Mubasher]
+      - ​"المطورون العرب" تتحول للربحية خلال الربع الأول من 2026 [Mubasher]
+  BINV:
+    Technicals:    RSI 62 — healthy uptrend; MACD bearish (-0.247); MA50 > MA200 — golden-cross regime; ATR 3.31 (5.5% of px) — sizing input
+    Fundamentals:  P/E 4.2 — cheap; P/B 0.83; ROE 19.7% — adequate; Margin 3908.9%; D/E 0.01; Yield 3.3%
+    News tone:     neutral (+0.00, 3 hdl)
+      - بي إنفستمنتس تخفض حصتها في جورميه إيجيبت إلى 33.5% [Mubasher]
+      - ​"بي إنفستمنتس" تبيع جزءاً من حصتها في "جورميه" بصفقة 416 مليون جنيه [Mubasher]
+  CPCI:
+    Technicals:    RSI 70 — overbought; MACD bullish (+0.090); MA50 > MA200 — golden-cross regime; ATR 18.17 (3.1% of px) — sizing input
+    Fundamentals:  P/E 1.8 — cheap; P/B 0.89; ROE 49.5% — strong; D/E 0.14; Yield 4.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - 22 أكتوبر.. مساهمو القاهرة للأدوية يناقشون توزيع الأرباح [Mubasher]
+      - أرباح "القاهرة للأدوية" ترتفع إلى 552.5 مليون جنيه في العام المالي الماضي [Mubasher]
+  EFIH:
+    Technicals:    RSI 54 — healthy uptrend; MACD bullish (+0.107); MA50 > MA200 — golden-cross regime; ATR 1.02 (4.3% of px) — sizing input
+    Fundamentals:  P/E 25.4 — premium; P/B 9.86; ROE 38.9% — strong; Margin 28.7%; D/E 0.01; Yield 1.4%
+    News tone:     bullish (+1.00, 3 hdl)
+      - عمومية "إي فاينانس" تقر توزيع 410.6 مليون جنيه على المساهمين [Mubasher]
+      - كيف تحرك سهم "إي فاينانس" بعد قرار الاستحواذ على "تمويلي"؟ [Mubasher]
+  EOSB:
+    Technicals:    MACD bearish (-0.001); MA50 > MA200 — golden-cross regime; ATR 0.07 (4.5% of px) — sizing input
+    Fundamentals:  P/E 16.4 — premium; P/B 6.05; ROE 33.7% — strong; D/E 1.07
+    News tone:     neutral (+0.00, 3 hdl)
+      - العروبة للسمسرة تتحول للربحية خلال 9 أشهر [Mubasher]
+      - العروبة للسمسرة تتحول للربحية خلال النصف الأول من 2025 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: ARAB, BINV, CPCI, EFIH, EOSB
+  Filtered: kept 1 of 23 headlines.
+  Tone: neutral (score +0.00)
+  [ARAB] Egypt re-elected to chair Arab Electricity Council’s Executive Bureau for second consecutive term — Daily News Egypt
+
+Disclaimer: Research only, not investment advice.
