@@ -1,0 +1,97 @@
+=== EGX PRE-MARKET BRIEFING — Thursday 2026-10-15 14:15 ===
+
+--- MACRO ---
+  EGX 30:  51,568 pts (—)
+  USD/EGP: 53.32 (+0.57%)
+  Brent:   $104.66 (+0.43%)
+  Gold 24K: 7,144.60 EGP/g  |  21K: 6,251.52  |  18K: 5,358.45
+  Egyptian gold pound: 50,012 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BULL — Trending higher with manageable vol — momentum names lead.
+
+--- MARKET STANCE: BROAD_EXPOSURE ---
+  Bull regime with breadth — core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 98) ---
+  1. ACAMD  score=7.04  price=0.76  5d=+3.4% RSI=62  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ACAMD/
+  2. CPCI   score=6.8  price=69.48  5d=+1.3% RSI=76  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CPCI/
+  3. SIPC   score=3.59  price=0.598  5d=+6.1% RSI=58  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SIPC/
+  4. ORWE   score=3.4  price=25.01  5d=+1.0% RSI=47  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ORWE/
+  5. SCEM   score=2.8  price=10.14  5d=+0.9% RSI=54  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SCEM/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  ACAMD: ENTRY 0.76 | STOP 0.58 | SCALE-OUT 0.94 (13781 sh) | TARGET 1.03 (13782 sh) | 27563 total (4.19% NAV) | R:R 1:1.5 | time stop 2026-10-22
+  CPCI: ENTRY 69.83 | STOP 31.36 | SCALE-OUT 107.6 (65 sh) | TARGET 126.66 (66 sh) | 131 total (1.82% NAV) | R:R 1:1.5 | time stop 2026-10-22
+  SIPC: ENTRY 0.6 | STOP -0.47 | SCALE-OUT 1.66 (2345 sh) | TARGET 2.2 (2346 sh) | 4691 total (0.56% NAV) | R:R 1:1.5 | time stop 2026-10-22
+  ORWE: ENTRY 25.14 | STOP 23.45 | SCALE-OUT 26.57 (999 sh) | TARGET 27.35 (1000 sh) | 1999 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-10-22
+  SCEM: ENTRY 10.19 | STOP -0.61 | SCALE-OUT 20.89 (232 sh) | TARGET 26.26 (233 sh) | 465 total (0.94% NAV) | R:R 1:1.5 | time stop 2026-10-22
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  ACAMD  FRESH  5d: BUY (5d)    1mo: BUY    (BUY)  tone: bullish
+  CPCI   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  SIPC   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  ORWE   FRESH  5d: BUY (5d)    1mo: BUY    (BUY)  tone: bullish
+  SCEM   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    ACAMD: V8b says ABSTAIN but chairman says BUY — Bull case clearly outweighs bear case AND composite score is strong.
+    CPCI: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    SIPC: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    ORWE: V8b says ABSTAIN but chairman says BUY — Bull case clearly outweighs bear case AND composite score is strong.
+    SCEM: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  ACAMD:
+    Technicals:    RSI 62 — healthy uptrend; MACD bullish (+0.010); MA50 > MA200 — golden-cross regime; ATR 0.09 (4.3% of px) — sizing input
+    Fundamentals:  P/E 25.3 — premium; P/B 8.44; ROE 30.1% — strong; Margin 51.8%; D/E 0.02
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "العربية لإدارة الأصول" تتضاعف 65 مرة وتتخطى 177 مليون جنيه بالنصف الأول [Mubasher]
+      - العربية لإدارة الأصول تبيع 3.2 مليون سهم خزينة بجلسة الأحد [Mubasher]
+  CPCI:
+    Technicals:    RSI 76 — overbought; MACD bullish (+0.234); MA50 > MA200 — golden-cross regime; ATR 19.06 (3.1% of px) — sizing input
+    Fundamentals:  P/E 1.8 — cheap; P/B 0.89; ROE 49.5% — strong; D/E 0.14; Yield 4.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - 22 أكتوبر.. مساهمو القاهرة للأدوية يناقشون توزيع الأرباح [Mubasher]
+      - أرباح "القاهرة للأدوية" ترتفع إلى 552.5 مليون جنيه في العام المالي الماضي [Mubasher]
+  SIPC:
+    Technicals:    RSI 58 — healthy uptrend; MACD bullish (+0.032); MA50 > MA200 — golden-cross regime; ATR 0.53 (8.8% of px) — sizing input
+    Fundamentals:  P/E 7.5 — cheap; P/B 1.49; ROE 20.6% — strong; D/E 0.24
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح سبأ الدولية للأدوية تتراجع 99.9% في النصف الأول من 2026 [Mubasher]
+      - عمومية "سبأ للأدوية" تعتمد القوائم المالية وتقرر عدم توزيع أرباح عن 2025 [Mubasher]
+  ORWE:
+    Technicals:    RSI 47 — soft / mean-revert zone; MACD bearish (-0.107); MA50 > MA200 — golden-cross regime; ATR 0.78 (2.9% of px) — sizing input
+    Fundamentals:  P/E 4.8 — cheap; P/B 0.77; ROE 15.8% — adequate; Margin 8.2%; D/E 0.44; Yield 6.7%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح النساجون الشرقيون تقفز 81% إلى ملياري جنيه خلال النصف الأول [Mubasher]
+      - أرباح النساجون الشرقيون المجمعة تقفز 62% في الربع الأول [Mubasher]
+  SCEM:
+    Technicals:    RSI 54 — healthy uptrend; MACD bullish (+0.425); MA50 > MA200 — golden-cross regime; ATR 5.37 (6.2% of px) — sizing input
+    Fundamentals:  P/E 1.2 — cheap; P/B 0.59; ROE 51.1% — strong
+    News tone:     neutral (+0.00, 3 hdl)
+      - عمومية "أسمنت سيناء" تقر إضافة نشاط المحاجر وإعادة تدوير مخلفات صناعة الأسمنت [Mubasher]
+      - الرقابة المالية تقر إجراءات "أسمنت سيناء" لتوسيع أنشطة الشركة [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: ACAMD, CPCI, SIPC, ORWE, SCEM
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
