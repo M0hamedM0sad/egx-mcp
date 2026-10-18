@@ -7,7 +7,7 @@ EGX MODEL RELIABILITY SCORECARD
         independent briefing dates: 48 (need >= 8)
         directional accuracy vs benchmark: 51.8% (need >= 55%)
         date-weighted signed edge: -17.773% (must be > 0)
-        latest evidence: 2026-09-13 (age 32 days; max 45)
+        latest evidence: 2026-09-13 (age 35 days; max 45)
         -> buy-side output remains research-only until every evidence check passes.
 
 [PASS]  Gate 2  DATA       (fundamentals coverage)
