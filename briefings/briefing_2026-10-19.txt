@@ -1,0 +1,95 @@
+=== EGX PRE-MARKET BRIEFING — Monday 2026-10-19 16:09 ===
+
+--- MACRO ---
+  EGX 30:  49,663 pts (—)
+  USD/EGP: 53.86 (+0.86%)
+  Brent:   $107.89 (+0.16%)
+  Gold 24K: 7,227.69 EGP/g  |  21K: 6,324.23  |  18K: 5,420.77
+  Egyptian gold pound: 50,594 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- MARKET STANCE: SELECTIVE ---
+  Range-bound — no broad tailwind. Only high-conviction names, tight stops, 21-session holds.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 121) ---
+  1. ACAMD  score=9.11  price=0.76  5d=+3.0% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ACAMD/
+  2. INFI   score=6.19  price=52.82  5d=+1.4% RSI=53  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-INFI/
+  3. SUGR   score=4.64  price=63.31  5d=-0.5% RSI=51  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SUGR/
+  4. FAITA  score=4.21  price=0.99  5d=+0.7% RSI=57  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-FAITA/
+  5. CPCI   score=1.79  price=69.48  5d=-1.9% RSI=64  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CPCI/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  ACAMD: ENTRY 0.76 | STOP 0.59 | SCALE-OUT 0.93 (15078 sh) | TARGET 1.01 (15078 sh) | 30156 total (4.58% NAV) | R:R 1:1.5 | time stop 2026-10-26
+  INFI: ENTRY 53.08 | STOP 32.24 | SCALE-OUT 73.4 (121 sh) | TARGET 83.69 (121 sh) | 242 total (2.56% NAV) | R:R 1:1.5 | time stop 2026-10-26
+  SUGR: ENTRY 63.63 | STOP 57.59 | SCALE-OUT 69.03 (394 sh) | TARGET 71.9 (395 sh) | 789 total (9.99% NAV) | R:R 1:1.5 | time stop 2026-10-26
+  FAITA: ENTRY 0.99 | STOP 0.97 | SCALE-OUT 1.01 (25252 sh) | TARGET 1.03 (25253 sh) | 6098 total (1.21% NAV) | R:R 1:1.5 | time stop 2026-10-26
+  CPCI: ENTRY 69.83 | STOP 28.68 | SCALE-OUT 110.28 (61 sh) | TARGET 130.68 (61 sh) | 122 total (1.7% NAV) | R:R 1:1.5 | time stop 2026-10-26
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  ACAMD  FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  INFI   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  SUGR   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  FAITA  FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CPCI   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    ACAMD: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    INFI: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    CPCI: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  ACAMD:
+    Technicals:    RSI 68 — healthy uptrend; MACD bullish (+0.015); MA50 > MA200 — golden-cross regime; ATR 0.08 (4.0% of px) — sizing input
+    Fundamentals:  P/E 25.3 — premium; P/B 8.44; ROE 30.1% — strong; Margin 51.8%; D/E 0.02
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "العربية لإدارة الأصول" تتضاعف 65 مرة وتتخطى 177 مليون جنيه بالنصف الأول [Mubasher]
+      - العربية لإدارة الأصول تبيع 3.2 مليون سهم خزينة بجلسة الأحد [Mubasher]
+  INFI:
+    Technicals:    RSI 53 — healthy uptrend; MACD bullish (+0.498); MA50 > MA200 — golden-cross regime; ATR 10.29 (8.2% of px) — sizing input
+    Fundamentals:  P/E 14.8 — fair; P/B 4.15; ROE 28.2% — strong; Margin 17.1%; D/E 0.04; Yield 1.1%
+    News tone:     neutral (+0.00, 3 hdl)
+      - "فوديكو" تعلن تأجيل دعوى بطلان فسخ العقد لجلسة 24 أكتوبر [Mubasher]
+      - مساهم يبيع 150 ألف سهم في فوديكو بقيمة 23.42 مليون جنيه [Mubasher]
+  SUGR:
+    Technicals:    RSI 51 — healthy uptrend; MACD bullish (+0.084); MA50 > MA200 — golden-cross regime; ATR 2.86 (5.1% of px) — sizing input
+    Fundamentals:  P/E 27.9 — premium; P/B 4.32; ROE 15.5% — adequate; Margin -8.8%; D/E 1.66 — highly levered
+    News tone:     bullish (+1.00, 3 hdl)
+      - البورصة تعلن نهاية حق وموعد توزيع كوبون الدلتا للسكر [Mubasher]
+      - تراجع أرباح الدلتا للسكر 85% خلال النصف الأول.. و3 أسباب وراء الهبوط [Mubasher]
+  FAITA:
+    Technicals:    RSI 57 — healthy uptrend; MACD bullish (+0.001); MA50 < MA200 — death-cross regime; ATR 0.01 (1.2% of px) — sizing input
+    Fundamentals:  ROE 11.9% — adequate; D/E 0.30; Yield 4.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - اليوم.. نهاية الحق في توزيع كوبون 5 شركات بالبورصة المصرية [Mubasher]
+      - سهم بنك فيصل الإسلامي المصري يختبر حاجزاً نفسياً مهماً [Mubasher]
+  CPCI:
+    Technicals:    RSI 64 — healthy uptrend; MACD bearish (-1.301); MA50 > MA200 — golden-cross regime; ATR 20.40 (3.5% of px) — sizing input
+    Fundamentals:  P/E 1.8 — cheap; P/B 0.89; ROE 49.5% — strong; D/E 0.14; Yield 4.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - 22 أكتوبر.. مساهمو القاهرة للأدوية يناقشون توزيع الأرباح [Mubasher]
+      - أرباح "القاهرة للأدوية" ترتفع إلى 552.5 مليون جنيه في العام المالي الماضي [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: ACAMD, INFI, SUGR, FAITA, CPCI
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
