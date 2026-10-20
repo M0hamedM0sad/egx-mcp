@@ -157,6 +157,7 @@ def _assess(verdict: str, conviction: str, score_val: float,
     cautions: list[str] = []
     abstain_reasons: list[str] = []
     final_verdict, final_conv = verdict, conviction
+    shadow_conviction = None
 
     net_upside = round(upside_pct - round_trip_cost_pct, 1) if upside_pct is not None else None
 
@@ -199,6 +200,9 @@ def _assess(verdict: str, conviction: str, score_val: float,
             "live 21-session evidence, independent dates, signed edge, and conviction "
             "calibration all pass."
         )
+        # Kept so the suppressed call is still graded: otherwise the gate can
+        # never accumulate the buy-side evidence it requires to open.
+        shadow_conviction = final_conv
         final_verdict, final_conv = "ABSTAIN", "none"
 
     # C. Buy-side edge must clear costs.
@@ -213,6 +217,8 @@ def _assess(verdict: str, conviction: str, score_val: float,
         "verdict": final_verdict,
         "conviction": final_conv,
         "provisional_verdict": verdict if final_verdict != verdict else None,
+        "gate_suppressed": shadow_conviction is not None,
+        "shadow_conviction": shadow_conviction,
         "actionable": final_verdict not in ("ABSTAIN",),
         "abstain_reasons": abstain_reasons,
         "cautions": cautions,
@@ -370,6 +376,8 @@ def decide(
         "conviction": conviction,
         "actionable": assessment["actionable"],
         "provisional_verdict": assessment["provisional_verdict"],
+        "gate_suppressed": assessment["gate_suppressed"],
+        "shadow_conviction": assessment["shadow_conviction"],
         "abstain_reasons": assessment["abstain_reasons"],
         "assessment_cautions": assessment["cautions"],
         "composite_score": score["composite_score"],

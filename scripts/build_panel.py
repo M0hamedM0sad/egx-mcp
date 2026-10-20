@@ -83,6 +83,13 @@ def _refresh_prices(tickers: list[str], lookback_days: int, throttle_s: float = 
         if i % 20 == 0:
             print(f"  fetched {i}/{len(tickers) + 1} ...")
         time.sleep(throttle_s)
+    if failed:
+        # investing.com answers 403 to GitHub-hosted runners, which left the
+        # cloud panel empty. Yahoo is the feed the daily grading already uses.
+        recovered = _yahoo_history(failed, lookback_days)
+        out.update(recovered)
+        failed = [tk for tk in failed if tk not in recovered]
+        print(f"Yahoo fallback recovered {len(recovered)} series")
     payload = {"fetched_at": pd.Timestamp.utcnow().isoformat(),
                "lookback_days": lookback_days,
                "n_tickers": len(out), "failed": failed, "prices": out}
@@ -92,11 +99,33 @@ def _refresh_prices(tickers: list[str], lookback_days: int, throttle_s: float = 
     return payload
 
 
+def _yahoo_history(tickers: list[str], lookback_days: int) -> dict[str, list[dict]]:
+    """Daily close + volume from Yahoo for the names investing.com refused."""
+    import yfinance as yf
+    from egx_mcp.data.universe import resolve_ticker
+
+    out: dict[str, list[dict]] = {}
+    for tk in tickers:
+        try:
+            h = yf.Ticker(resolve_ticker(tk)[1]).history(
+                period=f"{lookback_days}d", interval="1d", auto_adjust=False)
+        except Exception as e:  # noqa: BLE001
+            print(f"  {tk}: yahoo {type(e).__name__} {e}")
+            continue
+        if h is None or h.empty:
+            continue
+        h = h[h["Volume"] > 0]  # zero-volume bars are carry-forwards, not sessions
+        out[tk] = [{"date": idx.strftime("%Y-%m-%d"), "close": float(r["Close"]),
+                    "volume": float(r["Volume"])} for idx, r in h.iterrows()]
+    return out
+
+
 def _load_prices() -> tuple[dict[str, list[dict]], str]:
     """Panel prices if present, else fall back to the committed price_cache."""
     if _PRICES.exists():
         d = json.loads(_PRICES.read_text(encoding="utf-8"))
-        return d["prices"], f"panel_prices.json (fetched {d.get('fetched_at', '?')[:10]})"
+        if d.get("prices"):
+            return d["prices"], f"panel_prices.json (fetched {d.get('fetched_at', '?')[:10]})"
     if _PRICE_CACHE.exists():
         d = json.loads(_PRICE_CACHE.read_text(encoding="utf-8"))
         prices = {tk: [{"date": r["date"], "close": r["close"], "volume": r.get("volume")}

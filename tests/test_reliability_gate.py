@@ -54,6 +54,45 @@ class ReliabilityGateTests(unittest.TestCase):
         )
         self.assertEqual(assessment["verdict"], "ABSTAIN")
         self.assertFalse(assessment["actionable"])
+        # The withheld call survives as a shadow so it can still be graded.
+        self.assertTrue(assessment["gate_suppressed"])
+        self.assertEqual(assessment["provisional_verdict"], "BUY")
+        self.assertEqual(assessment["shadow_conviction"], "high")
+
+    def test_low_data_abstain_is_not_a_shadow_call(self) -> None:
+        assessment = decision._assess(
+            "BUY", "high", 80.0, {}, 20.0, {"level": "low"}, {"passed": False}, 1.0, 0.0,
+        )
+        self.assertEqual(assessment["verdict"], "ABSTAIN")
+        self.assertFalse(assessment["gate_suppressed"])
+
+    def test_shadow_call_is_graded_as_the_withheld_verdict(self) -> None:
+        from tests import grade_briefings as gb
+        rows = gb._extract_verdicts({"v8b_verdicts": [
+            {"ticker": "AAA", "v8b_verdict": "ABSTAIN", "v8b_conviction": "none",
+             "v8b_shadow_verdict": "ACCUMULATE", "v8b_shadow_conviction": "medium"},
+            {"ticker": "BBB", "v8b_verdict": "REDUCE", "v8b_conviction": "medium"},
+        ]})
+        self.assertEqual([(r["verdict"], r["conviction"], r["shadow"]) for r in rows],
+                         [("ACCUMULATE", "medium", True), ("REDUCE", "medium", False)])
+
+    def test_unadjusted_split_is_excluded_not_graded(self) -> None:
+        import pandas as pd
+        from tests import grade_briefings as gb
+        idx = pd.bdate_range("2026-06-01", periods=30)
+        px = [160.0] * 10 + [80.0] * 20          # 2:1 split on day 10
+        panel = pd.DataFrame({"HDBK": px}, index=idx)
+        rows = [{"briefing_date": "2026-06-01", "ticker": "HDBK", "source": "v8b",
+                 "verdict": "ACCUMULATE", "conviction": "medium"}]
+        (rec,) = gb._grade(rows, panel, None, [21])
+        self.assertEqual(rec["outcome"], "excluded_corporate_action")
+        self.assertIsNone(rec["correct"])
+
+    def test_binomial_p_value_survives_large_samples(self) -> None:
+        from tests.validate_edge import _binom_two_sided_p
+        self.assertAlmostEqual(_binom_two_sided_p(5, 10), 1.0, places=6)
+        p = _binom_two_sided_p(1285, 2457)   # n that overflowed in CI
+        self.assertTrue(0.0 < p < 0.05)
 
     def test_learning_loop_refuses_parameter_change_when_gate_is_open(self) -> None:
         with patch.object(learn.reliability, "status", return_value={"passed": False}):

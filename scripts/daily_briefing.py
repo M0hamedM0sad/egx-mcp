@@ -672,6 +672,11 @@ def build_briefing(force: bool = False) -> dict:
                     # Per-decision sub-scores — recorded so the learning loop can
                     # later analyze which factors actually drive forward excess.
                     "v8b_subscores": d.get("subscores"),
+                    # The buy-side call the reliability gate withheld, kept so it
+                    # is still graded forward as evidence for or against the gate.
+                    "v8b_shadow_verdict": (d.get("provisional_verdict")
+                                           if d.get("gate_suppressed") else None),
+                    "v8b_shadow_conviction": d.get("shadow_conviction"),
                 })
             except Exception as e:
                 verdicts.append({"ticker": tk, "error": str(e)[:80]})

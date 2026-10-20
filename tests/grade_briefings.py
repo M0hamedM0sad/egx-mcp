@@ -84,12 +84,15 @@ def _synthetic_basket(start: str, end: str) -> pd.Series | None:
 _DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2})")
 _BUY_SIDE = {"BUY", "ACCUMULATE", "WEEKLY_BUY"}
 _SELL_SIDE = {"REDUCE", "AVOID", "SELL"}
+# EGX price limits cap a normal session well inside this; anything larger
+# between consecutive closes is treated as an unadjusted corporate action.
+_MAX_SESSION_MOVE = 0.35
 
 _SUBSCORES = ["sub_valuation", "sub_quality", "sub_momentum", "sub_risk"]
 _FIELDS = ["briefing_date", "ticker", "source", "verdict", "conviction", "score",
            "horizon_days", "entry_date", "entry_price", "exit_date", "exit_price",
            "fwd_return_pct", "bench_return_pct", "excess_pct", "outcome", "correct",
-           *_SUBSCORES]
+           "shadow", *_SUBSCORES]
 
 
 def _briefing_date(path: Path, payload: dict) -> str | None:
@@ -106,11 +109,15 @@ def _extract_verdicts(payload: dict) -> list[dict]:
     out: list[dict] = []
     for v in payload.get("v8b_verdicts", []) or []:
         sub = v.get("v8b_subscores") or {}
+        # A gate-withheld buy call is graded as the call the model made;
+        # `shadow` marks it so it can always be split out.
+        shadow = bool(v.get("v8b_shadow_verdict"))
         out.append({
             "ticker": v.get("ticker"),
             "source": "v8b",
-            "verdict": (v.get("v8b_verdict") or "").upper(),
-            "conviction": v.get("v8b_conviction"),
+            "verdict": ((v.get("v8b_shadow_verdict") if shadow else v.get("v8b_verdict")) or "").upper(),
+            "conviction": v.get("v8b_shadow_conviction") if shadow else v.get("v8b_conviction"),
+            "shadow": shadow,
             "score": v.get("v8b_score"),
             # Flatten sub-scores into evidence columns (None when not recorded,
             # e.g. older briefings predating this field).
@@ -183,6 +190,17 @@ def _grade(rows: list[dict], panel: pd.DataFrame, bench: pd.Series | None,
                 rec.update({"exit_date": None, "exit_price": None, "fwd_return_pct": None,
                             "bench_return_pct": None, "excess_pct": None,
                             "outcome": "pending", "correct": None})
+                graded.append(rec)
+                continue
+            # A one-session move beyond anything EGX trading allows is a split,
+            # bonus issue or bad tick the feed didn't adjust for (HDBK 154 ->
+            # 77.55 overnight). Grading it would score the data, not the call.
+            window = ser.dropna().loc[e_date:x_date]
+            if (window.pct_change().abs() > _MAX_SESSION_MOVE).any():
+                rec.update({"exit_date": x_date, "exit_price": round(x_px, 4),
+                            "fwd_return_pct": None, "bench_return_pct": None,
+                            "excess_pct": None, "outcome": "excluded_corporate_action",
+                            "correct": None})
                 graded.append(rec)
                 continue
             fwd = x_px / e_px - 1

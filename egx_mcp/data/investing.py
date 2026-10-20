@@ -238,8 +238,12 @@ def daily_history(user_ticker: str, lookback_days: int = 400,
         from .universe import resolve_ticker
         import yfinance as yf
         _, yahoo, _ = resolve_ticker(user_ticker)
-        df = yf.Ticker(yahoo).history(
-            period=f"{lookback_days}d", interval="1d", auto_adjust=False)
+        try:
+            df = yf.Ticker(yahoo).history(
+                period=f"{lookback_days}d", interval="1d", auto_adjust=False)
+        except Exception as e:  # noqa: BLE001 — e.g. YFRateLimitError
+            log.warning(f"Yahoo fallback failed for {user_ticker}: {e}")
+            df = pd.DataFrame(columns=cols)
         df = df[cols] if not df.empty else pd.DataFrame(columns=cols)
 
     if not df.empty and drop_zero_volume:
