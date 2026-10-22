@@ -1,0 +1,4428 @@
+{
+  "as_of_utc": "2026-10-22T12:37:59.045793Z",
+  "cairo_local": "Thursday 2026-10-22 14:37",
+  "is_trading_day": true,
+  "macro": {
+    "as_of": "2026-10-22T12:38:00.784158Z",
+    "egp_usd": {
+      "value": 55.26,
+      "change_pct": 1.71
+    },
+    "brent_usd": {
+      "value": 111.95,
+      "change_pct": 1.16
+    },
+    "gold_usd": {
+      "value": 4086.0,
+      "change_pct": -0.52
+    },
+    "cbe_rates": {
+      "deposit_rate_pct": null,
+      "lending_rate_pct": null,
+      "midpoint_pct": null,
+      "source": "https://www.cbe.org.eg/en/economic-research/statistics/cbe-rates"
+    },
+    "regime_flags": [
+      "EGP weakening \u2014 favors exporters (chemicals, steel), hurts importers"
+    ],
+    "note": "EGP/USD and Brent from Yahoo (delayed). CBE rates scraped \u2014 verify against cbe.org.eg before acting on rate-sensitive trades."
+  },
+  "egx30_spot": {
+    "value": 51542.6,
+    "change_pct": null,
+    "source": "tradingview.com",
+    "chart_url": "https://www.tradingview.com/symbols/EGX-EGX30/"
+  },
+  "egx70_spot": {
+    "error": "EGX 70 unavailable from any source today",
+    "source": "yfinance (failed)"
+  },
+  "egx_index_sources": [
+    "tradingview.com (EGX 30)"
+  ],
+  "gold_egp": {
+    "as_of": "2026-10-22T12:38:02.804876Z",
+    "gold_oz_usd": 4086.0,
+    "usdegp": 55.26,
+    "egp_per_gram_24k": 7259.39,
+    "egp_per_gram_21k": 6351.97,
+    "egp_per_gram_18k": 5444.54,
+    "egyptian_gold_pound_egp": 50815.75,
+    "method": "Computed from international spot: (USD/oz \u00d7 USDEGP) / 31.1035 for 24K, then \u00d7 21/24 and 18/24 for the standard alloys. Local dealer prices typically 5-15% above this \u2014 verify against sigma-egy / iSagha before acting.",
+    "note": "Egyptian gold pound (\u0627\u0644\u062c\u0646\u064a\u0647 \u0627\u0644\u0630\u0647\u0628) = 8g of 21K gold by convention \u2014 that's the math here, regardless of any local premium for handmade pieces."
+  },
+  "regime": {
+    "regime": "BULL",
+    "description": "Trending higher with manageable vol \u2014 momentum names lead.",
+    "weight_override": {
+      "valuation": 0.8,
+      "quality": 0.9,
+      "momentum": 1.4,
+      "risk": 0.9
+    },
+    "metrics": {
+      "egx30_last": 150.68,
+      "ret_60d_pct": 7.13,
+      "annualized_vol_pct": 23.05,
+      "sma_200": 135.73,
+      "above_ma200": true,
+      "drawdown_1y_pct": -9.63
+    },
+    "source_symbol": "synthetic_basket(13_names)",
+    "as_of": "2026-10-22T12:38:05.477614Z"
+  },
+  "market_stance": {
+    "stance": "BROAD_EXPOSURE",
+    "note": "Bull regime with breadth \u2014 core position: equal-weight EGX basket. Picks below are satellite ideas (21-session holds, small size) until the model's edge is proven (reliability Gate 1).",
+    "regime": "BULL",
+    "holding_horizon_sessions": 21
+  },
+  "rf_rate": {
+    "rate_pct": 25.0,
+    "source": "fallback:hardcoded_stale",
+    "is_stale": true,
+    "daily_rate_pct": 0.08859,
+    "as_of": "2026-10-22T12:38:08.321460Z",
+    "note": "Used as the baseline for excess-return calculations across the scoring engine, decision tool, and backtest harness. Override with EGX_TBILL_RATE_PCT env var when CBE source is stale."
+  },
+  "w1_picks": {
+    "as_of": "2026-10-22",
+    "horizon_days": 5,
+    "n_universe": 249,
+    "n_with_features": 200,
+    "n_passes_quality": 150,
+    "n_eligible": 93,
+    "volume_filter_relaxed": false,
+    "config": {
+      "w_mom5": 1.5,
+      "w_mom20": 0.0,
+      "w_mr1": 0.5,
+      "w_breakout": 3.0,
+      "w_trend": 3.0,
+      "min_roe_pct": 10.0,
+      "top_n": 5
+    },
+    "top_picks": [
+      {
+        "ticker": "ABUK",
+        "score": 24.03,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 58.32,
+        "mom_1d_pct": 2.41,
+        "mom_5d_pct": 13.53,
+        "mom_20d_pct": 2.19,
+        "above_ma20": true,
+        "vol_ratio_today": 1.46,
+        "breakout_signal": 1.0,
+        "high_20d": 95.75,
+        "low_20d": 83.2,
+        "rsi_14": 64.5,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 95.75,
+        "split_warning": "Live tape 58.32 differs from adjusted close 95.75 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "INFI",
+        "score": 13.8,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 52.82,
+        "mom_1d_pct": -2.35,
+        "mom_5d_pct": 6.42,
+        "mom_20d_pct": -1.53,
+        "above_ma20": true,
+        "vol_ratio_today": 0.81,
+        "breakout_signal": 0.0,
+        "high_20d": 134.0,
+        "low_20d": 113.87,
+        "rsi_14": 55.2,
+        "macd_slope_pos": false,
+        "adjusted_close_egp": 125.0,
+        "split_warning": "Live tape 52.82 differs from adjusted close 125.0 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "COMI",
+        "score": 13.38,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 81.2,
+        "mom_1d_pct": 2.46,
+        "mom_5d_pct": 5.74,
+        "mom_20d_pct": -1.9,
+        "above_ma20": true,
+        "vol_ratio_today": 0.94,
+        "breakout_signal": 1.0,
+        "high_20d": 129.0,
+        "low_20d": 121.0,
+        "rsi_14": 58.4,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 129.0,
+        "split_warning": "Live tape 81.2 differs from adjusted close 129.0 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "EAST",
+        "score": 12.78,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 21.8,
+        "mom_1d_pct": 4.53,
+        "mom_5d_pct": 8.03,
+        "mom_20d_pct": -5.6,
+        "above_ma20": true,
+        "vol_ratio_today": 2.22,
+        "breakout_signal": 0.0,
+        "high_20d": 31.74,
+        "low_20d": 27.34,
+        "rsi_14": 59.7,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 30.0,
+        "split_warning": "Live tape 21.8 differs from adjusted close 30.0 \u2014 likely recent split. Use trade plan."
+      },
+      {
+        "ticker": "TMGH",
+        "score": 10.64,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 58.0,
+        "mom_1d_pct": 6.03,
+        "mom_5d_pct": 7.1,
+        "mom_20d_pct": -4.64,
+        "above_ma20": true,
+        "vol_ratio_today": 3.47,
+        "breakout_signal": 0.0,
+        "high_20d": 92.8,
+        "low_20d": 81.4,
+        "rsi_14": 57.5,
+        "macd_slope_pos": true,
+        "adjusted_close_egp": 89.9,
+        "split_warning": "Live tape 58.0 differs from adjusted close 89.9 \u2014 likely recent split. Use trade plan."
+      }
+    ],
+    "runners_up": [
+      {
+        "ticker": "ICFC",
+        "score": 6.53,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 22.21,
+        "mom_1d_pct": -1.55,
+        "mom_5d_pct": 1.83,
+        "mom_20d_pct": -2.97,
+        "above_ma20": true,
+        "vol_ratio_today": 0.67,
+        "breakout_signal": 0.0,
+        "high_20d": 23.2,
+        "low_20d": 20.54,
+        "rsi_14": 57.9,
+        "macd_slope_pos": true
+      },
+      {
+        "ticker": "PHDC",
+        "score": 6.38,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 13.09,
+        "mom_1d_pct": 1.24,
+        "mom_5d_pct": 2.67,
+        "mom_20d_pct": -2.6,
+        "above_ma20": true,
+        "vol_ratio_today": 2.59,
+        "breakout_signal": 0.0,
+        "high_20d": 13.5,
+        "low_20d": 12.28,
+        "rsi_14": 51.7,
+        "macd_slope_pos": true
+      },
+      {
+        "ticker": "MICH",
+        "score": 5.98,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 43.0,
+        "mom_1d_pct": 1.78,
+        "mom_5d_pct": 2.58,
+        "mom_20d_pct": -2.33,
+        "above_ma20": true,
+        "vol_ratio_today": 0.76,
+        "breakout_signal": 0.0,
+        "high_20d": 44.8122,
+        "low_20d": 38.23,
+        "rsi_14": 53.9,
+        "macd_slope_pos": true
+      },
+      {
+        "ticker": "ETRS",
+        "score": 5.76,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 10.68,
+        "mom_1d_pct": -0.09,
+        "mom_5d_pct": 1.81,
+        "mom_20d_pct": -1.11,
+        "above_ma20": true,
+        "vol_ratio_today": 1.02,
+        "breakout_signal": 0.0,
+        "high_20d": 11.05,
+        "low_20d": 9.99,
+        "rsi_14": 57.7,
+        "macd_slope_pos": true
+      },
+      {
+        "ticker": "FIRE",
+        "score": 5.24,
+        "passes_quality_filter": true,
+        "passes_volume_filter": true,
+        "price": 4.3,
+        "mom_1d_pct": 4.88,
+        "mom_5d_pct": 3.12,
+        "mom_20d_pct": -3.59,
+        "above_ma20": true,
+        "vol_ratio_today": 2.75,
+        "breakout_signal": 0.0,
+        "high_20d": 4.43,
+        "low_20d": 3.8,
+        "rsi_14": 61.5,
+        "macd_slope_pos": true
+      }
+    ],
+    "skipped_count": 3,
+    "validation_summary": "Backtested 28 months. Full window: +107.8% CAGR, Sharpe 1.64, -24.9% MaxDD vs market +40.8% / 0.65 / -23.5%. Holdout 10mo OOS: +131% CAGR, Sharpe 2.78, -8.9% MaxDD vs market +50% / 1.32 / -5.6%.",
+    "disclaimer": "Algorithmic ranking for the next ~5 trading days. Not investment advice. The model has positive expected alpha vs a passive EGX weekly buy-hold; individual weeks can still lose. Verify against the EGX official tape before acting."
+  },
+  "exdiv_filtered": [],
+  "v8b_verdicts": [
+    {
+      "ticker": "ABUK",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 69.8,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 44.0,
+        "quality": 87.0,
+        "momentum": 82.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "INFI",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 69.4,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 86.0,
+        "momentum": 95.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "COMI",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 68.3,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 92.0,
+        "momentum": 62.0,
+        "risk": 70.0
+      }
+    },
+    {
+      "ticker": "EAST",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 45.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 30.0,
+        "quality": 92.0,
+        "momentum": 30.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "TMGH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 63.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 74.0,
+        "momentum": 62.0,
+        "risk": 70.0
+      }
+    },
+    {
+      "ticker": "AALR",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 80.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "ACAMD",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 67.4,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 92.0,
+        "momentum": 70.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "ACAP",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 57.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 81.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "ACGC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 62.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 84.4,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "ACTF",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 56.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 75.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "ADCI",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 67.6,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 81.0,
+        "momentum": 80.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "ADIB",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 87.0,
+        "momentum": 55.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "ADPC",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 49.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 47.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "ADRI",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 46.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "AFDI",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 80.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "AFMC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 56.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 86.0,
+        "momentum": 67.8,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "AIDC",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 50.0,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "AIFI",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 59.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 67.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "AIH",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 44.3,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 25.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "AJWA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 72.6,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "ALCN",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 68.1,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 92.0,
+        "momentum": 72.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "ALEX",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "ALUM",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 46.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 55.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "AMER",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 47.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 59.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "AMES",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 57.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 87.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "AMIA",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 48.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 69.0,
+        "momentum": 41.6,
+        "risk": 35.0
+      }
+    },
+    {
+      "ticker": "AMOC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 63.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 67.0,
+        "momentum": 75.3,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "AMPI",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 60.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 60.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "APPC",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 50.0,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "APSW",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 43.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 27.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "ARAB",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 72.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "ARCC",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 66.5,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 58.0,
+        "quality": 92.0,
+        "momentum": 72.0,
+        "risk": 35.0
+      }
+    },
+    {
+      "ticker": "AREH",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 43.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 40.0,
+        "momentum": 47.0,
+        "risk": 30.0
+      }
+    },
+    {
+      "ticker": "ARVA",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 46.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "ASCM",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 55.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "ASPI",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 43.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 55.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "ATLC",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 45.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 56.0,
+        "momentum": 55.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "ATQA",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 49.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 55.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "AXPH",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 67.3,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 80.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "BIDI",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 63.8,
+        "risk": 70.0
+      }
+    },
+    {
+      "ticker": "BIGP",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 50.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 67.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "BINV",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 67.1,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 79.0,
+        "momentum": 80.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "BIOC",
+      "v8b_verdict": "AVOID",
+      "v8b_score": 27.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "BONY",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 56.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 79.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "BTFH",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 42.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 27.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "CAED",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 62.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 88.2,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "CANA",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 69.8,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 87.0,
+        "momentum": 80.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "CCAP",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 62.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 77.9,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "CCRS",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 46.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 55.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "CEFM",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 80.0,
+        "momentum": 67.0,
+        "risk": 35.0
+      }
+    },
+    {
+      "ticker": "CERA",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 41.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 23.0,
+        "momentum": 55.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "CFGH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 59.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 63.0,
+        "momentum": 65.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "CICH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 69.0,
+        "momentum": 47.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "CID",
+      "v8b_verdict": null,
+      "v8b_score": null,
+      "v8b_conviction": null,
+      "blocking_catalysts": [],
+      "v8b_subscores": null
+    },
+    {
+      "ticker": "CIEB",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 64.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 58.0,
+        "quality": 92.0,
+        "momentum": 47.0,
+        "risk": 70.0
+      }
+    },
+    {
+      "ticker": "CIRA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 63.0,
+        "momentum": 65.1,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "CLHO",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 50.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 30.0,
+        "quality": 62.0,
+        "momentum": 55.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "CNFN",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 42.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "COPR",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 40.0,
+        "momentum": 79.9,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "COSG",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 47.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "CPCI",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 67.8,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 80.0,
+        "momentum": 68.4,
+        "risk": 70.0
+      }
+    },
+    {
+      "ticker": "CPME",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 50.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "CRST",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "CSAG",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 65.6,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 58.0,
+        "quality": 80.0,
+        "momentum": 67.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "DAPH",
+      "v8b_verdict": "AVOID",
+      "v8b_score": 34.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 10.0,
+        "momentum": 55.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "DGTZ",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "DOMT",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 57.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 60.0,
+        "quality": 65.0,
+        "momentum": 57.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "DSCW",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 49.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 35.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "DTPP",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 46.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 75.0,
+        "momentum": 45.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "EALR",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 42.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 47.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "EASB",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 72.5,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "EBSC",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 45.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 47.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "ECAP",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 47.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "EDFM",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 66.4,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 80.0,
+        "momentum": 72.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "EEII",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 38.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 45.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "EEP",
+      "v8b_verdict": null,
+      "v8b_score": null,
+      "v8b_conviction": null,
+      "blocking_catalysts": [],
+      "v8b_subscores": null
+    },
+    {
+      "ticker": "EFAC",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 50.0,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "EFIC",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 43.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 25.0,
+        "risk": 30.0
+      }
+    },
+    {
+      "ticker": "EFID",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 38.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 30.0,
+        "quality": 86.0,
+        "momentum": 30.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "EFIH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 62.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 20.0,
+        "quality": 97.0,
+        "momentum": 72.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "EGAL",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 60.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 92.0,
+        "momentum": 55.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "EGAS",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 67.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "EGBE",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 69.8,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 87.0,
+        "momentum": 80.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "EGCH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 81.0,
+        "momentum": 65.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "EGREF",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 53.2,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 78.9,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "EGS370O1C013",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 52.7,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 50.0,
+        "risk": 65.0
+      }
+    },
+    {
+      "ticker": "EGS385S1C012",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 50.0,
+        "risk": 65.0
+      }
+    },
+    {
+      "ticker": "EGS72XL1C014",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 52.7,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 50.0,
+        "risk": 65.0
+      }
+    },
+    {
+      "ticker": "EGSA",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 69.0,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 52.0,
+        "momentum": 82.0,
+        "risk": 85.0
+      }
+    },
+    {
+      "ticker": "EGTS",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 44.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 57.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "EHDR",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 48.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 47.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "EIPI",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 65.1,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 85.0,
+        "quality": 81.0,
+        "momentum": 67.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "ELEC",
+      "v8b_verdict": "AVOID",
+      "v8b_score": 33.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 15.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "ELKA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 80.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "ELNA",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 47.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 37.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "ELSH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 50.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 80.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "ELWA",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 44.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 47.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "EMFD",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 40.0,
+        "quality": 35.0,
+        "momentum": 77.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "ENGC",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 48.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 55.0,
+        "risk": 30.0
+      }
+    },
+    {
+      "ticker": "EOSB",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 72.5,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 80.0,
+        "risk": 85.0
+      }
+    },
+    {
+      "ticker": "EPCO",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 49.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 67.0,
+        "momentum": 47.0,
+        "risk": 30.0
+      }
+    },
+    {
+      "ticker": "EPPK",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 51.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 45.0,
+        "risk": 35.0
+      }
+    },
+    {
+      "ticker": "ETEL",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 74.3,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 87.0,
+        "momentum": 85.0,
+        "risk": 70.0
+      }
+    },
+    {
+      "ticker": "ETRS",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 72.6,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 95.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "EXPA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 87.0,
+        "momentum": 47.0,
+        "risk": 30.0
+      }
+    },
+    {
+      "ticker": "FAIT",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 73.8,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 89.0,
+        "quality": 55.0,
+        "momentum": 85.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "FAITA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 55.0,
+        "momentum": 50.0,
+        "risk": 85.0
+      }
+    },
+    {
+      "ticker": "FCMD",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "FIRE",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 88.6,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "FNAR",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 40.0,
+        "momentum": 77.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "FTNS",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 44.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 47.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "FWRY",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 60.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 87.0,
+        "momentum": 52.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "GBCO",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 49.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 47.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "GDWA",
+      "v8b_verdict": "AVOID",
+      "v8b_score": 33.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 15.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "GEOS",
+      "v8b_verdict": null,
+      "v8b_score": null,
+      "v8b_conviction": null,
+      "blocking_catalysts": [],
+      "v8b_subscores": null
+    },
+    {
+      "ticker": "GGCC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 54.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 68.0,
+        "momentum": 75.2,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "GGRN",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "GIHD",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 59.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 77.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "GMCI",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 50.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 37.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "GOUR",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 50.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "GPIM",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 51.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "GRCA",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 40.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 52.0,
+        "momentum": 45.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "GSSC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 60.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 60.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "GTEX",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "GTHE",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "GTWL",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "HBCO",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 50.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "HDBK",
+      "v8b_verdict": "AVOID",
+      "v8b_score": 33.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 64.0,
+        "quality": 52.0,
+        "momentum": 15.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "HDST",
+      "v8b_verdict": null,
+      "v8b_score": null,
+      "v8b_conviction": null,
+      "blocking_catalysts": [],
+      "v8b_subscores": null
+    },
+    {
+      "ticker": "HELI",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 49.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 24.0,
+        "quality": 50.0,
+        "momentum": 67.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "HRHO",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 54.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 85.0,
+        "quality": 56.0,
+        "momentum": 32.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "IBCT",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 56.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 57.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "ICFC",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 67.8,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 84.4,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "ICID",
+      "v8b_verdict": "AVOID",
+      "v8b_score": 29.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "IDRE",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 67.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "IEEC",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 49.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 68.4,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "IFAP",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 46.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 47.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "INEG",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 48.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 67.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "IRON",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 37.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 47.0,
+        "momentum": 20.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "ISMA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 80.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "ISMQ",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 80.0,
+        "momentum": 55.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "ISPH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 51.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 70.0,
+        "momentum": 47.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "JUFO",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 44.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 27.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "KABO",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 59.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 67.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "KNGC",
+      "v8b_verdict": null,
+      "v8b_score": null,
+      "v8b_conviction": null,
+      "blocking_catalysts": [],
+      "v8b_subscores": null
+    },
+    {
+      "ticker": "KRDI",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "KWIN",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 44.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 57.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "KZPC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 50.0,
+        "momentum": 85.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "LCSW",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 82.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "LUTS",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 57.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 77.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "MAAL",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 63.0,
+        "momentum": 86.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "MASR",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 65.3,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 87.0,
+        "momentum": 67.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "MBEG",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 76.3,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "MBSC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 58.0,
+        "quality": 80.0,
+        "momentum": 72.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "MCQE",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 48.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 80.0,
+        "momentum": 47.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "MCRO",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 59.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 67.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "MENA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 55.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "MEPA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 47.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "MFPC",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 66.9,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 83.0,
+        "quality": 67.0,
+        "momentum": 60.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "MFSC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 59.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 80.0,
+        "momentum": 77.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "MHOT",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 40.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 92.0,
+        "momentum": 15.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "MICH",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 65.6,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 58.0,
+        "quality": 92.0,
+        "momentum": 67.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "MILS",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 62.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 90.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "MIPH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 57.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 80.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "MISR",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 50.0,
+        "risk": 65.0
+      }
+    },
+    {
+      "ticker": "MITR",
+      "v8b_verdict": null,
+      "v8b_score": null,
+      "v8b_conviction": null,
+      "blocking_catalysts": [],
+      "v8b_subscores": null
+    },
+    {
+      "ticker": "MKIT",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 44.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 35.0,
+        "risk": 35.0
+      }
+    },
+    {
+      "ticker": "MNHD",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 64.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 75.0,
+        "quality": 87.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "MOED",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 36.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 15.0,
+        "risk": 35.0
+      }
+    },
+    {
+      "ticker": "MOIL",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 72.6,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 87.9,
+        "risk": 70.0
+      }
+    },
+    {
+      "ticker": "MOIN",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 57.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 86.0,
+        "momentum": 67.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "MOSC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 60.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 78.4,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "MPCI",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 92.0,
+        "momentum": 70.1,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "MPCO",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 67.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "MPRC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 63.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 92.0,
+        "momentum": 67.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "MTIE",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 47.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "NAHO",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 63.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 72.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "NARE",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 47.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 40.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "NCCW",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 44.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 40.0,
+        "momentum": 65.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "NEDA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 54.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 40.0,
+        "momentum": 67.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "NFCI",
+      "v8b_verdict": null,
+      "v8b_score": null,
+      "v8b_conviction": null,
+      "blocking_catalysts": [],
+      "v8b_subscores": null
+    },
+    {
+      "ticker": "NHPS",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 46.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 55.0,
+        "momentum": 47.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "NINH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 92.0,
+        "momentum": 57.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "NIPH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 50.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 81.0,
+        "momentum": 54.3,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "OBRI",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 43.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 30.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "OCDI",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 62.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 82.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "OCPH",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 35.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 15.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "ODIN",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 54.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 67.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "OFH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 77.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "OIH",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 62.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 67.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "OLFI",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 75.0,
+        "momentum": 37.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "ORAS",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 50.0,
+        "risk": 65.0
+      }
+    },
+    {
+      "ticker": "ORHD",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 75.0,
+        "quality": 92.0,
+        "momentum": 45.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "ORWE",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 67.5,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 89.0,
+        "quality": 62.0,
+        "momentum": 67.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "PHAR",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 56.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 81.0,
+        "momentum": 67.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "PHDC",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 78.7,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 85.0,
+        "quality": 86.0,
+        "momentum": 82.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "PHTV",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 64.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 73.8,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "POCO",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 55.7,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "POUL",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 38.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 25.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "PRCL",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 67.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "PRDC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 80.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "PRMH",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 49.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 67.0,
+        "momentum": 55.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "QNBE",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 59.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 92.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "RACC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 47.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "RAKT",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 46.3,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 37.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "RAYA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 47.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "RKAZ",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 60.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 67.0,
+        "momentum": 86.8,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "RMDA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 56.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 67.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "ROTO",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 54.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 81.0,
+        "momentum": 55.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "RREI",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 48.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 57.0,
+        "risk": 30.0
+      }
+    },
+    {
+      "ticker": "RTVC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 47.0,
+        "risk": 45.0
+      }
+    },
+    {
+      "ticker": "RUBX",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 79.7,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "SAUD",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 60.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 92.0,
+        "momentum": 47.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "SCEM",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 65.2,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 95.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "SCFM",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 51.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 47.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "SCTS",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 51.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 45.0,
+        "risk": 30.0
+      }
+    },
+    {
+      "ticker": "SDTI",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 66.0,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 65.9,
+        "risk": 70.0
+      }
+    },
+    {
+      "ticker": "SEIG",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 67.0,
+        "momentum": 67.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "SEIGA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 50.0,
+        "risk": 65.0
+      }
+    },
+    {
+      "ticker": "SINA",
+      "v8b_verdict": null,
+      "v8b_score": null,
+      "v8b_conviction": null,
+      "blocking_catalysts": [],
+      "v8b_subscores": null
+    },
+    {
+      "ticker": "SIPC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 62.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 83.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "SKPC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 56.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 75.0,
+        "momentum": 47.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "SMFR",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 45.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 40.0,
+        "momentum": 55.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "SNFC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 55.0,
+        "risk": 55.0
+      }
+    },
+    {
+      "ticker": "SNFI",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 50.0,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "SODIC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 57.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 30.0,
+        "quality": 62.0,
+        "momentum": 82.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "SPIN",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 50.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 57.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "SPMD",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 52.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 65.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "SUGR",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 37.0,
+        "momentum": 82.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "SVCE",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 59.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 80.0,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "SWDY",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 67.0,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 85.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "TALM",
+      "v8b_verdict": "ABSTAIN",
+      "v8b_score": 70.7,
+      "v8b_conviction": "none",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 87.0,
+        "momentum": 85.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "TANM",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 67.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "TAQA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "TORA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "TRTO",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 45.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 55.0,
+        "momentum": 51.2,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "TWSA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 50.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "TYCN",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "UBEE",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 51.4,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 52.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "UEFM",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 54.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 80.0,
+        "momentum": 47.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "UEGC",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 53.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 82.0,
+        "risk": 5.0
+      }
+    },
+    {
+      "ticker": "UNIP",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 49.9,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 50.0,
+        "momentum": 55.0,
+        "risk": 40.0
+      }
+    },
+    {
+      "ticker": "UNIT",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 60.2,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 62.0,
+        "momentum": 89.3,
+        "risk": 15.0
+      }
+    },
+    {
+      "ticker": "UPMS",
+      "v8b_verdict": "REDUCE",
+      "v8b_score": 46.6,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 35.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "UTOP",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 59.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 92.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "VALU",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 54.3,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 69.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "VERT",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 56.8,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "VLMR",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 81.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "VLMRA",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 58.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 81.0,
+        "momentum": 50.0,
+        "risk": 50.0
+      }
+    },
+    {
+      "ticker": "WCDF",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 55.5,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 75.0,
+        "momentum": 57.0,
+        "risk": 30.0
+      }
+    },
+    {
+      "ticker": "WKOL",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 57.7,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 54.0,
+        "quality": 92.0,
+        "momentum": 55.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "ZEOT",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 57.1,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 75.0,
+        "momentum": 67.0,
+        "risk": 25.0
+      }
+    },
+    {
+      "ticker": "ZMID",
+      "v8b_verdict": "HOLD",
+      "v8b_score": 61.0,
+      "v8b_conviction": "medium",
+      "blocking_catalysts": [],
+      "v8b_subscores": {
+        "valuation": 50.0,
+        "quality": 80.0,
+        "momentum": 67.0,
+        "risk": 40.0
+      }
+    }
+  ],
+  "chairman_per_pick": {
+    "ABUK": {
+      "verdict": "ACCUMULATE",
+      "conviction": "medium",
+      "edge": 0.395,
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "deciding_factors": [
+        "scoring.quality: Quality fundamentals (ROE / margin / leverage) (w=0.25)",
+        "scoring.momentum: Momentum and trend alignment (w=0.25)",
+        "scoring.valuation: Valuation is rich vs sector (w=0.16)",
+        "scoring.risk: Risk profile is elevated (vol / drawdown) (w=0.12)"
+      ],
+      "sentiment_label": "bullish",
+      "sentiment_score": 1.0
+    },
+    "INFI": {
+      "verdict": "ACCUMULATE",
+      "conviction": "medium",
+      "edge": 0.38,
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "deciding_factors": [
+        "scoring.quality: Quality fundamentals (ROE / margin / leverage) (w=0.25)",
+        "scoring.momentum: Momentum and trend alignment (w=0.25)",
+        "scoring.risk: Risk profile is elevated (vol / drawdown) (w=0.20)"
+      ],
+      "sentiment_label": "bullish",
+      "sentiment_score": 1.0
+    },
+    "COMI": {
+      "verdict": "ACCUMULATE",
+      "conviction": "high",
+      "edge": 0.778,
+      "rationale": "Bull case modestly stronger; build position gradually. Best-in-sector relative position adds conviction.",
+      "deciding_factors": [
+        "scoring.quality: Quality fundamentals (ROE / margin / leverage) (w=0.25)",
+        "scoring.momentum: Momentum and trend alignment (w=0.25)"
+      ],
+      "sentiment_label": "bullish",
+      "sentiment_score": 1.0
+    },
+    "EAST": {
+      "verdict": "AVOID",
+      "conviction": "high",
+      "edge": -0.595,
+      "rationale": "Bear case dominates on monthly view \u2014 informational only. Does not override W1 short-horizon entries; treat as context.",
+      "deciding_factors": [
+        "scoring.quality: Quality fundamentals (ROE / margin / leverage) (w=0.25)",
+        "sentiment: Recent headlines lean bullish (w=0.08)",
+        "scoring.valuation: Valuation is rich vs sector (w=0.30)",
+        "scoring.momentum: Momentum is broken or trend down (w=0.20)"
+      ],
+      "sentiment_label": "bullish",
+      "sentiment_score": 1.0
+    },
+    "TMGH": {
+      "verdict": "ACCUMULATE",
+      "conviction": "medium",
+      "edge": 0.578,
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "deciding_factors": [
+        "scoring.quality: Quality fundamentals (ROE / margin / leverage) (w=0.25)",
+        "scoring.momentum: Momentum and trend alignment (w=0.25)"
+      ],
+      "sentiment_label": "bullish",
+      "sentiment_score": 1.0
+    }
+  },
+  "divergences": [
+    {
+      "ticker": "ABUK",
+      "v8b": "ABSTAIN",
+      "chairman": "ACCUMULATE",
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "sentiment": "bullish"
+    },
+    {
+      "ticker": "INFI",
+      "v8b": "ABSTAIN",
+      "chairman": "ACCUMULATE",
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "sentiment": "bullish"
+    },
+    {
+      "ticker": "COMI",
+      "v8b": "ABSTAIN",
+      "chairman": "ACCUMULATE",
+      "rationale": "Bull case modestly stronger; build position gradually. Best-in-sector relative position adds conviction.",
+      "sentiment": "bullish"
+    },
+    {
+      "ticker": "EAST",
+      "v8b": "REDUCE",
+      "chairman": "AVOID",
+      "rationale": "Bear case dominates on monthly view \u2014 informational only. Does not override W1 short-horizon entries; treat as context.",
+      "sentiment": "bullish"
+    },
+    {
+      "ticker": "TMGH",
+      "v8b": "HOLD",
+      "chairman": "ACCUMULATE",
+      "rationale": "Bull case modestly stronger; build position gradually.",
+      "sentiment": "bullish"
+    }
+  ],
+  "trade_plans": {
+    "ABUK": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 58.61,
+      "last_close_egp": 58.32,
+      "atr_14": 3.7729,
+      "stop_loss_egp": 50.77,
+      "stop_distance_egp": 7.55,
+      "scale_out_egp": 65.87,
+      "scale_out_shares": 331,
+      "target_egp": 69.64,
+      "runner_shares": 331,
+      "shares": 662,
+      "position_cost_egp": 38607.84,
+      "position_pct_of_nav": 7.72,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-10-29",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 65.87 EGP, sell 331 shares (half) and move stop to breakeven on the rest",
+        "Target: at 69.64 EGP, sell the remaining 331 shares \u2014 OR trail by 1\u00d7ATR (3.7729) on new highs to let it run",
+        "Stop 50.77 EGP hit \u2014 exit immediately",
+        "Time stop 2026-10-29: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": false
+    },
+    "INFI": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 53.08,
+      "last_close_egp": 52.82,
+      "atr_14": 9.3629,
+      "stop_loss_egp": 34.09,
+      "stop_distance_egp": 18.73,
+      "scale_out_egp": 71.55,
+      "scale_out_shares": 133,
+      "target_egp": 80.91,
+      "runner_shares": 134,
+      "shares": 267,
+      "position_cost_egp": 14102.94,
+      "position_pct_of_nav": 2.82,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-10-29",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 71.55 EGP, sell 133 shares (half) and move stop to breakeven on the rest",
+        "Target: at 80.91 EGP, sell the remaining 134 shares \u2014 OR trail by 1\u00d7ATR (9.3629) on new highs to let it run",
+        "Stop 34.09 EGP hit \u2014 exit immediately",
+        "Time stop 2026-10-29: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": false
+    },
+    "COMI": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 81.61,
+      "last_close_egp": 81.2,
+      "atr_14": 2.5586,
+      "stop_loss_egp": 76.08,
+      "stop_distance_egp": 5.12,
+      "scale_out_egp": 86.32,
+      "scale_out_shares": 307,
+      "target_egp": 88.88,
+      "runner_shares": 308,
+      "shares": 615,
+      "position_cost_egp": 49938.0,
+      "position_pct_of_nav": 9.99,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-10-29",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 86.32 EGP, sell 307 shares (half) and move stop to breakeven on the rest",
+        "Target: at 88.88 EGP, sell the remaining 308 shares \u2014 OR trail by 1\u00d7ATR (2.5586) on new highs to let it run",
+        "Stop 76.08 EGP hit \u2014 exit immediately",
+        "Time stop 2026-10-29: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": true
+    },
+    "EAST": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 21.91,
+      "last_close_egp": 21.8,
+      "atr_14": 1.0629,
+      "stop_loss_egp": 19.67,
+      "stop_distance_egp": 2.13,
+      "scale_out_egp": 23.93,
+      "scale_out_shares": 1146,
+      "target_egp": 24.99,
+      "runner_shares": 1147,
+      "shares": 2293,
+      "position_cost_egp": 49987.4,
+      "position_pct_of_nav": 10.0,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-10-29",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 23.93 EGP, sell 1146 shares (half) and move stop to breakeven on the rest",
+        "Target: at 24.99 EGP, sell the remaining 1147 shares \u2014 OR trail by 1\u00d7ATR (1.0629) on new highs to let it run",
+        "Stop 19.67 EGP hit \u2014 exit immediately",
+        "Time stop 2026-10-29: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": true
+    },
+    "TMGH": {
+      "action": "BUY at open with limit",
+      "entry_limit_egp": 58.29,
+      "last_close_egp": 58.0,
+      "atr_14": 2.8486,
+      "stop_loss_egp": 52.3,
+      "stop_distance_egp": 5.7,
+      "scale_out_egp": 63.7,
+      "scale_out_shares": 431,
+      "target_egp": 66.55,
+      "runner_shares": 431,
+      "shares": 862,
+      "position_cost_egp": 49996.0,
+      "position_pct_of_nav": 10.0,
+      "risk_egp": 5000.0,
+      "reward_to_risk": 1.5,
+      "time_stop_date": "2026-10-29",
+      "expected_hold_days": 5,
+      "sell_when": [
+        "Scale-out: at 63.7 EGP, sell 431 shares (half) and move stop to breakeven on the rest",
+        "Target: at 66.55 EGP, sell the remaining 431 shares \u2014 OR trail by 1\u00d7ATR (2.8486) on new highs to let it run",
+        "Stop 52.3 EGP hit \u2014 exit immediately",
+        "Time stop 2026-10-29: applies ONLY if scale-out never triggered (full position still at risk). Once scale-out hits, the runner trails freely.",
+        "If pick re-enters W1 top-5 next Sunday \u2014 extend the trail, otherwise rotate"
+      ],
+      "capped_by_liquidity": false,
+      "capped_by_max_position": true
+    }
+  },
+  "technicals_per_pick": {
+    "ABUK": {
+      "rsi_14": 64.4702,
+      "macd_minus_signal": 0.518,
+      "sma_50": 86.0058,
+      "sma_200": 76.0346,
+      "atr_14": 3.7729,
+      "atr_pct_of_price": 3.94,
+      "bullets": [
+        "RSI 64 \u2014 healthy uptrend",
+        "MACD bullish (+0.518)",
+        "MA50 > MA200 \u2014 golden-cross regime",
+        "Riding upper Bollinger \u2014 extended",
+        "ATR 3.77 (3.9% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 64.5: neutral",
+        "MACD above signal: bullish momentum",
+        "Golden cross territory (SMA50 > SMA200)",
+        "Price above upper Bollinger Band \u2014 extended"
+      ]
+    },
+    "INFI": {
+      "rsi_14": 55.2094,
+      "macd_minus_signal": 0.9664000000000001,
+      "sma_50": 137.9672,
+      "sma_200": 111.801,
+      "atr_14": 9.3629,
+      "atr_pct_of_price": 7.49,
+      "bullets": [
+        "RSI 55 \u2014 healthy uptrend",
+        "MACD bullish (+0.966)",
+        "MA50 > MA200 \u2014 golden-cross regime",
+        "ATR 9.36 (7.5% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 55.2: neutral",
+        "MACD above signal: bullish momentum",
+        "Golden cross territory (SMA50 > SMA200)"
+      ]
+    },
+    "COMI": {
+      "rsi_14": 58.3643,
+      "macd_minus_signal": 0.7460999999999998,
+      "sma_50": 132.7898,
+      "sma_200": 129.9682,
+      "atr_14": 2.5586,
+      "atr_pct_of_price": 1.98,
+      "bullets": [
+        "RSI 58 \u2014 healthy uptrend",
+        "MACD bullish (+0.746)",
+        "MA50 > MA200 \u2014 golden-cross regime",
+        "ATR 2.56 (2.0% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 58.4: neutral",
+        "MACD above signal: bullish momentum",
+        "Golden cross territory (SMA50 > SMA200)"
+      ]
+    },
+    "EAST": {
+      "rsi_14": 59.6879,
+      "macd_minus_signal": 0.33619999999999983,
+      "sma_50": 32.6606,
+      "sma_200": 36.9294,
+      "atr_14": 1.0629,
+      "atr_pct_of_price": 3.54,
+      "bullets": [
+        "RSI 60 \u2014 healthy uptrend",
+        "MACD bullish (+0.336)",
+        "MA50 < MA200 \u2014 death-cross regime",
+        "ATR 1.06 (3.5% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 59.7: neutral",
+        "MACD above signal: bullish momentum",
+        "Death cross territory (SMA50 < SMA200)"
+      ]
+    },
+    "TMGH": {
+      "rsi_14": 57.4719,
+      "macd_minus_signal": 0.3315999999999999,
+      "sma_50": 93.165,
+      "sma_200": 89.7639,
+      "atr_14": 2.8486,
+      "atr_pct_of_price": 3.17,
+      "bullets": [
+        "RSI 57 \u2014 healthy uptrend",
+        "MACD bullish (+0.332)",
+        "MA50 > MA200 \u2014 golden-cross regime",
+        "ATR 2.85 (3.2% of px) \u2014 sizing input"
+      ],
+      "signals": [
+        "RSI 57.5: neutral",
+        "MACD above signal: bullish momentum",
+        "Golden cross territory (SMA50 > SMA200)"
+      ]
+    }
+  },
+  "fundamentals_per_pick": {
+    "ABUK": {
+      "pe_ratio": 14.05,
+      "pb_ratio": 3.08,
+      "roe_pct": 21.9,
+      "profit_margin_pct": 34.8217,
+      "debt_to_equity": null,
+      "dividend_yield_pct": 6.7677,
+      "bullets": [
+        "P/E 14.1 \u2014 fair",
+        "P/B 3.08",
+        "ROE 21.9% \u2014 strong",
+        "Margin 34.8%",
+        "Yield 6.8%"
+      ],
+      "pe_was_corrected": false
+    },
+    "INFI": {
+      "pe_ratio": 14.75,
+      "pb_ratio": 4.15,
+      "roe_pct": 28.16,
+      "profit_margin_pct": 17.1372,
+      "debt_to_equity": 0.0356,
+      "dividend_yield_pct": 1.0705,
+      "bullets": [
+        "P/E 14.8 \u2014 fair",
+        "P/B 4.15",
+        "ROE 28.2% \u2014 strong",
+        "Margin 17.1%",
+        "D/E 0.04",
+        "Yield 1.1%"
+      ],
+      "pe_was_corrected": false
+    },
+    "COMI": {
+      "pe_ratio": 3.73,
+      "pb_ratio": 1.41,
+      "roe_pct": 37.75,
+      "profit_margin_pct": 48.9743,
+      "debt_to_equity": 0.2509,
+      "dividend_yield_pct": 4.7133,
+      "bullets": [
+        "P/E 3.7 \u2014 cheap",
+        "P/B 1.41",
+        "ROE 37.8% \u2014 strong",
+        "Margin 49.0%",
+        "D/E 0.25",
+        "Yield 4.7%"
+      ],
+      "pe_was_corrected": false
+    },
+    "EAST": {
+      "pe_ratio": 10.05,
+      "pb_ratio": 4.67,
+      "roe_pct": 46.46,
+      "profit_margin_pct": 23.1719,
+      "debt_to_equity": null,
+      "dividend_yield_pct": 3.877,
+      "bullets": [
+        "P/E 10.1 \u2014 fair",
+        "P/B 4.67",
+        "ROE 46.5% \u2014 strong",
+        "Margin 23.2%",
+        "Yield 3.9%"
+      ],
+      "pe_was_corrected": false
+    },
+    "TMGH": {
+      "pe_ratio": 7.19,
+      "pb_ratio": 1.25,
+      "roe_pct": 17.45,
+      "profit_margin_pct": 21.1366,
+      "debt_to_equity": 0.8026,
+      "dividend_yield_pct": 0.3177,
+      "bullets": [
+        "P/E 7.2 \u2014 cheap",
+        "P/B 1.25",
+        "ROE 17.4% \u2014 adequate",
+        "Margin 21.1%",
+        "D/E 0.80",
+        "Yield 0.3%"
+      ],
+      "pe_was_corrected": false
+    }
+  },
+  "news_per_pick": {
+    "ABUK": {
+      "headlines": [
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\"\u0641\u0648\u062a\u0633\u064a \u0631\u0627\u0633\u0644\" \u062a\u0639\u062f\u0644 \u0645\u0643\u0648\u0646\u0627\u062a \u0645\u0624\u0634\u0631\u0627\u062a \u0627\u0644\u0623\u0633\u0647\u0645 \u0627\u0644\u0645\u0635\u0631\u064a\u0629.. \u0645\u0639 \u062e\u0631\u0648\u062c 6 \u0634\u0631\u0643\u0627\u062a",
+          "url": "https://www.mubasher.info/news/4662196/-%D9%81%D9%88%D8%AA%D8%B3%D9%8A-%D8%B1%D8%A7%D8%B3%D9%84-%D8%AA%D8%B9%D8%AF%D9%84-%D9%85%D9%83%D9%88%D9%86%D8%A7%D8%AA-%D9%85%D8%A4%D8%B4%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D8%B3%D9%87%D9%85-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D9%85%D8%B9-%D8%AE%D8%B1%D9%88%D8%AC-6-%D8%B4%D8%B1%D9%83%D8%A7%D8%AA/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0623\u0628\u0648\u0642\u064a\u0631 \u0644\u0644\u0623\u0633\u0645\u062f\u0629 \u062a\u0639\u0644\u0646 \u0627\u0643\u062a\u0645\u0627\u0644 \u0645\u0634\u0631\u0648\u0639 \u062a\u0637\u0648\u064a\u0631 \u0645\u0641\u0627\u0639\u0644 \u0627\u0644\u0623\u0645\u0648\u0646\u064a\u0627 \u0648\u0632\u064a\u0627\u062f\u0629 \u0627\u0644\u0637\u0627\u0642\u0629 \u0627\u0644\u0625\u0646\u062a\u0627\u062c\u064a\u0629",
+          "url": "https://www.mubasher.info/news/4649339/%D8%A3%D8%A8%D9%88%D9%82%D9%8A%D8%B1-%D9%84%D9%84%D8%A3%D8%B3%D9%85%D8%AF%D8%A9-%D8%AA%D8%B9%D9%84%D9%86-%D8%A7%D9%83%D8%AA%D9%85%D8%A7%D9%84-%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D9%85%D9%81%D8%A7%D8%B9%D9%84-%D8%A7%D9%84%D8%A3%D9%85%D9%88%D9%86%D9%8A%D8%A7-%D9%88%D8%B2%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%A7%D8%AC%D9%8A%D8%A9/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0623\u0631\u0628\u0627\u062d \u0623\u0628\u0648\u0642\u064a\u0631 \u0644\u0644\u0623\u0633\u0645\u062f\u0629 \u062a\u0642\u0641\u0632 119% \u0644\u0623\u0643\u062b\u0631 \u0645\u0646 10 \u0645\u0644\u064a\u0627\u0631\u0627\u062a \u062c\u0646\u064a\u0647 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644",
+          "url": "https://www.mubasher.info/news/4649329/%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A3%D8%A8%D9%88%D9%82%D9%8A%D8%B1-%D9%84%D9%84%D8%A3%D8%B3%D9%85%D8%AF%D8%A9-%D8%AA%D9%82%D9%81%D8%B2-119-%D9%84%D8%A3%D9%83%D8%AB%D8%B1-%D9%85%D9%86-10-%D9%85%D9%84%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D8%AC%D9%86%D9%8A%D9%87-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84/",
+          "summary": null,
+          "lang": "ar"
+        }
+      ],
+      "sentiment": {
+        "ticker": "ABUK",
+        "as_of": "2026-10-22T13:19:34.527740Z",
+        "lang_requested": "both",
+        "headline_count": 3,
+        "scored_count": 1,
+        "coverage_pct": 33.3,
+        "aggregate_score": 1.0,
+        "label": "bullish",
+        "bull_signals": [
+          "\u0623\u0631\u0628\u0627\u062d \u0623\u0628\u0648\u0642\u064a\u0631 \u0644\u0644\u0623\u0633\u0645\u062f\u0629 \u062a\u0642\u0641\u0632 119% \u0644\u0623\u0643\u062b\u0631 \u0645\u0646 10 \u0645\u0644\u064a\u0627\u0631\u0627\u062a \u062c\u0646\u064a\u0647 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644"
+        ],
+        "bear_signals": [],
+        "headlines": [
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\"\u0641\u0648\u062a\u0633\u064a \u0631\u0627\u0633\u0644\" \u062a\u0639\u062f\u0644 \u0645\u0643\u0648\u0646\u0627\u062a \u0645\u0624\u0634\u0631\u0627\u062a \u0627\u0644\u0623\u0633\u0647\u0645 \u0627\u0644\u0645\u0635\u0631\u064a\u0629.. \u0645\u0639 \u062e\u0631\u0648\u062c 6 \u0634\u0631\u0643\u0627\u062a",
+            "url": "https://www.mubasher.info/news/4662196/-%D9%81%D9%88%D8%AA%D8%B3%D9%8A-%D8%B1%D8%A7%D8%B3%D9%84-%D8%AA%D8%B9%D8%AF%D9%84-%D9%85%D9%83%D9%88%D9%86%D8%A7%D8%AA-%D9%85%D8%A4%D8%B4%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D8%B3%D9%87%D9%85-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D9%85%D8%B9-%D8%AE%D8%B1%D9%88%D8%AC-6-%D8%B4%D8%B1%D9%83%D8%A7%D8%AA/",
+            "score": 0.0,
+            "matches": []
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0623\u0628\u0648\u0642\u064a\u0631 \u0644\u0644\u0623\u0633\u0645\u062f\u0629 \u062a\u0639\u0644\u0646 \u0627\u0643\u062a\u0645\u0627\u0644 \u0645\u0634\u0631\u0648\u0639 \u062a\u0637\u0648\u064a\u0631 \u0645\u0641\u0627\u0639\u0644 \u0627\u0644\u0623\u0645\u0648\u0646\u064a\u0627 \u0648\u0632\u064a\u0627\u062f\u0629 \u0627\u0644\u0637\u0627\u0642\u0629 \u0627\u0644\u0625\u0646\u062a\u0627\u062c\u064a\u0629",
+            "url": "https://www.mubasher.info/news/4649339/%D8%A3%D8%A8%D9%88%D9%82%D9%8A%D8%B1-%D9%84%D9%84%D8%A3%D8%B3%D9%85%D8%AF%D8%A9-%D8%AA%D8%B9%D9%84%D9%86-%D8%A7%D9%83%D8%AA%D9%85%D8%A7%D9%84-%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D9%85%D9%81%D8%A7%D8%B9%D9%84-%D8%A7%D9%84%D8%A3%D9%85%D9%88%D9%86%D9%8A%D8%A7-%D9%88%D8%B2%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%A7%D8%AC%D9%8A%D8%A9/",
+            "score": 0.0,
+            "matches": []
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0623\u0631\u0628\u0627\u062d \u0623\u0628\u0648\u0642\u064a\u0631 \u0644\u0644\u0623\u0633\u0645\u062f\u0629 \u062a\u0642\u0641\u0632 119% \u0644\u0623\u0643\u062b\u0631 \u0645\u0646 10 \u0645\u0644\u064a\u0627\u0631\u0627\u062a \u062c\u0646\u064a\u0647 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644",
+            "url": "https://www.mubasher.info/news/4649329/%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A3%D8%A8%D9%88%D9%82%D9%8A%D8%B1-%D9%84%D9%84%D8%A3%D8%B3%D9%85%D8%AF%D8%A9-%D8%AA%D9%82%D9%81%D8%B2-119-%D9%84%D8%A3%D9%83%D8%AB%D8%B1-%D9%85%D9%86-10-%D9%85%D9%84%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D8%AC%D9%86%D9%8A%D9%87-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84/",
+            "score": 1.0,
+            "matches": [
+              "+\u0623\u0631\u0628\u0627\u062d"
+            ]
+          }
+        ],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    },
+    "INFI": {
+      "headlines": [
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\"\u0641\u0648\u062f\u064a\u0643\u0648\" \u062a\u0639\u0644\u0646 \u062a\u0623\u062c\u064a\u0644 \u062f\u0639\u0648\u0649 \u0628\u0637\u0644\u0627\u0646 \u0641\u0633\u062e \u0627\u0644\u0639\u0642\u062f \u0644\u062c\u0644\u0633\u0629 24 \u0623\u0643\u062a\u0648\u0628\u0631",
+          "url": "https://www.mubasher.info/news/4669119/-%D9%81%D9%88%D8%AF%D9%8A%D9%83%D9%88-%D8%AA%D8%B9%D9%84%D9%86-%D8%AA%D8%A3%D8%AC%D9%8A%D9%84-%D8%AF%D8%B9%D9%88%D9%89-%D8%A8%D8%B7%D9%84%D8%A7%D9%86-%D9%81%D8%B3%D8%AE-%D8%A7%D9%84%D8%B9%D9%82%D8%AF-%D9%84%D8%AC%D9%84%D8%B3%D8%A9-24-%D8%A3%D9%83%D8%AA%D9%88%D8%A8%D8%B1/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0645\u0633\u0627\u0647\u0645 \u064a\u0628\u064a\u0639 150 \u0623\u0644\u0641 \u0633\u0647\u0645 \u0641\u064a \u0641\u0648\u062f\u064a\u0643\u0648 \u0628\u0642\u064a\u0645\u0629 23.42 \u0645\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647",
+          "url": "https://www.mubasher.info/news/4655778/%D9%85%D8%B3%D8%A7%D9%87%D9%85-%D9%8A%D8%A8%D9%8A%D8%B9-150-%D8%A3%D9%84%D9%81-%D8%B3%D9%87%D9%85-%D9%81%D9%8A-%D9%81%D9%88%D8%AF%D9%8A%D9%83%D9%88-%D8%A8%D9%82%D9%8A%D9%85%D8%A9-23-42-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%AC%D9%86%D9%8A%D9%87/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0641\u0648\u062f\u064a\u0643\u0648: \u0644\u0627 \u062a\u0648\u062c\u062f \u0623\u062d\u062f\u0627\u062b \u062c\u0648\u0647\u0631\u064a\u0629 \u062a\u0628\u0631\u0631 \u062a\u062d\u0631\u0643\u0627\u062a \u0633\u0647\u0645 \u0627\u0644\u0634\u0631\u0643\u0629",
+          "url": "https://www.mubasher.info/news/4654953/%D9%81%D9%88%D8%AF%D9%8A%D9%83%D9%88-%D9%84%D8%A7-%D8%AA%D9%88%D8%AC%D8%AF-%D8%A3%D8%AD%D8%AF%D8%A7%D8%AB-%D8%AC%D9%88%D9%87%D8%B1%D9%8A%D8%A9-%D8%AA%D8%A8%D8%B1%D8%B1-%D8%AA%D8%AD%D8%B1%D9%83%D8%A7%D8%AA-%D8%B3%D9%87%D9%85-%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A9/",
+          "summary": null,
+          "lang": "ar"
+        }
+      ],
+      "sentiment": {
+        "ticker": "INFI",
+        "as_of": "2026-10-22T13:19:36.339359Z",
+        "lang_requested": "both",
+        "headline_count": 3,
+        "scored_count": 0,
+        "coverage_pct": 0.0,
+        "aggregate_score": 0.0,
+        "label": "neutral",
+        "bull_signals": [],
+        "bear_signals": [],
+        "headlines": [
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\"\u0641\u0648\u062f\u064a\u0643\u0648\" \u062a\u0639\u0644\u0646 \u062a\u0623\u062c\u064a\u0644 \u062f\u0639\u0648\u0649 \u0628\u0637\u0644\u0627\u0646 \u0641\u0633\u062e \u0627\u0644\u0639\u0642\u062f \u0644\u062c\u0644\u0633\u0629 24 \u0623\u0643\u062a\u0648\u0628\u0631",
+            "url": "https://www.mubasher.info/news/4669119/-%D9%81%D9%88%D8%AF%D9%8A%D9%83%D9%88-%D8%AA%D8%B9%D9%84%D9%86-%D8%AA%D8%A3%D8%AC%D9%8A%D9%84-%D8%AF%D8%B9%D9%88%D9%89-%D8%A8%D8%B7%D9%84%D8%A7%D9%86-%D9%81%D8%B3%D8%AE-%D8%A7%D9%84%D8%B9%D9%82%D8%AF-%D9%84%D8%AC%D9%84%D8%B3%D8%A9-24-%D8%A3%D9%83%D8%AA%D9%88%D8%A8%D8%B1/",
+            "score": 0.0,
+            "matches": []
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0645\u0633\u0627\u0647\u0645 \u064a\u0628\u064a\u0639 150 \u0623\u0644\u0641 \u0633\u0647\u0645 \u0641\u064a \u0641\u0648\u062f\u064a\u0643\u0648 \u0628\u0642\u064a\u0645\u0629 23.42 \u0645\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647",
+            "url": "https://www.mubasher.info/news/4655778/%D9%85%D8%B3%D8%A7%D9%87%D9%85-%D9%8A%D8%A8%D9%8A%D8%B9-150-%D8%A3%D9%84%D9%81-%D8%B3%D9%87%D9%85-%D9%81%D9%8A-%D9%81%D9%88%D8%AF%D9%8A%D9%83%D9%88-%D8%A8%D9%82%D9%8A%D9%85%D8%A9-23-42-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%AC%D9%86%D9%8A%D9%87/",
+            "score": 0.0,
+            "matches": []
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0641\u0648\u062f\u064a\u0643\u0648: \u0644\u0627 \u062a\u0648\u062c\u062f \u0623\u062d\u062f\u0627\u062b \u062c\u0648\u0647\u0631\u064a\u0629 \u062a\u0628\u0631\u0631 \u062a\u062d\u0631\u0643\u0627\u062a \u0633\u0647\u0645 \u0627\u0644\u0634\u0631\u0643\u0629",
+            "url": "https://www.mubasher.info/news/4654953/%D9%81%D9%88%D8%AF%D9%8A%D9%83%D9%88-%D9%84%D8%A7-%D8%AA%D9%88%D8%AC%D8%AF-%D8%A3%D8%AD%D8%AF%D8%A7%D8%AB-%D8%AC%D9%88%D9%87%D8%B1%D9%8A%D8%A9-%D8%AA%D8%A8%D8%B1%D8%B1-%D8%AA%D8%AD%D8%B1%D9%83%D8%A7%D8%AA-%D8%B3%D9%87%D9%85-%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A9/",
+            "score": 0.0,
+            "matches": []
+          }
+        ],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    },
+    "COMI": {
+      "headlines": [
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\"CIB\" \u064a\u0633\u062a\u062b\u0645\u0631 \u0645\u0644\u064a\u0627\u0631\u064a \u062c\u0646\u064a\u0647 \u0641\u064a \u0627\u0644\u0637\u0631\u062d \u0627\u0644\u0645\u0642\u062a\u0631\u062d \u0644\u0640\"MNT-Halan\" \u0628\u0627\u0644\u0628\u0648\u0631\u0635\u0629 \u0627\u0644\u0645\u0635\u0631\u064a\u0629",
+          "url": "https://www.mubasher.info/news/4680934/-CIB-%D9%8A%D8%B3%D8%AA%D8%AB%D9%85%D8%B1-%D9%85%D9%84%D9%8A%D8%A7%D8%B1%D9%8A-%D8%AC%D9%86%D9%8A%D9%87-%D9%81%D9%8A-%D8%A7%D9%84%D8%B7%D8%B1%D8%AD-%D8%A7%D9%84%D9%85%D9%82%D8%AA%D8%B1%D8%AD-%D9%84%D9%80-MNT-Halan-%D8%A8%D8%A7%D9%84%D8%A8%D9%88%D8%B1%D8%B5%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\"CIB\" \u064a\u0645\u0648\u0644 \u062a\u0648\u0633\u0639\u0627\u062a \"\u0625\u064a\u0631\u0648\u063a\u0644\u0648\" \u0627\u0644\u062a\u0631\u0643\u064a\u0629 \u0641\u064a \u0645\u0635\u0631 \u0628\u064080 \u0645\u0644\u064a\u0648\u0646 \u062f\u0648\u0644\u0627\u0631",
+          "url": "https://www.mubasher.info/news/4676348/-CIB-%D9%8A%D9%85%D9%88%D9%84-%D8%AA%D9%88%D8%B3%D8%B9%D8%A7%D8%AA-%D8%A5%D9%8A%D8%B1%D9%88%D8%BA%D9%84%D9%88-%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A%D8%A9-%D9%81%D9%8A-%D9%85%D8%B5%D8%B1-%D8%A8%D9%8080-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%AF%D9%88%D9%84%D8%A7%D8%B1/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0633\u0647\u0645 \u0627\u0644\u062a\u062c\u0627\u0631\u064a \u0627\u0644\u062f\u0648\u0644\u064a \u064a\u062a\u0635\u062f\u0631 \u062a\u062f\u0627\u0648\u0644\u0627\u062a \u0627\u0644\u0628\u0648\u0631\u0635\u0629.. \u0645\u0642\u062a\u0646\u0635\u0627\u064b \u0646\u062d\u0648 9% \u0645\u0646 \u0627\u0644\u0633\u064a\u0648\u0644\u0629",
+          "url": "https://www.mubasher.info/news/4673553/%D8%B3%D9%87%D9%85-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A-%D9%8A%D8%AA%D8%B5%D8%AF%D8%B1-%D8%AA%D8%AF%D8%A7%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D8%A8%D9%88%D8%B1%D8%B5%D8%A9-%D9%85%D9%82%D8%AA%D9%86%D8%B5%D8%A7-%D9%86%D8%AD%D9%88-9-%D9%85%D9%86-%D8%A7%D9%84%D8%B3%D9%8A%D9%88%D9%84%D8%A9/",
+          "summary": null,
+          "lang": "ar"
+        }
+      ],
+      "sentiment": {
+        "ticker": "COMI",
+        "as_of": "2026-10-22T13:19:38.621853Z",
+        "lang_requested": "both",
+        "headline_count": 3,
+        "scored_count": 0,
+        "coverage_pct": 0.0,
+        "aggregate_score": 0.0,
+        "label": "neutral",
+        "bull_signals": [],
+        "bear_signals": [],
+        "headlines": [
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\"CIB\" \u064a\u0633\u062a\u062b\u0645\u0631 \u0645\u0644\u064a\u0627\u0631\u064a \u062c\u0646\u064a\u0647 \u0641\u064a \u0627\u0644\u0637\u0631\u062d \u0627\u0644\u0645\u0642\u062a\u0631\u062d \u0644\u0640\"MNT-Halan\" \u0628\u0627\u0644\u0628\u0648\u0631\u0635\u0629 \u0627\u0644\u0645\u0635\u0631\u064a\u0629",
+            "url": "https://www.mubasher.info/news/4680934/-CIB-%D9%8A%D8%B3%D8%AA%D8%AB%D9%85%D8%B1-%D9%85%D9%84%D9%8A%D8%A7%D8%B1%D9%8A-%D8%AC%D9%86%D9%8A%D9%87-%D9%81%D9%8A-%D8%A7%D9%84%D8%B7%D8%B1%D8%AD-%D8%A7%D9%84%D9%85%D9%82%D8%AA%D8%B1%D8%AD-%D9%84%D9%80-MNT-Halan-%D8%A8%D8%A7%D9%84%D8%A8%D9%88%D8%B1%D8%B5%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9/",
+            "score": 0.0,
+            "matches": []
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\"CIB\" \u064a\u0645\u0648\u0644 \u062a\u0648\u0633\u0639\u0627\u062a \"\u0625\u064a\u0631\u0648\u063a\u0644\u0648\" \u0627\u0644\u062a\u0631\u0643\u064a\u0629 \u0641\u064a \u0645\u0635\u0631 \u0628\u064080 \u0645\u0644\u064a\u0648\u0646 \u062f\u0648\u0644\u0627\u0631",
+            "url": "https://www.mubasher.info/news/4676348/-CIB-%D9%8A%D9%85%D9%88%D9%84-%D8%AA%D9%88%D8%B3%D8%B9%D8%A7%D8%AA-%D8%A5%D9%8A%D8%B1%D9%88%D8%BA%D9%84%D9%88-%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A%D8%A9-%D9%81%D9%8A-%D9%85%D8%B5%D8%B1-%D8%A8%D9%8080-%D9%85%D9%84%D9%8A%D9%88%D9%86-%D8%AF%D9%88%D9%84%D8%A7%D8%B1/",
+            "score": 0.0,
+            "matches": []
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0633\u0647\u0645 \u0627\u0644\u062a\u062c\u0627\u0631\u064a \u0627\u0644\u062f\u0648\u0644\u064a \u064a\u062a\u0635\u062f\u0631 \u062a\u062f\u0627\u0648\u0644\u0627\u062a \u0627\u0644\u0628\u0648\u0631\u0635\u0629.. \u0645\u0642\u062a\u0646\u0635\u0627\u064b \u0646\u062d\u0648 9% \u0645\u0646 \u0627\u0644\u0633\u064a\u0648\u0644\u0629",
+            "url": "https://www.mubasher.info/news/4673553/%D8%B3%D9%87%D9%85-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A-%D9%8A%D8%AA%D8%B5%D8%AF%D8%B1-%D8%AA%D8%AF%D8%A7%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D8%A8%D9%88%D8%B1%D8%B5%D8%A9-%D9%85%D9%82%D8%AA%D9%86%D8%B5%D8%A7-%D9%86%D8%AD%D9%88-9-%D9%85%D9%86-%D8%A7%D9%84%D8%B3%D9%8A%D9%88%D9%84%D8%A9/",
+            "score": 0.0,
+            "matches": []
+          }
+        ],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    },
+    "EAST": {
+      "headlines": [
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u062a\u0631\u0627\u062c\u0639 \u0623\u0631\u0628\u0627\u062d \"\u0625\u064a\u0633\u062a\u0631\u0646 \u0643\u0648\u0645\u0628\u0627\u0646\u064a\" \u0625\u0644\u0649 4.15 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2026",
+          "url": "https://www.mubasher.info/news/4659855/%D8%AA%D8%B1%D8%A7%D8%AC%D8%B9-%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A5%D9%8A%D8%B3%D8%AA%D8%B1%D9%86-%D9%83%D9%88%D9%85%D8%A8%D8%A7%D9%86%D9%8A-%D8%A5%D9%84%D9%89-4-15-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AC%D9%86%D9%8A%D9%87-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-2026/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0623\u0631\u0628\u0627\u062d \u0627\u0644\u0634\u0631\u0642\u064a\u0629 - \u0625\u064a\u0633\u062a\u0631\u0646 \u0643\u0648\u0645\u0628\u0627\u0646\u064a \u062a\u0631\u062a\u0641\u0639 12.4% \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2025-2026",
+          "url": "https://www.mubasher.info/news/4653488/%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A7%D9%84%D8%B4%D8%B1%D9%82%D9%8A%D8%A9-%D8%A5%D9%8A%D8%B3%D8%AA%D8%B1%D9%86-%D9%83%D9%88%D9%85%D8%A8%D8%A7%D9%86%D9%8A-%D8%AA%D8%B1%D8%AA%D9%81%D8%B9-12-4-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-2025-2026/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\"\u0625\u064a\u0633\u062a\u0631\u0646 \u0643\u0648\u0645\u0628\u0627\u0646\u064a\" \u062a\u0635\u062f\u0631 \u062a\u0648\u0636\u064a\u062d\u0627\u064b \u0628\u0634\u0623\u0646 \u0645\u0632\u0627\u064a\u062f\u0627\u062a \u0628\u064a\u0639 \u0623\u0635\u0648\u0644\u0647\u0627 \u063a\u064a\u0631 \u0627\u0644\u0645\u0633\u062a\u063a\u0644\u0629",
+          "url": "https://www.mubasher.info/news/4646512/-%D8%A5%D9%8A%D8%B3%D8%AA%D8%B1%D9%86-%D9%83%D9%88%D9%85%D8%A8%D8%A7%D9%86%D9%8A-%D8%AA%D8%B5%D8%AF%D8%B1-%D8%AA%D9%88%D8%B6%D9%8A%D8%AD%D8%A7-%D8%A8%D8%B4%D8%A3%D9%86-%D9%85%D8%B2%D8%A7%D9%8A%D8%AF%D8%A7%D8%AA-%D8%A8%D9%8A%D8%B9-%D8%A3%D8%B5%D9%88%D9%84%D9%87%D8%A7-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%BA%D9%84%D8%A9/",
+          "summary": null,
+          "lang": "ar"
+        }
+      ],
+      "sentiment": {
+        "ticker": "EAST",
+        "as_of": "2026-10-22T13:19:40.538346Z",
+        "lang_requested": "both",
+        "headline_count": 3,
+        "scored_count": 1,
+        "coverage_pct": 33.3,
+        "aggregate_score": 1.0,
+        "label": "bullish",
+        "bull_signals": [
+          "\u0623\u0631\u0628\u0627\u062d \u0627\u0644\u0634\u0631\u0642\u064a\u0629 - \u0625\u064a\u0633\u062a\u0631\u0646 \u0643\u0648\u0645\u0628\u0627\u0646\u064a \u062a\u0631\u062a\u0641\u0639 12.4% \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2025-2026"
+        ],
+        "bear_signals": [],
+        "headlines": [
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u062a\u0631\u0627\u062c\u0639 \u0623\u0631\u0628\u0627\u062d \"\u0625\u064a\u0633\u062a\u0631\u0646 \u0643\u0648\u0645\u0628\u0627\u0646\u064a\" \u0625\u0644\u0649 4.15 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647 \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2026",
+            "url": "https://www.mubasher.info/news/4659855/%D8%AA%D8%B1%D8%A7%D8%AC%D8%B9-%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A5%D9%8A%D8%B3%D8%AA%D8%B1%D9%86-%D9%83%D9%88%D9%85%D8%A8%D8%A7%D9%86%D9%8A-%D8%A5%D9%84%D9%89-4-15-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AC%D9%86%D9%8A%D9%87-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-2026/",
+            "score": 0.0,
+            "matches": [
+              "-\u062a\u0631\u0627\u062c\u0639",
+              "+\u0623\u0631\u0628\u0627\u062d"
+            ]
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0623\u0631\u0628\u0627\u062d \u0627\u0644\u0634\u0631\u0642\u064a\u0629 - \u0625\u064a\u0633\u062a\u0631\u0646 \u0643\u0648\u0645\u0628\u0627\u0646\u064a \u062a\u0631\u062a\u0641\u0639 12.4% \u062e\u0644\u0627\u0644 \u0627\u0644\u0646\u0635\u0641 \u0627\u0644\u0623\u0648\u0644 \u0645\u0646 2025-2026",
+            "url": "https://www.mubasher.info/news/4653488/%D8%A3%D8%B1%D8%A8%D8%A7%D8%AD-%D8%A7%D9%84%D8%B4%D8%B1%D9%82%D9%8A%D8%A9-%D8%A5%D9%8A%D8%B3%D8%AA%D8%B1%D9%86-%D9%83%D9%88%D9%85%D8%A8%D8%A7%D9%86%D9%8A-%D8%AA%D8%B1%D8%AA%D9%81%D8%B9-12-4-%D8%AE%D9%84%D8%A7%D9%84-%D8%A7%D9%84%D9%86%D8%B5%D9%81-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D9%86-2025-2026/",
+            "score": 1.0,
+            "matches": [
+              "+\u0623\u0631\u0628\u0627\u062d",
+              "+\u062a\u0631\u062a\u0641\u0639"
+            ]
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\"\u0625\u064a\u0633\u062a\u0631\u0646 \u0643\u0648\u0645\u0628\u0627\u0646\u064a\" \u062a\u0635\u062f\u0631 \u062a\u0648\u0636\u064a\u062d\u0627\u064b \u0628\u0634\u0623\u0646 \u0645\u0632\u0627\u064a\u062f\u0627\u062a \u0628\u064a\u0639 \u0623\u0635\u0648\u0644\u0647\u0627 \u063a\u064a\u0631 \u0627\u0644\u0645\u0633\u062a\u063a\u0644\u0629",
+            "url": "https://www.mubasher.info/news/4646512/-%D8%A5%D9%8A%D8%B3%D8%AA%D8%B1%D9%86-%D9%83%D9%88%D9%85%D8%A8%D8%A7%D9%86%D9%8A-%D8%AA%D8%B5%D8%AF%D8%B1-%D8%AA%D9%88%D8%B6%D9%8A%D8%AD%D8%A7-%D8%A8%D8%B4%D8%A3%D9%86-%D9%85%D8%B2%D8%A7%D9%8A%D8%AF%D8%A7%D8%AA-%D8%A8%D9%8A%D8%B9-%D8%A3%D8%B5%D9%88%D9%84%D9%87%D8%A7-%D8%BA%D9%8A%D8%B1-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%BA%D9%84%D8%A9/",
+            "score": 0.0,
+            "matches": []
+          }
+        ],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    },
+    "TMGH": {
+      "headlines": [
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0634\u0631\u0627\u0643\u0629 \u0637\u0644\u0639\u062a \u0645\u0635\u0637\u0641\u0649 \u0648\u0627\u0644\u062d\u0643\u0648\u0645\u0629 \u0627\u0644\u0645\u0635\u0631\u064a\u0629.. \u0643\u064a\u0641 \u062a\u0646\u0639\u0643\u0633 \u0639\u0644\u0649 \u0627\u0644\u0628\u0648\u0631\u0635\u0629 \u0648\u0627\u0644\u0627\u0642\u062a\u0635\u0627\u062f\u061f",
+          "url": "https://www.mubasher.info/news/4688264/%D8%B4%D8%B1%D8%A7%D9%83%D8%A9-%D8%B7%D9%84%D8%B9%D8%AA-%D9%85%D8%B5%D8%B7%D9%81%D9%89-%D9%88%D8%A7%D9%84%D8%AD%D9%83%D9%88%D9%85%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D9%83%D9%8A%D9%81-%D8%AA%D9%86%D8%B9%D9%83%D8%B3-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%A8%D9%88%D8%B1%D8%B5%D8%A9-%D9%88%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF-/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0628\u0633\u064a\u0648\u0644\u0629 \u0646\u0635\u0641 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647.. \u0643\u064a\u0641 \u062a\u0641\u0627\u0639\u0644 \u0633\u0647\u0645 \u0637\u0644\u0639\u062a \u0645\u0635\u0637\u0641\u0649 \u0645\u0639 \u062a\u0648\u0642\u064a\u0639 4 \u0645\u0634\u0631\u0648\u0639\u0627\u062a\u061f",
+          "url": "https://www.mubasher.info/news/4688171/%D8%A8%D8%B3%D9%8A%D9%88%D9%84%D8%A9-%D9%86%D8%B5%D9%81-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AC%D9%86%D9%8A%D9%87-%D9%83%D9%8A%D9%81-%D8%AA%D9%81%D8%A7%D8%B9%D9%84-%D8%B3%D9%87%D9%85-%D8%B7%D9%84%D8%B9%D8%AA-%D9%85%D8%B5%D8%B7%D9%81%D9%89-%D9%85%D8%B9-%D8%AA%D9%88%D9%82%D9%8A%D8%B9-4-%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA-/",
+          "summary": null,
+          "lang": "ar"
+        },
+        {
+          "date": null,
+          "source": "Mubasher",
+          "title": "\u0645\u0635\u0631 \u062a\u0633\u062a\u0647\u062f\u0641 2.4 \u062a\u0631\u064a\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647 \u062d\u0635\u064a\u0644\u0629 \u0636\u0631\u064a\u0628\u064a\u0629 \u0645\u0646 4 \u0645\u0634\u0631\u0648\u0639\u0627\u062a \u0644\u0645\u062c\u0645\u0648\u0639\u0629 \u0637\u0644\u0639\u062a \u0645\u0635\u0637\u0641\u0649",
+          "url": "https://www.mubasher.info/news/4687894/%D9%85%D8%B5%D8%B1-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-2-4-%D8%AA%D8%B1%D9%8A%D9%84%D9%8A%D9%88%D9%86-%D8%AC%D9%86%D9%8A%D9%87-%D8%AD%D8%B5%D9%8A%D9%84%D8%A9-%D8%B6%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9-%D9%85%D9%86-4-%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA-%D9%84%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D8%B7%D9%84%D8%B9%D8%AA-%D9%85%D8%B5%D8%B7%D9%81%D9%89/",
+          "summary": null,
+          "lang": "ar"
+        }
+      ],
+      "sentiment": {
+        "ticker": "TMGH",
+        "as_of": "2026-10-22T13:19:42.283121Z",
+        "lang_requested": "both",
+        "headline_count": 3,
+        "scored_count": 1,
+        "coverage_pct": 33.3,
+        "aggregate_score": 1.0,
+        "label": "bullish",
+        "bull_signals": [
+          "\u0634\u0631\u0627\u0643\u0629 \u0637\u0644\u0639\u062a \u0645\u0635\u0637\u0641\u0649 \u0648\u0627\u0644\u062d\u0643\u0648\u0645\u0629 \u0627\u0644\u0645\u0635\u0631\u064a\u0629.. \u0643\u064a\u0641 \u062a\u0646\u0639\u0643\u0633 \u0639\u0644\u0649 \u0627\u0644\u0628\u0648\u0631\u0635\u0629 \u0648\u0627\u0644\u0627\u0642\u062a\u0635\u0627\u062f\u061f"
+        ],
+        "bear_signals": [],
+        "headlines": [
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0634\u0631\u0627\u0643\u0629 \u0637\u0644\u0639\u062a \u0645\u0635\u0637\u0641\u0649 \u0648\u0627\u0644\u062d\u0643\u0648\u0645\u0629 \u0627\u0644\u0645\u0635\u0631\u064a\u0629.. \u0643\u064a\u0641 \u062a\u0646\u0639\u0643\u0633 \u0639\u0644\u0649 \u0627\u0644\u0628\u0648\u0631\u0635\u0629 \u0648\u0627\u0644\u0627\u0642\u062a\u0635\u0627\u062f\u061f",
+            "url": "https://www.mubasher.info/news/4688264/%D8%B4%D8%B1%D8%A7%D9%83%D8%A9-%D8%B7%D9%84%D8%B9%D8%AA-%D9%85%D8%B5%D8%B7%D9%81%D9%89-%D9%88%D8%A7%D9%84%D8%AD%D9%83%D9%88%D9%85%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D9%83%D9%8A%D9%81-%D8%AA%D9%86%D8%B9%D9%83%D8%B3-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%A8%D9%88%D8%B1%D8%B5%D8%A9-%D9%88%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF-/",
+            "score": 1.0,
+            "matches": [
+              "+\u0634\u0631\u0627\u0643\u0629"
+            ]
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0628\u0633\u064a\u0648\u0644\u0629 \u0646\u0635\u0641 \u0645\u0644\u064a\u0627\u0631 \u062c\u0646\u064a\u0647.. \u0643\u064a\u0641 \u062a\u0641\u0627\u0639\u0644 \u0633\u0647\u0645 \u0637\u0644\u0639\u062a \u0645\u0635\u0637\u0641\u0649 \u0645\u0639 \u062a\u0648\u0642\u064a\u0639 4 \u0645\u0634\u0631\u0648\u0639\u0627\u062a\u061f",
+            "url": "https://www.mubasher.info/news/4688171/%D8%A8%D8%B3%D9%8A%D9%88%D9%84%D8%A9-%D9%86%D8%B5%D9%81-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AC%D9%86%D9%8A%D9%87-%D9%83%D9%8A%D9%81-%D8%AA%D9%81%D8%A7%D8%B9%D9%84-%D8%B3%D9%87%D9%85-%D8%B7%D9%84%D8%B9%D8%AA-%D9%85%D8%B5%D8%B7%D9%81%D9%89-%D9%85%D8%B9-%D8%AA%D9%88%D9%82%D9%8A%D8%B9-4-%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA-/",
+            "score": 0.0,
+            "matches": []
+          },
+          {
+            "lang": "ar",
+            "date": null,
+            "source": "Mubasher",
+            "title": "\u0645\u0635\u0631 \u062a\u0633\u062a\u0647\u062f\u0641 2.4 \u062a\u0631\u064a\u0644\u064a\u0648\u0646 \u062c\u0646\u064a\u0647 \u062d\u0635\u064a\u0644\u0629 \u0636\u0631\u064a\u0628\u064a\u0629 \u0645\u0646 4 \u0645\u0634\u0631\u0648\u0639\u0627\u062a \u0644\u0645\u062c\u0645\u0648\u0639\u0629 \u0637\u0644\u0639\u062a \u0645\u0635\u0637\u0641\u0649",
+            "url": "https://www.mubasher.info/news/4687894/%D9%85%D8%B5%D8%B1-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-2-4-%D8%AA%D8%B1%D9%8A%D9%84%D9%8A%D9%88%D9%86-%D8%AC%D9%86%D9%8A%D9%87-%D8%AD%D8%B5%D9%8A%D9%84%D8%A9-%D8%B6%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9-%D9%85%D9%86-4-%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D8%A7%D8%AA-%D9%84%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D8%B7%D9%84%D8%B9%D8%AA-%D9%85%D8%B5%D8%B7%D9%81%D9%89/",
+            "score": 0.0,
+            "matches": []
+          }
+        ],
+        "backend": {
+          "en": "lexicon",
+          "ar": "lexicon"
+        },
+        "method": "Backend per language: {'en': 'lexicon', 'ar': 'lexicon'}. Per-headline score in [-1, +1]. Aggregate is mean over non-zero headlines. Coverage = share of headlines with tonal content. Lexicon is directionally right; transformer (FinBERT EN / CAMeLBERT-DA AR) is headline-accurate at the cost of model load + inference.",
+        "disclaimer": "Tone reading only. Does not predict price. Combine with fundamentals + technicals before acting."
+      }
+    }
+  },
+  "market_news": {
+    "headlines": [
+      {
+        "date": null,
+        "source": "Daily News Egypt",
+        "title": "Egypt plans major housing programme covering rental, middle-income units: Madbouly",
+        "url": "https://www.dailynewsegypt.com/2026/10/21/egypt-plans-major-housing-programme-covering-rental-middle-income-units-madbouly/",
+        "summary": null,
+        "lang": "en",
+        "matched_tickers": [],
+        "matched_sectors": [
+          "Real Estate"
+        ],
+        "impact_level": "sector"
+      },
+      {
+        "date": null,
+        "source": "Daily News Egypt",
+        "title": "CBE trains COMESA central banks on climate risk stress testing",
+        "url": "https://www.dailynewsegypt.com/2026/10/21/cbe-trains-comesa-central-banks-on-climate-risk-stress-testing/",
+        "summary": null,
+        "lang": "en",
+        "matched_tickers": [],
+        "matched_sectors": [
+          "Banks"
+        ],
+        "impact_level": "sector"
+      }
+    ],
+    "raw_headline_count": 23,
+    "filtered_headline_count": 2,
+    "filter_basis": "watchlist",
+    "filter_target_tickers": [
+      "ABUK",
+      "INFI",
+      "COMI",
+      "EAST",
+      "TMGH"
+    ],
+    "sentiment": {
+      "label": "bearish",
+      "aggregate_score": -1.0,
+      "headline_count": 2,
+      "method": "lexicon scored over portfolio-filtered headlines"
+    },
+    "filter_method": "Direct ticker-name match wins. Sector keyword match falls back to 'sector' impact level. Macro headlines (CBE, EGP, rates) are not included by default \u2014 they affect everyone."
+  },
+  "trade_plan_params": {
+    "portfolio_nav_egp": 500000.0,
+    "risk_pct_per_trade": 1.0,
+    "atr_stop_multiple": 2.0,
+    "expected_hold_days": 5
+  },
+  "catalysts": [],
+  "portfolio": {
+    "error": "Portfolio CSV not found at /home/runner/egx_portfolio.csv.",
+    "hint": "Create a CSV with columns ticker,shares,cost_basis at /home/runner/egx_portfolio.csv, set $EGX_PORTFOLIO_CSV, or pass csv_path explicitly. Example row: CIRA,500,12.50"
+  },
+  "market_ytd_pct": 41.63117053975928,
+  "market_label": "Market YTD (13-name liquid basket EW): +41.63%"
+}
