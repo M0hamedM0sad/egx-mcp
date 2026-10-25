@@ -1,0 +1,97 @@
+=== EGX PRE-MARKET BRIEFING — Sunday 2026-10-25 14:12 ===
+
+--- MACRO ---
+  EGX 30:  51,052 pts (—)
+  USD/EGP: 55.25 (—)
+  Brent:   $111.70 (-1.66%)
+  Gold 24K: 7,119.35 EGP/g  |  21K: 6,229.43  |  18K: 5,339.51
+  Egyptian gold pound: 49,835 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- MARKET STANCE: SELECTIVE ---
+  Range-bound — no broad tailwind. Only high-conviction names, tight stops, 21-session holds.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 105) ---
+  1. ABUK   score=13.42  price=58.32  5d=+6.0% RSI=58  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ABUK/
+  2. TMGH   score=8.6  price=58.0  5d=+2.6% RSI=48  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-TMGH/
+  3. EAST   score=8.24  price=21.8  5d=+4.0% RSI=57  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EAST/
+  4. ICFC   score=6.62  price=29.47  5d=+2.8% RSI=53  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ICFC/
+  5. NAHO   score=6.13  price=0.13  5d=+2.3% RSI=50  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-NAHO/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  ABUK: ENTRY 58.61 | STOP 50.48 | SCALE-OUT 66.16 (318 sh) | TARGET 70.08 (319 sh) | 637 total (7.43% NAV) | R:R 1:1.5 | time stop 2026-11-01
+  TMGH: ENTRY 58.29 | STOP 51.94 | SCALE-OUT 64.06 (412 sh) | TARGET 67.09 (413 sh) | 825 total (9.57% NAV) | R:R 1:1.5 | time stop 2026-11-01
+  EAST: ENTRY 21.91 | STOP 19.61 | SCALE-OUT 23.99 (1139 sh) | TARGET 25.09 (1139 sh) | 2278 total (9.93% NAV) | R:R 1:1.5 | time stop 2026-11-01
+  ICFC: ENTRY 29.62 | STOP 27.3 | SCALE-OUT 31.64 (848 sh) | TARGET 32.73 (848 sh) | 1696 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-11-01
+  NAHO: ENTRY 0.13 | STOP 0.13 | SCALE-OUT 0.13 (192307 sh) | TARGET 0.14 (192308 sh) | 18187 total (0.47% NAV) | R:R 1:1.5 | time stop 2026-11-01
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  ABUK   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  TMGH   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  EAST   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  ICFC   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  NAHO   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bearish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    ABUK: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    TMGH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    EAST: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+    ICFC: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    NAHO: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  ABUK:
+    Technicals:    RSI 58 — healthy uptrend; MACD bullish (+0.608); MA50 > MA200 — golden-cross regime; ATR 3.92 (4.2% of px) — sizing input
+    Fundamentals:  P/E 14.1 — fair; P/B 3.08; ROE 21.9% — strong; Margin 34.8%; Yield 6.8%
+    News tone:     bullish (+1.00, 3 hdl)
+      - "فوتسي راسل" تعدل مكونات مؤشرات الأسهم المصرية.. مع خروج 6 شركات [Mubasher]
+      - أبوقير للأسمدة تعلن اكتمال مشروع تطوير مفاعل الأمونيا وزيادة الطاقة الإنتاجية [Mubasher]
+  TMGH:
+    Technicals:    RSI 48 — soft / mean-revert zone; MACD bullish (+0.472); MA50 > MA200 — golden-cross regime; ATR 3.03 (3.5% of px) — sizing input
+    Fundamentals:  P/E 7.2 — cheap; P/B 1.25; ROE 17.4% — adequate; Margin 21.1%; D/E 0.80; Yield 0.3%
+    News tone:     bullish (+1.00, 3 hdl)
+      - شراكة طلعت مصطفى والحكومة المصرية.. كيف تنعكس على البورصة والاقتصاد؟ [Mubasher]
+      - بسيولة نصف مليار جنيه.. كيف تفاعل سهم طلعت مصطفى مع توقيع 4 مشروعات؟ [Mubasher]
+  EAST:
+    Technicals:    RSI 57 — healthy uptrend; MACD bullish (+0.429); MA50 < MA200 — death-cross regime; ATR 1.10 (3.6% of px) — sizing input
+    Fundamentals:  P/E 10.1 — fair; P/B 4.67; ROE 46.5% — strong; Margin 23.2%; Yield 3.9%
+    News tone:     bullish (+1.00, 3 hdl)
+      - تراجع أرباح "إيسترن كومباني" إلى 4.15 مليار جنيه خلال النصف الأول من 2026 [Mubasher]
+      - أرباح الشرقية - إيسترن كومباني ترتفع 12.4% خلال النصف الأول من 2025-2026 [Mubasher]
+  ICFC:
+    Technicals:    RSI 53 — healthy uptrend; MACD bearish (-0.043); MA50 > MA200 — golden-cross regime; ATR 1.09 (4.8% of px) — sizing input
+    Fundamentals:  P/E 11.2 — fair; P/B 2.72; ROE 24.3% — strong; Margin 5.8%
+    News tone:     bullish (+1.00, 3 hdl)
+      - الصناعة: 9.4 مليار دولار صادرات مصر من الصناعات الكيماوية والأسمدة في 2025 [Mubasher]
+      - أرباح "الدولية للأسمدة" ترتفع إلى 76.9 مليون جنيه في الربع الأول [Mubasher]
+  NAHO:
+    Technicals:    RSI 50 — healthy uptrend; MACD bearish (-0.000); MA50 > MA200 — golden-cross regime; ATR 0.00 (1.7% of px) — sizing input
+    Fundamentals:  P/E 1.0 — cheap; P/B 0.48; ROE 46.8% — strong
+    News tone:     bearish (-1.00, 3 hdl)
+      - مساهم يخفض حصته في "النعيم العقارية" ببيع 5 ملايين سهم بقيمة 85 مليون جنيه [Mubasher]
+      - خسائر النعيم القابضة تتراجع 75.6% في النصف الأول من 2026 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: ABUK, TMGH, EAST, ICFC, NAHO
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
