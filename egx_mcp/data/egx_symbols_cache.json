@@ -1,17 +1,17 @@
 {
-  "validated_at": 1792318876.9695842,
+  "validated_at": 1792924811.094529,
   "count": 68,
   "validated": [
     {
       "ticker": "COMI",
       "yahoo_symbol": "COMI.CA",
-      "last_close": 125.0,
+      "last_close": 125.15,
       "bars_6mo": 120
     },
     {
       "ticker": "HDBK",
       "yahoo_symbol": "HDBK.CA",
-      "last_close": 101.91,
+      "last_close": 94.01,
       "bars_6mo": 120
     },
     {
@@ -23,163 +23,163 @@
     {
       "ticker": "ADIB",
       "yahoo_symbol": "ADIB.CA",
-      "last_close": 47.02,
+      "last_close": 45.0,
       "bars_6mo": 120
     },
     {
       "ticker": "FAIT",
       "yahoo_symbol": "FAIT.CA",
-      "last_close": 43.53,
+      "last_close": 43.31,
       "bars_6mo": 120
     },
     {
       "ticker": "HRHO",
       "yahoo_symbol": "HRHO.CA",
-      "last_close": 25.79,
+      "last_close": 24.5,
       "bars_6mo": 120
     },
     {
       "ticker": "EFIH",
       "yahoo_symbol": "EFIH.CA",
-      "last_close": 24.34,
+      "last_close": 21.0,
       "bars_6mo": 120
     },
     {
       "ticker": "CIRA",
       "yahoo_symbol": "CIRA.CA",
-      "last_close": 37.77,
+      "last_close": 35.86,
       "bars_6mo": 120
     },
     {
       "ticker": "TMGH",
       "yahoo_symbol": "TMGH.CA",
-      "last_close": 84.75,
+      "last_close": 87.0,
       "bars_6mo": 120
     },
     {
       "ticker": "PHDC",
       "yahoo_symbol": "PHDC.CA",
-      "last_close": 12.83,
+      "last_close": 12.4,
       "bars_6mo": 120
     },
     {
       "ticker": "ORHD",
       "yahoo_symbol": "ORHD.CA",
-      "last_close": 10.71,
+      "last_close": 9.8,
       "bars_6mo": 120
     },
     {
       "ticker": "EMFD",
       "yahoo_symbol": "EMFD.CA",
-      "last_close": 12.09,
+      "last_close": 11.51,
       "bars_6mo": 120
     },
     {
       "ticker": "OCDI",
       "yahoo_symbol": "OCDI.CA",
-      "last_close": 25.9,
+      "last_close": 24.53,
       "bars_6mo": 120
     },
     {
       "ticker": "HELI",
       "yahoo_symbol": "HELI.CA",
-      "last_close": 7.31,
+      "last_close": 6.75,
       "bars_6mo": 120
     },
     {
       "ticker": "SWDY",
       "yahoo_symbol": "SWDY.CA",
-      "last_close": 113.08,
+      "last_close": 106.94,
       "bars_6mo": 120
     },
     {
       "ticker": "ORWE",
       "yahoo_symbol": "ORWE.CA",
-      "last_close": 27.71,
+      "last_close": 25.15,
       "bars_6mo": 120
     },
     {
       "ticker": "ABUK",
       "yahoo_symbol": "ABUK.CA",
-      "last_close": 87.68,
+      "last_close": 92.9,
       "bars_6mo": 120
     },
     {
       "ticker": "MFPC",
       "yahoo_symbol": "MFPC.CA",
-      "last_close": 43.91,
+      "last_close": 45.31,
       "bars_6mo": 120
     },
     {
       "ticker": "EFID",
       "yahoo_symbol": "EFID.CA",
-      "last_close": 18.86,
+      "last_close": 18.2,
       "bars_6mo": 120
     },
     {
       "ticker": "JUFO",
       "yahoo_symbol": "JUFO.CA",
-      "last_close": 24.43,
+      "last_close": 23.45,
       "bars_6mo": 120
     },
     {
       "ticker": "DOMT",
       "yahoo_symbol": "DOMT.CA",
-      "last_close": 23.47,
+      "last_close": 22.78,
       "bars_6mo": 120
     },
     {
       "ticker": "CCAP",
       "yahoo_symbol": "CCAP.CA",
-      "last_close": 6.06,
+      "last_close": 6.33,
       "bars_6mo": 120
     },
     {
       "ticker": "ETEL",
       "yahoo_symbol": "ETEL.CA",
-      "last_close": 145.4,
+      "last_close": 133.9,
       "bars_6mo": 120
     },
     {
       "ticker": "EAST",
       "yahoo_symbol": "EAST.CA",
-      "last_close": 29.3,
+      "last_close": 30.48,
       "bars_6mo": 120
     },
     {
       "ticker": "CLHO",
       "yahoo_symbol": "CLHO.CA",
-      "last_close": 14.03,
+      "last_close": 13.5,
       "bars_6mo": 120
     },
     {
       "ticker": "PHAR",
       "yahoo_symbol": "PHAR.CA",
-      "last_close": 107.6,
+      "last_close": 101.9,
       "bars_6mo": 120
     },
     {
       "ticker": "EGTS",
       "yahoo_symbol": "EGTS.CA",
-      "last_close": 14.02,
+      "last_close": 12.58,
       "bars_6mo": 120
     },
     {
       "ticker": "FWRY",
       "yahoo_symbol": "FWRY.CA",
-      "last_close": 18.79,
+      "last_close": 17.8,
       "bars_6mo": 120
     },
     {
       "ticker": "MTIE",
       "yahoo_symbol": "MTIE.CA",
-      "last_close": 7.66,
+      "last_close": 7.31,
       "bars_6mo": 120
     },
     {
       "ticker": "BTFH",
       "yahoo_symbol": "BTFH.CA",
-      "last_close": 2.75,
+      "last_close": 2.55,
       "bars_6mo": 120
     },
     {
@@ -191,55 +191,55 @@
     {
       "ticker": "SAUD",
       "yahoo_symbol": "SAUD.CA",
-      "last_close": 22.0,
+      "last_close": 20.82,
       "bars_6mo": 120
     },
     {
       "ticker": "AMER",
       "yahoo_symbol": "AMER.CA",
-      "last_close": 4.61,
+      "last_close": 4.07,
       "bars_6mo": 120
     },
     {
       "ticker": "OBRI",
       "yahoo_symbol": "OBRI.CA",
-      "last_close": 27.05,
+      "last_close": 24.57,
       "bars_6mo": 120
     },
     {
       "ticker": "UEGC",
       "yahoo_symbol": "UEGC.CA",
-      "last_close": 1.67,
+      "last_close": 1.44,
       "bars_6mo": 120
     },
     {
       "ticker": "RREI",
       "yahoo_symbol": "RREI.CA",
-      "last_close": 3.6,
+      "last_close": 3.02,
       "bars_6mo": 120
     },
     {
       "ticker": "ROTO",
       "yahoo_symbol": "ROTO.CA",
-      "last_close": 37.63,
+      "last_close": 31.2,
       "bars_6mo": 120
     },
     {
       "ticker": "MASR",
       "yahoo_symbol": "MASR.CA",
-      "last_close": 7.46,
+      "last_close": 6.67,
       "bars_6mo": 120
     },
     {
       "ticker": "ZMID",
       "yahoo_symbol": "ZMID.CA",
-      "last_close": 7.2,
+      "last_close": 6.77,
       "bars_6mo": 120
     },
     {
       "ticker": "ARCC",
       "yahoo_symbol": "ARCC.CA",
-      "last_close": 66.92,
+      "last_close": 65.11,
       "bars_6mo": 120
     },
     {
@@ -251,37 +251,37 @@
     {
       "ticker": "SCEM",
       "yahoo_symbol": "SCEM.CA",
-      "last_close": 89.99,
+      "last_close": 84.52,
       "bars_6mo": 120
     },
     {
       "ticker": "MICH",
       "yahoo_symbol": "MICH.CA",
-      "last_close": 41.34,
+      "last_close": 41.27,
       "bars_6mo": 120
     },
     {
       "ticker": "IRON",
       "yahoo_symbol": "IRON.CA",
-      "last_close": 26.42,
+      "last_close": 25.86,
       "bars_6mo": 120
     },
     {
       "ticker": "CERA",
       "yahoo_symbol": "CERA.CA",
-      "last_close": 1.27,
+      "last_close": 1.14,
       "bars_6mo": 120
     },
     {
       "ticker": "LCSW",
       "yahoo_symbol": "LCSW.CA",
-      "last_close": 34.0,
+      "last_close": 33.5,
       "bars_6mo": 120
     },
     {
       "ticker": "OFH",
       "yahoo_symbol": "OFH.CA",
-      "last_close": 0.804,
+      "last_close": 0.72,
       "bars_6mo": 120
     },
     {
@@ -293,121 +293,121 @@
     {
       "ticker": "ELEC",
       "yahoo_symbol": "ELEC.CA",
-      "last_close": 1.73,
+      "last_close": 1.62,
       "bars_6mo": 120
     },
     {
       "ticker": "DSCW",
       "yahoo_symbol": "DSCW.CA",
-      "last_close": 1.62,
+      "last_close": 1.49,
       "bars_6mo": 120
     },
     {
       "ticker": "POUL",
       "yahoo_symbol": "POUL.CA",
-      "last_close": 9.94,
+      "last_close": 9.66,
       "bars_6mo": 120
     },
     {
       "ticker": "GBCO",
       "yahoo_symbol": "GBCO.CA",
-      "last_close": 30.8,
+      "last_close": 24.6,
       "bars_6mo": 120
     },
     {
       "ticker": "RAYA",
       "yahoo_symbol": "RAYA.CA",
-      "last_close": 5.97,
+      "last_close": 5.62,
       "bars_6mo": 120
     },
     {
       "ticker": "AMOC",
       "yahoo_symbol": "AMOC.CA",
-      "last_close": 13.48,
+      "last_close": 13.51,
       "bars_6mo": 120
     },
     {
       "ticker": "SKPC",
       "yahoo_symbol": "SKPC.CA",
-      "last_close": 15.26,
+      "last_close": 14.82,
       "bars_6mo": 120
     },
     {
       "ticker": "EFIC",
       "yahoo_symbol": "EFIC.CA",
-      "last_close": 154.0,
+      "last_close": 149.23,
       "bars_6mo": 120
     },
     {
       "ticker": "OLFI",
       "yahoo_symbol": "OLFI.CA",
-      "last_close": 20.77,
+      "last_close": 19.76,
       "bars_6mo": 120
     },
     {
       "ticker": "ASCM",
       "yahoo_symbol": "ASCM.CA",
-      "last_close": 50.59,
+      "last_close": 46.6,
       "bars_6mo": 120
     },
     {
       "ticker": "MOIL",
       "yahoo_symbol": "MOIL.CA",
-      "last_close": 0.677,
+      "last_close": 0.662,
       "bars_6mo": 120
     },
     {
       "ticker": "SUGR",
       "yahoo_symbol": "SUGR.CA",
-      "last_close": 58.5,
+      "last_close": 55.0,
       "bars_6mo": 120
     },
     {
       "ticker": "EGCH",
       "yahoo_symbol": "EGCH.CA",
-      "last_close": 12.05,
+      "last_close": 11.3,
       "bars_6mo": 120
     },
     {
       "ticker": "BIOC",
       "yahoo_symbol": "BIOC.CA",
-      "last_close": 295.5,
+      "last_close": 260.03,
       "bars_6mo": 120
     },
     {
       "ticker": "ACGC",
       "yahoo_symbol": "ACGC.CA",
-      "last_close": 13.5,
+      "last_close": 13.0,
       "bars_6mo": 120
     },
     {
       "ticker": "ALCN",
       "yahoo_symbol": "ALCN.CA",
-      "last_close": 33.77,
+      "last_close": 32.77,
       "bars_6mo": 120
     },
     {
       "ticker": "CSAG",
       "yahoo_symbol": "CSAG.CA",
-      "last_close": 36.17,
+      "last_close": 34.79,
       "bars_6mo": 120
     },
     {
       "ticker": "BINV",
       "yahoo_symbol": "BINV.CA",
-      "last_close": 58.89,
+      "last_close": 57.24,
       "bars_6mo": 120
     },
     {
       "ticker": "ETRS",
       "yahoo_symbol": "ETRS.CA",
-      "last_close": 10.61,
+      "last_close": 10.33,
       "bars_6mo": 120
     },
     {
       "ticker": "EXPA",
       "yahoo_symbol": "EXPA.CA",
-      "last_close": 14.53,
+      "last_close": 14.38,
       "bars_6mo": 120
     }
   ],
