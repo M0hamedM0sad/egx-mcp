@@ -1,0 +1,92 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-10-27 14:51 ===
+
+--- MACRO ---
+  EGX 30:  48,966 pts (—)
+  USD/EGP: 56.05 (-0.30%)
+  Brent:   $110.30 (+0.54%)
+  Gold 24K: 7,275.77 EGP/g  |  21K: 6,366.30  |  18K: 5,456.83
+  Egyptian gold pound: 50,930 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BEAR — Index falling or in 15%+ drawdown — quality and value defensible, fade momentum.
+
+--- MARKET STANCE: DEFENSIVE ---
+  Bear regime — cut gross exposure; T-bills compete hard. Buy-side picks need exceptional justification.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 132) ---
+  1. EAST   score=9.32  price=30.03  5d=+4.3% RSI=57  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EAST/
+  2. EOSB   score=7.74  price=1.61  5d=+2.5% RSI=70  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EOSB/
+  3. ABUK   score=4.55  price=88.63  5d=+0.7% RSI=52  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ABUK/
+  4. CPCI   score=0.32  price=589.94  5d=+2.8% RSI=44  trend=v
+     chart: https://www.tradingview.com/symbols/EGX-CPCI/
+  5. CANA   score=-1.06  price=41.0  5d=+2.2% RSI=37  trend=v
+     chart: https://www.tradingview.com/symbols/EGX-CANA/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  EAST: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EOSB: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  ABUK: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  CPCI: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  CANA: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  EAST   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: neutral
+  EOSB   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  ABUK   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CPCI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CANA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    EAST: V8b says HOLD but chairman says REDUCE — Bear case has the edge on monthly view — informational only. Does not override W1 short-horizon entr
+    EOSB: V8b says ABSTAIN but chairman says HOLD — Bull and bear cases are roughly balanced.
+    CPCI: V8b says ABSTAIN but chairman says HOLD — Bull and bear cases are roughly balanced.
+    CANA: V8b says ABSTAIN but chairman says HOLD — Bull and bear cases are roughly balanced.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  EAST:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 10.1 — fair; P/B 4.67; ROE 46.5% — strong; Margin 23.2%; Yield 3.9%
+    News tone:     bullish (+1.00, 3 hdl)
+      - تراجع أرباح "إيسترن كومباني" إلى 4.15 مليار جنيه خلال النصف الأول من 2026 [Mubasher]
+      - أرباح الشرقية - إيسترن كومباني ترتفع 12.4% خلال النصف الأول من 2025-2026 [Mubasher]
+  EOSB:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 14.2 — fair; P/B 5.83; ROE 33.7% — strong; D/E 1.07
+    News tone:     neutral (+0.00, 3 hdl)
+  ABUK:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 14.1 — fair; P/B 3.08; ROE 21.9% — strong; Margin 34.8%; Yield 6.8%
+    News tone:     neutral (+0.00, 0 hdl)
+      - "فوتسي راسل" تعدل مكونات مؤشرات الأسهم المصرية.. مع خروج 6 شركات [Mubasher]
+      - أبوقير للأسمدة تعلن اكتمال مشروع تطوير مفاعل الأمونيا وزيادة الطاقة الإنتاجية [Mubasher]
+  CPCI:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 7.5 — cheap; P/B 3.67; ROE 49.5% — strong; D/E 0.14; Yield 4.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - عمومية "القاهرة للأدوية" تعتمد توزيع كوبون نقدي على المساهمين [Mubasher]
+      - 22 أكتوبر.. مساهمو القاهرة للأدوية يناقشون توزيع الأرباح [Mubasher]
+  CANA:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 3.1 — cheap; P/B 1.31; ROE 29.0% — strong; Margin 41.8%; D/E 1.75 — highly levered
+    News tone:     bullish (+1.00, 3 hdl)
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: EAST, EOSB, ABUK, CPCI, CANA
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
