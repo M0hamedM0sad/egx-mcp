@@ -1,13 +1,13 @@
 Rescraping 249 names ...
 TradingView fill: profit_margin_pct+116, debt_to_equity+156, dividend_yield_pct+0
 {
-  "snapshot_date": "2026-10-27",
+  "snapshot_date": "2026-10-28",
   "appended": 225,
   "unchanged": 17,
   "skipped_empty": 11,
   "tickers_with_history": 243,
   "history_starts": "2026-08-15",
-  "history_rows": 10642
+  "history_rows": 10867
 }
 
 Appended 225 changed row(s) -> /home/runner/work/egx-mcp/egx-mcp/logs/fundamentals_history.jsonl
