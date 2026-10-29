@@ -1,0 +1,97 @@
+=== EGX PRE-MARKET BRIEFING — Thursday 2026-10-29 15:49 ===
+
+--- MACRO ---
+  EGX 30:  49,503 pts (—)
+  USD/EGP: 55.95 (-0.04%)
+  Brent:   $109.13 (-0.98%)
+  Gold 24K: 7,269.63 EGP/g  |  21K: 6,360.93  |  18K: 5,452.22
+  Egyptian gold pound: 50,887 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- MARKET STANCE: SELECTIVE ---
+  Range-bound — no broad tailwind. Only high-conviction names, tight stops, 21-session holds.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 115) ---
+  1. SCTS   score=16.57  price=495.89  5d=+11.9% RSI=42  trend=v
+     chart: https://www.tradingview.com/symbols/EGX-SCTS/
+  2. EAST   score=12.14  price=31.8  5d=+6.0% RSI=71  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EAST/
+  3. EOSB   score=6.82  price=1.61  5d=+2.5% RSI=70  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EOSB/
+  4. SWDY   score=5.33  price=113.0  5d=+2.6% RSI=46  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SWDY/
+  5. FAITA  score=4.52  price=1.0  5d=+1.4% RSI=48  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-FAITA/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  SCTS: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EAST: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EOSB: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  SWDY: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  FAITA: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  SCTS   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  EAST   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  EOSB   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bearish
+  SWDY   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: mildly_bearish
+  FAITA  FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    EAST: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+    EOSB: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    SWDY: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  SCTS:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 17.7 — premium; P/B 9.07; ROE 23.8% — strong; D/E 0.02; Yield 2.2%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح قناة السويس لتوطين التكنولوجيا ترتفع إلى 1.78 مليار جنيه خلال 9 أشهر [Mubasher]
+      - اليوم: نهاية الحق في كوبونات 5 شركات بالبورصة المصرية [Mubasher]
+  EAST:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 17.5 — premium; P/B 8.14; ROE 46.5% — strong; Margin 23.2%; Yield 3.9%
+    News tone:     bullish (+1.00, 3 hdl)
+      - تراجع أرباح "إيسترن كومباني" إلى 4.15 مليار جنيه خلال النصف الأول من 2026 [Mubasher]
+      - أرباح الشرقية - إيسترن كومباني ترتفع 12.4% خلال النصف الأول من 2025-2026 [Mubasher]
+  EOSB:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 14.2 — fair; P/B 5.83; ROE 33.7% — strong; D/E 1.07
+    News tone:     neutral (+0.00, 3 hdl)
+      - العروبة للسمسرة تتحول للربحية خلال 9 أشهر [Mubasher]
+      - العروبة للسمسرة تتحول للربحية خلال النصف الأول من 2025 [Mubasher]
+  SWDY:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 9.9 — fair; P/B 2.63; ROE 26.6% — strong; Margin 5.4%; D/E 1.24; Yield 2.1%
+    News tone:     bearish (-1.00, 3 hdl)
+      - تحالف السويدي إلكتريك يوقع عقداً لتوسعة محطة رابغ 2 في السعودية [Mubasher]
+      - ڤودافون والسويدي وكاساڤا تستثمر مليار دولار بمركزي بيانات وذكاء اصطناعي في مصر [Mubasher]
+  FAITA:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 2.1 — cheap; P/B 0.26; ROE 11.9% — adequate; D/E 0.30; Yield 4.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - اليوم.. نهاية الحق في توزيع كوبون 5 شركات بالبورصة المصرية [Mubasher]
+      - سهم بنك فيصل الإسلامي المصري يختبر حاجزاً نفسياً مهماً [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: SCTS, EAST, EOSB, SWDY, FAITA
+  Filtered: kept 3 of 23 headlines.
+  Tone: neutral (score +0.00)
+  [sector:Industrial Goods] "وول ستريت" تتراجع بضغط نتائج الشركات وخسائر أسهم التكنولوجيا والصناعة — Mubasher
+  [sector:Industrial Goods] Industry minister reviews Arab International Optronics’ manufacturing capabilities — Daily News Egypt
+  [sector:Industrial Goods] "وول ستريت" تتراجع بضغط نتائج الشركات وخسائر أسهم التكنولوجيا والصناعة — Mubasher
+
+Disclaimer: Research only, not investment advice.
