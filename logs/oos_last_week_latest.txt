@@ -23,6 +23,12 @@ $TAQA.CA: possibly delisted; no timezone found
 /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   quotes.sort_index(inplace=True)
+/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:585: Pandas4Warning: The inplace keyword in DataFrame.set_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  dividends.set_index("date", inplace=True)
+/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:587: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  dividends.sort_index(inplace=True)
 /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:514: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   df.drop(
@@ -649,7 +655,7 @@ See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace 
 /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:518: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   df.rename(columns={
-$EGS72XL1C014.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-10-25)
+$EGS72XL1C014.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-11-01)
 /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   quotes.sort_index(inplace=True)
@@ -756,7 +762,7 @@ See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace 
 /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:518: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   df.rename(columns={
-$EGS385S1C012.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-10-25)
+$EGS385S1C012.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-11-01)
 /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   quotes.sort_index(inplace=True)
@@ -789,7 +795,7 @@ See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace 
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   df.rename(columns={
 $EEP.CA: possibly delisted; no timezone found
-$EGS370O1C013.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-10-25)
+$EGS370O1C013.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-11-01)
 $DGTZ.CA: possibly delisted; no timezone found
 /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
@@ -2026,7 +2032,15 @@ See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace 
 /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:518: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   df.rename(columns={
-$GTWL.CA: possibly delisted; no timezone found
+/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  quotes.sort_index(inplace=True)
+/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:514: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.drop(
+/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:518: Pandas4Warning: The inplace keyword in DataFrame.rename is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.rename(columns={
 /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   quotes.sort_index(inplace=True)
@@ -2690,52 +2704,52 @@ See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace 
 
 ================================================================================
 OUT-OF-SAMPLE WALK-FORWARD
-  Training cutoff: 2026-10-15 (Thu)   — model sees only data ≤ this date
-  Test window:     2026-10-15+1 → 2026-10-22  (last week's 5 EGX sessions)
+  Training cutoff: 2026-10-22 (Thu)   — model sees only data ≤ this date
+  Test window:     2026-10-22+1 → 2026-10-29  (last week's 5 EGX sessions)
 ================================================================================
 
 Loading price history for validated EGX universe...
 Universe size: 249  (quality set ROE>=10%: 175)
 
-Model would have picked these top 5 on 2026-10-15:
+Model would have picked these top 5 on 2026-10-22:
 
 Rank Tic    Score   Forecast    Actual    P(>2%)   In 90% CI
 ------------------------------------------------------------------------
-1    ACAMD  12.1      -1.04%     -5.61%  29%      ✓
-2    SCEM   8.8       -0.25%     -6.08%  40%      ✓
-3    CPCI   7.0       +1.13%     -2.76%  41%      ✗
-4    SUGR   6.8       +1.33%     -5.98%  46%      ✓
-5    ORWE   5.3       +0.75%     -9.24%  42%      ✗
+1    ABUK   13.4      +1.81%     -5.24%  48%      ✓
+2    TMGH   8.6       -1.47%     -7.59%  15%      ✗
+3    EAST   8.2       -1.84%     +6.43%  16%      ✗
+4    ICFC   6.6       +3.33%     +1.96%  56%      ✓
+5    NAHO   6.1       +0.14%     -2.29%  36%      ✓
 
 ========================================================================
-AGGREGATE RESULTS — week of 2026-10-15 → 2026-10-22
+AGGREGATE RESULTS — week of 2026-10-22 → 2026-10-29
 ========================================================================
-  Top-5 portfolio return:    -5.93%
-  EGX synthetic basket (n=199):  -5.97%
+  Top-5 portfolio return:    -1.35%
+  EGX synthetic basket (n=200):  -2.13%
   EGP T-bill weekly:           +0.444%
-  Active vs basket:            +0.04 pp
-  Active vs T-bills:           -6.38 pp
+  Active vs basket:            +0.78 pp
+  Active vs T-bills:           -1.79 pp
 
   Picks that beat basket: 2 / 5
-  Picks with positive return: 0 / 5
+  Picks with positive return: 2 / 5
 
-  Bootstrap MC across 199 names:
-    Mean absolute error: 5.94pp (predicted vs actual)
-    Mean error (bias):   -5.28pp
-    Actual within 90% CI: 70% of names
+  Bootstrap MC across 200 names:
+    Mean absolute error: 4.08pp (predicted vs actual)
+    Mean error (bias):   -0.79pp
+    Actual within 90% CI: 86% of names
     (Calibrated would be 80%; below = overconfident, above = underconfident)
 
-Model would have AVOIDED these bottom 5 on 2026-10-15:
+Model would have AVOIDED these bottom 5 on 2026-10-22:
 
 Rank   Tic    Score   Forecast    Actual    
 --------------------------------------------------
-93     MILS   -29.5     -2.20%    -13.73%
-94     SEIG   -31.0     -1.85%    -10.52%
-95     LUTS   -32.8     +3.90%    -13.72%
-96     MBEG   -41.7     +2.55%    -10.65%
-97     DTPP   -127.9    -1.07%    -21.12%
+101    GTWL   -30.5     -1.31%     -1.33%
+102    DTPP   -30.9     -3.45%    -15.71%
+103    CAED   -31.0     -4.08%     +6.62%
+104    GBCO   -32.8     -1.61%     -5.28%
+105    MAAL   -35.3     -1.94%     +5.02%
 
-  Bottom-5 actual return: -13.95%
-  Long top / short bottom spread: +8.02 pp
+  Bottom-5 actual return: -2.14%
+  Long top / short bottom spread: +0.79 pp
 
 Appended result to /home/runner/work/egx-mcp/egx-mcp/logs/oos_weekly_log.jsonl
