@@ -1,0 +1,97 @@
+=== EGX PRE-MARKET BRIEFING — Sunday 2026-11-01 15:55 ===
+
+--- MACRO ---
+  EGX 30:  49,471 pts (—)
+  USD/EGP: 55.9722 (+0.04%)
+  Brent:   $113.43 (+1.21%)
+  Gold 24K: 7,016.26 EGP/g  |  21K: 6,139.23  |  18K: 5,262.19
+  Egyptian gold pound: 49,114 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- MARKET STANCE: SELECTIVE ---
+  Range-bound — no broad tailwind. Only high-conviction names, tight stops, 21-session holds.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 106) ---
+  1. CANA   score=18.31  price=15.03  5d=+9.4% RSI=58  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CANA/
+  2. AXPH   score=17.11  price=210.71  5d=+10.6% RSI=43  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AXPH/
+  3. EAST   score=14.64  price=21.8  5d=+6.4% RSI=74  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EAST/
+  4. BIOC   score=12.43  price=28.48  5d=+11.8% RSI=46  trend=v
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  5. SWDY   score=10.78  price=47.69  5d=+5.0% RSI=50  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SWDY/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  CANA: ENTRY 15.11 | STOP 9.8 | SCALE-OUT 20.26 (478 sh) | TARGET 22.87 (478 sh) | 956 total (2.87% NAV) | R:R 1:1.5 | time stop 2026-11-08
+  AXPH: ENTRY 211.76 | STOP 33.92 | SCALE-OUT 387.5 (14 sh) | TARGET 475.89 (14 sh) | 28 total (1.18% NAV) | R:R 1:1.5 | time stop 2026-11-08
+  EAST: ENTRY 21.91 | STOP 19.1 | SCALE-OUT 24.5 (926 sh) | TARGET 25.85 (927 sh) | 1853 total (8.08% NAV) | R:R 1:1.5 | time stop 2026-11-08
+  BIOC: ENTRY 28.62 | STOP -32.46 | SCALE-OUT 89.42 (41 sh) | TARGET 119.89 (41 sh) | 82 total (0.47% NAV) | R:R 1:1.5 | time stop 2026-11-08
+  SWDY: ENTRY 47.93 | STOP 36.27 | SCALE-OUT 59.11 (218 sh) | TARGET 64.82 (219 sh) | 437 total (4.17% NAV) | R:R 1:1.5 | time stop 2026-11-08
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  CANA   FRESH  5d: BUY (5d)    1mo: BUY    (BUY)  tone: bullish
+  AXPH   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+  EAST   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  SWDY   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bearish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    CANA: V8b says ABSTAIN but chairman says BUY — Bull case clearly outweighs bear case AND composite score is strong.
+    AXPH: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    EAST: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  CANA:
+    Technicals:    RSI 58 — healthy uptrend; MACD bullish (+0.211); MA50 > MA200 — golden-cross regime; ATR 2.61 (5.6% of px) — sizing input
+    Fundamentals:  P/E 1.8 — cheap; P/B 0.52; ROE 29.0% — strong; Margin 41.8%; D/E 1.75 — highly levered
+    News tone:     bullish (+1.00, 3 hdl)
+      - بورصة مصر تقرر قيد أسهم زيادة رأسمال بنك قناة السويس [Mubasher]
+      - بنك قناة السويس يعلن نهاية حق وموعد توزيع الأسهم المجانية [Mubasher]
+  AXPH:
+    Technicals:    RSI 43 — soft / mean-revert zone; MACD bullish (+4.017); MA50 > MA200 — golden-cross regime; ATR 88.39 (6.4% of px) — sizing input
+    Fundamentals:  P/E 1.6 — cheap; P/B 0.97; ROE 60.8% — strong; D/E 0.01; Yield 3.7%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح الإسكندرية للأدوية ترتفع 28.69% خلال الربع الأول 2026-2027 [Mubasher]
+      - أرباح الإسكندرية للأدوية تنمو 25% إلى 92 مليون جنيه خلال شهرين [Mubasher]
+  EAST:
+    Technicals:    RSI 74 — overbought; MACD bullish (+0.635); MA50 < MA200 — death-cross regime; Riding upper Bollinger — extended; ATR 1.35 (4.2% of px) — sizing input
+    Fundamentals:  P/E 10.1 — fair; P/B 4.67; ROE 46.5% — strong; Margin 23.2%; Yield 3.9%
+    News tone:     bullish (+1.00, 3 hdl)
+      - تراجع أرباح "إيسترن كومباني" إلى 4.15 مليار جنيه خلال النصف الأول من 2026 [Mubasher]
+      - أرباح الشرقية - إيسترن كومباني ترتفع 12.4% خلال النصف الأول من 2025-2026 [Mubasher]
+  BIOC:
+    Technicals:    RSI 46 — soft / mean-revert zone; MACD bearish (-0.489); MA50 > MA200 — golden-cross regime; ATR 30.47 (10.5% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate; Yield 1.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "جلاكسو سميثكلاين" تهبط32.5% خلال النصف الأول من 2026 [Mubasher]
+      - جلاكسو سميثكلاين توضح: اتفاقية الـ110 ملايين دولار تخص الشركة العالمية [Mubasher]
+  SWDY:
+    Technicals:    RSI 50 — soft / mean-revert zone; MACD bullish (+0.402); MA50 > MA200 — golden-cross regime; ATR 5.71 (5.1% of px) — sizing input
+    Fundamentals:  P/E 5.3 — cheap; P/B 1.40; ROE 26.6% — strong; Margin 5.4%; D/E 1.24; Yield 2.1%
+    News tone:     neutral (+0.00, 3 hdl)
+      - تابعة لـ"السويدي إلكتريك" تؤسس "رايز" للمصاعد باستثمارات 100 مليون جنيه [Mubasher]
+      - تحالف السويدي إلكتريك يوقع عقداً لتوسعة محطة رابغ 2 في السعودية [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: CANA, AXPH, EAST, BIOC, SWDY
+  Filtered: kept 3 of 23 headlines.
+  Tone: neutral (score +0.00)
+  [sector:Industrial Goods] مصر للألومنيوم تعقيباً على تشغيل مصنع الفويل: المشروعات ما زالت تحت الدراسة — Mubasher
+  [sector:Industrial Goods] IDA streamlines industrial building permit procedures from 1 November — Daily News Egypt
+  [sector:Industrial Goods] مصر للألومنيوم تعقيباً على تشغيل مصنع الفويل: المشروعات ما زالت تحت الدراسة — Mubasher
+
+Disclaimer: Research only, not investment advice.
