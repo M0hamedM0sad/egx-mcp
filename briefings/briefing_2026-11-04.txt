@@ -1,0 +1,93 @@
+=== EGX PRE-MARKET BRIEFING — Wednesday 2026-11-04 16:58 ===
+
+--- MACRO ---
+  EGX 30:  49,256 pts (—)
+  USD/EGP: 54.61 (-1.18%)
+  Brent:   $100.61 (-2.81%)
+  Gold 24K: 7,120.80 EGP/g  |  21K: 6,230.70  |  18K: 5,340.60
+  Egyptian gold pound: 49,846 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BEAR — Index falling or in 15%+ drawdown — quality and value defensible, fade momentum.
+
+--- MARKET STANCE: DEFENSIVE ---
+  Bear regime — cut gross exposure; T-bills compete hard. Buy-side picks need exceptional justification.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 104) ---
+  1. SEIG   score=82.97  price=58.51  5d=+64.8% RSI=67  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SEIG/
+  2. LUTS   score=30.26  price=0.429  5d=+21.1% RSI=45  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-LUTS/
+  3. AFMC   score=25.86  price=21.61  5d=+20.2% RSI=49  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AFMC/
+  4. CAED   score=25.61  price=21.14  5d=+24.7% RSI=46  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CAED/
+  5. MBEG   score=25.01  price=1.36  5d=+21.9% RSI=40  trend=v
+     chart: https://www.tradingview.com/symbols/EGX-MBEG/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  SEIG: ENTRY 58.8 | STOP 9.18 | SCALE-OUT 107.84 (50 sh) | TARGET 132.51 (51 sh) | 101 total (1.18% NAV) | R:R 1:1.5 | time stop 2026-11-11
+  LUTS: ENTRY 0.43 | STOP 0.29 | SCALE-OUT 0.57 (17755 sh) | TARGET 0.64 (17756 sh) | 35511 total (3.05% NAV) | R:R 1:1.5 | time stop 2026-11-11
+  AFMC: ENTRY 21.72 | STOP -2.6 | SCALE-OUT 45.82 (103 sh) | TARGET 57.92 (103 sh) | 206 total (0.89% NAV) | R:R 1:1.5 | time stop 2026-11-11
+  CAED: ENTRY 21.25 | STOP 2.33 | SCALE-OUT 39.95 (132 sh) | TARGET 49.36 (133 sh) | 265 total (1.12% NAV) | R:R 1:1.5 | time stop 2026-11-11
+  MBEG: ENTRY 1.37 | STOP 0.02 | SCALE-OUT 2.7 (1861 sh) | TARGET 3.37 (1862 sh) | 3723 total (1.01% NAV) | R:R 1:1.5 | time stop 2026-11-11
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  SEIG   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  LUTS   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  AFMC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  CAED   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MBEG   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    MBEG: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  SEIG:
+    Technicals:    RSI 67 — healthy uptrend; MACD bullish (+10.263); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 24.67 (9.3% of px) — sizing input
+    Fundamentals:  P/E 3.8 — cheap; P/B 0.42; ROE 10.9% — adequate; Margin 67.9%; D/E 0.00; Yield 1.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "السعودية المصرية للاستثمار" ترتفع 8% إلى 39 مليون جنيه خلال 9 أشهر [Mubasher]
+      - بورصة مصر تقر قيد تعديل غرض شركة "السعودية المصرية للاستثمار" [Mubasher]
+  LUTS:
+    Technicals:    RSI 45 — soft / mean-revert zone; MACD bullish (+0.013); MA50 > MA200 — golden-cross regime; ATR 0.07 (9.9% of px) — sizing input
+    Fundamentals:  P/E 8.6 — fair; P/B 3.58; ROE 39.0% — strong
+    News tone:     bullish (+1.00, 3 hdl)
+      - "لوتس للتنمية الزراعية" تعتمد زيادة رأس المال إلى 228 مليون جنيه [Mubasher]
+      - لوتس للتنمية تعلن نتائج الاكتتاب في زيادة رأس المال [Mubasher]
+  AFMC:
+    Technicals:    RSI 49 — soft / mean-revert zone; MACD bullish (+2.383); MA50 > MA200 — golden-cross regime; ATR 12.11 (9.2% of px) — sizing input
+    Fundamentals:  P/E 4.5 — cheap; P/B 2.55; ROE 56.3% — strong; Margin 13.9%; D/E 0.11; Yield 1.1%
+    News tone:     bullish (+1.00, 3 hdl)
+      - عمومية مطاحن ومخابز الإسكندرية تقر توزيع كوبون نقدي على المساهمين [Mubasher]
+      - أرباح مطاحن ومخابز الاسكندرية تتراجع 19.9% خلال الربع الأول [Mubasher]
+  CAED:
+    Technicals:    RSI 46 — soft / mean-revert zone; MACD bullish (+1.418); MA50 > MA200 — golden-cross regime; ATR 9.41 (9.5% of px) — sizing input
+    Fundamentals:  P/E 7.2 — cheap; P/B 2.87; ROE 39.7% — strong; D/E 0.00; Yield 2.0%
+    News tone:     neutral (+0.00, 3 hdl)
+      - عمومية "القاهرة للخدمات التعليمية" تقر إنشاء مدرسة في رشيد الجديدة [Mubasher]
+      - القاهرة للخدمات التعليمية توضح مستجدات نقل أرض مدرسة في البحيرة [Mubasher]
+  MBEG:
+    Technicals:    RSI 40 — soft / mean-revert zone; MACD bearish (-0.019); MA50 > MA200 — golden-cross regime; ATR 0.67 (13.4% of px) — sizing input
+    Fundamentals:  P/E 13.6 — fair; P/B 1.53; ROE 11.0% — adequate; D/E 1.73 — highly levered
+    News tone:     bullish (+0.67, 3 hdl)
+      - تابعة لـ "إم بي للهندسة" توقع عقداً لتركيب 92 شاحناً كهربائياً للأتوبيس الترددي [Mubasher]
+      - أرباح إم بي للهندسة المجمعة ترتفع 39% في النصف الأول من 2026 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: SEIG, LUTS, AFMC, CAED, MBEG
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
