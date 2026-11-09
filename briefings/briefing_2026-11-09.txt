@@ -1,0 +1,96 @@
+=== EGX PRE-MARKET BRIEFING — Monday 2026-11-09 18:58 ===
+
+--- MACRO ---
+  EGX 30:  50,812 pts (—)
+  USD/EGP: 53.83 (+0.11%)
+  Brent:   $94.00 (-4.41%)
+  Gold 24K: 7,130.21 EGP/g  |  21K: 6,238.93  |  18K: 5,347.65
+  Egyptian gold pound: 49,911 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BEAR — Index falling or in 15%+ drawdown — quality and value defensible, fade momentum.
+
+--- MARKET STANCE: DEFENSIVE ---
+  Bear regime — cut gross exposure; T-bills compete hard. Buy-side picks need exceptional justification.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 122) ---
+  1. AMES   score=49.24  price=6.97  5d=+41.9% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMES/
+  2. BIOC   score=42.03  price=28.48  5d=+35.8% RSI=65  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  3. EFIC   score=30.86  price=104.14  5d=+19.8% RSI=57  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EFIC/
+  4. SIPC   score=26.93  price=0.598  5d=+21.1% RSI=50  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SIPC/
+  5. MPRC   score=24.51  price=18.19  5d=+18.4% RSI=58  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MPRC/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  AMES: ENTRY 7.0 | STOP 1.1 | SCALE-OUT 12.84 (426 sh) | TARGET 15.77 (426 sh) | 852 total (1.19% NAV) | R:R 1:1.5 | time stop 2026-11-16
+  BIOC: ENTRY 28.62 | STOP -35.02 | SCALE-OUT 91.98 (39 sh) | TARGET 123.73 (39 sh) | 78 total (0.44% NAV) | R:R 1:1.5 | time stop 2026-11-16
+  EFIC: ENTRY 104.66 | STOP 79.6 | SCALE-OUT 128.68 (101 sh) | TARGET 140.95 (102 sh) | 203 total (4.23% NAV) | R:R 1:1.5 | time stop 2026-11-16
+  SIPC: ENTRY 0.6 | STOP -0.28 | SCALE-OUT 1.48 (2845 sh) | TARGET 1.92 (2845 sh) | 5690 total (0.68% NAV) | R:R 1:1.5 | time stop 2026-11-16
+  MPRC: ENTRY 18.28 | STOP 12.8 | SCALE-OUT 23.58 (463 sh) | TARGET 26.27 (464 sh) | 927 total (3.37% NAV) | R:R 1:1.5 | time stop 2026-11-16
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  AMES   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  EFIC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bullish
+  SIPC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  MPRC   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    AMES: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+    BIOC: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+    EFIC: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+    MPRC: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  AMES:
+    Technicals:    RSI 68 — healthy uptrend; MACD bullish (+2.541); MA50 < MA200 — death-cross regime; Riding upper Bollinger — extended; ATR 2.93 (6.4% of px) — sizing input
+    Fundamentals:  P/E 21.8 — premium; P/B 3.04; ROE 13.8% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - شركة تبيع 8 ملايين سهم من "المركز الطبي الجديد" بصفقة تتجاوز 588 مليون جنيه [Mubasher]
+      - المركز الطبي الجديد الأكثر جذباً لسيولة بورصة مصر خلال تعاملات الثلاثاء [Mubasher]
+  BIOC:
+    Technicals:    RSI 65 — healthy uptrend; MACD bullish (+10.881); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 31.75 (8.4% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate; Yield 1.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - الرقابة المالية تقر إجراءات جلاكسو سميثكلاين بشأن اندماج "أمون" [Mubasher]
+      - أرباح "جلاكسو سميثكلاين" تهبط32.5% خلال النصف الأول من 2026 [Mubasher]
+  EFIC:
+    Technicals:    RSI 57 — healthy uptrend; MACD bullish (+4.054); MA50 < MA200 — death-cross regime; ATR 12.27 (7.4% of px) — sizing input
+    Fundamentals:  P/E 3.7 — cheap; P/B 3.40; ROE 92.6% — strong; Yield 1.1%
+    News tone:     mildly_bearish (-0.33, 3 hdl)
+      - تباين التأثيرات.. كيف تفاعلت شركات الأسمدة والكيماويات مع خفض مصر إمدادات الغاز؟ [Mubasher]
+      - المالية والصناعية المصرية توضح موقفها من خفض إمدادات الغاز [Mubasher]
+  SIPC:
+    Technicals:    RSI 50 — soft / mean-revert zone; MACD bullish (+0.062); MA50 > MA200 — golden-cross regime; ATR 0.44 (8.0% of px) — sizing input
+    Fundamentals:  P/E 7.5 — cheap; P/B 1.49; ROE 20.6% — strong; D/E 0.24
+    News tone:     bullish (+1.00, 3 hdl)
+      - تراجع أرباح "سبأ للأدوية" 84% خلال 9 أشهر [Mubasher]
+      - مساهم بـ"سبأ للأدوية" يبيع 250 ألف سهم بقيمة إجمالية 1.44 مليون جنيه [Mubasher]
+  MPRC:
+    Technicals:    RSI 58 — healthy uptrend; MACD bullish (+0.793); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 2.69 (6.9% of px) — sizing input
+    Fundamentals:  P/E 2.2 — cheap; P/B 0.76; ROE 34.4% — strong; Margin 55.1%; D/E 0.01; Yield 1.3%
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح "مدينة الإنتاج الإعلامي" ترتفع 57% خلال 9 أشهر [Mubasher]
+      - أرباح "مدينة الإنتاج الإعلامي" ترتفع 48.5% خلال النصف الأول من 2026 [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: AMES, BIOC, EFIC, SIPC, MPRC
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
