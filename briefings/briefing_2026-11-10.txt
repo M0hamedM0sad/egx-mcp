@@ -1,0 +1,94 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-11-10 17:19 ===
+
+--- MACRO ---
+  EGX 30:  51,415 pts (—)
+  USD/EGP: 53.33 (-0.93%)
+  Brent:   $91.00 (-0.47%)
+  Gold 24K: 6,954.07 EGP/g  |  21K: 6,084.81  |  18K: 5,215.55
+  Egyptian gold pound: 48,678 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BEAR — Index falling or in 15%+ drawdown — quality and value defensible, fade momentum.
+
+--- MARKET STANCE: DEFENSIVE ---
+  Bear regime — cut gross exposure; T-bills compete hard. Buy-side picks need exceptional justification.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 129) ---
+  1. AMES   score=65.55  price=48.67  5d=+49.8% RSI=73  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMES/
+  2. BIOC   score=63.21  price=385.0  5d=+45.8% RSI=68  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  3. EFIC   score=38.61  price=169.17  5d=+25.7% RSI=56  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EFIC/
+  4. SIPC   score=38.15  price=5.57  5d=+27.2% RSI=51  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SIPC/
+  5. NINH   score=31.84  price=17.01  5d=+21.4% RSI=59  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-NINH/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  AMES: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  BIOC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EFIC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  SIPC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  NINH: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  AMES   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: bullish
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  EFIC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bullish
+  SIPC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  NINH   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    BIOC: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+    EFIC: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  AMES:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 21.8 — premium; P/B 3.04; ROE 13.8% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - شركة تبيع 8 ملايين سهم من "المركز الطبي الجديد" بصفقة تتجاوز 588 مليون جنيه [Mubasher]
+      - المركز الطبي الجديد الأكثر جذباً لسيولة بورصة مصر خلال تعاملات الثلاثاء [Mubasher]
+  BIOC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate; Yield 1.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - البورصة تعلن نهاية حق وموعد توزيع كوبون "جلاكسو سميثكلاين" [Mubasher]
+      - الرقابة المالية تقر إجراءات جلاكسو سميثكلاين بشأن اندماج "أمون" [Mubasher]
+  EFIC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 3.7 — cheap; P/B 3.40; ROE 92.6% — strong; Yield 1.1%
+    News tone:     mildly_bearish (-0.33, 3 hdl)
+      - تباين التأثيرات.. كيف تفاعلت شركات الأسمدة والكيماويات مع خفض مصر إمدادات الغاز؟ [Mubasher]
+      - المالية والصناعية المصرية توضح موقفها من خفض إمدادات الغاز [Mubasher]
+  SIPC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 7.5 — cheap; P/B 1.49; ROE 20.6% — strong; D/E 0.24
+    News tone:     bullish (+1.00, 3 hdl)
+      - تراجع أرباح "سبأ للأدوية" 84% خلال 9 أشهر [Mubasher]
+      - مساهم بـ"سبأ للأدوية" يبيع 250 ألف سهم بقيمة إجمالية 1.44 مليون جنيه [Mubasher]
+  NINH:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 8.4 — fair; P/B 2.11; ROE 25.0% — strong; Margin 31.2%; D/E 0.01
+    News tone:     bullish (+1.00, 3 hdl)
+      - أرباح مستشفى النزهة الدولي ترتفع إلى 143.5 مليون جنيه في 9 أشهر [Mubasher]
+      - مساهم يخفض حصته في مستشفى النزهة الدولي بقيمة 1.75 مليون جنيه [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: AMES, BIOC, EFIC, SIPC, NINH
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
