@@ -1,0 +1,94 @@
+=== EGX PRE-MARKET BRIEFING — Wednesday 2026-11-11 16:49 ===
+
+--- MACRO ---
+  EGX 30:  52,381 pts (—)
+  USD/EGP: 53.5 (+0.43%)
+  Brent:   $92.86 (+0.45%)
+  Gold 24K: 6,923.61 EGP/g  |  21K: 6,058.15  |  18K: 5,192.70
+  Egyptian gold pound: 48,465 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- MARKET STANCE: SELECTIVE ---
+  Range-bound — no broad tailwind. Only high-conviction names, tight stops, 21-session holds.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 142) ---
+  1. AMES   score=56.39  price=6.97  5d=+41.1% RSI=71  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AMES/
+  2. BIOC   score=40.41  price=28.48  5d=+26.1% RSI=70  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-BIOC/
+  3. EFIC   score=39.95  price=104.14  5d=+26.7% RSI=57  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EFIC/
+  4. MPCO   score=35.19  price=1.26  5d=+24.9% RSI=58  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MPCO/
+  5. GIHD   score=33.84  price=23.02  5d=+27.5% RSI=60  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-GIHD/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  AMES: ENTRY 7.0 | STOP -0.23 | SCALE-OUT 14.17 (347 sh) | TARGET 17.77 (347 sh) | 694 total (0.97% NAV) | R:R 1:1.5 | time stop 2026-11-18
+  BIOC: ENTRY 28.62 | STOP -42.73 | SCALE-OUT 99.69 (35 sh) | TARGET 135.3 (35 sh) | 70 total (0.4% NAV) | R:R 1:1.5 | time stop 2026-11-18
+  EFIC: ENTRY 104.66 | STOP 80.46 | SCALE-OUT 127.82 (105 sh) | TARGET 139.67 (106 sh) | 211 total (4.39% NAV) | R:R 1:1.5 | time stop 2026-11-18
+  MPCO: ENTRY 1.27 | STOP 0.96 | SCALE-OUT 1.56 (8333 sh) | TARGET 1.71 (8333 sh) | 16666 total (4.2% NAV) | R:R 1:1.5 | time stop 2026-11-18
+  GIHD: ENTRY 23.14 | STOP 14.47 | SCALE-OUT 31.57 (292 sh) | TARGET 35.85 (292 sh) | 584 total (2.69% NAV) | R:R 1:1.5 | time stop 2026-11-18
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  AMES   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  BIOC   FRESH  5d: BUY (5d)    1mo: SKIP   (AVOID)  tone: bullish
+  EFIC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: mildly_bullish
+  MPCO   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+  GIHD   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: bullish
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    AMES: V8b says REDUCE but chairman says AVOID — Bear case dominates on monthly view — informational only. Does not override W1 short-horizon entries
+    EFIC: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  AMES:
+    Technicals:    RSI 71 — overbought; MACD bullish (+3.219); MA50 < MA200 — death-cross regime; Riding upper Bollinger — extended; ATR 3.60 (7.6% of px) — sizing input
+    Fundamentals:  P/E 21.8 — premium; P/B 3.04; ROE 13.8% — adequate
+    News tone:     neutral (+0.00, 3 hdl)
+      - شركة تبيع 8 ملايين سهم من "المركز الطبي الجديد" بصفقة تتجاوز 588 مليون جنيه [Mubasher]
+      - المركز الطبي الجديد الأكثر جذباً لسيولة بورصة مصر خلال تعاملات الثلاثاء [Mubasher]
+  BIOC:
+    Technicals:    RSI 70 — overbought; MACD bullish (+14.610); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 35.61 (9.3% of px) — sizing input
+    Fundamentals:  P/E 8.7 — fair; P/B 1.19; ROE 13.7% — adequate; Yield 1.0%
+    News tone:     bullish (+1.00, 3 hdl)
+      - البورصة تعلن نهاية حق وموعد توزيع كوبون "جلاكسو سميثكلاين" [Mubasher]
+      - الرقابة المالية تقر إجراءات جلاكسو سميثكلاين بشأن اندماج "أمون" [Mubasher]
+  EFIC:
+    Technicals:    RSI 57 — healthy uptrend; MACD bullish (+5.384); MA50 < MA200 — death-cross regime; ATR 11.84 (6.9% of px) — sizing input
+    Fundamentals:  P/E 3.7 — cheap; P/B 3.40; ROE 92.6% — strong; Yield 1.1%
+    News tone:     mildly_bearish (-0.33, 3 hdl)
+      - تباين التأثيرات.. كيف تفاعلت شركات الأسمدة والكيماويات مع خفض مصر إمدادات الغاز؟ [Mubasher]
+      - المالية والصناعية المصرية توضح موقفها من خفض إمدادات الغاز [Mubasher]
+  MPCO:
+    Technicals:    RSI 58 — healthy uptrend; MACD bullish (+0.053); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.15 (6.8% of px) — sizing input
+    Fundamentals:  P/E 7.4 — cheap; P/B 4.20; ROE 57.4% — strong; D/E 0.38
+    News tone:     neutral (+0.00, 3 hdl)
+      - سهم ضمن قطاع الأغذية يقفز 13% وسط سيولة عالية [Mubasher]
+      - المنصورة للدواجن تتحول للخسائر في النصف الأول من 2026 [Mubasher]
+  GIHD:
+    Technicals:    RSI 60 — healthy uptrend; MACD bullish (+2.124); MA50 > MA200 — golden-cross regime; ATR 4.28 (7.8% of px) — sizing input
+    Fundamentals:  P/E 5.6 — cheap; P/B 2.41; ROE 43.1% — strong; D/E 0.00
+    News tone:     neutral (+0.00, 3 hdl)
+      - مساهم يخفض حصته في أسهم رأسمال "الغربية الإسلامية" إلى 2.35% [Mubasher]
+      - التلال للإسكان ترفع حصتها في أسهم رأس مال الغربية الإسلامية إلى 24.71% [Mubasher]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: AMES, BIOC, EFIC, MPCO, GIHD
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
