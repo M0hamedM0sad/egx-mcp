@@ -1,0 +1,83 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-11-17 18:35 ===
+
+--- MACRO ---
+  EGX 30:  52,120 pts (—)
+  USD/EGP: 53.67 (+0.07%)
+  Brent:   $93.39 (+1.80%)
+  Gold 24K: 6,681.94 EGP/g  |  21K: 5,846.70  |  18K: 5,011.46
+  Egyptian gold pound: 46,774 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- MARKET STANCE: SELECTIVE ---
+  Range-bound — no broad tailwind. Only high-conviction names, tight stops, 21-session holds.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 126) ---
+  1. DTPP   score=43.88  price=42.36  5d=+30.3% RSI=85  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-DTPP/
+  2. INFI   score=29.86  price=52.82  5d=+19.7% RSI=89  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-INFI/
+  3. AIFI   score=27.84  price=0.078  5d=+16.9% RSI=84  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-AIFI/
+  4. ATLC   score=25.0  price=3.84  5d=+14.0% RSI=80  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ATLC/
+  5. MBSC   score=22.07  price=40.97  5d=+13.6% RSI=86  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MBSC/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  DTPP: ENTRY 42.57 | STOP 31.94 | SCALE-OUT 52.78 (239 sh) | TARGET 57.99 (240 sh) | 479 total (4.06% NAV) | R:R 1:1.5 | time stop 2026-11-24
+  INFI: ENTRY 53.08 | STOP 35.74 | SCALE-OUT 69.9 (146 sh) | TARGET 78.45 (146 sh) | 292 total (3.08% NAV) | R:R 1:1.5 | time stop 2026-11-24
+  AIFI: ENTRY 0.08 | STOP -0.19 | SCALE-OUT 0.35 (9356 sh) | TARGET 0.48 (9356 sh) | 18712 total (0.29% NAV) | R:R 1:1.5 | time stop 2026-11-24
+  ATLC: ENTRY 3.86 | STOP 3.16 | SCALE-OUT 4.52 (3699 sh) | TARGET 4.85 (3699 sh) | 7398 total (5.68% NAV) | R:R 1:1.5 | time stop 2026-11-24
+  MBSC: ENTRY 41.17 | STOP 6.47 | SCALE-OUT 75.47 (72 sh) | TARGET 92.72 (72 sh) | 144 total (1.18% NAV) | R:R 1:1.5 | time stop 2026-11-24
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  DTPP   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: neutral
+  INFI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  AIFI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  ATLC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  MBSC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    ATLC: V8b says REDUCE but chairman says HOLD — Bull and bear cases are roughly balanced.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  DTPP:
+    Technicals:    RSI 85 — overbought; MACD bullish (+11.177); MA50 > MA200 — golden-cross regime; ATR 5.21 (8.3% of px) — sizing input
+    Fundamentals:  P/E 2.4 — cheap; P/B 0.96; ROE 40.3% — strong; Yield 5.0%
+    News tone:     neutral (+0.00, 0 hdl)
+  INFI:
+    Technicals:    RSI 89 — overbought; MACD bullish (+4.037); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 8.54 (5.8% of px) — sizing input
+    Fundamentals:  P/E 14.8 — fair; P/B 4.15; ROE 28.2% — strong; Margin 17.1%; D/E 0.04; Yield 1.1%
+    News tone:     neutral (+0.00, 0 hdl)
+  AIFI:
+    Technicals:    RSI 84 — overbought; MACD bullish (+0.068); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.13 (5.4% of px) — sizing input
+    Fundamentals:  P/E 2.6 — cheap; P/B 1.11; ROE 37.1% — strong
+    News tone:     neutral (+0.00, 0 hdl)
+  ATLC:
+    Technicals:    RSI 80 — overbought; MACD bullish (+0.141); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 0.34 (5.9% of px) — sizing input
+    Fundamentals:  P/E 9.1 — fair; P/B 1.19; ROE 12.9% — adequate; Margin 10.9%; D/E 4.44 — highly levered; Yield 6.6%
+    News tone:     neutral (+0.00, 0 hdl)
+  MBSC:
+    Technicals:    RSI 86 — overbought; MACD bullish (+7.013); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 17.25 (4.7% of px) — sizing input
+    Fundamentals:  P/B 0.44; ROE 45.9% — strong; D/E 0.03; Yield 8.3%
+    News tone:     neutral (+0.00, 0 hdl)
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: DTPP, INFI, AIFI, ATLC, MBSC
+  Filtered: kept 0 of 8 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
