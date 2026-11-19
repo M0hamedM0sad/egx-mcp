@@ -1,0 +1,85 @@
+=== EGX PRE-MARKET BRIEFING — Thursday 2026-11-19 18:09 ===
+
+--- MACRO ---
+  EGX 30:  51,492 pts (—)
+  USD/EGP: 53.77 (+0.13%)
+  Brent:   $89.71 (+0.44%)
+  Gold 24K: 6,358.33 EGP/g  |  21K: 5,563.54  |  18K: 4,768.74
+  Egyptian gold pound: 44,508 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- MARKET STANCE: SELECTIVE ---
+  Range-bound — no broad tailwind. Only high-conviction names, tight stops, 21-session holds.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 84) ---
+  1. INFI   score=36.58  price=157.5  5d=+24.3% RSI=84  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-INFI/
+  2. MENA   score=28.11  price=7.4  5d=+21.9% RSI=84  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MENA/
+  3. GMCI   score=18.54  price=1.69  5d=+9.0% RSI=66  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-GMCI/
+  4. SAUD   score=11.36  price=23.0  5d=+4.5% RSI=69  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SAUD/
+  5. ETEL   score=10.78  price=141.95  5d=+5.2% RSI=79  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ETEL/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  INFI: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  MENA: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  GMCI: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  SAUD: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  ETEL: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  INFI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  MENA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  GMCI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  SAUD   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: neutral
+  ETEL   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: neutral
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    SAUD: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+    ETEL: V8b says ABSTAIN but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  INFI:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 17.3 — premium; P/B 5.16; ROE 28.2% — strong; Margin 17.1%; D/E 0.04; Yield 1.1%
+    News tone:     neutral (+0.00, 0 hdl)
+  MENA:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 64.4 — premium; P/B 12.03; ROE 53.5% — strong; D/E 0.01
+    News tone:     neutral (+0.00, 0 hdl)
+  GMCI:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 1.6 — cheap; P/B 15.77; ROE 819.0% — strong
+    News tone:     neutral (+0.00, 0 hdl)
+  SAUD:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 4.2 — cheap; P/B 1.24; ROE 29.6% — strong; Margin 38.6%; D/E 0.29; Yield 5.2%
+    News tone:     neutral (+0.00, 0 hdl)
+  ETEL:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 11.7 — fair; P/B 2.66; ROE 22.8% — strong; Margin 21.0%; D/E 1.18; Yield 1.6%
+    News tone:     neutral (+0.00, 1 hdl)
+      - Telecom Egypt SAE (CAI:ETEL) (Q3 2026) Earnings Call Highlights: Revenue Jumps 23% as Data [GuruFocus.com]
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: INFI, MENA, GMCI, SAUD, ETEL
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
