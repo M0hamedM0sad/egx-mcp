@@ -10,15 +10,15 @@ $ARVA.CA: possibly delisted; no timezone found
 $POCO.CA: possibly delisted; no timezone found
 $HDST.CA: possibly delisted; no timezone found
 $GEOS.CA: possibly delisted; no timezone found
-$EGS72XL1C014.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-11-15)
+$EGS72XL1C014.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-11-22)
 $FCMD.CA: possibly delisted; no timezone found
 $UTOP.CA: possibly delisted; no timezone found
 $GGRN.CA: possibly delisted; no timezone found
 $APPC.CA: possibly delisted; no timezone found
-$EGS385S1C012.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-11-15)
+$EGS385S1C012.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-11-22)
 $GPIM.CA: possibly delisted; no timezone found
 $EEP.CA: possibly delisted; no timezone found
-$EGS370O1C013.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-11-15)
+$EGS370O1C013.CA: possibly delisted; no price data found  (1d 2025-01-01 -> 2026-11-22)
 $DGTZ.CA: possibly delisted; no timezone found
 $ACTF.CA: possibly delisted; no timezone found
 $TORA.CA: possibly delisted; no timezone found
@@ -37,7 +37,6 @@ $KNGC.CA: possibly delisted; no timezone found
 $TWSA.CA: possibly delisted; no timezone found
 $HBCO.CA: possibly delisted; no timezone found
 $VALU.CA: possibly delisted; no timezone found
-$GTWL.CA: possibly delisted; no timezone found
 $SINA.CA: possibly delisted; no timezone found
 $QNBE.CA: possibly delisted; no timezone found
 $EFAC.CA: possibly delisted; no timezone found
@@ -50,52 +49,52 @@ $ACAP.CA: possibly delisted; no timezone found
 
 ================================================================================
 OUT-OF-SAMPLE WALK-FORWARD
-  Training cutoff: 2026-11-05 (Thu)   — model sees only data ≤ this date
-  Test window:     2026-11-05+1 → 2026-11-12  (last week's 5 EGX sessions)
+  Training cutoff: 2026-11-12 (Thu)   — model sees only data ≤ this date
+  Test window:     2026-11-12+1 → 2026-11-19  (last week's 5 EGX sessions)
 ================================================================================
 
 Loading price history for validated EGX universe...
 Universe size: 249  (quality set ROE>=10%: 175)
 
-Model would have picked these top 5 on 2026-11-05:
+Model would have picked these top 5 on 2026-11-12:
 
 Rank Tic    Score   Forecast    Actual    P(>2%)   In 90% CI
 ------------------------------------------------------------------------
-1    SEIG   43.6      -2.23%     -1.03%  36%      ✓
-2    SCEM   22.2      -0.87%     +5.86%  37%      ✓
-3    ICFC   22.0      +3.99%     +6.26%  57%      ✓
-4    EFIC   21.9      -3.06%     +0.15%  29%      ✓
-5    AALR   20.8      -2.59%     +5.45%  32%      ✓
+1    AMES   51.5      -7.74%    -25.65%  26%      ✗
+2    BIOC   43.7      -2.12%     -6.86%  41%      ✓
+3    DTPP   43.2      -2.57%    -10.56%  37%      ✓
+4    PRMH   35.6      -0.57%     -4.64%  40%      ✓
+5    GTWL   34.5      -1.52%    -10.62%  41%      ✓
 
 ========================================================================
-AGGREGATE RESULTS — week of 2026-11-05 → 2026-11-12
+AGGREGATE RESULTS — week of 2026-11-12 → 2026-11-19
 ========================================================================
-  Top-5 portfolio return:    +3.34%
-  EGX synthetic basket (n=199):  +5.67%
+  Top-5 portfolio return:    -11.67%
+  EGX synthetic basket (n=200):  -4.57%
   EGP T-bill weekly:           +0.444%
-  Active vs basket:            -2.33 pp
-  Active vs T-bills:           +2.90 pp
+  Active vs basket:            -7.10 pp
+  Active vs T-bills:           -12.11 pp
 
-  Picks that beat basket: 2 / 5
-  Picks with positive return: 4 / 5
+  Picks that beat basket: 0 / 5
+  Picks with positive return: 0 / 5
 
-  Bootstrap MC across 199 names:
-    Mean absolute error: 7.70pp (predicted vs actual)
-    Mean error (bias):   +7.19pp
-    Actual within 90% CI: 74% of names
+  Bootstrap MC across 200 names:
+    Mean absolute error: 4.54pp (predicted vs actual)
+    Mean error (bias):   -3.54pp
+    Actual within 90% CI: 91% of names
     (Calibrated would be 80%; below = overconfident, above = underconfident)
 
-Model would have AVOIDED these bottom 5 on 2026-11-05:
+Model would have AVOIDED these bottom 5 on 2026-11-12:
 
 Rank   Tic    Score   Forecast    Actual    
 --------------------------------------------------
-130    CCAP   -8.2      +0.60%     +3.91%
-131    GBCO   -9.3      -2.54%     +3.34%
-132    AMOC   -10.6     +2.03%     -1.73%
-133    ABUK   -15.6     +0.20%     -4.30%
-134    CANA   -52.7     +0.83%    +10.17%
+113    SCEM   -1.5      +0.04%     -2.52%
+114    MAAL   -3.9      -0.61%     -8.37%
+115    CICH   -4.8      -0.93%     -3.86%
+116    AMIA   -9.1      +0.62%     -2.31%
+117    ABUK   -9.1      +0.01%     -1.47%
 
-  Bottom-5 actual return: +2.28%
-  Long top / short bottom spread: +1.06 pp
+  Bottom-5 actual return: -3.71%
+  Long top / short bottom spread: -7.96 pp
 
 Appended result to /home/runner/work/egx-mcp/egx-mcp/logs/oos_weekly_log.jsonl
