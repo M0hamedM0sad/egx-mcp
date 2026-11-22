@@ -1,0 +1,84 @@
+=== EGX PRE-MARKET BRIEFING — Sunday 2026-11-22 16:58 ===
+
+--- MACRO ---
+  EGX 30:  49,990 pts (—)
+  USD/EGP: 54.37 (+1.15%)
+  Brent:   $89.95 (-0.11%)
+  Gold 24K: 6,145.05 EGP/g  |  21K: 5,376.92  |  18K: 4,608.78
+  Egyptian gold pound: 43,015 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  SIDEWAYS — Range-bound — slight bias to mean-reversion and value.
+
+--- MARKET STANCE: SELECTIVE ---
+  Range-bound — no broad tailwind. Only high-conviction names, tight stops, 21-session holds.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 78) ---
+  1. INFI   score=33.81  price=160.11  5d=+27.2% RSI=84  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-INFI/
+  2. MENA   score=28.01  price=7.16  5d=+17.0% RSI=79  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MENA/
+  3. EFID   score=13.22  price=21.0  5d=+5.8% RSI=74  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-EFID/
+  4. ATLC   score=10.62  price=5.4  5d=+4.7% RSI=61  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ATLC/
+  5. SAUD   score=10.51  price=23.46  5d=+5.7% RSI=74  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-SAUD/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  INFI: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  MENA: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EFID: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  ATLC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  SAUD: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  INFI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  MENA   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  EFID   FRESH  5d: BUY (5d)    1mo: SKIP   (REDUCE)  tone: bullish
+  ATLC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  SAUD   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: neutral
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    SAUD: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  INFI:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 17.3 — premium; P/B 5.16; ROE 28.2% — strong; Margin 17.1%; D/E 0.04; Yield 1.1%
+    News tone:     neutral (+0.00, 0 hdl)
+  MENA:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 64.4 — premium; P/B 12.03; ROE 53.5% — strong; D/E 0.01
+    News tone:     neutral (+0.00, 0 hdl)
+  EFID:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 11.6 — fair; P/B 6.25; ROE 54.0% — strong; Margin 12.1%; D/E 0.86; Yield 3.2%
+    News tone:     bullish (+1.00, 1 hdl)
+      - Edita Food Industries S.A.E (CAI:EFID) Q4 2025 Earnings Call Highlights: Record Growth Ami [GuruFocus.com]
+  ATLC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 6.9 — cheap; P/B 1.30; ROE 12.9% — adequate; Margin 10.9%; D/E 4.44 — highly levered; Yield 6.6%
+    News tone:     neutral (+0.00, 0 hdl)
+  SAUD:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 4.2 — cheap; P/B 1.24; ROE 29.6% — strong; Margin 38.6%; D/E 0.29; Yield 5.2%
+    News tone:     neutral (+0.00, 0 hdl)
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: INFI, MENA, EFID, ATLC, SAUD
+  Filtered: kept 0 of 20 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
