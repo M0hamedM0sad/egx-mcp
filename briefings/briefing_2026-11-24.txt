@@ -1,0 +1,83 @@
+=== EGX PRE-MARKET BRIEFING — Tuesday 2026-11-24 20:28 ===
+
+--- MACRO ---
+  EGX 30:  50,712 pts (—)
+  USD/EGP: 54.17 (-0.04%)
+  Brent:   $88.01 (+2.17%)
+  Gold 24K: 6,202.73 EGP/g  |  21K: 5,427.39  |  18K: 4,652.05
+  Egyptian gold pound: 43,419 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BEAR — Index falling or in 15%+ drawdown — quality and value defensible, fade momentum.
+
+--- MARKET STANCE: DEFENSIVE ---
+  Bear regime — cut gross exposure; T-bills compete hard. Buy-side picks need exceptional justification.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 72) ---
+  1. HRHO   score=15.48  price=21.55  5d=+6.6% RSI=73  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-HRHO/
+  2. FIRE   score=13.98  price=2.305  5d=+7.0% RSI=79  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-FIRE/
+  3. CSAG   score=11.92  price=19.05  5d=+5.6% RSI=86  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-CSAG/
+  4. ZEOT   score=10.41  price=2.3  5d=+4.6% RSI=69  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ZEOT/
+  5. INFI   score=9.23  price=52.82  5d=+5.2% RSI=81  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-INFI/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  HRHO: ENTRY 21.66 | STOP 19.61 | SCALE-OUT 23.49 (1160 sh) | TARGET 24.46 (1160 sh) | 2320 total (10.0% NAV) | R:R 1:1.5 | time stop 2026-12-01
+  FIRE: ENTRY 2.32 | STOP 1.68 | SCALE-OUT 2.93 (3994 sh) | TARGET 3.24 (3995 sh) | 7989 total (3.68% NAV) | R:R 1:1.5 | time stop 2026-12-01
+  CSAG: ENTRY 19.15 | STOP 16.3 | SCALE-OUT 21.8 (907 sh) | TARGET 23.18 (908 sh) | 1815 total (6.92% NAV) | R:R 1:1.5 | time stop 2026-12-01
+  ZEOT: ENTRY 2.31 | STOP 0.49 | SCALE-OUT 4.11 (1380 sh) | TARGET 5.02 (1380 sh) | 2760 total (1.27% NAV) | R:R 1:1.5 | time stop 2026-12-01
+  INFI: ENTRY 53.08 | STOP 30.02 | SCALE-OUT 75.62 (109 sh) | TARGET 87.02 (110 sh) | 219 total (2.31% NAV) | R:R 1:1.5 | time stop 2026-12-01
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  HRHO   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  FIRE   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  CSAG   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: neutral
+  ZEOT   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  INFI   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    CSAG: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  HRHO:
+    Technicals:    RSI 73 — overbought; MACD bullish (+0.231); MA50 < MA200 — death-cross regime; ATR 0.97 (3.8% of px) — sizing input
+    Fundamentals:  P/E 8.3 — fair; P/B 0.92; ROE 11.1% — adequate; Margin 14.9%; D/E 1.55 — highly levered; Yield 1.0%
+    News tone:     neutral (+0.00, 0 hdl)
+  FIRE:
+    Technicals:    RSI 79 — overbought; MACD bullish (+0.065); MA50 > MA200 — golden-cross regime; ATR 0.31 (6.2% of px) — sizing input
+    Fundamentals:  P/E 14.4 — fair; P/B 2.26; ROE 15.9% — adequate
+    News tone:     neutral (+0.00, 0 hdl)
+  CSAG:
+    Technicals:    RSI 86 — overbought; MACD bullish (+0.407); MA50 > MA200 — golden-cross regime; Riding upper Bollinger — extended; ATR 1.38 (3.6% of px) — sizing input
+    Fundamentals:  P/E 1.6 — cheap; P/B 3.68; ROE 223.4% — strong; D/E 0.00; Yield 8.9%
+    News tone:     neutral (+0.00, 0 hdl)
+  ZEOT:
+    Technicals:    RSI 68 — healthy uptrend; MACD bullish (+0.197); MA50 > MA200 — golden-cross regime; ATR 0.91 (7.3% of px) — sizing input
+    Fundamentals:  P/E 2.7 — cheap; P/B 1.54; ROE 57.1% — strong
+    News tone:     neutral (+0.00, 0 hdl)
+  INFI:
+    Technicals:    RSI 81 — overbought; MACD bullish (+3.866); MA50 > MA200 — golden-cross regime; ATR 11.40 (7.4% of px) — sizing input
+    Fundamentals:  P/E 14.8 — fair; P/B 4.15; ROE 28.2% — strong; Margin 17.1%; D/E 0.04; Yield 1.1%
+    News tone:     neutral (+0.00, 0 hdl)
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: HRHO, FIRE, CSAG, ZEOT, INFI
+  Filtered: kept 0 of 8 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
