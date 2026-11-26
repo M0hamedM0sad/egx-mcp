@@ -1,0 +1,83 @@
+=== EGX PRE-MARKET BRIEFING — Thursday 2026-11-26 19:25 ===
+
+--- MACRO ---
+  EGX 30:  50,539 pts (—)
+  USD/EGP: 54.77 (+0.11%)
+  Brent:   $91.42 (+4.49%)
+  Gold 24K: 6,334.82 EGP/g  |  21K: 5,542.97  |  18K: 4,751.12
+  Egyptian gold pound: 44,344 EGP (8 g of 21K — local dealer ≈ +5-15%)
+  Regime:  BEAR — Index falling or in 15%+ drawdown — quality and value defensible, fade momentum.
+
+--- MARKET STANCE: DEFENSIVE ---
+  Bear regime — cut gross exposure; T-bills compete hard. Buy-side picks need exceptional justification.
+  Recommended holding horizon: 21 sessions.
+
+--- TODAY'S W1 PICKS (satellite ideas — see stance above, eligible: 66) ---
+  1. ZEOT   score=30.75  price=13.31  5d=+21.3% RSI=69  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-ZEOT/
+  2. KABO   score=21.81  price=7.75  5d=+12.7% RSI=64  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-KABO/
+  3. MOSC   score=18.28  price=292.4  5d=+12.4% RSI=62  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-MOSC/
+  4. FIRE   score=15.95  price=5.24  5d=+7.8% RSI=78  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-FIRE/
+  5. HRHO   score=11.86  price=26.33  5d=+4.1% RSI=71  trend=^
+     chart: https://www.tradingview.com/symbols/EGX-HRHO/
+
+--- TRADE PLANS ---
+  NAV 500,000 EGP | risk 1.0%/trade | hold up to 5d
+  ZEOT: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  KABO: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  MOSC: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  FIRE: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  HRHO: trade plan error - Too Many Requests. Rate limited. Try after a while.
+  EXIT RULES: at scale-out → sell half + stop to BE | at target → sell rest OR trail by 1×ATR on new highs
+              stop hit → exit | time stop applies only if scale-out never triggered
+
+--- ACTION RECOMMENDATIONS ---
+  5-day = W1 weekly trading rank. 1-month = Chairman synthesis (news-aware).
+  Actions are position-aware: held -> ADD/HOLD/TRIM/EXIT, unheld -> BUY/WATCH/SKIP.
+
+  ZEOT   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  KABO   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  MOSC   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  FIRE   FRESH  5d: BUY (5d)    1mo: WATCH  (HOLD)  tone: neutral
+  HRHO   FRESH  5d: BUY (5d)    1mo: BUY    (ACCUMULATE)  tone: neutral
+
+  News-driven divergences (V8b vs Chairman, monthly horizon) — INFORMATIONAL:
+  Tracked for forward grading. Does NOT gate W1 trade plans.
+    HRHO: V8b says HOLD but chairman says ACCUMULATE — Bull case modestly stronger; build position gradually.
+
+  Key: ADD/HOLD/TRIM/EXIT for held names, BUY/WATCH/SKIP for unheld.
+  Trade plan executes the 5-day BUY. If 1-month says SKIP/WATCH,
+  treat as short-horizon only — exit by the time stop, don't roll into a long hold.
+
+--- PER-PICK ANALYST READ ---
+  ZEOT:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 34.8 — premium; P/B 6.73; ROE 57.1% — strong
+    News tone:     neutral (+0.00, 0 hdl)
+  KABO:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 152.8 — premium; P/B 7.17; ROE 28.4% — strong
+    News tone:     neutral (+0.00, 0 hdl)
+  MOSC:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 19.4 — premium; P/B 8.47; ROE 174.4% — strong; D/E 0.00; Yield 0.2%
+    News tone:     neutral (+0.00, 0 hdl)
+  FIRE:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 2.0 — cheap; P/B 1.73; ROE 15.9% — adequate
+    News tone:     neutral (+0.00, 0 hdl)
+  HRHO:
+    Technicals:    unavailable (Too Many Requests. Rate limited. Try after a while.)
+    Fundamentals:  P/E 10.3 — fair; P/B 1.15; ROE 11.1% — adequate; Margin 14.9%; D/E 1.55 — highly levered; Yield 1.0%
+    News tone:     neutral (+0.00, 0 hdl)
+
+--- MARKET NEWS — WATCHLIST IMPACT (flat portfolio) ---
+  No positions; filtering against W1 candidates: ZEOT, KABO, MOSC, FIRE, HRHO
+  Filtered: kept 0 of 23 headlines.
+  Tone: neutral (score +0.00)
+  (no relevant headlines today)
+
+Disclaimer: Research only, not investment advice.
